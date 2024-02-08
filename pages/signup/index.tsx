@@ -102,7 +102,8 @@ export default function SignUp() {
             }, 2000);*/
             setmodalIsOpen(true)
         } else {
-            setalertMessage(res.response.data.message);
+            console.log(res)
+            setalertMessage(res?.response?.data?.message);
             setShowModalCls(true);
         }
     };
@@ -182,9 +183,9 @@ export default function SignUp() {
 
     const handlePhoneNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value;
-        setPhoneNumberValid(/^[0-9]+$/.test(value)); // Custom validation logic for phone
+        setPhoneNumberValid(/[0-9]$/.test(value)); // Custom validation logic for phone
     };
-
+    
     const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value;
         if (/^\S+@\S+\.\S+$/.test(value)) {
@@ -335,7 +336,7 @@ export default function SignUp() {
                                 </div>
                             </div>
                             <div className='relative -top-5'>
-                                {(firstNameValid && lastNameValid && phoneNumberValid && emailValid && passwordValid) ? (
+                                {(firstNameValid && lastNameValid && emailValid && passwordValid && phoneNumberValid) ? (
                                     <div className="!cursor-not-allowed">
                                         <button
                                             type='submit'
