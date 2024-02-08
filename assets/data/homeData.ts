@@ -227,7 +227,7 @@ export const testimonyData: {
 }[] = [
   {
     id: 1,
-    imageUrl: "/images/home/1-elias.png",
+    imageUrl: "/images/home/testimonial/5465.jpg",
     name: "Elias Bergqvist",
     job: "Checkified Student",
     message:
@@ -235,7 +235,7 @@ export const testimonyData: {
   },
   {
     id: 2,
-    imageUrl: "/images/home/2-simon.png",
+    imageUrl: "/images/home/testimonial/487-1.jpg",
     name: "Simon Gustafsson",
     job: "Checkified Student",
     message:
@@ -243,7 +243,23 @@ export const testimonyData: {
   },
   {
     id: 3,
-    imageUrl: "/images/home/3-linnea.png",
+    imageUrl: "/images/home/testimonial/564-1.jpg",
+    name: "Linnea Östling",
+    job: "Checkified Student",
+    message:
+      "Absolutely the best decision I've made in starting my own online business. You can hardly believe it when you get several sales."
+  },
+  {
+    id: 4,
+    imageUrl: "/images/home/testimonial/4564-1.jpg",
+    name: "Linnea Östling",
+    job: "Checkified Student",
+    message:
+      "Absolutely the best decision I've made in starting my own online business. You can hardly believe it when you get several sales."    
+  },
+  {
+    id: 5,
+    imageUrl: "/images/home/testimonial/4653-1.jpg",
     name: "Linnea Östling",
     job: "Checkified Student",
     message:

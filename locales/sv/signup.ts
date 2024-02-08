@@ -6,6 +6,7 @@ export const signUpData: SignUpData = {
   free: "Checkified",
   trial: "",
   email: "Mejladress",
+  phoneNumber: "Telefon",
   firstName: "Förnamn",
   lastName: "Efternamn",
   password: "Lösenord",

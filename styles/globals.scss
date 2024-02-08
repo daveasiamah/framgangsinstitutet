@@ -1564,3 +1564,34 @@ input.bg-base-100:focus{
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 }
+
+// Testimonial Section
+.testimonial-section {
+
+  .testimonial-slider-container {
+    min-height: 300px
+  }
+
+  .testimonial-slider div {
+    width: 400px;
+    height: 400px;
+  }
+
+  .testimonial-slider img {
+    border-width: 10px;
+    border-color: #e2e6f3;
+  }
+
+}
+
+// Blog list - show only 3 blogs in home page
+/* CSS for mobile view */
+@media screen and (max-width: 768px) {
+  .blog-list-div {
+    display: none;
+  }
+  /* Show only the first three divs */
+  .blog-list-div:nth-child(-n + 3) {
+    display: block;
+  }
+}
