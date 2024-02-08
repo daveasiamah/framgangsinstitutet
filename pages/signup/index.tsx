@@ -80,7 +80,8 @@ export default function SignUp() {
         var role = "USER";
         var email = data.email;
         var password = data.password;
-        const res: any = await Register(firstName, lastName, role, email, password);
+        var phoneNumber = data.phoneNumber
+        const res: any = await Register(firstName, lastName, role, email, password,phoneNumber);
         if (res.status == 201) {
             setSignUpEmail(email);
             /*var data = res.data;
@@ -101,7 +102,8 @@ export default function SignUp() {
             }, 2000);*/
             setmodalIsOpen(true)
         } else {
-            setalertMessage(res.response.data.message);
+            console.log(res)
+            setalertMessage(res?.response?.data?.message);
             setShowModalCls(true);
         }
     };
@@ -182,7 +184,7 @@ export default function SignUp() {
         const value = e.target.value;
         setPhoneNumberValid(/^[0-9]{6,13}$/.test(value)); // Custom validation logic for phone
     };
-
+    
     const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value;
         // console.log(value)
@@ -337,7 +339,7 @@ export default function SignUp() {
                                 </div>
                             </div>
                             <div className='relative -top-5'>
-                                {(firstNameValid && lastNameValid && phoneNumberValid && emailValid && passwordValid) ? (
+                                {(firstNameValid && lastNameValid && emailValid && passwordValid && phoneNumberValid) ? (
                                     <div className="!cursor-not-allowed">
                                         <button
                                             type='submit'

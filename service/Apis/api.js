@@ -42,7 +42,7 @@ export const get_user = async () => {
   }
 };
 
-export const Register = async (firstName, lastName, role, email, password) => {
+export const Register = async (firstName, lastName, role, email, password,phoneNumber) => {
   try {
     const response = await axios.post(process.env.API_BASE + "auth/register", {
       firstName: firstName,
@@ -50,6 +50,7 @@ export const Register = async (firstName, lastName, role, email, password) => {
       role: role,
       email: email,
       password: password,
+      phoneNumber:phoneNumber
     });
     return response;
   } catch (error) {
