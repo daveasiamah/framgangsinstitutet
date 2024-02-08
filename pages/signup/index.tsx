@@ -172,34 +172,35 @@ export default function SignUp() {
     const [passwordValid, setPasswordValid] = useState(false);
     const handleFirstNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value;
-        setFirstNameValid(value.trim() !== ""); // Custom validation logic for first name
-
+        setFirstNameValid(!!value.trim()); // Custom validation logic for first name
     };
 
     const handleLastNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value;
-        setLastNameValid(value.trim() !== ""); // Custom validation logic for last name
+        setLastNameValid(!!value.trim()); // Custom validation logic for last name
     };
 
     const handlePhoneNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value;
-        setPhoneNumberValid(/[0-9]$/.test(value)); // Custom validation logic for phone
+        setPhoneNumberValid(/^[0-9]{6,13}$/.test(value)); // Custom validation logic for phone
     };
     
     const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value;
-        if (/^\S+@\S+\.\S+$/.test(value)) {
-            setEmailValid(true);
-        } // Custom validation logic for email
+        // console.log(value)
+        setEmailValid(/^\S+@\S+\.\S+$/.test(value));
+        // if (/^\S+@\S+\.\S+$/.test(value)) {
+        //     setEmailValid(true);
+        // } // Custom validation logic for email
     };
 
     const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value;
-        if (value.length >= 6) {
-            setPasswordValid(true);
-        } // Custom validation logic for password
+        setPasswordValid(value.length >= 6);
+        // if (value.length >= 6) {
+        //     setPasswordValid(true);
+        // } // Custom validation logic for password
     };
-
 
 
     const handleresend = async () => {

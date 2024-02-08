@@ -45,6 +45,8 @@ function formatBlogPostEntries (entries: any) {
         imageUrl: `https:${entry.fields.featuredImage?.fields?.file?.url}`,
         date: new Date(entry.sys.createdAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }),
         slug: entry.fields.slug,
-        blogContent: entry.fields.blogContent || null
+        blogContent: entry.fields.blogContent || null,
+        author: entry.fields.author  || "",
+        authorProfile: `https:${entry.fields.authorProfile?.fields?.file?.url}` || "",
       }));
 }
