@@ -80,7 +80,8 @@ export default function SignUp() {
         var role = "USER";
         var email = data.email;
         var password = data.password;
-        const res: any = await Register(firstName, lastName, role, email, password);
+        var phoneNumber = data.phoneNumber
+        const res: any = await Register(firstName, lastName, role, email, password,phoneNumber);
         if (res.status == 201) {
             setSignUpEmail(email);
             /*var data = res.data;
