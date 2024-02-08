@@ -6,6 +6,7 @@ import Title from "@/components/parts/Title"
 import ScrollReveal from "@/components/transition/ScrollReveal";
 import { fetchBlogPostBySlug } from "@/utils/contentful";
 import ContentfulRichText from '@/utils/contentfulCustomRenderer';
+import Image from "next/image"
 
 import en from "@/locales/en"
 import sv from "@/locales/sv"
@@ -23,6 +24,8 @@ type BlogPost = {
   date: string;
   slug: string;
   blogContent: any;
+  author: string;
+  authorProfile: string;
 }
 
 export default function Blog({ blogPost, locale }: Props) {
@@ -60,10 +63,18 @@ export default function Blog({ blogPost, locale }: Props) {
             blackText={blogPost.title}
             className="text-left"
           >
-            <p className="text-subtitle text-sm mt-auto flex items-center gap-2">
+          <div className="grid md:grid-cols-2 sm:grid-cols-1" style={{ width: "max-content" }}>
+          { blogPost.authorProfile && <div className="flex items-center">
+            <Image src={blogPost.authorProfile} alt="Author" width={15} height={15} className="w-10 h-10 rounded-full" />
+            <div>
+              <p className="text-subtitle text-sm mt-auto flex items-center">{blogPost.author}</p>
+            </div>
+          </div> }
+            <div style={{ marginTop: "10px" }}><p className="text-subtitle text-sm mt-auto flex items-center gap-2 ml-2">
             <HiOutlineClock size={20} />
             {blogPost.date}
-            </p>     
+            </p></div>
+            </div> 
           </Title> 
         </ScrollReveal>
         { blogPost.blogContent && <div className="prose" style={{ maxWidth: "100%" }}>
