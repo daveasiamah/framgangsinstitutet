@@ -1568,12 +1568,18 @@ input.bg-base-100:focus{
 // Testimonial Section
 .testimonial-section {
 
+  @media screen and (max-width: 768px) {
+    .infinite-slide-left {
+      animation: scroll-left 7s linear infinite;
+    }
+  }
+
   .testimonial-slider-container {
     min-height: 300px
   }
 
   .testimonial-slider div {
-    width: 400px;
+    width: 330px;
     height: 400px;
   }
 

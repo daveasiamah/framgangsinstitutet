@@ -569,7 +569,7 @@ export default function Home() {
               {[...t.homeData.testimonyData, ...t.homeData.testimonyData].map((data) => (
                 <div
                   key={`${data.id} ${Math.random()}`}
-                  className="p-10 rounded-2xl h-full grid place-content-center"
+                  className="rounded-2xl h-full grid place-content-center"
                 >
                   <Image
                     priority

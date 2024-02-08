@@ -7,6 +7,10 @@ export const blogData: BlogData = {
 
   blogTitle: "Blogg",
   blogSubtitle: "Lär dig allt du behöver veta om dropshipping.",
+  blogNav: {
+    home: "Hem",
+    general: "Allmän"
+  },
 
   companyLabel: "Företag",
   companyTitle: "Vad är Checkified?",
