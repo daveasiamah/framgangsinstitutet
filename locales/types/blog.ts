@@ -13,6 +13,10 @@ export type BlogData = {
 
   blogTitle: string
   blogSubtitle: string
+  blogNav: {
+    home: string,
+    general: string
+  }
 
   companyLabel: string
   companyTitle: string

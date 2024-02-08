@@ -234,8 +234,9 @@ export default function SignUp() {
                             className='auth-form font-ctm'
                             action=''
                             noValidate >
-                            <div className='w-full '>
-                                <div className='form-control'>
+                            <div className='w-full'>
+                                <div className='grid grid-cols-2'>
+                                <div className='form-control pr-4'>
                                     <label className='label'>
                                         <span className='label-text'>{t.signUpData.firstName}
                                             {errors.firstName && <span className='text-red-400'>*</span>}</span>
@@ -261,6 +262,7 @@ export default function SignUp() {
                                         {...register("lastName")}
                                         onChange={handleLastNameChange}
                                     />
+                                </div>
                                 </div>
                                 <div className='form-control'>
                                     <label className='label'>

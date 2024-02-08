@@ -32,10 +32,29 @@ export default function Blog({ blogPost, locale }: Props) {
     <Layout headTitle={`${t.blogData.blogTitle} - ${blogPost.title}`}>
       {/* Blog Details */}
       <section className="py-10 mb-16">
-        <a className="mt-auto flex items-center gap-2 my-3" href="/blog">
+        <nav className="text-sm" aria-label="Breadcrumb">
+          <ol className="flex">
+            <li className="mr-2">
+              <a href={`../../${locale}/`} className="text-gray-400 hover:text-gray-700">{`${t.blogData.blogNav.home}`}</a>
+            </li>
+            <li className="mr-2">
+              <span aria-hidden="true" className="text-gray-400">{">"}</span>
+            </li>
+            <li className="mr-2">
+              <a href={`../../${locale}/blog`} className="text-gray-400 hover:text-gray-700">{`${t.blogData.blogTitle}`}</a>
+            </li>
+            <li className="mr-2">
+              <span aria-hidden="true" className="text-gray-400">{">"}</span>
+            </li>
+            <li>
+              <span className="text-gray-700">{`${t.blogData.blogNav.general}`}</span>
+            </li>
+          </ol>
+        </nav>        
+        {/* <a className="mt-auto flex items-center gap-2 my-3" href="/blog">
               <HiArrowLeft size={15} />
               {`${t.blogData.blogTitle}`}
-        </a>
+        </a> */}
         <ScrollReveal>
           <Title
             blackText={blogPost.title}

@@ -4,10 +4,14 @@ export const blogData: BlogData = {
   metaData: {
     title: "Blog"
   },
-
+  
   blogTitle: "Blog",
   blogSubtitle:
     "Acquire a broad understanding of dropshipping by learning all the essential elements.",
+  blogNav: {
+    home: "Home",
+    general: "General"
+  },
 
   companyLabel: "company",
   companyTitle: "What is Checkified?",
