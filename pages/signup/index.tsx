@@ -23,6 +23,7 @@ import { Register, resend_mail, login_with_google } from "../../service/Apis/api
 type FormValues = {
     firstName: string;
     lastName: string;
+    phoneNumber: string;
     email: string;
     password: string;
 };
@@ -164,6 +165,7 @@ export default function SignUp() {
 
     const [firstNameValid, setFirstNameValid] = useState(false);
     const [lastNameValid, setLastNameValid] = useState(false);
+    const [phoneNumberValid, setPhoneNumberValid] = useState(false);
     const [emailValid, setEmailValid] = useState(false);
     const [passwordValid, setPasswordValid] = useState(false);
     const handleFirstNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -175,6 +177,11 @@ export default function SignUp() {
     const handleLastNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value;
         setLastNameValid(value.trim() !== ""); // Custom validation logic for last name
+    };
+
+    const handlePhoneNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const value = e.target.value;
+        setPhoneNumberValid(/^[0-9]+$/.test(value)); // Custom validation logic for phone
     };
 
     const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -253,6 +260,19 @@ export default function SignUp() {
                                         onChange={handleLastNameChange}
                                     />
                                 </div>
+                                <div className='form-control'>
+                                    <label className='label'>
+                                        <span className='label-text'>{t.signUpData.phoneNumber}
+                                            {errors.phoneNumber && <span className='text-red-400'>*</span>}</span>
+                                    </label>
+                                    <input
+                                        type='text'
+                                        placeholder={t.signUpData.phoneNumber}
+                                        className='input input-bordered w-full'
+                                        {...register("phoneNumber")}
+                                        onChange={handlePhoneNumberChange}
+                                    />
+                                </div>                                
                                 <div className='form-control mt-2'>
                                     <label className='label'>
                                         <span className='label-text'>
@@ -314,7 +334,7 @@ export default function SignUp() {
                                 </div>
                             </div>
                             <div className='relative -top-5'>
-                                {(firstNameValid && lastNameValid && emailValid && passwordValid) ? (
+                                {(firstNameValid && lastNameValid && phoneNumberValid && emailValid && passwordValid) ? (
                                     <div className="!cursor-not-allowed">
                                         <button
                                             type='submit'

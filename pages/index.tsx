@@ -19,6 +19,20 @@ import TiltParallax from "@/components/transition/TiltParallax"
 
 import en from "@/locales/en"
 import sv from "@/locales/sv"
+import { useEffect, useState } from "react";
+import axios from 'axios';
+import { HiOutlineClock } from "react-icons/hi"
+
+type Props = {}
+
+type BlogPost = {
+  id: string;
+  title: string;
+  subtitle: string;
+  imageUrl: string;
+  date: string;
+  slug: string;
+}
 
 export default function Home() {
   const router = useRouter()
@@ -35,6 +49,21 @@ export default function Home() {
   // } else {
   //   console.log("role not found");
   // }
+
+  // Fetch Blog List
+  const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        const response = await axios.get(`/api/blog?locale=${locale}`);
+        setBlogPosts(response.data.data);
+      } catch (error) {
+        console.error('Error fetching blog posts:', error);
+      }
+    };
+    fetchPosts();
+  }, []);
+
   return (
     <Layout headTitle={t.homeData.metaData.title}>
       <section className="relative hero-height py-8 flex flex-col lg:flex-row justify-between items-center gap-10">
@@ -298,6 +327,32 @@ export default function Home() {
         ))}
       </section>
 
+      <section className="relative py-14 mb-16 lg:mb-20 flex flex-col lg:flex-row gap-20">
+        <div className="w-full lg:w-1/2">
+          <ScrollReveal>
+            <Title
+              blackText={t.homeData.contactBlackTitle}
+              blueText={t.homeData.contactBlueTitle}
+              className="mb-[6px]"
+            />
+            <p className="text-subtitle">{t.homeData.contactSubtitle}</p>
+          </ScrollReveal>
+
+          
+            <Image
+              src="/images/home/bulb.png"
+              alt="acher"
+              height={500}
+              width={500}
+              className="object-contain mx-auto mt-6"
+            />
+         
+        </div>
+        <div className="w-full lg:w-1/2">
+          <ContactForm contactData={t.homeData.contactForm} />
+        </div>
+      </section>
+
       <section className="mb-16 lg:mb-20 medsos-container">
         <div className="flex items-center justify-center">
           <div className="w-[400%] lg:w-[200%] h-28 overflow-hidden relative">
@@ -487,7 +542,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative py-14 mb-16 lg:mb-20">
+      <section className="relative py-14 mb-16 lg:mb-20 testimonial-section">
         <BlurCircle positionClassName="left-[-8rem] top-[12rem]" size="lg" />
 
         {/* <TiltParallax> */}
@@ -508,60 +563,71 @@ export default function Home() {
             className="mb-16 lg:mb-20 text-center"
           />
         </ScrollReveal>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {t.homeData.testimonyData.map((data) => (
-            <div
-              key={data.id}
-              className="bg-white p-10 rounded-[2rem] feature-card-shadow text-center"
-            >
-              <div className="avatar mb-6">
-                <div className="w-24 rounded-full overflow-hidden relative">
-                  <Image fill alt="avatar" src={data.imageUrl} />
+        <div className="items-center justify-center relative testimonial-slider-container">
+          <div className="">
+            <div className="flex items-center left-0 gap-2 absolute justify-around infinite-slide-left testimonial-slider">
+              {[...t.homeData.testimonyData, ...t.homeData.testimonyData].map((data) => (
+                <div
+                  key={`${data.id} ${Math.random()}`}
+                  className="p-10 rounded-2xl h-full grid place-content-center"
+                >
+                  <Image
+                    priority
+                    src={data.imageUrl}
+                    alt="testimonial"
+                    width="0"
+                    height="0"
+                    sizes="100vw"
+                    style={{ width: '300px', height: '400px' }}
+                    className="rounded-lg"
+                  />
                 </div>
-              </div>
-              <ScrollReveal>
-                <h3 className="text-lg font-bold mb-1">{data.name}</h3>
-                <p className="mb-6 text-primary flex justify-center items-center gap-1">
-                  {data.job} <BsPatchCheckFill size={22} />{" "}
-                </p>
-                <p className="text-subtitle">{data.message}</p>
-              </ScrollReveal>
+              ))}
             </div>
+          </div>
+        </div>     
+      </section>
+
+      {/* Dynamic Blog posts list */}
+      <section className="py-16 mb-16">
+        <ScrollReveal>
+          <Title
+            blackText={t.blogData.articleBlackTitle}
+            blueText={t.blogData.articleBlueTitle}
+            className="text-left"
+          />
+        </ScrollReveal>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 blog-list-container">
+          {blogPosts.map((data) => (
+            <ScrollReveal
+              key={data.id}
+              className="bg-white grid justify-between hover:bg-base-200 p-4 cursor-pointer transition-all duration-150 blog-list-div"
+            >
+              <div onClick={()=>{
+                window.location.href = `/blog/${data.slug}`;
+              }}>
+                <div className="w-full h-[200px] relative rounded-lg overflow-hidden mb-6 shadow-lg">
+                  <Image
+                    src={data.imageUrl}
+                    fill
+                    alt="blog"
+                    className="absolute object-cover"
+                  />
+                </div>
+                <h1 className="font-bold text-xl mb-2 hover:text-primary hover:underline transition-all duration-200">
+                  {data.title}
+                </h1>
+                <p className="text-subtitle mb-3">{data.subtitle}</p>
+                <p className="text-subtitle text-sm mt-auto flex items-center gap-2">
+                  <HiOutlineClock size={20} />
+                  {data.date}
+                </p>
+              </div>
+            </ScrollReveal>
           ))}
         </div>
       </section>
 
-      <section className="relative py-14 mb-16 lg:mb-20 flex flex-col lg:flex-row gap-20">
-        <CacingOne
-          positionClassName="right-[-12rem] rotate-[-50deg] bottom-[-14rem] 2xl:bottom-[-6rem]"
-          sizeClassName="w-[20rem] h-[20rem]"
-          className="z-[-1]"
-        />
-
-        <div className="w-full lg:w-1/2">
-          <ScrollReveal>
-            <Title
-              blackText={t.homeData.contactBlackTitle}
-              blueText={t.homeData.contactBlueTitle}
-              className="mb-[6px]"
-            />
-            <p className="text-subtitle">{t.homeData.contactSubtitle}</p>
-          </ScrollReveal>
-
-          
-            <Image
-              src="/images/home/bulb.png"
-              alt="acher"
-              height={500}
-              width={500}
-              className="object-contain mx-auto mt-6"
-            />
-         
-        </div>
-        <div className="w-full lg:w-1/2">
-          <ContactForm contactData={t.homeData.contactForm} />
-        </div>
-      </section>
     </Layout>
 
   )

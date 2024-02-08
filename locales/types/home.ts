@@ -114,6 +114,7 @@ export type SignUpData = {
   free: string;
   trial: string;
   email: string;
+  phoneNumber: string;
   firstName: string;
   lastName: string;
   password: string;

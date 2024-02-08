@@ -6,6 +6,7 @@ export const signUpData: SignUpData = {
   free: "Free",
   trial: "Trial",
   email: "Email",
+  phoneNumber: "Phone",
   firstName: "Full Name",
   lastName: "Full Name",
   password: "Password",

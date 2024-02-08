@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import Image from "next/image"
 import { HiOutlineClock } from "react-icons/hi"
 import { useRouter } from "next/router"
@@ -12,41 +12,17 @@ import ShieldBadge from "@/components/graphic/ShieldBadge"
 import UserBadge from "@/components/graphic/UserBadge"
 import CacingOne from "@/components/graphic/CacingOne"
 import FadeLogo from "@/components/graphic/FadeLogo"
-import ScrollReveal from "@/components/transition/ScrollReveal";
-import axios from 'axios';
+import ScrollReveal from "@/components/transition/ScrollReveal"
 
 import en from "@/locales/en"
 import sv from "@/locales/sv"
 
 type Props = {}
 
-type BlogPost = {
-  id: string;
-  title: string;
-  subtitle: string;
-  imageUrl: string;
-  date: string;
-  slug: string;
-}
-
 export default function Blog({}: Props) {
   const router = useRouter()
   const { locale } = router
   const t = locale === "en" ? en : sv
-
-  // Fetch Blog List
-  const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
-  useEffect(() => {
-    const fetchPosts = async () => {
-      try {
-        const response = await axios.get(`/api/blog?locale=${locale}`);
-        setBlogPosts(response.data.data);
-      } catch (error) {
-        console.error('Error fetching blog posts:', error);
-      }
-    };
-    fetchPosts();
-  }, []);
 
   return (
     <Layout headTitle={t.blogData.metaData.title}>
@@ -107,7 +83,6 @@ export default function Blog({}: Props) {
         </div>
       </section>
 
-      {/* Dynamic Blog posts list */}
       <section className="py-16 mb-16">
         <ScrollReveal>
           <Title
@@ -117,14 +92,12 @@ export default function Blog({}: Props) {
           />
         </ScrollReveal>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-          {blogPosts.map((data) => (
+          {t.blogData.blogData.map((data) => (
             <ScrollReveal
               key={data.id}
               className="bg-white grid justify-between hover:bg-base-200 p-4 cursor-pointer transition-all duration-150"
             >
-              <div onClick={()=>{
-                window.location.href = `/blog/${data.slug}`;
-              }}>
+              <div>
                 <div className="w-full h-[200px] relative rounded-lg overflow-hidden mb-6 shadow-lg">
                   <Image
                     src={data.imageUrl}
