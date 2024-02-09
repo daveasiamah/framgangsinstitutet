@@ -5,14 +5,14 @@ const client = createClient({
     accessToken: `${process.env.CONTENTFUL_ACCESS_TOKEN}`
 });
 
-export async function fetchBlogPosts(locale: string = 'sv') {
+export async function fetchBlogPosts(locale: string = 'sv', nolimit = false) {
     try {
         const entries = await client.getEntries({
             content_type: 'checkifiedBlogPost',
             locale,
             select: ['fields.title,fields.description,fields.slug,fields.featuredImage', 'sys.createdAt'],
             order: ['-sys.createdAt'],
-            // limit: 6
+            ...nolimit ? {}:{ limit: 6 }
         });
         if (entries.items) return formatBlogPostEntries(entries.items);
     } catch (error) {

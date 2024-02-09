@@ -626,6 +626,11 @@ export default function Home() {
             </ScrollReveal>
           ))}
         </div>
+        <div className="flex justify-center mt-10">
+            <Link className="btn btn-primary btn-shadow" href="/blog/general">
+                {t.blogData.blogNav.viewMore}
+            </Link>
+        </div>
       </section>
 
     </Layout>

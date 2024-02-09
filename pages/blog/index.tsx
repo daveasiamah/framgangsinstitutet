@@ -17,6 +17,7 @@ import axios from 'axios';
 
 import en from "@/locales/en"
 import sv from "@/locales/sv"
+import Link from "next/link"
 
 type Props = {}
 
@@ -144,6 +145,11 @@ export default function Blog({}: Props) {
               </div>
             </ScrollReveal>
           ))}
+        </div>
+        <div className="flex justify-center mt-10">
+            <Link className="btn btn-primary btn-shadow" href="/blog/general">
+                {t.blogData.blogNav.viewMore}
+            </Link>
         </div>
       </section>
 
