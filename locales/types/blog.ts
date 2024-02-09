@@ -16,6 +16,7 @@ export type BlogData = {
   blogNav: {
     home: string,
     general: string
+    viewMore: string
   }
 
   companyLabel: string

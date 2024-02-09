@@ -10,7 +10,8 @@ export const blogData: BlogData = {
     "Acquire a broad understanding of dropshipping by learning all the essential elements.",
   blogNav: {
     home: "Home",
-    general: "General"
+    general: "General",
+    viewMore: "View More"
   },
 
   companyLabel: "company",

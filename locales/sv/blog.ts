@@ -9,7 +9,8 @@ export const blogData: BlogData = {
   blogSubtitle: "Lär dig allt du behöver veta om dropshipping.",
   blogNav: {
     home: "Hem",
-    general: "Allmän"
+    general: "Allmän",
+    viewMore: "Visa Mer"
   },
 
   companyLabel: "Företag",
