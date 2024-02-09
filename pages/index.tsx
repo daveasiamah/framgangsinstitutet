@@ -62,7 +62,7 @@ export default function Home() {
       }
     };
     fetchPosts();
-  }, []);
+  }, [locale]);
 
   return (
     <Layout headTitle={t.homeData.metaData.title}>
