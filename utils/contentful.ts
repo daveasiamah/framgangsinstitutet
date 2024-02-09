@@ -12,7 +12,7 @@ export async function fetchBlogPosts(locale: string = 'sv') {
             locale,
             select: ['fields.title,fields.description,fields.slug,fields.featuredImage', 'sys.createdAt'],
             order: ['-sys.createdAt'],
-            limit: 6
+            // limit: 6
         });
         if (entries.items) return formatBlogPostEntries(entries.items);
     } catch (error) {
