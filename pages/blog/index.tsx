@@ -47,7 +47,7 @@ export default function Blog({}: Props) {
       }
     };
     fetchPosts();
-  }, []);
+  }, [locale]);
 
   return (
     <Layout headTitle={t.blogData.metaData.title}>
