@@ -93,12 +93,12 @@ export default function Home() {
 
           <div className="flex items-center gap-1 mt-12">
             <Image
-              src="/icons/home/wallet-check.png"
-              alt="wallet check"
-              width={36}
-              height={36}
+              src="/icons/home/users-pics.png"
+              alt="user pics"
+              width={90}
+              height={48}
             />
-            <Link className="btn btn-link" href="/">
+            <Link className="btn btn-link" href="/" style={{ paddingLeft: "5px" }}>
               {t.homeData.heroJoinText}
             </Link>
           </div>
@@ -270,7 +270,7 @@ export default function Home() {
         </div>
       </section> */}
 
-      <section className="relative py-14 text-center grid gap-10 lg:gap-24 mb-16 lg:mb-20">
+      <section className="relative py-14 text-center grid gap-10 lg:gap-24 md:mb-16 lg:mb-20">
         <CacingOne
           positionClassName="left-[-20rem] lg:left-[-12rem] rotate-[-50deg] top-[18rem] lg:top-[40rem] 2xl:top-[50rem]"
           sizeClassName="w-[30rem] h-[30rem]"
@@ -327,7 +327,7 @@ export default function Home() {
         ))}
       </section>
 
-      <section className="relative py-14 mb-16 lg:mb-20 flex flex-col lg:flex-row gap-20">
+      <section className="relative md:py-14 lg:py-14 mb-16 lg:mb-20 flex flex-col lg:flex-row gap-20">
         <div className="w-full lg:w-1/2">
           <ScrollReveal>
             <Title
