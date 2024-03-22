@@ -22,6 +22,7 @@ import sv from "@/locales/sv"
 import { useEffect, useState } from "react";
 import axios from 'axios';
 import { HiOutlineClock } from "react-icons/hi"
+import Marquee from "react-fast-marquee";
 
 type Props = {}
 
@@ -563,13 +564,15 @@ export default function Home() {
             className="mb-16 lg:mb-20 text-center"
           />
         </ScrollReveal>
-        <div className="items-center justify-center relative testimonial-slider-container">
-          <div className="">
-            <div className="flex items-center left-0 gap-2 absolute justify-around infinite-slide-left testimonial-slider">
-              {[...t.homeData.testimonyData, ...t.homeData.testimonyData].map((data) => (
+        <div className="relative items-center justify-center testimonial-slider-container">
+          <div className="absolute" style={{}}>
+          <div className="items-center left-0 gap-2 justify-around testimonial-slider">
+          <Marquee style={{ width: "1300px", overflow: "visible" }} speed={30}>
+              {[...t.homeData.testimonyData].map((data) => (
                 <div
                   key={`${data.id} ${Math.random()}`}
                   className="rounded-2xl h-full grid place-content-center"
+                  style={{ paddingRight: "30px" }}
                 >
                   <Image
                     priority
@@ -583,7 +586,8 @@ export default function Home() {
                   />
                 </div>
               ))}
-            </div>
+          </Marquee>
+          </div>
           </div>
         </div>     
       </section>
