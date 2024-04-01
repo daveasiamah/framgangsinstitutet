@@ -31,7 +31,7 @@ export default function VideoTrainingCard({
               />
             </div>
           </div>
-          <h4 className="mt-20 text-gray-500 text-sm">{subTitle}</h4>
+          <h4 className="mt-14 text-gray-500 text-sm">{subTitle}</h4>
         </div>
       </ScrollReveal>
       <Image
