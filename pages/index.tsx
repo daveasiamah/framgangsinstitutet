@@ -238,13 +238,24 @@ export default function Home() {
         </div>
       </section> */}
 
-      <section className="relative flex justify-center bg-base-200 rounded-2xl py-14 md:mb-16 lg:mb-20">
+      <section className="relative flex flex-col justify-center md:mb-16 lg:mb-20">
         <CacingOne
           positionClassName="left-[-20rem] lg:left-[-12rem] rotate-[-50deg] top-[18rem] lg:top-[40rem] 2xl:top-[50rem]"
           sizeClassName="w-[30rem] h-[30rem]"
           className="z-[-1]"
         />
-        <Swiper
+        <ScrollReveal>
+          <div className="flex flex-col items-center justify-center gap-2">
+            <h1 className="text-[2rem] lg:text-6xl font-bold lg:mb-2">
+                {t.homeData.videoTrainingBlackTitle}
+              </h1>
+              <h1 className="text-[2rem] lg:text-6xl font-bold text-primary max-[480px]:mt-[-3vw]">
+                {t.homeData.videoTrainingBlueTitle}
+              </h1>
+          </div>
+        </ScrollReveal>
+        <div className="mt-8  py-8 bg-base-200 rounded-2xl">
+          <Swiper
             grabCursor={true}
             loop={true}
             modules={[EffectCards, Navigation, Autoplay]}
@@ -287,6 +298,7 @@ export default function Home() {
               />
             </button>
           </Swiper>
+        </div>
       </section>
 
       <section className="relative md:py-14 lg:py-14 mb-16 lg:mb-20 flex flex-col lg:flex-row gap-20">
