@@ -67,100 +67,64 @@ export default function Home() {
 
   return (
     <Layout headTitle={t.homeData.metaData.title}>
-      <section className="relative hero-height py-8 flex flex-col lg:flex-row justify-between items-center gap-10">
+      <section className="relative hero-height pt-8 flex flex-col lg:flex-row justify-between items-center gap-10">
         <BlurCircle positionClassName="left-0 top-20" size="lg" />
         <LineGraphic
           positionClassname="right-[-14rem] 2xl:right-[-12rem] top-[-30px]"
           className="svg-primary"
         />
 
-        <div className="w-full lg:w-5/12 mb-6 lg:mb-0">
+        <div className="w-full text-center mb-6 lg:mb-0">
           <ScrollReveal>
-            <h1 className="text-[2.75rem] lg:text-6xl font-bold lg:mb-2">
-              {t.homeData.heroBlackTitle}
+            <div className="flex items-center justify-center gap-2">
+              <h1 className="text-[2rem] lg:text-6xl font-bold lg:mb-2">
+                  {t.homeData.heroBlackTitle}
+                </h1>
+                <h1 className="text-[2rem] lg:text-6xl font-bold text-primary max-[480px]:mt-[-3vw]">
+                  {t.homeData.heroBlueTitle}
+                </h1>
+            </div>
+            <h1 className="text-[2rem] lg:text-6xl font-bold lg:mb-2">
+              {t.homeData.heroBlackTitleTwo}
             </h1>
-            <h1 className="text-[2.75rem] lg:text-6xl font-bold text-primary max-[480px]:mt-[-3vw]">
-              {t.homeData.heroBlueTitle}
-            </h1>
-            <p className="my-7 text-subtitle max-w-[24rem]">
-              {t.homeData.heroSubtitle}
-            </p>
-            <Link href="/signup">
-            <button className="btn btn-primary w-full lg:w-fit">
-              {t.homeData.heroButton}
-            </button>
-            </Link>
           </ScrollReveal>
-
-          <div className="flex items-center gap-1 mt-12">
+          
+          <div className="relative max-w-[706px] mx-auto flex flex-col items-center justify-center gap-1 mt-12">
+            <div className="absolute top-0 w-full flex items-center justify-center gap-1 p-0.5 bg-[#265BEA] text-white">
+              <Image
+                src="/icons/home/video-play-sm.svg"
+                alt="play video"
+                width={16}
+                height={16}
+              />
+              <h3 className="text-sm">{t.homeData.heroVideoDesc}</h3>
+            </div>
             <Image
-              src="/icons/home/users-pics.png"
-              alt="user pics"
-              width={90}
-              height={48}
+              src="/cover/homevideo.png"
+              alt="video cover"
+              width={706}
+              height={423}
+              className="home_video_cover mt-4"
             />
-            <Link className="btn btn-link" href="/" style={{ paddingLeft: "5px" }}>
-              {t.homeData.heroJoinText}
+            <Link href="/signup" className="w-full mt-8">
+              <button className="btn btn-primary w-full">
+                {t.homeData.heroButton}
+              </button>
             </Link>
-          </div>
-        </div>
-        <div className="w-full lg:w-7/12 h-full lg:h-[480px] xl:h-[500px] relative">
-          <div className="aspect-square h-full mx-auto rounded-full overflow-hidden">
-            <motion.div
-              initial={{ x: -40, y: 0 }}
-              animate={{ x: 40, y: 40 }}
-              transition={{
-                ease: "linear",
-                duration: 10,
-                repeat: Infinity,
-                repeatType: "reverse"
-              }}
-              className="w-full h-full relative"
-            >
+            <div className="flex items-center gap-1 mt-2">
               <Image
-                src="/images/home/hero-pattern.png"
-                alt="Checkified"
-                className="object-contain scale-125"
-                fill
-                priority
+                src="/icons/home/users-pics.png"
+                alt="user pics"
+                width={90}
+                height={48}
               />
-            </motion.div>
-          </div>
-          <Image
-            src="/images/home/hero-image.png"
-            className="absolute object-contain"
-            style={{ top: "-30px" }}
-            alt="Checkified"
-            fill
-            priority
-          />
-          <TiltParallax className="absolute -right-10 lg:-right-10 top-1/3 flex justify-center items-center gap-3 bg-white p-[14px] rounded-[20px] hero-comp-shadow text-xs lg:text-base">
-            <div className="p-2 bg-base-200 rounded-lg">
-              <Image
-                src="/icons/home/people.png"
-                alt="people"
-                height={20}
-                width={20}
-              />
+              <span className="text-sm text-gray-500">{t.homeData.heroJoinText}</span>
             </div>
-            <p className="w-20 lg:w-fit">{t.homeData.heroInteractiveText}</p>
-          </TiltParallax>
-
-          <TiltParallax className="absolute bottom-2 left-1/4 lg:left-1/3 flex justify-center items-center gap-3 bg-white p-[14px] rounded-[20px] hero-comp-shadow text-xs lg:text-base">
-            <div className="p-3 bg-primary h-[30px] w-[30px] lg:h-[40px] lg:w-[40px] rounded-lg relative">
-              <Image
-                src="/icons/home/tag-user.png"
-                alt="people"
-                fill
-                className="p-1 lg:p-2"
-              />
-            </div>
-            <p>{t.homeData.heroOutstandingText}</p>
-          </TiltParallax>
+          </div>
         </div>
       </section>
 
-      <section className="bg-base-200 p-8 lg:py-14 lg:px-16 text-center my-16 lg:my-20 rounded-2xl">
+      <section className="bg-base-200 p-8 lg:py-14 lg:px-16 text-center my-14 lg:my-18 rounded-2xl">
         <h2 className="text-2xl lg:text-3xl font-bold mb-10">
           {t.homeData.knowledgeText}
         </h2>

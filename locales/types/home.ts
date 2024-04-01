@@ -59,6 +59,8 @@ export type HomeData = {
 
   heroBlackTitle: string;
   heroBlueTitle: string;
+  heroBlackTitleTwo: string;
+  heroVideoDesc: string;
   heroSubtitle: string;
   heroButton: string;
   heroJoinText: string;

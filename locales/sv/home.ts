@@ -11,9 +11,11 @@ export const homeData: HomeData = {
 
   heroBlackTitle: "Börja Med",
   heroBlueTitle: "Dropshipping",
+  heroBlackTitleTwo: "och bli din egna chef! ",
+  heroVideoDesc: `"Klicka på Spela" och slå på ljud för att titta på video`,
   heroSubtitle:
     "Lär dig allt du behöver veta för att starta, växa och hantera ett framgångsrikt dropshipping företag.",
-  heroButton: "Starta nu",
+  heroButton: "Se Gratis Dropshipping Kurs",
   heroJoinText: "Gå Med i Över 150+ Studenter",
   heroInteractiveText: "Interaktiv community",
   heroOutstandingText: "Enastående Plattform",

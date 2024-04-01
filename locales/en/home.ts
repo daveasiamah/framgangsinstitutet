@@ -11,9 +11,11 @@ export const homeData: HomeData = {
 
   heroBlackTitle: "Learn without",
   heroBlueTitle: "limits",
+  heroBlackTitleTwo: "and become your own boss! ",
+  heroVideoDesc: `"Click play" and turn on audio to watch video`,
   heroSubtitle:
     "Learn everything you need to know to launch, grow and monitor a successful dropshipping business.",
-  heroButton: "Start Free Trial",
+  heroButton: "View Free Dropshipping Course",
   heroJoinText: "Join Over 150+ Students",
   heroInteractiveText: "Interactive Community",
   heroOutstandingText: "Outstanding Platform",
