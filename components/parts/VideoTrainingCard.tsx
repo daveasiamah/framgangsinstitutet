@@ -1,5 +1,6 @@
 import React from "react"
 import Image from "next/image"
+import ScrollReveal from "@/components/transition/ScrollReveal"
 
 type Props = {
   blackText: string
@@ -16,21 +17,23 @@ export default function VideoTrainingCard({
 }: Props) {
   return (
     <div className={`flex flex-col items-center justify-center px-14 md:px-40`}>
-      <div className="max-w-xl text-center">
-        <div className="relative block">
-          <div className="relative inline-flex items-center justify-center gap-2">
-            <h3 className="font-semibold text-5xl">{blackText}</h3>
-            {blueText && <h3 className="font-semibold text-5xl text-primary">{blueText}</h3>}
-            <Image
-              src="/icons/home/arrow-right.svg"
-              alt="arrow-right"
-              fill
-              className="mt-14 px-4"
-            />
+      <ScrollReveal>
+        <div className="max-w-xl text-center">
+          <div className="relative block">
+            <div className="relative inline-flex items-center justify-center gap-2">
+              <h3 className="font-semibold text-5xl">{blackText}</h3>
+              {blueText && <h3 className="font-semibold text-5xl text-primary">{blueText}</h3>}
+              <Image
+                src="/icons/home/arrow-right.svg"
+                alt="arrow-right"
+                fill
+                className="mt-14 px-4"
+              />
+            </div>
           </div>
+          <h4 className="mt-20 text-gray-500 text-sm">{subTitle}</h4>
         </div>
-        <h4 className="mt-20 text-gray-500 text-sm">{subTitle}</h4>
-      </div>
+      </ScrollReveal>
       <Image
         src={imageUrl}
         alt={blackText}
