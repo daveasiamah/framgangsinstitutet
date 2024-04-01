@@ -16,7 +16,7 @@ export const homeData: HomeData = {
   heroSubtitle:
     "Lär dig allt du behöver veta för att starta, växa och hantera ett framgångsrikt dropshipping företag.",
   heroButton: "Se Gratis Dropshipping Kurs",
-  heroJoinText: "Gå Med i Över 150+ Studenter",
+  heroJoinText: "Gå med 300+ studenter",
   heroInteractiveText: "Interaktiv community",
   heroOutstandingText: "Enastående Plattform",
 
@@ -28,28 +28,28 @@ export const homeData: HomeData = {
   =            Platform Section            =
   =============================================*/
 
-  platformBlackTitle: "En Plattform",
-  platformBlueTitle: "För Alla.",
-  platformSubtitle:
-    "Checkified använder automatiserade processer för att underlätta sömlöst lärande. Vi gör det möjligt för enskilda personer att enkelt etablera sina egna företag.",
+  platformBlackTitle: "Investera i din",
+  platformBlueTitle: "framtid",
+  // platformSubtitle:
+  //   "Checkified använder automatiserade processer för att underlätta sömlöst lärande. Vi gör det möjligt för enskilda personer att enkelt etablera sina egna företag.",
   featureData: [
     {
       id: 1,
       imageUrl: "/icons/home/feature-unlimited-access.png",
-      title: "Obegränsad Tillgång",
-      desc: "Med prioriterat stöd har vi ett betydande inflytande över alla elever."
+      title: "120+ Miljoner av Dominic",
+      desc: "Ta del av Dominic’s process för att starta och expandera flera dropshipping varumärken!"
     },
     {
       id: 2,
       imageUrl: "/icons/home/feature-create-content.png",
-      title: "Skapa Innehåll",
-      desc: "Vi presenterar en guide som täcker allt du behöver veta för att komma igång med dropshipping."
+      title: "70+ Miljoner av Studenter",
+      desc: "Lär dig samma strategier som våra studenter använt för att göra över 100 miljoner i försäljning."
     },
     {
       id: 3,
       imageUrl: "/icons/home/feature-selling-service.png",
-      title: "Sälja Tjänster",
-      desc: "Vi använder avancerade försäljningsmetoder för att ge dig en unik e-handelsupplevelse."
+      title: "AI Prestanda",
+      desc: "Vi använder avancerade återförsäljningsmetod för att ge dig en unik e-handelsupplevelse."
     }
   ],
 

@@ -71,7 +71,7 @@ export type HomeData = {
 
   platformBlackTitle: string;
   platformBlueTitle: string;
-  platformSubtitle: string;
+  // platformSubtitle: string;
   featureData: FeatureData[];
   expertiseData: ExpertiseData[];
 

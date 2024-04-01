@@ -167,9 +167,9 @@ export default function Home() {
             blackText={t.homeData.platformBlackTitle}
             blueText={t.homeData.platformBlueTitle}
           />
-          <p className="max-w-xl mx-auto mb-16 text-subtitle">
+          {/* <p className="max-w-xl mx-auto mb-16 text-subtitle">
             {t.homeData.platformSubtitle}
-          </p>
+          </p> */}
         </ScrollReveal>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {t.homeData.featureData.map((data) => (

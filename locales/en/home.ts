@@ -16,7 +16,7 @@ export const homeData: HomeData = {
   heroSubtitle:
     "Learn everything you need to know to launch, grow and monitor a successful dropshipping business.",
   heroButton: "View Free Dropshipping Course",
-  heroJoinText: "Join Over 150+ Students",
+  heroJoinText: "Join Over 300+ students",
   heroInteractiveText: "Interactive Community",
   heroOutstandingText: "Outstanding Platform",
 
@@ -28,28 +28,28 @@ export const homeData: HomeData = {
   =            Platform Section            =
   =============================================*/
 
-  platformBlackTitle: "A Platform for",
-  platformBlueTitle: "Everyone.",
-  platformSubtitle:
-    "Checkified employs automated processes to facilitate seamless learning. Our aim is to enable individuals to establish their own enterprises with ease.",
+  platformBlackTitle: "Investing in your ",
+  platformBlueTitle: "Future",
+  // platformSubtitle:
+  //   "Checkified employs automated processes to facilitate seamless learning. Our aim is to enable individuals to establish their own enterprises with ease.",
   featureData: [
     {
       id: 1,
       imageUrl: "/icons/home/feature-unlimited-access.png",
-      title: "Unlimited Access",
-      desc: "With priority support, we have significant influence over all students."
+      title: "120+ Million by Dominic",
+      desc: "Learn about Dominic's process for starting and expanding multiple dropshipping brands!"
     },
     {
       id: 2,
       imageUrl: "/icons/home/feature-create-content.png",
-      title: "Create Content ",
-      desc: "We demonstrate everything you need to know to Start Free Trial with dropshipping."
+      title: "70+ Millions of Students",
+      desc: "Learn the same strategies our students used to make over 100 million in sales."
     },
     {
       id: 3,
       imageUrl: "/icons/home/feature-selling-service.png",
-      title: "Selling Services",
-      desc: "We use cutting-edge selling methods to provide you with a unique e-commerce experience."
+      title: "AI Performance",
+      desc: "We use advanced reselling methods to give you a unique e-commerce experience."
     }
   ],
 
