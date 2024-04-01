@@ -52,6 +52,67 @@ export const homeData: HomeData = {
       desc: "We use advanced reselling methods to give you a unique e-commerce experience."
     }
   ],
+  videoTrainingBlackTitle: "What does",
+  videoTrainingBlueTitle: "video training?",
+  videoTrainingData: [
+    {
+      id: 1,
+      imageUrl: "/images/home/0-checkified.png",
+      title: "Checkified",
+      bluetitle: "Course plan",
+      subtitle:
+        "We have built our program to create income for multiple entrepreneurs with a legal seller base and customer relationships. Learn the strategies that will set the foundation for your e-commerce business.",
+    },
+    {
+      id: 2,
+      imageUrl: "/images/home/1-introduktion.png",
+      title: "1. Introduction",
+      subtitle:
+        "We teach you the basics of what dropshipping is and how to create a stable income to financial freedom."
+    },
+    {
+      id: 3,
+      imageUrl: "/images/home/2-mindset.png",
+      title: "2. Mindset",
+      subtitle:
+        "We go through which mindset you have to put yourself in to achieve success as an entrepreneur."
+    },
+    {
+      id: 4,
+      imageUrl: "/images/home/3-produkten.png",
+      title: "3. Products",
+      subtitle:
+      "Learn about our proven methods for continuously finding successful products time and time again."
+    },
+    {
+      id: 5,
+      imageUrl: "/images/home/4-varumarket.png",
+      title: "4. The brand",
+      subtitle:
+        "Discover how to build your brand! We will go through all the steps you need to take to establish a scalable brand."
+    },
+    {
+      id: 6,
+      imageUrl: "/images/home/5-leverantoren.png",
+      title: "5. The Supplier",
+      subtitle:
+        "We teach you how to maintain communication with your supplier and how to automate everything."
+    },
+    {
+      id: 7,
+      imageUrl: "/images/home/6-annonsera.png",
+      title: "6. Advertise",
+      subtitle:
+        "Learn how to effectively promote and generate sales on your stores with Meta and Tiktok!"
+    },
+    {
+      id: 8,
+      imageUrl: "/images/home/7-develop.png",
+      title: "7. Develop",
+      subtitle:
+        "Are you ready to take the next step? We're here to help you evolve from a dropshipping business to a fully-fledged e-commerce company."
+    }
+  ],
 
   expertiseData: [
     {

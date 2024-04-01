@@ -53,6 +53,68 @@ export const homeData: HomeData = {
     }
   ],
 
+  videoTrainingBlackTitle: "Vad innehåller",
+  videoTrainingBlueTitle: "videoutbildningen?",
+  videoTrainingData: [
+    {
+      id: 1,
+      imageUrl: "/images/home/0-checkified.png",
+      title: "Checkified",
+      bluetitle: "Kursplan",
+      subtitle:
+        "Vi har byggt upp vår program för att skapa inkomst för flera entreprenörer med rättslig säljarbas och kundrelationer. Lär dig strategierna som ska sätta grunden för din e-handel.",
+    },
+    {
+      id: 2,
+      imageUrl: "/images/home/1-introduktion.png",
+      title: "1. Introduktion",
+      subtitle:
+        "Vi lär dig grunderna till vad dropshipping är och hur du ska skapa en stabil inkomst till ekonomisk frihet."
+    },
+    {
+      id: 3,
+      imageUrl: "/images/home/2-mindset.png",
+      title: "2. Mindset",
+      subtitle:
+        "Vi går igenom vilken mindset du måste sätta dig i fär att uppnå framgång som entreprenör."
+    },
+    {
+      id: 4,
+      imageUrl: "/images/home/3-produkten.png",
+      title: "3. Produkten",
+      subtitle:
+        "Ta del av våra beprövade metoder för att kontinuerligt hitta framgångsrika produkter gång på gång."
+    },
+    {
+      id: 5,
+      imageUrl: "/images/home/4-varumarket.png",
+      title: "4. Varumärket",
+      subtitle:
+        "Upptäck hur du bygger upp ditt varumärke! Vi kommer att gå igenom alla steg du behöver ta för att etablera ett skalbart varumärke."
+    },
+    {
+      id: 6,
+    imageUrl: "/images/home/5-leverantoren.png",
+      title: "5. Leverantören",
+      subtitle:
+        "Vi lär dig hur du ska bibehålla kommunikation med din leverantör och hur du automatiserar allt."
+    },
+    {
+      id: 7,
+      imageUrl: "/images/home/6-annonsera.png",
+      title: "6. Annonsera",
+      subtitle:
+        "Lär dig hur du effektiv marknadsför och genererar försäljning på dina butiker med Meta och Tiktok!"
+    },
+    {
+      id: 8,
+      imageUrl: "/images/home/7-utveckla.png",
+      title: "7. Utveckla",
+      subtitle:
+        "Är du redo att ta nästa steg? Vi finns här för att hjälpa dig utvecklas från ett dropshipping-företag till ett fullt utrustat E-handelsbolag."
+    }
+  ],
+
   expertiseData: [
     {
       id: 1,

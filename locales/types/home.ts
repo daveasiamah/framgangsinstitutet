@@ -9,6 +9,14 @@ type FeatureData = {
   desc: string;
 };
 
+type VideoTrainingData = {
+  id: number;
+  imageUrl: string;
+  title: string;
+  bluetitle?: string;
+  subtitle: string;
+};
+
 type ExpertiseData = {
   id: number;
   imageUrl: string;
@@ -73,6 +81,9 @@ export type HomeData = {
   platformBlueTitle: string;
   // platformSubtitle: string;
   featureData: FeatureData[];
+  videoTrainingBlackTitle: string;
+  videoTrainingBlueTitle: string;
+  videoTrainingData: VideoTrainingData[];
   expertiseData: ExpertiseData[];
 
   startSellingBlackTittle: string;

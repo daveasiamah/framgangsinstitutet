@@ -4,6 +4,8 @@ import { FaCheckCircle } from "react-icons/fa"
 import { BsPatchCheckFill } from "react-icons/bs"
 import { motion } from "framer-motion"
 import { useRouter } from "next/router"
+import { Autoplay, EffectCards, Navigation } from "swiper"
+import { Swiper, SwiperSlide } from "swiper/react"
 
 import Title from "@/components/parts/Title"
 import Layout from "@/components/Layout"
@@ -16,6 +18,9 @@ import ScrollReveal from "@/components/transition/ScrollReveal"
 import fs from "fs";
 import { medsosData, platformData } from "@/assets/data/homeData"
 import TiltParallax from "@/components/transition/TiltParallax"
+// Import Swiper styles
+import "swiper/css"
+import "swiper/css/effect-cards"
 
 import en from "@/locales/en"
 import sv from "@/locales/sv"
@@ -23,6 +28,7 @@ import { useEffect, useState } from "react";
 import axios from 'axios';
 import { HiOutlineClock } from "react-icons/hi"
 import Marquee from "react-fast-marquee";
+import VideoTrainingCard from "@/components/parts/VideoTrainingCard"
 
 type Props = {}
 
@@ -167,9 +173,6 @@ export default function Home() {
             blackText={t.homeData.platformBlackTitle}
             blueText={t.homeData.platformBlueTitle}
           />
-          {/* <p className="max-w-xl mx-auto mb-16 text-subtitle">
-            {t.homeData.platformSubtitle}
-          </p> */}
         </ScrollReveal>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {t.homeData.featureData.map((data) => (
@@ -235,61 +238,55 @@ export default function Home() {
         </div>
       </section> */}
 
-      <section className="relative py-14 text-center grid gap-10 lg:gap-24 md:mb-16 lg:mb-20">
+      <section className="relative flex justify-center bg-base-200 rounded-2xl py-14 md:mb-16 lg:mb-20">
         <CacingOne
           positionClassName="left-[-20rem] lg:left-[-12rem] rotate-[-50deg] top-[18rem] lg:top-[40rem] 2xl:top-[50rem]"
           sizeClassName="w-[30rem] h-[30rem]"
           className="z-[-1]"
         />
-
-        {t.homeData.expertiseData.map((data) => (
-          <div
-            key={data.id}
-            className={`flex flex-col-reverse lg:flex-row ${data.isImageLeft ? "lg:flex-row" : "lg:flex-row-reverse"
-              } justify-between item gap-10 lg:gap-24`}
+        <Swiper
+            grabCursor={true}
+            loop={true}
+            modules={[EffectCards, Navigation, Autoplay]}
+            className="testimony-swiper"
+            navigation={{
+              nextEl: ".nav-right",
+              prevEl: ".nav-left"
+            }}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false
+            }}
           >
-            <div className="w-full h-60 lg:h-full 2xl:h-[26rem] lg:w-1/2 relative">
-              <Image
-                src={data.imageUrl}
-                alt="introduction ground"
-                className="object-cover rounded-[2rem]"
-                fill
-              />
-            </div>
-            <div className="w-full lg:w-1/2 flex items-baseline justify-start gap-4 text-left">
-              <ScrollReveal>
-                <p className="text-[34px] lg:text-[40px] font-bold">
-                  {data.id}.
-                </p>
-              </ScrollReveal>
-              <ScrollReveal>
-                <Title
-                  blackText={data.titleBlack}
-                  blueText={data.titleBlue}
-                  isBlock
-                  className="relative mb-14"
-                >
-                  <Image
-                    src="/icons/home/half-arrow.png"
-                    alt="half arrow"
-                    height={36}
-                    width={160}
-                    className="absolute object-contain -bottom-10 left-0"
+            {t.homeData.videoTrainingData.map((data) => (
+              <SwiperSlide key={data.id}>
+                {({ isActive }) => (
+                  <VideoTrainingCard 
+                    blackText={data.title}
+                    blueText={data.bluetitle}
+                    subTitle={data.subtitle}
+                    imageUrl={data.imageUrl}
                   />
-                </Title>
-                <p className="text-subtitle mt-14">{data.subtitle}<br/>{data.subtitletwo}</p>
-                <ul className="mt-4 text-subtitle grid gap-3">
-                  {data.lists.map((list) => (
-                    <li key={list.id} className="flex items-center gap-2">
-                      <FaCheckCircle className="text-primary" size={20} />{" "}
-                      {list.name}
-                    </li>
-                  ))}
-                </ul>
-              </ScrollReveal>
-            </div>
-          </div>
-        ))}
+                )}
+              </SwiperSlide>
+            ))}
+            <button className="hidden lg:block absolute z-[1] left-10 top-1/2 transform -translate-y-1/2 nav-left">
+              <Image
+                src="/icons/impact/arrow-left.png"
+                width={80}
+                height={80}
+                alt="arrow left"
+              />
+            </button>
+            <button className="hidden lg:block absolute z-[1] right-10 top-1/2 transform -translate-y-1/2 nav-right">
+              <Image
+                src="/icons/impact/arrow-right.png"
+                width={80}
+                height={80}
+                alt="arrow left"
+              />
+            </button>
+          </Swiper>
       </section>
 
       <section className="relative md:py-14 lg:py-14 mb-16 lg:mb-20 flex flex-col lg:flex-row gap-20">
