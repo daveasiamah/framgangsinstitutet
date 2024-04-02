@@ -17,7 +17,7 @@ export default function VideoTrainingCard({
   imageUrl,
 }: Props) {
   return (
-    <div className={`flex flex-col items-center justify-center px-14 md:px-40`}>
+    <div className={`flex flex-col items-center justify-center px-4 md:px-40`}>
       <ScrollReveal>
         <div className="max-w-xl text-center">
           <div className="relative block">

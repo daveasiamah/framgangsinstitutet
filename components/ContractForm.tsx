@@ -121,8 +121,15 @@ export default function ContactForm() {
           src="https://www.youtube.com/embed/pTVfynxC3-c?si=VXY1V0Wf90F4QeV9" 
           title="YouTube video player" 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          className="home_video_cover mt-4 max-w-full" 
+          className="home_video_cover mt-4 max-w-full hidden lg:block" 
         ></iframe>
+        <Image
+          src="/images/home/home-video-lock.png"
+          alt="video"
+          width="311" 
+          height="175" 
+          className="block lg:hidden"
+        />
         <div className="mt-6">
           <div className="flex justify-center gap-2 text-xl font-bold">
             <h1>{t.homeData.popupBlackTitle}</h1>
