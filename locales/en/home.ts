@@ -260,6 +260,10 @@ export const homeData: HomeData = {
   reasonSubtitle: "Dropshipping is popular for its minimal capital requirements, as it doesn't require warehousing and allows entrepreneurs to focus on sales and marketing without having to deal with the logistics of product delivery.",
   reasonButton: "Join for free",
 
+  freeCourseTitle: "Free Course: Getting Started with Dropshipping 2024",
+  freeCourseSubtitle: "In this video, Dominic shares his secrets and strategies for building his dropshipping empire and shows how you can do the same!",
+  freeCourseButton: "Watch our free dropshipping course",
+
   /*=============================================
   =            Start Selling            =
   =============================================*/

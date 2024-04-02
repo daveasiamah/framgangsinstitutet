@@ -123,6 +123,10 @@ export type HomeData = {
   reasonSubtitle: string;
   reasonButton: string;
 
+  freeCourseTitle: string;
+  freeCourseSubtitle: string;
+  freeCourseButton: string;
+
   benefitBlackTitle: string;
   benefitBlueTitle: string;
   benefitData: BenefitData[];

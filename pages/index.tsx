@@ -342,7 +342,7 @@ export default function Home() {
                     height={325}
                     alt="data"
                     className="object-cover"
-                   />
+                  />
                 )}
               </SwiperSlide>
             ))}
@@ -369,7 +369,7 @@ export default function Home() {
               width={500}
               className="object-contain mx-auto mt-6"
             />
-         
+        
         </div>
         <div className="w-full lg:w-1/2">
           <ContactForm contactData={t.homeData.contactForm} />
@@ -640,6 +640,23 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="h-80  px-20 py-10 text-white">
+        <div className="absolute left-0 right-0 flex flex-col items-center justify-center bg-primary px-20 py-10">
+          <ScrollReveal>
+            <Title
+              blackText={t.homeData.freeCourseTitle}
+              className="text-white text-center"
+            />
+            <p className="mb-2">{t.homeData.freeCourseSubtitle}</p>
+          </ScrollReveal>
+          <Link href="/signup">
+            <button className="btn btn-white mt-10">
+              {t.homeData.freeCourseButton}
+            </button>
+          </Link>
+        </div>
+      </section>
+
       {/* Dynamic Blog posts list */}
       {/* <section className="py-16 mb-16">
         <ScrollReveal>
@@ -686,6 +703,5 @@ export default function Home() {
       </section> */}
 
     </Layout>
-
   )
 }
