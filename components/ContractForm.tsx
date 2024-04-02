@@ -113,7 +113,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="bg-white p-10 px-8 max-w-[360px] box-content" onClick={handleClick}>
+    <div className="bg-white py-10 px-6 max-w-[360px] box-content rounded-lg" onClick={handleClick}>
       <div className="flex flex-col justify-center items-center">
         <iframe 
           width="311" 

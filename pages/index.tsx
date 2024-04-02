@@ -316,7 +316,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative flex items-stretch item mt-10 px-6 pt-6 mb-16 lg:mb-20 bg-primary rounded-2xl">
+      <section className="relative flex items-stretch gap-4 item mt-10 px-6 pt-6 mb-16 lg:mb-20 bg-primary rounded-2xl">
         <div className="relative hidden lg:block flex-1">
           <Image
             src="/images/university/glass-men.png"
