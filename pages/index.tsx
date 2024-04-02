@@ -469,8 +469,8 @@ export default function Home() {
           <Image
             src="/images/home/globe.gif"
             alt="globe"
-            height={806}
-            width={806}
+            height={500}
+            width={500}
             className="object-contain mx-auto mb-16"
           />
         </div>
@@ -500,39 +500,6 @@ export default function Home() {
           </ScrollReveal>
         </div> */}
       </section>
-
-      {/* <section className="relative university-container bg-primary p-8 lg:px-16 lg:py-14 mb-16 lg:mb-20 rounded-3xl text-white text-left flex flex-col lg:flex-row gap-20">
-        <ScrollReveal className="w-full lg:w-2/3 z-10">
-          <h2 className="text-4xl font-bold mb-8">
-            {t.homeData.checkifiedUnivTitle}
-          </h2>
-          <p className="mb-2">{t.homeData.checkifiedUnivListTDesc}</p>
-          <ul className="mt-4 grid gap-3">
-            {t.homeData.checkifiedUnivList.map((list) => (
-              <li key={list.id} className="flex items-center gap-4">
-                <div className="w-6">
-                  <FaCheckCircle size={20} />
-                </div>
-
-                <p className="flex-1">{list.list}</p>
-              </li>
-            ))}
-          </ul>
-          <ButtonArrow href="/signup" isReverse className="mt-10">
-            {t.homeData.checkifiedUnivButton}
-          </ButtonArrow>
-        </ScrollReveal>
-        <div className="relative w-full lg:w-1/3 h-[360px] lg:h-full">
-          <Image
-            src="/images/home/checkified-university.png"
-            alt="checkified university"
-            height={500}
-            width={500}
-            className="absolute bottom-[-3rem] xs:bottom-[-13rem] sm:bottom-[-13rem] lg:top-[-1rem] xl:top-[-6rem] 2xl:top-[-10rem] right-0 sm:scale-[.6] lg:scale-[1.4] xl:scale-[1] 2xl:scale-75 object-contain"
-            priority
-          />
-        </div>
-      </section> */}
 
       <section className="relative mb-16 lg:mb-20">
         <BlurCircle
@@ -610,7 +577,7 @@ export default function Home() {
             />
           </ScrollReveal>
         </div>
-        <div className="relative pt-44  items-center justify-center testimonial-slider-container">
+        <div className="relative pt-48  items-center justify-center testimonial-slider-container">
           <div className="absolute" style={{}}>
           <div className="items-center left-0 gap-2 justify-around testimonial-slider">
           <Marquee style={{ width: "1300px", overflow: "visible" }} speed={30}>
@@ -636,6 +603,41 @@ export default function Home() {
           </div>
           </div>
         </div>     
+      </section>
+
+      <section className="relative university-container bg-primary p-8 lg:px-16 lg:py-14 mb-16 lg:mb-20 rounded-3xl text-white text-left flex flex-col lg:flex-row gap-20">
+        <ScrollReveal className="w-full lg:w-2/3 z-10">
+          <h2 className="text-4xl font-bold mb-8">
+            {t.homeData.checkifiedUnivTitle}
+          </h2>
+          <p className="mb-2">{t.homeData.checkifiedUnivListTDesc}</p>
+          <ul className="mt-4 grid gap-3">
+            {t.homeData.checkifiedUnivList.map((list) => (
+              <li key={list.id} className="flex items-center gap-4">
+                <div className="w-6">
+                  <FaCheckCircle size={20} />
+                </div>
+
+                <p className="flex-1">{list.list}</p>
+              </li>
+            ))}
+          </ul>
+          <Link href="/signup">
+            <button className="btn btn-white mt-10">
+              {t.homeData.checkifiedUnivButton}
+            </button>
+          </Link>
+        </ScrollReveal>
+        <div className="relative hidden lg:block w-full lg:w-1/3 h-[360px] lg:h-full">
+          <Image
+            src="/images/home/checkified-university.png"
+            alt="checkified university"
+            height={500}
+            width={500}
+            className="absolute bottom-[-3rem] xs:bottom-[-13rem] sm:bottom-[-13rem] lg:top-[-1rem] xl:top-[-6rem] 2xl:top-[-10rem] -right-1/4 sm:scale-[.6] lg:scale-[1.4] xl:scale-[1] 2xl:scale-75 object-contain"
+            priority
+          />
+        </div>
       </section>
 
       {/* Dynamic Blog posts list */}

@@ -235,35 +235,31 @@ export const homeData: HomeData = {
   =            Checkified University Section            =
   =============================================*/
 
-  checkifiedUnivTitle: "Checkified University",
-  checkifiedUnivListTDesc: "Genom att delta i vår kurs kommer du att lära dig:",
+  checkifiedUnivTitle: "Är du redo att förändra ditt liv?",
+  checkifiedUnivListTDesc:`Allt du behöver göra är att hitta din första framgångsrika produkt.Vi på Checkified finns här för att guida dig på vägen!`,
   checkifiedUnivList: [
     {
       id: 1,
-      list: "Grunderna för dropshipping och hur det fungerar"
+      list:  "Kom igång denna vecka, löpande kursstart",
     },
     {
       id: 2,
-      list: "Hur man identifierar lönsamma produkter"
+      list: "Börja deltid vid sidan av jobb eller studier",
     },
     {
       id: 3,
-      list: "Hur man hittar pålitliga leverantörer"
+      list: "100% digital utbildning",
     },
     {
       id: 4,
-      list: "Hur du skapar din webbutik och optimerar den för försäljning"
+      list: "Jobba vart du vill, när du vill",
     },
     {
       id: 5,
-      list: "Hur du marknadsför med hjälp av sociala medier"
+      list: "Ta del av exklusiva webinarer och events"
     },
-    {
-      id: 6,
-      list: "Hur du hanterar beställningar, lager och kundtjänst"
-    }
   ],
-  checkifiedUnivButton: "Starta nu",
+  checkifiedUnivButton: "Gå med gratis",
 
   /*=====  End of Checkified University Section  ======*/
 
@@ -323,7 +319,6 @@ export const homeData: HomeData = {
   reasonTitle: "Varför väljer folk Dropshipping som affärsmodell 2024?",
   reasonSubtitle: "Dropshipping är populärt för dess minimala kapitalkrav, eftersom det inte kräver lagerhållning och tillåter företagare att fokusera på försäljning och marknadsföring utan att behöva hantera logistiken för produktleverans.",
   reasonButton: "Gå med gratis",
-
   /*=============================================
   =            Benefit Data            =
   =============================================*/

@@ -259,7 +259,7 @@ export const homeData: HomeData = {
   reasonTitle: "Why are people choosing Dropshipping as a business model in 2024?",
   reasonSubtitle: "Dropshipping is popular for its minimal capital requirements, as it doesn't require warehousing and allows entrepreneurs to focus on sales and marketing without having to deal with the logistics of product delivery.",
   reasonButton: "Join for free",
-  
+
   /*=============================================
   =            Start Selling            =
   =============================================*/
@@ -290,35 +290,31 @@ export const homeData: HomeData = {
   =            Checkified University Section            =
   =============================================*/
 
-  checkifiedUnivTitle: "Checkified University",
-  checkifiedUnivListTDesc: "By enrolling in our course, you will learn:",
+  checkifiedUnivTitle: "Are you ready to change your life?",
+  checkifiedUnivListTDesc:`All you have to do is find your first successful product.We at Checkified are here to guide you along the way!`,
   checkifiedUnivList: [
     {
       id: 1,
-      list: "The basics of dropshipping and how to works."
+      list: "Get started this week, continuous course start",
     },
     {
       id: 2,
-      list: "How to identify profitable products and niche markets"
+      list: 'Starting part-time alongside work or study',
     },
     {
       id: 3,
-      list: "How to find reliable suppliers and negotiate with them"
+      list: "100% digital education",
     },
     {
       id: 4,
-      list: "How to set up your online store and optimize it for sales"
+      list: "Work wherever you want, whenever you want",
     },
     {
       id: 5,
-      list: "How to market your products using social media"
+      list: "Take part in exclusive webinars and events"
     },
-    {
-      id: 6,
-      list: "How to manage your orders, inventory, and customer service"
-    }
   ],
-  checkifiedUnivButton: "Start Free Trial",
+  checkifiedUnivButton: "Join for free",
 
   /*=====  End of Checkified University Section  ======*/
 
