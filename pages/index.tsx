@@ -29,6 +29,7 @@ import axios from 'axios';
 import { HiOutlineClock } from "react-icons/hi"
 import Marquee from "react-fast-marquee";
 import VideoTrainingCard from "@/components/parts/VideoTrainingCard"
+import Accordion from "@/components/parts/Accordion_Home"
 
 type Props = {}
 
@@ -636,6 +637,27 @@ export default function Home() {
             width={500}
             className="absolute bottom-[-3rem] xs:bottom-[-13rem] sm:bottom-[-13rem] lg:top-[-1rem] xl:top-[-6rem] 2xl:top-[-10rem] -right-1/4 sm:scale-[.6] lg:scale-[1.4] xl:scale-[1] 2xl:scale-75 object-contain"
             priority
+          />
+        </div>
+      </section>
+    
+      <section className="h-[1200px]">
+        <div className="absolute left-0 right-0 bg-base-200 p-10">
+          <Image 
+            src="/images/home/question.gif"
+            width={151}
+            height={151}
+            alt="faq"
+            className="mx-auto"
+          />
+          <ScrollReveal>
+            <Title
+              blackText={t.homeData.faqBlackTitle}
+              className="text-center"
+            />
+          </ScrollReveal>
+          <Accordion
+            data={t.homeData.faqData}
           />
         </div>
       </section>
