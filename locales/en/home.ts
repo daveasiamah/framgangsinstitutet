@@ -203,6 +203,58 @@ export const homeData: HomeData = {
   ],
   /*=====  End of Platform Section  ======*/
 
+  featuresExploreBlackTitle: "Exploring the Future",
+  featuresExploreBlueTitle: "Dropshipping Education",
+  featuresExploreData: [
+    {
+      id: 1,
+      imageUrl: "/icons/home/1-superior-service.png",
+      title: "Weekly",
+      blueTitle: "coaching!",
+      subtitle:
+        "Every week there is the possibility of 4 coaching calls where you can have individual conversations with an expert."
+    },
+    {
+      id: 2,
+      imageUrl: "/icons/home/2-find-products.png",
+      title: "Free",
+      blueTitle: "E-books",
+      subtitle:
+        "Gain valuable knowledge through our free E-books. Download and start your journey to success!"
+    },
+    {
+      id: 3,
+      imageUrl: "/icons/home/3-all-in-one.png",
+      title: "100%",
+      blueTitle: "Guarantee",
+      subtitle:
+        "When you follow our curriculum and all the steps we teach, you can be sure of success or your money back!"
+    },
+    {
+      id: 4,
+      imageUrl: "/icons/home/feature-selling-service.png",
+      title: "A-Z",
+      blueTitle: "Course schedule!",
+      subtitle:
+        "Access our course platform for step-by-step guides through dropshipping with videos, documents, and templates!"
+    },
+    {
+      id: 5,
+      imageUrl: "/icons/home/feature-create-content.png",
+      title: "Built-in",
+      blueTitle: "Community",
+      subtitle:
+        "Join our network of over 350 driven e-commerce and dropshipping entrepreneurs!"
+    },
+    {
+      id: 6,
+      imageUrl: "/icons/home/feature-unlimited-access.png",
+      title: "Webinars",
+      blueTitle: "& Events",
+      subtitle:
+        "Explore our E-commerce and dropshipping student events! Get practical skills through workshops and meetings!"
+    },
+  ],
   /*=============================================
   =            Start Selling            =
   =============================================*/

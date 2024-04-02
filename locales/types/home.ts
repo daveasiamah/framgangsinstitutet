@@ -38,6 +38,14 @@ type CheckifiedUnivList = {
   list: string;
 };
 
+type FeaturesExploreData = {
+  id: number;
+  imageUrl: string;
+  title: string;
+  blueTitle: string;
+  subtitle: string;
+}
+
 type BenefitData = {
   id: number;
   imageUrl: string;
@@ -106,6 +114,10 @@ export type HomeData = {
   checkifiedUnivListTDesc: string;
   checkifiedUnivList: CheckifiedUnivList[];
   checkifiedUnivButton: string;
+
+  featuresExploreBlackTitle: string;
+  featuresExploreBlueTitle: string;
+  featuresExploreData: FeaturesExploreData[];
 
   benefitBlackTitle: string;
   benefitBlueTitle: string;

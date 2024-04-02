@@ -454,7 +454,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative py-14 lg:mb-20">
+      <section className="relative py-14">
         <BlurCircle positionClassName="right-[-4rem] top-[30rem]" size="lg" />
 
         <div className="relative w-fit mx-auto">
@@ -469,13 +469,13 @@ export default function Home() {
           <Image
             src="/images/home/globe.gif"
             alt="globe"
-            height={500}
-            width={500}
+            height={806}
+            width={806}
             className="object-contain mx-auto mb-16"
           />
         </div>
 
-        <div className="bg-base-200 p-8 lg:py-14 lg:px-16 mb-16 rounded-[3rem]">
+        {/* <div className="bg-base-200 p-8 lg:py-14 lg:px-16 mb-16 rounded-[3rem]">
           <ScrollReveal>
             <Title
               blackText={t.homeData.startSellingBlackTittle}
@@ -498,10 +498,10 @@ export default function Home() {
               {t.homeData.startSellingButton}
             </ButtonArrow>
           </ScrollReveal>
-        </div>
+        </div> */}
       </section>
 
-      <section className="relative university-container bg-primary p-8 lg:px-16 lg:py-14 mb-16 lg:mb-20 rounded-3xl text-white text-left flex flex-col lg:flex-row gap-20">
+      {/* <section className="relative university-container bg-primary p-8 lg:px-16 lg:py-14 mb-16 lg:mb-20 rounded-3xl text-white text-left flex flex-col lg:flex-row gap-20">
         <ScrollReveal className="w-full lg:w-2/3 z-10">
           <h2 className="text-4xl font-bold mb-8">
             {t.homeData.checkifiedUnivTitle}
@@ -532,7 +532,7 @@ export default function Home() {
             priority
           />
         </div>
-      </section>
+      </section> */}
 
       <section className="relative mb-16 lg:mb-20">
         <BlurCircle
@@ -542,14 +542,14 @@ export default function Home() {
 
         <ScrollReveal>
           <Title
-            blackText={t.homeData.benefitBlackTitle}
-            blueText={t.homeData.benefitBlueTitle}
+            blackText={t.homeData.featuresExploreBlackTitle}
+            blueText={t.homeData.featuresExploreBlueTitle}
             isBlock
             className="text-center"
           />
         </ScrollReveal>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {t.homeData.benefitData.map((data) => (
+          {t.homeData.featuresExploreData.map((data) => (
             <div
               key={data.id}
               className="bg-white p-10 rounded-[2rem] feature-card-shadow text-center"
@@ -564,7 +564,10 @@ export default function Home() {
                 />
               </div>
               <ScrollReveal>
-                <h3 className="text-lg font-bold mb-3">{data.title}</h3>
+                <div className="flex items-center justify-center gap-2">
+                  <h3 className="text-primary text-xl font-bold mb-3">{data.title}</h3>
+                  <h3 className="text-xl font-bold mb-3">{data.blueTitle}</h3>
+                </div>
                 <p className="text-subtitle">{data.subtitle}</p>
               </ScrollReveal>
             </div>

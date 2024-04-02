@@ -267,10 +267,63 @@ export const homeData: HomeData = {
 
   /*=====  End of Checkified University Section  ======*/
 
+  featuresExploreBlackTitle: "Utforska Framtidens",
+  featuresExploreBlueTitle: "Dropshipping Utbildning",
+  featuresExploreData: [
+    {
+      id: 1,
+      imageUrl: "/icons/home/1-superior-service.png",
+      title: "Veckovis",
+      blueTitle: "coaching!",
+      subtitle:
+        "Varje vecka finns det möjlighet till 4 coachingsamtal där du kan ha individuella samtal med en expert."
+    },
+    {
+      id: 2,
+      imageUrl: "/icons/home/2-find-products.png",
+      title: "Gratis",
+      blueTitle: "E-böcker",
+      subtitle:
+        "Få värdefull kunskap genom våra kostnadsfria E-böcker. Ladda ner och börja din resa mot framgång!"
+    },
+    {
+      id: 3,
+      imageUrl: "/icons/home/3-all-in-one.png",
+      title: "100%",
+      blueTitle: "Garanti",
+      subtitle:
+        "När du följer vår kursplan och alla steg vi lär ut, kan du vara säker på framgång eller så får du pengarna tillbaka!"
+    },
+    {
+      id: 4,
+      imageUrl: "/icons/home/feature-selling-service.png",
+      title: "A-Ö",
+      blueTitle: "Kursplan!",
+      subtitle:
+        "Få tillgång till vår kursplattform för stegvis guider genom dropshipping med videor, dokument och mallar!"
+    },
+    {
+      id: 5,
+      imageUrl: "/icons/home/feature-create-content.png",
+      title: "Inbyggd",
+      blueTitle: "Community",
+      subtitle:
+        "Anslut dig till vårt nätverk av över 350 drivna entreprenörer inom E-handel och dropshipping!"
+    },
+    {
+      id: 6,
+      imageUrl: "/icons/home/feature-unlimited-access.png",
+      title: "Webinars",
+      blueTitle: "& Events",
+      subtitle:
+        "Utforska våra studentevenemang för E-handel och dropshipping! Få praktiska färdigheter genom workshops och möten!"
+    },
+  ],
+
   /*=============================================
   =            Benefit Data            =
   =============================================*/
-
+  
   benefitBlackTitle: "Fördelar med",
   benefitBlueTitle: "Checkified",
   benefitData: [
