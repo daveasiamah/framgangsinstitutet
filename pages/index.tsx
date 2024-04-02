@@ -245,14 +245,12 @@ export default function Home() {
           className="z-[-1]"
         />
         <ScrollReveal>
-          <div className="flex flex-col items-center justify-center gap-2">
-            <h1 className="text-[2rem] lg:text-6xl font-bold lg:mb-2">
-                {t.homeData.videoTrainingBlackTitle}
-              </h1>
-              <h1 className="text-[2rem] lg:text-6xl font-bold text-primary max-[480px]:mt-[-3vw]">
-                {t.homeData.videoTrainingBlueTitle}
-              </h1>
-          </div>
+          <Title
+            blackText={t.homeData.videoTrainingBlackTitle}
+            blueText={t.homeData.videoTrainingBlueTitle}
+            isBlock
+            className="text-center"
+          />
         </ScrollReveal>
         <div className="mt-8  py-8 bg-base-200 rounded-2xl">
           <Swiper
@@ -310,7 +308,7 @@ export default function Home() {
             className="object-contain"
           />
         </div>
-        <div className="flex-1 flex flex-col items-center px-10 py-8 bg-white/20 rounded-2xl overflow-hidden">
+        <div className="flex-1 flex flex-col items-center px-10 py-8 bg-white/20 rounded-tl-2xl  rounded-tr-2xl overflow-hidden">
           <ScrollReveal className="text-center text-white">
             <h3 className="font-bold text-2xl lg:text-4xl">{t.homeData.videoDataTitle}</h3>
             <h3 className="mt-1 font-bold text-2xl lg:text-4xl">{t.homeData.videoDataTitleTwo}</h3>
@@ -352,7 +350,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative md:py-14 lg:py-14 mb-16 lg:mb-20 flex flex-col lg:flex-row gap-20">
+      {/* <section className="relative md:py-14 lg:py-14 mb-16 lg:mb-20 flex flex-col lg:flex-row gap-20">
         <div className="w-full lg:w-1/2">
           <ScrollReveal>
             <Title
@@ -376,9 +374,16 @@ export default function Home() {
         <div className="w-full lg:w-1/2">
           <ContactForm contactData={t.homeData.contactForm} />
         </div>
-      </section>
+      </section> */}
 
       <section className="mb-16 lg:mb-20 medsos-container">
+        <ScrollReveal>
+          <Title
+            blackText={t.homeData.medsosTitle}
+            blueText={t.homeData.medsosBlueTitle}
+            className="text-center"
+          />
+        </ScrollReveal>
         <div className="flex items-center justify-center">
           <div className="w-[400%] lg:w-[200%] h-28 overflow-hidden relative">
             <div className="w-[400%] lg:w-[200%] h-20 flex items-center absolute left-0 top-1/2 transform -translate-y-1/2 gap-2 justify-around infinite-slide-left">

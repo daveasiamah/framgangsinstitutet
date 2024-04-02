@@ -28,6 +28,10 @@ export const homeData: HomeData = {
   =            Platform Section            =
   =============================================*/
 
+
+  medsosTitle: "What are you learning in",
+  medsosBlueTitle: "Checkified?",
+
   platformBlackTitle: "Investing in your ",
   platformBlueTitle: "Future",
   // platformSubtitle:

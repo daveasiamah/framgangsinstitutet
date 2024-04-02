@@ -75,6 +75,10 @@ export type HomeData = {
   heroInteractiveText: string;
   heroOutstandingText: string;
 
+
+  medsosTitle: string;
+  medsosBlueTitle: string;
+
   knowledgeText: string;
 
   platformBlackTitle: string;

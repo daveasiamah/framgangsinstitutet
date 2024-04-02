@@ -206,6 +206,9 @@ export const homeData: HomeData = {
   =            Start Selling            =
   =============================================*/
 
+  medsosTitle: "Vad lär du dig i",
+  medsosBlueTitle: " Checkified?",
+
   startSellingBlackTittle: "Börja Sälja i En",
   startSellingBlueTittle: "Snabbväxande Bransch",
   startSellingSubtitle:
