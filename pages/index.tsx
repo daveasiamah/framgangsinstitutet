@@ -654,13 +654,13 @@ export default function Home() {
             </button>
           </Link>
         </ScrollReveal>
-        <div className="relative w-[259px] lg:w-1/3 h-[382px] lg:h-full">
+        <div className="relative mx-auto w-[259px] lg:w-1/3 h-[382px] lg:h-full">
           <Image
             src="/images/home/checkified-university.png"
             alt="checkified university"
             height={500}
             width={500}
-            className="absolute bottom-[-3rem] xs:bottom-[-13rem] sm:bottom-[-13rem] lg:top-[-1rem] xl:top-[-6rem] 2xl:top-[-10rem] -right-1/4 sm:scale-[.6] lg:scale-[1.4] xl:scale-[1] 2xl:scale-75 object-contain"
+            className="absolute bottom-[-3rem] lg:top-[-1rem] xl:top-[-6rem] 2xl:top-[-10rem] lg:-right-1/4 lg:scale-[1.4] xl:scale-[1] 2xl:scale-75 object-contain"
             priority
           />
         </div>
