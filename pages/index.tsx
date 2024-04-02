@@ -111,10 +111,7 @@ export default function Home() {
               height="423" 
               src="https://www.youtube.com/embed/pTVfynxC3-c?si=VXY1V0Wf90F4QeV9" 
               title="YouTube video player" 
-              frameborder="0" 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              referrerpolicy="strict-origin-when-cross-origin" 
-              allowfullscreen
               className="home_video_cover mt-4 max-w-full" 
             ></iframe>
             <Link href="/signup" className="w-full mt-8">
