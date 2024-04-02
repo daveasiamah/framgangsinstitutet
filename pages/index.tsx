@@ -96,7 +96,7 @@ export default function Home() {
           </ScrollReveal>
           
           <div className="relative max-w-[706px] mx-auto flex flex-col items-center justify-center gap-1 mt-12">
-            <div className="absolute top-0 w-full flex items-center justify-center gap-1 p-0.5 bg-[#265BEA] text-white">
+            <div className="absolute top-0 w-full flex items-center justify-center gap-1 p-0.5 bg-primary text-white">
               <Image
                 src="/icons/home/video-play-sm.svg"
                 alt="play video"
@@ -297,6 +297,57 @@ export default function Home() {
                 alt="arrow left"
               />
             </button>
+          </Swiper>
+        </div>
+      </section>
+
+      <section className="relative flex items-stretch item px-6 pt-6 mb-16 lg:mb-20 bg-primary rounded-2xl">
+        <div className="relative hidden lg:block flex-1">
+          <Image
+            src="/images/university/glass-men.png"
+            fill
+            alt="men"
+            className="object-contain"
+          />
+        </div>
+        <div className="flex-1 flex flex-col items-center px-10 py-8 bg-white/20 rounded-2xl overflow-hidden">
+          <ScrollReveal className="text-center text-white">
+            <h3 className="font-bold text-2xl lg:text-4xl">{t.homeData.videoDataTitle}</h3>
+            <h3 className="mt-1 font-bold text-2xl lg:text-4xl">{t.homeData.videoDataTitleTwo}</h3>
+            <div className="text-sm mt-6">
+              <p>{t.homeData.videoDataSubtitle}</p>
+              <p className="mt-4">{t.homeData.videoDataSubtitleTwo}</p>
+            </div>
+          </ScrollReveal>
+          <Link href="/signup" className="mt-6 mb-6">
+            <button className="btn btn-primary">
+              {t.homeData.heroButton}
+            </button>
+          </Link>
+          <Swiper
+            effect="fade"
+            grabCursor={true}
+            loop={true}
+            modules={[Navigation, Autoplay]}
+            className="testimony-swiper max-w-[365px] max-h-365px"
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false
+            }}
+          >
+            {t.homeData.videoDataImgs.map((img) => (
+              <SwiperSlide key={img} >
+                {({ isActive }) => (
+                  <Image
+                    src={img}
+                    width={365}
+                    height={325}
+                    alt="data"
+                    className="object-cover"
+                   />
+                )}
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
       </section>

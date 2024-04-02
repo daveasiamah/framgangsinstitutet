@@ -113,6 +113,18 @@ export const homeData: HomeData = {
         "Are you ready to take the next step? We're here to help you evolve from a dropshipping business to a fully-fledged e-commerce company."
     }
   ],
+  videoDataTitle: "100+ Million SEK",
+  videoDataTitleTwo: "in 5 months",
+  videoDataSubtitle: "Dominic started dropshipping in 2017 and has since managed to turn over 100 million dollars.",
+  videoDataSubtitleTwo: "His success is due to hard work and smart business decisions.",
+  videoDataBtnText: "Join for free",
+  videoDataImgs: [
+    '/images/home/1-data.png',
+    '/images/home/2-data.png',
+    '/images/home/3-data.png',
+    '/images/home/4-data.png',
+    '/images/home/5-data.png',
+  ],
 
   expertiseData: [
     {

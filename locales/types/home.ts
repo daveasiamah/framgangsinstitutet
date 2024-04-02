@@ -84,6 +84,12 @@ export type HomeData = {
   videoTrainingBlackTitle: string;
   videoTrainingBlueTitle: string;
   videoTrainingData: VideoTrainingData[];
+  videoDataTitle: string;
+  videoDataTitleTwo: string;
+  videoDataSubtitle: string;
+  videoDataSubtitleTwo: string;
+  videoDataBtnText: string;
+  videoDataImgs: string[];
   expertiseData: ExpertiseData[];
 
   startSellingBlackTittle: string;

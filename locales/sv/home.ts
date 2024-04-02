@@ -115,6 +115,19 @@ export const homeData: HomeData = {
     }
   ],
 
+  videoDataTitle: "100+ Miljoner kronor",
+  videoDataTitleTwo: "på 5 månader",
+  videoDataSubtitle: "Dominic började med dropshipping år 2017 och har sedan dess lyckats omsätta över 100 miljoner kronor.",
+  videoDataSubtitleTwo: "Hans framgång beror på hårt arbete och smarta affärsbeslut.",
+  videoDataBtnText: "Gå med gratis",
+  videoDataImgs: [
+    '/images/home/1-data.png',
+    '/images/home/2-data.png',
+    '/images/home/3-data.png',
+    '/images/home/4-data.png',
+    '/images/home/5-data.png',
+  ],
+
   expertiseData: [
     {
       id: 1,
