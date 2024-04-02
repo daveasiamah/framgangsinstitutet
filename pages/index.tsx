@@ -29,6 +29,7 @@ import axios from 'axios';
 import { HiOutlineClock } from "react-icons/hi"
 import Marquee from "react-fast-marquee";
 import VideoTrainingCard from "@/components/parts/VideoTrainingCard"
+import Accordion from "@/components/parts/Accordion_Home"
 
 type Props = {}
 
@@ -105,13 +106,14 @@ export default function Home() {
               />
               <h3 className="text-sm">{t.homeData.heroVideoDesc}</h3>
             </div>
-            <Image
-              src="/cover/homevideo.png"
-              alt="video cover"
-              width={706}
-              height={423}
-              className="home_video_cover mt-4"
-            />
+            <iframe 
+              width="706" 
+              height="423" 
+              src="https://www.youtube.com/embed/pTVfynxC3-c?si=VXY1V0Wf90F4QeV9" 
+              title="YouTube video player" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              className="home_video_cover mt-4 max-w-full" 
+            ></iframe>
             <Link href="/signup" className="w-full mt-8">
               <button className="btn btn-primary w-full">
                 {t.homeData.heroButton}
@@ -639,6 +641,27 @@ export default function Home() {
           />
         </div>
       </section>
+    
+      <section className="h-[1200px]">
+        <div className="absolute left-0 right-0 bg-base-200 p-10">
+          <Image 
+            src="/images/home/question.gif"
+            width={151}
+            height={151}
+            alt="faq"
+            className="mx-auto"
+          />
+          <ScrollReveal>
+            <Title
+              blackText={t.homeData.faqBlackTitle}
+              className="text-center"
+            />
+          </ScrollReveal>
+          <Accordion
+            data={t.homeData.faqData}
+          />
+        </div>
+      </section>
 
       <section className="h-80  px-20 py-10 text-white">
         <div className="absolute left-0 right-0 flex flex-col items-center justify-center bg-primary px-20 py-10">
@@ -647,7 +670,7 @@ export default function Home() {
               blackText={t.homeData.freeCourseTitle}
               className="text-white text-center"
             />
-            <p className="mb-2">{t.homeData.freeCourseSubtitle}</p>
+            <p className="mb-2 max-w-3xl mx-auto text-center">{t.homeData.freeCourseSubtitle}</p>
           </ScrollReveal>
           <Link href="/signup">
             <button className="btn btn-white mt-10">

@@ -264,6 +264,58 @@ export const homeData: HomeData = {
   freeCourseSubtitle: "In this video, Dominic shares his secrets and strategies for building his dropshipping empire and shows how you can do the same!",
   freeCourseButton: "Watch our free dropshipping course",
 
+  faqBlackTitle: 'Frequently asked questions',
+  faqData: [
+    {
+      id: 1,
+      question: "Do I need a Shopify account before using the websites?",
+      answer:
+        "No! All our Shopify Dropshipping stores come as brand new stores that you get a 3 day free trial with. After the 3 day free trial, Shopify will cost $1 for 1 month and after 3 months Shopify will cost $39/month.  If you don't want to pay $39, you can cancel your $1 month trial. The risk is very low."
+    },
+    {
+      id: 2,
+      question: "What if I already have a Shopify store?",
+      answer:
+        "Most of the time, it's much better if you have an expert set up the store from scratch for you, as the design you made is most likely not set up for success. So even if you already have a shopify store, don't worry. We will still be able to create a new one for you that is properly configured."
+    },
+    {
+      id: 3,
+      question: "How many products will I get in my store?",
+      answer:
+        "All our stores come pre-implemented with 30 products."
+    },
+    {
+      id: 4,
+      question: "What other fees are associated with this?",
+      answer:
+        "The only other thing you have to pay for is the hosting of your Shopify store. You will receive a free 3-day trial without the need for a credit card, if you choose to keep it you will have to pay $1 your first month to continue hosting your site through Shopify, you can cancel at any time and there are no contracts or other hidden fees."
+    },
+    {
+      id: 5,
+      question: "Will you advertise the store for me?",
+      answer:
+        "We are NOT advertising your store. You can do that when the store is ready."
+    },
+    {
+      id: 6,
+      question: "What if I have my own products?",
+      answer:
+        "Yes! You will easily be able to add as many products as you want to your store after delivering it. The process is extremely simple and you can do it within a couple of clicks."
+    },
+    {
+      id: 7,
+      question: "How will I be able to use the Shopify Store as my own?",
+      answer:
+        "24 - 48 hours after you place your order, we will send you your login information to your new Shopify Dropshipping Store. All you have to do is log in, change the password, and the store is all yours!"
+    },
+    {
+      id: 8,
+      question: "Can I get a refund if I don't like my Shopify store?",
+      answer:
+        "We have a 30-day guarantee."
+    },
+  ],
+
   /*=============================================
   =            Start Selling            =
   =============================================*/

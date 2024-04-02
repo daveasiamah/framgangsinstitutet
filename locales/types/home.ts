@@ -46,6 +46,12 @@ type FeaturesExploreData = {
   subtitle: string;
 }
 
+type FaqData = {
+  id: number;
+  question: string;
+  answer: string;
+};
+
 type BenefitData = {
   id: number;
   imageUrl: string;
@@ -126,6 +132,9 @@ export type HomeData = {
   freeCourseTitle: string;
   freeCourseSubtitle: string;
   freeCourseButton: string;
+
+  faqBlackTitle: string;
+  faqData: FaqData[];
 
   benefitBlackTitle: string;
   benefitBlueTitle: string;

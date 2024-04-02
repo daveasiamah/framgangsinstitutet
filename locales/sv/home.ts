@@ -323,6 +323,58 @@ export const homeData: HomeData = {
   freeCourseTitle: "Gratis kurs: Kom igång med Dropshipping 2024",
   freeCourseSubtitle: "I den här videon delar Dominic sina hemligheter och strategier för att bygga upp sitt dropshipping-imperium och visar hur du kan göra detsamma!",
   freeCourseButton: "Se vår gratis dropshipping kurs",
+
+  faqBlackTitle: "Vanliga Frågor",
+  faqData: [
+    {
+      id: 1,
+      question: "Behöver jag ha ett Shopify-konto innan jag använder webbplatserna?",
+      answer:
+        "Nej! Alla våra Shopify Dropshipping-butiker kommer som helt nya butiker som du får en 3 dagars gratis provperiod med. Efter 3 dagars gratis provperiod kommer Shopify att kosta $1 för 1 månad och efter 3 månader kommer Shopify att kosta $39/månad.  Om du inte vill betala $39 kan du avbryta din $1 månad provperiod. Risken är mycket låg."
+    },
+    {
+      id: 2,
+      question: "Vad händer om jag redan har en Shopify-butik?",
+      answer:
+        "För det mesta är det mycket bättre om du har en expert som ställer in butiken från grunden åt dig, eftersom designen du gjort med största sannolikhet inte är inställd för framgång. Så även om du redan har en shopify-butik, oroa dig inte. Vi kommer fortfarande att kunna skapa en ny åt dig som är korrekt konfigurerad."
+    },
+    {
+      id: 3,
+      question: "Hur många produkter kommer jag att få i min butik?",
+      answer:
+        "Alla våra butiker kommer färdigimplementerade med 30 produkter."
+    },
+    {
+      id: 4,
+      question: "Vilka andra avgifter är förknippade med detta?",
+      answer:
+        "Det enda andra du måste betala för är värd för din Shopify-butik. Du kommer att få en gratis 3-dagars provperiod utan behov av kreditkort, om du väljer att behålla det måste du betala $1 din första månad för att fortsätta vara värd för din webbplats genom Shopify, du kan avbryta när som helst och det finns inga kontrakt eller annat dolt avgifter."
+    },
+    {
+      id: 5,
+      question: "Annonserar du butiken åt mig?",
+      answer:
+        "Vi gör INTE någon reklam för din butik. Det får du göra när butiken är klar."
+    },
+    {
+      id: 6,
+      question: "Vad händer om jag har mina egna produkter?",
+      answer:
+        "Ja! Du kommer enkelt att kunna lägga till så många produkter du vill i din butik efter att ha levererat den. Processen är extremt enkel och du kan göra det inom ett par klick."
+    },
+    {
+      id: 7,
+      question: "Hur kommer jag att kunna använda Shopify Store som min egen?",
+      answer:
+        "24 - 48 timmar efter att du har lagt din beställning skickar vi din inloggningsinformation till din nya Shopify Dropshipping Store. Allt du behöver göra är att logga in, ändra lösenordet och butiken är helt och hållet din!"
+    },
+    {
+      id: 8,
+      question: "Kan jag få en återbetalning om jag inte gillar min Shopify-butik?",
+      answer:
+        "Vi har 30 dagars garanti."
+    },
+  ],
   /*=============================================
   =            Benefit Data            =
   =============================================*/
