@@ -575,7 +575,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-primary rounded-2xl text-center  text-white py-14 px-10">
+      <section className="bg-primary rounded-2xl text-center text-white py-14 px-10">
         <ScrollReveal>
           <Title
             blackText={t.homeData.reasonTitle}
@@ -591,28 +591,26 @@ export default function Home() {
         </Link>
       </section>
 
-      <section className="relative py-14 mb-16 lg:mb-20 testimonial-section">
+      <section className="mt-60 mb-16 lg:mb-20 testimonial-section h-[620px]">
         <BlurCircle positionClassName="left-[-8rem] top-[12rem]" size="lg" />
-
-        {/* <TiltParallax> */}
+        <div className="absolute left-0 right-0 bg-base-200 h-[620px]">
           <Image
             src="/images/home/acher.png"
             alt="acher"
             height={280}
             width={280}
-            className="object-contain mx-auto mb-16"
+            className="absolute left-0 right-0 mx-auto -translate-y-3/4 object-contain"
           />
-        {/* </TiltParallax> */}
-
-        <ScrollReveal>
-          <Title
-            blackText={t.homeData.testimonyBlackTitle}
-            blueText={t.homeData.testimonyBlueTitle}
-            isBlock
-            className="mb-16 lg:mb-20 text-center"
-          />
-        </ScrollReveal>
-        <div className="relative items-center justify-center testimonial-slider-container">
+          <ScrollReveal className="mt-20">
+            <Title
+              blackText={t.homeData.testimonyBlackTitle}
+              blueText={t.homeData.testimonyBlueTitle}
+              isBlock
+              className="mb-16 lg:mb-20 text-center"
+            />
+          </ScrollReveal>
+        </div>
+        <div className="relative pt-44  items-center justify-center testimonial-slider-container">
           <div className="absolute" style={{}}>
           <div className="items-center left-0 gap-2 justify-around testimonial-slider">
           <Marquee style={{ width: "1300px", overflow: "visible" }} speed={30}>
