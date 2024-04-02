@@ -575,6 +575,22 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="bg-primary rounded-2xl text-center  text-white py-14 px-10">
+        <ScrollReveal>
+          <Title
+            blackText={t.homeData.reasonTitle}
+            className="text-center text-white"
+          />
+          <p className="mx-auto text-lg max-w-4xl">{t.homeData.reasonSubtitle}</p>
+        </ScrollReveal>
+
+        <Link href="/signup">
+          <button className="mt-16 btn btn-white">
+            {t.homeData.reasonButton}
+          </button>
+        </Link>
+      </section>
+
       <section className="relative py-14 mb-16 lg:mb-20 testimonial-section">
         <BlurCircle positionClassName="left-[-8rem] top-[12rem]" size="lg" />
 
@@ -625,7 +641,7 @@ export default function Home() {
       </section>
 
       {/* Dynamic Blog posts list */}
-      <section className="py-16 mb-16">
+      {/* <section className="py-16 mb-16">
         <ScrollReveal>
           <Title
             blackText={t.blogData.articleBlackTitle}
@@ -667,7 +683,7 @@ export default function Home() {
                 {t.blogData.blogNav.viewMore}
             </Link>
         </div>
-      </section>
+      </section> */}
 
     </Layout>
 

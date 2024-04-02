@@ -119,6 +119,10 @@ export type HomeData = {
   featuresExploreBlueTitle: string;
   featuresExploreData: FeaturesExploreData[];
 
+  reasonTitle: string;
+  reasonSubtitle: string;
+  reasonButton: string;
+
   benefitBlackTitle: string;
   benefitBlueTitle: string;
   benefitData: BenefitData[];

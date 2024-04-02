@@ -320,6 +320,10 @@ export const homeData: HomeData = {
     },
   ],
 
+  reasonTitle: "Varför väljer folk Dropshipping som affärsmodell 2024?",
+  reasonSubtitle: "Dropshipping är populärt för dess minimala kapitalkrav, eftersom det inte kräver lagerhållning och tillåter företagare att fokusera på försäljning och marknadsföring utan att behöva hantera logistiken för produktleverans.",
+  reasonButton: "Gå med gratis",
+
   /*=============================================
   =            Benefit Data            =
   =============================================*/

@@ -255,6 +255,11 @@ export const homeData: HomeData = {
         "Explore our E-commerce and dropshipping student events! Get practical skills through workshops and meetings!"
     },
   ],
+
+  reasonTitle: "Why are people choosing Dropshipping as a business model in 2024?",
+  reasonSubtitle: "Dropshipping is popular for its minimal capital requirements, as it doesn't require warehousing and allows entrepreneurs to focus on sales and marketing without having to deal with the logistics of product delivery.",
+  reasonButton: "Join for free",
+  
   /*=============================================
   =            Start Selling            =
   =============================================*/
