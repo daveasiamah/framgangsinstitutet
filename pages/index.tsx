@@ -647,7 +647,7 @@ export default function Home() {
               blackText={t.homeData.freeCourseTitle}
               className="text-white text-center"
             />
-            <p className="mb-2">{t.homeData.freeCourseSubtitle}</p>
+            <p className="mb-2 max-w-3xl mx-auto text-center">{t.homeData.freeCourseSubtitle}</p>
           </ScrollReveal>
           <Link href="/signup">
             <button className="btn btn-white mt-10">
