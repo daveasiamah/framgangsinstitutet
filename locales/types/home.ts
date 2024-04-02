@@ -9,6 +9,14 @@ type FeatureData = {
   desc: string;
 };
 
+type VideoTrainingData = {
+  id: number;
+  imageUrl: string;
+  title: string;
+  bluetitle?: string;
+  subtitle: string;
+};
+
 type ExpertiseData = {
   id: number;
   imageUrl: string;
@@ -29,6 +37,14 @@ type CheckifiedUnivList = {
   id: number;
   list: string;
 };
+
+type FeaturesExploreData = {
+  id: number;
+  imageUrl: string;
+  title: string;
+  blueTitle: string;
+  subtitle: string;
+}
 
 type BenefitData = {
   id: number;
@@ -59,18 +75,33 @@ export type HomeData = {
 
   heroBlackTitle: string;
   heroBlueTitle: string;
+  heroBlackTitleTwo: string;
+  heroVideoDesc: string;
   heroSubtitle: string;
   heroButton: string;
   heroJoinText: string;
   heroInteractiveText: string;
   heroOutstandingText: string;
 
+
+  medsosTitle: string;
+  medsosBlueTitle: string;
+
   knowledgeText: string;
 
   platformBlackTitle: string;
   platformBlueTitle: string;
-  platformSubtitle: string;
+  // platformSubtitle: string;
   featureData: FeatureData[];
+  videoTrainingBlackTitle: string;
+  videoTrainingBlueTitle: string;
+  videoTrainingData: VideoTrainingData[];
+  videoDataTitle: string;
+  videoDataTitleTwo: string;
+  videoDataSubtitle: string;
+  videoDataSubtitleTwo: string;
+  videoDataBtnText: string;
+  videoDataImgs: string[];
   expertiseData: ExpertiseData[];
 
   startSellingBlackTittle: string;
@@ -83,6 +114,18 @@ export type HomeData = {
   checkifiedUnivListTDesc: string;
   checkifiedUnivList: CheckifiedUnivList[];
   checkifiedUnivButton: string;
+
+  featuresExploreBlackTitle: string;
+  featuresExploreBlueTitle: string;
+  featuresExploreData: FeaturesExploreData[];
+
+  reasonTitle: string;
+  reasonSubtitle: string;
+  reasonButton: string;
+
+  freeCourseTitle: string;
+  freeCourseSubtitle: string;
+  freeCourseButton: string;
 
   benefitBlackTitle: string;
   benefitBlueTitle: string;

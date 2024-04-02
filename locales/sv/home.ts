@@ -11,10 +11,12 @@ export const homeData: HomeData = {
 
   heroBlackTitle: "Börja Med",
   heroBlueTitle: "Dropshipping",
+  heroBlackTitleTwo: "och bli din egna chef! ",
+  heroVideoDesc: `"Klicka på Spela" och slå på ljud för att titta på video`,
   heroSubtitle:
     "Lär dig allt du behöver veta för att starta, växa och hantera ett framgångsrikt dropshipping företag.",
-  heroButton: "Starta nu",
-  heroJoinText: "Gå Med i Över 150+ Studenter",
+  heroButton: "Se Gratis Dropshipping Kurs",
+  heroJoinText: "Gå med 300+ studenter",
   heroInteractiveText: "Interaktiv community",
   heroOutstandingText: "Enastående Plattform",
 
@@ -26,29 +28,104 @@ export const homeData: HomeData = {
   =            Platform Section            =
   =============================================*/
 
-  platformBlackTitle: "En Plattform",
-  platformBlueTitle: "För Alla.",
-  platformSubtitle:
-    "Checkified använder automatiserade processer för att underlätta sömlöst lärande. Vi gör det möjligt för enskilda personer att enkelt etablera sina egna företag.",
+  platformBlackTitle: "Investera i din",
+  platformBlueTitle: "framtid",
+  // platformSubtitle:
+  //   "Checkified använder automatiserade processer för att underlätta sömlöst lärande. Vi gör det möjligt för enskilda personer att enkelt etablera sina egna företag.",
   featureData: [
     {
       id: 1,
       imageUrl: "/icons/home/feature-unlimited-access.png",
-      title: "Obegränsad Tillgång",
-      desc: "Med prioriterat stöd har vi ett betydande inflytande över alla elever."
+      title: "120+ Miljoner av Dominic",
+      desc: "Ta del av Dominic’s process för att starta och expandera flera dropshipping varumärken!"
     },
     {
       id: 2,
       imageUrl: "/icons/home/feature-create-content.png",
-      title: "Skapa Innehåll",
-      desc: "Vi presenterar en guide som täcker allt du behöver veta för att komma igång med dropshipping."
+      title: "70+ Miljoner av Studenter",
+      desc: "Lär dig samma strategier som våra studenter använt för att göra över 100 miljoner i försäljning."
     },
     {
       id: 3,
       imageUrl: "/icons/home/feature-selling-service.png",
-      title: "Sälja Tjänster",
-      desc: "Vi använder avancerade försäljningsmetoder för att ge dig en unik e-handelsupplevelse."
+      title: "AI Prestanda",
+      desc: "Vi använder avancerade återförsäljningsmetod för att ge dig en unik e-handelsupplevelse."
     }
+  ],
+
+  videoTrainingBlackTitle: "Vad innehåller",
+  videoTrainingBlueTitle: "videoutbildningen?",
+  videoTrainingData: [
+    {
+      id: 1,
+      imageUrl: "/images/home/0-checkified.png",
+      title: "Checkified",
+      bluetitle: "Kursplan",
+      subtitle:
+        "Vi har byggt upp vår program för att skapa inkomst för flera entreprenörer med rättslig säljarbas och kundrelationer. Lär dig strategierna som ska sätta grunden för din e-handel.",
+    },
+    {
+      id: 2,
+      imageUrl: "/images/home/1-introduktion.png",
+      title: "1. Introduktion",
+      subtitle:
+        "Vi lär dig grunderna till vad dropshipping är och hur du ska skapa en stabil inkomst till ekonomisk frihet."
+    },
+    {
+      id: 3,
+      imageUrl: "/images/home/2-mindset.png",
+      title: "2. Mindset",
+      subtitle:
+        "Vi går igenom vilken mindset du måste sätta dig i fär att uppnå framgång som entreprenör."
+    },
+    {
+      id: 4,
+      imageUrl: "/images/home/3-produkten.png",
+      title: "3. Produkten",
+      subtitle:
+        "Ta del av våra beprövade metoder för att kontinuerligt hitta framgångsrika produkter gång på gång."
+    },
+    {
+      id: 5,
+      imageUrl: "/images/home/4-varumarket.png",
+      title: "4. Varumärket",
+      subtitle:
+        "Upptäck hur du bygger upp ditt varumärke! Vi kommer att gå igenom alla steg du behöver ta för att etablera ett skalbart varumärke."
+    },
+    {
+      id: 6,
+    imageUrl: "/images/home/5-leverantoren.png",
+      title: "5. Leverantören",
+      subtitle:
+        "Vi lär dig hur du ska bibehålla kommunikation med din leverantör och hur du automatiserar allt."
+    },
+    {
+      id: 7,
+      imageUrl: "/images/home/6-annonsera.png",
+      title: "6. Annonsera",
+      subtitle:
+        "Lär dig hur du effektiv marknadsför och genererar försäljning på dina butiker med Meta och Tiktok!"
+    },
+    {
+      id: 8,
+      imageUrl: "/images/home/7-utveckla.png",
+      title: "7. Utveckla",
+      subtitle:
+        "Är du redo att ta nästa steg? Vi finns här för att hjälpa dig utvecklas från ett dropshipping-företag till ett fullt utrustat E-handelsbolag."
+    }
+  ],
+
+  videoDataTitle: "100+ Miljoner kronor",
+  videoDataTitleTwo: "på 5 månader",
+  videoDataSubtitle: "Dominic började med dropshipping år 2017 och har sedan dess lyckats omsätta över 100 miljoner kronor.",
+  videoDataSubtitleTwo: "Hans framgång beror på hårt arbete och smarta affärsbeslut.",
+  videoDataBtnText: "Gå med gratis",
+  videoDataImgs: [
+    '/images/home/1-data.png',
+    '/images/home/2-data.png',
+    '/images/home/3-data.png',
+    '/images/home/4-data.png',
+    '/images/home/5-data.png',
   ],
 
   expertiseData: [
@@ -129,6 +206,9 @@ export const homeData: HomeData = {
   =            Start Selling            =
   =============================================*/
 
+  medsosTitle: "Vad lär du dig i",
+  medsosBlueTitle: " Checkified?",
+
   startSellingBlackTittle: "Börja Sälja i En",
   startSellingBlueTittle: "Snabbväxande Bransch",
   startSellingSubtitle:
@@ -155,42 +235,98 @@ export const homeData: HomeData = {
   =            Checkified University Section            =
   =============================================*/
 
-  checkifiedUnivTitle: "Checkified University",
-  checkifiedUnivListTDesc: "Genom att delta i vår kurs kommer du att lära dig:",
+  checkifiedUnivTitle: "Är du redo att förändra ditt liv?",
+  checkifiedUnivListTDesc:`Allt du behöver göra är att hitta din första framgångsrika produkt.Vi på Checkified finns här för att guida dig på vägen!`,
   checkifiedUnivList: [
     {
       id: 1,
-      list: "Grunderna för dropshipping och hur det fungerar"
+      list:  "Kom igång denna vecka, löpande kursstart",
     },
     {
       id: 2,
-      list: "Hur man identifierar lönsamma produkter"
+      list: "Börja deltid vid sidan av jobb eller studier",
     },
     {
       id: 3,
-      list: "Hur man hittar pålitliga leverantörer"
+      list: "100% digital utbildning",
     },
     {
       id: 4,
-      list: "Hur du skapar din webbutik och optimerar den för försäljning"
+      list: "Jobba vart du vill, när du vill",
     },
     {
       id: 5,
-      list: "Hur du marknadsför med hjälp av sociala medier"
+      list: "Ta del av exklusiva webinarer och events"
     },
-    {
-      id: 6,
-      list: "Hur du hanterar beställningar, lager och kundtjänst"
-    }
   ],
-  checkifiedUnivButton: "Starta nu",
+  checkifiedUnivButton: "Gå med gratis",
 
   /*=====  End of Checkified University Section  ======*/
 
+  featuresExploreBlackTitle: "Utforska Framtidens",
+  featuresExploreBlueTitle: "Dropshipping Utbildning",
+  featuresExploreData: [
+    {
+      id: 1,
+      imageUrl: "/icons/home/1-superior-service.png",
+      title: "Veckovis",
+      blueTitle: "coaching!",
+      subtitle:
+        "Varje vecka finns det möjlighet till 4 coachingsamtal där du kan ha individuella samtal med en expert."
+    },
+    {
+      id: 2,
+      imageUrl: "/icons/home/2-find-products.png",
+      title: "Gratis",
+      blueTitle: "E-böcker",
+      subtitle:
+        "Få värdefull kunskap genom våra kostnadsfria E-böcker. Ladda ner och börja din resa mot framgång!"
+    },
+    {
+      id: 3,
+      imageUrl: "/icons/home/3-all-in-one.png",
+      title: "100%",
+      blueTitle: "Garanti",
+      subtitle:
+        "När du följer vår kursplan och alla steg vi lär ut, kan du vara säker på framgång eller så får du pengarna tillbaka!"
+    },
+    {
+      id: 4,
+      imageUrl: "/icons/home/feature-selling-service.png",
+      title: "A-Ö",
+      blueTitle: "Kursplan!",
+      subtitle:
+        "Få tillgång till vår kursplattform för stegvis guider genom dropshipping med videor, dokument och mallar!"
+    },
+    {
+      id: 5,
+      imageUrl: "/icons/home/feature-create-content.png",
+      title: "Inbyggd",
+      blueTitle: "Community",
+      subtitle:
+        "Anslut dig till vårt nätverk av över 350 drivna entreprenörer inom E-handel och dropshipping!"
+    },
+    {
+      id: 6,
+      imageUrl: "/icons/home/feature-unlimited-access.png",
+      title: "Webinars",
+      blueTitle: "& Events",
+      subtitle:
+        "Utforska våra studentevenemang för E-handel och dropshipping! Få praktiska färdigheter genom workshops och möten!"
+    },
+  ],
+
+  reasonTitle: "Varför väljer folk Dropshipping som affärsmodell 2024?",
+  reasonSubtitle: "Dropshipping är populärt för dess minimala kapitalkrav, eftersom det inte kräver lagerhållning och tillåter företagare att fokusera på försäljning och marknadsföring utan att behöva hantera logistiken för produktleverans.",
+  reasonButton: "Gå med gratis",
+
+  freeCourseTitle: "Gratis kurs: Kom igång med Dropshipping 2024",
+  freeCourseSubtitle: "I den här videon delar Dominic sina hemligheter och strategier för att bygga upp sitt dropshipping-imperium och visar hur du kan göra detsamma!",
+  freeCourseButton: "Se vår gratis dropshipping kurs",
   /*=============================================
   =            Benefit Data            =
   =============================================*/
-
+  
   benefitBlackTitle: "Fördelar med",
   benefitBlueTitle: "Checkified",
   benefitData: [

@@ -4,6 +4,8 @@ import { FaCheckCircle } from "react-icons/fa"
 import { BsPatchCheckFill } from "react-icons/bs"
 import { motion } from "framer-motion"
 import { useRouter } from "next/router"
+import { Autoplay, EffectCards, Navigation } from "swiper"
+import { Swiper, SwiperSlide } from "swiper/react"
 
 import Title from "@/components/parts/Title"
 import Layout from "@/components/Layout"
@@ -16,6 +18,9 @@ import ScrollReveal from "@/components/transition/ScrollReveal"
 import fs from "fs";
 import { medsosData, platformData } from "@/assets/data/homeData"
 import TiltParallax from "@/components/transition/TiltParallax"
+// Import Swiper styles
+import "swiper/css"
+import "swiper/css/effect-cards"
 
 import en from "@/locales/en"
 import sv from "@/locales/sv"
@@ -23,6 +28,7 @@ import { useEffect, useState } from "react";
 import axios from 'axios';
 import { HiOutlineClock } from "react-icons/hi"
 import Marquee from "react-fast-marquee";
+import VideoTrainingCard from "@/components/parts/VideoTrainingCard"
 
 type Props = {}
 
@@ -67,100 +73,64 @@ export default function Home() {
 
   return (
     <Layout headTitle={t.homeData.metaData.title}>
-      <section className="relative hero-height py-8 flex flex-col lg:flex-row justify-between items-center gap-10">
+      <section className="relative hero-height pt-8 flex flex-col lg:flex-row justify-between items-center gap-10">
         <BlurCircle positionClassName="left-0 top-20" size="lg" />
         <LineGraphic
           positionClassname="right-[-14rem] 2xl:right-[-12rem] top-[-30px]"
           className="svg-primary"
         />
 
-        <div className="w-full lg:w-5/12 mb-6 lg:mb-0">
+        <div className="w-full text-center mb-6 lg:mb-0">
           <ScrollReveal>
-            <h1 className="text-[2.75rem] lg:text-6xl font-bold lg:mb-2">
-              {t.homeData.heroBlackTitle}
+            <div className="flex items-center justify-center gap-2">
+              <h1 className="text-[2rem] lg:text-6xl font-bold lg:mb-2">
+                  {t.homeData.heroBlackTitle}
+                </h1>
+                <h1 className="text-[2rem] lg:text-6xl font-bold text-primary max-[480px]:mt-[-3vw]">
+                  {t.homeData.heroBlueTitle}
+                </h1>
+            </div>
+            <h1 className="text-[2rem] lg:text-6xl font-bold lg:mb-2">
+              {t.homeData.heroBlackTitleTwo}
             </h1>
-            <h1 className="text-[2.75rem] lg:text-6xl font-bold text-primary max-[480px]:mt-[-3vw]">
-              {t.homeData.heroBlueTitle}
-            </h1>
-            <p className="my-7 text-subtitle max-w-[24rem]">
-              {t.homeData.heroSubtitle}
-            </p>
-            <Link href="/signup">
-            <button className="btn btn-primary w-full lg:w-fit">
-              {t.homeData.heroButton}
-            </button>
-            </Link>
           </ScrollReveal>
-
-          <div className="flex items-center gap-1 mt-12">
+          
+          <div className="relative max-w-[706px] mx-auto flex flex-col items-center justify-center gap-1 mt-12">
+            <div className="absolute top-0 w-full flex items-center justify-center gap-1 p-0.5 bg-primary text-white">
+              <Image
+                src="/icons/home/video-play-sm.svg"
+                alt="play video"
+                width={16}
+                height={16}
+              />
+              <h3 className="text-sm">{t.homeData.heroVideoDesc}</h3>
+            </div>
             <Image
-              src="/icons/home/users-pics.png"
-              alt="user pics"
-              width={90}
-              height={48}
+              src="/cover/homevideo.png"
+              alt="video cover"
+              width={706}
+              height={423}
+              className="home_video_cover mt-4"
             />
-            <Link className="btn btn-link" href="/" style={{ paddingLeft: "5px" }}>
-              {t.homeData.heroJoinText}
+            <Link href="/signup" className="w-full mt-8">
+              <button className="btn btn-primary w-full">
+                {t.homeData.heroButton}
+              </button>
             </Link>
-          </div>
-        </div>
-        <div className="w-full lg:w-7/12 h-full lg:h-[480px] xl:h-[500px] relative">
-          <div className="aspect-square h-full mx-auto rounded-full overflow-hidden">
-            <motion.div
-              initial={{ x: -40, y: 0 }}
-              animate={{ x: 40, y: 40 }}
-              transition={{
-                ease: "linear",
-                duration: 10,
-                repeat: Infinity,
-                repeatType: "reverse"
-              }}
-              className="w-full h-full relative"
-            >
+            <div className="flex items-center gap-1 mt-2">
               <Image
-                src="/images/home/hero-pattern.png"
-                alt="Checkified"
-                className="object-contain scale-125"
-                fill
-                priority
+                src="/icons/home/users-pics.png"
+                alt="user pics"
+                width={90}
+                height={48}
               />
-            </motion.div>
-          </div>
-          <Image
-            src="/images/home/hero-image.png"
-            className="absolute object-contain"
-            style={{ top: "-30px" }}
-            alt="Checkified"
-            fill
-            priority
-          />
-          <TiltParallax className="absolute -right-10 lg:-right-10 top-1/3 flex justify-center items-center gap-3 bg-white p-[14px] rounded-[20px] hero-comp-shadow text-xs lg:text-base">
-            <div className="p-2 bg-base-200 rounded-lg">
-              <Image
-                src="/icons/home/people.png"
-                alt="people"
-                height={20}
-                width={20}
-              />
+              <span className="text-sm text-gray-500">{t.homeData.heroJoinText}</span>
             </div>
-            <p className="w-20 lg:w-fit">{t.homeData.heroInteractiveText}</p>
-          </TiltParallax>
-
-          <TiltParallax className="absolute bottom-2 left-1/4 lg:left-1/3 flex justify-center items-center gap-3 bg-white p-[14px] rounded-[20px] hero-comp-shadow text-xs lg:text-base">
-            <div className="p-3 bg-primary h-[30px] w-[30px] lg:h-[40px] lg:w-[40px] rounded-lg relative">
-              <Image
-                src="/icons/home/tag-user.png"
-                alt="people"
-                fill
-                className="p-1 lg:p-2"
-              />
-            </div>
-            <p>{t.homeData.heroOutstandingText}</p>
-          </TiltParallax>
+          </div>
         </div>
       </section>
 
-      <section className="bg-base-200 p-8 lg:py-14 lg:px-16 text-center my-16 lg:my-20 rounded-2xl">
+      <section className="bg-base-200 p-8 lg:py-14 lg:px-16 text-center my-14 lg:my-18 rounded-2xl">
         <h2 className="text-2xl lg:text-3xl font-bold mb-10">
           {t.homeData.knowledgeText}
         </h2>
@@ -203,9 +173,6 @@ export default function Home() {
             blackText={t.homeData.platformBlackTitle}
             blueText={t.homeData.platformBlueTitle}
           />
-          <p className="max-w-xl mx-auto mb-16 text-subtitle">
-            {t.homeData.platformSubtitle}
-          </p>
         </ScrollReveal>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {t.homeData.featureData.map((data) => (
@@ -271,64 +238,119 @@ export default function Home() {
         </div>
       </section> */}
 
-      <section className="relative py-14 text-center grid gap-10 lg:gap-24 md:mb-16 lg:mb-20">
+      <section className="relative flex flex-col justify-center md:mb-16 lg:mb-20">
         <CacingOne
           positionClassName="left-[-20rem] lg:left-[-12rem] rotate-[-50deg] top-[18rem] lg:top-[40rem] 2xl:top-[50rem]"
           sizeClassName="w-[30rem] h-[30rem]"
           className="z-[-1]"
         />
-
-        {t.homeData.expertiseData.map((data) => (
-          <div
-            key={data.id}
-            className={`flex flex-col-reverse lg:flex-row ${data.isImageLeft ? "lg:flex-row" : "lg:flex-row-reverse"
-              } justify-between item gap-10 lg:gap-24`}
+        <ScrollReveal>
+          <Title
+            blackText={t.homeData.videoTrainingBlackTitle}
+            blueText={t.homeData.videoTrainingBlueTitle}
+            isBlock
+            className="text-center"
+          />
+        </ScrollReveal>
+        <div className="mt-8  py-8 bg-base-200 rounded-2xl">
+          <Swiper
+            grabCursor={true}
+            loop={true}
+            modules={[EffectCards, Navigation, Autoplay]}
+            className="testimony-swiper"
+            navigation={{
+              nextEl: ".nav-right",
+              prevEl: ".nav-left"
+            }}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false
+            }}
           >
-            <div className="w-full h-60 lg:h-full 2xl:h-[26rem] lg:w-1/2 relative">
-              <Image
-                src={data.imageUrl}
-                alt="introduction ground"
-                className="object-cover rounded-[2rem]"
-                fill
-              />
-            </div>
-            <div className="w-full lg:w-1/2 flex items-baseline justify-start gap-4 text-left">
-              <ScrollReveal>
-                <p className="text-[34px] lg:text-[40px] font-bold">
-                  {data.id}.
-                </p>
-              </ScrollReveal>
-              <ScrollReveal>
-                <Title
-                  blackText={data.titleBlack}
-                  blueText={data.titleBlue}
-                  isBlock
-                  className="relative mb-14"
-                >
-                  <Image
-                    src="/icons/home/half-arrow.png"
-                    alt="half arrow"
-                    height={36}
-                    width={160}
-                    className="absolute object-contain -bottom-10 left-0"
+            {t.homeData.videoTrainingData.map((data) => (
+              <SwiperSlide key={data.id}>
+                {({ isActive }) => (
+                  <VideoTrainingCard 
+                    blackText={data.title}
+                    blueText={data.bluetitle}
+                    subTitle={data.subtitle}
+                    imageUrl={data.imageUrl}
                   />
-                </Title>
-                <p className="text-subtitle mt-14">{data.subtitle}<br/>{data.subtitletwo}</p>
-                <ul className="mt-4 text-subtitle grid gap-3">
-                  {data.lists.map((list) => (
-                    <li key={list.id} className="flex items-center gap-2">
-                      <FaCheckCircle className="text-primary" size={20} />{" "}
-                      {list.name}
-                    </li>
-                  ))}
-                </ul>
-              </ScrollReveal>
-            </div>
-          </div>
-        ))}
+                )}
+              </SwiperSlide>
+            ))}
+            <button className="hidden lg:block absolute z-[1] left-10 top-1/2 transform -translate-y-1/2 nav-left">
+              <Image
+                src="/icons/impact/arrow-left.png"
+                width={80}
+                height={80}
+                alt="arrow left"
+              />
+            </button>
+            <button className="hidden lg:block absolute z-[1] right-10 top-1/2 transform -translate-y-1/2 nav-right">
+              <Image
+                src="/icons/impact/arrow-right.png"
+                width={80}
+                height={80}
+                alt="arrow left"
+              />
+            </button>
+          </Swiper>
+        </div>
       </section>
 
-      <section className="relative md:py-14 lg:py-14 mb-16 lg:mb-20 flex flex-col lg:flex-row gap-20">
+      <section className="relative flex items-stretch item px-6 pt-6 mb-16 lg:mb-20 bg-primary rounded-2xl">
+        <div className="relative hidden lg:block flex-1">
+          <Image
+            src="/images/university/glass-men.png"
+            fill
+            alt="men"
+            className="object-contain"
+          />
+        </div>
+        <div className="flex-1 flex flex-col items-center px-10 py-8 bg-white/20 rounded-tl-2xl  rounded-tr-2xl overflow-hidden">
+          <ScrollReveal className="text-center text-white">
+            <h3 className="font-bold text-2xl lg:text-4xl">{t.homeData.videoDataTitle}</h3>
+            <h3 className="mt-1 font-bold text-2xl lg:text-4xl">{t.homeData.videoDataTitleTwo}</h3>
+            <div className="text-sm mt-6">
+              <p>{t.homeData.videoDataSubtitle}</p>
+              <p className="mt-4">{t.homeData.videoDataSubtitleTwo}</p>
+            </div>
+          </ScrollReveal>
+          <Link href="/signup" className="mt-6 mb-6">
+            <button className="btn btn-primary">
+              {t.homeData.heroButton}
+            </button>
+          </Link>
+          <Swiper
+            effect="fade"
+            grabCursor={true}
+            loop={true}
+            modules={[Navigation, Autoplay]}
+            className="testimony-swiper max-w-[365px] max-h-365px"
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false
+            }}
+          >
+            {t.homeData.videoDataImgs.map((img) => (
+              <SwiperSlide key={img} >
+                {({ isActive }) => (
+                  <Image
+                    src={img}
+                    width={365}
+                    height={325}
+                    alt="data"
+                    className="object-cover"
+                  />
+                )}
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </section>
+
+      {/* <section className="relative md:py-14 lg:py-14 mb-16 lg:mb-20 flex flex-col lg:flex-row gap-20">
         <div className="w-full lg:w-1/2">
           <ScrollReveal>
             <Title
@@ -347,14 +369,21 @@ export default function Home() {
               width={500}
               className="object-contain mx-auto mt-6"
             />
-         
+        
         </div>
         <div className="w-full lg:w-1/2">
           <ContactForm contactData={t.homeData.contactForm} />
         </div>
-      </section>
+      </section> */}
 
       <section className="mb-16 lg:mb-20 medsos-container">
+        <ScrollReveal>
+          <Title
+            blackText={t.homeData.medsosTitle}
+            blueText={t.homeData.medsosBlueTitle}
+            className="text-center"
+          />
+        </ScrollReveal>
         <div className="flex items-center justify-center">
           <div className="w-[400%] lg:w-[200%] h-28 overflow-hidden relative">
             <div className="w-[400%] lg:w-[200%] h-20 flex items-center absolute left-0 top-1/2 transform -translate-y-1/2 gap-2 justify-around infinite-slide-left">
@@ -425,7 +454,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative py-14 lg:mb-20">
+      <section className="relative py-14">
         <BlurCircle positionClassName="right-[-4rem] top-[30rem]" size="lg" />
 
         <div className="relative w-fit mx-auto">
@@ -446,7 +475,7 @@ export default function Home() {
           />
         </div>
 
-        <div className="bg-base-200 p-8 lg:py-14 lg:px-16 mb-16 rounded-[3rem]">
+        {/* <div className="bg-base-200 p-8 lg:py-14 lg:px-16 mb-16 rounded-[3rem]">
           <ScrollReveal>
             <Title
               blackText={t.homeData.startSellingBlackTittle}
@@ -469,40 +498,7 @@ export default function Home() {
               {t.homeData.startSellingButton}
             </ButtonArrow>
           </ScrollReveal>
-        </div>
-      </section>
-
-      <section className="relative university-container bg-primary p-8 lg:px-16 lg:py-14 mb-16 lg:mb-20 rounded-3xl text-white text-left flex flex-col lg:flex-row gap-20">
-        <ScrollReveal className="w-full lg:w-2/3 z-10">
-          <h2 className="text-4xl font-bold mb-8">
-            {t.homeData.checkifiedUnivTitle}
-          </h2>
-          <p className="mb-2">{t.homeData.checkifiedUnivListTDesc}</p>
-          <ul className="mt-4 grid gap-3">
-            {t.homeData.checkifiedUnivList.map((list) => (
-              <li key={list.id} className="flex items-center gap-4">
-                <div className="w-6">
-                  <FaCheckCircle size={20} />
-                </div>
-
-                <p className="flex-1">{list.list}</p>
-              </li>
-            ))}
-          </ul>
-          <ButtonArrow href="/signup" isReverse className="mt-10">
-            {t.homeData.checkifiedUnivButton}
-          </ButtonArrow>
-        </ScrollReveal>
-        <div className="relative w-full lg:w-1/3 h-[360px] lg:h-full">
-          <Image
-            src="/images/home/checkified-university.png"
-            alt="checkified university"
-            height={500}
-            width={500}
-            className="absolute bottom-[-3rem] xs:bottom-[-13rem] sm:bottom-[-13rem] lg:top-[-1rem] xl:top-[-6rem] 2xl:top-[-10rem] right-0 sm:scale-[.6] lg:scale-[1.4] xl:scale-[1] 2xl:scale-75 object-contain"
-            priority
-          />
-        </div>
+        </div> */}
       </section>
 
       <section className="relative mb-16 lg:mb-20">
@@ -513,14 +509,14 @@ export default function Home() {
 
         <ScrollReveal>
           <Title
-            blackText={t.homeData.benefitBlackTitle}
-            blueText={t.homeData.benefitBlueTitle}
+            blackText={t.homeData.featuresExploreBlackTitle}
+            blueText={t.homeData.featuresExploreBlueTitle}
             isBlock
             className="text-center"
           />
         </ScrollReveal>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {t.homeData.benefitData.map((data) => (
+          {t.homeData.featuresExploreData.map((data) => (
             <div
               key={data.id}
               className="bg-white p-10 rounded-[2rem] feature-card-shadow text-center"
@@ -535,7 +531,10 @@ export default function Home() {
                 />
               </div>
               <ScrollReveal>
-                <h3 className="text-lg font-bold mb-3">{data.title}</h3>
+                <div className="flex items-center justify-center gap-2">
+                  <h3 className="text-primary text-xl font-bold mb-3">{data.title}</h3>
+                  <h3 className="text-xl font-bold mb-3">{data.blueTitle}</h3>
+                </div>
                 <p className="text-subtitle">{data.subtitle}</p>
               </ScrollReveal>
             </div>
@@ -543,28 +542,42 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative py-14 mb-16 lg:mb-20 testimonial-section">
-        <BlurCircle positionClassName="left-[-8rem] top-[12rem]" size="lg" />
+      <section className="bg-primary rounded-2xl text-center text-white py-14 px-10">
+        <ScrollReveal>
+          <Title
+            blackText={t.homeData.reasonTitle}
+            className="text-center text-white"
+          />
+          <p className="mx-auto text-lg max-w-4xl">{t.homeData.reasonSubtitle}</p>
+        </ScrollReveal>
 
-        {/* <TiltParallax> */}
+        <Link href="/signup">
+          <button className="mt-16 btn btn-white">
+            {t.homeData.reasonButton}
+          </button>
+        </Link>
+      </section>
+
+      <section className="mt-60 mb-16 lg:mb-20 testimonial-section h-[620px]">
+        <BlurCircle positionClassName="left-[-8rem] top-[12rem]" size="lg" />
+        <div className="absolute left-0 right-0 bg-base-200 h-[620px]">
           <Image
             src="/images/home/acher.png"
             alt="acher"
             height={280}
             width={280}
-            className="object-contain mx-auto mb-16"
+            className="absolute left-0 right-0 mx-auto -translate-y-3/4 object-contain"
           />
-        {/* </TiltParallax> */}
-
-        <ScrollReveal>
-          <Title
-            blackText={t.homeData.testimonyBlackTitle}
-            blueText={t.homeData.testimonyBlueTitle}
-            isBlock
-            className="mb-16 lg:mb-20 text-center"
-          />
-        </ScrollReveal>
-        <div className="relative items-center justify-center testimonial-slider-container">
+          <ScrollReveal className="mt-20">
+            <Title
+              blackText={t.homeData.testimonyBlackTitle}
+              blueText={t.homeData.testimonyBlueTitle}
+              isBlock
+              className="mb-16 lg:mb-20 text-center"
+            />
+          </ScrollReveal>
+        </div>
+        <div className="relative pt-48  items-center justify-center testimonial-slider-container">
           <div className="absolute" style={{}}>
           <div className="items-center left-0 gap-2 justify-around testimonial-slider">
           <Marquee style={{ width: "1300px", overflow: "visible" }} speed={30}>
@@ -592,8 +605,60 @@ export default function Home() {
         </div>     
       </section>
 
+      <section className="relative university-container bg-primary p-8 lg:px-16 lg:py-14 mb-16 lg:mb-20 rounded-3xl text-white text-left flex flex-col lg:flex-row gap-20">
+        <ScrollReveal className="w-full lg:w-2/3 z-10">
+          <h2 className="text-4xl font-bold mb-8">
+            {t.homeData.checkifiedUnivTitle}
+          </h2>
+          <p className="mb-2">{t.homeData.checkifiedUnivListTDesc}</p>
+          <ul className="mt-4 grid gap-3">
+            {t.homeData.checkifiedUnivList.map((list) => (
+              <li key={list.id} className="flex items-center gap-4">
+                <div className="w-6">
+                  <FaCheckCircle size={20} />
+                </div>
+
+                <p className="flex-1">{list.list}</p>
+              </li>
+            ))}
+          </ul>
+          <Link href="/signup">
+            <button className="btn btn-white mt-10">
+              {t.homeData.checkifiedUnivButton}
+            </button>
+          </Link>
+        </ScrollReveal>
+        <div className="relative hidden lg:block w-full lg:w-1/3 h-[360px] lg:h-full">
+          <Image
+            src="/images/home/checkified-university.png"
+            alt="checkified university"
+            height={500}
+            width={500}
+            className="absolute bottom-[-3rem] xs:bottom-[-13rem] sm:bottom-[-13rem] lg:top-[-1rem] xl:top-[-6rem] 2xl:top-[-10rem] -right-1/4 sm:scale-[.6] lg:scale-[1.4] xl:scale-[1] 2xl:scale-75 object-contain"
+            priority
+          />
+        </div>
+      </section>
+
+      <section className="h-80  px-20 py-10 text-white">
+        <div className="absolute left-0 right-0 flex flex-col items-center justify-center bg-primary px-20 py-10">
+          <ScrollReveal>
+            <Title
+              blackText={t.homeData.freeCourseTitle}
+              className="text-white text-center"
+            />
+            <p className="mb-2">{t.homeData.freeCourseSubtitle}</p>
+          </ScrollReveal>
+          <Link href="/signup">
+            <button className="btn btn-white mt-10">
+              {t.homeData.freeCourseButton}
+            </button>
+          </Link>
+        </div>
+      </section>
+
       {/* Dynamic Blog posts list */}
-      <section className="py-16 mb-16">
+      {/* <section className="py-16 mb-16">
         <ScrollReveal>
           <Title
             blackText={t.blogData.articleBlackTitle}
@@ -635,9 +700,8 @@ export default function Home() {
                 {t.blogData.blogNav.viewMore}
             </Link>
         </div>
-      </section>
+      </section> */}
 
     </Layout>
-
   )
 }
