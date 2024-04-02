@@ -375,6 +375,17 @@ export const homeData: HomeData = {
         "Vi har 30 dagars garanti."
     },
   ],
+
+  popupBlackTitle: "Se Gratis",
+  popupBlueTitle: "Dropshipping Kurs!",
+  popupSubtitle: "Se insidan av kursen och hur du kan få din första 100 000+ SEK per månad utan tidigare erfarenhet eller startkapital.",
+  popupButton: "Kom igång helt gratis",
+  popupForm: {
+    firstName: "Namn",
+    email: "E-post",
+    phoneNumber: "Telefonnummer",
+  },
+
   /*=============================================
   =            Benefit Data            =
   =============================================*/

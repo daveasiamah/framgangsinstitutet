@@ -1,4 +1,5 @@
 "use client"
+import ContractFormBtn from "@/components/ContractFormBtn";
 import "@/styles/globals.scss";
 // import ReactDOM from 'react-dom'
 // import { library } from '@fortawesome/fontawesome-svg-core'
@@ -68,13 +69,13 @@ export default function App({ Component,  pageProps: { session, ...pageProps } }
           `,
         }}
       />
-      <script src="//code.tidio.co/b3qsg0t7uu4nseq9piuuayi3u5gx3bi6.js" async></script>
+      {/* <script src="//code.tidio.co/b3qsg0t7uu4nseq9piuuayi3u5gx3bi6.js" async></script> */}
       <meta name="facebook-domain-verification" content="t53l0hv3hj3lqy0wlcz3y3mt0aywav" />
       <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5BC5XVQ" height="0" width="0" style={{display:'none',visibility:'hidden'}}></iframe></noscript>
       <SessionProvider session={pageProps.session}>
-    <Component {...pageProps} />
-    </SessionProvider>
-    
+        <Component {...pageProps} />
+      </SessionProvider>
+      <ContractFormBtn />
     </>
     );
 }
