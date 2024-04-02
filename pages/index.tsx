@@ -280,7 +280,7 @@ export default function Home() {
               prevEl: ".nav-left"
             }}
             autoplay={{
-              delay: 2500,
+              delay: 3500,
               disableOnInteraction: false
             }}
           >
@@ -346,7 +346,7 @@ export default function Home() {
             modules={[Navigation, Autoplay]}
             className="testimony-swiper max-w-[365px] max-h-365px mt-6"
             autoplay={{
-              delay: 2500,
+              delay: 3000,
               disableOnInteraction: false
             }}
           >
@@ -540,30 +540,32 @@ export default function Home() {
             className="text-center"
           />
         </ScrollReveal>
-        <div className="hidden grid-cols-1 gap-8 lg:grid">
+        <div className="hidden grid-cols-1 lg:grid-cols-3 gap-8 lg:grid">
           {t.homeData.featuresExploreData.map((data) => (
             <FeatureCard key={data.id} data={data} />
           ))}
         </div>
-        <Swiper
-          
-          grabCursor={true}
-          loop={true}
-          modules={[EffectCards, Navigation, Autoplay]}
-          className="testimony-swiper block lg:hidden"
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false
-          }}
-        >
-          {t.homeData.featuresExploreData.map((data) => (
-            <SwiperSlide key={data.id}>
-              {({ isActive }) => (
-                <FeatureCard data={data} />
-              )}
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        <div className="block lg:hidden">
+          <Swiper
+            grabCursor={true}
+            loop={true}
+            modules={[EffectCards, Navigation, Autoplay]}
+            className="testimony-swiper"
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false
+            }}
+          >
+            {t.homeData.featuresExploreData.map((data) => (
+              <SwiperSlide key={data.id}>
+                {({ isActive }) => (
+                  <FeatureCard data={data} />
+                )}
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+        
       </section>
 
       <section className="bg-primary rounded-2xl text-center text-white py-14 px-4 lg:px-10">

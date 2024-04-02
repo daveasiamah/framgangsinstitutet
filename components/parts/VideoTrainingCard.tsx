@@ -26,17 +26,15 @@ export default function VideoTrainingCard({
                 blackText={blackText}
                 blueText={blueText}
               />
-              {/* <h3 className="font-semibold text-5xl">{blackText}</h3>
-              {blueText && <h3 className="font-semibold text-5xl text-primary">{blueText}</h3>} */}
               <Image
                 src="/icons/home/arrow-right.svg"
                 alt="arrow-right"
                 fill
-                className="mt-10 px-4"
+                className="mt-4 lg:mt-10 px-4 object-contain"
               />
             </div>
           </div>
-          <h4 className="mt-14 text-gray-500 text-sm">{subTitle}</h4>
+          <h4 className="mt-4 lg:mt-14 h-20 text-gray-500 text-sm">{subTitle}</h4>
         </div>
       </ScrollReveal>
       <Image
@@ -44,7 +42,7 @@ export default function VideoTrainingCard({
         alt={blackText}
         width={785}
         height={412}
-        className="mt-8"
+        className="mt-4"
       />
     </div>
     
