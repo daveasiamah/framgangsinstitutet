@@ -316,6 +316,16 @@ export const homeData: HomeData = {
     },
   ],
 
+  popupBlackTitle: "View Free",
+  popupBlueTitle: "Dropshipping Course!",
+  popupSubtitle: "See the inside of the course and how you can get your first 100,000+ SEK per month with no previous experience or startup capital.",
+  popupButton: "Get started for free",
+  popupForm: {
+    firstName: "Name",
+    email: "Email",
+    phoneNumber: "Phone number",
+  },
+
   /*=============================================
   =            Start Selling            =
   =============================================*/

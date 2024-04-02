@@ -30,6 +30,7 @@ import { HiOutlineClock } from "react-icons/hi"
 import Marquee from "react-fast-marquee";
 import VideoTrainingCard from "@/components/parts/VideoTrainingCard"
 import Accordion from "@/components/parts/Accordion_Home"
+import FeatureCard from "@/components/parts/FeatureCard"
 
 type Props = {}
 
@@ -97,7 +98,7 @@ export default function Home() {
           </ScrollReveal>
           
           <div className="relative max-w-[706px] mx-auto flex flex-col items-center justify-center gap-1 mt-12">
-            <div className="absolute top-0 w-full flex items-center justify-center gap-1 p-0.5 bg-primary text-white">
+            <div className="hidden lg:flex absolute top-0 w-full items-center justify-center gap-1 p-0.5 bg-primary text-white">
               <Image
                 src="/icons/home/video-play-sm.svg"
                 alt="play video"
@@ -112,9 +113,16 @@ export default function Home() {
               src="https://www.youtube.com/embed/pTVfynxC3-c?si=VXY1V0Wf90F4QeV9" 
               title="YouTube video player" 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              className="home_video_cover mt-4 max-w-full" 
+              className="home_video_cover mt-4 max-w-full hidden lg:block" 
             ></iframe>
-            <Link href="/signup" className="w-full mt-8">
+            <Image
+              src="/images/home/home-video-lock.png"
+              alt="video"
+              width="706" 
+              height="423" 
+              className="block lg:hidden -mt-8"
+            />
+            <Link href="/signup" className="w-full mt-0 lg:mt-8">
               <button className="btn btn-primary w-full">
                 {t.homeData.heroButton}
               </button>
@@ -174,6 +182,13 @@ export default function Home() {
           <Title
             blackText={t.homeData.platformBlackTitle}
             blueText={t.homeData.platformBlueTitle}
+            className="hidden lg:block"
+          />
+          <Title
+            blackText={t.homeData.platformBlackTitle}
+            blueText={t.homeData.platformBlueTitle}
+            isBlock
+            className="block lg:hidden"
           />
         </ScrollReveal>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
@@ -254,7 +269,7 @@ export default function Home() {
             className="text-center"
           />
         </ScrollReveal>
-        <div className="mt-8  py-8 bg-base-200 rounded-2xl">
+        <div className="lg:mt-8 py-8 bg-base-200 rounded-2xl">
           <Swiper
             grabCursor={true}
             loop={true}
@@ -265,7 +280,7 @@ export default function Home() {
               prevEl: ".nav-left"
             }}
             autoplay={{
-              delay: 2500,
+              delay: 3500,
               disableOnInteraction: false
             }}
           >
@@ -301,7 +316,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative flex items-stretch item px-6 pt-6 mb-16 lg:mb-20 bg-primary rounded-2xl">
+      <section className="relative flex items-stretch gap-4 item mt-10 px-6 pt-6 mb-16 lg:mb-20 bg-primary rounded-2xl">
         <div className="relative hidden lg:block flex-1">
           <Image
             src="/images/university/glass-men.png"
@@ -310,7 +325,7 @@ export default function Home() {
             className="object-contain"
           />
         </div>
-        <div className="flex-1 flex flex-col items-center px-10 py-8 bg-white/20 rounded-tl-2xl  rounded-tr-2xl overflow-hidden">
+        <div className="flex-1 flex flex-col items-center px-4 lg:px-10 py-8 bg-white/20 rounded-tl-2xl  rounded-tr-2xl overflow-hidden">
           <ScrollReveal className="text-center text-white">
             <h3 className="font-bold text-2xl lg:text-4xl">{t.homeData.videoDataTitle}</h3>
             <h3 className="mt-1 font-bold text-2xl lg:text-4xl">{t.homeData.videoDataTitleTwo}</h3>
@@ -319,7 +334,7 @@ export default function Home() {
               <p className="mt-4">{t.homeData.videoDataSubtitleTwo}</p>
             </div>
           </ScrollReveal>
-          <Link href="/signup" className="mt-6 mb-6">
+          <Link href="/signup" className="mt-6 hidden lg:block">
             <button className="btn btn-primary">
               {t.homeData.heroButton}
             </button>
@@ -329,22 +344,24 @@ export default function Home() {
             grabCursor={true}
             loop={true}
             modules={[Navigation, Autoplay]}
-            className="testimony-swiper max-w-[365px] max-h-365px"
+            className="testimony-swiper max-w-[365px] max-h-365px mt-6"
             autoplay={{
-              delay: 2500,
+              delay: 3000,
               disableOnInteraction: false
             }}
           >
             {t.homeData.videoDataImgs.map((img) => (
               <SwiperSlide key={img} >
                 {({ isActive }) => (
-                  <Image
-                    src={img}
-                    width={365}
-                    height={325}
-                    alt="data"
-                    className="object-cover"
-                  />
+                  <div className="mx-auto max-w-[203px] lg:max-w-[365px]">
+                    <Image
+                      src={img}
+                      width={365}
+                      height={325}
+                      alt="data"
+                      className="object-cover"
+                    />
+                  </div>
                 )}
               </SwiperSlide>
             ))}
@@ -383,7 +400,13 @@ export default function Home() {
           <Title
             blackText={t.homeData.medsosTitle}
             blueText={t.homeData.medsosBlueTitle}
-            className="text-center"
+            className="text-center block lg:hidden"
+            isBlock
+          />
+          <Title
+            blackText={t.homeData.medsosTitle}
+            blueText={t.homeData.medsosBlueTitle}
+            className="text-center hidden lg:block"
           />
         </ScrollReveal>
         <div className="flex items-center justify-center">
@@ -517,34 +540,35 @@ export default function Home() {
             className="text-center"
           />
         </ScrollReveal>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="hidden grid-cols-1 lg:grid-cols-3 gap-8 lg:grid">
           {t.homeData.featuresExploreData.map((data) => (
-            <div
-              key={data.id}
-              className="bg-white p-10 rounded-[2rem] feature-card-shadow text-center"
-            >
-              <div className="bg-base-200 p-6 rounded-full inline-flex place-content-center mb-3 relative">
-                <Image
-                  src={data.imageUrl}
-                  alt={data.title}
-                  height={60}
-                  width={60}
-                  className="object-contain"
-                />
-              </div>
-              <ScrollReveal>
-                <div className="flex items-center justify-center gap-2">
-                  <h3 className="text-primary text-xl font-bold mb-3">{data.title}</h3>
-                  <h3 className="text-xl font-bold mb-3">{data.blueTitle}</h3>
-                </div>
-                <p className="text-subtitle">{data.subtitle}</p>
-              </ScrollReveal>
-            </div>
+            <FeatureCard key={data.id} data={data} />
           ))}
         </div>
+        <div className="block lg:hidden">
+          <Swiper
+            grabCursor={true}
+            loop={true}
+            modules={[EffectCards, Navigation, Autoplay]}
+            className="testimony-swiper"
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false
+            }}
+          >
+            {t.homeData.featuresExploreData.map((data) => (
+              <SwiperSlide key={data.id}>
+                {({ isActive }) => (
+                  <FeatureCard data={data} />
+                )}
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+        
       </section>
 
-      <section className="bg-primary rounded-2xl text-center text-white py-14 px-10">
+      <section className="bg-primary rounded-2xl text-center text-white py-14 px-4 lg:px-10">
         <ScrollReveal>
           <Title
             blackText={t.homeData.reasonTitle}
@@ -554,7 +578,7 @@ export default function Home() {
         </ScrollReveal>
 
         <Link href="/signup">
-          <button className="mt-16 btn btn-white">
+          <button className="mt-16 btn btn-white w-60">
             {t.homeData.reasonButton}
           </button>
         </Link>
@@ -625,31 +649,31 @@ export default function Home() {
             ))}
           </ul>
           <Link href="/signup">
-            <button className="btn btn-white mt-10">
+            <button className="btn btn-white mt-10 w-full lg:w-[304px]">
               {t.homeData.checkifiedUnivButton}
             </button>
           </Link>
         </ScrollReveal>
-        <div className="relative hidden lg:block w-full lg:w-1/3 h-[360px] lg:h-full">
+        <div className="relative mx-auto w-[259px] lg:w-1/3 h-[382px] lg:h-full">
           <Image
             src="/images/home/checkified-university.png"
             alt="checkified university"
             height={500}
             width={500}
-            className="absolute bottom-[-3rem] xs:bottom-[-13rem] sm:bottom-[-13rem] lg:top-[-1rem] xl:top-[-6rem] 2xl:top-[-10rem] -right-1/4 sm:scale-[.6] lg:scale-[1.4] xl:scale-[1] 2xl:scale-75 object-contain"
+            className="absolute bottom-[-3rem] lg:top-[-1rem] xl:top-[-6rem] 2xl:top-[-10rem] lg:-right-1/4 lg:scale-[1.4] xl:scale-[1] 2xl:scale-75 object-contain"
             priority
           />
         </div>
       </section>
     
-      <section className="h-[1200px]">
-        <div className="absolute left-0 right-0 bg-base-200 p-10">
+      <section>
+        <div className="relative p-10 full-bg">
           <Image 
             src="/images/home/question.gif"
             width={151}
             height={151}
             alt="faq"
-            className="mx-auto"
+            className="mx-auto w-[85px] h-[85px] lg:w-[151px] lg:h-[151px]"
           />
           <ScrollReveal>
             <Title
@@ -663,8 +687,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="h-80  px-20 py-10 text-white">
-        <div className="absolute left-0 right-0 flex flex-col items-center justify-center bg-primary px-20 py-10">
+      <section className="h-80 px-20 py-10 text-white">
+        <div className="absolute left-0 right-0 flex flex-col items-center justify-center bg-primary px-4 lg:px-20 py-10">
           <ScrollReveal>
             <Title
               blackText={t.homeData.freeCourseTitle}

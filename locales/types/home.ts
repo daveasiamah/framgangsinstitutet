@@ -136,6 +136,12 @@ export type HomeData = {
   faqBlackTitle: string;
   faqData: FaqData[];
 
+  popupBlackTitle: string;
+  popupBlueTitle: string;
+  popupSubtitle: string;
+  popupButton: string;
+  popupForm: Partial<ContactForm>;
+
   benefitBlackTitle: string;
   benefitBlueTitle: string;
   benefitData: BenefitData[];
