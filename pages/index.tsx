@@ -31,7 +31,7 @@ import Marquee from "react-fast-marquee";
 import VideoTrainingCard from "@/components/parts/VideoTrainingCard"
 import Accordion from "@/components/parts/Accordion_Home"
 import FeatureCard from "@/components/parts/FeatureCard"
-import ContractFormBtn from "@/components/ContractFormBtn"
+import ContractForm from "@/components/ContractForm"
 
 type Props = {}
 
@@ -60,6 +60,8 @@ export default function Home() {
   //   console.log("role not found");
   // }
 
+  const [showModal, setShowModal] = useState(false)
+  
   // Fetch Blog List
   const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
   useEffect(() => {
@@ -74,8 +76,19 @@ export default function Home() {
     fetchPosts();
   }, [locale]);
 
+  const openModal = () => {
+    setShowModal(true)
+  }
+
   return (
-    <Layout headTitle={t.homeData.metaData.title}>
+    <>
+      <div 
+        className={`fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-25 backdrop-blur-sm  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full justify-center items-center transition ${showModal ? "flex" : "hidden"}`}
+        onClick={() => setShowModal(false)}
+        >
+          <ContractForm />
+      </div>
+      <Layout headTitle={t.homeData.metaData.title}>
       <section className="relative hero-height pt-8 flex flex-col lg:flex-row justify-between items-center gap-10">
         <BlurCircle positionClassName="left-0 top-20" size="lg" />
         <LineGraphic
@@ -123,7 +136,11 @@ export default function Home() {
               height="423" 
               className="block lg:hidden -mt-8"
             />
-            <ContractFormBtn btnText={t.homeData.heroButton} />
+            <div className="w-full mt-0 lg:mt-8">
+              <button className="btn btn-primary w-full" onClick={openModal}>
+                {t.homeData.heroButton}
+              </button>
+            </div>
             <div className="flex items-center gap-1 mt-2">
               <Image
                 src="/icons/home/users-pics.png"
@@ -746,6 +763,8 @@ export default function Home() {
         </div>
       </section> */}
 
-    </Layout>
+      </Layout>
+    </>
+    
   )
 }

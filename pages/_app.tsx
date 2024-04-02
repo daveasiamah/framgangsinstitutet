@@ -1,5 +1,4 @@
 "use client"
-import ContractFormBtn from "@/components/ContractFormBtn";
 import "@/styles/globals.scss";
 // import ReactDOM from 'react-dom'
 // import { library } from '@fortawesome/fontawesome-svg-core'
@@ -75,7 +74,6 @@ export default function App({ Component,  pageProps: { session, ...pageProps } }
       <SessionProvider session={pageProps.session}>
         <Component {...pageProps} />
       </SessionProvider>
-      <ContractFormBtn />
     </>
     );
 }
