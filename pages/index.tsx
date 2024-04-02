@@ -666,8 +666,8 @@ export default function Home() {
         </div>
       </section>
     
-      <section className="h-[1200px]">
-        <div className="absolute left-0 right-0 bg-base-200 p-10">
+      <section>
+        <div className="relative p-10 full-bg">
           <Image 
             src="/images/home/question.gif"
             width={151}
