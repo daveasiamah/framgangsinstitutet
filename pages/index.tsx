@@ -31,6 +31,7 @@ import Marquee from "react-fast-marquee";
 import VideoTrainingCard from "@/components/parts/VideoTrainingCard"
 import Accordion from "@/components/parts/Accordion_Home"
 import FeatureCard from "@/components/parts/FeatureCard"
+import ContractFormBtn from "@/components/ContractFormBtn"
 
 type Props = {}
 
@@ -122,11 +123,7 @@ export default function Home() {
               height="423" 
               className="block lg:hidden -mt-8"
             />
-            <Link href="/signup" className="w-full mt-0 lg:mt-8">
-              <button className="btn btn-primary w-full">
-                {t.homeData.heroButton}
-              </button>
-            </Link>
+            <ContractFormBtn btnText={t.homeData.heroButton} />
             <div className="flex items-center gap-1 mt-2">
               <Image
                 src="/icons/home/users-pics.png"

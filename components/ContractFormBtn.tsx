@@ -3,7 +3,7 @@
 import { useState } from "react";
 import ContractForm from "./ContractForm";
 
-export default function ContactForm() {
+export default function ContactForm({ btnText }: { btnText: string }) {
   const [showModal, setShowModal] = useState(false);
 
   const openModal = () => {
@@ -21,9 +21,9 @@ export default function ContactForm() {
           <ContractForm />
         </div>
       }
-      <div className="fixed bottom-10 right-10">
-        <button className="flex items-center justify-center bg-primary p-4 rounded-full" onClick={openModal}>
-            <svg id="ic_bubble" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg>
+      <div className="w-full mt-0 lg:mt-8">
+        <button className="btn btn-primary w-full" onClick={openModal}>
+          {btnText}
         </button>
       </div>
     </>

@@ -12,6 +12,7 @@ import { contact } from "../service/Apis/api";
 import SuccessAlert from "@/components/parts/SuccessAlert";
 import ErrorAlert from "@/components/parts/ErrorAlert";
 import Title from "./parts/Title";
+import BlurCircle from "./graphic/BlurCircle";
 
 type FormValues = {
   firstName: string;
@@ -113,7 +114,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="bg-white py-10 px-6 max-w-[360px] box-content rounded-lg" onClick={handleClick}>
+    <div className="relative bg-white py-10 px-6 max-w-[360px] box-content rounded-lg" onClick={handleClick}>
       <div className="flex flex-col justify-center items-center">
         <iframe 
           width="311" 
@@ -232,6 +233,7 @@ export default function ContactForm() {
           onClose={() => setShowModalCls(false)}
         />
       </form>
+      <BlurCircle positionClassName="left-0 top-0 z-1" size="lg" />
     </div>
   );
 }
