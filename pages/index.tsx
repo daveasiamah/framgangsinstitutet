@@ -80,13 +80,17 @@ export default function Home() {
     setShowModal(true)
   }
 
+  const closeModal = () => {
+    setShowModal(false)
+  }
+
   return (
     <>
       <div 
         className={`fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-25 backdrop-blur-sm  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full justify-center items-center transition ${showModal ? "flex" : "hidden"}`}
         onClick={() => setShowModal(false)}
         >
-          <ContractForm />
+          <ContractForm onClose={closeModal} />
       </div>
       <Layout headTitle={t.homeData.metaData.title}>
       <section className="relative hero-height pt-8 flex flex-col lg:flex-row justify-between items-center gap-10">

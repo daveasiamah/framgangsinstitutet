@@ -49,7 +49,11 @@ type Props = {
   };
 };
 
-export default function ContactForm() {
+export default function ContactForm({
+  onClose,
+}: {
+  onClose: () => void
+}) {
   const router = useRouter()
   const { locale } = router
   const t = locale === "en" ? en : sv
@@ -71,6 +75,7 @@ export default function ContactForm() {
     if (res.status==200) {
       setShowModal(true);
       setalertMessage("Meddelande Skickat");
+      onClose();
     } else {
       setalertMessage("Misslyckas");
       setShowModalCls(true);
@@ -115,6 +120,14 @@ export default function ContactForm() {
 
   return (
     <div className="relative bg-white py-10 px-6 max-w-[360px] box-content rounded-lg" onClick={handleClick}>
+      <Image
+        src="/icons/close.svg"
+        alt="close"
+        width={20}
+        height={20}
+        className="absolute top-4 right-4 cursor-pointer"
+        onClick={onClose}
+      />
       <div className="flex flex-col justify-center items-center">
         <iframe 
           width="311" 
