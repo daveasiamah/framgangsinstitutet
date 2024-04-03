@@ -128,7 +128,7 @@ export default function ContactForm({
         className="absolute top-4 right-4 cursor-pointer"
         onClick={onClose}
       />
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex-col justify-center items-center">
         <iframe 
           width="311" 
           height="175" 
@@ -137,13 +137,13 @@ export default function ContactForm({
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
           className="home_video_cover mt-4 max-w-full hidden lg:block" 
         ></iframe>
-        <Image
+        {/* <Image
           src="/images/home/home-video-lock.png"
           alt="video"
           width="311" 
           height="175" 
           className="block lg:hidden"
-        />
+        /> */}
         <div className="mt-6">
           <div className="flex items-center justify-center gap-2 text-lg lg:text-xl font-bold">
             <h1>{t.homeData.popupBlackTitle}</h1>

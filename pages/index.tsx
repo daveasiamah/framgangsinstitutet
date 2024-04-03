@@ -4,7 +4,7 @@ import { FaCheckCircle } from "react-icons/fa"
 import { BsPatchCheckFill } from "react-icons/bs"
 import { motion } from "framer-motion"
 import { useRouter } from "next/router"
-import { Autoplay, EffectCards, Navigation } from "swiper"
+import SwiperType, { Autoplay, EffectCards, Navigation } from "swiper"
 import { Swiper, SwiperSlide } from "swiper/react"
 
 import Title from "@/components/parts/Title"
@@ -24,7 +24,7 @@ import "swiper/css/effect-cards"
 
 import en from "@/locales/en"
 import sv from "@/locales/sv"
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import axios from 'axios';
 import { HiOutlineClock } from "react-icons/hi"
 import Marquee from "react-fast-marquee";
@@ -32,6 +32,7 @@ import VideoTrainingCard from "@/components/parts/VideoTrainingCard"
 import Accordion from "@/components/parts/Accordion_Home"
 import FeatureCard from "@/components/parts/FeatureCard"
 import ContractForm from "@/components/ContractForm"
+import { useMediaQuery } from "usehooks-ts"
 
 type Props = {}
 
@@ -59,9 +60,12 @@ export default function Home() {
   // } else {
   //   console.log("role not found");
   // }
-
+  // mobile view close auto play
+  const matches = useMediaQuery('(max-width: 786px)')
   const [showModal, setShowModal] = useState(false)
-  
+  const swiperRef1 = useRef<SwiperType>();
+  const swiperRef2 = useRef<SwiperType>();
+  const swiperRef3 = useRef<SwiperType>();
   // Fetch Blog List
   const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
   useEffect(() => {
@@ -75,6 +79,18 @@ export default function Home() {
     };
     fetchPosts();
   }, [locale]);
+
+  useEffect(() => {
+    if (matches) {
+      swiperRef1.current?.autoplay.stop()
+      swiperRef2.current?.autoplay.stop()
+      swiperRef3.current?.autoplay.stop()
+    } else {
+      swiperRef1.current?.autoplay.start()
+      swiperRef2.current?.autoplay.start()
+      swiperRef3.current?.autoplay.start()
+    }
+  }, [matches])
 
   const openModal = () => {
     setShowModal(true)
@@ -293,6 +309,7 @@ export default function Home() {
             grabCursor={true}
             loop={true}
             modules={[EffectCards, Navigation, Autoplay]}
+            onSwiper={(swiper) => swiperRef1.current = swiper}
             className="testimony-swiper"
             navigation={{
               nextEl: ".nav-right",
@@ -364,6 +381,7 @@ export default function Home() {
             loop={true}
             modules={[Navigation, Autoplay]}
             className="testimony-swiper w-full max-w-[365px] max-h-365px mt-6"
+            onSwiper={(swiper) => swiperRef2.current = swiper}
             autoplay={{
               delay: 3000,
               disableOnInteraction: false
@@ -569,6 +587,7 @@ export default function Home() {
             grabCursor={true}
             loop={true}
             modules={[EffectCards, Navigation, Autoplay]}
+            onSwiper={(swiper) => swiperRef3.current = swiper}
             className="testimony-swiper"
             autoplay={{
               delay: 3000,
