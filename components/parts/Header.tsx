@@ -235,19 +235,14 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
                       type="video/mp4"
                     />
                   </video> */}
-                  <video
-                    width={350}
-                    height={190}
-                    controls
-                    autoPlay
-                    muted
-                    ref={videoRef}
-                    poster={posterURL}
-                    onPause={handleVideoPause} // Listen for the pause event
-                    onEnded={handleVideoPause} // Listen for the end event (optional)
-                  >
-                    <source src={videoSource} type="video/mp4" />
-                  </video>
+                  <iframe 
+                    width="350" 
+                    height="190" 
+                    src="https://www.youtube.com/embed/pTVfynxC3-c?si=VXY1V0Wf90F4QeV9" 
+                    title="YouTube video player" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    className="home_video_cover mt-4 max-w-full hidden lg:block" 
+                  ></iframe>
 
                   {/* Display the thumbnail image */}
                   {showThumbnail && (
