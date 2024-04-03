@@ -358,7 +358,7 @@ export default function Home() {
             grabCursor={true}
             loop={true}
             modules={[Navigation, Autoplay]}
-            className="testimony-swiper max-w-[365px] max-h-365px mt-6"
+            className="testimony-swiper w-full max-w-[365px] max-h-365px mt-6"
             autoplay={{
               delay: 3000,
               disableOnInteraction: false
