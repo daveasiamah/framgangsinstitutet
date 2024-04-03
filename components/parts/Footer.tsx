@@ -19,14 +19,14 @@ const currentYear = new Date().getFullYear();
   return (
     <footer className='bg-primary text-white py-14 relative mt-32 lg:mt-40'>
       <div className='container mx-auto'>
-        <Image
+        {/* <Image
           src='/graphics/footer/wave.png'
           alt='wave'
           width={900}
           height={30}
           className='absolute w-full 2xl:max-h-[10rem] left-0 top-[-20px] sm:top-[-40px] md:top-[-50px] lg:top-[-60px] 2xl:top-[-8rem]'
           priority
-        />
+        /> */}
         <div className='flex flex-col lg:flex-row justify-between items-center text-center lg:text-left lg:items-end gap-10 lg:gap-[120px]'>
           <div className='w-full lg:w-1/2'>
             <Image
