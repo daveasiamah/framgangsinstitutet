@@ -98,15 +98,15 @@ export default function Home() {
 
         <div className="w-full text-center mb-6 lg:mb-0">
           <ScrollReveal>
-            <div className="flex items-center justify-center gap-2">
-              <h1 className="text-[2rem] lg:text-6xl font-bold lg:mb-2">
+            <div className="flex items-center justify-center gap-2 mb-2">
+              <h1 className="text-2xl lg:text-6xl font-bold">
                   {t.homeData.heroBlackTitle}
                 </h1>
-                <h1 className="text-[2rem] lg:text-6xl font-bold text-primary max-[480px]:mt-[-3vw]">
+                <h1 className="text-2xl lg:text-6xl font-bold text-primary">
                   {t.homeData.heroBlueTitle}
                 </h1>
             </div>
-            <h1 className="text-[2rem] lg:text-6xl font-bold lg:mb-2">
+            <h1 className="text-2xl lg:text-6xl font-bold lg:mb-2">
               {t.homeData.heroBlackTitleTwo}
             </h1>
           </ScrollReveal>
