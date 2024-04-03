@@ -132,7 +132,7 @@ export default function ContactForm() {
           className="block lg:hidden"
         />
         <div className="mt-6">
-          <div className="flex justify-center gap-2 text-xl font-bold">
+          <div className="flex items-center justify-center gap-2 text-lg lg:text-xl font-bold">
             <h1>{t.homeData.popupBlackTitle}</h1>
             <h1 className="text-primary">{t.homeData.popupBlueTitle}</h1>
           </div>
