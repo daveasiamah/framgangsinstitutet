@@ -25,6 +25,7 @@ export default function VideoTrainingCard({
               <Title
                 blackText={blackText}
                 blueText={blueText}
+                className="text-lg lg:text-4xl"
               />
               <Image
                 src="/icons/home/arrow-right.svg"
