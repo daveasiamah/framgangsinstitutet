@@ -98,13 +98,13 @@ export default function Home() {
 
         <div className="w-full text-center mb-6 lg:mb-0">
           <ScrollReveal>
-            <div className="flex items-center justify-center gap-2 mb-2">
+            <div className="flex items-center justify-center gap-1 mb-1">
               <h1 className="text-2xl lg:text-6xl font-bold">
-                  {t.homeData.heroBlackTitle}
-                </h1>
-                <h1 className="text-2xl lg:text-6xl font-bold text-primary">
-                  {t.homeData.heroBlueTitle}
-                </h1>
+                {t.homeData.heroBlackTitle}
+              </h1>
+              <h1 className="text-2xl lg:text-6xl font-bold text-primary">
+                {t.homeData.heroBlueTitle}
+              </h1>
             </div>
             <h1 className="text-2xl lg:text-6xl font-bold lg:mb-2">
               {t.homeData.heroBlackTitleTwo}
@@ -348,11 +348,11 @@ export default function Home() {
               <p className="mt-4">{t.homeData.videoDataSubtitleTwo}</p>
             </div>
           </ScrollReveal>
-          <Link href="/signup" className="mt-6 hidden lg:block">
-            <button className="btn btn-primary">
+          <div className="mt-6 hidden lg:block">
+            <button onClick={openModal} className="btn btn-primary">
               {t.homeData.heroButton}
             </button>
-          </Link>
+          </div>
           <Swiper
             effect="fade"
             grabCursor={true}
@@ -591,11 +591,11 @@ export default function Home() {
           <p className="mx-auto text-lg max-w-4xl">{t.homeData.reasonSubtitle}</p>
         </ScrollReveal>
 
-        <Link href="/signup">
-          <button className="mt-16 btn btn-white w-60">
+        <div>
+          <button onClick={openModal} className="mt-16 btn btn-white w-60">
             {t.homeData.reasonButton}
           </button>
-        </Link>
+        </div>
       </section>
 
       <section className="mt-60 mb-16 lg:mb-20 testimonial-section h-[620px]">
@@ -662,11 +662,11 @@ export default function Home() {
               </li>
             ))}
           </ul>
-          <Link href="/signup">
-            <button className="btn btn-white mt-10 w-full lg:w-[304px]">
+          <div>
+            <button onClick={openModal} className="btn btn-white mt-10 w-full lg:w-[304px]">
               {t.homeData.checkifiedUnivButton}
             </button>
-          </Link>
+          </div>
         </ScrollReveal>
         <div className="relative mx-auto w-[259px] lg:w-1/3 h-[382px] lg:h-full">
           <Image
@@ -710,11 +710,11 @@ export default function Home() {
             />
             <p className="mb-2 max-w-3xl mx-auto text-center">{t.homeData.freeCourseSubtitle}</p>
           </ScrollReveal>
-          <Link href="/signup">
-            <button className="btn btn-white mt-10">
+          <div>
+            <button onClick={openModal} className="btn btn-white mt-10">
               {t.homeData.freeCourseButton}
             </button>
-          </Link>
+          </div>
         </div>
       </section>
 
