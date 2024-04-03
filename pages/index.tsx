@@ -98,15 +98,15 @@ export default function Home() {
 
         <div className="w-full text-center mb-6 lg:mb-0">
           <ScrollReveal>
-            <div className="flex items-center justify-center gap-2">
-              <h1 className="text-[2rem] lg:text-6xl font-bold lg:mb-2">
+            <div className="flex items-center justify-center gap-2 mb-2">
+              <h1 className="text-2xl lg:text-6xl font-bold">
                   {t.homeData.heroBlackTitle}
                 </h1>
-                <h1 className="text-[2rem] lg:text-6xl font-bold text-primary max-[480px]:mt-[-3vw]">
+                <h1 className="text-2xl lg:text-6xl font-bold text-primary">
                   {t.homeData.heroBlueTitle}
                 </h1>
             </div>
-            <h1 className="text-[2rem] lg:text-6xl font-bold lg:mb-2">
+            <h1 className="text-2xl lg:text-6xl font-bold lg:mb-2">
               {t.homeData.heroBlackTitleTwo}
             </h1>
           </ScrollReveal>
@@ -358,7 +358,7 @@ export default function Home() {
             grabCursor={true}
             loop={true}
             modules={[Navigation, Autoplay]}
-            className="testimony-swiper max-w-[365px] max-h-365px mt-6"
+            className="testimony-swiper w-full max-w-[365px] max-h-365px mt-6"
             autoplay={{
               delay: 3000,
               disableOnInteraction: false
@@ -687,7 +687,7 @@ export default function Home() {
             width={151}
             height={151}
             alt="faq"
-            className="mx-auto w-[85px] h-[85px] lg:w-[151px] lg:h-[151px]"
+            className="mx-auto w-[65px] h-[65px] lg:w-[151px] lg:h-[151px]"
           />
           <ScrollReveal>
             <Title
