@@ -139,6 +139,7 @@ export default function Home() {
               width="706" 
               height="423" 
               className="block lg:hidden -mt-8"
+              onClick={openModal}
             />
             <div className="w-full mt-0 lg:mt-8">
               <button className="btn btn-primary w-full" onClick={openModal}>
