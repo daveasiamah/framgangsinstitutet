@@ -119,7 +119,7 @@ export default function ContactForm({
   };
 
   return (
-    <div className="relative bg-white py-10 px-6 max-w-[360px] box-content rounded-lg" onClick={handleClick}>
+    <div className="relative bg-white py-4 lg:py-10 px-6 max-w-[360px] box-content rounded-lg" onClick={handleClick}>
       <Image
         src="/icons/close.svg"
         alt="close"
@@ -135,21 +135,21 @@ export default function ContactForm({
           src="https://www.youtube.com/embed/pTVfynxC3-c?si=VXY1V0Wf90F4QeV9" 
           title="YouTube video player" 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          className="home_video_cover mt-4 max-w-full hidden lg:block" 
+          className="home_video_cover mt-4 max-w-full hidden lg:block mx-auto" 
         ></iframe>
-        {/* <Image
+        <Image
           src="/images/home/home-video-lock.png"
           alt="video"
-          width="311" 
-          height="175" 
-          className="block lg:hidden"
-        /> */}
-        <div className="mt-6">
+          width="240" 
+          height="100" 
+          className="mx-auto object-cover block lg:hidden rounded-4xl"
+        />
+        <div className="lg:mt-6">
           <div className="flex items-center justify-center gap-2 text-lg lg:text-xl font-bold">
             <h1>{t.homeData.popupBlackTitle}</h1>
             <h1 className="text-primary">{t.homeData.popupBlueTitle}</h1>
           </div>
-          <p className="text-gray-500 mt-4">{t.homeData.popupSubtitle}</p>
+          <p className="text-gray-500 mt-1 lg:mt-4 text-sm lg:text-lg">{t.homeData.popupSubtitle}</p>
         </div>
       </div>
       <form onSubmit={handleSubmit(onSubmit)} action="">
