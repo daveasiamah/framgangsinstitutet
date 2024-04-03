@@ -48,7 +48,7 @@ export const headerData: HeaderData = {
     }
   ],
   // videoUrl: "/images/videos/INTRO.mp4",
-  pricing: "Pricing",
+  pricing: "E-shops",
   login: "Log In",
   getStarted: "Start Free Trial",
   dashboard: "Dashboard"
