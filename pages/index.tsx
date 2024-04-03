@@ -687,7 +687,7 @@ export default function Home() {
             width={151}
             height={151}
             alt="faq"
-            className="mx-auto w-[85px] h-[85px] lg:w-[151px] lg:h-[151px]"
+            className="mx-auto w-[65px] h-[65px] lg:w-[151px] lg:h-[151px]"
           />
           <ScrollReveal>
             <Title
