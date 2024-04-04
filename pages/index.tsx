@@ -61,7 +61,7 @@ export default function Home() {
   //   console.log("role not found");
   // }
   // mobile view close auto play
-  const matches = useMediaQuery('(max-width: 786px)')
+  const matches = useMediaQuery('(max-width: 1024px)')
   const [showModal, setShowModal] = useState(false)
   const swiperRef1 = useRef<SwiperType>();
   const swiperRef2 = useRef<SwiperType>();
@@ -103,6 +103,7 @@ export default function Home() {
   return (
     <>
       <div 
+        data-theme="light"
         className={`fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-25 backdrop-blur-sm  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full justify-center items-center transition ${showModal ? "flex" : "hidden"}`}
         onClick={() => setShowModal(false)}
         >

@@ -50,7 +50,7 @@ export const headerData: HeaderData = {
   // videoUrl: "/images/videos/INTRO.mp4",
   pricing: "E-shops",
   login: "Log In",
-  getStarted: "Start Free Trial",
+  getStarted: "Join today",
   dashboard: "Dashboard"
 } 
  

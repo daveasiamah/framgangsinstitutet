@@ -129,20 +129,20 @@ export default function ContactForm({
         onClick={onClose}
       />
       <div className="flex-col justify-center items-center">
-        <iframe 
+        {/* <iframe 
           width="311" 
           height="175" 
           src="https://www.youtube.com/embed/pTVfynxC3-c?si=VXY1V0Wf90F4QeV9" 
           title="YouTube video player" 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
           className="home_video_cover mt-4 max-w-full hidden lg:block mx-auto" 
-        ></iframe>
+        ></iframe> */}
         <Image
           src="/images/home/home-video-lock.png"
           alt="video"
           width="240" 
           height="100" 
-          className="mx-auto object-cover block lg:hidden rounded-4xl"
+          className="mx-auto object-cover rounded-4xl"
         />
         <div className="lg:mt-6">
           <div className="flex items-center justify-center gap-2 text-lg lg:text-xl font-bold">
@@ -166,7 +166,7 @@ export default function ContactForm({
               <input
                 type="text"
                 placeholder={t.homeData.popupForm.firstName}
-                className="input focus:outline-0 flex-1"
+                className="input focus:outline-0 flex-1 bg-white"
                 {...register("firstName")}
                 onChange={handleFirstNameChange} 
               />
@@ -189,7 +189,7 @@ export default function ContactForm({
               <input
                 type="email"
                 placeholder={t.homeData.popupForm.email}
-                className="input focus:outline-0 flex-1"
+                className="input focus:outline-0 flex-1 bg-white"
                 {...register("email")}
                 onChange={handleEmailChange} 
               />
@@ -210,7 +210,7 @@ export default function ContactForm({
               <input
                 type="text"
                 placeholder={t.homeData.popupForm.phoneNumber}
-                className="input focus:outline-0 flex-1"
+                className="input focus:outline-0 flex-1 bg-white"
                 {...register("phone")}
                 onChange={handlemobileChange} 
               />
