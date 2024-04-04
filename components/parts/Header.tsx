@@ -39,7 +39,7 @@ const AuthButton = ({
     <div
       className={`items-center justify-center lg:justify-end gap-2 mt-8 lg:mt-0 ${className}`}
     >
-      {/* {!isLoggedIn && (
+      {!isLoggedIn && (
         <>
           <Link className="btn btn-link" href="/signin">
             {t.headerData.login}
@@ -55,7 +55,7 @@ const AuthButton = ({
             hem
           </Link>
         </>
-      )} */}
+      )}
     </div>
   );
 };
@@ -125,7 +125,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
 
   return (
     <header className="bg-base-100 h-header-height fixed top-0 left-0 right-0 z-20 flex justify-between items-center">
-      <div className="container mx-auto flex justify-between items-center">
+      <div className="container mx-auto flex justify-between lg:justify-start gap-4 items-center">
         <Link className="" href="/">
           <div className="flex items-center justify-start gap-2">
             <Image
@@ -143,7 +143,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
         <nav
           className={`bg-base-100 absolute top-header-height ${
             openSidebar ? "left-0" : "left-[150%]"
-          } lg:static p-8 pb-10 lg:p-0 text-center w-full lg:w-auto lg:flex flex-col lg:flex-row justify-between items-center shadow-lg lg:shadow-none rounded-b-3xl lg:rounded-none transition-all duration-200 ease-linear max-h-screen`}
+          } lg:static p-8 pb-10 lg:p-0 text-center w-full lg:w-auto lg:flex flex-col lg:flex-row items-center shadow-lg lg:shadow-none rounded-b-3xl lg:rounded-none transition-all duration-200 ease-linear max-h-screen`}
         >
           <ul className="flex flex-col lg:flex-row gap-2 lg:gap-8 h-full">
             <li>
@@ -261,20 +261,20 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
               </Link>
             </li>
           </ul>
-          <AuthButton
+          {/* <AuthButton
             locale={locale}
             changeLanguage={changeLanguage}
             t={t}
             className="flex lg:hidden"
-          />
+          /> */}
         </nav>
 
-        <AuthButton
+        {/* <AuthButton
           locale={locale}
           changeLanguage={changeLanguage}
           t={t}
           className="hidden lg:flex"
-        />
+        /> */}
 
         <button className="lg:hidden rounded-md text-primary bg-base-200">
           <Hamburger
