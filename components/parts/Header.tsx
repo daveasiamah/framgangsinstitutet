@@ -39,7 +39,7 @@ const AuthButton = ({
     <div
       className={`items-center justify-center lg:justify-end gap-2 mt-8 lg:mt-0 ${className}`}
     >
-      {!isLoggedIn && (
+      {/* {!isLoggedIn && (
         <>
           <Link className="btn btn-link" href="/signin">
             {t.headerData.login}
@@ -55,7 +55,7 @@ const AuthButton = ({
             hem
           </Link>
         </>
-      )}
+      )} */}
     </div>
   );
 };
