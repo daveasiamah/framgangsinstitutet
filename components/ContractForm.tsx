@@ -8,7 +8,7 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import en from "@/locales/en"
 import sv from "@/locales/sv"
-import { contact } from "../service/Apis/api";
+import { registerOfContract } from "../service/Apis/api";
 import SuccessAlert from "@/components/parts/SuccessAlert";
 import ErrorAlert from "@/components/parts/ErrorAlert";
 import Title from "./parts/Title";
@@ -71,7 +71,7 @@ export default function ContactForm({
 
   const senddata = async(data: any) => {
     console.log(data);
-    const res : any = await contact(data);
+    const res : any = await registerOfContract(data);
     if (res.status==200) {
       setShowModal(true);
       setalertMessage("Meddelande Skickat");
