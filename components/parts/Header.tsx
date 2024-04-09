@@ -9,6 +9,7 @@ import { useRouter } from "next/router";
 
 import en from "@/locales/en";
 import sv from "@/locales/sv";
+import ContractForm from "../ContractForm";
 
 type Props = {
   openSidebar: boolean;
@@ -27,6 +28,11 @@ const AuthButton = ({
   className: string;
 }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
 
   useEffect(() => {
     const idFromLocalStorage = localStorage.getItem("id");
@@ -39,14 +45,21 @@ const AuthButton = ({
     <div
       className={`items-center justify-center lg:justify-end gap-2 mt-8 lg:mt-0 ${className}`}
     >
+       <div 
+        data-theme="light"
+        className={`fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-25 backdrop-blur-sm  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full justify-center items-center transition ${showModal ? "flex" : "hidden"}`}
+        onClick={closeModal}
+        >
+          <ContractForm onClose={closeModal} />
+      </div>
       {!isLoggedIn && (
         <>
           <Link className="btn btn-link" href="/signin">
             {t.headerData.login}
           </Link>
-          <Link className="btn btn-primary btn-shadow" href="/signup">
+          <div className="btn btn-primary btn-shadow" onClick={() => setShowModal(true)}>
             {t.headerData.getStarted}
-          </Link>
+          </div>
         </>
       )}
       {isLoggedIn && (
@@ -125,7 +138,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
 
   return (
     <header className="bg-base-100 h-header-height fixed top-0 left-0 right-0 z-20 flex justify-between items-center">
-      <div className="container mx-auto flex justify-between lg:justify-start gap-16 items-center">
+      <div className="container mx-auto flex justify-between items-center">
         <Link className="" href="/">
           <div className="flex items-center justify-start gap-2">
             <Image
@@ -261,20 +274,20 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
               </Link>
             </li>
           </ul>
-          {/* <AuthButton
+          <AuthButton
             locale={locale}
             changeLanguage={changeLanguage}
             t={t}
             className="flex lg:hidden"
-          /> */}
+          />
         </nav>
 
-        {/* <AuthButton
+         <AuthButton
           locale={locale}
           changeLanguage={changeLanguage}
           t={t}
           className="hidden lg:flex"
-        /> */}
+        />
 
         <button className="lg:hidden rounded-md text-primary bg-base-200">
           <Hamburger

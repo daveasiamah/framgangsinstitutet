@@ -138,7 +138,7 @@ export default function ContactForm({
           className="home_video_cover mt-4 max-w-full hidden lg:block mx-auto" 
         ></iframe> */}
         <Image
-          src="/images/home/home-video-lock.png"
+          src="/images/home/nyckeln-till-frihet.jpg"
           alt="video"
           width="240" 
           height="100" 
