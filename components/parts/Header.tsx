@@ -54,9 +54,9 @@ const AuthButton = ({
       </div>
       {!isLoggedIn && (
         <>
-          <Link className="btn btn-link" href="/signin">
+          {/* <Link className="btn btn-link" href="/signin">
             {t.headerData.login}
-          </Link>
+          </Link> */}
           <div className="btn btn-primary btn-shadow" onClick={() => setShowModal(true)}>
             {t.headerData.getStarted}
           </div>
