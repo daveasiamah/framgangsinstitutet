@@ -6,8 +6,8 @@ type Props = {
   className?: string
   isReverse?: boolean
   href?: string,
-  as: string,
-  onClick: () => void,
+  as?: string,
+  onClick?: () => void,
   children: React.ReactNode
 }
  
@@ -15,7 +15,7 @@ export default function ButtonArrow({
   className,
   isReverse,
   children,
-  href,
+  href="",
   as="link",
   onClick
 }: Props) {
