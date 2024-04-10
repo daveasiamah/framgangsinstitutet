@@ -5,7 +5,7 @@ import { MdKeyboardArrowRight } from "react-icons/md"
 type Props = {
   className?: string
   isReverse?: boolean
-  href: string,
+  href?: string,
   as: string,
   onClick: () => void,
   children: React.ReactNode
