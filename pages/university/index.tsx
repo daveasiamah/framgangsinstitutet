@@ -12,7 +12,7 @@ import CacingOne from "@/components/graphic/CacingOne";
 import CacingTwo from "@/components/graphic/CacingTwo";
 import FadeLogo from "@/components/graphic/FadeLogo";
 import ScrollReveal from "@/components/transition/ScrollReveal";
-
+import ContractForm from "@/components/ContractForm";
 import { activecourse, get_user } from "../../service/Apis/api";
 
 import en from "@/locales/en";
@@ -32,8 +32,13 @@ export default function University({}: Props) {
   const [AllCourses, setAllCourses] = useState([]);
   const [Signin, setSignin] = useState(false);
   const [payment, setpayment] = useState(false);
+  const [showModal, setShowModal] = useState(false);
   const [AllCourses2, setAllCourses2] = useState<Course[]>([]);
   const [AllCourses3, setAllCourses3] = useState<Course[]>([]);
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
 
   const get_course = async () => {
     var res: any = [];
@@ -52,7 +57,7 @@ export default function University({}: Props) {
     }
     const get_check = async () => {
       const res : any = await get_user(); 
-      if (!res.data.paymentvalidationId && res.data.role == 'USER') {
+      if (!res?.data?.paymentvalidationId && res?.data?.role == 'USER') {
         // router.push("/coursecheckout");
         setpayment(false);
       } else {
@@ -82,6 +87,7 @@ export default function University({}: Props) {
   }, []);
 
   return (
+    <>
     <Layout headTitle={t.universityData.metaData.title}>
       <section className="relative py-6 lg:py-12 mb-16">
         <BlurCircle positionClassName="left-[-12rem] top-20" size="lg" />
@@ -131,7 +137,8 @@ export default function University({}: Props) {
               <p className="text-left">
                 {t.universityData.masteringSubtitleSecond}
               </p>
-              <ButtonArrow href="/signup" isReverse className="mt-10 z-10">
+
+              <ButtonArrow isReverse className="mt-10 z-10" as="btn" onClick={()=> setShowModal(true) }>
                 {t.universityData.masteringButton}
               </ButtonArrow>
             </ScrollReveal>
@@ -309,12 +316,9 @@ export default function University({}: Props) {
             {t.universityData.joinSubtitleFirst}
           </p>
           <p className="text-subtitle">{t.universityData.joinSubtitleSecond}</p>
-          <Link
-            href="/signup"
-            className="mt-10 btn btn-primary w-full lg:w-auto"
-          >
+          <button className="mt-10 btn btn-primary w-full lg:w-auto" onClick={()=> setShowModal(true) }>
             {t.universityData.joinButton}
-          </Link>
+          </button>
         </ScrollReveal>
       </section>
 
@@ -383,11 +387,19 @@ export default function University({}: Props) {
             isBlock
             className="text-[24px]"
           />
-          <ButtonArrow href="/signup" isReverse className="mt-0 lg:mt-4">
+          <ButtonArrow isReverse className="mt-10 z-10" as="btn" onClick={()=> setShowModal(true) }>
             {t.universityData.takeYourButton}
           </ButtonArrow>
         </ScrollReveal>
       </section>
     </Layout>
+    <div 
+        data-theme="light"
+        className={`fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-25 backdrop-blur-sm  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full justify-center items-center transition ${showModal ? "flex" : "hidden"}`}
+        onClick={closeModal}
+        >
+          <ContractForm onClose={closeModal} />
+      </div>
+    </>
   );
 }

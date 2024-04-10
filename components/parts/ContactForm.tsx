@@ -103,13 +103,13 @@ export default function ContactForm({ contactData }: Props) {
         <div className="form-control">
           <label className="label">
             <span className="label-text">
-              {contactData.firstName}
+              {contactData?.firstName}
               {errors.firstName && <span className="text-red-400">*</span>}
             </span>
           </label>
           <input
             type="text"
-            placeholder={contactData.firstName}
+            placeholder={contactData?.firstName}
             className="input input-bordered"
             {...register("firstName")}
             onChange={handleFirstNameChange} 
@@ -123,13 +123,13 @@ export default function ContactForm({ contactData }: Props) {
         <div className="form-control">
           <label className="label">
             <span className="label-text">
-              {contactData.lastName}
+              {contactData?.lastName}
               {errors.lastName && <span className="text-red-400">*</span>}
             </span>
           </label>
           <input
             type="text"
-            placeholder={contactData.lastName}
+            placeholder={contactData?.lastName}
             className="input input-bordered"
             {...register("lastName")}
             onChange={handleLastNameChange} 
@@ -143,13 +143,13 @@ export default function ContactForm({ contactData }: Props) {
         <div className="form-control">
           <label className="label">
             <span className="label-text">
-              {contactData.email}
+              {contactData?.email}
               {errors.email && <span className="text-red-400">*</span>}
             </span>
           </label>
           <input
             type="email"
-            placeholder={contactData.email}
+            placeholder={contactData?.email}
             className="input input-bordered"
             {...register("email")}
             onChange={handleEmailChange} 
@@ -161,13 +161,13 @@ export default function ContactForm({ contactData }: Props) {
         <div className="form-control">
           <label className="label">
             <span className="label-text">
-              {contactData.phoneNumber}
+              {contactData?.phoneNumber}
               {errors.phone && <span className="text-red-400">*</span>}
             </span>
           </label>
           <input
             type="text"
-            placeholder={contactData.phoneNumber}
+            placeholder={contactData?.phoneNumber}
             className="input input-bordered"
             {...register("phone")}
             onChange={handlemobileChange} 
@@ -180,14 +180,14 @@ export default function ContactForm({ contactData }: Props) {
       <div className="form-control mt-4">
         <label className="label">
           <span className="label-text">
-            {contactData.message}{" "}
+            {contactData?.message}{" "}
             {errors.message && <span className="text-red-400">*</span>}
           </span>
         </label>
         <textarea
           className="textarea textarea-bordered text-base"
           rows={6}
-          placeholder={contactData.message}
+          placeholder={contactData?.message}
           {...register("message")}
           onChange={handleMessageChange} 
         ></textarea>
@@ -197,7 +197,7 @@ export default function ContactForm({ contactData }: Props) {
       </div>
       {( firstNameValid && lastNameValid && emailValid && mobileValid && messageValid) ? (
       <button type="submit" className=" btn-primary mt-8 w-full drop-shadow-none">
-        {contactData.button}
+        {contactData?.button}
       </button>
       ):(
         <div className="!cursor-not-allowed">
@@ -206,7 +206,7 @@ export default function ContactForm({ contactData }: Props) {
                   className=' btn btn-grey !bg-gray mt-8 h-14 w-full drop-shadow-none '
                   disabled
                   >
-                  {contactData.button}
+                  {contactData?.button}
                 </button>
                 </div>
       )}
