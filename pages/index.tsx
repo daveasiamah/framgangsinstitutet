@@ -82,8 +82,8 @@ export default function Home() {
 
   useEffect(() => {
     if (matches) {
-      swiperRef1.current?.autoplay.stop()
-      swiperRef2.current?.autoplay.stop()
+      // swiperRef1.current?.autoplay.stop()
+      // swiperRef2.current?.autoplay.stop()
       swiperRef3.current?.autoplay.stop()
     } else {
       swiperRef1.current?.autoplay.start()
@@ -706,7 +706,7 @@ export default function Home() {
       </section>
     
       <section>
-        <div className="relative p-10 full-bg">
+        <div className="relative py-10 full-bg">
           <Image 
             src="/images/home/question.gif"
             width={151}

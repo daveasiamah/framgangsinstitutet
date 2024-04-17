@@ -25,7 +25,7 @@ type FormValues = {
 const schema = yup
   .object({
     firstName: yup.string().required("Förnamn krävs"),
-    lastName: yup.string().required("Efternamn krävs"),
+    // lastName: yup.string().required("Efternamn krävs"),
     email: yup
       .string()
       .email("Ange en giltig e-postadress")
@@ -34,7 +34,7 @@ const schema = yup
       .number()
       .typeError("Telefonen måste vara ett nummer")
       .required("Telefonnummer krävs"),
-    message: yup.string().required("Meddelande krävs"),
+    // message: yup.string().required("Meddelande krävs"),
   })
   .required();
 
