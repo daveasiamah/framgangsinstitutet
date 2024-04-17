@@ -14,13 +14,14 @@ export const AuthApi = async (email, password) => {
 };
 
 export const registerOfContract = async (name, email,phoneNumber) => {
+  console.log('registerOfContract ',name, email,phoneNumber);
   try {
     const response = await axios.post(process.env.API_BASE + "auth/register", {
       name,
       email,
       phoneNumber:phoneNumber
     });
-    return response;
+    return response ;
   } catch (error) {
     return error;
   }
