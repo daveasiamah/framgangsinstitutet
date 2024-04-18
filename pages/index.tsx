@@ -142,22 +142,22 @@ export default function Home() {
               />
               <h3 className="text-sm">{t.homeData.heroVideoDesc}</h3>
             </div>
-            <iframe 
-              width="706" 
-              height="423" 
-              src="https://www.youtube.com/embed/pTVfynxC3-c?si=VXY1V0Wf90F4QeV9" 
-              title="YouTube video player" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              className="home_video_cover mt-4 max-w-full hidden lg:block" 
-            ></iframe>
-            <Image
+           <iframe 
+  width="706" 
+  height="423" 
+  src="https://www.youtube.com/embed/pTVfynxC3-c?si=VXY1V0Wf90F4QeV9" 
+  title="YouTube video player" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+  className="home_video_cover mt-4 max-w-full"
+></iframe>
+            {/* <Image
               src="/images/home/home-video-lock.png"
               alt="video"
               width="706" 
               height="423" 
               className="block lg:hidden -mt-8"
               onClick={openModal}
-            />
+            /> */}
             <div className="w-full mt-0 lg:mt-8">
               <button className="btn btn-primary w-full" onClick={openModal}>
                 {t.homeData.heroButton}
