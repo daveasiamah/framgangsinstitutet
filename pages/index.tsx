@@ -142,14 +142,18 @@ export default function Home() {
               />
               <h3 className="text-sm">{t.homeData.heroVideoDesc}</h3>
             </div>
-           <iframe 
-  width="706" 
-  height="423" 
-  src="https://www.youtube.com/embed/pTVfynxC3-c?si=VXY1V0Wf90F4QeV9" 
-  title="YouTube video player" 
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-  className="home_video_cover mt-4 max-w-full"
-></iframe>
+          <div className="video-container">
+  <iframe 
+    width="706" 
+    height="397" 
+    src="https://www.youtube.com/embed/pTVfynxC3-c?si=VXY1V0Wf90F4QeV9" 
+    title="YouTube video player" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    frameBorder="0" 
+    allowFullScreen
+  ></iframe>
+</div>
+
             {/* <Image
               src="/images/home/home-video-lock.png"
               alt="video"

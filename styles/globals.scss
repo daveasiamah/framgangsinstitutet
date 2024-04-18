@@ -537,6 +537,21 @@ textarea::placeholder {
   overflow: auto;
 }
 
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.17%; /* 16:9 aspect ratio (397 / 706 * 100) */
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
 .closeButton {
   margin-bottom: 10px;
 }
