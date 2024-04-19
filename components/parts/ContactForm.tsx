@@ -56,7 +56,7 @@ export default function ContactForm({ contactData }: Props) {
   const senddata = async(data: any) => {
     console.log(data);
     const res : any = await contact(data);
-    if (res.status==200) {
+    if (res.status==201) {
       setShowModal(true);
       setalertMessage("Meddelande Skickat");
     } else {

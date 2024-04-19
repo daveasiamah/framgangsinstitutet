@@ -72,7 +72,7 @@ export default function ContactForm({
   const senddata = async(data: any) => {
     console.log(data);
     const res : any = await registerOfContract(data);
-    if (res.status==200) {
+    if (res.status==201) {
       setShowModal(true);
       setalertMessage("Meddelande Skickat");
       onClose();
