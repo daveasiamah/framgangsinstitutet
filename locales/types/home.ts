@@ -141,6 +141,11 @@ export type HomeData = {
   popupSubtitle: string;
   popupButton: string;
   popupForm: Partial<ContactForm>;
+  popupSuccessImage: String;
+  popupSuccessBlackTitle: string;
+  popupSuccessBlueTitle: string;
+  popupSuccessMessage: string;
+  popupSuccessRedirectButtons: { icon: string, text: string, link: string }[];
 
   benefitBlackTitle: string;
   benefitBlueTitle: string;

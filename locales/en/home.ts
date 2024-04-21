@@ -325,6 +325,19 @@ export const homeData: HomeData = {
     email: "Email",
     phoneNumber: "Phone number",
   },
+  popupSuccessImage: "/images/home/popupsuccess.jpeg",
+  popupSuccessBlackTitle: "Thank you for your",
+  popupSuccessBlueTitle: "Registration!️",
+  popupSuccessMessage: "You have now received a confirmation email, make sure you have received the email and that it is not spam. See you on the other side! 🎉",
+  popupSuccessRedirectButtons: [{
+    icon: "/images/home/shopify.png",
+    text: "Try Shopify for 3 Months For $10/month",
+    link: "https://shopify.pxf.io/checkified"
+  }, {
+    icon: "/images/home/youtube.png",
+    text: "Check our YT Channel for Exclusive Content",
+    link: "https://youtube.com/@checkifiedse"
+  }],
 
   /*=============================================
   =            Start Selling            =

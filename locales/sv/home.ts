@@ -385,7 +385,19 @@ export const homeData: HomeData = {
     email: "E-post",
     phoneNumber: "Telefonnummer",
   },
-
+  popupSuccessImage: "/images/home/popupsuccess.jpeg",
+  popupSuccessBlackTitle: "Tack För Din",
+  popupSuccessBlueTitle: "Registrering!️",
+  popupSuccessMessage: "Du har nu fått ett bekräftelsemejl skickat till dig, se till att kolla om du fått mejlet och att det inte är spam. Vi ses på andra sidan! 🎉",
+  popupSuccessRedirectButtons: [{
+    icon: "/images/home/shopify.png",
+    text: "Testa Shopify i 3 Månader För 10kr/mån",
+    link: "https://shopify.pxf.io/checkified"
+  }, {
+    icon: "/images/home/youtube.png",
+    text: "Kolla vår YT Kanal För Exklusiv Innehåll",
+    link: "https://youtube.com/@checkifiedse"
+  }],
   /*=============================================
   =            Benefit Data            =
   =============================================*/

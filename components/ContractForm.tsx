@@ -61,6 +61,7 @@ export default function ContactForm({
   const [showModal, setShowModal] = useState(false);
   const [showModalCls, setShowModalCls] = useState(false);
   const [alertMessage, setalertMessage] = useState("");
+  const [showSuccess, setShowSuccess] = useState(false);
   const {
     register,
     handleSubmit,
@@ -73,8 +74,9 @@ export default function ContactForm({
     console.log(data);
     const res : any = await registerOfContract(data);
     if (res.status==201) {
-      setShowModal(true);
-      setalertMessage("Meddelande Skickat");
+      setShowSuccess(true);
+      // setShowModal(true);
+      // setalertMessage("Meddelande Skickat");
       // onClose();
     } else {
       setalertMessage("Misslyckas");
@@ -128,6 +130,7 @@ export default function ContactForm({
         className="absolute top-4 right-4 cursor-pointer"
         onClick={onClose}
       />
+      { !showSuccess && <div>
       <div className="flex-col justify-center items-center">
         {/* <iframe 
           width="311" 
@@ -246,6 +249,50 @@ export default function ContactForm({
           onClose={() => setShowModalCls(false)}
         />
       </form>
+      </div> }
+      { showSuccess && <div>
+      <div className="flex-col justify-center items-center">
+        <Image
+          src={`${t.homeData.popupSuccessImage}`}
+          alt="video"
+          width="300" 
+          height="100" 
+          className="mx-auto object-cover rounded-4xl"
+        />
+        <div className="lg:mt-6">
+          <div className="flex items-center justify-center gap-2 text-lg lg:text-xl font-bold">
+            <h1>{t.homeData.popupSuccessBlackTitle}</h1>
+            <h1 className="text-primary">{t.homeData.popupSuccessBlueTitle}</h1>
+          </div>
+          <p className="text-gray-500 mt-1 lg:mt-4 text-sm lg:text-lg">{t.homeData.popupSuccessMessage}</p>
+        </div>
+      </div>
+      {t.homeData.popupSuccessRedirectButtons.map((buttonData) => (
+        <button onClick={()=>{
+          window.open(buttonData.link, '_blank');
+        }} className="btn-primary mt-6 w-full drop-shadow-none"
+        style={{
+          textAlign: "center",
+          paddingRight: 0,
+          paddingLeft: "5px",
+          borderRadius: "24px",
+          fontSize: 14
+        }}>
+          <Image
+                src={buttonData.icon}
+                alt="user"
+                width={20}
+                height={20}
+                className="flex-shrink-0"
+                style={{
+                  marginBottom: "-18px",
+                  marginLeft: 11
+                }}
+              />
+          {buttonData.text}
+        </button>
+      ))} 
+      </div> }
       <BlurCircle positionClassName="left-0 top-0 z-1" size="lg" />
     </div>
   );
