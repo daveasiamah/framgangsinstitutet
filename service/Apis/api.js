@@ -13,13 +13,14 @@ export const AuthApi = async (email, password) => {
   }
 };
 
-export const registerOfContract = async (name, email,phoneNumber) => {
-  console.log('registerOfContract ',name, email,phoneNumber);
+export const registerOfContract = async (data) => {
+  console.log('registerOfContract ', data);
+  const { firstName, email, phone } = data;
   try {
     const response = await axios.post(process.env.API_BASE + "auth/register", {
-      name,
+      name: firstName,
       email,
-      phoneNumber:phoneNumber
+      phoneNumber: phone
     });
     return response ;
   } catch (error) {
