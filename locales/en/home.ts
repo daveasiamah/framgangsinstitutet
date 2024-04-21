@@ -335,7 +335,7 @@ export const homeData: HomeData = {
     link: "https://shopify.pxf.io/checkified"
   }, {
     icon: "/images/home/youtube.png",
-    text: "Check our YT Channel for Exclusive Content",
+    text: " Check our YT Channel for Exclusive Content",
     link: "https://youtube.com/@checkifiedse"
   }],
 

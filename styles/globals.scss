@@ -1604,6 +1604,12 @@ input.bg-base-100:focus{
 }
 
 // Testimonial Section
+.popupSuccessRedirectButtons {
+  @media screen and (max-width: 768px) {
+    img { margin-left: 0 !important; }
+  }
+}
+
 .testimonial-section {
 
   @media screen and (max-width: 768px) {

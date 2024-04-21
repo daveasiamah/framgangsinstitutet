@@ -61,7 +61,7 @@ export default function ContactForm({
   const [showModal, setShowModal] = useState(false);
   const [showModalCls, setShowModalCls] = useState(false);
   const [alertMessage, setalertMessage] = useState("");
-  const [showSuccess, setShowSuccess] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(true);
   const {
     register,
     handleSubmit,
@@ -270,7 +270,7 @@ export default function ContactForm({
       {t.homeData.popupSuccessRedirectButtons.map((buttonData) => (
         <button key={buttonData.link} onClick={()=>{
           window.open(buttonData.link, '_blank');
-        }} className="btn-primary mt-6 w-full drop-shadow-none"
+        }} className="btn-primary mt-6 w-full drop-shadow-none popupSuccessRedirectButtons"
         style={{
           textAlign: "center",
           paddingRight: 0,
@@ -285,8 +285,9 @@ export default function ContactForm({
                 height={20}
                 className="flex-shrink-0"
                 style={{
-                  marginBottom: "-18px",
-                  marginLeft: 11
+                  marginLeft: "-18px",
+                  // marginLeft: 11,
+                  display: "inline-block"
                 }}
                 key={buttonData.link}
               />
