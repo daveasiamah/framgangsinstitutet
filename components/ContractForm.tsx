@@ -61,7 +61,7 @@ export default function ContactForm({
   const [showModal, setShowModal] = useState(false);
   const [showModalCls, setShowModalCls] = useState(false);
   const [alertMessage, setalertMessage] = useState("");
-  const [showSuccess, setShowSuccess] = useState(true);
+  const [showSuccess, setShowSuccess] = useState(false);
   const {
     register,
     handleSubmit,
