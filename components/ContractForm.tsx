@@ -75,7 +75,7 @@ export default function ContactForm({
     if (res.status==201) {
       setShowModal(true);
       setalertMessage("Meddelande Skickat");
-      onClose();
+      // onClose();
     } else {
       setalertMessage("Misslyckas");
       setShowModalCls(true);
@@ -238,7 +238,7 @@ export default function ContactForm({
         <SuccessAlert
           isVisible={showModal}
           alertMessage={alertMessage}
-          onClose={() => setShowModal(false)}
+          onClose={() => { setShowModal(false); onClose(); } }
         />
         <ErrorAlert
           isVisibleclose={showModalCls}
