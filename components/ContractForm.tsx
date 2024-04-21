@@ -268,7 +268,7 @@ export default function ContactForm({
         </div>
       </div>
       {t.homeData.popupSuccessRedirectButtons.map((buttonData) => (
-        <button onClick={()=>{
+        <button key={buttonData.link} onClick={()=>{
           window.open(buttonData.link, '_blank');
         }} className="btn-primary mt-6 w-full drop-shadow-none"
         style={{
@@ -288,6 +288,7 @@ export default function ContactForm({
                   marginBottom: "-18px",
                   marginLeft: 11
                 }}
+                key={buttonData.link}
               />
           {buttonData.text}
         </button>
