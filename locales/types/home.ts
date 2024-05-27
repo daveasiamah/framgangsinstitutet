@@ -159,6 +159,15 @@ export type HomeData = {
   contactBlueTitle: string;
   contactSubtitle: string;
   contactForm: ContactForm;
+
+  examplesStores: {
+    title: string;
+  }
+
+  graphicsBlock: {
+    buttonTop: string;
+    buttonBottom: string;
+  }
 };
 
 export type SignInData = {

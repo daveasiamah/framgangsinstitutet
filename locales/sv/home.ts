@@ -401,7 +401,7 @@ export const homeData: HomeData = {
   /*=============================================
   =            Benefit Data            =
   =============================================*/
-  
+
   benefitBlackTitle: "Fördelar med",
   benefitBlueTitle: "Checkified",
   benefitData: [
@@ -467,7 +467,7 @@ export const homeData: HomeData = {
       name: "Linnea Östling",
       job: "Checkified Student",
       message:
-        "Absolutely the best decision I've made in starting my own online business. You can hardly believe it when you get several sales."    
+        "Absolutely the best decision I've made in starting my own online business. You can hardly believe it when you get several sales."
     },
     {
       id: 5,
@@ -495,8 +495,27 @@ export const homeData: HomeData = {
     email: "E-post",
     phoneNumber: "Telefon",
     message: "Meddelande",
-    button: "Skicka"
-  }
+    button: "Skicka",
+  },
 
   /*=====  End of Contact Us Section  ======*/
+
+  /*=============================================
+  =           Examples stores            =
+  =============================================*/
+  examplesStores: {
+    title: 'Exempel På Butiker'
+  },
+  /*=====  End of Examples stores  ======*/
+
+  /*=============================================
+  =           Graphics Block            =
+  =============================================*/
+  graphicsBlock: {
+    buttonBottom: "Börja Tjäna Idag!",
+    buttonTop: "Låt Oss Hjälpa Dig!"
+  }
+
+
+  /*=====  End of Graphics Block  ======*/
 }

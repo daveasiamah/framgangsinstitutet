@@ -18,6 +18,7 @@ module.exports = {
         "header-height": "90px"
       },
       colors: {
+        gray: '#D4CFCF',
         subtitle: "#707BA0",
         "subtitle-dark": "#0D204A",
         "blur-circle": "#0083FF"

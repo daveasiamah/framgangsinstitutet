@@ -495,7 +495,28 @@ export const homeData: HomeData = {
     phoneNumber: "Phone number",
     message: "Message",
     button: "Send"
-  }
+  },
 
   /*=====  End of Contact Us Section  ======*/
+
+
+
+  /*=============================================
+  =           Examples stores            =
+  =============================================*/
+  examplesStores: {
+    title: 'Example Of Stores'
+  },
+  /*=====  End of Examples stores  ======*/
+
+  /*=============================================
+  =           Graphics Block            =
+  =============================================*/
+  graphicsBlock: {
+    buttonBottom: "Start Earning Today!",
+    buttonTop: "Let Us Help You!"
+  }
+
+
+  /*=====  End of Graphics Block  ======*/
 }
