@@ -33,6 +33,8 @@ import Accordion from "@/components/parts/Accordion_Home"
 import FeatureCard from "@/components/parts/FeatureCard"
 import ContractForm from "@/components/ContractForm"
 import { useMediaQuery } from "usehooks-ts"
+import ExampleStoresBlock from "@/components/blocks/ExampleStoresBlock";
+import GraphicsBlock from "@/components/blocks/GraphicsBlock";
 
 type Props = {}
 
@@ -102,7 +104,7 @@ export default function Home() {
 
   return (
     <>
-      <div 
+      <div
         data-theme="light"
         className={`fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-25 backdrop-blur-sm  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full justify-center items-center transition ${showModal ? "flex" : "hidden"}`}
         onClick={() => setShowModal(false)}
@@ -131,7 +133,7 @@ export default function Home() {
               {t.homeData.heroBlackTitleTwo}
             </h1>
           </ScrollReveal>
-          
+
           <div className="relative max-w-[706px] mx-auto flex flex-col items-center justify-center gap-1 mt-12">
             <div className="hidden lg:flex absolute top-0 w-full items-center justify-center gap-1 p-0.5 bg-primary text-white">
               <Image
@@ -143,13 +145,13 @@ export default function Home() {
               <h3 className="text-sm">{t.homeData.heroVideoDesc}</h3>
             </div>
           <div className="video-container">
-  <iframe 
-    width="706" 
-    height="397" 
-    src="https://www.youtube.com/embed/pTVfynxC3-c?si=VXY1V0Wf90F4QeV9" 
-    title="YouTube video player" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-    frameBorder="0" 
+  <iframe
+    width="706"
+    height="397"
+    src="https://www.youtube.com/embed/pTVfynxC3-c?si=VXY1V0Wf90F4QeV9"
+    title="YouTube video player"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    frameBorder="0"
     allowFullScreen
   ></iframe>
 </div>
@@ -328,7 +330,7 @@ export default function Home() {
             {t.homeData.videoTrainingData.map((data) => (
               <SwiperSlide key={data.id}>
                 {({ isActive }) => (
-                  <VideoTrainingCard 
+                  <VideoTrainingCard
                     blackText={data.title}
                     blueText={data.bluetitle}
                     subTitle={data.subtitle}
@@ -608,7 +610,7 @@ export default function Home() {
             ))}
           </Swiper>
         </div>
-        
+
       </section>
 
       <section className="bg-primary rounded-2xl text-center text-white py-14 px-4 lg:px-10">
@@ -671,7 +673,7 @@ export default function Home() {
           </Marquee>
           </div>
           </div>
-        </div>     
+        </div>
       </section>
 
       <section className="relative university-container bg-primary p-8 lg:px-16 lg:py-14 mb-16 lg:mb-20 rounded-3xl text-white text-left flex flex-col lg:flex-row gap-20">
@@ -708,10 +710,10 @@ export default function Home() {
           />
         </div>
       </section>
-    
+
       <section>
         <div className="relative py-10 full-bg">
-          <Image 
+          <Image
             src="/images/home/question.gif"
             width={151}
             height={151}
@@ -794,6 +796,6 @@ export default function Home() {
 
       </Layout>
     </>
-    
+
   )
 }

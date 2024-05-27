@@ -51,4 +51,45 @@ export type PricingData = {
   faqBlackTitle: string
   faqBlueTitle: string
   faqData: FaqData[]
+
+  howItWorkData: {
+    title: string
+    subtitle: string
+    button: string
+    items: {
+        id: number
+        imageUrl: string
+        desc1: string
+        desc2: string
+    }[]
+  }
+  hero: {
+    title: string
+    desc: string
+    button: string
+    buttonDesc: string
+    descTitle: string
+  }
+
+  reviews: {
+    title: string
+    items: string[]
+  }
+
+
+  bonuses: {
+    title: string
+    cards: string[]
+    redPrice: string
+    bottomDesc: string
+    greenPrice: string
+  }
+
+  orderNow: {
+    title: string
+    items: {
+      title: string
+      desc: string
+    }[]
+  }
 }

@@ -241,4 +241,85 @@ export const pricingData: PricingData = {
         "Checkified accepterar Visa, Mastercard och American Express genom säker betalningshantering på plats.",
     },
   ],
+
+  howItWorkData: {
+    title: "Hur Det Fungerar",
+    subtitle: "Det är så enkelt som 1, 2, 3.",
+    button: "Bara 499 kr? Ja Tack!",
+    items:  [
+      {
+        id: 1,
+        imageUrl: "/icons/home/feature-unlimited-access.png",
+        desc1: "Beställ din e-handelswebbplats från oss så konfigurerar vi den helt åt dig för endast 499 SEK.",
+        desc2: "När vi har designat webbplatsen lägger vi till 30 produkter som du kan börja sälja direkt.",
+      },
+      {
+        id: 2,
+        imageUrl: "/icons/home/feature-create-content.png",
+        desc1: "Låt oss säga att du hade en sminkborste listad på din kosmetikwebbplats för 299 SEK",
+        desc2: "Vi kommer att integrera en leverantör som kan skicka den exakta sminkborsten till någon i världen för endast 99 SEK",
+      },
+      {
+        id: 3,
+        imageUrl: "/icons/home/feature-selling-service.png",
+        desc1: "Om du gör allt detta på rätt sätt kommer detta att vara en bra plattform för en hög avkastning med bara ett minimum av uppmärksamhet!",
+        desc2: "Återinvestera tillbaka i ditt företag och upprepa vad som fungerar!",
+      }
+    ]
+  },
+
+  hero: {
+    title: 'E-handelsexperter bygger en optimerad e-handelsbutik på under 24 timmar för endast 499 kr!',
+    desc: 'Vårt team av e-handelsexperter har designat över 478+ dropshipping-butiker och är här för att hjälpa dig att bygga din butik för endast 499kr!',
+    button: 'Få din butik 499 SEK!',
+    buttonDesc: '& Lås upp 2 GRATIS gåvor',
+    descTitle: '478+ Sålda Butiker'
+  },
+
+  reviews: {
+    title: 'Recensioner',
+    items: [
+        'Efter att ha testat flera onlineföretag som Amazon FBA, SMMA, och affiliate marketing, insåg jag att de mest bara var ute efter att ta mina pengar utan att ge något verkligt värde tillbaka. När jag stötte på checkified-butiker bestämde jag mig för att ge dropshipping en chans, och jag är så glad att jag gjorde det. Inom en enda dag hade jag en fullständig butik redo att köra, och tack vare TikTok-annonser har jag redan återhämtat min investering. Jag rekommenderar starkt detta till alla nybörjare!',
+        'Som ny inom dropshipping blev jag positivt överraskad av den snabba och enkla installationen av min butik. Nu kan jag fokusera på marknadsföring och ser fram emot min resa med dropshipping.',
+        'Checkified ebutiker överträffade mina förväntningar med en modern design och unika produkter. Jag rekommenderar att välja deras färdig byggda e-handelsbutiker.',
+        'Trots min initiala skepsis över det låga priset blev jag positivt överraskad av kvaliteten på butiken och produkterna. Checkified ebutiker erbjuder enastående värde för nybörjare som mig och jag är mycket nöjd med mitt köp.',
+        'Jag är imponerad av den höga kvaliteten på min butik och de tillhörande produkterna till ett sådant överkomligt pris. Tack vare Checkified kan jag spara massor av tid och pengar.',
+        'Jag hade ingen erfarenhet av dropshipping men beslutade ändå att prova det här och blev glatt överraskad av den professionella butiken och de högkvalitativa produkterna. Bonus boken var ovärderlig och jag skulle definitivt rekommendera Checkified-butiker till alla. ',
+        'Jag beställde min butik och blev förvånad över att få den levererad redan nästa dag. Tack vare Checkified kan jag nu generera betydande intäkter varje dag. Tack så mycket!',
+        'Jag blev positivt överraskad av den höga kvaliteten på min butik och produkterna. Trots min initiala skepsis är jag nu en nöjd kund och ser fram emot att göra fler affärer med Checkified butiker.',
+    ]
+  },
+
+  bonuses: {
+    title: '2 GRATIS bonusar för dagens köpare:',
+    cards: [
+      '/images/pricing/bonus1.png',
+      '/images/pricing/bonus2.png'
+    ],
+    bottomDesc: '(ENGÅNGSBETALNING)',
+    redPrice: 'Normal Kostnad: 2,000 SEK+',
+    greenPrice: 'Bara 499 SEK!',
+  },
+
+  orderNow: {
+    title: 'Beställ Nu Så Får Du',
+    items: [
+      {
+        title: '30 Lönsamma Produkter Utvalda Av Våra Experter',
+        desc: 'till i din butik (inklusive produktbeskrivningar)...'
+      },
+      {
+        title: 'Exklusiv Tillgång Till Min Personliga Leverantör',
+        desc: 'som lagrar produkterna du säljer och skickar dem till dina kunder billigt och snabbt...'
+      },
+      {
+        title: 'Dropshipping E-handelsbok',
+        desc: 'så att du kan förstå grunden till dropshipping utan att behöva lägga pengar på dyra e-handel kurser...'
+      },
+      {
+        title: 'Prisbelönt Kundsupport Dygnet Runt ',
+        desc: 'så att du kan ha ett team av e-handelsexperter vid din sida för att hjälpa dig göra din första försäljning online...'
+      },
+    ]
+  }
 };

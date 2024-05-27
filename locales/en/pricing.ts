@@ -240,5 +240,86 @@ export const pricingData: PricingData = {
       answer:
         "Checkified accepts several payment methods, including: Visa, Mastercard, and American Express credit or debit cards. You can also pay for Checkified courses using Klarna."
     }
-  ]
+  ],
+
+    howItWorkData: {
+        title: "How it works",
+        subtitle: "It's as easy as 1, 2, 3.",
+        button: "Only SEK 499? Yes thank you!",
+        items:  [
+          {
+            id: 1,
+            imageUrl: "/icons/home/feature-unlimited-access.png",
+            desc1: "Order your e-commerce website from us and we will configure it completely for you for only SEK 499.",
+            desc2: "After we design the website, we add 30 products that you can start selling right away."
+          },
+          {
+            id: 2,
+            imageUrl: "/icons/home/feature-create-content.png",
+            desc1: "Let's say you had a makeup brush listed on your cosmetics website for SEK 299",
+            desc2: "We will integrate a supplier who can send the exact makeup brush to anyone in the world for only SEK 99"
+          },
+          {
+            id: 3,
+            imageUrl: "/icons/home/feature-selling-service.png",
+            desc1: "If you do all this correctly, this will be a great platform for a high return with only a minimum of attention!",
+            desc2: "Reinvest back into your business and repeat what works!"
+          }
+        ]
+    },
+
+  hero: {
+    title: 'E-commerce experts build an optimized e-commerce store in under 24 hours for only SEK 499!',
+    desc: 'Our team of e-commerce experts have designed over 478+ dropshipping stores and are here to help you build your store for only SEK 499!',
+    button: 'Get your shop SEK 499!',
+    buttonDesc: '& Unlock 2 FREE Gifts',
+    descTitle: '478+ Sold Stores'
+  },
+
+  reviews: {
+    title: 'Reviews',
+    items: [
+        'After trying several online companies like Amazon FBA, SMMA, and affiliate marketing, I realized that they were mostly just out to take my money without giving any real value in return. When I came across checkified stores, I decided to give dropshipping a shot, and I\'m so glad I did. Within a single day, I had a full store ready to run, and thanks to TikTok ads, I\'ve already recouped my investment. I highly recommend this to all beginners!',
+        'Being new to dropshipping, I was pleasantly surprised by the quick and easy setup of my store. Now I can focus on marketing and look forward to my journey with dropshipping.',
+        'Checkified e-stores exceeded my expectations with a modern design and unique products. I recommend choosing their pre-built e-commerce stores.',
+        'Despite my initial skepticism about the low price, I was pleasantly surprised by the quality of the store and the products. Checkified e-stores offer outstanding value for a beginner like me and I am very happy with my purchase.',
+        'I am impressed with the high quality of my store and the associated products at such an affordable price. Thanks to Checkified, I can save a lot of time and money.',
+        'I had no experience with dropshipping but still decided to try this and was pleasantly surprised by the professional store and the high quality products. The bonus book was invaluable and I would definitely recommend Checkified stores to anyone.',
+        'I ordered my store and was surprised to have it delivered the very next day. Thanks to Checkified, I can now generate significant income every day. Thanks so much!',
+        'I was pleasantly surprised by the high quality of my store and the products. Despite my initial skepticism, I am now a satisfied customer and look forward to doing more business with Checkified stores.',
+    ]
+  },
+
+  bonuses: {
+    title: '2 FREE bonuses for today\'s buyers:',
+    cards: [
+      '/images/pricing/bonus1.png',
+      '/images/pricing/bonus2.png'
+    ],
+    bottomDesc: '(ONE TIME PAYMENT)',
+    redPrice: 'Normal Cost: SEK 2,000+',
+    greenPrice: 'Only SEK 499!',
+  },
+
+  orderNow: {
+    title: 'Order Now and Get It',
+    items: [
+      {
+        title: '30 Profitable Products Selected By Our Experts',
+        desc: 'added to your store (including product descriptions)...'
+      },
+      {
+        title: 'Exclusive Access to My Personal Supplier',
+        desc: 'who stores the products you sell and ships them to your customers cheaply and quickly...'
+      },
+      {
+        title: 'Dropshipping E-commerce',
+        desc: 'book so you can understand the basics of dropshipping without having to spend money on expensive e-commerce courses...'
+      },
+      {
+        title: 'Award-winning 24/7 Customer Support',
+        desc: 'so you can have a team of eCommerce experts by your side to help you make your first online sale...'
+      },
+    ]
+  }
 }
