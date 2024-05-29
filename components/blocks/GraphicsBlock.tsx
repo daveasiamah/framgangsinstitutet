@@ -24,9 +24,9 @@ export default function GraphicsBlock({
 
 
     return (
-        <section className="flex items-center flex-col py-20  px-3">
+        <section className="flex items-center flex-col lg:py-20 py-10 px-3">
             <button onClick={openModal}
-                    className="btn lg:text-[34px] text-[23px] px-10  font-bold btn-primary btn-lg mt-10 mb-12 flex items-center">
+                    className="btn lg:text-[34px] text-[23px] px-10 font-bold btn-primary btn-lg mb-12 flex items-center">
                 <img
                     alt={'arrow'}
                     src="/images/home/graphics/arrow.png"

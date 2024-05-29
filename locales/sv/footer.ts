@@ -12,7 +12,7 @@ export const footerData: FooterData = {
   },
   company: {
     title: "Företag",
-    linkOne: "Prisplaner",
+    linkOne: "E-Butiker",
     linkTwo: "Om oss",
     linkThree: "Kontakt"
   },
