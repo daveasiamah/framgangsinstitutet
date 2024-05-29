@@ -40,7 +40,9 @@ export default function BonusesBlock() {
             <h1 className="text-[20px] lg:text-[80px] font-bold text-[#07BE72] mb-2">
                 {t.pricingData.bonuses.greenPrice}
             </h1>
-            <Title blackText={t.pricingData.bonuses.bottomDesc}/>
+            <h1 className="text-[15px] lg:text-[45px] font-bold mb-2">
+                {t.pricingData.bonuses.bottomDesc}
+            </h1>
         </section>
     )
 }

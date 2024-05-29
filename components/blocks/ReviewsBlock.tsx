@@ -5,7 +5,7 @@ import Title from "@/components/parts/Title";
 import "swiper/css"
 import "swiper/css/effect-cards"
 import 'swiper/css/pagination'
-import {Pagination} from "swiper"
+import {Pagination, Autoplay} from "swiper"
 import {Swiper, SwiperSlide} from "swiper/react"
 import styles from "./ReviewsBlock.module.scss"
 
@@ -23,9 +23,13 @@ export default function ReviewsBlock() {
             />
             <Title blackText={t.pricingData.reviews.title}/>
             <Swiper
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                }}
                 effect={"cards"}
                 loop={true}
-                modules={[Pagination]}
+                modules={[Pagination, Autoplay]}
                 pagination={{
                     clickable: true,
                 }}
