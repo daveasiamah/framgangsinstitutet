@@ -199,46 +199,52 @@ export const pricingData: PricingData = {
   faqData: [
     {
       id: 1,
-      question: "Vad är Checkified?",
+      question: "Behöver jag ha ett Shopify-konto innan jag använder e-butiken?",
       answer:
-        "Checkified är en plattform för onlineutbildning som erbjuder ett brett utbud av kurser. Checkifieds kurser är tillgängliga inom en mängd olika ämnen, inklusive affärer, teknik, ekonomi och mycket mer.",
+        "Nej! Alla våra Shopify Dropshipping-butiker kommer som helt nya butiker som du får en 3 dagars gratis provperiod med. Efter 3 dagars gratis provperiod kommer Shopify att kosta $1 för 1 månad och efter 3 månader kommer Shopify att kosta $39/månad.  Om du inte vill betala $39 kan du avbryta din $1 månad provperiod. Risken är mycket låg.",
     },
     {
       id: 2,
-      question: "Vad är Dropshipping?",
+      question: "Vad händer om jag redan har en Shopify-butik?",
       answer:
-        "Dropshipping är en metod för detaljhandelsförsäljning där en butik inte har de produkter som säljs i lager. När butiken säljer en produkt köper den i stället varan från en tredje part och skickar den direkt till kunden. Detta innebär att handlaren aldrig ser eller hanterar produkten.",
+        "För det mesta är det mycket bättre om du har en expert som ställer in butiken från grunden åt dig, eftersom designen du gjort med största sannolikhet inte är inställd för framgång. Så även om du redan har en shopify-butik, oroa dig inte. Vi kommer fortfarande att kunna skapa en ny åt dig som är korrekt konfigurerad.",
     },
     {
       id: 3,
       question:
-        "Hur skiljer sig Checkified från andra plattformar för lärande online?",
+        "Hur många produkter kommer jag att få i min e-butik?",
       answer:
-        "Checkified skiljer sig från andra plattformar för onlineutbildning genom sitt breda utbud av kurser. En mängd olika funktioner för att förbättra inlärningsupplevelsen, t.ex. kamratbedömda uppgifter och interaktiva frågesporter.",
+        "Alla våra butiker kommer färdigimplementerade med 30 produkter.",
     },
     {
       id: 4,
-      question: "Hur anmäler jag mig till en Checkified-kurs?",
+      question: "Vilka andra avgifter är förknippade med detta?",
       answer:
-        "För att registrera ett konto, klicka på ”Starta nu”. Om du redan har ett konto kan du logga in.",
+        "Det enda du måste betala för är värd för din Shopify-butik. Du kommer att få en gratis 3-dagars provperiod utan behov av kreditkort, om du väljer att behålla det måste du betala $1 din första månad för att fortsätta vara värd för din webbplats genom Shopify, du kan avbryta när som helst och det finns inga kontrakt eller andra dolda avgifter.",
     },
     {
       id: 5,
-      question: "Vad händer om jag inte är nöjd?",
+      question: "Annonserar ni butiken åt mig?",
       answer:
-        "Om du inte är nöjd med kursen kan du få pengarna tillbaka inom 14 dagar, alternativt inte tittat mer än 25% av kursen.",
+        "Vi gör INTE någon reklam för din butik. Det får du göra när butiken är klar.",
     },
     {
       id: 6,
-      question: "Kan jag få pengarna tillbaka för en Checkified-kurs?",
+      question: "Vad händer om jag har mina egna produkter?",
       answer:
-        "Checkified erbjuder en 14-dagars återbetalningspolicy för de flesta kurser. Det finns dock vissa kurser som inte är berättigade till återbetalning, så det är viktigt att kontrollera återbetalningspolicyn för varje kurs innan du registrerar dig.",
+        "Du kommer enkelt att kunna lägga till så många produkter du vill i din butik efter att ha levererat den. Processen är extremt enkel och du kan göra det inom ett par klick..",
     },
     {
       id: 7,
-      question: "Vilka betalningsmetoder accepterar ni?",
+      question: "Hur kommer jag att kunna använda min e-butik som min egen?",
       answer:
-        "Checkified accepterar Visa, Mastercard och American Express genom säker betalningshantering på plats.",
+        "24 - 48 timmar efter att du har lagt din beställning skickar vi din inloggningsinformation till din nya Shopify Dropshipping Butik. Allt du behöver göra är att logga in, ändra lösenordet och butiken är helt och hållet din!",
+    },
+    {
+      id: 8,
+      question: "Kan jag få en återbetalning om jag inte gillar min e-butik?",
+      answer:
+          "Ja. Vi har 30 dagars återbetalningsgaranti.",
     },
   ],
 
