@@ -199,47 +199,53 @@ export const pricingData: PricingData = {
   faqData: [
     {
       id: 1,
-      question: "What is Checkified?",
+      question: "Do I need to have a Shopify account before using the e-store?",
       answer:
-        "Checkified is an online learning platform that offers a wide range of courses. Checkified’s courses are available in a variety of subjects, including business, technology, finance, and more."
+          "No! All of our Shopify Dropshipping stores come as brand new stores with which you get a 3 day free trial. After 3 days free trial Shopify will cost $1 for 1 month and after 3 months Shopify will cost $39/month. If you don't want to pay $39, you can cancel your $1 month trial. The risk is very low.",
     },
     {
       id: 2,
-      question: "What is Dropshipping?",
+      question: "What if I already have a Shopify store?",
       answer:
-        "Dropshipping is a method of retail sales where a store does not stock the products being sold. Instead, when the store sells a product, it buys the product from a third party and ships it directly to the customer. This means that the retailer never sees or handles the product."
+          "Most of the time, it's much better to have an expert set up the store from scratch for you, as the design you made is most likely not set up for success. So even if you already have a shopify store, don't worry. We will still be able to create a new one for you that is properly configured.",
     },
     {
       id: 3,
       question:
-        "How is Checkified different from other online learning platforms?",
+          "How many products will I get in my e-shop?",
       answer:
-        "Checkified stands out from other online learning platforms for its wide range of courses. A variety of features enhance the learning experience, that cater to diverse schedules and learning styles. "
+          "All our stores come fully implemented with 30 products.",
     },
     {
       id: 4,
-      question: "How do I enroll in a Checkified course?",
+      question: "What other fees are associated with this?",
       answer:
-        "To enroll in a Checkified course, simply go to the Checkified website, click “Start Free Trial”. You may need to create an account on Checkified if you haven't already done so."
+          "The only thing you have to pay for is hosting your Shopify store. You will get a free 3-day trial with no credit card required, if you choose to keep it you will have to pay $1 your first month to continue hosting your website through Shopify, you can cancel at any time and there are no contracts or other hidden fees.",
     },
     {
       id: 5,
-      question: "Can I get a refund for a Checkified course?",
+      question: "Are you advertising the store for me?",
       answer:
-        "Checkified offers a 14-day refund policy for most courses. However, there are some courses that are not eligible for refunds, so it's important to check the refund policy for each course before enrolling."
+          "We do NOT advertise your store. You can do that when the store is ready.",
     },
     {
       id: 6,
-      question: "How much does Checkified cost?",
+      question: "What if I have my own products?",
       answer:
-        "Checkified offers several flexible price plans. To access and unlock premium features, we have pricing plans based on your circumstances."
+          "You will be able to easily add as many products as you want to your store after delivering it. The process is extremely simple and you can do it within a couple of clicks..",
     },
     {
       id: 7,
-      question: "What payments methods do you accept?",
+      question: "How will I be able to use my e-shop as my own?",
       answer:
-        "Checkified accepts several payment methods, including: Visa, Mastercard, and American Express credit or debit cards. You can also pay for Checkified courses using Klarna."
-    }
+          "24 - 48 hours after you place your order, we will send your login information to your new Shopify Dropshipping Store. All you have to do is log in, change the password and the store is all yours!",
+    },
+    {
+      id: 8,
+      question: "Can I get a refund if I don't like my e-shop?",
+      answer:
+          "Yes. We have a 30-day money-back guarantee.",
+    },
   ],
 
     howItWorkData: {
