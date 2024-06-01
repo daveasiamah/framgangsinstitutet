@@ -18,7 +18,7 @@ export default function HowItWorkBlock({
         <section className="flex items-center flex-col py-20 px-3">
             <div className="flex items-center flex-col lg:mb-10 mb-6">
                 <img
-                    src="/setting.png"
+                    src="/setting.gif"
                     alt="arrow"
                     className="lg:w-[144px] lg:h-[144px] w-[76px] h-[76px] mb-6"
                 />

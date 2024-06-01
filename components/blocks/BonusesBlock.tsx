@@ -19,7 +19,7 @@ export default function BonusesBlock() {
             <img
                 className="lg:w-[105px] w-[88px] lg:h-[105px] h-[88px] mb-4"
                 alt={'star'}
-                src={'/star-with-bg.png'}
+                src={'/star-with-bg.gif'}
             />
             <h1 className="text-[30px] lg:text-[50px] text-center font-bold text-[#07BE72] mb-10 underline capitalize">
                 {t.pricingData.bonuses.title}
