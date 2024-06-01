@@ -59,7 +59,9 @@ export default function Pricing({}: Props) {
             >
                 <ContractForm onClose={closeModal}/>
             </div>
-            <PricingHeroBlock openModal={openModal}/>
+            <PricingHeroBlock openModal={() => {
+                router.push("https://buy.stripe.com/dR615i9Wd9MU0la28a")
+            }}/>
             {/*<section className="bg-primary py-8 lg:py-20">*/}
             {/*  <div className="relative container mx-auto">*/}
             {/*    <LineGraphic*/}
@@ -309,10 +311,14 @@ export default function Pricing({}: Props) {
             {/*</section>*/}
             <OrderNowAndGetItBlock/>
             <BonusesBlock/>
-            <HowItWorkBlock openModal={openModal}/>
+            <HowItWorkBlock openModal={() => {
+                router.push("https://buy.stripe.com/dR615i9Wd9MU0la28a")
+            }}/>
             <ExampleStoresBlock/>
             <ReviewsBlock/>
-            <GraphicsBlock openModal={openModal}/>
+            <GraphicsBlock openModal={() => {
+                router.push("https://buy.stripe.com/dR615i9Wd9MU0la28a")
+            }}/>
 
             <section>
                 <div className="relative py-10 full-bg mx-auto max-w-[900px]">
