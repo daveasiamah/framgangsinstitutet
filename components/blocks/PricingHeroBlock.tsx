@@ -61,8 +61,8 @@ export default function PricingHeroBlock({
                             <div className="flex items-center space-x-2">
                                 <img
                                     alt={'arrow'}
-                                    className={'lg:w-[54px] w-[23px]'}
-                                    src={'/arrow-right.png'}
+                                    className={'lg:w-[32px] w-[23px]'}
+                                    src={'/arrow-right.svg'}
                                 />
                                 <p className="text-white font-bold lg:text-[32px] text-[16px]">
                                     {t.pricingData.hero.button}

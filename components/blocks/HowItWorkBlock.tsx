@@ -59,7 +59,7 @@ export default function HowItWorkBlock({
                     className="btn lg:text-[34px] text-[21px] px-10 font-bold btn-primary btn-lg mt-10 mb-12 flex items-center">
                 <img
                     alt={'arrow'}
-                    src="/images/home/graphics/arrow.png"
+                    src="/arrow-right.svg"
                     className="lg:w-[32px] lg:h-[32px] w-[22px] h-[22px] mr-2"
                 />
                 {t.pricingData.howItWorkData.button}
