@@ -269,7 +269,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
               </div>
             </li>
             <li>
-              <Link className="btn btn-link" href="/e-butiker">
+              <Link className="btn btn-link" href="/butiker">
                 {t.headerData.pricing}
               </Link>
             </li>
