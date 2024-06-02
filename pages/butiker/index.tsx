@@ -60,7 +60,7 @@ export default function Pricing({}: Props) {
                 <ContractForm onClose={closeModal}/>
             </div>
             <PricingHeroBlock openModal={() => {
-                router.push("https://buy.stripe.com/dR615i9Wd9MU0la28a")
+                window.open("https://buy.stripe.com/dR615i9Wd9MU0la28a")
             }}/>
             {/*<section className="bg-primary py-8 lg:py-20">*/}
             {/*  <div className="relative container mx-auto">*/}
@@ -312,7 +312,7 @@ export default function Pricing({}: Props) {
             <OrderNowAndGetItBlock/>
             <BonusesBlock/>
             <HowItWorkBlock openModal={() => {
-                router.push("https://buy.stripe.com/dR615i9Wd9MU0la28a")
+                window.open("https://buy.stripe.com/dR615i9Wd9MU0la28a")
             }}/>
             <ExampleStoresBlock/>
             <ReviewsBlock/>
