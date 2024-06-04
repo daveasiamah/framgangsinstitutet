@@ -214,7 +214,7 @@ export const pricingData: PricingData = {
       question:
         "Hur många produkter kommer jag att få i min e-butik?",
       answer:
-        "Alla våra butiker kommer färdigimplementerade med 30 produkter.",
+        "Alla våra butiker kommer färdigimplementerade med 20 produkter.",
     },
     {
       id: 4,
@@ -311,7 +311,7 @@ export const pricingData: PricingData = {
     title: 'Beställ Nu Så Får Du',
     items: [
       {
-        title: '30 Lönsamma Produkter Utvalda Av Våra Experter',
+        title: '20 Lönsamma Produkter Utvalda Av Våra Experter',
         desc: 'till i din butik (inklusive produktbeskrivningar)...'
       },
       {

@@ -214,7 +214,7 @@ export const pricingData: PricingData = {
       question:
           "How many products will I get in my e-shop?",
       answer:
-          "All our stores come fully implemented with 30 products.",
+          "All our stores come fully implemented with 20 products.",
     },
     {
       id: 4,
@@ -311,7 +311,7 @@ export const pricingData: PricingData = {
     title: 'Order Now and Get It',
     items: [
       {
-        title: '30 Profitable Products Selected By Our Experts',
+        title: '20 Profitable Products Selected By Our Experts',
         desc: 'added to your store (including product descriptions)...'
       },
       {
