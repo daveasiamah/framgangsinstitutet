@@ -2,10 +2,10 @@ import { PricingData } from "../types/pricing";
 
 export const pricingData: PricingData = {
   metaData: {
-    title: "Prisplaner",
+    title: "Butiker",
   },
 
-  pricingTitle: "Prisplaner",
+  pricingTitle: "Butiker",
   pricingSubtitle:
     "Få tillgång till de bästa funktionerna för att ta din e-handel till nästa nivå.",
   pricingList: [
@@ -244,7 +244,7 @@ export const pricingData: PricingData = {
       id: 8,
       question: "Kan jag få en återbetalning om jag inte gillar min e-butik?",
       answer:
-          "Ja. Vi har 30 dagars återbetalningsgaranti.",
+          "Ja. Vi har 20 dagars återbetalningsgaranti.",
     },
   ],
 
@@ -257,7 +257,7 @@ export const pricingData: PricingData = {
         id: 1,
         imageUrl: "/icons/home/feature-unlimited-access.png",
         desc1: "Beställ din e-handelswebbplats från oss så konfigurerar vi den helt åt dig för endast 499 SEK.",
-        desc2: "När vi har designat webbplatsen lägger vi till 30 produkter som du kan börja sälja direkt.",
+        desc2: "När vi har designat webbplatsen lägger vi till 20 produkter som du kan börja sälja direkt.",
       },
       {
         id: 2,
