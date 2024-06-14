@@ -45,7 +45,7 @@ export default function PricingHeroBlock({
                         <iframe
                             width="706"
                             height="397"
-                            src="https://www.youtube.com/embed/fhpplNZAbqE?si=Fc2Y8c_bDSx3HdRh"
+                            src="https://www.youtube.com/embed/NvX3Tb-2HwI?si=dWRmYQ7LpTsqnCPi"
                             title="YouTube video player"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowFullScreen
