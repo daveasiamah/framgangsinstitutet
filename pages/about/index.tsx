@@ -242,7 +242,7 @@ export default function About({}: Props) {
               </button>
               <button className="hidden md:block absolute z-[1] right-1/4 top-1/2 transform -translate-y-1/2 nav-right">
                 <Image
-                  src="/icons/about/arrow-right.svg"
+                  src="/icons/about/arrow-right.png"
                   width={30}
                   height={30}
                   alt="arrow left"
