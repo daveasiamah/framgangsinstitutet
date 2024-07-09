@@ -64,7 +64,7 @@ export const ourTeamData: {
   {
     id: 1,
     imageUrl: "/images/about/1-dominic.png",
-    name: "Dominic Chabo",
+    name: "Dominic",
     position: "CEO & Founder"
   },
   {

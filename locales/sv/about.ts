@@ -54,7 +54,7 @@ export const aboutData: AboutData = {
   historyBlackTitle: "Vår ",
   historyBlueTitle: "Historia",
   historySubtitle:
-    "Checkified grundades av Dominic Chabo 2022. Idag är Checkified en online skola som erbjuder kunskap var som helst, när som helst.",
+    "Checkified grundades av Dominic 2022. Idag är Checkified en online skola som erbjuder kunskap var som helst, när som helst.",
   ourHistoryData: [
     {
       id: 1,
@@ -62,7 +62,7 @@ export const aboutData: AboutData = {
       year: 2022,
       title: "Checkified grundas",
       subtitle:
-        "Vår grundare, Dominic Chabo, upplevde på egen hand de utmaningar som flera e-handlare har. Han bestämde sig för att bygga en lösning, tillsammans med sitt team - och så föddes Checkified!"
+        "Vår grundare, Dominic , upplevde på egen hand de utmaningar som flera e-handlare har. Han bestämde sig för att bygga en lösning, tillsammans med sitt team - och så föddes Checkified!"
     },
     {
       id: 2,
@@ -86,7 +86,7 @@ export const aboutData: AboutData = {
       year: 2022,
       title: "Checkified grundas",
       subtitle:
-        "Vår grundare, Dominic Chabo, upplevde på egen hand de utmaningar som flera e-handlare har. Han bestämde sig för att bygga en lösning, tillsammans med sitt team - och så föddes Checkified!"
+        "Vår grundare, Dominic, upplevde på egen hand de utmaningar som flera e-handlare har. Han bestämde sig för att bygga en lösning, tillsammans med sitt team - och så föddes Checkified!"
     },
     {
       id: 5,
