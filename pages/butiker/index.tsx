@@ -60,17 +60,17 @@ export default function Pricing({}: Props) {
                 <ContractForm onClose={closeModal}/>
             </div>
             <PricingHeroBlock openModal={() => {
-                window.open("https://buy.stripe.com/dR615i9Wd9MU0la28a")
+                window.open("https://checkout.revolut.com/payment-link/4fdb867a-eeeb-4f71-8fe4-5036ca251be8")
             }}/>
             <OrderNowAndGetItBlock/>
             <BonusesBlock/>
             <HowItWorkBlock openModal={() => {
-                window.open("https://buy.stripe.com/dR615i9Wd9MU0la28a")
+                window.open("https://checkout.revolut.com/payment-link/4fdb867a-eeeb-4f71-8fe4-5036ca251be8")
             }}/>
             <ExampleStoresBlock/>
             <ReviewsBlock/>
             <GraphicsBlock openModal={() => {
-                router.push("https://buy.stripe.com/dR615i9Wd9MU0la28a")
+                router.push("https://checkout.revolut.com/payment-link/4fdb867a-eeeb-4f71-8fe4-5036ca251be8")
             }}/>
 
             <section>
