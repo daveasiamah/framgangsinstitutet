@@ -66,18 +66,19 @@ export default function Home() {
   const swiperRef2 = useRef<SwiperType>();
   const swiperRef3 = useRef<SwiperType>();
   // Fetch Blog List
-  const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
-  useEffect(() => {
-    const fetchPosts = async () => {
-      try {
-        const response = await axios.get(`/api/blog?locale=${locale}`);
-        setBlogPosts(response.data.data);
-      } catch (error) {
-        console.error('Error fetching blog posts:', error);
-      }
-    };
-    fetchPosts();
-  }, [locale]);
+  // const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
+  // useEffect(() => {
+  //   const fetchPosts = async () => {
+  //     try {
+  //       const response = await axios.get(`/api/blog?locale=${locale}`);
+  //       console.log('response.data.data:', response.data.data);
+  //       setBlogPosts(response.data.data);
+  //     } catch (error) {
+  //       console.error('Error fetching blog posts:', error);
+  //     }
+  //   };
+  //   fetchPosts();
+  // }, [locale]);
 
   useEffect(() => {
     if (matches) {

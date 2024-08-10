@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import Layout from "@/components/Layout";
@@ -12,79 +13,59 @@ import CacingOne from "@/components/graphic/CacingOne";
 import CacingTwo from "@/components/graphic/CacingTwo";
 import FadeLogo from "@/components/graphic/FadeLogo";
 import ScrollReveal from "@/components/transition/ScrollReveal";
-import ContractForm from "@/components/ContractForm";
+
+const ContractForm = dynamic(() => import("@/components/ContractForm"));
 import { activecourse, get_user } from "../../service/Apis/api";
 
 import en from "@/locales/en";
 import sv from "@/locales/sv";
 import Link from "next/link";
 
-type Props = {};
 interface Course {
-  id: string; // or whatever type 'id' should be
+  id: string;
+  name: string;
+  image: string;
+  content: string;
   // Other properties of the course object
 }
 
-export default function University({}: Props) {
+export default function University() {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : sv;
-  const [AllCourses, setAllCourses] = useState([]);
-  const [Signin, setSignin] = useState(false);
-  const [payment, setpayment] = useState(false);
-  const [showModal, setShowModal] = useState(false);
-  const [AllCourses2, setAllCourses2] = useState<Course[]>([]);
+  const [AllCourses, setAllCourses] = useState<Course[]>([]);
   const [AllCourses3, setAllCourses3] = useState<Course[]>([]);
+  const [Signin, setSignin] = useState(false);
+  const [payment, setPayment] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
-  const closeModal = () => {
+  const closeModal = useCallback(() => {
     setShowModal(false);
-  };
+  }, []);
 
-  const get_course = async () => {
-    var res: any = [];
-    res = await activecourse(7, 1);
-    if (res.status == 200) {
-      var data = res.data;
-      setAllCourses(data.rows.splice(6));
-      setAllCourses3(data.rows);
-    } 
-  };
-  useEffect(() => {
-    if (localStorage.getItem("id")) {
-      setSignin(true);
+  const getCourseData = useCallback(async () => {
+    const res: any = await activecourse(7, 1);
+    if (res.status === 200) {
+      const data = res.data;
+      setAllCourses(data.rows);
+      setAllCourses3(data.rows.slice(0, 3));
+    }
+  }, []);
+
+  const checkUserPayment = useCallback(async () => {
+    const res: any = await get_user();
+    if (!res?.data?.paymentvalidationId && res?.data?.role === "USER") {
+      setPayment(false);
     } else {
-      setSignin(false);
+      setPayment(true);
     }
-    const get_check = async () => {
-      const res : any = await get_user(); 
-      if (!res?.data?.paymentvalidationId && res?.data?.role == 'USER') {
-        // router.push("/coursecheckout");
-        setpayment(false);
-      } else {
-
-        setpayment(true);
-      }
-    }
-    // if (localStorage.getItem("paymentvalidationId")) {
-    // } else {
-    // }
-    get_check();
   }, []);
-
-  const get_course2 = async () => {
-    var res: any = [];
-    res = await activecourse(7, 1);
-    if (res.status == 200) {
-      var data = res.data;
-      setAllCourses2(data.rows);
-    }
-  };
 
   useEffect(() => {
-    get_course();
-    get_course2();
-    console.log(AllCourses3);
-  }, []);
+    setSignin(!!localStorage.getItem("id"));
+    checkUserPayment().then(r => r);
+    getCourseData().then(r => r);
+  }, [checkUserPayment, getCourseData]);
 
   return (
     <>
@@ -238,7 +219,7 @@ export default function University({}: Props) {
                 <Link key={VideoItemIndex}
                   href={
                     VideoItemIndex < 1
-                      ? `/course/${file.name}`                      
+                      ? `/course/${file.name}`
                       : Signin
                       ? payment
                         ?
@@ -251,11 +232,11 @@ export default function University({}: Props) {
                     <div className="relative overflow-hidden z-[0]">
                       <img
                         src={file.image}
-                        className={`w-[100%] max-sm:h-[53vw] h-[16vw] object-cover `+ 
-                        
+                        className={`w-[100%] max-sm:h-[53vw] h-[16vw] object-cover `+
+
                         (VideoItemIndex < 1
                             ? ``
-                            
+
                             : Signin
                             ? payment
                               ?
@@ -279,7 +260,7 @@ export default function University({}: Props) {
                       className=" w-[100%]  object-cover"
                     /></div>
                   }
-                      
+
                     </div>
                     <div className="z-[0] max-sm:mt-[-6.75vw] mt-[-1.75vw] bg-white max-sm:w-[13.5vw] max-sm:h-[13.5vw] w-[3.5vw] h-[3.5vw] flex justify-center items-center rounded-full ml-10">
                       <img src="/play.png" className="max-sm:w-[4vw] w-[1vw]" />
@@ -393,7 +374,7 @@ export default function University({}: Props) {
         </ScrollReveal>
       </section>
     </Layout>
-    <div 
+    <div
         data-theme="light"
         className={`fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-25 backdrop-blur-sm  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full justify-center items-center transition ${showModal ? "flex" : "hidden"}`}
         onClick={closeModal}

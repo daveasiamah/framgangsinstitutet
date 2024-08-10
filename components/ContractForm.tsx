@@ -11,8 +11,12 @@ import en from "@/locales/en"
 import sv from "@/locales/sv"
 import { registerOfContract } from "../service/Apis/api";
 
-const SuccessAlert = dynamic(() => import("@/components/parts/SuccessAlert"));
-const ErrorAlert = dynamic(() => import("@/components/parts/ErrorAlert"));
+const SuccessAlert = dynamic(() => import("@/components/parts/SuccessAlert"),{
+    loading: () => <p>Loading...</p>
+});
+const ErrorAlert = dynamic(() => import("@/components/parts/ErrorAlert"),{
+    loading: () => <p>Loading...</p>
+});
 
 import Title from "./parts/Title";
 import BlurCircle from "./graphic/BlurCircle";

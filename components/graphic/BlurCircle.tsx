@@ -1,48 +1,42 @@
-import { motion } from "framer-motion"
-import React from "react"
+import { motion } from "framer-motion";
+import React, { useMemo } from "react";
 
 type Props = {
-  positionClassName: string
-  size?: "sm" | "md" | "lg" | "xl"
-}
+  positionClassName: string;
+  size?: "sm" | "md" | "lg" | "xl";
+};
 
-export default function BlurCircle({ positionClassName, size = "lg" }: Props) {
-  const blurClassName = (size: string) => {
-    let result
-
+const BlurCircle: React.FC<Props> = React.memo(({ positionClassName, size = "lg" }: Props) => {
+  // Memoize the class names based on size
+  const blurClassName = useMemo(() => {
     switch (size) {
       case "sm":
-        result = "w-[100px] h-[100px] blur-[60px]"
-        break
+        return "w-[100px] h-[100px] blur-[60px]";
       case "md":
-        result = "w-[200px] h-[200px] blur-[80px]"
-        break
+        return "w-[200px] h-[200px] blur-[80px]";
       case "lg":
-        result = "w-[400px] h-[260px] blur-[100px]"
-        break
+        return "w-[400px] h-[260px] blur-[100px]";
       case "xl":
-        result = "w-[400px] h-[400px] blur-[120px]"
-        break
+        return "w-[400px] h-[400px] blur-[120px]";
       default:
-        result = "w-[200px] h-[200px] blur-[100px]"
-        break
+        return "w-[200px] h-[200px] blur-[100px]";
     }
-
-    return result
-  }
+  }, [size]);
 
   return (
-    <motion.div
-      animate={{ x: 100, y: 100 }}
-      transition={{
-        ease: "easeIn",
-        repeat: Infinity,
-        duration: 10,
-        repeatType: "reverse"
-      }}
-      className={`absolute z-[-1] bg-blur-circle/20 ${blurClassName(
-        size
-      )} ${positionClassName}`}
-    ></motion.div>
-  )
-}
+      <motion.div
+          animate={{ x: 100, y: 100 }}
+          transition={{
+            ease: "easeIn",
+            repeat: Infinity,
+            duration: 10,
+            repeatType: "reverse"
+          }}
+          className={`absolute z-[-1] bg-blur-circle/20 ${blurClassName} ${positionClassName}`}
+      ></motion.div>
+  );
+});
+
+BlurCircle.displayName = "BlurCircle";
+
+export default BlurCircle;
