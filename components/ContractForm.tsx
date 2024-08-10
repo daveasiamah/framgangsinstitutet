@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import Image from "next/image";
+import dynamic from 'next/dynamic';
 import { useRouter } from "next/router"
 
 import { SubmitHandler, useForm } from "react-hook-form";
@@ -9,8 +10,10 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import en from "@/locales/en"
 import sv from "@/locales/sv"
 import { registerOfContract } from "../service/Apis/api";
-import SuccessAlert from "@/components/parts/SuccessAlert";
-import ErrorAlert from "@/components/parts/ErrorAlert";
+
+const SuccessAlert = dynamic(() => import("@/components/parts/SuccessAlert"));
+const ErrorAlert = dynamic(() => import("@/components/parts/ErrorAlert"));
+
 import Title from "./parts/Title";
 import BlurCircle from "./graphic/BlurCircle";
 
@@ -258,6 +261,7 @@ export default function ContactForm({
           width="300" 
           height="100" 
           className="mx-auto object-cover rounded-4xl"
+          loading="lazy"
         />
         <div className="lg:mt-6">
           <div className="flex items-center justify-center gap-2 text-lg lg:text-xl font-bold">
@@ -290,6 +294,7 @@ export default function ContactForm({
                   display: "inline-block"
                 }}
                 key={buttonData.link}
+                loading="lazy"
               />
           {buttonData.text}
         </button>

@@ -14,6 +14,7 @@ export default function FeatureCard({data}: any) {
           height={60}
           width={60}
           className="object-contain"
+          loading="lazy"
         />
       </div>
       <ScrollReveal>
