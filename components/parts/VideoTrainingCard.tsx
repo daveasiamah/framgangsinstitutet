@@ -44,6 +44,7 @@ export default function VideoTrainingCard({
         width={785}
         height={412}
         className="mt-4"
+        loading="lazy"
       />
     </div>
     
