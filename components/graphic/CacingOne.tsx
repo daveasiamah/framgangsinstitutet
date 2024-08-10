@@ -24,4 +24,6 @@ const CacingOne: React.FC<Props> = React.memo(({ sizeClassName, positionClassNam
   );
 });
 
+CacingOne.displayName = "CacingOne";
+
 export default CacingOne;

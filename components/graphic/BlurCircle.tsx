@@ -37,4 +37,6 @@ const BlurCircle: React.FC<Props> = React.memo(({ positionClassName, size = "lg"
   );
 });
 
+BlurCircle.displayName = "BlurCircle";
+
 export default BlurCircle;

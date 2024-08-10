@@ -69,4 +69,6 @@ const LineGraphic: React.FC<Props> = React.memo(({ positionClassname, sizeClassN
     );
 });
 
+LineGraphic.displayName = "LineGraphic";
+
 export default LineGraphic;
