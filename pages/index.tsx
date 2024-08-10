@@ -1,24 +1,16 @@
 import Image from "next/image"
-import Link from "next/link"
 import { FaCheckCircle } from "react-icons/fa"
-import { BsPatchCheckFill } from "react-icons/bs"
-import { motion } from "framer-motion"
 import { useRouter } from "next/router"
 import SwiperType, { Autoplay, EffectCards, Navigation } from "swiper"
 import { Swiper, SwiperSlide } from "swiper/react"
 
 import Title from "@/components/parts/Title"
 import Layout from "@/components/Layout"
-import ButtonArrow from "@/components/parts/ButtonArrow"
-import ContactForm from "@/components/parts/ContactForm"
 import BlurCircle from "@/components/graphic/BlurCircle"
 import LineGraphic from "@/components/graphic/LineGraphic"
 import CacingOne from "@/components/graphic/CacingOne"
 import ScrollReveal from "@/components/transition/ScrollReveal"
-import fs from "fs";
 import { medsosData, platformData } from "@/assets/data/homeData"
-import TiltParallax from "@/components/transition/TiltParallax"
-// Import Swiper styles
 import "swiper/css"
 import "swiper/css/effect-cards"
 
@@ -26,15 +18,13 @@ import en from "@/locales/en"
 import sv from "@/locales/sv"
 import { useEffect, useRef, useState } from "react";
 import axios from 'axios';
-import { HiOutlineClock } from "react-icons/hi"
 import Marquee from "react-fast-marquee";
 import VideoTrainingCard from "@/components/parts/VideoTrainingCard"
 import Accordion from "@/components/parts/Accordion_Home"
 import FeatureCard from "@/components/parts/FeatureCard"
 import ContractForm from "@/components/ContractForm"
 import { useMediaQuery } from "usehooks-ts"
-import ExampleStoresBlock from "@/components/blocks/ExampleStoresBlock";
-import GraphicsBlock from "@/components/blocks/GraphicsBlock";
+
 
 type Props = {}
 

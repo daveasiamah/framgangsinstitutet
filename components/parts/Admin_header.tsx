@@ -15,7 +15,6 @@ type Props = {};
 export default function Admin_Header({}: Props) {
   const [openMenu, setOpenMenu] = useState(false);
   const { firstName, lastName, avatar } = useAppContext();
-  console.log(firstName);
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : sv;
