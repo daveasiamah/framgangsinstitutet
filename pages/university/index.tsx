@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import Layout from "@/components/Layout";
@@ -12,79 +13,59 @@ import CacingOne from "@/components/graphic/CacingOne";
 import CacingTwo from "@/components/graphic/CacingTwo";
 import FadeLogo from "@/components/graphic/FadeLogo";
 import ScrollReveal from "@/components/transition/ScrollReveal";
-import ContractForm from "@/components/ContractForm";
+
+const ContractForm = dynamic(() => import("@/components/ContractForm"));
 import { activecourse, get_user } from "../../service/Apis/api";
 
 import en from "@/locales/en";
 import sv from "@/locales/sv";
 import Link from "next/link";
 
-type Props = {};
 interface Course {
-  id: string; // or whatever type 'id' should be
+  id: string;
+  name: string;
+  image: string;
+  content: string;
   // Other properties of the course object
 }
 
-export default function University({}: Props) {
+export default function University() {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : sv;
-  const [AllCourses, setAllCourses] = useState([]);
-  const [Signin, setSignin] = useState(false);
-  const [payment, setpayment] = useState(false);
-  const [showModal, setShowModal] = useState(false);
-  const [AllCourses2, setAllCourses2] = useState<Course[]>([]);
+  const [AllCourses, setAllCourses] = useState<Course[]>([]);
   const [AllCourses3, setAllCourses3] = useState<Course[]>([]);
+  const [Signin, setSignin] = useState(false);
+  const [payment, setPayment] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
-  const closeModal = () => {
+  const closeModal = useCallback(() => {
     setShowModal(false);
-  };
+  }, []);
 
-  const get_course = async () => {
-    var res: any = [];
-    res = await activecourse(7, 1);
-    if (res.status == 200) {
-      var data = res.data;
-      setAllCourses(data.rows.splice(6));
-      setAllCourses3(data.rows);
+  const getCourseData = useCallback(async () => {
+    const res: any = await activecourse(7, 1);
+    if (res.status === 200) {
+      const data = res.data;
+      setAllCourses(data.rows);
+      setAllCourses3(data.rows.slice(0, 3));
     }
-  };
-  useEffect(() => {
-    if (localStorage.getItem("id")) {
-      setSignin(true);
+  }, []);
+
+  const checkUserPayment = useCallback(async () => {
+    const res: any = await get_user();
+    if (!res?.data?.paymentvalidationId && res?.data?.role === "USER") {
+      setPayment(false);
     } else {
-      setSignin(false);
+      setPayment(true);
     }
-    const get_check = async () => {
-      const res : any = await get_user();
-      if (!res?.data?.paymentvalidationId && res?.data?.role == 'USER') {
-        // router.push("/coursecheckout");
-        setpayment(false);
-      } else {
-
-        setpayment(true);
-      }
-    }
-    // if (localStorage.getItem("paymentvalidationId")) {
-    // } else {
-    // }
-    get_check();
   }, []);
-
-  const get_course2 = async () => {
-    var res: any = [];
-    res = await activecourse(7, 1);
-    if (res.status == 200) {
-      var data = res.data;
-      setAllCourses2(data.rows);
-    }
-  };
 
   useEffect(() => {
-    get_course();
-    get_course2();
-    console.log(AllCourses3);
-  }, []);
+    setSignin(!!localStorage.getItem("id"));
+    checkUserPayment().then(r => r);
+    getCourseData().then(r => r);
+  }, [checkUserPayment, getCourseData]);
 
   return (
     <>
