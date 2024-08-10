@@ -47,7 +47,7 @@ export default function University({}: Props) {
       var data = res.data;
       setAllCourses(data.rows.splice(6));
       setAllCourses3(data.rows);
-    } 
+    }
   };
   useEffect(() => {
     if (localStorage.getItem("id")) {
@@ -56,7 +56,7 @@ export default function University({}: Props) {
       setSignin(false);
     }
     const get_check = async () => {
-      const res : any = await get_user(); 
+      const res : any = await get_user();
       if (!res?.data?.paymentvalidationId && res?.data?.role == 'USER') {
         // router.push("/coursecheckout");
         setpayment(false);
@@ -238,7 +238,7 @@ export default function University({}: Props) {
                 <Link key={VideoItemIndex}
                   href={
                     VideoItemIndex < 1
-                      ? `/course/${file.name}`                      
+                      ? `/course/${file.name}`
                       : Signin
                       ? payment
                         ?
@@ -251,11 +251,11 @@ export default function University({}: Props) {
                     <div className="relative overflow-hidden z-[0]">
                       <img
                         src={file.image}
-                        className={`w-[100%] max-sm:h-[53vw] h-[16vw] object-cover `+ 
-                        
+                        className={`w-[100%] max-sm:h-[53vw] h-[16vw] object-cover `+
+
                         (VideoItemIndex < 1
                             ? ``
-                            
+
                             : Signin
                             ? payment
                               ?
@@ -279,7 +279,7 @@ export default function University({}: Props) {
                       className=" w-[100%]  object-cover"
                     /></div>
                   }
-                      
+
                     </div>
                     <div className="z-[0] max-sm:mt-[-6.75vw] mt-[-1.75vw] bg-white max-sm:w-[13.5vw] max-sm:h-[13.5vw] w-[3.5vw] h-[3.5vw] flex justify-center items-center rounded-full ml-10">
                       <img src="/play.png" className="max-sm:w-[4vw] w-[1vw]" />
@@ -393,7 +393,7 @@ export default function University({}: Props) {
         </ScrollReveal>
       </section>
     </Layout>
-    <div 
+    <div
         data-theme="light"
         className={`fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-25 backdrop-blur-sm  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full justify-center items-center transition ${showModal ? "flex" : "hidden"}`}
         onClick={closeModal}
