@@ -1,4 +1,5 @@
 import Image from "next/image"
+import dynamic from 'next/dynamic';
 import { FaCheckCircle } from "react-icons/fa"
 import { useRouter } from "next/router"
 import SwiperType, { Autoplay, EffectCards, Navigation } from "swiper"
@@ -20,9 +21,15 @@ import { useEffect, useRef, useState } from "react";
 import axios from 'axios';
 import Marquee from "react-fast-marquee";
 import VideoTrainingCard from "@/components/parts/VideoTrainingCard"
-import Accordion from "@/components/parts/Accordion_Home"
-import FeatureCard from "@/components/parts/FeatureCard"
-import ContractForm from "@/components/ContractForm"
+const FeatureCard = dynamic(() => import('@/components/parts/FeatureCard'), {
+    loading: () => <p>Loading...</p>,
+})
+const Accordion = dynamic(() => import('@/components/parts/Accordion_Home'), {
+    loading: () => <p>Loading...</p>,
+})
+const ContractForm = dynamic(() => import('@/components/ContractForm'), {
+  loading: () => <p>Loading...</p>,
+});
 import { useMediaQuery } from "usehooks-ts"
 
 
@@ -188,7 +195,7 @@ export default function Home() {
                 alt="platform"
                 className="object-contain"
                 fill
-                priority
+                loading="lazy"
               />
             </div>
           ))}
@@ -236,6 +243,7 @@ export default function Home() {
                   height={60}
                   width={60}
                   className="object-contain"
+                  loading="lazy"
                 />
               </div>
               <ScrollReveal>
@@ -452,11 +460,11 @@ export default function Home() {
                   className="bg-white p-10 rounded-2xl w-[16rem] shadow-lg h-full grid place-content-center relative"
                 >
                   <Image
-                    priority
                     src={data.imageUrl}
                     alt="sosmed"
                     fill
                     className="object-contain p-5"
+                    loading="lazy"
                   />
                 </div>
               ))}
@@ -466,11 +474,11 @@ export default function Home() {
                   className="bg-white p-10 rounded-2xl w-[16rem] shadow-lg h-full grid place-content-center relative"
                 >
                   <Image
-                    priority
                     src={data.imageUrl}
                     alt="sosmed"
                     fill
                     className="object-contain p-5"
+                    loading="lazy"
                   />
                 </div>
               ))}
@@ -486,11 +494,11 @@ export default function Home() {
                   className="bg-white p-10 rounded-2xl w-[16rem] shadow-lg h-full grid place-content-center relative"
                 >
                   <Image
-                    priority
                     src={data.imageUrl}
                     alt="sosmed"
                     fill
                     className="object-contain p-5"
+                    loading="lazy"
                   />
                 </div>
               ))}
@@ -500,11 +508,11 @@ export default function Home() {
                   className="bg-white p-10 rounded-2xl w-[16rem] shadow-lg h-full grid place-content-center relative"
                 >
                   <Image
-                    priority
                     src={data.imageUrl}
                     alt="sosmed"
                     fill
                     className="object-contain p-5"
+                    loading="lazy"
                   />
                 </div>
               ))}
@@ -649,7 +657,6 @@ export default function Home() {
                   style={{ paddingRight: "30px" }}
                 >
                   <Image
-                    priority
                     src={data.imageUrl}
                     alt="testimonial"
                     width="0"
@@ -657,6 +664,7 @@ export default function Home() {
                     sizes="100vw"
                     style={{ width: '300px', height: '400px' }}
                     className="rounded-lg"
+                    loading="lazy"
                   />
                 </div>
               ))}
