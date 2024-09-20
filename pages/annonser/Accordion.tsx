@@ -8,7 +8,7 @@ type Props = {
   }[]
 }
 
-function Accordion({ data }: Props) {
+function Accordion({ data = [] }: Props) {
   const [selected, setSelected] = useState<number | null>(null)
 
   const ref = useRef<HTMLInputElement>(null)

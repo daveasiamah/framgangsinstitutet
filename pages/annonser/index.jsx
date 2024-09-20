@@ -262,36 +262,36 @@ const Annonser = () => {
               <img src="/img/review.svg" alt="Testimonial" />
               <h3>Josefin M.</h3>
               <p>
-                "Jag var skeptisk först eftersom jag aldrig har fått någon annan
+                `Jag var skeptisk först eftersom jag aldrig har fått någon annan
                 att bygga mina annonser förut ... Vi har fått positiva resultat
-                och något som lönar sig. "
+                och något som lönar sig. `
               </p>
             </div>
             <div className="testimonial_ann">
               <img src="/img/review2.svg" alt="Testimonial" />
               <h3>Joel G.</h3>
               <p>
-                "Att använda Checkified Ads är en game changer för min ehandel.
+                `Att använda Checkified Ads är en game changer för min ehandel.
                 Jag märkte direkt förbättring i engagemang och <br />{" "}
-                konverteringar. “
+                konverteringar. `
               </p>
             </div>
             <div className="testimonial_ann">
               <img src="/img/review3.svg" alt="Testimonial" />
               <h3>Mikael W.</h3>
               <p>
-                "Jag har provat själv med annonsering och content, med mindre
+                `Jag har provat själv med annonsering och content, med mindre
                 lycka. Efter <br /> Checkified så har försäljningssifrorna{" "}
-                <br /> stigit stadigt."
+                <br /> stigit stadigt.`
               </p>
             </div>
             <div className="testimonial_ann">
               <img src="/img/review4.svg" alt="Testimonial" />
               <h3>Nicklas R.</h3>
               <p>
-                "Mitt varumärke känns mer äkta och tilltalande för mina kunder.
+                `Mitt varumärke känns mer äkta och tilltalande för mina kunder.
                 Omsättningen har ökat med 25% och jag är mycket nöjd med
-                resultatet."
+                resultatet.`
               </p>
             </div>
           </div>
@@ -373,7 +373,7 @@ const Annonser = () => {
             <span>Checkified</span>
           </div>
           <p>
-            *Du samtycker till att vi "Checkified" inte har gjort några
+            *Du samtycker till att vi `Checkified` inte har gjort några
             implikationer, garantier, löften, förslag, prognoser,
             representationer eller garantier överhuvudtaget till dig om framtida
             försäljning eller resultat, eller att du kommer att tjäna några

@@ -37,7 +37,7 @@ export default function University_Detail({ }: Props) {
           <ScrollReveal className="bg-base-200 p-8 lg:p-10 mb-8 rounded-[3rem]">
             <div className="grid grid-cols-2 gap-12">
               <div className="relative  h-[26vw] rounded-[3rem] overflow-hidden">
-                <img src="/card-1.png" className=" w-[100%] object-cover" />
+                <img src="/card-1.png" className=" w-[100%] object-cover" alt="card" />
                 <div className="absolute  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white w-[4vw] h-[4vw] flex justify-center items-center rounded-full opacity-[70%]"><img src="/play.png" className="w-[1.25vw]" /></div>
               </div>
               <div className="flex flex-col justify-center items-start">
