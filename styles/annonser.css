@@ -1,0 +1,2022 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.body_ann{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:  400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+p{
+    font-family: "Inter", sans-serif;
+}
+
+
+.container-fluid_ann {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.container_ann {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+.steps-container_ann{
+    max-width: 1600px;
+    margin: 0 auto;
+}
+.header_ann{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #fff;
+}
+.logo_ann{
+    display: flex;
+    align-items: center;
+}
+.logo_ann span{
+    font-size: 20px;
+    line-height: 37px;
+    font-weight: 700;
+    margin-left: 10px;
+}
+.nav_ann ul {
+    display: flex;
+    list-style: none;
+}
+.nav_ann ul li {
+    margin-right: 20px;
+}
+.nav_ann ul li a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 16px;
+    font-weight: normal;
+}
+h1{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 48px;
+    line-height: 51px;
+    font-weight: 700;
+    color: #151E3A;
+    margin-bottom: 0;
+}
+.get-started-button_ann{
+    padding: 10px 20px;
+    background-color: #235AE9;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+
+.ad-svg_ann{
+    width: 21px;
+    height: 20px;
+    object-fit: contain;
+    border-radius: 4px;
+    margin-right: 4px;
+}
+.ad-container_ann{
+    border-radius: 74px;
+    border: 1px solid #A1A1A1;
+    width: 254px;
+    height: 42px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 25px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+}
+.andsign_ann{
+ color: #3E6FED;
+    margin-right: 2px;
+    margin-left: 2px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 25px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+.video-wrapper_ann{
+    background-color: #EDF5FED9;
+    width: 700px;
+    border-radius:15px;
+    margin: 0 auto;
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.video-wrapper_ann img{
+    margin-bottom: -5px;
+    width: 100%;
+    z-index: 2;
+}
+.video-wrapper_ann iframe{
+    width: 100%;
+    height: 423px;
+    object-fit: contain;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.banner_ann {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.banner_ann h1 {
+    font-size: 48px;
+    color: #151E3A;
+    font-weight: 700;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    line-height: 51px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.banner_ann .highlight_ann{
+        font-size: 48px;
+        color: #235AE9;
+        font-weight: 700;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        line-height: 51px;
+        display: table;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+}
+
+.cta-button_ann {
+    background-color: #235AE9;
+    color: #fff;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    width: 700px;
+    height: 63px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; 
+}
+.main-banner-button_ann{
+    margin-left: 10px;
+}
+.main-banner-button-content_ann{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-banner-button-text_ann{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 0;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+.cta-button_ann img{
+    width: 27px;
+    height: 27px;
+    object-fit: contain;
+    margin-left: 10px;
+}
+.sec-banner-button-text_ann{
+    font-size: 12px;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    color: #D4CFCF;
+    margin-bottom: 0;
+}
+
+.ad-details_ann {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    color: #707BA0;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;
+}
+.ad-details_ann span{
+    margin-top: 7px;
+}
+.ad-detail_ann{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    color: #707BA0;
+    width: 60%;
+    margin: 20px auto 0;
+}
+.shopify_ann{
+    width: 26px;
+    height: 30px;
+    object-fit: contain;
+}
+.icon-section_ann{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 600px;
+    margin: 20px auto 0;
+    text-align: center;
+    font-size: 14px;
+    color: #151E3A;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;
+}
+.icon-section_ann span{
+    display: flex;
+    align-items: center;
+}
+.icon-section_ann img{
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    margin-right: 10px;
+}
+.divider_ann{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+.divider_ann span{
+    color: #434C69;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 20px;
+    line-height: 40px;
+    font-weight: 600;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.logos_ann{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+.divider_ann hr{
+    width: 304px;
+}
+.section_ann{
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center !important;
+    background-color: #fff;
+}
+
+.star_ann{
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+}
+
+
+.how-we-help_ann h2{
+    font-family: "Poppins", sans-serif;
+    font-size: 32px;
+    line-height: 64px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-decoration: underline;
+    color: #235AE9;
+    text-align: center;
+}
+.how-we-help_ann{
+    background-color: #EDF5FE;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.help-items_ann {
+    justify-content: center;
+}
+
+.help-item_ann{
+    width: 80%;
+    padding: 20px;
+    margin: 0 auto 20px;
+    text-align: left;
+    background: #FFFFFF;
+    box-shadow: 0 15px 30px rgba(0, 131, 255, 0.15);
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    flex-direction: column;
+
+}
+.faq_ann{
+    background-color: #FFF;
+}
+.faq-item_ann {
+    width: 80%;
+    padding: 20px;
+    margin: 0 auto 20px;
+    text-align: left;
+    background: #FFFFFF;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    flex-direction: column;
+}
+
+.help-item_ann h3{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    text-align: left;
+    color: #000000;
+    margin-bottom: 0;
+}
+.help-item_ann p{
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    text-align: left;
+    color: #707BA0;
+    margin-bottom: 0;
+}
+.help-cta-button_ann{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 308px;
+    height: 52px;
+    background: #235AE9;
+    border-radius: 12px;
+    font-family: "Poppins", sans-serif;
+    padding: 10px 20px;
+}
+
+.help-cta-button_ann img{
+    width: 32px;
+    height: 34px;
+    object-fit: contain;
+    margin-left: 10px;
+}
+.how-it-works_ann{
+    margin-bottom: 0;
+}
+.how-it-works_ann h2{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 32px;
+    line-height: 64px;
+    font-weight: 700;
+    margin-bottom: 0;
+    color: #000000;
+    text-align: center;
+}
+.how-it-works_ann p{
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 500;
+    color: #707BA0;
+    text-align: center;
+}
+
+.steps_ann {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.step_ann{
+    background: #235AE9;
+    box-shadow: 0 94px 115px rgba(0, 0, 0, 0.03);
+    width: 367px;
+    height: 372px;
+    border-radius: 30px;
+    color: #fff;
+    padding-left: 20px;
+    padding-right: 10px;
+    margin-right: 20px;
+}
+.step_ann:last-child {
+    margin-right: 0;
+}
+.step-content_ann{
+    padding-top: 20px;
+    position: relative;
+}
+
+.step-content_ann span{
+    padding: 20px;
+    background-color: #fff;
+    color: #235AE9;
+    border-radius: 100%;
+    font-size: 50px;
+    font-weight: 700;
+    width: 53px;
+    height: 53px;
+    right: 0;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    
+}
+
+.step_ann img {
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -50px;
+    margin-bottom: 10px;
+}
+
+
+.step_ann h3{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 14px;
+    background-color: #fff;
+    border-radius: 20px;
+    color: #235AE9;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    height: 41px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.step_ann p{
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 27px;
+    border-radius: 20px;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pricing_ann h2{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 44px;
+    line-height: 68px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #000000;
+    text-align: center;
+    margin-top: -20px;
+}
+.pricing-options_ann {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.pricing-item_ann {
+    padding: 20px;
+    color: #ffffff;
+    width: 650px;
+    height: 700px;
+    background: #235AE9;
+    box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.15);
+    border-radius: 30px;
+    position: relative;
+    text-align: center;
+}
+
+.pricing-item_ann img {
+    width: 100%;
+    height: 508px;
+    object-fit: contain;
+    border-radius: 10px;
+    position: relative;
+    z-index: 0;
+    margin: 0 auto;
+    border:none;
+}
+
+.white-background-text_ann{
+    background-color: #fff;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    margin: 0 auto;
+    width: 98.8%;
+    height: 90px;
+    margin-top: -60px;
+    margin-left: 4px;
+}
+.pricing-item_ann span p {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 48px;
+    color: #235AE9;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.price_ann {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 35px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.pricing-item_ann .price-btn_ann {
+    margin-top: auto;
+    background-color: #fff;
+    color: #235AE9;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 565px;
+    height: 49px;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 auto;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+}
+.testimonials_ann{
+    background-color: #EDF5FE;
+    padding: 20px;
+}
+.testimonials_ann h2{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #000000;
+    text-align: center;
+}
+
+.testimonial-cards_ann {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.testimonial_ann {
+    width: 30%;
+    text-align: left;
+}
+.testimonial_ann img{
+    object-fit: contain;
+    width: 298px;
+    height: 220px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 14px;
+    margin-bottom: 20px;
+}
+.testimonial_ann h3{
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 37px;
+    text-align: left;
+    color: #000000;
+}
+.testimonial_ann p{
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: justify-all;
+    font-weight: 500;
+}
+.cta-button-info_ann{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 308px;
+    height: 52px;
+    background: #235AE9;
+    border-radius: 12px;
+    font-family: "Poppins", sans-serif;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border: none;
+}
+.cta-button-info_ann img{
+    width: 19px;
+    height: 20px;
+    object-fit: contain;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+.faq_ann h2{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 42px;
+    line-height: 52px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+}
+.faq-item_ann h3{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 34px;
+    text-align: left;
+    color: #081131;
+    margin-bottom: 10px;
+}
+.footer_ann {
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    background-image: url(/img/footerbgleft.png), url(/img/footerigtbg.png);
+    background-position: left bottom, right bottom;
+    background-repeat: no-repeat;
+    background-color: #235AE9;
+}
+.footer_ann span{
+    font-size: 20px;
+    line-height: 37px;
+    font-weight: 700;
+    margin-left: 10px;
+    flex-grow: 1;
+    width: 70%;
+}
+.footer_ann h2 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 32px;
+    line-height: 36px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.cta-button-footer_ann{
+    color: #235AE9;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 32px;
+    width: 300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    background: #fff;
+    border-radius: 12px;
+}
+
+.footer-logo-content_ann{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.footer-logo_ann img{
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+.footer-logo_ann span{
+    font-size: 30px;
+    line-height: 37px;
+    font-weight: 700;
+    margin-left: 10px;
+    color: #151E3A;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.footer-logo_ann p{
+    font-size: 10px;
+    line-height: 22px;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    color: #151E3A;
+    margin-bottom: 40px;
+}
+
+.footer_ann .small-print_ann {
+    font-size: 12px;
+    color: #c0c0c0;
+    margin-top: 20px;
+}
+
+.mobile-ad-detail_ann{
+    display: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    color: #707BA0;
+    width: 60%;
+    margin:  0  auto;
+    font-weight: 500;
+}
+.mobile-hide_ann{
+    display: none;
+}
+.mobile-show_ann{
+    display: none;
+}
+.desktop-show_ann{
+    display: block;
+}
+.accordion{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.accordion-item{
+    border: none !important;
+    background: #FFFFFF;
+    border-radius: 12px !important;
+    margin-top: 10px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+.accordion-button{
+    border: none !important;
+}
+.accordion-button:not(.collapsed){
+    background-color: #fff;
+    color: #000;
+    box-shadow: none;
+}
+.accordion-button:not(.collapsed){
+    box-shadow: none !important;
+}
+.accordion-button:not(.collapsed){
+    background-color: #fff !important;
+}
+.accordion-button::after{
+    display: none !important;
+}
+.accordion-button {
+    padding: 0 !important;
+}
+.accordion-body{
+    padding: 0 !important
+}
+
+.collapsed{
+    padding-bottom: 5px !important;
+}
+
+/* Mobile responsiveness */
+/* This media query targets screens with a maximum width of 768px */
+@media (max-width: 768px) {
+    .header_ann {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    .nav_ann ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav_ann ul li {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+
+    .banner_ann h1 {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 32px;
+        margin-bottom: 0;
+    }
+
+    .cta-button_ann {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .pricing-options_ann {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .pricing-item_ann {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .steps_ann {
+        flex-direction: column;
+    }
+
+    .step_ann {
+        width: 100%;
+    }
+
+    .testimonial-cards_ann {
+        flex-direction: column;
+    }
+
+    .testimonial_ann {
+        width: 100%;
+    }
+
+    .cta-button-info_ann {
+        width: 100%;
+    }
+
+    .help-cta-button_ann {
+        width: 100%;
+    }
+
+    .video-wrapper_ann img{
+        margin-bottom: -5px;
+        width: 670px;
+        z-index: 2;
+    }
+    .video-wrapper_ann iframe{
+        width: 670px;
+        height: 423px;
+        object-fit: contain;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+}
+
+/* This media query targets screens with a minimum width of 769px */
+@media (min-width: 769px) {
+    .container_ann {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .pricing-item_ann span p{
+        font-size: 24px;
+        line-height: 48px;
+        font-weight: 700;
+        margin-top: 70px;
+        width: 100%;
+        text-align: center;
+        font-family: "Plus Jakarta Sans", sans-serif;
+    }
+
+
+    .steps_ann {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .step_ann {
+        width: 367px;
+        height: 372px;
+    }
+    .step-content_ann span{
+        width: 53px;
+        height: 53px;
+        left: 70%;
+        font-size: 26px;
+        line-height: 39px;
+        font-family: "Poppins", sans-serif;
+        transform: translate(-10%, -10%);
+    }
+    .step-content_ann img{
+        width: 160px;
+        height: 160px;
+        object-fit: contain;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -50px;
+        margin-bottom: 10px;
+    }
+    .step_ann p{
+        font-family: "Inter", sans-serif;
+        font-size: 14px;
+        line-height: 25px;
+        font-weight: 500;
+        padding: 10px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .step_ann h3{
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 14px;
+        line-height: 25px;
+        font-weight: 700;
+        margin-bottom: 0;
+    }
+
+    .testimonial-cards_ann{
+        display: flex;
+        width: 100%;
+    }
+    .testimonial_ann{
+        flex-grow: 1;
+        width: calc(25% - 10px);
+    }
+    .testimonial_ann img{
+        width: 100%;
+        height: fit-content;
+        object-fit: contain;
+    }
+
+    .testimonial_ann h3{
+        font-family: "Poppins", sans-serif;
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 37px;
+        text-align: left;
+        color: #000000;
+        margin-bottom: 0;
+    }
+    .testimonial_ann p{
+        font-family: "Inter", sans-serif;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: justify-all;
+        font-weight: 500;
+    }
+
+
+    .banner_ann h1 {
+    font-size: 48px;
+    color: #151E3A;
+    font-weight: 700;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    line-height: 51px;
+    margin-bottom: 0;
+    }
+
+    .banner_ann .highlight_ann{
+        font-size: 48px;
+        color: #235AE9;
+        font-weight: 800;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        line-height: 51px;
+    }
+
+    .desktop-show_ann {
+        display: block;
+    }
+
+    .mobile-hide_ann {
+        display: block;
+    }
+
+    .mobile-show_ann {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .desktop-show_ann{
+        display: none;
+    }
+    .accordion-item_ann{
+        background: #FFFFFF;
+        border-radius: 12px !important;
+        margin-top: 10px;
+        box-shadow: 0px 2px 2px #F9FAFB;
+        border: 1px solid #F9FAFB !important;
+    }
+    .container-fluid_ann{
+        padding: 0 !important;
+    }
+    .mobile-hide_ann{
+        display: none;
+    }
+    .mobile-show_ann{
+        display: block;
+    }
+
+    .container_ann{
+        padding: 0 10px;
+        width: 100%;
+    }
+    .section_ann{
+        padding: 10px;
+    }
+    p_ann{
+        font-family: "Inter", sans-serif;
+         font-size: 11px;
+         font-weight: 500;
+    }
+    span_ann{
+        font-family: "Inter", sans-serif;
+        font-size: 11px;
+    }
+    .header_ann{
+        display: none;
+    }
+    .logo_ann img{
+        width: 38px;
+        height: 39px;
+        object-fit: contain;
+    }
+    .navbar-toggler_ann {
+        background-color: #E8F2FF !important;
+        color: #0083FF !important;
+        border: none !important;
+    }
+    .navbar-toggler-icon_ann {
+        color: #0083FF !important;
+    }
+    .banner_ann{
+        padding: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    .banner_ann h1{
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 22px;
+        line-height: 25px;
+    }
+    .banner_ann .highlight_ann{
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 22px;
+        line-height: 25px;
+    }
+
+    .main-banner-button-text_ann{
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .sec-banner-button-text_ann{
+        font-size: 11px;
+        line-height: 20px;
+    }
+    .mobile-ad-detail_ann{
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+        font-size: 14px;
+        font-weight: 500;
+        text-align: center;
+    }
+    .ad-detail_ann{
+        display: none;
+    }
+    .cta-button_ann{
+        width: 100%;
+        font-size: 16px;
+    }
+    .cta-button_ann img{
+        width: 30px;
+        height: 23px;
+        object-fit: contain;
+    }
+    .main-banner-button_ann{
+        margin-left: 0;
+    }
+    .shopify_ann{
+        width: 30px;
+        height: 30px;
+    }
+    .ad-detail_ann{
+        font-size: 14px;
+        text-align: center;
+        width: 90%;
+    }
+
+    .how-we-help_ann h2{
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 26px;
+        line-height: 32px;
+    }
+    .star_ann{
+        width: 65px;
+        height: 65px;
+        object-fit: contain;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .faq-item_ann {
+        width: 90%;
+        padding-left: 10px;
+        padding-top: 10px;
+        margin: 0 auto 20px;
+        box-shadow: 5px 5px 10px 5px rgba(242, 243, 246, 1);
+    }
+    .faq-item_ann p{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 10px;
+        font-family: "Inter", sans-serif;
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: 500;
+        color: #707BA0;
+    }
+    .faq-item_ann h3 {
+        margin-bottom: 0;
+        color: #081131;
+    }
+    .accordion_ann {
+        padding-top: 5px;
+        padding-bottom: 20px;
+    }
+    .help-item_ann{
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+    .help-item_ann h3{
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 13px;
+        line-height: 16px;
+        font-weight: 700;
+        margin-bottom: 0;
+    }
+    .help-item_ann p{
+        font-family: "Inter", sans-serif;
+        font-size: 11px;
+        line-height: 13px;
+        font-weight: 500;
+    }
+    .help-cta-button_ann{
+        font-size: 18px;
+        height: 50px;
+        width: 90%;
+        padding-left: 10px;
+    }
+    .help-cta-button_ann img{
+        width: 30px;
+        height: 30px;
+    }
+    .how-we-help_ann{
+        border-radius: 20px;
+        padding: 10px;
+    }
+    .faq_ann{
+        background-color: #FFF;
+        padding: 0;
+    }
+    .how-it-works_ann h2{
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 26px;
+        line-height: 52px;
+        font-weight: 700;
+        margin-bottom: 0;
+    }
+    .how-it-works_ann p{
+        font-family: "Inter", sans-serif;
+        font-size: 12px;
+        line-height: 20px;
+        font-weight: 500;
+        margin: 0 auto;
+    }
+    .step_ann{
+        width: 100%;
+        height: fit-content;
+        margin-bottom: 20px;
+    }
+    .step-content_ann {
+        padding: 0;
+        position: relative;
+    }
+    .step-content_ann span {
+        width: 42px;
+        height: 42px;
+        right: 0;
+        top: 0;
+        left: 0;
+        font-size: 26px;
+        line-height: 42px;
+        font-family: "Poppins", sans-serif;
+        position: absolute;
+        background-color: #fff;
+        border-radius: 50%;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .step-content_ann img {
+        width: 160px;
+        height: 160px;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto 20px;
+    }
+    .step_ann p{
+        font-family: "Inter", sans-serif;
+        font-size: 12px;
+        line-height: 22px;
+        font-weight: 500;
+        padding: 10px;
+    }
+    .pricing_ann{
+        margin-bottom: 30px;
+    }
+    .pricing_ann h2{
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 30px;
+        line-height: 25px;
+        font-weight: 700;
+    }
+    .pricing-item_ann{
+        padding: 10px;
+        height: 383px;
+    }
+    .pricing-item_ann span p{
+        font-family: "Inter", sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        width: 90%;
+        font-weight: 600;
+        display: none;
+    }
+ 
+    .pricing-item_ann img{
+        width: 276px;
+        height: 231.89px;
+        margin-bottom: 10px;
+        object-fit: cover;
+    }
+    .price_ann{
+        font-size: 22px;
+        line-height: 24px;
+        margin-bottom: 20px;
+        font-weight: 700;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        margin-top: 10px;
+    }
+    .pricing-item_ann .price-btn_ann {
+        font-size: 12px;
+        padding: 5px;
+        width: 276px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        height: 32px;
+    }
+    .testimonials_ann h2{
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 30px;
+        line-height: 25px;
+        font-weight: 700;
+    }
+    .testimonial-cards_ann{
+        flex-direction: column;
+        width: 100%;
+    }
+    .testimonial_ann img{
+        width: 100%;
+        height: fit-content;
+        margin-bottom: 10px;
+    }
+    .testimonial_ann h3{
+        font-size: 25px;
+        line-height: 31px;
+        padding-left: 10px;
+        font-weight: 700;
+        font-family: "Plus Jakarta Sans", sans-serif;
+    }
+    .testimonial_ann p{
+        font-size: 14px;
+        line-height: 17px;
+        padding-left: 10px;
+        font-weight: 500;
+        font-family: "Plus Jakarta Sans", sans-serif;
+    }
+    .cta-button-info_ann{
+        font-size: 18px;
+        width: 90%;
+        padding: 10px;
+    }
+    .cta-button-info_ann img{
+        width: 20px;
+        height: 20px;
+    }
+    .how-we-help_ann h2{
+        font-size: 28px;
+        line-height: 25px;
+        font-weight: 700;
+        font-family: "Plus Jakarta Sans", sans-serif;
+    }
+    .help-item_ann, .faq-item_ann h3{
+        color: #081131;
+        font-size: 18px;
+        line-height: 25px;
+        font-weight: 700;
+        font-family: "Plus Jakarta Sans", sans-serif;
+    }
+    .cta-button-footer_ann{
+        font-size: 11px;
+        width: fit-content;
+        padding: 10px;
+    }
+    .footer_ann h2{
+        font-size: 11px;
+        line-height: 22px;
+        font-weight: 700;
+    }
+    .footer-logo-content_ann span{
+        font-size: 25px;
+        line-height: 25px;
+        font-weight: 700;
+    }
+    .footer-logo_ann img{
+        width: 40px;
+        height: 40px;
+    }
+    .footer-logo_ann p{
+        font-size: 10px;
+        line-height: 25px;
+        padding: 10px;
+        font-weight: 500;
+    }
+    .icons-container_ann{
+        margin: 0 auto;
+        width: fit-content;
+    }
+    .icon-section_ann{
+       display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        width: 100%;
+    }
+    .icon-section_ann span{
+        margin-bottom: 20px;
+        font-size: 12px;
+    }
+    .icon-section_ann span:last-child{
+        margin-bottom: 0;
+    }
+    .icon-section_ann span img{
+        margin-right: 10px;
+    }
+    .divider_ann{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+    }
+    .divider_ann span{
+        font-size: 14px;
+        color: #434C69;
+        line-height: 28px;
+        font-weight: 600;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .divider_ann hr{
+        width: 60px;
+    }
+    .partners-logo_ann{
+        width: 100%;
+    }
+    .logos_ann {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0;
+        margin-top: 10px;
+    }
+
+    .logos_ann span {
+        flex: 1 1 calc(50% - 10px); /* Each item takes up 50% width minus the gap */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .logos_ann img {
+        width: 120px;
+        height: 35px;
+        object-fit: contain;
+    }
+    .partners-logo_ann hr{
+        width: 100%;
+    }
+    .video-wrapper_ann img {
+        width: 100%;
+        margin-bottom: 2px;
+        border-radius: 4px;
+    }
+    .video-wrapper_ann iframe{
+        width: 100%;
+        height: 180px;
+    }
+
+    .pricing-options_ann {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 15px;
+    }
+
+}
+
+@media (min-width: 481px) and (max-width: 640px) {
+    .container_ann {
+        padding: 0 15px;
+        width: 100%;
+    }
+    
+    .banner_ann h1 {
+        font-size: 28px;
+        line-height: 34px;
+        margin-bottom: 0;
+    }
+    
+    .cta-button_ann {
+        width: 80%;
+        font-size: 18px;
+    }
+    
+    .how-we-help_ann h2,
+    .how-it-works_ann h2,
+    .pricing_ann h2,
+    .testimonials_ann h2 {
+        font-size: 32px;
+        line-height: 38px;
+    }
+    
+    .step-content_ann img {
+        width: 140px;
+        height: 140px;
+    }
+    
+    .pricing-item_ann {
+        padding: 15px;
+    }
+    
+    .testimonial-cards_ann {
+        flex-direction: column;
+    }
+    
+    .testimonial_ann {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+    .container_ann {
+        max-width: 720px;
+        margin: 0 auto;
+    }
+    
+    .banner_ann h1 {
+        font-size: 36px;
+        line-height: 44px;
+        margin-bottom: 0;
+    }
+    .video-wrapper_ann iframe{
+        width: 100%;
+        height: 100%;
+    }
+
+    
+    .cta-button_ann {
+        width: 80%;
+        font-size: 16px;
+    }
+    .cta-button_ann img{
+        width: 20px;
+        height: 20px;
+    }
+
+    .main-banner-button-text_ann{
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .sec-banner-button-text_ann{
+        font-size: 11px;
+        line-height: 20px;
+    }
+    .mobile-hide_ann{
+        display: block;
+    }
+    .desktop-show_ann{
+        display: none;
+    }
+    
+    .how-we-help_ann h2,
+    .how-it-works_ann h2,
+    .pricing_ann h2,
+    .testimonials_ann h2 {
+        font-size: 38px;
+        line-height: 46px;
+    }
+    
+    .pricing-options_ann {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .pricing-item_ann {
+        width: calc(100% - 20px);
+        margin: 10px;
+    }
+
+    .step_ann{
+        width: 100%;
+        height: fit-content;
+        margin-bottom: 20px;
+    }
+
+    .step-content_ann span{
+        width: 42px;
+        height: 42px;
+        left: 70%;
+        font-size: 26px;
+        line-height: 39px;
+        font-family: "Poppins", sans-serif;
+        transform: translate(-10%, -10%);
+    }
+    .step-content_ann img{
+        width: 160px;
+        height: 160px;
+        object-fit: contain;
+        margin-left: 30%;
+        margin-bottom: 20px;
+    }
+    .step_ann p{
+        font-family: "Inter", sans-serif;   
+        font-size: 14px;
+        line-height: 25px;
+        font-weight: 500;
+        padding: 10px;
+    }
+    .step_ann h3{
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 14px;
+        line-height: 25px;  
+        font-weight: 700;
+        margin-bottom: 0;
+    }
+    .testimonial-cards_ann {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .testimonial_ann {
+        width: calc(100% - 20px);
+        margin: 10px;
+    }
+    .testimonial_ann h3{
+        font-size: 20px;
+        line-height: 25px;
+        font-weight: 700;
+        font-family: "Plus Jakarta Sans", sans-serif;
+    }
+    .testimonial_ann p{
+        font-size: 14px;
+        line-height: 17px;
+    }
+    .testimonial_ann img{
+        width: 100%;
+        height: fit-content;
+        margin-bottom: 10px;
+    }
+    .cta-button-footer_ann, .cta-button-info_ann{
+        width: 90%;
+    }
+    .mobile-show_ann{
+        display: block;
+    }
+    .desktop-show_ann{
+        display: none;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 820px) {
+    .container_ann {
+        padding: 0 20px;
+        width: 100%;
+    }
+
+    .banner_ann h1 {
+        font-size: 36px;
+        line-height: 44px;
+        margin-bottom: 0;
+    }
+
+    .cta-button_ann {
+        width: 70%;
+        font-size: 18px;
+    }
+
+    .how-we-help_ann h2,
+    .how-it-works_ann h2,
+    .pricing_ann h2,
+    .testimonials_ann h2 {
+        font-size: 34px;
+        line-height: 42px;
+    }
+
+    .steps_ann {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+
+    .step_ann {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .step_ann:nth-child(3) {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .step-content_ann img {
+        width: 150px;
+        height: 150px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    .pricing-item_ann {
+        padding: 20px;
+    }
+    .price-btn_ann{
+        width: 100% !important;
+    }
+  
+    .testimonial-cards_ann {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .testimonial_ann {
+        width: calc(50% - 20px);
+        margin: 10px;
+    }
+
+    .testimonial_ann h3 {
+        font-size: 26px;
+        line-height: 24px;
+        font-weight: 700;
+        font-family: "Plus Jakarta Sans", sans-serif;
+    }
+
+    .testimonial_ann p {
+        font-size: 16px;
+        line-height: 20px;
+        font-family: "Inter", sans-serif;
+    }
+
+    .testimonial_ann img{
+        width: 100%;
+        height: fit-content;
+        margin-bottom: 10px;
+    }
+
+    .cta-button-info_ann,
+    .cta-button-footer_ann {
+        width: 80%;
+        font-size: 16px;
+    }
+
+    .mobile-show_ann {
+        display: none;
+    }
+
+    .desktop-show_ann {
+        display: block;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 912px) {
+    .container_ann {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .banner_ann h1 {
+        font-size: 48px;
+        color: #151E3A;
+        font-weight: 700;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        line-height: 51px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
+    }
+
+    .banner_ann .highlight_ann{
+            font-size: 48px;
+            color: #235AE9;
+            font-weight: 700;
+            font-family: "Plus Jakarta Sans", sans-serif;
+            line-height: 51px;
+            display: table;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+    }
+    .cta-button_ann {
+        width: 70%;
+        font-size: 18px;
+    }
+
+    .how-we-help_ann h2,
+    .how-it-works_ann h2,
+    .pricing_ann h2,
+    .testimonials_ann h2 {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    .pricing-options_ann {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .pricing-item_ann {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .white-background-text_ann{
+        width: 91.8%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .steps_ann {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .step_ann {
+        width: calc(50% - 20px);
+        margin: 10px;
+    }
+
+    .step-content_ann img{
+        width: 100%;
+        margin-bottom: 10px;
+        margin-left: auto;
+    }
+
+
+    .testimonial_ann h3 {   
+        font-size: 26px;
+        line-height: 24px;
+        font-weight: 700;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        margin-bottom: 0;
+    }
+
+    .testimonial_ann p {
+        font-size: 16px;
+        line-height: 20px;
+        font-family: "Inter", sans-serif;
+    }
+    .testimonial_ann img{
+        width: 100%;
+        height: fit-content;
+        margin-bottom: 10px;
+    }
+        .cta-button-info_ann,
+    .cta-button-footer_ann {
+        width: 70%;
+        font-size: 18px;
+    }
+
+    .mobile-show_ann {
+        display: none;
+    }
+
+    .desktop-show_ann {
+        display: block;
+    }
+}
+
+@media (max-width: 540px) {
+    .container_ann {
+        width: 100%;
+    }
+
+    .banner_ann h1 {
+        font-size: 22px;
+        line-height: 25px;
+        margin-bottom: 0;
+    }
+
+    .banner_ann .highlight_ann{
+        font-size: 22px;
+        line-height: 25px;
+    }
+
+    .video-wrapper_ann{
+        width: 100%;
+        height: 209px;
+        padding: 5px;
+    }
+    .video-wrapper_ann img{
+        width: 100%;
+        border-radius: 4px;
+        margin-bottom: 7px;
+    }
+    .video-wrapper_ann iframe{
+        height: 180px;
+        margin-top: -8px;
+    }
+    .main-banner-button-text_ann {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .sec-banner-button-text_ann {
+        font-size: 10px;
+        line-height: 10px;
+    }
+    .cta-button-info_ann {
+        font-size: 16px;
+        width: 90%;
+        padding: 10px;
+    }
+    .cta-button-info_ann img{
+        width: 18px;
+        height: 19px;
+        margin-top: 0;
+    }
+    .cta-button_ann img{
+        width: 19px;
+        height: 19px;
+        object-fit: contain;
+    }
+
+    .cta-button_ann{
+        font-size: 16px;
+        height: 44px;
+    }
+
+    .help-cta-button_ann{
+        width: 319px;
+        font-size: 16px;
+       margin-bottom: 20px;
+       padding-left: 10px;
+    }
+    .help-cta-button_ann img{
+        width: 26px;
+        height: 27px;
+        margin-top: 2px;
+    }
+
+
+    .how-we-help_ann h2,
+    .how-it-works_ann h2,
+    .pricing_ann h2,
+    .testimonials_ann h2 {
+        font-size: 28px;
+        line-height: 34px;
+    }
+
+    .step_ann{
+        width: 100%;
+        height: 403px;
+        margin-bottom: 20px;
+    }
+
+    .step-content_ann img {
+        width: 160px;
+        height: 169px;
+        margin-top: 25px;
+    }
+
+    .pricing-item_ann {
+        padding: 15px;
+        width: 100%;
+    }
+
+    .testimonial-cards_ann {
+        flex-direction: column;
+    }
+
+    .testimonial_ann {
+        width: 100%;
+    }
+
+    .testimonial_ann h3 {
+        font-size: 22px;
+        line-height: 25px;
+    }
+
+    .testimonial_ann p {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .cta-button-info_ann {
+        width: 320px;
+        font-size: 14px;
+        height: 42px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .cta-button-footer_ann {
+        width: 146px;
+        font-size: 10px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 7px;
+        color: #151E3A;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-weight: 500;
+        line-height: 32px;
+        margin-bottom: 20px;
+    }
+
+    .mobile-show_ann {
+        display: block;
+    }
+
+    .desktop-show_ann {
+        display: none;
+    }
+    .footer_ann {
+        color: white;
+        padding: 10px;
+        text-align: center;
+        background-color: #225BEA;
+        background-image:none;
+        text-transform: uppercase;
+    }
+    .footer_ann h2{
+        font-size: 20px;
+        line-height: 32px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+}
+
+
+
+

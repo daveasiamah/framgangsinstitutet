@@ -1,5 +1,6 @@
 "use client"
 import "@/styles/globals.scss";
+import "@/styles/annonser.css";
 // import ReactDOM from 'react-dom'
 // import { library } from '@fortawesome/fontawesome-svg-core'
 // import { fas } from '@fortawesome/free-solid-svg-icons'
@@ -13,9 +14,19 @@ import {useSession,SessionProvider} from 'next-auth/react'
 
 import type { AppProps } from "next/app";
 import Script from "next/script";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 
 export default function App({ Component,  pageProps: { session, ...pageProps } }: AppProps) {
+  const router = useRouter();
+
+  // Conditionally apply CSS for specific pages
+  // router.pathname === "/annonser" ? require("@/styles/annonser.css") : require("@/styles/globals.scss");
+
+
+
+
   return(
     <>
        {/* Add the Hotjar tracking code */}
