@@ -22,14 +22,14 @@ function Accordion({ data = [] }: Props) {
   }
 
   return (
-    <div className="grid gap-6">
+    <div className="grid gap-2">
       {data.map((data, index) => (
         <button
           onClick={() => toggle(index)}
           key={data.id}
-          className="accordion-wrapper faq-item_ann text-left bg-white border-none border-gray-200 hover:border-primary py-4 px-6 rounded-xl cursor-pointer focus:border-primary"
+          className="accordion-wrapper faq-item_ann text-left bg-white border-none border-gray-200 hover:border-primary rounded-xl cursor-pointer focus:border-primary"
         >
-          <div className="cursor-pointer py-2 flex justify-between items-center">
+          <div className="cursor-pointer flex justify-between items-center">
             <div className="font-semibold text-lg text-subtitle-dark">
               {data.question}
             </div>

@@ -28,9 +28,9 @@ export const headerData: HeaderData = {
     {
       id: 4,
       imageUrl: "/icons/header/4-briefcase.png",
-      title: "Press",
-      desc: "Media & Brandkits",
-      link: "/press"
+      title: "Chelified annonser",
+      desc: "Chelified annonser",
+      link: "/annonser"
     },
     {
       id: 5,
