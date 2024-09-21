@@ -57,7 +57,7 @@ const currentYear = new Date().getFullYear();
                 <li>
                   <Link
                     className='hover:underline underline-offset-4'
-                    href='/impact'>
+                    href='/annonser'>
                     {t.footerData.product.linkOne}
                   </Link>
                 </li>

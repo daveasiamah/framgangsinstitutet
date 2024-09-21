@@ -46,7 +46,7 @@ const Annonser = () => {
             <h1>Låt din butik växa med</h1>
             <h1>
               {" "}
-              <span className="highlight">högkvalitativa annonser</span>
+              <span className="highlight_ann">högkvalitativa annonser</span>
             </h1>
             <p className="ad-details_ann">
               <img src="/img/shopify1.png" alt="Shopify" className="shopify_ann" />

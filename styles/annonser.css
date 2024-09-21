@@ -887,7 +887,7 @@ h1{
 
     .video-wrapper_ann img{
         margin-bottom: -5px;
-        width: 670px;
+        width: 100%;
         z-index: 2;
     }
     .video-wrapper_ann iframe{
@@ -1147,11 +1147,13 @@ h1{
         margin-top: 10px;
         margin-bottom: 10px;
     }
+    .faq-items_ann{
+        margin-bottom: 10px;
+    }
     .faq-item_ann {
         width: 90%;
         padding-left: 10px;
-        padding-top: 10px;
-        margin: 0 auto 20px;
+        margin: 0 auto 10px;
         box-shadow: 5px 5px 10px 5px rgba(242, 243, 246, 1);
     }
     .faq-item_ann p{

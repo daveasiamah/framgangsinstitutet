@@ -6,7 +6,7 @@ export const footerData: FooterData = {
     " Built by e-merchants for e-merchants with the mission to help entrepreneurs start and grow successful businesses.",
   product: {
     title: "Product",
-    linkOne: "Impact",
+    linkOne: "Chelified Ads",
     linkTwo: "Affiliates",
     linkThree: "Careers"
   },
