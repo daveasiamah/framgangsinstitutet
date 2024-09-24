@@ -58,7 +58,7 @@ const currentYear = new Date().getFullYear();
                   <Link
                     className='hover:underline underline-offset-4'
                     href='/annonser'>
-                    {t.footerData.product.linkOne}
+                    Chelified Ads
                   </Link>
                 </li>
                 <li>
