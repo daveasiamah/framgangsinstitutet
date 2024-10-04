@@ -4410,6 +4410,10 @@ input[type="submit"].btn-block {
     display: inline-block;
     width: 100%;
   }
+  h1{
+    font-size: 14px !important;
+    line-height: 20px;
+  }
 }
 .accordion {
   overflow-anchor: none;
@@ -4980,6 +4984,10 @@ a.badge-dark:focus {
     margin-left: -1px;
     border-left-width: 1px;
   }
+  h1{
+    font-size: 14px !important;
+    line-height: 20px;
+  }
 }
 @media (min-width: 768px) {
   .list-group-horizontal-md {
@@ -5406,6 +5414,10 @@ a.close.disabled {
   }
   .modal-sm {
     max-width: 300px;
+  }
+  h1{
+    font-size: 14px !important;
+    line-height: 20px;
   }
 }
 @media (min-width: 992px) {
@@ -6161,6 +6173,10 @@ button.bg-dark:hover {
   }
   .d-sm-inline-flex {
     display: inline-flex !important;
+  }
+  h1{
+    font-size: 14px !important;
+    line-height: 20px;
   }
 }
 @media (min-width: 768px) {
@@ -8793,6 +8809,10 @@ button.bg-dark:hover {
   }
   .text-sm-center {
     text-align: center !important;
+  }
+  h1{
+    font-size: 14px !important;
+    line-height: 20px;
   }
 }
 @media (min-width: 768px) {

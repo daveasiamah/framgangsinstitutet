@@ -22,10 +22,10 @@ import axios from 'axios';
 import Marquee from "react-fast-marquee";
 import VideoTrainingCard from "@/components/parts/VideoTrainingCard"
 const FeatureCard = dynamic(() => import('@/components/parts/FeatureCard'), {
-    loading: () => <p>Loading...</p>,
+  loading: () => <p>Loading...</p>,
 })
 const Accordion = dynamic(() => import('@/components/parts/Accordion_Home'), {
-    loading: () => <p>Loading...</p>,
+  loading: () => <p>Loading...</p>,
 })
 const ContractForm = dynamic(() => import('@/components/ContractForm'), {
   loading: () => <p>Loading...</p>,
@@ -101,162 +101,162 @@ export default function Home() {
   }
 
   return (
-    <>
-      <div
-        data-theme="light"
-        className={`fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-25 backdrop-blur-sm  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full justify-center items-center transition ${showModal ? "flex" : "hidden"}`}
-        onClick={() => setShowModal(false)}
+      <>
+        <div
+            data-theme="light"
+            className={`fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-25 backdrop-blur-sm  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full justify-center items-center transition ${showModal ? "flex" : "hidden"}`}
+            onClick={() => setShowModal(false)}
         >
           <ContractForm onClose={closeModal} />
-      </div>
-      <Layout headTitle={t.homeData.metaData.title}>
-      <section className="relative hero-height pt-8 flex flex-col lg:flex-row justify-between items-center gap-10">
-        <BlurCircle positionClassName="left-0 top-20" size="lg" />
-        <LineGraphic
-          positionClassname="right-[-14rem] 2xl:right-[-12rem] top-[-30px]"
-          className="svg-primary"
-        />
+        </div>
+        <Layout headTitle={t.homeData.metaData.title}>
+          <section className="relative hero-height pt-8 flex flex-col lg:flex-row justify-between items-center gap-10">
+            <BlurCircle positionClassName="left-0 top-20" size="lg" />
+            <LineGraphic
+                positionClassname="right-[-14rem] 2xl:right-[-12rem] top-[-30px]"
+                className="svg-primary"
+            />
 
-        <div className="w-full text-center mb-6 lg:mb-0">
-          <ScrollReveal>
-            <div className="flex items-center justify-center gap-1 mb-1">
-              <h1 className="text-2xl lg:text-6xl font-bold">
-                {t.homeData.heroBlackTitle}
-              </h1>
-              <h1 className="text-2xl lg:text-6xl font-bold text-primary">
-                {t.homeData.heroBlueTitle}
-              </h1>
-            </div>
-            <h1 className="text-2xl lg:text-6xl font-bold lg:mb-2">
-              {t.homeData.heroBlackTitleTwo}
-            </h1>
-          </ScrollReveal>
+            <div className="w-full text-center mb-6 lg:mb-0">
+              <ScrollReveal>
+                <div className="flex items-center justify-center gap-1 mb-1">
+                  <h1 className="text-2xl lg:text-6xl font-bold">
+                    {t.homeData.heroBlackTitle}
+                  </h1>
+                  <h1 className="text-2xl lg:text-6xl font-bold text-primary">
+                    {t.homeData.heroBlueTitle}
+                  </h1>
+                </div>
+                <h1 className="text-2xl lg:text-6xl font-bold lg:mb-2">
+                  {t.homeData.heroBlackTitleTwo}
+                </h1>
+              </ScrollReveal>
 
-          <div className="relative max-w-[706px] mx-auto flex flex-col items-center justify-center gap-1 mt-12">
-            <div className="hidden lg:flex absolute top-0 w-full items-center justify-center gap-1 p-0.5 bg-primary text-white">
-              <Image
-                src="/icons/home/video-play-sm.svg"
-                alt="play video"
-                width={16}
-                height={16}
-              />
-              <h3 className="text-sm">{t.homeData.heroVideoDesc}</h3>
-            </div>
-          <div className="video-container">
-  <iframe
-    width="706"
-    height="397"
-    src="https://www.youtube.com/embed/pTVfynxC3-c?si=VXY1V0Wf90F4QeV9"
-    title="YouTube video player"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    frameBorder="0"
-    allowFullScreen
-  ></iframe>
-</div>
+              <div className="relative max-w-[706px] mx-auto flex flex-col items-center justify-center gap-1 mt-12">
+                <div className="hidden lg:flex absolute top-0 w-full items-center justify-center gap-1 p-0.5 bg-primary text-white">
+                  <Image
+                      src="/icons/home/video-play-sm.svg"
+                      alt="play video"
+                      width={16}
+                      height={16}
+                  />
+                  <h3 className="text-sm">{t.homeData.heroVideoDesc}</h3>
+                </div>
+                <div className="video-container">
+                  <iframe
+                      width="706"
+                      height="397"
+                      src="https://www.youtube.com/embed/pTVfynxC3-c?si=VXY1V0Wf90F4QeV9"
+                      title="YouTube video player"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      frameBorder="0"
+                      allowFullScreen
+                  ></iframe>
+                </div>
 
-            {/* <Image
+                {/* <Image
               src="/images/home/home-video-lock.png"
               alt="video"
-              width="706" 
-              height="423" 
+              width="706"
+              height="423"
               className="block lg:hidden -mt-8"
               onClick={openModal}
             /> */}
-            <div className="w-full mt-0 lg:mt-8">
-              <button className="btn btn-primary w-full" onClick={openModal}>
-                {t.homeData.heroButton}
-              </button>
-            </div>
-            <div className="flex items-center gap-1 mt-2">
-              <Image
-                src="/icons/home/users-pics.png"
-                alt="user pics"
-                width={90}
-                height={48}
-              />
-              <span className="text-sm text-gray-500">{t.homeData.heroJoinText}</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-base-200 p-8 lg:py-14 lg:px-16 text-center my-14 lg:my-18 rounded-2xl">
-        <h2 className="text-2xl lg:text-3xl font-bold mb-10">
-          {t.homeData.knowledgeText}
-        </h2>
-
-        <div className="flex flex-wrap gap-4 items-center justify-center lg:justify-between">
-          {platformData.map((data) => (
-            <div
-              key={data.id}
-              className="relative w-[45%] lg:w-1/6 2xl:w-[15%] h-[50px] lg:h-[100px]"
-            >
-              <Image
-                src={data.imageUrl}
-                alt="platform"
-                className="object-contain"
-                fill
-                loading="lazy"
-              />
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="relative text-center mb-16 lg:mb-20">
-        <CacingOne
-          positionClassName="left-[-16rem] 2xl:left-[-12rem] rotate-[100deg] top-[10rem] lg:top-[2rem]"
-          sizeClassName="w-[24rem] h-[24rem]"
-          className="z-[-1]"
-        />
-
-        <CacingOne
-          positionClassName="right-[-16rem] 2xl:right-[-10rem] rotate-[30deg] top-[18rem] 2xl:top-[0rem]"
-          sizeClassName="w-[30rem] h-[30rem]"
-          className="z-[-1]"
-        />
-
-        <BlurCircle positionClassName="right-[-4rem] top-[6rem]" size="lg" />
-
-        <ScrollReveal>
-          <Title
-            blackText={t.homeData.platformBlackTitle}
-            blueText={t.homeData.platformBlueTitle}
-            className="hidden lg:block"
-          />
-          <Title
-            blackText={t.homeData.platformBlackTitle}
-            blueText={t.homeData.platformBlueTitle}
-            isBlock
-            className="block lg:hidden"
-          />
-        </ScrollReveal>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          {t.homeData.featureData.map((data) => (
-            <div
-              key={data.id}
-              className="feature-card bg-white p-10 rounded-[2rem] feature-card-shadow"
-            >
-              <div className="icon-container bg-base-200 p-6 rounded-full inline-flex place-content-center mb-3">
-                <Image
-                  src={data.imageUrl}
-                  alt={data.title}
-                  height={60}
-                  width={60}
-                  className="object-contain"
-                  loading="lazy"
-                />
+                <div className="w-full mt-0 lg:mt-8">
+                  <button className="btn btn-primary w-full" onClick={openModal}>
+                    {t.homeData.heroButton}
+                  </button>
+                </div>
+                <div className="flex items-center gap-1 mt-2">
+                  <Image
+                      src="/icons/home/users-pics.png"
+                      alt="user pics"
+                      width={90}
+                      height={48}
+                  />
+                  <span className="text-sm text-gray-500">{t.homeData.heroJoinText}</span>
+                </div>
               </div>
-              <ScrollReveal>
-                <h3 className="text-lg font-bold mb-6">{data.title}</h3>
-                <p>{data.desc}</p>
-              </ScrollReveal>
             </div>
-          ))}
-        </div>
-      </section>
+          </section>
 
-      {/* <section className="bg-base-200 py-14 px-16 text-center mb-16 lg:mb-20 rounded-[3rem]">
+          <section className="bg-base-200 p-8 lg:py-14 lg:px-16 text-center my-14 lg:my-18 rounded-2xl">
+            <h2 className="text-2xl lg:text-3xl font-bold mb-10">
+              {t.homeData.knowledgeText}
+            </h2>
+
+            <div className="flex flex-wrap gap-4 items-center justify-center lg:justify-between">
+              {platformData.map((data) => (
+                  <div
+                      key={data.id}
+                      className="relative w-[45%] lg:w-1/6 2xl:w-[15%] h-[50px] lg:h-[100px]"
+                  >
+                    <Image
+                        src={data.imageUrl}
+                        alt="platform"
+                        className="object-contain"
+                        fill
+                        loading="lazy"
+                    />
+                  </div>
+              ))}
+            </div>
+          </section>
+
+          <section className="relative text-center mb-16 lg:mb-20">
+            <CacingOne
+                positionClassName="left-[-16rem] 2xl:left-[-12rem] rotate-[100deg] top-[10rem] lg:top-[2rem]"
+                sizeClassName="w-[24rem] h-[24rem]"
+                className="z-[-1]"
+            />
+
+            <CacingOne
+                positionClassName="right-[-16rem] 2xl:right-[-10rem] rotate-[30deg] top-[18rem] 2xl:top-[0rem]"
+                sizeClassName="w-[30rem] h-[30rem]"
+                className="z-[-1]"
+            />
+
+            <BlurCircle positionClassName="right-[-4rem] top-[6rem]" size="lg" />
+
+            <ScrollReveal>
+              <Title
+                  blackText={t.homeData.platformBlackTitle}
+                  blueText={t.homeData.platformBlueTitle}
+                  className="hidden lg:block"
+              />
+              <Title
+                  blackText={t.homeData.platformBlackTitle}
+                  blueText={t.homeData.platformBlueTitle}
+                  isBlock
+                  className="block lg:hidden"
+              />
+            </ScrollReveal>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+              {t.homeData.featureData.map((data) => (
+                  <div
+                      key={data.id}
+                      className="feature-card bg-white p-10 rounded-[2rem] feature-card-shadow"
+                  >
+                    <div className="icon-container bg-base-200 p-6 rounded-full inline-flex place-content-center mb-3">
+                      <Image
+                          src={data.imageUrl}
+                          alt={data.title}
+                          height={60}
+                          width={60}
+                          className="object-contain"
+                          loading="lazy"
+                      />
+                    </div>
+                    <ScrollReveal>
+                      <h3 className="text-lg font-bold mb-6">{data.title}</h3>
+                      <p>{data.desc}</p>
+                    </ScrollReveal>
+                  </div>
+              ))}
+            </div>
+          </section>
+
+          {/* <section className="bg-base-200 py-14 px-16 text-center mb-16 lg:mb-20 rounded-[3rem]">
         <Image
           src="/icons/home/infrastructure-icon.png"
           width={80}
@@ -296,123 +296,123 @@ export default function Home() {
         </div>
       </section> */}
 
-      <section className="relative flex flex-col justify-center md:mb-16 lg:mb-20">
-        <CacingOne
-          positionClassName="left-[-20rem] lg:left-[-12rem] rotate-[-50deg] top-[18rem] lg:top-[40rem] 2xl:top-[50rem]"
-          sizeClassName="w-[30rem] h-[30rem]"
-          className="z-[-1]"
-        />
-        <ScrollReveal>
-          <Title
-            blackText={t.homeData.videoTrainingBlackTitle}
-            blueText={t.homeData.videoTrainingBlueTitle}
-            isBlock
-            className="text-center"
-          />
-        </ScrollReveal>
-        <div className="lg:mt-8 py-8 bg-base-200 rounded-2xl">
-          <Swiper
-            grabCursor={true}
-            loop={true}
-            modules={[EffectCards, Navigation, Autoplay]}
-            onSwiper={(swiper) => swiperRef1.current = swiper}
-            className="testimony-swiper"
-            navigation={{
-              nextEl: ".nav-right",
-              prevEl: ".nav-left"
-            }}
-            autoplay={{
-              delay: 3500,
-              disableOnInteraction: false
-            }}
-          >
-            {t.homeData.videoTrainingData.map((data) => (
-              <SwiperSlide key={data.id}>
-                {({ isActive }) => (
-                  <VideoTrainingCard
-                    blackText={data.title}
-                    blueText={data.bluetitle}
-                    subTitle={data.subtitle}
-                    imageUrl={data.imageUrl}
+          <section className="relative flex flex-col justify-center md:mb-16 lg:mb-20">
+            <CacingOne
+                positionClassName="left-[-20rem] lg:left-[-12rem] rotate-[-50deg] top-[18rem] lg:top-[40rem] 2xl:top-[50rem]"
+                sizeClassName="w-[30rem] h-[30rem]"
+                className="z-[-1]"
+            />
+            <ScrollReveal>
+              <Title
+                  blackText={t.homeData.videoTrainingBlackTitle}
+                  blueText={t.homeData.videoTrainingBlueTitle}
+                  isBlock
+                  className="text-center"
+              />
+            </ScrollReveal>
+            <div className="lg:mt-8 py-8 bg-base-200 rounded-2xl">
+              <Swiper
+                  grabCursor={true}
+                  loop={true}
+                  modules={[EffectCards, Navigation, Autoplay]}
+                  onSwiper={(swiper) => swiperRef1.current = swiper}
+                  className="testimony-swiper"
+                  navigation={{
+                    nextEl: ".nav-right",
+                    prevEl: ".nav-left"
+                  }}
+                  autoplay={{
+                    delay: 3500,
+                    disableOnInteraction: false
+                  }}
+              >
+                {t.homeData.videoTrainingData.map((data) => (
+                    <SwiperSlide key={data.id}>
+                      {({ isActive }) => (
+                          <VideoTrainingCard
+                              blackText={data.title}
+                              blueText={data.bluetitle}
+                              subTitle={data.subtitle}
+                              imageUrl={data.imageUrl}
+                          />
+                      )}
+                    </SwiperSlide>
+                ))}
+                <button className="hidden lg:block absolute z-[1] left-10 top-1/2 transform -translate-y-1/2 nav-left">
+                  <Image
+                      src="/icons/impact/arrow-left.png"
+                      width={80}
+                      height={80}
+                      alt="arrow left"
                   />
-                )}
-              </SwiperSlide>
-            ))}
-            <button className="hidden lg:block absolute z-[1] left-10 top-1/2 transform -translate-y-1/2 nav-left">
-              <Image
-                src="/icons/impact/arrow-left.png"
-                width={80}
-                height={80}
-                alt="arrow left"
-              />
-            </button>
-            <button className="hidden lg:block absolute z-[1] right-10 top-1/2 transform -translate-y-1/2 nav-right">
-              <Image
-                src="/icons/impact/arrow-right.png"
-                width={80}
-                height={80}
-                alt="arrow left"
-              />
-            </button>
-          </Swiper>
-        </div>
-      </section>
-
-      <section className="relative flex items-stretch gap-4 item mt-10 px-6 pt-6 mb-16 lg:mb-20 bg-primary rounded-2xl">
-        <div className="relative hidden lg:block flex-1">
-          <Image
-            src="/images/university/glass-men.png"
-            fill
-            alt="men"
-            className="object-contain"
-          />
-        </div>
-        <div className="flex-1 flex flex-col items-center px-4 lg:px-10 py-8 bg-white/20 rounded-tl-2xl  rounded-tr-2xl overflow-hidden">
-          <ScrollReveal className="text-center text-white">
-            <h3 className="font-bold text-2xl lg:text-4xl">{t.homeData.videoDataTitle}</h3>
-            <h3 className="mt-1 font-bold text-2xl lg:text-4xl">{t.homeData.videoDataTitleTwo}</h3>
-            <div className="text-sm mt-6">
-              <p>{t.homeData.videoDataSubtitle}</p>
-              <p className="mt-4">{t.homeData.videoDataSubtitleTwo}</p>
+                </button>
+                <button className="hidden lg:block absolute z-[1] right-10 top-1/2 transform -translate-y-1/2 nav-right">
+                  <Image
+                      src="/icons/impact/arrow-right.png"
+                      width={80}
+                      height={80}
+                      alt="arrow left"
+                  />
+                </button>
+              </Swiper>
             </div>
-          </ScrollReveal>
-          <div className="mt-6 hidden lg:block">
-            <button onClick={openModal} className="btn btn-primary">
-              {t.homeData.heroButton}
-            </button>
-          </div>
-          <Swiper
-            effect="fade"
-            grabCursor={true}
-            loop={true}
-            modules={[Navigation, Autoplay]}
-            className="testimony-swiper w-full max-w-[365px] max-h-365px mt-6"
-            onSwiper={(swiper) => swiperRef2.current = swiper}
-            autoplay={{
-              delay: 3000,
-              disableOnInteraction: false
-            }}
-          >
-            {t.homeData.videoDataImgs.map((img) => (
-              <SwiperSlide key={img} >
-                {({ isActive }) => (
-                  <div className="mx-auto max-w-[203px] lg:max-w-[365px]">
-                    <Image
-                      src={img}
-                      width={365}
-                      height={325}
-                      alt="data"
-                      className="object-cover"
-                    />
-                  </div>
-                )}
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
-      </section>
+          </section>
 
-      {/* <section className="relative md:py-14 lg:py-14 mb-16 lg:mb-20 flex flex-col lg:flex-row gap-20">
+          <section className="relative flex items-stretch gap-4 item mt-10 px-6 pt-6 mb-16 lg:mb-20 bg-primary rounded-2xl">
+            <div className="relative hidden lg:block flex-1">
+              <Image
+                  src="/images/university/glass-men.png"
+                  fill
+                  alt="men"
+                  className="object-contain"
+              />
+            </div>
+            <div className="flex-1 flex flex-col items-center px-4 lg:px-10 py-8 bg-white/20 rounded-tl-2xl  rounded-tr-2xl overflow-hidden">
+              <ScrollReveal className="text-center text-white">
+                <h3 className="font-bold text-2xl lg:text-4xl">{t.homeData.videoDataTitle}</h3>
+                <h3 className="mt-1 font-bold text-2xl lg:text-4xl">{t.homeData.videoDataTitleTwo}</h3>
+                <div className="text-sm mt-6">
+                  <p>{t.homeData.videoDataSubtitle}</p>
+                  <p className="mt-4">{t.homeData.videoDataSubtitleTwo}</p>
+                </div>
+              </ScrollReveal>
+              <div className="mt-6 hidden lg:block">
+                <button onClick={openModal} className="btn btn-primary">
+                  {t.homeData.heroButton}
+                </button>
+              </div>
+              <Swiper
+                  effect="fade"
+                  grabCursor={true}
+                  loop={true}
+                  modules={[Navigation, Autoplay]}
+                  className="testimony-swiper w-full max-w-[365px] max-h-365px mt-6"
+                  onSwiper={(swiper) => swiperRef2.current = swiper}
+                  autoplay={{
+                    delay: 3000,
+                    disableOnInteraction: false
+                  }}
+              >
+                {t.homeData.videoDataImgs.map((img) => (
+                    <SwiperSlide key={img} >
+                      {({ isActive }) => (
+                          <div className="mx-auto max-w-[203px] lg:max-w-[365px]">
+                            <Image
+                                src={img}
+                                width={365}
+                                height={325}
+                                alt="data"
+                                className="object-cover"
+                            />
+                          </div>
+                      )}
+                    </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+          </section>
+
+          {/* <section className="relative md:py-14 lg:py-14 mb-16 lg:mb-20 flex flex-col lg:flex-row gap-20">
         <div className="w-full lg:w-1/2">
           <ScrollReveal>
             <Title
@@ -423,7 +423,7 @@ export default function Home() {
             <p className="text-subtitle">{t.homeData.contactSubtitle}</p>
           </ScrollReveal>
 
-          
+
             <Image
               src="/images/home/bulb.png"
               alt="acher"
@@ -431,102 +431,102 @@ export default function Home() {
               width={500}
               className="object-contain mx-auto mt-6"
             />
-        
+
         </div>
         <div className="w-full lg:w-1/2">
           <ContactForm contactData={t.homeData.contactForm} />
         </div>
       </section> */}
 
-      <section className="mb-16 lg:mb-20 medsos-container">
-        <ScrollReveal>
-          <Title
-            blackText={t.homeData.medsosTitle}
-            blueText={t.homeData.medsosBlueTitle}
-            className="text-center block lg:hidden"
-            isBlock
-          />
-          <Title
-            blackText={t.homeData.medsosTitle}
-            blueText={t.homeData.medsosBlueTitle}
-            className="text-center hidden lg:block"
-          />
-        </ScrollReveal>
-        <div className="flex items-center justify-center">
-          <div className="w-[400%] lg:w-[200%] h-28 overflow-hidden relative">
-            <div className="w-[400%] lg:w-[200%] h-20 flex items-center absolute left-0 top-1/2 transform -translate-y-1/2 gap-2 justify-around infinite-slide-left">
-              {medsosData.slice(0, 4).map((data) => (
-                <div
-                  key={data.id}
-                  className="bg-white p-10 rounded-2xl w-[16rem] shadow-lg h-full grid place-content-center relative"
-                >
-                  <Image
-                    src={data.imageUrl}
-                    alt="sosmed"
-                    fill
-                    className="object-contain p-5"
-                    loading="lazy"
-                  />
+          <section className="mb-16 lg:mb-20 medsos-container">
+            <ScrollReveal>
+              <Title
+                  blackText={t.homeData.medsosTitle}
+                  blueText={t.homeData.medsosBlueTitle}
+                  className="text-center block lg:hidden"
+                  isBlock
+              />
+              <Title
+                  blackText={t.homeData.medsosTitle}
+                  blueText={t.homeData.medsosBlueTitle}
+                  className="text-center hidden lg:block"
+              />
+            </ScrollReveal>
+            <div className="flex items-center justify-center">
+              <div className="w-[400%] lg:w-[200%] h-28 overflow-hidden relative">
+                <div className="w-[400%] lg:w-[200%] h-20 flex items-center absolute left-0 top-1/2 transform -translate-y-1/2 gap-2 justify-around infinite-slide-left">
+                  {medsosData.slice(0, 4).map((data) => (
+                      <div
+                          key={data.id}
+                          className="bg-white p-10 rounded-2xl w-[16rem] shadow-lg h-full grid place-content-center relative"
+                      >
+                        <Image
+                            src={data.imageUrl}
+                            alt="sosmed"
+                            fill
+                            className="object-contain p-5"
+                            loading="lazy"
+                        />
+                      </div>
+                  ))}
+                  {medsosData.slice(0, 4).map((data) => (
+                      <div
+                          key={data.id}
+                          className="bg-white p-10 rounded-2xl w-[16rem] shadow-lg h-full grid place-content-center relative"
+                      >
+                        <Image
+                            src={data.imageUrl}
+                            alt="sosmed"
+                            fill
+                            className="object-contain p-5"
+                            loading="lazy"
+                        />
+                      </div>
+                  ))}
                 </div>
-              ))}
-              {medsosData.slice(0, 4).map((data) => (
-                <div
-                  key={data.id}
-                  className="bg-white p-10 rounded-2xl w-[16rem] shadow-lg h-full grid place-content-center relative"
-                >
-                  <Image
-                    src={data.imageUrl}
-                    alt="sosmed"
-                    fill
-                    className="object-contain p-5"
-                    loading="lazy"
-                  />
-                </div>
-              ))}
+              </div>
             </div>
-          </div>
-        </div>
-        <div className="flex items-center justify-center">
-          <div className="w-[400%] lg:w-[200%] h-28 overflow-hidden relative">
-            <div className="w-[400%] lg:w-[200%] h-20 flex items-center absolute right-0 top-1/2 transform -translate-y-1/2 gap-2 justify-around infinite-slide-right">
-              {medsosData.slice(4, 9).map((data) => (
-                <div
-                  key={data.id}
-                  className="bg-white p-10 rounded-2xl w-[16rem] shadow-lg h-full grid place-content-center relative"
-                >
-                  <Image
-                    src={data.imageUrl}
-                    alt="sosmed"
-                    fill
-                    className="object-contain p-5"
-                    loading="lazy"
-                  />
+            <div className="flex items-center justify-center">
+              <div className="w-[400%] lg:w-[200%] h-28 overflow-hidden relative">
+                <div className="w-[400%] lg:w-[200%] h-20 flex items-center absolute right-0 top-1/2 transform -translate-y-1/2 gap-2 justify-around infinite-slide-right">
+                  {medsosData.slice(4, 9).map((data) => (
+                      <div
+                          key={data.id}
+                          className="bg-white p-10 rounded-2xl w-[16rem] shadow-lg h-full grid place-content-center relative"
+                      >
+                        <Image
+                            src={data.imageUrl}
+                            alt="sosmed"
+                            fill
+                            className="object-contain p-5"
+                            loading="lazy"
+                        />
+                      </div>
+                  ))}
+                  {medsosData.slice(4, 9).map((data) => (
+                      <div
+                          key={data.id}
+                          className="bg-white p-10 rounded-2xl w-[16rem] shadow-lg h-full grid place-content-center relative"
+                      >
+                        <Image
+                            src={data.imageUrl}
+                            alt="sosmed"
+                            fill
+                            className="object-contain p-5"
+                            loading="lazy"
+                        />
+                      </div>
+                  ))}
                 </div>
-              ))}
-              {medsosData.slice(4, 9).map((data) => (
-                <div
-                  key={data.id}
-                  className="bg-white p-10 rounded-2xl w-[16rem] shadow-lg h-full grid place-content-center relative"
-                >
-                  <Image
-                    src={data.imageUrl}
-                    alt="sosmed"
-                    fill
-                    className="object-contain p-5"
-                    loading="lazy"
-                  />
-                </div>
-              ))}
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
 
-      <section className="relative py-14">
-        <BlurCircle positionClassName="right-[-4rem] top-[30rem]" size="lg" />
+          <section className="relative py-14">
+            <BlurCircle positionClassName="right-[-4rem] top-[30rem]" size="lg" />
 
-        <div className="relative w-fit mx-auto">
-          {/* <span className="absolute top-[25%] left-[12%] pulse" />
+            <div className="relative w-fit mx-auto">
+              {/* <span className="absolute top-[25%] left-[12%] pulse" />
           <span className="absolute top-[40%] left-[8%] pulse-1" />
           <span className="absolute top-[3%] left-[45%] pulse-2" />
           <span className="absolute bottom-[18%] left-[45%] pulse-3" />
@@ -534,16 +534,16 @@ export default function Home() {
           <span className="absolute bottom-[30%] right-[8%] pulse-1" />
           <span className="absolute bottom-[50%] right-[16%] pulse-1" />
           <span className="absolute top-[22%] right-[12%] pulse" /> */}
-          <Image
-            src="/images/home/globe.gif"
-            alt="globe"
-            height={500}
-            width={500}
-            className="object-contain mx-auto mb-16"
-          />
-        </div>
+              <Image
+                  src="/images/home/globe.gif"
+                  alt="globe"
+                  height={500}
+                  width={500}
+                  className="object-contain mx-auto mb-16"
+              />
+            </div>
 
-        {/* <div className="bg-base-200 p-8 lg:py-14 lg:px-16 mb-16 rounded-[3rem]">
+            {/* <div className="bg-base-200 p-8 lg:py-14 lg:px-16 mb-16 rounded-[3rem]">
           <ScrollReveal>
             <Title
               blackText={t.homeData.startSellingBlackTittle}
@@ -567,189 +567,189 @@ export default function Home() {
             </ButtonArrow>
           </ScrollReveal>
         </div> */}
-      </section>
+          </section>
 
-      <section className="relative mb-16 lg:mb-20">
-        <BlurCircle
-          positionClassName="right-[-4rem] top-[10rem] lg:top-[8rem]"
-          size="lg"
-        />
-
-        <ScrollReveal>
-          <Title
-            blackText={t.homeData.featuresExploreBlackTitle}
-            blueText={t.homeData.featuresExploreBlueTitle}
-            isBlock
-            className="text-center"
-          />
-        </ScrollReveal>
-        <div className="hidden grid-cols-1 lg:grid-cols-3 gap-8 lg:grid">
-          {t.homeData.featuresExploreData.map((data) => (
-            <FeatureCard key={data.id} data={data} />
-          ))}
-        </div>
-        <div className="block lg:hidden">
-          <Swiper
-            grabCursor={true}
-            loop={true}
-            modules={[EffectCards, Navigation, Autoplay]}
-            onSwiper={(swiper) => swiperRef3.current = swiper}
-            className="testimony-swiper"
-            autoplay={{
-              delay: 3000,
-              disableOnInteraction: false
-            }}
-          >
-            {t.homeData.featuresExploreData.map((data) => (
-              <SwiperSlide key={data.id}>
-                {({ isActive }) => (
-                  <FeatureCard data={data} />
-                )}
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
-
-      </section>
-
-      <section className="bg-primary rounded-2xl text-center text-white py-14 px-4 lg:px-10">
-        <ScrollReveal>
-          <Title
-            blackText={t.homeData.reasonTitle}
-            className="text-center text-white"
-          />
-          <p className="mx-auto text-lg max-w-4xl">{t.homeData.reasonSubtitle}</p>
-        </ScrollReveal>
-
-        <div>
-          <button onClick={openModal} className="mt-16 btn btn-white w-60">
-            {t.homeData.reasonButton}
-          </button>
-        </div>
-      </section>
-
-      <section className="mt-60 mb-16 lg:mb-20 testimonial-section h-[620px]">
-        <BlurCircle positionClassName="left-[-8rem] top-[12rem]" size="lg" />
-        <div className="absolute left-0 right-0 bg-base-200 h-[620px]">
-          <Image
-            src="/images/home/acher.png"
-            alt="acher"
-            height={280}
-            width={280}
-            className="absolute left-0 right-0 mx-auto -translate-y-3/4 object-contain"
-          />
-          <ScrollReveal className="mt-20">
-            <Title
-              blackText={t.homeData.testimonyBlackTitle}
-              blueText={t.homeData.testimonyBlueTitle}
-              isBlock
-              className="mb-16 lg:mb-20 text-center"
+          <section className="relative mb-16 lg:mb-20">
+            <BlurCircle
+                positionClassName="right-[-4rem] top-[10rem] lg:top-[8rem]"
+                size="lg"
             />
-          </ScrollReveal>
-        </div>
-        <div className="relative pt-48  items-center justify-center testimonial-slider-container">
-          <div className="absolute" style={{}}>
-          <div className="items-center left-0 gap-2 justify-around testimonial-slider">
-          <Marquee style={{ width: "1300px", overflow: "visible" }} speed={30}>
-              {[...t.homeData.testimonyData].map((data) => (
-                <div
-                  key={`${data.id} ${Math.random()}`}
-                  className="rounded-2xl h-full grid place-content-center"
-                  style={{ paddingRight: "30px" }}
-                >
-                  <Image
-                    src={data.imageUrl}
-                    alt="testimonial"
-                    width="0"
-                    height="0"
-                    sizes="100vw"
-                    style={{ width: '300px', height: '400px' }}
-                    className="rounded-lg"
-                    loading="lazy"
-                  />
-                </div>
+
+            <ScrollReveal>
+              <Title
+                  blackText={t.homeData.featuresExploreBlackTitle}
+                  blueText={t.homeData.featuresExploreBlueTitle}
+                  isBlock
+                  className="text-center"
+              />
+            </ScrollReveal>
+            <div className="hidden grid-cols-1 lg:grid-cols-3 gap-8 lg:grid">
+              {t.homeData.featuresExploreData.map((data) => (
+                  <FeatureCard key={data.id} data={data} />
               ))}
-          </Marquee>
-          </div>
-          </div>
-        </div>
-      </section>
+            </div>
+            <div className="block lg:hidden">
+              <Swiper
+                  grabCursor={true}
+                  loop={true}
+                  modules={[EffectCards, Navigation, Autoplay]}
+                  onSwiper={(swiper) => swiperRef3.current = swiper}
+                  className="testimony-swiper"
+                  autoplay={{
+                    delay: 3000,
+                    disableOnInteraction: false
+                  }}
+              >
+                {t.homeData.featuresExploreData.map((data) => (
+                    <SwiperSlide key={data.id}>
+                      {({ isActive }) => (
+                          <FeatureCard data={data} />
+                      )}
+                    </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
 
-      <section className="relative university-container bg-primary p-8 lg:px-16 lg:py-14 mb-16 lg:mb-20 rounded-3xl text-white text-left flex flex-col lg:flex-row gap-20">
-        <ScrollReveal className="w-full lg:w-2/3 z-10">
-          <h2 className="text-4xl font-bold mb-8">
-            {t.homeData.checkifiedUnivTitle}
-          </h2>
-          <p className="mb-2">{t.homeData.checkifiedUnivListTDesc}</p>
-          <ul className="mt-4 grid gap-3">
-            {t.homeData.checkifiedUnivList.map((list) => (
-              <li key={list.id} className="flex items-center gap-4">
-                <div className="w-6">
-                  <FaCheckCircle size={20} />
+          </section>
+
+          <section className="bg-primary rounded-2xl text-center text-white py-14 px-4 lg:px-10">
+            <ScrollReveal>
+              <Title
+                  blackText={t.homeData.reasonTitle}
+                  className="text-center text-white"
+              />
+              <p className="mx-auto text-lg max-w-4xl">{t.homeData.reasonSubtitle}</p>
+            </ScrollReveal>
+
+            <div>
+              <button onClick={openModal} className="mt-16 btn btn-white w-60">
+                {t.homeData.reasonButton}
+              </button>
+            </div>
+          </section>
+
+          <section className="mt-60 mb-16 lg:mb-20 testimonial-section h-[620px]">
+            <BlurCircle positionClassName="left-[-8rem] top-[12rem]" size="lg" />
+            <div className="absolute left-0 right-0 bg-base-200 h-[620px]">
+              <Image
+                  src="/images/home/acher.png"
+                  alt="acher"
+                  height={280}
+                  width={280}
+                  className="absolute left-0 right-0 mx-auto -translate-y-3/4 object-contain"
+              />
+              <ScrollReveal className="mt-20">
+                <Title
+                    blackText={t.homeData.testimonyBlackTitle}
+                    blueText={t.homeData.testimonyBlueTitle}
+                    isBlock
+                    className="mb-16 lg:mb-20 text-center"
+                />
+              </ScrollReveal>
+            </div>
+            <div className="relative pt-48  items-center justify-center testimonial-slider-container">
+              <div className="absolute" style={{}}>
+                <div className="items-center left-0 gap-2 justify-around testimonial-slider">
+                  <Marquee style={{ width: "1300px", overflow: "visible" }} speed={30}>
+                    {[...t.homeData.testimonyData].map((data) => (
+                        <div
+                            key={`${data.id} ${Math.random()}`}
+                            className="rounded-2xl h-full grid place-content-center"
+                            style={{ paddingRight: "30px" }}
+                        >
+                          <Image
+                              src={data.imageUrl}
+                              alt="testimonial"
+                              width="0"
+                              height="0"
+                              sizes="100vw"
+                              style={{ width: '300px', height: '400px' }}
+                              className="rounded-lg"
+                              loading="lazy"
+                          />
+                        </div>
+                    ))}
+                  </Marquee>
                 </div>
+              </div>
+            </div>
+          </section>
 
-                <p className="flex-1">{list.list}</p>
-              </li>
-            ))}
-          </ul>
-          <div>
-            <button onClick={openModal} className="btn btn-white mt-10 w-full lg:w-[304px]">
-              {t.homeData.checkifiedUnivButton}
-            </button>
-          </div>
-        </ScrollReveal>
-        <div className="relative mx-auto w-[259px] lg:w-1/3 h-[382px] lg:h-full">
-          <Image
-            src="/images/home/checkified-university.png"
-            alt="checkified university"
-            height={500}
-            width={500}
-            className="absolute bottom-[-3rem] lg:top-[-1rem] xl:top-[-6rem] 2xl:top-[-10rem] lg:-right-1/4 lg:scale-[1.4] xl:scale-[1] 2xl:scale-75 object-contain"
-            priority
-          />
-        </div>
-      </section>
+          <section className="relative university-container bg-primary p-8 lg:px-16 lg:py-14 mb-16 lg:mb-20 rounded-3xl text-white text-left flex flex-col lg:flex-row gap-20">
+            <ScrollReveal className="w-full lg:w-2/3 z-10">
+              <h2 className="text-4xl font-bold mb-8">
+                {t.homeData.checkifiedUnivTitle}
+              </h2>
+              <p className="mb-2">{t.homeData.checkifiedUnivListTDesc}</p>
+              <ul className="mt-4 grid gap-3">
+                {t.homeData.checkifiedUnivList.map((list) => (
+                    <li key={list.id} className="flex items-center gap-4">
+                      <div className="w-6">
+                        <FaCheckCircle size={20} />
+                      </div>
 
-      <section>
-        <div className="relative py-10 full-bg">
-          <Image
-            src="/images/home/question.gif"
-            width={151}
-            height={151}
-            alt="faq"
-            className="mx-auto w-[65px] h-[65px] lg:w-[151px] lg:h-[151px]"
-          />
-          <ScrollReveal>
-            <Title
-              blackText={t.homeData.faqBlackTitle}
-              className="text-center"
-            />
-          </ScrollReveal>
-          <Accordion
-            data={t.homeData.faqData}
-          />
-        </div>
-      </section>
+                      <p className="flex-1">{list.list}</p>
+                    </li>
+                ))}
+              </ul>
+              <div>
+                <button onClick={openModal} className="btn btn-white mt-10 w-full lg:w-[304px]">
+                  {t.homeData.checkifiedUnivButton}
+                </button>
+              </div>
+            </ScrollReveal>
+            <div className="relative mx-auto w-[259px] lg:w-1/3 h-[382px] lg:h-full">
+              <Image
+                  src="/images/home/checkified-university.png"
+                  alt="checkified university"
+                  height={500}
+                  width={500}
+                  className="absolute bottom-[-3rem] lg:top-[-1rem] xl:top-[-6rem] 2xl:top-[-10rem] lg:-right-1/4 lg:scale-[1.4] xl:scale-[1] 2xl:scale-75 object-contain"
+                  priority
+              />
+            </div>
+          </section>
 
-      <section className="h-80 px-20 py-10 text-white">
-        <div className="absolute left-0 right-0 flex flex-col items-center justify-center bg-primary px-4 lg:px-20 py-10">
-          <ScrollReveal>
-            <Title
-              blackText={t.homeData.freeCourseTitle}
-              className="text-white text-center"
-            />
-            <p className="mb-2 max-w-3xl mx-auto text-center">{t.homeData.freeCourseSubtitle}</p>
-          </ScrollReveal>
-          <div>
-            <button onClick={openModal} className="btn btn-white mt-10">
-              {t.homeData.freeCourseButton}
-            </button>
-          </div>
-        </div>
-      </section>
+          <section>
+            <div className="relative py-10 full-bg">
+              <Image
+                  src="/images/home/question.gif"
+                  width={151}
+                  height={151}
+                  alt="faq"
+                  className="mx-auto w-[65px] h-[65px] lg:w-[151px] lg:h-[151px]"
+              />
+              <ScrollReveal>
+                <Title
+                    blackText={t.homeData.faqBlackTitle}
+                    className="text-center"
+                />
+              </ScrollReveal>
+              <Accordion
+                  data={t.homeData.faqData}
+              />
+            </div>
+          </section>
 
-      {/* Dynamic Blog posts list */}
-      {/* <section className="py-16 mb-16">
+          <section className="h-80 px-20 py-10 text-white">
+            <div className="absolute left-0 right-0 flex flex-col items-center justify-center bg-primary px-4 lg:px-20 py-10">
+              <ScrollReveal>
+                <Title
+                    blackText={t.homeData.freeCourseTitle}
+                    className="text-white text-center"
+                />
+                <p className="mb-2 max-w-3xl mx-auto text-center">{t.homeData.freeCourseSubtitle}</p>
+              </ScrollReveal>
+              <div>
+                <button onClick={openModal} className="btn btn-white mt-10">
+                  {t.homeData.freeCourseButton}
+                </button>
+              </div>
+            </div>
+          </section>
+
+          {/* Dynamic Blog posts list */}
+          {/* <section className="py-16 mb-16">
         <ScrollReveal>
           <Title
             blackText={t.blogData.articleBlackTitle}
@@ -793,8 +793,8 @@ export default function Home() {
         </div>
       </section> */}
 
-      </Layout>
-    </>
+        </Layout>
+      </>
 
   )
 }
