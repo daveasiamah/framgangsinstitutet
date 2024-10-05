@@ -149,8 +149,6 @@ export default function Home() {
             </div>
             <Layout headTitle={t.homeData.metaData.title}>
                 <section className="relative hero-height pt-8 flex flex-col lg:flex-row justify-between items-center gap-10">
-
-
                     <div className="w-full text-center mb-6 lg:mb-0">
                         <p className="ad-container_ann">
               <span>
@@ -175,7 +173,7 @@ export default function Home() {
                                 width={90}
                                 height={48}
                             />
-                            <span className="text-sm text-gray-500">Gå med 750+ aktiva studenter</span>
+                            <span className=" text-[6px] lg:text-sm text-gray-500">Gå med 750+ aktiva studenter</span>
                         </div>
 
                         <div className=" mt-12 ">
@@ -187,7 +185,7 @@ export default function Home() {
                                         width={16}
                                         height={16}
                                     />
-                                    <h3 className="text-[6px] text-sm">{t.homeData.heroVideoDesc}</h3>
+                                    <h3 className="text-[6px] lg:text-sm">{t.homeData.heroVideoDesc}</h3>
                                 </div>
 
                                 <div className="video-container">
@@ -367,7 +365,7 @@ export default function Home() {
                         </p>
                     </ScrollReveal>
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-                        <div className=" p-5 rounded-[2rem] border border-1 border-[#BBBBBF]">
+                        <div className="p-3 pt-5 pb-5 lg:p-5 rounded-[2rem] border border-1 border-[#BBBBBF]">
                             <Image
                                 src="/images/home/logo.svg"
                                 alt="card"
@@ -387,7 +385,7 @@ export default function Home() {
                             </button>
                             <div className="text-left">
                                 <ul>
-                                    <li className="mt-4 text-[12px]">
+                                    <li className="mt-4 text-[11px] lg:text-[12px]">
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
                         <span
@@ -406,7 +404,7 @@ export default function Home() {
                                             0 kr
                                         </div>
                                     </li>
-                                    <li className="mt-4 text-[12px]">
+                                    <li className="mt-4 text-[11px] lg:text-[12px]">
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
                         <span
@@ -425,7 +423,7 @@ export default function Home() {
                                             Nybörjare inom dropshipping
                                         </div>
                                     </li>
-                                    <li className="mt-4 text-[12px]">
+                                    <li className="mt-4 text-[11px] lg:text-[12px]">
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
                         <span
@@ -444,7 +442,7 @@ export default function Home() {
                                             Grundläggande kunskap
                                         </div>
                                     </li>
-                                    <li className="mt-4 text-[12px]">
+                                    <li className="mt-4 text-[11px] lg:text-[12px]">
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
                         <span
@@ -467,7 +465,7 @@ export default function Home() {
                             </div>
 
                         </div>
-                        <div className=" p-5 rounded-[2rem] border border-1 border-[#BBBBBF]">
+                        <div className="p-3 pt-5 pb-5 lg:p-5 rounded-[2rem] border border-1 border-[#BBBBBF]">
                             <Image
                                 src="/images/home/logo.svg"
                                 alt="card"
@@ -487,7 +485,7 @@ export default function Home() {
                             </button>
                             <div className="text-left">
                                 <ul>
-                                    <li className="mt-4 text-[12px]">
+                                    <li className="mt-4 text-[11px] lg:text-[12px]">
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
                         <span
@@ -506,7 +504,7 @@ export default function Home() {
                                             150 kr
                                         </div>
                                     </li>
-                                    <li className="mt-4 text-[12px]">
+                                    <li className="mt-4 text-[11px] lg:text-[12px]">
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
                         <span
@@ -525,7 +523,7 @@ export default function Home() {
                                             De som vill tjäna över 100k/mån
                                         </div>
                                     </li>
-                                    <li className="mt-4 text-[11px]">
+                                    <li className="mt-4 text-[11px] lg:text-[12px]">
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
                         <span
@@ -544,7 +542,7 @@ export default function Home() {
                                             Avancerade strategier, över 45+ avsnitt
                                         </div>
                                     </li>
-                                    <li className="mt-4 text-[11px]">
+                                    <li className="mt-4 text-[11px] lg:text-[12px]">
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
                         <span
@@ -567,7 +565,7 @@ export default function Home() {
                             </div>
 
                         </div>
-                        <div className=" p-5 rounded-[2rem] border border-1 border-[#BBBBBF]">
+                        <div className="p-3 pt-5 pb-5 lg:p-5 rounded-[2rem] border border-1 border-[#BBBBBF]">
                             <Image
                                 src="/images/home/logo.svg"
                                 alt="card"
@@ -587,7 +585,7 @@ export default function Home() {
                             </button>
                             <div className="text-left">
                                 <ul>
-                                    <li className="mt-4 text-[12px]">
+                                    <li className="mt-4 text-[11px] lg:text-[12px]">
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
                         <span
@@ -606,7 +604,7 @@ export default function Home() {
                                             499 kr
                                         </div>
                                     </li>
-                                    <li className="mt-4 text-[12px]">
+                                    <li className="mt-4 text-[11px] lg:text-[12px]">
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
                         <span
@@ -625,7 +623,7 @@ export default function Home() {
                                             De som vill tjäna över 10k/mån
                                         </div>
                                     </li>
-                                    <li className="mt-4 text-[12px]">
+                                    <li className="mt-4 text-[11px] lg:text-[12px]">
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
                         <span
@@ -644,7 +642,7 @@ export default function Home() {
                                             20 produkter, logotyp, och leverantör
                                         </div>
                                     </li>
-                                    <li className="mt-4 text-[12px]">
+                                    <li className="mt-4 text-[11px] lg:text-[12px]">
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
                         <span
@@ -667,7 +665,7 @@ export default function Home() {
                             </div>
 
                         </div>
-                        <div className=" p-5 rounded-[2rem] border border-1 border-[#BBBBBF]">
+                        <div className="p-3 pt-5 pb-5 lg:p-5 rounded-[2rem] border border-1 border-[#BBBBBF]">
                             <Image
                                 src="/images/home/logo.svg"
                                 alt="card"
@@ -687,7 +685,7 @@ export default function Home() {
                             </button>
                             <div className="text-left">
                                 <ul>
-                                    <li className="mt-4 text-[12px]">
+                                    <li className="mt-4 text-[11px] lg:text-[12px]">
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
                         <span
@@ -706,7 +704,7 @@ export default function Home() {
                                             699 kr
                                         </div>
                                     </li>
-                                    <li className="mt-4 text-[10px]">
+                                    <li className="mt-4 text-[10px] lg:text-[12px]">
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
                         <span
@@ -725,7 +723,7 @@ export default function Home() {
                                             De som vill marknadsföra sin dropshipping
                                         </div>
                                     </li>
-                                    <li className="mt-4 text-[12px]">
+                                    <li className="mt-4 text-[11px] lg:text-[12px]">
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
                         <span
@@ -744,7 +742,7 @@ export default function Home() {
                                             Annonseringsmaterial för att driva trafik
                                         </div>
                                     </li>
-                                    <li className="mt-4 text-[12px]">
+                                    <li className="mt-4 text-[11px] lg:text-[12px]">
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
                         <span
@@ -767,7 +765,7 @@ export default function Home() {
                             </div>
 
                         </div>
-                        <div className=" p-5 rounded-[2rem] border border-1 border-[#BBBBBF]">
+                        <div className="p-3 pt-5 pb-5 lg:p-5 rounded-[2rem] border border-1 border-[#BBBBBF]">
                             <Image
                                 src="/images/home/logo.svg"
                                 alt="card"
@@ -787,7 +785,7 @@ export default function Home() {
                             </button>
                             <div className="text-left">
                                 <ul>
-                                    <li className="mt-4 text-[12px]">
+                                    <li className="mt-4 text-[11px] lg:text-[12px]">
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
                         <span
@@ -806,7 +804,7 @@ export default function Home() {
                                             15 000 kr
                                         </div>
                                     </li>
-                                    <li className="mt-4 text-[12px]">
+                                    <li className="mt-4 text-[11px] lg:text-[12px]">
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
                         <span
@@ -825,7 +823,7 @@ export default function Home() {
                                             De som vill tjäna över 1MSEK
                                         </div>
                                     </li>
-                                    <li className="mt-4 text-[11px]">
+                                    <li className="mt-4 text-[10px] lg:text-[12px]">
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
                         <span
@@ -844,7 +842,7 @@ export default function Home() {
                                             1-on-1 mentorskap, individuell vägledning
                                         </div>
                                     </li>
-                                    <li className="mt-4 text-[11px]">
+                                    <li className="mt-4 text-[10px] lg:text-[12px]">
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
                         <span
@@ -867,7 +865,7 @@ export default function Home() {
                             </div>
 
                         </div>
-                        <div className=" p-5 rounded-[2rem] border border-1 border-[#BBBBBF]">
+                        <div className="p-3 pt-5 pb-5 lg:p-5 rounded-[2rem] border border-1 border-[#BBBBBF]">
                             <Image
                                 src="/images/home/logo.svg"
                                 alt="card"
@@ -887,7 +885,7 @@ export default function Home() {
                             </button>
                             <div className="text-left">
                                 <ul>
-                                    <li className="mt-4 text-[12px]">
+                                    <li className="mt-4 text-[11px] lg:text-[12px]">
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
                         <span
@@ -906,7 +904,7 @@ export default function Home() {
                                             10 kr
                                         </div>
                                     </li>
-                                    <li className="mt-4 text-[12px]">
+                                    <li className="mt-4 text-[11px] lg:text-[12px]">
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
                         <span
@@ -925,7 +923,7 @@ export default function Home() {
                                             Nybörjare inom dropshipping
                                         </div>
                                     </li>
-                                    <li className="mt-4 text-[12px]">
+                                    <li className="mt-4 text-[11px] lg:text-[12px]">
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
                         <span
@@ -944,7 +942,7 @@ export default function Home() {
                                             Shopify prenumeration
                                         </div>
                                     </li>
-                                    <li className="mt-4 text-[12px]">
+                                    <li className="mt-4 text-[11px] lg:text-[12px]">
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
                         <span
@@ -974,7 +972,7 @@ export default function Home() {
                 <section className="relative flex flex-col justify-center md:mb-16 lg:mb-20">
                     <div className="lg:mt-8 py-8 bg-base-200 rounded-2xl flex justify-center">
                         <div>
-                            <h1 className="w-50 text-[20px] leading-[22px] text-center lg:text-[32px] lg:leading-[40px] font-bold">Uppdelning av Dominics
+                            <h1 className="lg:w-50 text-[20px] leading-[22px] text-center lg:text-[32px] lg:leading-[40px] font-bold">Uppdelning av Dominics
                                 resultat <br className="hidden lg:block"/> och finansiella poster</h1>
                             <Image
                                 src="/images/HOME/authur.svg"
