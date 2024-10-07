@@ -209,10 +209,10 @@ export default function Home() {
                         </p>
                         <ScrollReveal>
                             <div className=" gap-1 mb-1">
-                                <h1 className="text-2xl lg:text-6xl font-bold-">
+                                <h1 className="text-[22px] leading-[24px] md:leading-[48px] lg:leading-[48px] md:text-[48px] lg:text-[48px]font-bold-">
                                     Är du redo att ta kontroll
                                 </h1>
-                                <h1 className="text-2xl lg:text-6xl font-bold text-primary">
+                                <h1 className="text-[22px] leading-[24px] md:leading-[48px] lg:leading-[48px] md:text-[48px] lg:text-[48px] font-bold text-primary">
                                     över ditt liv?
                                 </h1>
                             </div>
@@ -224,10 +224,10 @@ export default function Home() {
                                 width={90}
                                 height={48}
                             />
-                            <span className=" text-[6px] lg:text-sm text-gray-500">Gå med 750+ aktiva studenter</span>
+                            <span className=" text-[6px] lg:text-sm text-gray-500 font-inter">Gå med 750+ aktiva studenter</span>
                         </div>
 
-                        <div className=" mt-12 ">
+                        <div className="mt-4">
                             <div className="flex flex-col items-center justify-center gap-1 bg-[#EDF5FED9] p-4 rounded-[20px] relative  max-w-[706px] mx-auto">
                                 <div className="lg:flex flex top-0 w-full items-center justify-center gap-1 mb-[-5px] bg-primary text-white">
                                     <Image
@@ -252,8 +252,8 @@ export default function Home() {
                                 </div>
                             </div>
 
-                            <div className="w-50 mt-5 lg:mt-8 flex items-center justify-center ">
-                                <button className="btn btn-primary w-50" onClick={openModal}>
+                            <div className="w-50 mt-2 lg:mt-8 flex items-center justify-center ">
+                                <button className="btn btn-primary bg-[#225AEA] text-[14px] font-jakarta font-[600px] w-50" onClick={openModal}>
                                     Testa Gratis Idag
                                 </button>
                             </div>
@@ -281,9 +281,9 @@ export default function Home() {
 
                 <section className="p-8 lg:py-14 lg:px-16 text-center  lg:my-18 rounded-2xl">
                     <div className="flex justify-between items-center">
-                        <hr className="w-1/2 border-t-1 border-[#555A7733]"/>
-                        <span className="font-bold w-40 ml-4 mr-4 text-[#434C69]">KUNSKAP INOM</span>
-                        <hr className="w-1/2 border-t-1 border-[#555A7733]"/>
+                        <hr className="w-[40%]  border-t-1 border-[#555A7733]"/>
+                        <span className="font-[600px] md:text-[20px] w-[20%] ml-4 mr-4 text-[#434C69]">KUNSKAP INOM</span>
+                        <hr className="w-[40%] border-t-1 border-[#555A7733]"/>
                     </div>
 
                     <div className="flex flex-wrap gap-4 items-center justify-center lg:justify-between">
@@ -302,27 +302,27 @@ export default function Home() {
                             </div>
                         ))}
                     </div>
-                    <hr className="border-[#555A7733]"/>
+                    <hr className="border-[#555A7733] mt-4"/>
                 </section>
 
-                <section className="lg:p-4  lg:px-16 lg:my-18">
+                <section className="">
                     <div className="flex flex-col lg:flex-row justify-center items-center">
                         <div className="w-full md:text-left lg:text-left lg:w-1/2 mb-8 lg:mb-0">
              <span className="flex flex-col lg:flex-row md:flex-row  mb-[-20px]">
-                <h1 className="text-[20px] lg:text-[24px] font-bold text-primary mr-2 mb-[-20px]">
+                <h1 className="text-[20px] lg:text-[24px] font-[700px] font-jakarta text-primary mr-2 mb-[-20px]">
                   Steg-för-steg guide
                 </h1>
-                <h1 className="text-[20px] lg:text-[24px] font-bold">
+                <h1 className="text-[20px] lg:text-[24px] font-jakarta font-[700px]">
                   till att bygga ett
                 </h1>
               </span>
-                            <h1 className="text-[20px] lg:text-[24px] font-bold">dropshipping företag</h1>
+                            <h1 className="text-[20px] lg:text-[24px] font-[700px] font-jakarta">dropshipping företag</h1>
 
-                            <p className="mt-4 w-50 text-[#434C69] text-[14px] leading-[22px] font-semibold">
+                            <p className="mt-4 w-50 text-[#434C69] text-[14px] leading-[22px] font-[500px] font-inter">
                                 Lär dig hur du bygger, skalar och drar nytta av e-handelsbutiker. Från din första miljon i intäkter till
                                 en potentiell exit. Det närmaste du kommer en doktorsexamen i e-handel och digital marknadsföring.
                             </p>
-                            <button className="btn btn-primary w-50 text-[14px] leading-[22px] mt-10">
+                            <button className="btn btn-primary bg-[#225AEA] w-50 text-[14px] leading-[22px] mt-10">
                                 Se Gratis Dropshipping Kurs
                             </button>
                         </div>
@@ -341,65 +341,65 @@ export default function Home() {
                 <section className="p-4 lg:px-16 lg:my-18 md:mt-20 lg:mt-20">
                     <div className="flex flex-col lg:flex-row justify-between items-center">
                         {/* Image Section */}
-                        <div className="w-full lg:w-1/2 lg:mr-20 flex justify-center lg:justify-start mb-8 lg:mb-0">
+                        <div className="w-full lg:w-1/2 lg:mr-20 flex lg:justify-start mb-8 lg:mb-0">
                             <Image
                                 src="/images/home/channel.svg"
                                 alt="globe"
-                                height={500}
+                                height={600}
                                 width={423}
-                                className="object-contain mx-auto mb-16 lg:mb-0"
+                                className="object-cover"
                             />
                         </div>
 
                         {/* Text Section */}
-                        <div className="w-full lg:w-1/2 mb-8 lg:mb-20 text-center lg:text-left">
-            <span className="flex flex-col lg:flex-row items-center justify-center lg:justify-start">
-              <h1 className="hidden lg:block text-[24px] font-bold">
-                Är du redo för en
-              </h1>
-              <h1 className="hidden lg:block text-[24px] font-bold text-primary lg:ml-2">
-                förändring?
-              </h1>
-            </span>
-                            <p className="text-[20px] font-bold  lg:ml-2 lg:hidden md:hidden text-left">
-                                Är du redo för en <span className="text-primary">förändring?</span>
-                            </p>
+                        <div className="w-full lg:w-1/2  lg:mb-20 text-center lg:text-left">
+                                <span className="flex flex-col lg:flex-row items-center justify-center lg:justify-start">
+                                  <h1 className="hidden lg:block text-[24px] font-[700px] font-jakarta">
+                                    Är du redo för en
+                                  </h1>
+                                  <h1 className="hidden lg:block text-[24px] font-bold text-primary lg:ml-2 font-jakarta">
+                                    förändring?
+                                  </h1>
+                                </span>
+                                    <p className="text-[20px] font-bold  lg:ml-2 lg:hidden md:hidden text-left font-jakarta">
+                                        Är du redo för en <span className="text-primary">förändring?</span>
+                                    </p>
 
-                            <p className="mt-4 text-[#434C69] text-[14px] leading-[22px] font-semibold text-left">
-                                Se om dropshipping kan vara din väg till frihet. Kolla igenom våran gratis kurs för att se hur
-                                dropshipping gjorde Dominic till en e-handelsmiljonär och förändra sitt liv.
-                            </p>
+                                    <p className=" text-[#434C69] text-[14px] leading-[22px] text-left font-[500px] font-inter">
+                                        Se om dropshipping kan vara din väg till frihet. Kolla igenom våran gratis kurs för att se hur
+                                        dropshipping gjorde Dominic till en e-handelsmiljonär och förändra sitt liv.
+                                    </p>
 
-                            <ul className="mt-4">
-                                <li className="flex items-center text-[#434C69] text-[14px] leading-[32px] font-semibold mt-4">
-                                    <svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg"
-                                         className="mr-2">
-                                        <path d="M1 6.89474L6.05263 11.9474L17 1" stroke="#1BC057" strokeWidth="2" strokeLinecap="round"
-                                              strokeLinejoin="round"/>
-                                    </svg>
-                                    Steg för steg video utbildning
-                                </li>
-                                <li className="flex items-center text-[#434C69] text-[14px] leading-[32px] font-semibold mt-2">
-                                    <svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg"
-                                         className="mr-2">
-                                        <path d="M1 6.89474L6.05263 11.9474L17 1" stroke="#1BC057" strokeWidth="2" strokeLinecap="round"
-                                              strokeLinejoin="round"/>
-                                    </svg>
-                                    Exklusiv Community
-                                </li>
-                                <li className="flex items-center text-[#434C69] text-[14px] leading-[32px] font-semibold mt-2">
-                                    <svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg"
-                                         className="mr-2">
-                                        <path d="M1 6.89474L6.05263 11.9474L17 1" stroke="#1BC057" strokeWidth="2" strokeLinecap="round"
-                                              strokeLinejoin="round"/>
-                                    </svg>
-                                    Senaste strategier inom e-handel
-                                </li>
-                            </ul>
+                                    <ul className="mt-4">
+                                        <li className="flex items-center text-[#434C69] text-[14px] leading-[32px] font-[500px] font-inter mt-4">
+                                            <svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                 className="mr-2">
+                                                <path d="M1 6.89474L6.05263 11.9474L17 1" stroke="#1BC057" strokeWidth="2" strokeLinecap="round"
+                                                      strokeLinejoin="round"/>
+                                            </svg>
+                                            Steg för steg video utbildning
+                                        </li>
+                                        <li className="flex items-center text-[#434C69] text-[14px] leading-[32px] font-[500px] font-inter mt-2">
+                                            <svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                 className="mr-2">
+                                                <path d="M1 6.89474L6.05263 11.9474L17 1" stroke="#1BC057" strokeWidth="2" strokeLinecap="round"
+                                                      strokeLinejoin="round"/>
+                                            </svg>
+                                            Exklusiv Community
+                                        </li>
+                                        <li className="flex items-center text-[#434C69] text-[14px] leading-[32px] font-[500px] font-inter mt-2">
+                                            <svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                 className="mr-2">
+                                                <path d="M1 6.89474L6.05263 11.9474L17 1" stroke="#1BC057" strokeWidth="2" strokeLinecap="round"
+                                                      strokeLinejoin="round"/>
+                                            </svg>
+                                            Senaste strategier inom e-handel
+                                        </li>
+                                    </ul>
 
-                            <button className="btn btn-primary w-full lg:w-1/2 text-[14px] leading-[22px] mt-5">
-                                Gå med gratis idag
-                            </button>
+                                    <button className="btn btn-primary bg-[#225AEA] w-full sm:w-1/2   lg:w-1/3 text-[12px] leading-[22px] font-[500px] font-inter mt-5">
+                                        Gå med gratis idag
+                                    </button>
                         </div>
                     </div>
                 </section>
@@ -1211,15 +1211,15 @@ export default function Home() {
                                     }}/>
                             </div>
                             <div className="pl-10 pr-10">
-                                <h1 className="text-white text-center text-[16px] lg:text-[24px] font-bold mb-4">
+                                <h1 className="text-white text-center text-[16px] lg:text-[24px] font-[500px] lg:font-[700px] font-jakarta mb-4">
                                     Testa Checkified gratis
                                 </h1>
-                                <p className="mb-4 max-w-3xl mx-auto text-center lg:text-[16px] text-[14px]">Perfekt för nybörjare som vill dyka in i dropshipping!
+                                <p className="mb-4 max-w-3xl mx-auto text-center lg:text-[16px] text-[14px] font-inter">Perfekt för nybörjare som vill dyka in i dropshipping!
                                     Utforska vår kurs gratis, <br/>
                                     utan förpliktelse – för alltid.</p>
                                 <div className="icons-container_ann mt-4">
                                     <div className="icon-section_ann">
-                <span className="text-white">
+                <span className="text-white font-inter font-[500px]">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-2">
                     <path
                         d="M7.3308 7.61447H17.4496M6.87467 2.0001V3.8317M6.87467 3.8317L17.4994 3.8315M6.87467 3.8317C5.11425 3.8317 3.68732 5.28333 3.68741 7.07419L3.6879 17.8826C3.68798 19.6734 5.11501 21.125 6.87531 21.125H17.5C19.2604 21.125 20.6875 19.6732 20.6874 17.8823L20.6869 7.07389C20.6868 5.28314 19.2597 3.8315 17.4994 3.8315M17.4994 2V3.8315M10.0629 17.342V10.8569L7.93792 12.4782M15.9064 17.342V10.8569L13.7815 12.4782"
@@ -1228,7 +1228,7 @@ export default function Home() {
 
                   Beprövade annonser
                 </span>
-                                        <span className="text-white">
+                                        <span className="text-white font-inter font-[500px]">
                   <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg"  className="mr-2">
                     <path
                         d="M5.72937 18.512C5.20498 18.6853 4.92036 19.2509 5.09367 19.7753C5.26697 20.2997 5.83256 20.5843 6.35695 20.411L5.72937 18.512ZM11.8622 19.8462L11.7722 18.8502L11.8622 19.8462ZM15.3536 19.0769L15.7891 19.9771H15.7891L15.3536 19.0769ZM18.6897 16.0681L17.9153 15.4354L18.6897 16.0681ZM16.408 14.1854L17.1121 14.8955L16.408 14.1854ZM14.8715 15.7087L15.5756 16.4188L14.8715 15.7087ZM10.6984 15.3846C10.1461 15.3846 9.69838 15.8323 9.69838 16.3846C9.69838 16.9369 10.1461 17.3846 10.6984 17.3846V15.3846ZM18.335 13.9962L17.7836 14.8305L18.335 13.9962ZM7.22402 13.4915L7.66816 14.3875H7.66816L7.22402 13.4915ZM11.4001 13.1128L11.6611 12.1475H11.6611L11.4001 13.1128ZM13.0309 13.5538L12.7699 14.5191H12.7699L13.0309 13.5538ZM13.5476 15.4829L12.8435 14.7727L13.5476 15.4829ZM11.934 15.6745C11.5418 16.0633 11.5391 16.6965 11.9279 17.0887C12.3168 17.4809 12.9499 17.4836 13.3421 17.0948L11.934 15.6745ZM6.35695 20.411C6.4545 20.3788 6.67974 20.3518 7.10006 20.3815C7.50005 20.4098 7.96832 20.4794 8.50785 20.5634C9.52864 20.7224 10.8321 20.9433 11.9521 20.8421L11.7722 18.8502C10.9526 18.9242 9.92845 18.7605 8.81559 18.5872C8.2883 18.5051 7.73824 18.4216 7.24113 18.3865C6.76435 18.3528 6.21371 18.352 5.72937 18.512L6.35695 20.411ZM11.9521 20.8421C13.4538 20.7065 14.2079 20.7421 15.7891 19.9771L14.9181 18.1767C13.7223 18.7553 13.3478 18.7079 11.7722 18.8502L11.9521 20.8421ZM15.7891 19.9771C17.219 19.2853 18.6284 17.7238 19.4642 16.7007L17.9153 15.4354C17.0698 16.4704 15.9056 17.699 14.9181 18.1767L15.7891 19.9771ZM15.7039 13.4753L14.1675 14.9986L15.5756 16.4188L17.1121 14.8955L15.7039 13.4753ZM13.2257 15.3846H10.6984V17.3846H13.2257V15.3846ZM14.1675 14.9986C13.9191 15.2448 13.5805 15.3846 13.2257 15.3846V17.3846C14.1054 17.3846 14.9509 17.0382 15.5756 16.4188L14.1675 14.9986ZM18.8864 13.162C17.8866 12.5011 16.5558 12.6307 15.7039 13.4753L17.1121 14.8955C17.2897 14.7194 17.572 14.6906 17.7836 14.8305L18.8864 13.162ZM19.4642 16.7007C20.4053 15.5487 20.046 13.9284 18.8864 13.162L17.7836 14.8305C18.0394 14.9995 18.0448 15.2769 17.9153 15.4354L19.4642 16.7007ZM1.77587 13.5385H4.87935V11.5385H1.77587V13.5385ZM4.65522 13.3077V20.2308H6.65522V13.3077H4.65522ZM4.87935 20H1.77587V22H4.87935V20ZM2 20.2308V13.3077H0V20.2308H2ZM1.77587 20C1.89153 20 2 20.0952 2 20.2308H0C0 21.216 0.803209 22 1.77587 22V20ZM4.65522 20.2308C4.65522 20.0952 4.76369 20 4.87935 20V22C5.85201 22 6.65522 21.216 6.65522 20.2308H4.65522ZM4.87935 13.5385C4.76369 13.5385 4.65522 13.4432 4.65522 13.3077H6.65522C6.65522 12.3225 5.85202 11.5385 4.87935 11.5385V13.5385ZM1.77587 11.5385C0.803205 11.5385 0 12.3225 0 13.3077H2C2 13.4432 1.89153 13.5385 1.77587 13.5385V11.5385ZM6.4873 14.9729L7.66816 14.3875L6.77987 12.5956L5.59901 13.181L6.4873 14.9729ZM9.65288 13.9231H9.97106V11.9231H9.65288V13.9231ZM11.1391 14.0781L12.7699 14.5191L13.2919 12.5884L11.6611 12.1475L11.1391 14.0781ZM12.8435 14.7727L11.934 15.6745L13.3421 17.0948L14.2517 16.193L12.8435 14.7727ZM12.7699 14.5191C12.8963 14.5533 12.922 14.6949 12.8435 14.7727L14.2517 16.193C15.4369 15.0179 14.8897 13.0205 13.2919 12.5884L12.7699 14.5191ZM9.97106 13.9231C10.3657 13.9231 10.7585 13.9752 11.1391 14.0781L11.6611 12.1475C11.1102 11.9985 10.5419 11.9231 9.97106 11.9231V13.9231ZM7.66816 14.3875C8.284 14.0822 8.96354 13.9231 9.65288 13.9231V11.9231C8.65591 11.9231 7.67231 12.1532 6.77987 12.5956L7.66816 14.3875ZM14.7415 7.15385C14.7415 8.29281 13.8079 9.23077 12.6381 9.23077V11.2308C14.8962 11.2308 16.7415 9.41355 16.7415 7.15385H14.7415ZM12.6381 9.23077C11.4682 9.23077 10.5346 8.29281 10.5346 7.15385H8.53457C8.53457 9.41355 10.3799 11.2308 12.6381 11.2308V9.23077ZM10.5346 7.15385C10.5346 6.01488 11.4682 5.07692 12.6381 5.07692V3.07692C10.3799 3.07692 8.53457 4.89414 8.53457 7.15385H10.5346ZM12.6381 5.07692C13.8079 5.07692 14.7415 6.01488 14.7415 7.15385H16.7415C16.7415 4.89414 14.8962 3.07692 12.6381 3.07692V5.07692ZM9.53458 6.15385C8.36473 6.15385 7.43109 5.21589 7.43109 4.07692H5.43109C5.43109 6.33663 7.2764 8.15385 9.53458 8.15385V6.15385ZM7.43109 4.07692C7.43109 2.93796 8.36473 2 9.53458 2V0C7.2764 0 5.43109 1.81722 5.43109 4.07692H7.43109ZM9.53458 2C10.7044 2 11.6381 2.93796 11.6381 4.07692H13.6381C13.6381 1.81722 11.7927 0 9.53458 0V2Z"
@@ -1236,7 +1236,7 @@ export default function Home() {
                     </svg>
                   Snabb leverans
                 </span>
-                                        <span className="text-white">
+                                        <span className="text-white font-inter font-[500px]">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"  className="mr-2">
                     <path
                         d="M15.142 9.98299L10.875 14.25L9.42049 12.7955M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3Z"
@@ -1288,9 +1288,9 @@ export default function Home() {
                         <h1 className="hidden lg:block text-left text-[32px] leading-[55px] font-bold">
                             Bläddra bland våra senaste artiklar
                         </h1>
-                        <p className="hidden lg:block text-left text-[16px] text-[#434C69] leading-[20px] font-normal mb-5 border border-1 border-[#BBBBBF] p-2 rounded-md">
+                        <button onClick={() => window.location.href = "https://checkified.se/blog"} className="hidden lg:block text-left text-[16px] text-[#434C69] leading-[20px] font-normal mb-5 border border-1 border-[#BBBBBF] p-2 rounded-md">
                             Visa blogg
-                        </p>
+                        </button>
                     </ScrollReveal>
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
                         <div className="rounded-[2rem] border border-1 border-[#BBBBBF] p-5 ">
@@ -1301,10 +1301,10 @@ export default function Home() {
                                 loading="lazy"
                             />
 
-                            <div className="text-left">
-                                <p className="text-[#686870] text-[14px] font-semibold mb-[20px] mt-4">Juli 20, 2024</p>
+                            <div className="text-left ">
+                                <p className="text-[#686870] text-[14px] font-inter mb-[20px] mt-4">Juli 20, 2024</p>
 
-                                <p className="font-semibold text-[18px] text-[#434C69] leading-[25px] mb-5">Vi har sammanställt en lista
+                                <p className="font-inter font-[500px] text-[18px] text-[#434C69] leading-[25px] mb-5">Vi har sammanställt en lista
                                     över de 10 bästa produkterna för dropshipping 2024.</p>
 
                                 <div className="flex items-center">
@@ -1315,7 +1315,7 @@ export default function Home() {
                                         className="border-b border-1 border-[#E5E6EA] w-[24] h-[34px] object-contain rounded-full"
                                         loading="lazy"
                                     />
-                                    <p className="font-semibold text-[18px] text-[#434C69] leading-[25px] ml-2">Linnea Bergström</p>
+                                    <p className="font-inter font-[500px] text-[18px] text-[#434C69] leading-[25px] ml-2">Linnea Bergström</p>
                                 </div>
                             </div>
                         </div>
@@ -1328,9 +1328,9 @@ export default function Home() {
                             />
 
                             <div className="text-left">
-                                <p className="text-[#686870] text-[14px] font-semibold mb-[20px] mt-4">Juli 20, 2024</p>
+                                <p className="text-[#686870] text-[14px] font-inter font-[500px] mb-[20px] mt-4">Juli 20, 2024</p>
 
-                                <p className="font-semibold text-[18px] text-[#434C69] leading-[25px] mb-5">Vi har sammanställt en lista
+                                <p className="font-inter font-[500px] text-[18px] text-[#434C69] leading-[25px] mb-5">Vi har sammanställt en lista
                                     över de 10 bästa produkterna för dropshipping 2024.</p>
 
                                 <div className="flex items-center">
@@ -1341,7 +1341,7 @@ export default function Home() {
                                         className="border-b border-1 border-[#E5E6EA] w-[24] h-[34px] object-contain rounded-full"
                                         loading="lazy"
                                     />
-                                    <p className="font-semibold text-[18px] text-[#434C69] leading-[25px] ml-2">Linnea Bergström</p>
+                                    <p className="font-inter font-[500px] text-[18px] text-[#434C69] leading-[25px] ml-2">Linnea Bergström</p>
                                 </div>
                             </div>
                         </div>
@@ -1354,9 +1354,9 @@ export default function Home() {
                             />
 
                             <div className="text-left">
-                                <p className="text-[#686870] text-[14px] font-semibold mb-[20px] mt-4">Juli 20, 2024</p>
+                                <p className="text-[#686870] text-[14px] font-inter font-[500px] mb-[20px] mt-4">Juli 20, 2024</p>
 
-                                <p className="font-semibold text-[18px] text-[#434C69] leading-[25px] mb-5">Vi har sammanställt en lista
+                                <p className="font-inter font-[500px] text-[18px] text-[#434C69] leading-[25px] mb-5">Vi har sammanställt en lista
                                     över de 10 bästa produkterna för dropshipping 2024.</p>
 
                                 <div className="flex items-center">
@@ -1367,7 +1367,7 @@ export default function Home() {
                                         className="border-b border-1 border-[#E5E6EA] w-[24] h-[34px] object-contain rounded-full"
                                         loading="lazy"
                                     />
-                                    <p className="font-semibold text-[18px] text-[#434C69] leading-[25px] ml-2">Linnea Bergström</p>
+                                    <p className="font-inter font-[500px] text-[18px] text-[#434C69] leading-[25px] ml-2">Linnea Bergström</p>
                                 </div>
                             </div>
                         </div>
@@ -1380,9 +1380,9 @@ export default function Home() {
                             />
 
                             <div className="text-left">
-                                <p className="text-[#686870] text-[14px] font-semibold mb-[20px] mt-4">Juli 20, 2024</p>
+                                <p className="text-[#686870] text-[14px] font-inter font-[500px] mb-[20px] mt-4">Juli 20, 2024</p>
 
-                                <p className="font-semibold text-[18px] text-[#434C69] leading-[25px] mb-5">Vi har sammanställt en lista
+                                <p className="font-inter font-[500px] text-[18px] text-[#434C69] leading-[25px] mb-5">Vi har sammanställt en lista
                                     över de 10 bästa produkterna för dropshipping 2024.</p>
 
                                 <div className="flex items-center">
@@ -1393,7 +1393,7 @@ export default function Home() {
                                         className="border-b border-1 border-[#E5E6EA] w-[24] h-[34px] object-contain rounded-full"
                                         loading="lazy"
                                     />
-                                    <p className="font-semibold text-[18px] text-[#434C69] leading-[25px] ml-2">Linnea Bergström</p>
+                                    <p className="font-inter font-[500px] text-[18px] text-[#434C69] leading-[25px] ml-2">Linnea Bergström</p>
                                 </div>
                             </div>
                         </div>
@@ -1406,9 +1406,9 @@ export default function Home() {
                             />
 
                             <div className="text-left">
-                                <p className="text-[#686870] text-[14px] font-semibold mb-[20px] mt-4">Juli 20, 2024</p>
+                                <p className="text-[#686870] text-[14px] font-inter font-[500px] mb-[20px] mt-4">Juli 20, 2024</p>
 
-                                <p className="font-semibold text-[18px] text-[#434C69] leading-[25px] mb-5">Vi har sammanställt en lista
+                                <p className="font-inter font-[500px] text-[18px] text-[#434C69] leading-[25px] mb-5">Vi har sammanställt en lista
                                     över de 10 bästa produkterna för dropshipping 2024.</p>
 
                                 <div className="flex items-center">
@@ -1419,7 +1419,7 @@ export default function Home() {
                                         className="border-b border-1 border-[#E5E6EA] w-[24] h-[34px] object-contain rounded-full"
                                         loading="lazy"
                                     />
-                                    <p className="font-semibold text-[18px] text-[#434C69] leading-[25px] ml-2">Linnea Bergström</p>
+                                    <p className="font-inter font-[500px] text-[18px] text-[#434C69] leading-[25px] ml-2">Linnea Bergström</p>
                                 </div>
                             </div>
                         </div>
@@ -1432,9 +1432,9 @@ export default function Home() {
                             />
 
                             <div className="text-left">
-                                <p className="text-[#686870] text-[14px] font-semibold mb-[20px] mt-4">Juli 20, 2024</p>
+                                <p className="text-[#686870] text-[14px] font-inter font-[500px] mb-[20px] mt-4">Juli 20, 2024</p>
 
-                                <p className="font-semibold text-[18px] text-[#434C69] leading-[25px] mb-5">Vi har sammanställt en lista
+                                <p className="font-inter font-[500px] text-[18px] text-[#434C69] leading-[25px] mb-5">Vi har sammanställt en lista
                                     över de 10 bästa produkterna för dropshipping 2024.</p>
 
                                 <div className="flex items-center">
@@ -1445,7 +1445,7 @@ export default function Home() {
                                         className="border-b border-1 border-[#E5E6EA] w-[24] h-[34px] object-contain rounded-full"
                                         loading="lazy"
                                     />
-                                    <p className="font-semibold text-[18px] text-[#434C69] leading-[25px] ml-2">Linnea Bergström</p>
+                                    <p className="font-inter font-[500px] text-[18px] text-[#434C69] leading-[25px] ml-2">Linnea Bergström</p>
                                 </div>
                             </div>
                         </div>
