@@ -1056,7 +1056,7 @@ export default function Home() {
                         </p>
                     </ScrollReveal>
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-                        <div className="rounded-[2rem] border border-1 border-[#BBBBBF]">
+                        <div className="rounded-[2rem] border border-1 border-[#BBBBBF] feature-card">
                             <img
 
                                 src="/images/home/number.svg"
@@ -1073,7 +1073,7 @@ export default function Home() {
                                     underverk. Du är en dropshipping produkt ifrån framgång</p>
                             </div>
                         </div>
-                        <div className="rounded-[2rem] border border-1 border-[#BBBBBF]">
+                        <div className="rounded-[2rem] border border-1 border-[#BBBBBF] feature-card">
                             <img
 
                                 src="/images/home/graph.svg"
@@ -1090,7 +1090,7 @@ export default function Home() {
                                     e-handel.</p>
                             </div>
                         </div>
-                        <div className="rounded-[2rem] border border-1 border-[#BBBBBF]">
+                        <div className="rounded-[2rem] border border-1 border-[#BBBBBF] feature-card">
                             <img
 
                                 src="/images/home/locker.svg"
