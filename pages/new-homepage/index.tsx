@@ -138,6 +138,57 @@ export default function Home() {
         }
     ]
 
+    const testimonyData = [
+        {
+            id: 1,
+            imageUrl: "/images/home/testimonial/1.svg",
+            name: "Elias Bergqvist",
+            job: "Checkified Student",
+            message:
+                "Easy to follow, you will learn while meeting other like-minded people. Checkified is the future and this is how learning should be!"
+        },
+        {
+            id: 2,
+            imageUrl: "/images/home/testimonial/2.svg",
+            name: "Simon Gustafsson",
+            job: "Checkified Student",
+            message:
+                "Great platform. Thanks to Checkified's tools I have learned about e-commerce and increased my mindset."
+        },
+        {
+            id: 3,
+            imageUrl: "/images/home/testimonial/3.svg",
+            name: "Linnea Östling",
+            job: "Checkified Student",
+            message:
+                "Absolutely the best decision I've made in starting my own online business. You can hardly believe it when you get several sales."
+        },
+        {
+            id: 4,
+            imageUrl: "/images/home/testimonial/4.svg",
+            name: "Linnea Östling",
+            job: "Checkified Student",
+            message:
+                "Absolutely the best decision I've made in starting my own online business. You can hardly believe it when you get several sales."
+        },
+        {
+            id: 5,
+            imageUrl: "/images/home/testimonial/5.svg",
+            name: "Linnea Östling",
+            job: "Checkified Student",
+            message:
+                "Absolutely the best decision I've made in starting my own online business. You can hardly believe it when you get several sales."
+        },
+        {
+            id:6,
+            imageUrl: "/images/home/testimonial/6.svg",
+            name: "Linnea Östling",
+            job: "Checkified Student",
+            message:
+                "Absolutely the best decision I've made in starting my own online business. You can hardly believe it when you get several sales."
+        }
+    ]
+
     return (
         <>
             <div
@@ -275,12 +326,12 @@ export default function Home() {
                                 Se Gratis Dropshipping Kurs
                             </button>
                         </div>
-                        <div className="w-full lg:w-1/2">
+                        <div className="w-full lg:w-1/2 lg:ml-20">
                             <Image
                                 src="/images/home/globe.gif"
                                 alt="globe"
-                                height={357}
-                                width={357}
+                                height={341}
+                                width={347}
                                 className="object-contain mx-auto mb-16"
                             />
                         </div>
@@ -380,7 +431,9 @@ export default function Home() {
                                 <p className="font-semibold text-[13px] text-[#434C69] leading-[22px]">I kursen kommer du lära dig om
                                     dropshipping e-handel och marknadsföring. Gå med idag gratis👇</p>
                             </div>
-                            <button className="btn bg-[#225AEA] border-0 w-full  text-[14px] mt-5 mb-5">
+                            <button
+                                onClick={() => window.open("https://skool.com/dropshipping-sverige-2012", "_blank")}
+                                className="btn bg-[#225AEA] border-0 w-full  text-[14px] mt-5 mb-5">
                                 TESTA GRATIS
                             </button>
                             <div className="text-left">
@@ -480,7 +533,7 @@ export default function Home() {
                                 <p className="font-semibold text-[13px] text-[#434C69] leading-[22px]">Gå från 0-100k/mån med
                                     dropshipping. Över 45+ avsnitt. Tryck på knappen nedan för att gå med👇</p>
                             </div>
-                            <button className="btn bg-[#225AEA] border-0 w-full  text-[14px] mt-5 mb-5">
+                            <button onClick={() => window.open("https://checkified.se/platinum", "_blank")} className="btn bg-[#225AEA] border-0 w-full  text-[14px] mt-5 mb-5">
                                 LÄGG TILL I KUNDVAGN
                             </button>
                             <div className="text-left">
@@ -580,7 +633,7 @@ export default function Home() {
                                 <p className="font-semibold text-[13px] text-[#434C69] leading-[22px]">Köp din e-butik med 20 vinnande
                                     produkter, logotyp, leverantör, och e-bok här👇</p>
                             </div>
-                            <button className="btn bg-[#225AEA] border-0 w-full  text-[14px] mt-5 mb-5">
+                            <button onClick={() => window.open("https://buy.stripe.com/eVaeW80Mmckx34YdQT", "_blank")} className="btn bg-[#225AEA] border-0 w-full  text-[14px] mt-5 mb-5">
                                 LÄGG TILL I KUNDVAGN
                             </button>
                             <div className="text-left">
@@ -680,7 +733,7 @@ export default function Home() {
                                 <p className="font-semibold text-[13px] text-[#434C69] leading-[22px]">Köp videoannonser för att
                                     marknadsföra innehåll för endast 699 SEK här👇</p>
                             </div>
-                            <button className="btn bg-[#225AEA] border-0 w-full  text-[14px] mt-5 mb-5">
+                            <button onClick={() => window.open("https://buy.stripe.com/8wM15i52CfwJ492148", "_blank")} className="btn bg-[#225AEA] border-0 w-full  text-[14px] mt-5 mb-5">
                                 LÄGG TILL I KUNDVAGN
                             </button>
                             <div className="text-left">
@@ -779,7 +832,7 @@ export default function Home() {
                                 <p className="font-semibold text-[13px] text-[#434C69] leading-[22px]">Köp 1-on-1 mentorskap med
                                     e-handelsmiljonären Dominic för att lära dig allt om dropshipping här👇</p>
                             </div>
-                            <button className="btn bg-[#225AEA] border-0 w-full  text-[14px] mt-5 mb-5">
+                            <button onClick={() => window.open("https://shopify.pxf.io/checkified", "_blank")} className="btn bg-[#225AEA] border-0 w-full  text-[14px] mt-5 mb-5">
                                 LÄGG TILL I KUNDVAGN
                             </button>
                             <div className="text-left">
@@ -878,7 +931,7 @@ export default function Home() {
                                 <p className="font-semibold text-[13px] text-[#434C69] leading-[22px]">Checkified är stolt partner med
                                     Shopify – börja med Shopify för bara 10 kr första månaden👇</p>
                             </div>
-                            <button className="btn bg-[#225AEA] border-0 w-full  text-[14px] mt-5 mb-5">
+                            <button onClick={() => window.open("https://shopify.pxf.io/checkified", "_blank")} className="btn bg-[#225AEA] border-0 w-full  text-[14px] mt-5 mb-5">
                                 FÅ DIN BUTIK
                             </button>
                             <div className="text-left">
@@ -974,15 +1027,18 @@ export default function Home() {
                 <section className="relative flex flex-col justify-center md:mb-16 lg:mb-20">
                     <div className="lg:mt-8 py-8 bg-base-200 rounded-2xl flex justify-center">
                         <div>
-                            <h1 className="lg:w-50 text-[18px] leading-[18px] text-center lg:text-[32px] lg:leading-[40px] font-bold">Uppdelning av Dominics
+                            <h1 className="lg:w-50 text-[18px] leading-[18px] text-center lg:text-[32px] lg:leading-[40px] mb-4 font-bold">Uppdelning av Dominics
                                 resultat <br className="hidden lg:block"/> och finansiella poster</h1>
-                            <Image
-                                src="/images/home/authur.svg"
+                            <iframe
+                                width="705"
+                                height="423"
+                                src="https://www.youtube.com/embed/qsiKbthUaGE"
+                                title="YouTube video player"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                frameBorder="0"
+                                allowFullScreen
+                            ></iframe>
 
-                                alt="authur"
-                                height={423}
-                                width={705}
-                            />
                         </div>
                     </div>
 
@@ -1070,7 +1126,7 @@ export default function Home() {
                         <div className="absolute" style={{}}>
                             <div className="items-center left-0 gap-2 justify-around testimonial-slider">
                                 <Marquee style={{width: "1300px", overflow: "visible"}} speed={30}>
-                                    {[...t.homeData.testimonyData].map((data) => (
+                                    {testimonyData.map((data) => (
                                         <div
                                             key={`${data.id} ${Math.random()}`}
                                             className="rounded-2xl h-full grid place-content-center"
@@ -1082,7 +1138,7 @@ export default function Home() {
                                                 width="0"
                                                 height="0"
                                                 sizes="100vw"
-                                                style={{width: '300px', height: '400px'}}
+                                                style={{width: '300px', height: '100%'}}
                                                 className="rounded-lg"
                                                 loading="lazy"
                                             />
@@ -1097,7 +1153,7 @@ export default function Home() {
                 <section
                     className="university-container bg-primary p-8 lg:px-16 lg:py-14 mb-16 lg:mb-20 rounded-3xl text-white text-left flex flex-col items-center lg:flex-row gap-20">
                     <ScrollReveal className="w-full lg:w-2/3 z-10">
-                        <h2 className="lg:text-[24px] lg:leading-[28px] md:text-[24px] md:leading-[28px]  text-[16px] leading-[18px]  font-bold mb-2">
+                        <h2 className="lg:text-[24px] lg:leading-[28px] md:text-[24px] md:leading-[28px]  text-[16px] leading-[18px]  font-bold mb-2 font-jakarta">
                             Gå med i 750+ studenter som använder Checkified
                         </h2>
                         <p className="mb-2 text-[14px] lg:text-[16px] lg:leading-[22px] font-semibold mt-4">Allt du behöver göra är att hitta din första
@@ -1105,7 +1161,7 @@ export default function Home() {
                             här för att guida dig på vägen till framgång!</p>
 
                         <div>
-                            <button onClick={openModal} className="btn btn-white mt-10 w-full lg:w-[304px] text-[#151E3A]">
+                            <button onClick={openModal} className="btn btn-white mt-10 w-full lg:w-[304px] text-[#151E3A] ">
                                 Gå med gratis
                             </button>
                         </div>
