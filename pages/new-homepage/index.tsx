@@ -389,7 +389,7 @@ export default function Home() {
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
                         <span
-                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-2 rounded-lg mr-2">
+                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-1 lg:p-2 mr-1 lg:mr-2 rounded-lg ">
                         <Image
                             src="/images/home/check.svg"
                             alt="card"
@@ -401,14 +401,14 @@ export default function Home() {
                       </span>
                                                 Engångskostnad
                                             </div>
-                                            0 kr
+                                            <small className="lg:text-[11px] text-[9px]">0 kr</small>
                                         </div>
                                     </li>
                                     <li className="mt-4 text-[11px] lg:text-[12px]">
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
                         <span
-                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-2 rounded-lg mr-2">
+                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-1 lg:p-2 mr-1 lg:mr-2 rounded-lg ">
                         <Image
                             src="/images/home/check.svg"
                             alt="card"
@@ -420,14 +420,14 @@ export default function Home() {
                       </span>
                                                 Målgrupp
                                             </div>
-                                            Nybörjare inom dropshipping
+                                            <small className="lg:text-[11px] text-[9px]">Nybörjare inom dropshipping</small>
                                         </div>
                                     </li>
                                     <li className="mt-4 text-[11px] lg:text-[12px]">
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
                         <span
-                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-2 rounded-lg mr-2">
+                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-1 lg:p-2 mr-1 lg:mr-2 rounded-lg ">
                         <Image
                             src="/images/home/check.svg"
                             alt="card"
@@ -439,14 +439,14 @@ export default function Home() {
                       </span>
                                                 Innehåll
                                             </div>
-                                            Grundläggande kunskap
+                                            <small className="lg:text-[11px] text-[9px]">Grundläggande kunskap</small>
                                         </div>
                                     </li>
                                     <li className="mt-4 text-[11px] lg:text-[12px]">
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
                         <span
-                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-2 rounded-lg mr-2">
+                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-1 lg:p-2 mr-1 lg:mr-2 rounded-lg ">
                         <Image
                             src="/images/home/check.svg"
                             alt="card"
@@ -458,7 +458,7 @@ export default function Home() {
                       </span>
                                                 Supportnivå
                                             </div>
-                                            Grundläggande support
+                                           <small className="lg:text-[11px] text-[9px]"> Grundläggande support</small>
                                         </div>
                                     </li>
                                 </ul>
@@ -489,7 +489,7 @@ export default function Home() {
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
                         <span
-                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-2 rounded-lg mr-2">
+                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-1 lg:p-2 mr-1 lg:mr-2  rounded-lg ">
                         <Image
                             src="/images/home/check.svg"
                             alt="card"
@@ -501,14 +501,14 @@ export default function Home() {
                       </span>
                                                 Månadskostnad
                                             </div>
-                                            150 kr
+                                            <small className="lg:text-[11px] text-[9px]">150 kr</small>
                                         </div>
                                     </li>
                                     <li className="mt-4 text-[11px] lg:text-[12px]">
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
                         <span
-                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-2 rounded-lg mr-2">
+                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-1 lg:p-2 mr-1 lg:mr-2  rounded-lg ">
                         <Image
                             src="/images/home/check.svg"
                             alt="card"
@@ -520,14 +520,14 @@ export default function Home() {
                       </span>
                                                 Målgrupp
                                             </div>
-                                            De som vill tjäna över 100k/mån
+                                            <small className="lg:text-[11px] text-[9px]">De som vill tjäna över 100k/mån</small>
                                         </div>
                                     </li>
                                     <li className="mt-4 text-[11px] lg:text-[12px]">
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
                         <span
-                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-2 rounded-lg mr-2">
+                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-1 lg:p-2 mr-1 lg:mr-2  rounded-lg ">
                         <Image
                             src="/images/home/check.svg"
                             alt="card"
@@ -539,14 +539,14 @@ export default function Home() {
                       </span>
                                                 Innehåll
                                             </div>
-                                            Avancerade strategier, över 45+ avsnitt
+                                            <small className="lg:text-[11px] text-[9px]">Avancerade strategier, över 45+ avsnitt</small>
                                         </div>
                                     </li>
                                     <li className="mt-4 text-[11px] lg:text-[12px]">
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
                         <span
-                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-2 rounded-lg mr-2">
+                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-1 lg:p-2 mr-1 lg:mr-2  rounded-lg ">
                         <Image
                             src="/images/home/check.svg"
                             alt="card"
@@ -558,7 +558,7 @@ export default function Home() {
                       </span>
                                                 Supportnivå
                                             </div>
-                                            Premium support, mer personlig hjälp
+                                            <small className="lg:text-[11px] text-[9px]">Premium support, mer personlig hjälp</small>
                                         </div>
                                     </li>
                                 </ul>
@@ -589,7 +589,7 @@ export default function Home() {
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
                         <span
-                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-2 rounded-lg mr-2">
+                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-1 lg:p-2 mr-1 lg:mr-2 rounded-lg ">
                         <Image
                             src="/images/home/check.svg"
                             alt="card"
@@ -601,14 +601,14 @@ export default function Home() {
                       </span>
                                                 Engångskostnad
                                             </div>
-                                            499 kr
+                                            <small className="lg:text-[11px] text-[9px]">499 kr</small>
                                         </div>
                                     </li>
                                     <li className="mt-4 text-[11px] lg:text-[12px]">
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
                         <span
-                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-2 rounded-lg mr-2">
+                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-1 lg:p-2 mr-1 lg:mr-2 rounded-lg ">
                         <Image
                             src="/images/home/check.svg"
                             alt="card"
@@ -620,14 +620,14 @@ export default function Home() {
                       </span>
                                                 Målgrupp
                                             </div>
-                                            De som vill tjäna över 10k/mån
+                                            <small className="lg:text-[11px] text-[9px]">De som vill tjäna över 10k/mån</small>
                                         </div>
                                     </li>
                                     <li className="mt-4 text-[11px] lg:text-[12px]">
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
                         <span
-                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-2 rounded-lg mr-2">
+                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-1 lg:p-2 mr-1 lg:mr-2 rounded-lg ">
                         <Image
                             src="/images/home/check.svg"
                             alt="card"
@@ -639,14 +639,14 @@ export default function Home() {
                       </span>
                                                 Innehåll
                                             </div>
-                                            20 produkter, logotyp, och leverantör
+                                            <small className="lg:text-[11px] text-[9px]">20 produkter, logotyp, och leverantör</small>
                                         </div>
                                     </li>
                                     <li className="mt-4 text-[11px] lg:text-[12px]">
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
                         <span
-                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-2 rounded-lg mr-2">
+                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-1 lg:p-2 mr-1 lg:mr-2 rounded-lg ">
                         <Image
                             src="/images/home/check.svg"
                             alt="card"
@@ -658,7 +658,7 @@ export default function Home() {
                       </span>
                                                 Leverans
                                             </div>
-                                            24 - 48 timmar
+                                            <small className="lg:text-[11px] text-[9px]">24 - 48 timmar</small>
                                         </div>
                                     </li>
                                 </ul>
@@ -688,8 +688,7 @@ export default function Home() {
                                     <li className="mt-4 text-[11px] lg:text-[12px]">
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
-                        <span
-                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-2 rounded-lg mr-2">
+                        <span className="border border-1 border-[#BBBBBF] flex justify-center items-center p-1 lg:p-2 mr-1 lg:mr-2 rounded-lg ">
                         <Image
                             src="/images/home/check.svg"
                             alt="card"
@@ -701,14 +700,14 @@ export default function Home() {
                       </span>
                                                 Engångskostnad
                                             </div>
-                                            699 kr
+                                            <small className="lg:text-[11px] text-[9px]">699 kr</small>
                                         </div>
                                     </li>
                                     <li className="mt-4 text-[10px] lg:text-[12px]">
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
                         <span
-                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-2 rounded-lg mr-2">
+                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-1 lg:p-2 mr-1 lg:mr-2 rounded-lg ">
                         <Image
                             src="/images/home/check.svg"
                             alt="card"
@@ -720,14 +719,14 @@ export default function Home() {
                       </span>
                                                 Målgrupp
                                             </div>
-                                            De som vill marknadsföra sin dropshipping
+                                           <small className="lg:text-[10px] text-[9px]"> De som vill marknadsföra sin dropshipping</small>
                                         </div>
                                     </li>
                                     <li className="mt-4 text-[11px] lg:text-[12px]">
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
                         <span
-                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-2 rounded-lg mr-2">
+                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-1 lg:p-2 mr-1 lg:mr-2 rounded-lg ">
                         <Image
                             src="/images/home/check.svg"
                             alt="card"
@@ -739,14 +738,14 @@ export default function Home() {
                       </span>
                                                 Innehåll
                                             </div>
-                                            Annonseringsmaterial för att driva trafik
+                                           <small className="lg:text-[11px] text-[9px]"> Annonseringsmaterial för att driva trafik</small>
                                         </div>
                                     </li>
                                     <li className="mt-4 text-[11px] lg:text-[12px]">
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
                         <span
-                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-2 rounded-lg mr-2">
+                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-1 lg:p-2 mr-1 lg:mr-2 rounded-lg">
                         <Image
                             src="/images/home/check.svg"
                             alt="card"
@@ -758,7 +757,7 @@ export default function Home() {
                       </span>
                                                 Strategi
                                             </div>
-                                            Förbättra CTR & konverteringar
+                                            <small className="lg:text-[11px] text-[9px]">Förbättra CTR & konverteringar</small>
                                         </div>
                                     </li>
                                 </ul>
@@ -788,8 +787,7 @@ export default function Home() {
                                     <li className="mt-4 text-[11px] lg:text-[12px]">
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
-                        <span
-                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-2 rounded-lg mr-2">
+                        <span className="border border-1 border-[#BBBBBF] flex justify-center items-center p-1 lg:p-2 mr-1 lg:mr-2 rounded-lg">
                         <Image
                             src="/images/home/check.svg"
                             alt="card"
@@ -801,14 +799,14 @@ export default function Home() {
                       </span>
                                                 Engångskostnad
                                             </div>
-                                            15 000 kr
+                                            <small className="lg:text-[11px] text-[9px]">15 000 kr</small>
                                         </div>
                                     </li>
                                     <li className="mt-4 text-[11px] lg:text-[12px]">
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
                         <span
-                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-2 rounded-lg mr-2">
+                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-1 lg:p-2 mr-1 lg:mr-2 rounded-lg ">
                         <Image
                             src="/images/home/check.svg"
                             alt="card"
@@ -820,14 +818,14 @@ export default function Home() {
                       </span>
                                                 Målgrupp
                                             </div>
-                                            De som vill tjäna över 1MSEK
+                                           <small className="lg:text-[11px] text-[9px]"> De som vill tjäna över 1MSEK</small>
                                         </div>
                                     </li>
                                     <li className="mt-4 text-[10px] lg:text-[12px]">
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
                         <span
-                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-2 rounded-lg mr-2">
+                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-1 lg:p-2 mr-1 lg:mr-2 rounded-lg ">
                         <Image
                             src="/images/home/check.svg"
                             alt="card"
@@ -839,14 +837,14 @@ export default function Home() {
                       </span>
                                                 Innehåll
                                             </div>
-                                            1-on-1 mentorskap, individuell vägledning
+                                            <small className="lg:text-[11px] text-[9px]">1-on-1 mentorskap, individuell vägledning</small>
                                         </div>
                                     </li>
                                     <li className="mt-4 text-[10px] lg:text-[12px]">
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
                         <span
-                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-2 rounded-lg mr-2">
+                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-1 lg:p-2 mr-1 lg:mr-2 rounded-lg ">
                         <Image
                             src="/images/home/check.svg"
                             alt="card"
@@ -858,7 +856,7 @@ export default function Home() {
                       </span>
                                                 Expertisnivå
                                             </div>
-                                            Lär från en erfaren dropshipping-expert
+                                            <small className="lg:text-[10px] text-[9px]">Lär från en erfaren dropshipping-expert</small>
                                         </div>
                                     </li>
                                 </ul>
@@ -889,7 +887,7 @@ export default function Home() {
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
                         <span
-                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-2 rounded-lg mr-2">
+                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-1 lg:p-2 mr-1 lg:mr-2 rounded-lg ">
                         <Image
                             src="/images/home/check.svg"
                             alt="card"
@@ -901,14 +899,15 @@ export default function Home() {
                       </span>
                                                 Engångskostnad
                                             </div>
-                                            10 kr
+
+                                            <small className="lg:text-[11px] text-[9px]"> 10 kr</small>
                                         </div>
                                     </li>
                                     <li className="mt-4 text-[11px] lg:text-[12px]">
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
                         <span
-                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-2 rounded-lg mr-2">
+                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-1 lg:p-2 mr-1 lg:mr-2 rounded-lg ">
                         <Image
                             src="/images/home/check.svg"
                             alt="card"
@@ -920,14 +919,15 @@ export default function Home() {
                       </span>
                                                 Målgrupp
                                             </div>
-                                            Nybörjare inom dropshipping
+
+                                            <small className="lg:text-[11px] text-[9px]">Nybörjare inom dropshipping</small>
                                         </div>
                                     </li>
                                     <li className="mt-4 text-[11px] lg:text-[12px]">
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
                         <span
-                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-2 rounded-lg mr-2">
+                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-1 lg:p-2 mr-1 lg:mr-2 rounded-lg ">
                         <Image
                             src="/images/home/check.svg"
                             alt="card"
@@ -939,14 +939,15 @@ export default function Home() {
                       </span>
                                                 Innehåll
                                             </div>
-                                            Shopify prenumeration
+
+                                            <small className="lg:text-[11px] text-[9px]">Shopify prenumeration</small>
                                         </div>
                                     </li>
                                     <li className="mt-4 text-[11px] lg:text-[12px]">
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
                         <span
-                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-2 rounded-lg mr-2">
+                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-1 lg:p-2 mr-1 lg:mr-2 rounded-lg ">
                         <Image
                             src="/images/home/check.svg"
                             alt="card"
@@ -958,7 +959,8 @@ export default function Home() {
                       </span>
                                                 Format
                                             </div>
-                                            Digital butik
+
+                                            <small className="lg:text-[11px] text-[9px]">Digital butik</small>
                                         </div>
                                     </li>
                                 </ul>
@@ -972,7 +974,7 @@ export default function Home() {
                 <section className="relative flex flex-col justify-center md:mb-16 lg:mb-20">
                     <div className="lg:mt-8 py-8 bg-base-200 rounded-2xl flex justify-center">
                         <div>
-                            <h1 className="lg:w-50 text-[20px] leading-[22px] text-center lg:text-[32px] lg:leading-[40px] font-bold">Uppdelning av Dominics
+                            <h1 className="lg:w-50 text-[18px] leading-[18px] text-center lg:text-[32px] lg:leading-[40px] font-bold">Uppdelning av Dominics
                                 resultat <br className="hidden lg:block"/> och finansiella poster</h1>
                             <Image
                                 src="/images/HOME/authur.svg"
