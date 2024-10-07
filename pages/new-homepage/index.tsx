@@ -1025,10 +1025,13 @@ export default function Home() {
 
 
                 <section className="relative flex flex-col justify-center md:mb-16 lg:mb-20">
-                    <div className="lg:mt-8 py-8 bg-base-200 rounded-2xl flex justify-center">
+                    <div className="lg:mt-8 py-8 bg-base-200 rounded-2xl  justify-center">
                         <div>
-                            <h1 className="lg:w-50 text-[18px] leading-[18px] text-center lg:text-[32px] lg:leading-[40px] mb-4 font-bold">Uppdelning av Dominics
-                                resultat <br className="hidden lg:block"/> och finansiella poster</h1>
+                            <h1 className="lg:w-50 text-[18px] leading-[18px] text-center lg:text-[32px] lg:leading-[40px] mb-4 font-bold">Uppdelning
+                                av Dominics
+                                resultat <br/> och finansiella poster</h1>
+                        </div>
+                        <div className="flex justify-center mt-4">
                             <iframe
                                 width="705"
                                 height="423"
@@ -1038,7 +1041,6 @@ export default function Home() {
                                 frameBorder="0"
                                 allowFullScreen
                             ></iframe>
-
                         </div>
                     </div>
 
