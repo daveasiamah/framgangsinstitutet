@@ -977,7 +977,7 @@ export default function Home() {
                             <h1 className="lg:w-50 text-[18px] leading-[18px] text-center lg:text-[32px] lg:leading-[40px] font-bold">Uppdelning av Dominics
                                 resultat <br className="hidden lg:block"/> och finansiella poster</h1>
                             <Image
-                                src="/images/HOME/authur.svg"
+                                src="/images/home/authur.svg"
 
                                 alt="authur"
                                 height={423}
