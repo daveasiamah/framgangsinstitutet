@@ -1058,13 +1058,13 @@ export default function Home() {
                         </p>
                     </ScrollReveal>
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-                        <div className="rounded-[2rem] border border-1 border-[#BBBBBF] feature-card">
+                        <div className="rounded-[2rem] border border-1 border-[#BBBBBF] ">
                             <img
 
                                 src="/images/home/number.svg"
                                 alt="card"
 
-                                className="p-2 border-b border-1 border-[#E5E6EA] w-full h-[235px]"
+                                className="p-2 border-b border-1 border-[#E5E6EA] w-full h-[235px] object-cover"
                                 loading="lazy"
                             />
 
@@ -1075,13 +1075,13 @@ export default function Home() {
                                     underverk. Du är en dropshipping produkt ifrån framgång</p>
                             </div>
                         </div>
-                        <div className="rounded-[2rem] border border-1 border-[#BBBBBF] feature-card">
+                        <div className="rounded-[2rem] border border-1 border-[#BBBBBF]">
                             <img
 
                                 src="/images/home/graph.svg"
                                 alt="card"
 
-                                className="p-2 border-b border-1 border-[#E5E6EA] w-full h-[235px]"
+                                className="p-2 border-b border-1 border-[#E5E6EA] w-[100%] h-[235px] object-cover"
                                 loading="lazy"
                             />
 
@@ -1092,13 +1092,13 @@ export default function Home() {
                                     e-handel.</p>
                             </div>
                         </div>
-                        <div className="rounded-[2rem] border border-1 border-[#BBBBBF] feature-card">
+                        <div className="rounded-[2rem] border border-1 border-[#BBBBBF] ">
                             <img
 
                                 src="/images/home/locker.svg"
                                 alt="card"
 
-                                className="p-2 border-b border-1 border-[#E5E6EA] w-full h-[235px]"
+                                className="p-2 border-b border-1 border-[#E5E6EA] w-full h-[235px] object-cover"
                                 loading="lazy"
                             />
 
