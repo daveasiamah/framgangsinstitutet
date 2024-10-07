@@ -178,13 +178,16 @@ textarea::placeholder {
     }
 
     &:hover {
-      @apply bg-primary text-white transition-colors duration-200 ease-in-out;
+      @apply bg-[#225AEA] text-white transition-colors duration-200 ease-in-out  border-0;
 
       .icon-container {
         @apply bg-glass;
       }
 
       p {
+        @apply text-white;
+      }
+      h1{
         @apply text-white;
       }
     }

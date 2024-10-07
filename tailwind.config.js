@@ -12,7 +12,8 @@ module.exports = {
       },
       fontFamily: {
         poppins: "'Poppins', sans-serif",
-        roboto: "'Roboto', sans-serif"
+        roboto: "'Roboto', sans-serif",
+        jakarta: "'Plus Jakarta Sans', sans-serif"
       },
       spacing: {
         "header-height": "90px"

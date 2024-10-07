@@ -30,7 +30,7 @@ function Accordion({ data }: Props) {
           className="accordion-wrapper text-left bg-white py-4 px-6 rounded-lg cursor-pointer focus:border-primary"
         >
           <div className="cursor-pointer py-2 flex justify-between items-center">
-            <h2 className="font-semibold lg:text-lg text-subtitle-dark">
+            <h2 className="font-semibold lg:text-lg text-subtitle-dark font-jakarta">
               {data.question}
             </h2>
             <span
