@@ -343,7 +343,7 @@ export default function Home() {
 
                 </section>
 
-                <section className="p-4 lg:px-16 lg:my-18 mt-5 md:mt-20 lg:mt-20">
+                <section className="md:p-4 lg:px-16 lg:my-18 mt-5 md:mt-20 lg:mt-20">
                     <div className="flex flex-col lg:flex-row justify-between items-center">
                         {/* Image Section */}
                         <div className="w-full lg:w-1/2 lg:mr-20 flex lg:justify-start mb-8 lg:mb-0">
