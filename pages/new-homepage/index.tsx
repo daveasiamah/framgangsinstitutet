@@ -320,7 +320,7 @@ export default function Home() {
                         {/* Text Container */}
                         <div className="w-full lg:w-1/2 lg:mr-20 md:mb-8 lg:mb-0 order-0 lg:order-0">
                             <div className="hidden lg:block">
-                                <span className="flex flex-col lg:flex-row md:flex-row mb-[-20px]">
+                                <span className="flex flex-col lg:flex-row md:flex-row ">
                                 <h1 className="text-[20px] lg:text-[24px] font-[700] font-jakarta text-primary mr-2 mb-[-20px]">
                                     Steg-för-steg guide
                                 </h1>
@@ -1303,19 +1303,23 @@ export default function Home() {
                 </section>
 
 
-                <section className="relative text-center mb-16 lg:mb-20 mt-40">
+                <section className="relative text-center lg:mb-20 lg:mt-40">
 
                     <ScrollReveal className="flex justify-between items-center mb-4">
-                        <h1 className="hidden lg:block text-left text-[32px] leading-[55px] font-bold">
+                        <h1 className="hidden lg:block text-left text-[32px] leading-[55px] font-jakarta">
                             Bläddra bland våra senaste artiklar
                         </h1>
-                        <button onClick={() => window.location.href = "https://checkified.se/blog"} className="hidden lg:block text-left text-[16px] text-[#434C69] leading-[20px] font-normal mb-5 border border-1 border-[#BBBBBF] p-2 rounded-md">
+                        <h1 className="lg:hidden text-left text-[18px] text-center leading-[28px] font-[700] font-jakarta">
+                            Bläddra bland våra senaste artiklar
+                        </h1>
+                        <button onClick={() => window.location.href = "https://checkified.se/blog"}
+                                className="hidden lg:block text-left text-[16px] text-[#434C69] leading-[20px] font-normal mb-5 border border-1 border-[#BBBBBF] p-2 rounded-md">
                             Visa blogg
                         </button>
                     </ScrollReveal>
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
                         <div className="rounded-[2rem] border border-1 border-[#BBBBBF] p-5 ">
-                            <img
+                        <img
                                 src="/images/home/89c0097002aef0b265c155f8875f4489.jpeg"
                                 alt="card"
                                 className="border-b border-1 border-[#E5E6EA] w-full h-[192px] rounded-[20px] mb-5"
@@ -1323,9 +1327,9 @@ export default function Home() {
                             />
 
                             <div className="text-left ">
-                                <p className="text-[#686870] text-[14px] font-inter mb-[20px] mt-4">Juli 20, 2024</p>
+                                <p className="text-[#686870] text-[14px] lg:text-[18px] font-inter mb-2 lg:mb-[20px] mt-4">Juli 20, 2024</p>
 
-                                <p className="font-inter font-[500px] text-[18px] text-[#434C69] leading-[25px] mb-5">Vi har sammanställt en lista
+                                <p className="font-inter font-[500px] text-[14px] lg:text-[18px]  text-[#434C69] leading-[25px] mb-2">Vi har sammanställt en lista
                                     över de 10 bästa produkterna för dropshipping 2024.</p>
 
                                 <div className="flex items-center">
@@ -1336,7 +1340,7 @@ export default function Home() {
                                         className="border-b border-1 border-[#E5E6EA] w-[24] h-[34px] object-contain rounded-full"
                                         loading="lazy"
                                     />
-                                    <p className="font-inter font-[500px] text-[18px] text-[#434C69] leading-[25px] ml-2">Linnea Bergström</p>
+                                    <p className="font-inter font-[500px] text-[14px] lg:text-[18px] text-[#434C69] leading-[25px] ml-2">Linnea Bergström</p>
                                 </div>
                             </div>
                         </div>
@@ -1349,9 +1353,9 @@ export default function Home() {
                             />
 
                             <div className="text-left">
-                                <p className="text-[#686870] text-[14px] font-inter font-[500px] mb-[20px] mt-4">Juli 20, 2024</p>
+                                <p className="text-[#686870] text-[14px] lg:text-[18px] font-inter font-[500px] mb-2 lg:mb-[20px] mt-4">Juli 20, 2024</p>
 
-                                <p className="font-inter font-[500px] text-[18px] text-[#434C69] leading-[25px] mb-5">Vi har sammanställt en lista
+                                <p className="font-inter font-[500px] text-[14px] lg:text-[18px] text-[#434C69] leading-[25px] mb-2">Vi har sammanställt en lista
                                     över de 10 bästa produkterna för dropshipping 2024.</p>
 
                                 <div className="flex items-center">
@@ -1362,7 +1366,7 @@ export default function Home() {
                                         className="border-b border-1 border-[#E5E6EA] w-[24] h-[34px] object-contain rounded-full"
                                         loading="lazy"
                                     />
-                                    <p className="font-inter font-[500px] text-[18px] text-[#434C69] leading-[25px] ml-2">Linnea Bergström</p>
+                                    <p className="font-inter font-[500px] text-[14px] lg:text-[18px] text-[#434C69] leading-[25px] ml-2">Linnea Bergström</p>
                                 </div>
                             </div>
                         </div>
@@ -1375,9 +1379,9 @@ export default function Home() {
                             />
 
                             <div className="text-left">
-                                <p className="text-[#686870] text-[14px] font-inter font-[500px] mb-[20px] mt-4">Juli 20, 2024</p>
+                                <p className="text-[#686870] text-[14px] lg:text-[18px] font-inter font-[500px] mb-2 lg:mb-[20px] mt-4">Juli 20, 2024</p>
 
-                                <p className="font-inter font-[500px] text-[18px] text-[#434C69] leading-[25px] mb-5">Vi har sammanställt en lista
+                                <p className="font-inter font-[500px] text-[14px] lg:text-[18px] text-[#434C69] leading-[25px] mb-2">Vi har sammanställt en lista
                                     över de 10 bästa produkterna för dropshipping 2024.</p>
 
                                 <div className="flex items-center">
@@ -1388,7 +1392,7 @@ export default function Home() {
                                         className="border-b border-1 border-[#E5E6EA] w-[24] h-[34px] object-contain rounded-full"
                                         loading="lazy"
                                     />
-                                    <p className="font-inter font-[500px] text-[18px] text-[#434C69] leading-[25px] ml-2">Linnea Bergström</p>
+                                    <p className="font-inter font-[500px] text-[14px] lg:text-[18px] text-[#434C69] leading-[25px] ml-2">Linnea Bergström</p>
                                 </div>
                             </div>
                         </div>
@@ -1401,9 +1405,9 @@ export default function Home() {
                             />
 
                             <div className="text-left">
-                                <p className="text-[#686870] text-[14px] font-inter font-[500px] mb-[20px] mt-4">Juli 20, 2024</p>
+                                <p className="text-[#686870] text-[14px] lg:text-[18px] font-inter font-[500px] mb-2 lg:mb-[20px] mt-4">Juli 20, 2024</p>
 
-                                <p className="font-inter font-[500px] text-[18px] text-[#434C69] leading-[25px] mb-5">Vi har sammanställt en lista
+                                <p className="font-inter font-[500px] text-[14px] lg:text-[18px] text-[#434C69] leading-[25px] mb-2">Vi har sammanställt en lista
                                     över de 10 bästa produkterna för dropshipping 2024.</p>
 
                                 <div className="flex items-center">
@@ -1414,7 +1418,7 @@ export default function Home() {
                                         className="border-b border-1 border-[#E5E6EA] w-[24] h-[34px] object-contain rounded-full"
                                         loading="lazy"
                                     />
-                                    <p className="font-inter font-[500px] text-[18px] text-[#434C69] leading-[25px] ml-2">Linnea Bergström</p>
+                                    <p className="font-inter font-[500px] text-[14px] lg:text-[18px] text-[#434C69] leading-[25px] ml-2">Linnea Bergström</p>
                                 </div>
                             </div>
                         </div>
@@ -1427,9 +1431,9 @@ export default function Home() {
                             />
 
                             <div className="text-left">
-                                <p className="text-[#686870] text-[14px] font-inter font-[500px] mb-[20px] mt-4">Juli 20, 2024</p>
+                                <p className="text-[#686870] text-[14px] lg:text-[18px] font-inter font-[500px] mb-2 lg:mb-[20px] mt-4">Juli 20, 2024</p>
 
-                                <p className="font-inter font-[500px] text-[18px] text-[#434C69] leading-[25px] mb-5">Vi har sammanställt en lista
+                                <p className="font-inter font-[500px] text-[14px] lg:text-[18px] text-[#434C69] leading-[25px] mb-2">Vi har sammanställt en lista
                                     över de 10 bästa produkterna för dropshipping 2024.</p>
 
                                 <div className="flex items-center">
@@ -1440,7 +1444,7 @@ export default function Home() {
                                         className="border-b border-1 border-[#E5E6EA] w-[24] h-[34px] object-contain rounded-full"
                                         loading="lazy"
                                     />
-                                    <p className="font-inter font-[500px] text-[18px] text-[#434C69] leading-[25px] ml-2">Linnea Bergström</p>
+                                    <p className="font-inter font-[500px] text-[14px] lg:text-[18px] text-[#434C69] leading-[25px] ml-2">Linnea Bergström</p>
                                 </div>
                             </div>
                         </div>
@@ -1453,9 +1457,9 @@ export default function Home() {
                             />
 
                             <div className="text-left">
-                                <p className="text-[#686870] text-[14px] font-inter font-[500px] mb-[20px] mt-4">Juli 20, 2024</p>
+                                <p className="text-[#686870] text-[14px] lg:text-[18px] font-inter font-[500px] mb-2 lg:mb-[20px] mt-4">Juli 20, 2024</p>
 
-                                <p className="font-inter font-[500px] text-[18px] text-[#434C69] leading-[25px] mb-5">Vi har sammanställt en lista
+                                <p className="font-inter font-[500px] text-[14px] lg:text-[18px] text-[#434C69] leading-[25px] mb-3">Vi har sammanställt en lista
                                     över de 10 bästa produkterna för dropshipping 2024.</p>
 
                                 <div className="flex items-center">
@@ -1466,7 +1470,7 @@ export default function Home() {
                                         className="border-b border-1 border-[#E5E6EA] w-[24] h-[34px] object-contain rounded-full"
                                         loading="lazy"
                                     />
-                                    <p className="font-inter font-[500px] text-[18px] text-[#434C69] leading-[25px] ml-2">Linnea Bergström</p>
+                                    <p className="font-inter font-[500px] text-[14px] lg:text-[18px] text-[#434C69] leading-[25px] ml-2">Linnea Bergström</p>
                                 </div>
                             </div>
                         </div>
