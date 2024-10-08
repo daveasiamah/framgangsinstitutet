@@ -1084,9 +1084,9 @@ export default function Home() {
                                 loading="lazy"
                             />
 
-                            <div className="text-left p-5 ">
-                                <h1 className="font-bold text-[22px] text-[#151E3A] leading-[48px]">En sälj, pengarna tillbaka</h1>
-                                <p className="font-semibold text-[13px] text-[#434C69] leading-[22px]">Ungefär en sälj är allt du
+                            <div className="text-left pl-4 pb-4">
+                                <h1 className="font-[700] font-jakarta text-[16px] lg:text-[22px] text-[#151E3A] leading-[28px] mt-2">En sälj, pengarna tillbaka</h1>
+                                <p className="font-[500] font-inter text-[12px] lg:text-[13px] text-[#434C69] leading-[22px]">Ungefär en sälj är allt du
                                     behöver för att täcka kostnaden för ett abonnemang hos oss. Å andra sidan skulle en vinnare göra
                                     underverk. Du är en dropshipping produkt ifrån framgång</p>
                             </div>
@@ -1101,9 +1101,9 @@ export default function Home() {
                                 loading="lazy"
                             />
 
-                            <div className="text-left p-5 ">
-                                <h1 className="font-bold text-[22px] text-[#151E3A] leading-[48px]">Omfattande strategier</h1>
-                                <p className="font-semibold text-[13px] text-[#434C69] leading-[22px]">Ge dig själv en utmärkt framgång
+                            <div className="text-left  pl-4 pb-4">
+                                <h1 className="font-[700] font-jakarta text-[16px] lg:text-[22px] text-[#151E3A] leading-[28px] mt-2">Omfattande strategier</h1>
+                                <p className="font-[500] font-inter text-[12px] lg:text-[13px] text-[#434C69] leading-[22px]">Ge dig själv en utmärkt framgång
                                     med stora mängder strategiinsikter som ingår i Checkified Dropshipping Sverige. Du lär dig allt om
                                     e-handel.</p>
                             </div>
@@ -1118,9 +1118,9 @@ export default function Home() {
                                 loading="lazy"
                             />
 
-                            <div className="text-left p-5 ">
-                                <h1 className="font-bold text-[22px] text-[#151E3A] leading-[48px]">Spara tid och pengar</h1>
-                                <p className="font-semibold text-[13px] text-[#434C69] leading-[22px]">Håll dig informerad om
+                            <div className="text-left pl-4 pb-4">
+                                <h1 className="font-[700] font-jakarta text-[16px] lg:text-[22px] text-[#151E3A] leading-[28px] mt-2">Spara tid och pengar</h1>
+                                <p className="font-[500] font-inter text-[12px] lg:text-[13px] text-[#434C69] leading-[22px]">Håll dig informerad om
                                     dropshipping, e-handel, marknadsföring eller potentiella möjligheter som kan hjälpa ditt företag. Allt
                                     för att spara tid och pengar.</p>
                             </div>
@@ -1129,20 +1129,21 @@ export default function Home() {
                 </section>
 
 
-                <section className="mt-10 mb-16 lg:mb-20 testimonial-section h-[620px]">
+                <section className="mt-10 lg:mb-20 testimonial-section lg:h-[620px] h-[420px] mb-[80px]">
 
-                    <div className="absolute left-0 right-0 bg-base-200 h-[620px]">
-                        <ScrollReveal className="mt-20">
-                            <Title
-                                blackText="Vad Våra Studenter Säger "
-                                isBlock
-                                className="mb-16 lg:mb-20 text-center"
-                            />
+                    <div className="absolute left-0 right-0 bg-base-200 h-[480px] lg:h-[600px]">
+                        <ScrollReveal className="lg:mt-20 mt-7">
+                            <h1 className="hidden lg:block lg:text-[32px] lg:leading-[40px] font-[700] font-jakarta text-center">
+                                Vad Våra Studenter Säger
+                            </h1>
+                            <h1 className="text-[22px] lg:hidden leading-[22px] font-[700] font-jakarta text-center">
+                                Vad Våra <br/> Studenter Säger
+                            </h1>
                         </ScrollReveal>
                     </div>
-                    <div className="relative pt-48  items-center justify-center testimonial-slider-container">
+                    <div className="relative lg:pt-48 pt-20  items-center justify-center testimonial-slider-container">
                         <div className="absolute" style={{}}>
-                            <div className="items-center left-0 gap-2 justify-around testimonial-slider">
+                        <div className="items-center left-0 gap-2 justify-around testimonial-slider">
                                 <Marquee style={{width: "1300px", overflow: "visible"}} speed={30}>
                                     {testimonyData.map((data) => (
                                         <div
