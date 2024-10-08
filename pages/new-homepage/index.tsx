@@ -328,7 +328,7 @@ export default function Home() {
                         </div>
                         <div className="w-full lg:w-1/2 lg:ml-20">
                             <Image
-                                src="/images/home/globe.gif"
+                                src="/images/home/globe.svg"
                                 alt="globe"
                                 height={341}
                                 width={347}
