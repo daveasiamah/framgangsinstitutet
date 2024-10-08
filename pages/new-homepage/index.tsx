@@ -334,7 +334,7 @@ export default function Home() {
 
                             <h1 className="lg:hidden md:hidden text-[20px] leading-[22px] font-jakarta font-[700]"><span className="text-[#2E56F5]">Steg-för-steg guide</span> till att <br/> bygga dropshipping företag</h1>
 
-                            <p className="mt-4 text-[#434C69] text-[14px] leading-[22px] font-[500] font-inter">
+                            <p className="mt-4 text-[#434C69] text-[12px]  lg:text-[14px] leading-[22px] font-[500] font-inter">
                                 Lär dig hur du bygger, skalar och drar nytta av e-handelsbutiker. Från din första miljon
                                 i intäkter till en potentiell exit. Det närmaste du kommer en doktorsexamen i e-handel
                                 och digital
@@ -391,7 +391,7 @@ export default function Home() {
                                     </svg>
                                     Steg för steg video utbildning
                                 </li>
-                                <li className="flex items-center text-[#434C69] text-[14px] leading-[32px] font-[500px] font-inter mt-2">
+                                <li className="flex items-center text-[#434C69] text-[14px] leading-[32px] font-[500px] font-inter ">
                                     <svg width="18" height="13" viewBox="0 0 18 13" fill="none"
                                          xmlns="http://www.w3.org/2000/svg"
                                          className="mr-2">
@@ -401,7 +401,7 @@ export default function Home() {
                                     </svg>
                                     Exklusiv Community
                                 </li>
-                                <li className="flex items-center text-[#434C69] text-[14px] leading-[32px] font-[500px] font-inter mt-2">
+                                <li className="flex items-center text-[#434C69] text-[14px] leading-[32px] font-[500px] font-inter ">
                                     <svg width="18" height="13" viewBox="0 0 18 13" fill="none"
                                          xmlns="http://www.w3.org/2000/svg"
                                          className="mr-2">
@@ -413,7 +413,7 @@ export default function Home() {
                                 </li>
                             </ul>
 
-                            <button className="h-[26px] w-[161px] md:[36px] text-white rounded pl-2 pr-2 border-0 bg-[#225AEA] md:w-50 text-[10px] md:text-[14px] md:leading-[22px] mt-5">
+                            <button className="h-[26px] w-[161px] md:[36px] text-white rounded pl-2 pr-2 border-0 bg-[#225AEA] md:w-50 text-[10px] md:text-[14px] md:leading-[22px] mt-3">
                                 Gå med gratis idag
                             </button>
                         </div>
@@ -443,7 +443,7 @@ export default function Home() {
                             />
 
                             <div className="text-left">
-                                <h1 className="font-bold text-[22px] text-[#151E3A] leading-[48px]">Checkified Premium</h1>
+                                <h1 className="font-[700] text-[16px]  lg:text-[22px] text-[#151E3A] leading-[48px]">Checkified Premium</h1>
                                 <p className="font-semibold text-[13px] text-[#434C69] leading-[22px]">I kursen kommer du lära dig om
                                     dropshipping e-handel och marknadsföring. Gå med idag gratis👇</p>
                             </div>
@@ -545,7 +545,7 @@ export default function Home() {
                             />
 
                             <div className="text-left">
-                                <h1 className="font-bold text-[22px] text-[#151E3A] leading-[48px]">Checkified Premium</h1>
+                                <h1 className="font-[700] text-[16px]  lg:text-[22px] text-[#151E3A] leading-[48px]">Checkified Premium</h1>
                                 <p className="font-semibold text-[13px] text-[#434C69] leading-[22px]">Gå från 0-100k/mån med
                                     dropshipping. Över 45+ avsnitt. Tryck på knappen nedan för att gå med👇</p>
                             </div>
@@ -645,7 +645,7 @@ export default function Home() {
                             />
 
                             <div className="text-left">
-                                <h1 className="font-bold text-[22px] text-[#151E3A] leading-[48px]">Checkified E-butik</h1>
+                                <h1 className="font-[700] text-[16px]  lg:text-[22px] text-[#151E3A] leading-[48px]">Checkified E-butik</h1>
                                 <p className="font-semibold text-[13px] text-[#434C69] leading-[22px]">Köp din e-butik med 20 vinnande
                                     produkter, logotyp, leverantör, och e-bok här👇</p>
                             </div>
@@ -745,7 +745,7 @@ export default function Home() {
                             />
 
                             <div className="text-left">
-                                <h1 className="font-bold text-[22px] text-[#151E3A] leading-[48px]">Checkified Ads</h1>
+                                <h1 className="font-[700] text-[16px]  lg:text-[22px] text-[#151E3A] leading-[48px]">Checkified Ads</h1>
                                 <p className="font-semibold text-[13px] text-[#434C69] leading-[22px]">Köp videoannonser för att
                                     marknadsföra innehåll för endast 699 SEK här👇</p>
                             </div>
@@ -844,7 +844,7 @@ export default function Home() {
                             />
 
                             <div className="text-left">
-                                <h1 className="font-bold text-[22px] text-[#151E3A] leading-[48px]">Checkified Mentorskap</h1>
+                                <h1 className="font-[700] text-[16px]  lg:text-[22px] text-[#151E3A] leading-[48px]">Checkified Mentorskap</h1>
                                 <p className="font-semibold text-[13px] text-[#434C69] leading-[22px]">Köp 1-on-1 mentorskap med
                                     e-handelsmiljonären Dominic för att lära dig allt om dropshipping här👇</p>
                             </div>
@@ -943,7 +943,7 @@ export default function Home() {
                             />
 
                             <div className="text-left">
-                                <h1 className="font-bold text-[22px] text-[#151E3A] leading-[48px]">Checkified Shopify</h1>
+                                <h1 className="font-[700] text-[16px]  lg:text-[22px] text-[#151E3A] leading-[48px]">Checkified Shopify</h1>
                                 <p className="font-semibold text-[13px] text-[#434C69] leading-[22px]">Checkified är stolt partner med
                                     Shopify – börja med Shopify för bara 10 kr första månaden👇</p>
                             </div>
