@@ -332,7 +332,7 @@ export default function Home() {
                                     företag</h1>
                             </div>
 
-                            <h1 className="lg:hidden md:hidden text-[20px] leading-[22px] font-jakarta font-[700px]"><span className="text-[#2E56F5]">Steg-för-steg guide</span> till att <br/> bygga dropshipping företag</h1>
+                            <h1 className="lg:hidden md:hidden text-[20px] leading-[22px] font-jakarta font-[700]"><span className="text-[#2E56F5]">Steg-för-steg guide</span> till att <br/> bygga dropshipping företag</h1>
 
                             <p className="mt-4 text-[#434C69] text-[14px] leading-[22px] font-[500] font-inter">
                                 Lär dig hur du bygger, skalar och drar nytta av e-handelsbutiker. Från din första miljon
