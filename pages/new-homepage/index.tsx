@@ -217,7 +217,7 @@ export default function Home() {
                                 </h1>
                             </div>
                         </ScrollReveal>
-                        <div className="flex justify-center items-center gap-1 mt-8">
+                        <div className="flex justify-center items-center gap-1 mt-3">
                             <Image
                                 src="/icons/home/users-pics.png"
                                 alt="user pics"
@@ -316,11 +316,14 @@ export default function Home() {
                   till att bygga ett
                 </h1>
               </span>
-                            <h1 className="text-[20px] lg:text-[24px] font-[700px] font-jakarta">dropshipping företag</h1>
+                            <h1 className="text-[20px] lg:text-[24px] font-[700px] font-jakarta">dropshipping
+                                företag</h1>
 
                             <p className="mt-4 w-50 text-[#434C69] text-[14px] leading-[22px] font-[500px] font-inter">
-                                Lär dig hur du bygger, skalar och drar nytta av e-handelsbutiker. Från din första miljon i intäkter till
-                                en potentiell exit. Det närmaste du kommer en doktorsexamen i e-handel och digital marknadsföring.
+                                Lär dig hur du bygger, skalar och drar nytta av e-handelsbutiker. Från din första miljon
+                                i intäkter till
+                                en potentiell exit. Det närmaste du kommer en doktorsexamen i e-handel och digital
+                                marknadsföring.
                             </p>
                             <button className="btn btn-primary bg-[#225AEA] w-50 text-[14px] leading-[22px] mt-10">
                                 Se Gratis Dropshipping Kurs
@@ -328,13 +331,14 @@ export default function Home() {
                         </div>
                         <div className="w-full lg:w-1/2 lg:ml-20">
                             <Image
-                                src="/images/home/globe.svg"
+                                src="/images/home/globe_new.gif"
                                 alt="globe"
                                 height={341}
                                 width={347}
                                 className="object-contain mx-auto mb-16"
                             />
                         </div>
+
                     </div>
                 </section>
 
