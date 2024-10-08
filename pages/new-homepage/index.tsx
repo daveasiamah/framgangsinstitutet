@@ -1171,8 +1171,8 @@ export default function Home() {
 
                 <section
                     className="lg:bg-[#225AEA] bg-[#3E6FED] p-4 lg:pl-10 mb-16 lg:mb-20 rounded-3xl text-white text-left flex flex-col items-center lg:flex-row lg:gap-20">
-                    <ScrollReveal className="w-full lg:w-2/3 pl-8 mr-8 pt-4">
-                        <h2 className="lg:text-[24px] lg:leading-[28px] md:text-[24px] md:leading-[28px]  text-[20px] leading-[22px]  font-[700] mb-2 font-jakarta">
+                    <ScrollReveal className="w-full lg:w-2/3 pl-12 mr-12 pt-4">
+                        <h2 className="lg:text-[24px] lg:leading-[28px] md:text-[24px] md:leading-[28px]  text-[18px] leading-[22px]  font-[700] mb-2 font-jakarta">
                             Gå med i 750+ studenter som använder Checkified
                         </h2>
                         <p className="mb-2 text-[12px] md:text-[14px] lg:text-[16px] lg:leading-[22px] font-[500] font-inter mt-4">Allt du behöver göra är att hitta din första
