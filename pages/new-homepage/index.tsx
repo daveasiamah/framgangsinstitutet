@@ -332,7 +332,7 @@ export default function Home() {
                                     företag</h1>
                             </div>
 
-                            <h1 className="lg:hidden md:hidden text-[20px] leading-[22px] font-jakarta"><span className="text-[#2E56F5]">Steg-för-steg guide</span> till att <br/> bygga dropshipping företag</h1>
+                            <h1 className="lg:hidden md:hidden text-[20px] leading-[22px] font-jakarta font-[700px]"><span className="text-[#2E56F5]">Steg-för-steg guide</span> till att <br/> bygga dropshipping företag</h1>
 
                             <p className="mt-4 text-[#434C69] text-[14px] leading-[22px] font-[500] font-inter">
                                 Lär dig hur du bygger, skalar och drar nytta av e-handelsbutiker. Från din första miljon
@@ -341,7 +341,7 @@ export default function Home() {
                                 marknadsföring.
                             </p>
                             <button
-                                className="h-[30px] text-white rounded w-[161px] md:w-1/2 md:[36px]  pl-2 pr-2 border-0 bg-[#225AEA] md:w-50 text-[10px] md:text-[14px] md:leading-[22px] mt-10">
+                                className="h-[30px] text-white rounded w-[161px] md:w-1/2 md:[36px]  pl-2 pr-2 border-0 bg-[#225AEA] md:w-50 text-[10px] md:text-[14px] md:leading-[22px] mt-5">
                                 Se Gratis Dropshipping Kurs
                             </button>
                         </div>
