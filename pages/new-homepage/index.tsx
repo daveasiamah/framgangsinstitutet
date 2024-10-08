@@ -282,7 +282,7 @@ export default function Home() {
                 <section className="md:p-8 lg:py-14 lg:px-16 text-center  lg:my-18 rounded-2xl">
                     <div className="flex justify-between items-center">
                         <hr className="w-[40%]  border-t-1 border-[#555A7733]"/>
-                        <span className="font-[600px] tex-[14px] md:text-[20px] w-[20%] ml-4 mr-4 text-[#434C69 font-jakarta">KUNSKAP INOM</span>
+                        <span className="font-[600px] tex-[14px] md:text-[20px] md:w-[20%] w-full md:ml-4 md:mr-4 text-[#434C69 font-jakarta">KUNSKAP INOM</span>
                         <hr className="w-[40%] border-t-1 border-[#555A7733]"/>
                     </div>
 
@@ -295,7 +295,7 @@ export default function Home() {
                                 <Image
                                     src={data.imageUrl}
                                     alt="platform"
-                                    className="object-contain"
+                                    className="object-contain w-[97px] h-[31px]"
                                     fill
                                     loading="lazy"
                                 />
@@ -307,42 +307,43 @@ export default function Home() {
 
                 <section className="">
                     <div className="flex flex-col lg:flex-row justify-center items-center">
-                        <div className="w-full md:text-left lg:text-left lg:w-1/2 mb-8 lg:mb-0">
-             <span className="flex flex-col lg:flex-row md:flex-row  mb-[-20px]">
-                <h1 className="text-[20px] lg:text-[24px] font-[700px] font-jakarta text-primary mr-2 mb-[-20px]">
-                  Steg-för-steg guide
-                </h1>
-                <h1 className="text-[20px] lg:text-[24px] font-jakarta font-[700px]">
-                  till att bygga ett
-                </h1>
-              </span>
-                            <h1 className="text-[20px] lg:text-[24px] font-[700px] font-jakarta">dropshipping
-                                företag</h1>
+                        {/* Globe Container */}
+                        <div className="w-full lg:w-1/2 md:mb-8 lg:mb-0 order-0 lg:order-1 mt-6 mb-4">
+                            <img
+                                src="/images/home/globe_new.gif"
+                                alt="globe"
+                                className="object-contain mx-auto md:mb-16 h-[198px] md:h-[341px] w-auto"
+                            />
 
-                            <p className="mt-4 w-50 text-[#434C69] text-[14px] leading-[22px] font-[500px] font-inter">
+                        </div>
+
+                        {/* Text Container */}
+                        <div className="w-full lg:w-1/2 lg:mr-20 md:mb-8 lg:mb-0 order-0 lg:order-0">
+                            <span className="flex flex-col lg:flex-row md:flex-row mb-[-20px]">
+                                <h1 className="text-[20px] lg:text-[24px] font-[700] font-jakarta text-primary mr-2 mb-[-20px]">
+                                    Steg-för-steg guide
+                                </h1>
+                                <h1 className="text-[20px] lg:text-[24px] font-jakarta font-[700]">
+                                    till att bygga ett
+                                </h1>
+                            </span>
+                            <h1 className="text-[20px] lg:text-[24px] font-[700] font-jakarta">dropshipping företag</h1>
+
+                            <p className="mt-4 text-[#434C69] text-[14px] leading-[22px] font-[500] font-inter">
                                 Lär dig hur du bygger, skalar och drar nytta av e-handelsbutiker. Från din första miljon
-                                i intäkter till
-                                en potentiell exit. Det närmaste du kommer en doktorsexamen i e-handel och digital
+                                i intäkter till en potentiell exit. Det närmaste du kommer en doktorsexamen i e-handel
+                                och digital
                                 marknadsföring.
                             </p>
-                            <button className="btn btn-primary bg-[#225AEA] w-50 text-[14px] leading-[22px] mt-10">
+                            <button className="h-[30px] w-[161px] md:[36px] text-white rounded pl-2 pr-2 border-0 bg-[#225AEA] md:w-50 text-[10px] md:text-[14px] md:leading-[22px] mt-10">
                                 Se Gratis Dropshipping Kurs
                             </button>
                         </div>
-                        <div className="w-full lg:w-1/2 lg:ml-20">
-                            <Image
-                                src="/images/home/globe_new.gif"
-                                alt="globe"
-                                height={341}
-                                width={347}
-                                className="object-contain mx-auto mb-16"
-                            />
-                        </div>
-
                     </div>
+
                 </section>
 
-                <section className="p-4 lg:px-16 lg:my-18 md:mt-20 lg:mt-20">
+                <section className="p-4 lg:px-16 lg:my-18 mt-5 md:mt-20 lg:mt-20">
                     <div className="flex flex-col lg:flex-row justify-between items-center">
                         {/* Image Section */}
                         <div className="w-full lg:w-1/2 lg:mr-20 flex lg:justify-start mb-8 lg:mb-0">
@@ -356,7 +357,7 @@ export default function Home() {
                         </div>
 
                         {/* Text Section */}
-                        <div className="w-full lg:w-1/2  lg:mb-20 text-center lg:text-left">
+                        <div className="w-full lg:w-1/2  lg:mb-20 text-left lg:text-left">
                                 <span className="flex flex-col lg:flex-row items-center justify-center lg:justify-start">
                                   <h1 className="hidden lg:block text-[24px] font-[700px] font-jakarta">
                                     Är du redo för en
@@ -365,51 +366,58 @@ export default function Home() {
                                     förändring?
                                   </h1>
                                 </span>
-                                    <p className="text-[20px] font-bold  lg:ml-2 lg:hidden md:hidden text-left font-jakarta">
-                                        Är du redo för en <span className="text-primary">förändring?</span>
-                                    </p>
+                            <p className="text-[20px] leading-[26px] font-bold  lg:ml-2 lg:hidden md:hidden text-left font-jakarta">
+                                Är du redo för en <span className="text-[#225AEA]">förändring?</span>
+                            </p>
 
-                                    <p className=" text-[#434C69] text-[14px] leading-[22px] text-left font-[500px] font-inter">
-                                        Se om dropshipping kan vara din väg till frihet. Kolla igenom våran gratis kurs för att se hur
-                                        dropshipping gjorde Dominic till en e-handelsmiljonär och förändra sitt liv.
-                                    </p>
+                            <p className=" text-[#434C69] text-[14px] leading-[22px] text-left font-[500px] font-inter mt-4">
+                                Se om dropshipping kan vara din väg till frihet. Kolla igenom våran gratis kurs för att
+                                se hur
+                                dropshipping gjorde Dominic till en e-handelsmiljonär och förändra sitt liv.
+                            </p>
 
-                                    <ul className="mt-4">
-                                        <li className="flex items-center text-[#434C69] text-[14px] leading-[32px] font-[500px] font-inter mt-4">
-                                            <svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg"
-                                                 className="mr-2">
-                                                <path d="M1 6.89474L6.05263 11.9474L17 1" stroke="#1BC057" strokeWidth="2" strokeLinecap="round"
-                                                      strokeLinejoin="round"/>
-                                            </svg>
-                                            Steg för steg video utbildning
-                                        </li>
-                                        <li className="flex items-center text-[#434C69] text-[14px] leading-[32px] font-[500px] font-inter mt-2">
-                                            <svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg"
-                                                 className="mr-2">
-                                                <path d="M1 6.89474L6.05263 11.9474L17 1" stroke="#1BC057" strokeWidth="2" strokeLinecap="round"
-                                                      strokeLinejoin="round"/>
-                                            </svg>
-                                            Exklusiv Community
-                                        </li>
-                                        <li className="flex items-center text-[#434C69] text-[14px] leading-[32px] font-[500px] font-inter mt-2">
-                                            <svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg"
-                                                 className="mr-2">
-                                                <path d="M1 6.89474L6.05263 11.9474L17 1" stroke="#1BC057" strokeWidth="2" strokeLinecap="round"
-                                                      strokeLinejoin="round"/>
-                                            </svg>
-                                            Senaste strategier inom e-handel
-                                        </li>
-                                    </ul>
+                            <ul className="mt-4">
+                                <li className="flex items-center text-[#434C69] text-[14px] leading-[32px] font-[500px] font-inter mt-4">
+                                    <svg width="18" height="13" viewBox="0 0 18 13" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         className="mr-2">
+                                        <path d="M1 6.89474L6.05263 11.9474L17 1" stroke="#1BC057" strokeWidth="2"
+                                              strokeLinecap="round"
+                                              strokeLinejoin="round"/>
+                                    </svg>
+                                    Steg för steg video utbildning
+                                </li>
+                                <li className="flex items-center text-[#434C69] text-[14px] leading-[32px] font-[500px] font-inter mt-2">
+                                    <svg width="18" height="13" viewBox="0 0 18 13" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         className="mr-2">
+                                        <path d="M1 6.89474L6.05263 11.9474L17 1" stroke="#1BC057" strokeWidth="2"
+                                              strokeLinecap="round"
+                                              strokeLinejoin="round"/>
+                                    </svg>
+                                    Exklusiv Community
+                                </li>
+                                <li className="flex items-center text-[#434C69] text-[14px] leading-[32px] font-[500px] font-inter mt-2">
+                                    <svg width="18" height="13" viewBox="0 0 18 13" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         className="mr-2">
+                                        <path d="M1 6.89474L6.05263 11.9474L17 1" stroke="#1BC057" strokeWidth="2"
+                                              strokeLinecap="round"
+                                              strokeLinejoin="round"/>
+                                    </svg>
+                                    Senaste strategier inom e-handel
+                                </li>
+                            </ul>
 
-                                    <button className="btn btn-primary bg-[#225AEA] w-full sm:w-1/2   lg:w-1/3 text-[12px] leading-[22px] font-[500px] font-inter mt-5">
-                                        Gå med gratis idag
-                                    </button>
+                            <button className="h-[26px] w-[161px] md:[36px] text-white rounded pl-2 pr-2 border-0 bg-[#225AEA] md:w-50 text-[10px] md:text-[14px] md:leading-[22px] mt-5">
+                                Gå med gratis idag
+                            </button>
                         </div>
                     </div>
                 </section>
 
 
-                <section className="relative text-center mb-16 lg:mb-20 mt-20">
+                <section className="relative text-center mb-16 mt-8 lg:mb-20 md:mt-20">
 
                     <ScrollReveal>
                         <h1 className="lg:block text-left text-[22px] leading-[29px] lg:text-[32px] lg:leading-[55px] font-bold mb-[-7]">
