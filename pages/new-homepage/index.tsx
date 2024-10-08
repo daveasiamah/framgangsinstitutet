@@ -335,7 +335,7 @@ export default function Home() {
                                 och digital
                                 marknadsföring.
                             </p>
-                            <button className="h-[30px] w-[161px] md:[36px] text-white rounded pl-2 pr-2 border-0 bg-[#225AEA] md:w-50 text-[10px] md:text-[14px] md:leading-[22px] mt-10">
+                            <button className="h-[30px] text-white rounded w-[161px] md:[36px]  pl-2 pr-2 border-0 bg-[#225AEA] md:w-50 text-[10px] md:text-[14px] md:leading-[22px] mt-10">
                                 Se Gratis Dropshipping Kurs
                             </button>
                         </div>
@@ -445,7 +445,7 @@ export default function Home() {
                             </div>
                             <button
                                 onClick={() => window.open("https://skool.com/dropshipping-sverige-2012", "_blank")}
-                                className="btn bg-[#225AEA] border-0 w-full  text-[14px] mt-5 mb-5">
+                                className="h-[36px] md:h-[40px] text-white rounded-[7px] bg-[#225AEA] border-0 w-full  text-[14px] mt-5 mb-5">
                                 TESTA GRATIS
                             </button>
                             <div className="text-left">
@@ -545,7 +545,7 @@ export default function Home() {
                                 <p className="font-semibold text-[13px] text-[#434C69] leading-[22px]">Gå från 0-100k/mån med
                                     dropshipping. Över 45+ avsnitt. Tryck på knappen nedan för att gå med👇</p>
                             </div>
-                            <button onClick={() => window.open("https://checkified.se/platinum", "_blank")} className="btn bg-[#225AEA] border-0 w-full  text-[14px] mt-5 mb-5">
+                            <button onClick={() => window.open("https://checkified.se/platinum", "_blank")} className="h-[36px] md:h-[40px] text-white rounded-[7px] bg-[#225AEA] border-0 w-full  text-[14px] mt-5 mb-5">
                                 LÄGG TILL I KUNDVAGN
                             </button>
                             <div className="text-left">
@@ -645,7 +645,7 @@ export default function Home() {
                                 <p className="font-semibold text-[13px] text-[#434C69] leading-[22px]">Köp din e-butik med 20 vinnande
                                     produkter, logotyp, leverantör, och e-bok här👇</p>
                             </div>
-                            <button onClick={() => window.open("https://buy.stripe.com/eVaeW80Mmckx34YdQT", "_blank")} className="btn bg-[#225AEA] border-0 w-full  text-[14px] mt-5 mb-5">
+                            <button onClick={() => window.open("https://buy.stripe.com/eVaeW80Mmckx34YdQT", "_blank")} className="h-[36px] md:h-[40px] text-white rounded-[7px] bg-[#225AEA] border-0 w-full  text-[14px] mt-5 mb-5">
                                 LÄGG TILL I KUNDVAGN
                             </button>
                             <div className="text-left">
@@ -745,7 +745,7 @@ export default function Home() {
                                 <p className="font-semibold text-[13px] text-[#434C69] leading-[22px]">Köp videoannonser för att
                                     marknadsföra innehåll för endast 699 SEK här👇</p>
                             </div>
-                            <button onClick={() => window.open("https://buy.stripe.com/8wM15i52CfwJ492148", "_blank")} className="btn bg-[#225AEA] border-0 w-full  text-[14px] mt-5 mb-5">
+                            <button onClick={() => window.open("https://buy.stripe.com/8wM15i52CfwJ492148", "_blank")} className="h-[36px] md:h-[40px] text-white rounded-[7px] bg-[#225AEA] border-0 w-full  text-[14px] mt-5 mb-5">
                                 LÄGG TILL I KUNDVAGN
                             </button>
                             <div className="text-left">
@@ -844,7 +844,7 @@ export default function Home() {
                                 <p className="font-semibold text-[13px] text-[#434C69] leading-[22px]">Köp 1-on-1 mentorskap med
                                     e-handelsmiljonären Dominic för att lära dig allt om dropshipping här👇</p>
                             </div>
-                            <button onClick={() => window.open("https://shopify.pxf.io/checkified", "_blank")} className="btn bg-[#225AEA] border-0 w-full  text-[14px] mt-5 mb-5">
+                            <button onClick={() => window.open("https://shopify.pxf.io/checkified", "_blank")} className="h-[36px] md:h-[40px] text-white rounded-[7px] bg-[#225AEA] border-0 w-full  text-[14px] mt-5 mb-5">
                                 LÄGG TILL I KUNDVAGN
                             </button>
                             <div className="text-left">
@@ -943,7 +943,7 @@ export default function Home() {
                                 <p className="font-semibold text-[13px] text-[#434C69] leading-[22px]">Checkified är stolt partner med
                                     Shopify – börja med Shopify för bara 10 kr första månaden👇</p>
                             </div>
-                            <button onClick={() => window.open("https://shopify.pxf.io/checkified", "_blank")} className="btn bg-[#225AEA] border-0 w-full  text-[14px] mt-5 mb-5">
+                            <button onClick={() => window.open("https://shopify.pxf.io/checkified", "_blank")} className="h-[36px] md:h-[40px] text-white rounded-[7px] bg-[#225AEA] border-0 w-full  text-[14px] mt-5 mb-5">
                                 FÅ DIN BUTIK
                             </button>
                             <div className="text-left">
