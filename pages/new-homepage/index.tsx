@@ -1317,7 +1317,7 @@ export default function Home() {
                             Visa blogg
                         </button>
                     </ScrollReveal>
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                    <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-12 gap-5">
                         <div className="rounded-[2rem] border border-1 border-[#BBBBBF] p-5 ">
                         <img
                                 src="/images/home/89c0097002aef0b265c155f8875f4489.jpeg"
