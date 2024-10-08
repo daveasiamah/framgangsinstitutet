@@ -319,7 +319,8 @@ export default function Home() {
 
                         {/* Text Container */}
                         <div className="w-full lg:w-1/2 lg:mr-20 md:mb-8 lg:mb-0 order-0 lg:order-0">
-                            <span className="flex flex-col lg:flex-row md:flex-row mb-[-20px]">
+                            <div className="hidden lg:block">
+                                <span className="flex flex-col lg:flex-row md:flex-row mb-[-20px]">
                                 <h1 className="text-[20px] lg:text-[24px] font-[700] font-jakarta text-primary mr-2 mb-[-20px]">
                                     Steg-för-steg guide
                                 </h1>
@@ -327,7 +328,11 @@ export default function Home() {
                                     till att bygga ett
                                 </h1>
                             </span>
-                            <h1 className="text-[20px] lg:text-[24px] font-[700] font-jakarta">dropshipping företag</h1>
+                                <h1 className="text-[20px] lg:text-[24px] font-[700] font-jakarta">dropshipping
+                                    företag</h1>
+                            </div>
+
+                            <h1 className="lg:hidden md:hidden text-[20px] leading-[22px] font-jakarta"><span className="text-[#2E56F5]">Steg-för-steg guide</span> till att <br/> bygga dropshipping företag</h1>
 
                             <p className="mt-4 text-[#434C69] text-[14px] leading-[22px] font-[500] font-inter">
                                 Lär dig hur du bygger, skalar och drar nytta av e-handelsbutiker. Från din första miljon
@@ -335,7 +340,8 @@ export default function Home() {
                                 och digital
                                 marknadsföring.
                             </p>
-                            <button className="h-[30px] text-white rounded w-[161px] md:[36px]  pl-2 pr-2 border-0 bg-[#225AEA] md:w-50 text-[10px] md:text-[14px] md:leading-[22px] mt-10">
+                            <button
+                                className="h-[30px] text-white rounded w-[161px] md:w-1/2 md:[36px]  pl-2 pr-2 border-0 bg-[#225AEA] md:w-50 text-[10px] md:text-[14px] md:leading-[22px] mt-10">
                                 Se Gratis Dropshipping Kurs
                             </button>
                         </div>
@@ -343,16 +349,14 @@ export default function Home() {
 
                 </section>
 
-                <section className="md:p-4 lg:px-16 lg:my-18 mt-5 md:mt-20 lg:mt-20">
+                <section className="md:p-4 lg:px-16 lg:my-18 mt-10 md:mt-20 lg:mt-20">
                     <div className="flex flex-col lg:flex-row justify-between items-center">
                         {/* Image Section */}
-                        <div className="w-full lg:w-1/2 lg:mr-20 flex lg:justify-start mb-8 lg:mb-0">
-                            <Image
+                        <div className="w-full lg:w-1/2 lg:mr-20 flex justify-center lg:justify-start mb-8 lg:mb-0">
+                            <img
                                 src="/images/home/channel.svg"
                                 alt="globe"
-                                height={600}
-                                width={423}
-                                className="object-cover"
+                                className=" h-[221px] w-[243px] ld:h-[401px] lg:w-[423px] object-contain mb-4 mt-4"
                             />
                         </div>
 
