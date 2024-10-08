@@ -228,7 +228,7 @@ export default function Home() {
                         </div>
 
                         <div className="mt-4">
-                            <div className="flex flex-col items-center justify-center gap-1 bg-[#EDF5FED9] p-4 rounded-[20px] relative  max-w-[706px] mx-auto">
+                            <div className="flex flex-col items-center justify-center gap-1 bg-[#EDF5FED9] pt-2 pl-2 pr-2 pb-2 rounded-[10px] relative  max-w-[706px] mx-auto">
                                 <div className="lg:flex flex top-0 w-full items-center justify-center gap-1 mb-[-5px] bg-primary text-white">
                                     <Image
                                         src="/icons/home/video-play-sm.svg"
@@ -253,12 +253,12 @@ export default function Home() {
                             </div>
 
                             <div className="w-50 mt-2 lg:mt-8 flex items-center justify-center ">
-                                <button className="btn btn-primary bg-[#225AEA] text-[14px] font-jakarta font-[600px] w-50" onClick={openModal}>
-                                    Testa Gratis Idag
+                                <button className="btn btn-primary bg-[#225AEA] text-[14px] font-jakarta font-[600px] w-full h-[33px] md:w-1/4" onClick={openModal}>
+                                    Se gratis dropshipping kurs
                                 </button>
                             </div>
 
-                            <div className="icons-container_ann mt-10">
+                            <div className="icons-container_ann mt-2">
                                 <div className="icon-section_ann">
                 <span>
                   <img src="/img/calender.svg" alt="svg"/>
@@ -279,10 +279,10 @@ export default function Home() {
                     </div>
                 </section>
 
-                <section className="p-8 lg:py-14 lg:px-16 text-center  lg:my-18 rounded-2xl">
+                <section className="md:p-8 lg:py-14 lg:px-16 text-center  lg:my-18 rounded-2xl">
                     <div className="flex justify-between items-center">
                         <hr className="w-[40%]  border-t-1 border-[#555A7733]"/>
-                        <span className="font-[600px] md:text-[20px] w-[20%] ml-4 mr-4 text-[#434C69]">KUNSKAP INOM</span>
+                        <span className="font-[600px] tex-[14px] md:text-[20px] w-[20%] ml-4 mr-4 text-[#434C69]">KUNSKAP INOM</span>
                         <hr className="w-[40%] border-t-1 border-[#555A7733]"/>
                     </div>
 
