@@ -334,7 +334,7 @@ export default function Home() {
 
                             <h1 className="lg:hidden md:hidden text-[20px] leading-[22px] font-jakarta font-[700]"><span className="text-[#2E56F5]">Steg-för-steg guide</span> till att <br/> bygga dropshipping företag</h1>
 
-                            <p className="mt-4 text-[#434C69] text-[14px] leading-[22px] font-[500] font-inter">
+                            <p className="mt-4 text-[#434C69] text-[12px]  lg:text-[14px] leading-[22px] font-[500] font-inter">
                                 Lär dig hur du bygger, skalar och drar nytta av e-handelsbutiker. Från din första miljon
                                 i intäkter till en potentiell exit. Det närmaste du kommer en doktorsexamen i e-handel
                                 och digital
@@ -391,7 +391,7 @@ export default function Home() {
                                     </svg>
                                     Steg för steg video utbildning
                                 </li>
-                                <li className="flex items-center text-[#434C69] text-[14px] leading-[32px] font-[500px] font-inter mt-2">
+                                <li className="flex items-center text-[#434C69] text-[14px] leading-[32px] font-[500px] font-inter ">
                                     <svg width="18" height="13" viewBox="0 0 18 13" fill="none"
                                          xmlns="http://www.w3.org/2000/svg"
                                          className="mr-2">
@@ -401,7 +401,7 @@ export default function Home() {
                                     </svg>
                                     Exklusiv Community
                                 </li>
-                                <li className="flex items-center text-[#434C69] text-[14px] leading-[32px] font-[500px] font-inter mt-2">
+                                <li className="flex items-center text-[#434C69] text-[14px] leading-[32px] font-[500px] font-inter ">
                                     <svg width="18" height="13" viewBox="0 0 18 13" fill="none"
                                          xmlns="http://www.w3.org/2000/svg"
                                          className="mr-2">
@@ -413,7 +413,7 @@ export default function Home() {
                                 </li>
                             </ul>
 
-                            <button className="h-[26px] w-[161px] md:[36px] text-white rounded pl-2 pr-2 border-0 bg-[#225AEA] md:w-50 text-[10px] md:text-[14px] md:leading-[22px] mt-5">
+                            <button className="h-[26px] w-[161px] md:[36px] text-white rounded pl-2 pr-2 border-0 bg-[#225AEA] md:w-50 text-[10px] md:text-[14px] md:leading-[22px] mt-3">
                                 Gå med gratis idag
                             </button>
                         </div>
