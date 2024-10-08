@@ -253,25 +253,25 @@ export default function Home() {
                             </div>
 
                             <div className="w-50 mt-2 lg:mt-8 flex items-center justify-center ">
-                                <button className="btn btn-primary bg-[#225AEA] text-[14px] font-jakarta font-[600px] w-full h-[33px] md:w-1/4" onClick={openModal}>
+                                <button className="text-[#fff] bg-[#225AEA] text-[14px] font-jakarta font-[600px] w-full h-[33px] md:w-1/4 rounded" onClick={openModal}>
                                     Se gratis dropshipping kurs
                                 </button>
                             </div>
 
                             <div className="icons-container_ann mt-2">
-                                <div className="icon-section_ann">
-                <span>
-                  <img src="/img/calender.svg" alt="svg"/>
-                  Prova gratis idag
-                </span>
-                                    <span>
-                  <img src="/img/hand.svg" alt="svg"/>
-                  100% riskfritt
-                </span>
-                                    <span>
-                  <img src="/img/check.svg" alt="svg"/>
-                  Verifierade partners
-                </span>
+                                <div className="icon-section_ann font-inter">
+                                        <span className="font-inter">
+                                          <img src="/img/calender.svg" alt="svg"/>
+                                          Prova gratis idag
+                                        </span>
+                                         <span className="font-inter">
+                                          <img src="/img/hand.svg" alt="svg"/>
+                                          100% riskfritt
+                                        </span>
+                                         <span className="font-inter">
+                                          <img src="/img/check.svg" alt="svg"/>
+                                          Verifierade partners
+                                        </span>
                                 </div>
                             </div>
 
@@ -282,7 +282,7 @@ export default function Home() {
                 <section className="md:p-8 lg:py-14 lg:px-16 text-center  lg:my-18 rounded-2xl">
                     <div className="flex justify-between items-center">
                         <hr className="w-[40%]  border-t-1 border-[#555A7733]"/>
-                        <span className="font-[600px] tex-[14px] md:text-[20px] w-[20%] ml-4 mr-4 text-[#434C69]">KUNSKAP INOM</span>
+                        <span className="font-[600px] tex-[14px] md:text-[20px] w-[20%] ml-4 mr-4 text-[#434C69 font-jakarta">KUNSKAP INOM</span>
                         <hr className="w-[40%] border-t-1 border-[#555A7733]"/>
                     </div>
 
