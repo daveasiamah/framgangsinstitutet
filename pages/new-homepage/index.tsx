@@ -1294,7 +1294,7 @@ export default function Home() {
                                     </defs>
                                 </svg>
                             </div>
-                            <button onClick={openModal} className="h-[28px] rounded-[5px] w-[300px] text-[10px] btn-white mb-4 mt-10 font-normal text-[#15133A]">
+                            <button onClick={openModal} className="h-[28px] rounded-[5px] w-[300px] text-[10px] btn-white mb-4 lg:mt-10 mt-5 font-normal text-[#15133A]">
                                 Gå med gratis
                             </button>
                         </div>
