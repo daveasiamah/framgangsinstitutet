@@ -443,7 +443,7 @@ export default function Home() {
                             />
 
                             <div className="text-left">
-                                <h1 className="font-bold text-[22px] text-[#151E3A] leading-[48px]">Checkified Premium</h1>
+                                <h1 className="font-[700] text-[16px]  lg:text-[22px] text-[#151E3A] leading-[48px]">Checkified Premium</h1>
                                 <p className="font-semibold text-[13px] text-[#434C69] leading-[22px]">I kursen kommer du lära dig om
                                     dropshipping e-handel och marknadsföring. Gå med idag gratis👇</p>
                             </div>
@@ -545,7 +545,7 @@ export default function Home() {
                             />
 
                             <div className="text-left">
-                                <h1 className="font-bold text-[22px] text-[#151E3A] leading-[48px]">Checkified Premium</h1>
+                                <h1 className="font-[700] text-[16px]  lg:text-[22px] text-[#151E3A] leading-[48px]">Checkified Premium</h1>
                                 <p className="font-semibold text-[13px] text-[#434C69] leading-[22px]">Gå från 0-100k/mån med
                                     dropshipping. Över 45+ avsnitt. Tryck på knappen nedan för att gå med👇</p>
                             </div>
@@ -645,7 +645,7 @@ export default function Home() {
                             />
 
                             <div className="text-left">
-                                <h1 className="font-bold text-[22px] text-[#151E3A] leading-[48px]">Checkified E-butik</h1>
+                                <h1 className="font-[700] text-[16px]  lg:text-[22px] text-[#151E3A] leading-[48px]">Checkified E-butik</h1>
                                 <p className="font-semibold text-[13px] text-[#434C69] leading-[22px]">Köp din e-butik med 20 vinnande
                                     produkter, logotyp, leverantör, och e-bok här👇</p>
                             </div>
@@ -745,7 +745,7 @@ export default function Home() {
                             />
 
                             <div className="text-left">
-                                <h1 className="font-bold text-[22px] text-[#151E3A] leading-[48px]">Checkified Ads</h1>
+                                <h1 className="font-[700] text-[16px]  lg:text-[22px] text-[#151E3A] leading-[48px]">Checkified Ads</h1>
                                 <p className="font-semibold text-[13px] text-[#434C69] leading-[22px]">Köp videoannonser för att
                                     marknadsföra innehåll för endast 699 SEK här👇</p>
                             </div>
@@ -844,7 +844,7 @@ export default function Home() {
                             />
 
                             <div className="text-left">
-                                <h1 className="font-bold text-[22px] text-[#151E3A] leading-[48px]">Checkified Mentorskap</h1>
+                                <h1 className="font-[700] text-[16px]  lg:text-[22px] text-[#151E3A] leading-[48px]">Checkified Mentorskap</h1>
                                 <p className="font-semibold text-[13px] text-[#434C69] leading-[22px]">Köp 1-on-1 mentorskap med
                                     e-handelsmiljonären Dominic för att lära dig allt om dropshipping här👇</p>
                             </div>
@@ -943,7 +943,7 @@ export default function Home() {
                             />
 
                             <div className="text-left">
-                                <h1 className="font-bold text-[22px] text-[#151E3A] leading-[48px]">Checkified Shopify</h1>
+                                <h1 className="font-[700] text-[16px]  lg:text-[22px] text-[#151E3A] leading-[48px]">Checkified Shopify</h1>
                                 <p className="font-semibold text-[13px] text-[#434C69] leading-[22px]">Checkified är stolt partner med
                                     Shopify – börja med Shopify för bara 10 kr första månaden👇</p>
                             </div>
