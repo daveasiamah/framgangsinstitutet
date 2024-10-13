@@ -1180,7 +1180,7 @@ export default function Home() {
                             här för att guida dig på vägen till framgång!</p>
 
                         <div>
-                            <button onClick={openModal} className=" h-[23px] lg:[38px] rounded-[5px] btn-white mt-5 font-jakarta text-[10px] w-full lg:w-[120px] text-[#151E3A] ">
+                            <button onClick={openModal} className=" h-[23px] lg:h-[38px] rounded-[5px] btn-white mt-5 font-jakarta text-[10px] w-full lg:w-[120px] text-[#151E3A] ">
                                 Gå med gratis
                             </button>
                         </div>
@@ -1293,7 +1293,7 @@ export default function Home() {
                                     </defs>
                                 </svg>
                             </div>
-                            <button onClick={openModal} className="h-[28px] rounded-[5px] w-[300px] text-[10px] btn-white mb-4 lg:mt-10 mt-5 font-normal text-[#15133A]">
+                            <button onClick={openModal} className="h-[28px] md:h-[32px] rounded-[5px] w-[300px] md:w-[200px] text-[10px] btn-white mb-4 lg:mt-10 mt-5 font-normal text-[#15133A]">
                                 Gå med gratis
                             </button>
                         </div>
