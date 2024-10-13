@@ -413,7 +413,7 @@ export default function Home() {
                                 </li>
                             </ul>
 
-                            <button className="h-[26px] w-[161px] md:[36px] text-white rounded pl-2 pr-2 border-0 bg-[#225AEA] md:w-50 text-[10px] md:text-[14px] md:leading-[22px] mt-3 button-shadow">
+                            <button className="h-[26px] w-[161px] md:h-[36px] lg:[36px] text-white rounded pl-2 pr-2 border-0 bg-[#225AEA] md:w-50 text-[10px] leading-[10px] md:text-[12px] md:leading-[13px] mt-3 button-shadow">
                                 Gå med gratis idag
                             </button>
                         </div>
