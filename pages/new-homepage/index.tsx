@@ -253,7 +253,7 @@ export default function Home() {
                             </div>
 
                             <div className="w-50 mt-2 lg:mt-8 flex items-center justify-center ">
-                                <button className="text-[#fff] bg-[#225AEA] text-[14px] font-jakarta font-[600px] w-full h-[33px] md:w-1/4 rounded" onClick={openModal}>
+                                <button className="text-[#fff] bg-[#225AEA] text-[14px] font-jakarta font-[600px] w-full h-[33px] md:w-1/4 rounded button-shadow" onClick={openModal}>
                                     Se gratis dropshipping kurs
                                 </button>
                             </div>
@@ -341,7 +341,7 @@ export default function Home() {
                                 marknadsföring.
                             </p>
                             <button
-                                className="h-[30px] text-white rounded w-[161px] md:w-1/2 md:[36px]  pl-2 pr-2 border-0 bg-[#225AEA] md:w-50 text-[10px] md:text-[14px] md:leading-[22px] mt-5">
+                                className="h-[30px] text-white rounded w-[161px] md:w-1/2 md:[36px]  pl-2 pr-2 border-0 bg-[#225AEA] md:w-50 text-[10px] md:text-[14px] md:leading-[22px] mt-5 button-shadow">
                                 Se Gratis Dropshipping Kurs
                             </button>
                         </div>
@@ -413,7 +413,7 @@ export default function Home() {
                                 </li>
                             </ul>
 
-                            <button className="h-[26px] w-[161px] md:[36px] text-white rounded pl-2 pr-2 border-0 bg-[#225AEA] md:w-50 text-[10px] md:text-[14px] md:leading-[22px] mt-3">
+                            <button className="h-[26px] w-[161px] md:[36px] text-white rounded pl-2 pr-2 border-0 bg-[#225AEA] md:w-50 text-[10px] md:text-[14px] md:leading-[22px] mt-3 button-shadow">
                                 Gå med gratis idag
                             </button>
                         </div>
