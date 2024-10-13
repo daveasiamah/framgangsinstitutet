@@ -209,10 +209,10 @@ export default function Home() {
                         </p>
                         <ScrollReveal>
                             <div className=" gap-1 mb-1">
-                                <h1 className="text-[22px] leading-[24px] md:leading-[48px] lg:leading-[48px] md:text-[48px] lg:text-[48px]font-bold-">
+                                <h1 className="text-[22px] leading-[24px] md:leading-[48px] lg:leading-[48px] md:text-[48px] lg:text-[48px] font-[700] font-jakarta">
                                     Är du redo att ta kontroll
                                 </h1>
-                                <h1 className="text-[22px] leading-[24px] md:leading-[48px] lg:leading-[48px] md:text-[48px] lg:text-[48px] font-bold text-primary">
+                                <h1 className="text-[22px] leading-[24px] md:leading-[48px] lg:leading-[48px] md:text-[48px] lg:text-[48px] font-[700] font-jakarta text-primary">
                                     över ditt liv?
                                 </h1>
                             </div>
