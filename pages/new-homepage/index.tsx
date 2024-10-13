@@ -1198,10 +1198,9 @@ export default function Home() {
                 <section>
                     <div className="relative py-10 full-bg">
                         <ScrollReveal>
-                            <Title
-                                blackText={t.homeData.faqBlackTitle}
-                                className="text-center"
-                            />
+                            <h1  className="text-center font-jakarta text-[22px] md:text-[36px] md:leading-[40px] leading-[22px] md:font-[700] mb-10 mt-5">
+                                Vanliga Frågor
+                            </h1>
                         </ScrollReveal>
                         <Accordion
                             data={faqData}
