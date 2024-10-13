@@ -42,6 +42,7 @@ type BlogPost = {
     imageUrl: string;
     date: string;
     slug: string;
+    author: string;
 }
 
 export default function Home() {
@@ -66,19 +67,19 @@ export default function Home() {
     const swiperRef2 = useRef<SwiperType>();
     const swiperRef3 = useRef<SwiperType>();
     // Fetch Blog List
-    // const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
-    // useEffect(() => {
-    //   const fetchPosts = async () => {
-    //     try {
-    //       const response = await axios.get(`/api/blog?locale=${locale}`);
-    //       console.log('response.data.data:', response.data.data);
-    //       setBlogPosts(response.data.data);
-    //     } catch (error) {
-    //       console.error('Error fetching blog posts:', error);
-    //     }
-    //   };
-    //   fetchPosts();
-    // }, [locale]);
+    const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
+    useEffect(() => {
+      const fetchPosts = async () => {
+        try {
+          const response = await axios.get(`/api/blog?locale=${locale}`);
+          console.log('response.data.data:', response.data.data);
+          setBlogPosts(response.data.data);
+        } catch (error) {
+          console.error('Error fetching blog posts:', error);
+        }
+      };
+      fetchPosts();
+    }, [locale]);
 
     useEffect(() => {
         if (matches) {
@@ -1305,10 +1306,10 @@ export default function Home() {
                 <section className="relative text-center lg:mb-20 lg:mt-40">
 
                     <ScrollReveal className="flex justify-between items-center mb-4">
-                        <h1 className="hidden lg:block text-left text-[32px] leading-[55px] font-jakarta">
+                        <h1 className="hidden lg:block text-left text-[32px] leading-[55px] font-[700] font-jakarta">
                             Bläddra bland våra senaste artiklar
                         </h1>
-                        <h1 className="lg:hidden text-left text-[18px] text-center leading-[28px] font-[700] font-jakarta">
+                        <h1 className="lg:hidden text-left text-[18px] leading-[28px] font-[700] font-jakarta">
                             Bläddra bland våra senaste artiklar
                         </h1>
                         <button onClick={() => window.location.href = "https://checkified.se/blog"}
@@ -1317,162 +1318,44 @@ export default function Home() {
                         </button>
                     </ScrollReveal>
                     <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-12 gap-5">
-                        <div className="rounded-[2rem] border border-1 border-[#BBBBBF] p-5 ">
-                        <img
-                                src="/images/home/89c0097002aef0b265c155f8875f4489.jpeg"
-                                alt="card"
-                                className="border-b border-1 border-[#E5E6EA] w-full h-[192px] rounded-[20px] mb-5"
-                                loading="lazy"
-                            />
-
-                            <div className="text-left ">
-                                <p className="text-[#686870] text-[14px] lg:text-[18px] font-inter mb-2 lg:mb-[20px] mt-4">Juli 20, 2024</p>
-
-                                <p className="font-inter font-[500px] text-[14px] lg:text-[18px]  text-[#434C69] leading-[25px] mb-2">Vi har sammanställt en lista
-                                    över de 10 bästa produkterna för dropshipping 2024.</p>
-
-                                <div className="flex items-center">
-
+                        {
+                            blogPosts?.map((blog)=>{
+                                return (
+                                    <div key={blog?.id} className="rounded-[2rem] border border-1 border-[#BBBBBF] p-5 ">
                                     <img
-                                        src="/images/home/lady-avatar.svg"
+                                        src={blog?.imageUrl}
                                         alt="card"
-                                        className="border-b border-1 border-[#E5E6EA] w-[24] h-[34px] object-contain rounded-full"
+                                        className="border-b border-1 border-[#E5E6EA] w-full h-[192px] rounded-[20px] mb-5"
                                         loading="lazy"
                                     />
-                                    <p className="font-inter font-[500px] text-[14px] lg:text-[18px] text-[#434C69] leading-[25px] ml-2">Linnea Bergström</p>
+
+                                    <div className="text-left ">
+                                        <p className="text-[#686870] text-[14px] lg:text-[18px] font-inter mb-2 lg:mb-[20px] mt-4">
+                                            {blog?.date}
+                                        </p>
+
+                                        <p className="font-inter font-[500px] text-[14px] lg:text-[18px]  text-[#434C69] leading-[25px] mb-2">Vi
+                                            {blog?.title}
+                                        </p>
+
+                                        <div className="flex items-center">
+
+                                            <img
+                                                src="/images/home/lady-avatar.svg"
+                                                alt="card"
+                                                className="border-b border-1 border-[#E5E6EA] w-[24] h-[34px] object-contain rounded-full"
+                                                loading="lazy"
+                                            />
+                                            <p className="font-inter font-[500px] text-[14px] lg:text-[18px] text-[#434C69] leading-[25px] ml-2">
+                                                {blog?.author || 'N/A'}
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div className="rounded-[2rem] border border-1 border-[#BBBBBF] p-5 ">
-                            <img
-                                src="/images/home/89c0097002aef0b265c155f8875f4489.jpeg"
-                                alt="card"
-                                className="border-b border-1 border-[#E5E6EA] w-full h-[192px] rounded-[20px] mb-5"
-                                loading="lazy"
-                            />
+                                )
+                            })
+                        }
 
-                            <div className="text-left">
-                                <p className="text-[#686870] text-[14px] lg:text-[18px] font-inter font-[500px] mb-2 lg:mb-[20px] mt-4">Juli 20, 2024</p>
-
-                                <p className="font-inter font-[500px] text-[14px] lg:text-[18px] text-[#434C69] leading-[25px] mb-2">Vi har sammanställt en lista
-                                    över de 10 bästa produkterna för dropshipping 2024.</p>
-
-                                <div className="flex items-center">
-
-                                    <img
-                                        src="/images/home/lady-avatar.svg"
-                                        alt="card"
-                                        className="border-b border-1 border-[#E5E6EA] w-[24] h-[34px] object-contain rounded-full"
-                                        loading="lazy"
-                                    />
-                                    <p className="font-inter font-[500px] text-[14px] lg:text-[18px] text-[#434C69] leading-[25px] ml-2">Linnea Bergström</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="rounded-[2rem] border border-1 border-[#BBBBBF] p-5 ">
-                            <img
-                                src="/images/home/89c0097002aef0b265c155f8875f4489.jpeg"
-                                alt="card"
-                                className="border-b border-1 border-[#E5E6EA] w-full h-[192px] rounded-[20px] mb-5"
-                                loading="lazy"
-                            />
-
-                            <div className="text-left">
-                                <p className="text-[#686870] text-[14px] lg:text-[18px] font-inter font-[500px] mb-2 lg:mb-[20px] mt-4">Juli 20, 2024</p>
-
-                                <p className="font-inter font-[500px] text-[14px] lg:text-[18px] text-[#434C69] leading-[25px] mb-2">Vi har sammanställt en lista
-                                    över de 10 bästa produkterna för dropshipping 2024.</p>
-
-                                <div className="flex items-center">
-
-                                    <img
-                                        src="/images/home/lady-avatar.svg"
-                                        alt="card"
-                                        className="border-b border-1 border-[#E5E6EA] w-[24] h-[34px] object-contain rounded-full"
-                                        loading="lazy"
-                                    />
-                                    <p className="font-inter font-[500px] text-[14px] lg:text-[18px] text-[#434C69] leading-[25px] ml-2">Linnea Bergström</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="rounded-[2rem] border border-1 border-[#BBBBBF] p-5 ">
-                            <img
-                                src="/images/home/89c0097002aef0b265c155f8875f4489.jpeg"
-                                alt="card"
-                                className="border-b border-1 border-[#E5E6EA] w-full h-[192px] rounded-[20px] mb-5"
-                                loading="lazy"
-                            />
-
-                            <div className="text-left">
-                                <p className="text-[#686870] text-[14px] lg:text-[18px] font-inter font-[500px] mb-2 lg:mb-[20px] mt-4">Juli 20, 2024</p>
-
-                                <p className="font-inter font-[500px] text-[14px] lg:text-[18px] text-[#434C69] leading-[25px] mb-2">Vi har sammanställt en lista
-                                    över de 10 bästa produkterna för dropshipping 2024.</p>
-
-                                <div className="flex items-center">
-
-                                    <img
-                                        src="/images/home/lady-avatar.svg"
-                                        alt="card"
-                                        className="border-b border-1 border-[#E5E6EA] w-[24] h-[34px] object-contain rounded-full"
-                                        loading="lazy"
-                                    />
-                                    <p className="font-inter font-[500px] text-[14px] lg:text-[18px] text-[#434C69] leading-[25px] ml-2">Linnea Bergström</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="rounded-[2rem] border border-1 border-[#BBBBBF] p-5 ">
-                            <img
-                                src="/images/home/89c0097002aef0b265c155f8875f4489.jpeg"
-                                alt="card"
-                                className="border-b border-1 border-[#E5E6EA] w-full h-[192px] rounded-[20px] mb-5"
-                                loading="lazy"
-                            />
-
-                            <div className="text-left">
-                                <p className="text-[#686870] text-[14px] lg:text-[18px] font-inter font-[500px] mb-2 lg:mb-[20px] mt-4">Juli 20, 2024</p>
-
-                                <p className="font-inter font-[500px] text-[14px] lg:text-[18px] text-[#434C69] leading-[25px] mb-2">Vi har sammanställt en lista
-                                    över de 10 bästa produkterna för dropshipping 2024.</p>
-
-                                <div className="flex items-center">
-
-                                    <img
-                                        src="/images/home/lady-avatar.svg"
-                                        alt="card"
-                                        className="border-b border-1 border-[#E5E6EA] w-[24] h-[34px] object-contain rounded-full"
-                                        loading="lazy"
-                                    />
-                                    <p className="font-inter font-[500px] text-[14px] lg:text-[18px] text-[#434C69] leading-[25px] ml-2">Linnea Bergström</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="rounded-[2rem] border border-1 border-[#BBBBBF] p-5 ">
-                            <img
-                                src="/images/home/89c0097002aef0b265c155f8875f4489.jpeg"
-                                alt="card"
-                                className="border-b border-1 border-[#E5E6EA] w-full h-[192px] rounded-[20px] mb-5"
-                                loading="lazy"
-                            />
-
-                            <div className="text-left">
-                                <p className="text-[#686870] text-[14px] lg:text-[18px] font-inter font-[500px] mb-2 lg:mb-[20px] mt-4">Juli 20, 2024</p>
-
-                                <p className="font-inter font-[500px] text-[14px] lg:text-[18px] text-[#434C69] leading-[25px] mb-3">Vi har sammanställt en lista
-                                    över de 10 bästa produkterna för dropshipping 2024.</p>
-
-                                <div className="flex items-center">
-
-                                    <img
-                                        src="/images/home/lady-avatar.svg"
-                                        alt="card"
-                                        className="border-b border-1 border-[#E5E6EA] w-[24] h-[34px] object-contain rounded-full"
-                                        loading="lazy"
-                                    />
-                                    <p className="font-inter font-[500px] text-[14px] lg:text-[18px] text-[#434C69] leading-[25px] ml-2">Linnea Bergström</p>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </section>
 
