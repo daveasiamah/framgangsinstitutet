@@ -4,6 +4,7 @@ import { FaCheckCircle } from "react-icons/fa"
 import { useRouter } from "next/router"
 import SwiperType, { Autoplay, EffectCards, Navigation } from "swiper"
 import { Swiper, SwiperSlide } from "swiper/react"
+import Link from 'next/link';
 
 import Title from "@/components/parts/Title"
 import Layout from "@/components/Layout"
@@ -1181,7 +1182,7 @@ export default function Home() {
                             här för att guida dig på vägen till framgång!</p>
 
                         <div>
-                            <button onClick={openModal} className=" h-[23px] lg:h-[38px] rounded-[5px] btn-white mt-5 font-jakarta text-[10px] w-full lg:w-[120px] text-[#151E3A] ">
+                            <button onClick={openModal} className=" h-[23px] lg:h-[38px] rounded-[5px] btn-white mt-5 font-inter font-[500] text-[10px] md:text-[14px] w-full lg:w-[120px] text-[#151E3A] ">
                                 Gå med gratis
                             </button>
                         </div>
@@ -1210,10 +1211,10 @@ export default function Home() {
                 </section>
 
                 <section className="lg:h-80 md:h-80 lg:px-20 lg:py-10 md:px-20 md:py-10 mb-16 text-white ">
-                    <div className="relative left-0 right-0 flex flex-col items-center justify-center bg-[#2E56F5] rounded-[20px] md:px-4 lg:px-20 md:py-10 lg:py-10">
+                    <div className="relative left-0 right-0 flex flex-col items-center justify-center bg-[#2E56F5] rounded-[20px] md:px-4 lg:px-20 md:py-5 lg:py-5 shadow-bg">
 
                         <div className="text-center ">
-                            <div className="hidden  md:block lg:block left-[1rem] 2xl:left-[12rem] top-[30px] absolute h-[300px]">
+                            <div className="hidden  md:block lg:block left-[1rem] top-[10px] absolute h-[300px]">
                                 <img
                                     alt="checkified logo" loading="lazy" decoding="async" data-nimg="fill"
                                     src="/images/home/bgc-image.svg"
@@ -1226,7 +1227,7 @@ export default function Home() {
                                     }}/>
                             </div>
                             <div className="pl-10 pr-10">
-                                <h1 className="text-white text-center text-[20px] leading-[48px] lg:text-[24px] font-[500px] lg:font-[700px] font-jakarta mt-4">
+                                <h1 className="text-white text-center text-[20px] leading-[48px] lg:text-[24px] font-[500px] lg:font-[700px] font-jakarta">
                                     Testa Checkified gratis
                                 </h1>
                                 <p className="mb-4 max-w-3xl mx-auto text-center lg:text-[16px] text-[12px] font-inter">Perfekt
@@ -1269,7 +1270,7 @@ export default function Home() {
                             </div>
 
                             <div
-                                className="hidden md:block lg:block right-[-1rem] 2xl:right-[12rem] top-[-30px] text-white  absolute h-[300px]">
+                                className="hidden md:block lg:block right-[-1rem]  top-[-30px] text-white  absolute h-[300px]">
                                 <svg width="272" height="323" viewBox="0 0 272 323" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -1294,7 +1295,7 @@ export default function Home() {
                                     </defs>
                                 </svg>
                             </div>
-                            <button onClick={openModal} className="h-[28px] md:h-[32px] rounded-[5px] w-[300px] md:w-[200px] text-[10px] btn-white mb-4 lg:mt-10 mt-5 font-normal text-[#15133A]">
+                            <button onClick={openModal} className="h-[28px] md:h-[38px] rounded-[5px] w-[300px] md:w-[150px] text-[10px] md:text-[14px] btn-white mb-4 lg:mt-10 mt-5 font-normal text-[#15133A]">
                                 Gå med gratis
                             </button>
                         </div>
@@ -1321,7 +1322,7 @@ export default function Home() {
                         {
                             blogPosts?.map((blog)=>{
                                 return (
-                                    <div key={blog?.id} className="rounded-[2rem] border border-1 border-[#BBBBBF] p-5 ">
+                                    <Link href={`/blog/${blog?.slug}`}  key={blog?.id} className="rounded-[2rem] border border-1 border-[#BBBBBF] p-5 ">
                                     <img
                                         src={blog?.imageUrl}
                                         alt="card"
@@ -1351,7 +1352,7 @@ export default function Home() {
                                             </p>
                                         </div>
                                     </div>
-                                </div>
+                                </Link>
                                 )
                             })
                         }

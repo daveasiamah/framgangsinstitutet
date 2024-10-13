@@ -826,6 +826,10 @@ h1{
     box-shadow: inset -4px 0px 5.8px rgba(255, 255, 255, 0.25), inset 11px 1px 19.4px rgba(255, 255, 255, 0.3);
     border-radius: 7px;
 }
+.shadow-bg{
+    box-shadow: inset -373px -62px 131.8px rgba(255, 255, 255, 0.2);
+    border-radius: 35px;
+}
 
 /* Mobile responsiveness */
 /* This media query targets screens with a maximum width of 768px */
