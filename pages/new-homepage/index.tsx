@@ -282,7 +282,7 @@ export default function Home() {
                 <section className="md:p-8 lg:py-14 lg:px-16 text-center  lg:my-18 rounded-2xl">
                     <div className="flex justify-between items-center">
                         <hr className="w-[40%]  border-t-1 border-[#555A7733]"/>
-                        <span className="font-[600px] tex-[14px] md:text-[20px] md:w-[20%] w-full md:ml-4 md:mr-4 text-[#434C69 font-jakarta">KUNSKAP INOM</span>
+                        <span className="font-[600] tex-[14px] md:text-[20px] md:w-[20%] w-full md:ml-4 md:mr-4 text-[#434C69 font-jakarta">KUNSKAP INOM</span>
                         <hr className="w-[40%] border-t-1 border-[#555A7733]"/>
                     </div>
 
