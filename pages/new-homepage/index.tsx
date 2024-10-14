@@ -547,7 +547,7 @@ export default function Home() {
                             />
 
                             <div className="text-left">
-                                <h1 className="font-[700] text-[16px]  lg:text-[22px] text-[#151E3A] leading-[28px] mt-2">Checkified Premium</h1>
+                                <h1 className="font-[700] text-[16px]  lg:text-[22px] text-[#151E3A] leading-[28px] mt-2">Checkified Platinum</h1>
                                 <p className="font-[500] font-inter text-[13px] text-[#434C69] leading-[22px]">Gå från 0-100k/mån med
                                     dropshipping. Över 45+ avsnitt. Tryck på knappen nedan för att gå med👇</p>
                             </div>
@@ -1335,7 +1335,7 @@ export default function Home() {
                                             {blog?.date}
                                         </p>
 
-                                        <p className="font-inter font-[500px] text-[14px] lg:text-[18px]  text-[#434C69] leading-[25px] mb-2">Vi
+                                        <p className="font-inter font-[500px] text-[14px] lg:text-[18px]  text-[#434C69] leading-[25px] mb-2">
                                             {blog?.title}
                                         </p>
 
