@@ -6,7 +6,7 @@ export const footerData: FooterData = {
     "Byggd av e-handlare för e-handlare med uppdraget att hjälpa entreprenörer att starta och växa framgångsrika företag.",
   product: {
     title: "Produkt",
-    linkOne: "Chelified annonser",
+    linkOne: "Checkified Ads",
     linkTwo: "Affiliate",
     linkThree: "Karriär"
   },
