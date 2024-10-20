@@ -201,9 +201,7 @@ export default function Home() {
                 className={`fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-25 backdrop-blur-sm  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full justify-center items-center transition ${showModal ? "flex" : "hidden"}`}
                 onClick={() => setShowModal(false)}
             >
-                <div>
-                    <h2 className="text-white text-center text-[22px] font-[800]">Tack För Din <span className="text-[#]">Registrering!️</span> </h2>
-                </div>
+                <ContractForm onClose={closeModal} />
             </div>
             <Layout headTitle={t.homeData.metaData.title}>
                 <section className="relative hero-height pt-8 flex flex-col lg:flex-row justify-between items-center gap-10">
@@ -552,7 +550,7 @@ export default function Home() {
                             />
 
                             <div className="text-left">
-                                <h1 className="font-[700] text-[16px]  lg:text-[22px] text-[#151E3A] leading-[28px] mt-2">Checkified Platinum</h1>
+                                <h1 className="font-[700] text-[16px]  lg:text-[22px] text-[#151E3A] leading-[28px] mt-2">Checkified Premium</h1>
                                 <p className="font-[500] font-inter text-[13px] text-[#434C69] leading-[22px]">Gå från 0-100k/mån med
                                     dropshipping. Över 45+ avsnitt. Tryck på knappen nedan för att gå med👇</p>
                             </div>
@@ -1340,7 +1338,7 @@ export default function Home() {
                                             {blog?.date}
                                         </p>
 
-                                        <p className="font-inter font-[500] text-[14px] lg:text-[18px]  text-[#434C69] leading-[25px] mb-2">
+                                        <p className="font-inter font-[500px] text-[14px] lg:text-[18px]  text-[#434C69] leading-[25px] mb-2">Vi
                                             {blog?.title}
                                         </p>
 
