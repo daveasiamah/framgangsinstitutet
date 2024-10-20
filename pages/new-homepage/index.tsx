@@ -346,7 +346,7 @@ export default function Home() {
                                 marknadsföring.
                             </p>
                             <button
-                                className="h-[30px] text-white rounded w-[161px] md:w-1/2 md:[36px]  pl-2 pr-2 border-0 bg-[#225AEA] md:w-50 text-[10px] md:text-[14px] md:leading-[22px] mt-5 button-shadow">
+                                className="h-[30px] text-white rounded w-[161px]  pl-2 pr-2 border-0 bg-[#225AEA] md:w-[161px] text-[10px] md:text-[10px] md:leading-[22px] mt-5 button-shadow font-inter">
                                 Se Gratis Dropshipping Kurs
                             </button>
                         </div>
@@ -368,14 +368,14 @@ export default function Home() {
                         {/* Text Section */}
                         <div className="w-full lg:w-1/2  lg:mb-20 text-left lg:text-left">
                                 <span className="flex flex-col lg:flex-row items-center justify-center lg:justify-start">
-                                  <h1 className="hidden lg:block text-[24px] font-[700px] font-jakarta">
+                                  <h1 className="hidden lg:block text-[24px] font-[700] font-jakarta">
                                     Är du redo för en
                                   </h1>
-                                  <h1 className="hidden lg:block text-[24px] font-bold text-primary lg:ml-2 font-jakarta">
+                                  <h1 className="hidden lg:block text-[24px] font-[700] text-primary lg:ml-2 font-jakarta">
                                     förändring?
                                   </h1>
                                 </span>
-                            <p className="text-[20px] leading-[26px] font-bold  lg:ml-2 lg:hidden md:hidden text-left font-jakarta">
+                            <p className="text-[20px] leading-[26px] font-[700]  lg:ml-2 lg:hidden md:hidden text-left font-jakarta">
                                 Är du redo för en <span className="text-[#225AEA]">förändring?</span>
                             </p>
 
@@ -1334,15 +1334,15 @@ export default function Home() {
                                     />
 
                                     <div className="text-left ">
-                                        <p className="text-[#686870] text-[14px] lg:text-[18px] font-inter mb-2 lg:mb-[20px] mt-4">
+                                        <p className="text-[#686870] text-[12px] lg:text-[14px] font-inter mb-2 lg:mb-[20px] mt-4">
                                             {blog?.date}
                                         </p>
 
-                                        <p className="font-inter font-[500px] text-[14px] lg:text-[18px]  text-[#434C69] leading-[25px] mb-2">Vi
+                                        <p className="font-inter font-[500px] text-[14px] lg:text-[18px]  text-[#434C69] leading-[25px] mb-4">
                                             {blog?.title}
                                         </p>
 
-                                        <div className="flex items-center">
+                                        <div className="flex items-center gap-2 mt-auto">
 
                                             <img
                                                 src={blog?.authorProfile}
@@ -1354,7 +1354,7 @@ export default function Home() {
                                                     target.src = "https://via.placeholder.com/34";
                                                 }}
                                             />
-                                            <p className="font-inter font-[500] text-[14px] lg:text-[18px] text-[#434C69] leading-[25px] ml-2">
+                                            <p className="font-inter font-[500] text-[14px] lg:text-[14px] text-[#434C69] leading-[25px] ml-2">
                                                 {blog?.author || 'N/A'}
                                             </p>
                                         </div>
