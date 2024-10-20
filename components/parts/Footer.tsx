@@ -147,10 +147,10 @@ const currentYear = new Date().getFullYear();
         <hr className='my-12' />
 
         <div className='flex flex-col lg:flex-row text-center lg:text-left justify-between items-center'>
-          <p className='mb-4 lg:mb-0 text-[14px]'>
+          <p className='mb-4 lg:mb-0 text-[12px] md:text-[14px] font-[500] font-inter order-3 md:order-1'>
             Copyright © {currentYear} Checkified. All rights reserved.
           </p>
-          <div className='flex justify-center flex-wrap lg:justify-start items-center gap-5 '>
+          <div className='flex justify-center flex-wrap lg:justify-start items-center gap-5 order-0 md:order-2'>
             {socialMedia(24).map((data) => (
                 <Link key={data.id} href={data.url} target='_blank'>
                   <div className='rounded-lg hover:bg-white hover:text-primary text-primary'>
@@ -159,24 +159,24 @@ const currentYear = new Date().getFullYear();
                 </Link>
             ))}
           </div>
-          <ul className='flex flex-wrap items-center justify-center gap-5'>
+          <ul className='flex flex-wrap items-center justify-center gap-5 order-1 md:order-3'>
             <li>
               <Link
-                  className='hover:underline underline-offset-4 text-[14px]'
+                  className='hover:underline underline-offset-4 text-[12px] md:text-[14px] font-[500] font-inter'
                   href='/terms-of-service'>
                 Cookiepolicy
               </Link>
             </li>
             <li>
               <Link
-                  className='hover:underline underline-offset-4 text-[14px]'
+                  className='hover:underline underline-offset-4 text-[12px] md:text-[14px] font-[500] font-inter'
                   href='/privacy-policy'>
                 Allmänna villkor
               </Link>
             </li>
             <li>
               <Link
-                  className='hover:underline underline-offset-4 text-[14px]'
+                  className='hover:underline underline-offset-4 text-[12px] md:text-[14px] font-[500] font-inter'
                   href='/cookie-policy'>
                 Integritetspolicy
               </Link>
