@@ -28,7 +28,7 @@ const currentYear = new Date().getFullYear();
           priority
         /> */}
         <div className='flex flex-col lg:flex-row justify-between items-center text-left md:text-center lg:text-left lg:items-end gap-10 lg:gap-[120px]'>
-          <div className='w-full lg:w-1/2'>
+          <div className='w-full lg:w-1/3'>
            <div className="flex align-items-center">
              <img
                  className="mt-4 md:h-[60px] md:w-[60px] w-[47px] h-[51px]"
@@ -43,17 +43,17 @@ const currentYear = new Date().getFullYear();
             <p className="text-[#434C69] text-[14px] leading-[22px] md:text-[16px] font-[600] font-inter md:leading-[32px]">Börja Med Dropshipping Sverige</p>
            <div>
              <img
-                 className="mt-4 md:h-[51px] md:w-[167px] w-[155px] h-[51px]"
+                 className=" md:h-[51px] md:w-[167px] w-[155px] h-[51px]"
                  src='/shopifypartner.svg'
                  alt='checkified'
              />
              <img
                  src='/stripe.svg'
                  alt='checkified'
-                 className="mt-2 md:h-[51px] md:w-[167px] w-[155px] h-[51px]"
+                 className=" md:h-[51px] md:w-[167px] w-[155px] h-[51px]"
              />
              <img
-                 className="mt-2 md:h-[51px] md:w-[167px] w-[155px] h-[51px]"
+                 className=" md:h-[51px] md:w-[167px] w-[155px] h-[51px]"
                  src='/google.svg'
                  alt='checkified'
                  height={27}
@@ -62,81 +62,102 @@ const currentYear = new Date().getFullYear();
            </div>
 
           </div>
-          <div className='w-full lg:w-1/2 grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-[110px] footer-links mt-10 lg:mt-0'>
+          <div className='w-full lg:w-1/2 grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-[90px] footer-links mt-10 lg:mt-0'>
             <div>
-              <h4 className='text-xl'>{t.footerData.product.title}</h4>
+              <h4 className='text-xl'>Produkter</h4>
               <ul>
                 <li>
                   <Link
-                    className='hover:underline underline-offset-4'
-                    href='/annonser'>
-                    Checkified Ads
+                      className='hover:underline underline-offset-4 md:text-[16px] font-[500] font-inter'
+                      href='/annonser'>
+                    Dropshipping Kurs
                   </Link>
                 </li>
                 <li>
                   <Link
-                    className='hover:underline underline-offset-4'
-                    href='/affiliate'>
-                    {t.footerData.product.linkTwo}
+                      className='hover:underline underline-offset-4 md:text-[16px] font-[500] font-inter'
+                      href='/affiliate'>
+                    Färdig E-butik
                   </Link>
                 </li>
                 <li>
                   <Link
-                    className='hover:underline underline-offset-4'
-                    href='/careers'>
-                    {t.footerData.product.linkThree}
+                      className='hover:underline underline-offset-4 md:text-[16px] font-[500] font-inter'
+                      href='/careers'>
+                    Dropshipping Ads
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                      className='hover:underline underline-offset-4 md:text-[16px] font-[500] font-inter'
+                      href='/careers'>
+                    Mentorskap
                   </Link>
                 </li>
               </ul>
             </div>
             <div>
-              <h4 className='text-xl'>{t.footerData.company.title}</h4>
+              <h4 className='text-xl'>Företag</h4>
               <ul>
                 <li>
                   <Link
-                    className='hover:underline underline-offset-4'
-                    href='/butiker'>
-                    {t.footerData.company.linkOne}
+                      className='hover:underline underline-offset-4 md:text-[16px] font-[500] font-inter'
+                      href='/about'>
+                    Om oss
                   </Link>
                 </li>
                 <li>
                   <Link
-                    className='hover:underline underline-offset-4'
-                    href='/about'>
-                    {t.footerData.company.linkTwo}
+                      className='hover:underline underline-offset-4 md:text-[16px] font-[500] font-inter'
+                      href='/butiker'>
+                    Affiliate
                   </Link>
                 </li>
                 <li>
                   <Link
-                    className='hover:underline underline-offset-4'
-                    href='/contact-us'>
-                    {t.footerData.company.linkThree}
+                      className='hover:underline underline-offset-4 md:text-[16px] font-[500] font-inter'
+                      href='/contact-us'>
+                    Karriär
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                      className='hover:underline underline-offset-4 md:text-[16px] font-[500] font-inter'
+                      href='/contact-us'>
+                    Press
                   </Link>
                 </li>
               </ul>
             </div>
             <div>
-              <h4 className='text-xl'>{t.footerData.resources.title}</h4>
+              <h4 className='text-xl'>Resurser</h4>
               <ul>
                 <li>
                   <Link
-                    className='hover:underline underline-offset-4'
-                    href='/blog'>
-                    {t.footerData.resources.linkOne}
+                      className='hover:underline underline-offset-4 md:text-[16px] font-[500] font-inter'
+                      href='/blog'>
+                    Blogg
                   </Link>
                 </li>
                 <li>
                   <Link
-                    className='hover:underline underline-offset-4'
-                    href='/press'>
-                    {t.footerData.resources.linkTwo}
+                      className='hover:underline underline-offset-4 md:text-[16px] font-[500] font-inter'
+                      href='/press'>
+                    Kontakt
                   </Link>
                 </li>
                 <li>
                   <Link
-                    className='hover:underline underline-offset-4'
-                    href='/university'>
-                    {t.footerData.resources.linkThree}
+                      className='hover:underline underline-offset-4 md:text-[16px] font-[500] font-inter'
+                      href='/university'>
+                    University
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                      className='hover:underline underline-offset-4 md:text-[16px] font-[500] font-inter'
+                      href='/annonser'>
+                    Kundcase
                   </Link>
                 </li>
               </ul>
@@ -144,7 +165,7 @@ const currentYear = new Date().getFullYear();
           </div>
         </div>
 
-        <hr className='my-12' />
+        <hr className='my-12'/>
 
         <div className='flex flex-col lg:flex-row text-center lg:text-left justify-between items-center'>
           <p className='mb-4 lg:mb-0 text-[12px] md:text-[14px] font-[500] font-inter order-3 md:order-1'>
