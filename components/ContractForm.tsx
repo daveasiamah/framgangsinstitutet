@@ -138,8 +138,8 @@ export default function ContactForm({
         onClick={onClose}
       />
       { !showSuccess && <div>
-      <div className="flex-col justify-center items-center">
-        {/* <iframe 
+          <div className="flex-col justify-center items-center">
+              {/* <iframe
           width="311" 
           height="175" 
           src="https://www.youtube.com/embed/pTVfynxC3-c?si=VXY1V0Wf90F4QeV9" 
@@ -147,164 +147,200 @@ export default function ContactForm({
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
           className="home_video_cover mt-4 max-w-full hidden lg:block mx-auto" 
         ></iframe> */}
-        <Image
-          src="/images/home/nyckeln-till-frihet.jpg"
-          alt="video"
-          width="240" 
-          height="100" 
-          className="mx-auto object-cover rounded-4xl"
-        />
-        <div className="lg:mt-6">
-          <div className="flex items-center justify-center gap-2 text-lg lg:text-xl font-bold">
-            <h1>{t.homeData.popupBlackTitle}</h1>
-            <h1 className="text-primary">{t.homeData.popupBlueTitle}</h1>
-          </div>
-          <p className="text-gray-500 mt-1 lg:mt-4 text-sm lg:text-lg">{t.homeData.popupSubtitle}</p>
-        </div>
-      </div>
-      <form onSubmit={handleSubmit(onSubmit)} action="">
-        <div className="mt-4 grid grid-cols-1 gap-4">
-          <div className="form-control">
-            <div className="flex pl-4 border rounded-lg">
               <Image
-                src="/icons/form/user.svg"
-                alt="user"
-                width={24}
-                height={24}
-                className="flex-shrink-0"
+                  src="/images/home/nyckeln-till-frihet.jpg"
+                  alt="video"
+                  width="240"
+                  height="100"
+                  className="mx-auto object-cover rounded-4xl"
               />
-              <input
-                type="text"
-                placeholder={t.homeData.popupForm.firstName}
-                className="input focus:outline-0 flex-1 bg-white"
-                {...register("firstName")}
-                onChange={handleFirstNameChange} 
+              <div className="lg:mt-6">
+                  <div className="flex items-center justify-center gap-2 text-lg lg:text-xl font-bold">
+                      <h1 className="text-[20px]">{t.homeData.popupBlackTitle}</h1>
+                      <h1 className="text-primary text-[20px]">{t.homeData.popupBlueTitle}</h1>
+                  </div>
+                  <p className="text-gray-500 mt-1 lg:mt-4 text-sm lg:text-lg">{t.homeData.popupSubtitle}</p>
+              </div>
+          </div>
+          <form onSubmit={handleSubmit(onSubmit)} action="">
+              <div className="mt-4 grid grid-cols-1 gap-4">
+                  <div className="form-control">
+                      <div className="flex pl-4 border rounded-lg">
+                          <Image
+                              src="/icons/form/user.svg"
+                              alt="user"
+                              width={24}
+                              height={24}
+                              className="flex-shrink-0"
+                          />
+                          <input
+                              type="text"
+                              placeholder={t.homeData.popupForm.firstName}
+                              className="input focus:outline-0 flex-1 bg-white"
+                              {...register("firstName")}
+                              onChange={handleFirstNameChange}
+                          />
+                      </div>
+                      {errors.firstName && (
+                          <p className="text-red-400 text-sm mt-1">
+                              {errors.firstName.message}
+                          </p>
+                      )}
+                  </div>
+                  <div className="form-control">
+                      <div className="flex pl-4 border rounded-lg">
+                          <Image
+                              src="/icons/form/email.svg"
+                              alt="email"
+                              width={24}
+                              height={24}
+                              className="flex-shrink-0"
+                          />
+                          <input
+                              type="email"
+                              placeholder={t.homeData.popupForm.email}
+                              className="input focus:outline-0 flex-1 bg-white"
+                              {...register("email")}
+                              onChange={handleEmailChange}
+                          />
+                      </div>
+                      {errors.email && (
+                          <p className="text-red-400 text-sm mt-1">{errors.email.message}</p>
+                      )}
+                  </div>
+                  <div className="form-control">
+                      <div className="flex pl-4 border rounded-lg">
+                          <Image
+                              src="/icons/form/phone.svg"
+                              alt="phone"
+                              width={24}
+                              height={24}
+                              className="flex-shrink-0"
+                          />
+                          <input
+                              type="text"
+                              placeholder={t.homeData.popupForm.phoneNumber}
+                              className="input focus:outline-0 flex-1 bg-white"
+                              {...register("phone")}
+                              onChange={handlemobileChange}
+                          />
+                      </div>
+                      {errors.phone && (
+                          <p className="text-red-400 text-sm mt-1">{errors.phone.message}</p>
+                      )}
+                  </div>
+              </div>
+              {(firstNameValid && emailValid && mobileValid) ? (
+                  <button type="submit" className="btn-primary mt-6 w-full drop-shadow-none">
+                      {t.homeData.popupButton}
+                  </button>
+              ) : (
+                  <div className="!cursor-not-allowed">
+                      <button
+                          type='submit'
+                          className=' btn btn-grey !bg-gray mt-6 h-14 w-full drop-shadow-none '
+                          disabled
+                      >
+                          {t.homeData.popupButton}
+                      </button>
+                  </div>
+              )}
+              <SuccessAlert
+                  isVisible={showModal}
+                  alertMessage={alertMessage}
+                  onClose={() => {
+                      setShowModal(false);
+                      onClose();
+                  }}
               />
+              <ErrorAlert
+                  isVisibleclose={showModalCls}
+                  alertMessage={alertMessage}
+                  onClose={() => setShowModalCls(false)}
+              />
+          </form>
+
+      </div>}
+        {showSuccess &&
+            <div>
+                <div className="flex-col justify-center items-center">
+                    <Image
+                        src={`${t.homeData.popupSuccessImage}`}
+                        alt="video"
+                        width="300"
+                        height="100"
+                        className="mx-auto object-cover rounded-4xl"
+                        loading="lazy"
+                    />
+                    <div className="lg:mt-6">
+                        <div className="flex items-center justify-center gap-2 text-lg lg:text-xl font-bold">
+                            <h1 className="text-[20px]">{t.homeData.popupSuccessBlackTitle}</h1>
+                            <h1 className="text-primary text-[20px]">{t.homeData.popupSuccessBlueTitle}</h1>
+                        </div>
+                        <p className="text-gray-500 mt-1 lg:mt-4 text-sm lg:text-lg">
+                            Du är nu ett steg närmare till din framgång med dropshipping. Vi ses på insidan! 🎉
+                        </p>
+                    </div>
+                </div>
+                <button onClick={() => {
+                    window.open("skool.com/dropshipping-sverige-2012", '_blank');
+                }} className="btn-primary mt-6 w-full drop-shadow-none popupSuccessRedirectButtons rounded-[7px]"
+                        style={{
+                            paddingRight: 0,
+                            paddingLeft: "5px",
+                            fontSize: 14,
+                            display: "flex",
+                            alignItems: "center",
+                        }}>
+                    <Image
+                        src="/sk.svg"
+                        alt="user"
+                        width={24}
+                        height={18}
+                        className="flex-shrink-0"
+                        style={{
+                            marginLeft: "18px",
+                            // marginLeft: 11,
+                            display: "inline-block",
+                            marginRight: '10px'
+                        }}
+                        loading="lazy"
+                    />
+
+                    <span className="mt-1"> Gå till gratis dropshipping kurs</span>
+                </button>
+                <button onClick={() => {
+                    window.open("https://shopify.pxf.io/checkified", '_blank');
+                }} className="btn-primary mt-6 w-full drop-shadow-none popupSuccessRedirectButtons rounded-[7px]"
+                        style={{
+                            textAlign: "center",
+                            paddingRight: 0,
+                            paddingLeft: "5px",
+                            fontSize: 14,
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                        }}>
+                    <Image
+                        src="/shopify.svg"
+                        alt="user"
+                        width={24}
+                        height={18}
+                        className="flex-shrink-0"
+                        style={{
+                            marginLeft: "-18px",
+                            // marginLeft: 11,
+                            display: "inline-block",
+                            marginRight: '10px'
+                        }}
+                        loading="lazy"
+                    />
+
+                    <span className="mt-1"> Börja med Shopify för 10kr i en månad.</span>
+                </button>
             </div>
-            {errors.firstName && (
-              <p className="text-red-400 text-sm mt-1">
-                {errors.firstName.message}
-              </p>
-            )}
-          </div>
-          <div className="form-control">
-            <div className="flex pl-4 border rounded-lg">
-              <Image
-                src="/icons/form/email.svg"
-                alt="email"
-                width={24}
-                height={24}
-                className="flex-shrink-0"
-              />
-              <input
-                type="email"
-                placeholder={t.homeData.popupForm.email}
-                className="input focus:outline-0 flex-1 bg-white"
-                {...register("email")}
-                onChange={handleEmailChange} 
-              />
-            </div>
-            {errors.email && (
-              <p className="text-red-400 text-sm mt-1">{errors.email.message}</p>
-            )}
-          </div>
-          <div className="form-control">
-            <div className="flex pl-4 border rounded-lg">
-              <Image
-                src="/icons/form/phone.svg"
-                alt="phone"
-                width={24}
-                height={24}
-                className="flex-shrink-0"
-              />
-              <input
-                type="text"
-                placeholder={t.homeData.popupForm.phoneNumber}
-                className="input focus:outline-0 flex-1 bg-white"
-                {...register("phone")}
-                onChange={handlemobileChange} 
-              />
-            </div>
-            {errors.phone && (
-              <p className="text-red-400 text-sm mt-1">{errors.phone.message}</p>
-            )}
-          </div>
-        </div>
-        {( firstNameValid && emailValid && mobileValid) ? (
-        <button type="submit" className="btn-primary mt-6 w-full drop-shadow-none">
-          {t.homeData.popupButton}
-        </button>
-        ):(
-          <div className="!cursor-not-allowed">
-            <button
-              type='submit'
-              className=' btn btn-grey !bg-gray mt-6 h-14 w-full drop-shadow-none '
-              disabled
-              >
-              {t.homeData.popupButton}
-            </button>
-          </div>
-        )}
-        <SuccessAlert
-          isVisible={showModal}
-          alertMessage={alertMessage}
-          onClose={() => { setShowModal(false); onClose(); } }
-        />
-        <ErrorAlert
-          isVisibleclose={showModalCls}
-          alertMessage={alertMessage}
-          onClose={() => setShowModalCls(false)}
-        />
-      </form>
-      </div> }
-      { showSuccess && <div>
-      <div className="flex-col justify-center items-center">
-        <Image
-          src={`${t.homeData.popupSuccessImage}`}
-          alt="video"
-          width="300" 
-          height="100" 
-          className="mx-auto object-cover rounded-4xl"
-          loading="lazy"
-        />
-        <div className="lg:mt-6">
-          <div className="flex items-center justify-center gap-2 text-lg lg:text-xl font-bold">
-            <h1>{t.homeData.popupSuccessBlackTitle}</h1>
-            <h1 className="text-primary">{t.homeData.popupSuccessBlueTitle}</h1>
-          </div>
-          <p className="text-gray-500 mt-1 lg:mt-4 text-sm lg:text-lg">{t.homeData.popupSuccessMessage}</p>
-        </div>
-      </div>
-      {t.homeData.popupSuccessRedirectButtons.map((buttonData) => (
-        <button key={buttonData.link} onClick={()=>{
-          window.open(buttonData.link, '_blank');
-        }} className="btn-primary mt-6 w-full drop-shadow-none popupSuccessRedirectButtons"
-        style={{
-          textAlign: "center",
-          paddingRight: 0,
-          paddingLeft: "5px",
-          borderRadius: "24px",
-          fontSize: 14
-        }}>
-          <Image
-                src={buttonData.icon}
-                alt="user"
-                width={20}
-                height={20}
-                className="flex-shrink-0"
-                style={{
-                  marginLeft: "-18px",
-                  // marginLeft: 11,
-                  display: "inline-block"
-                }}
-                key={buttonData.link}
-                loading="lazy"
-              />
-          {buttonData.text}
-        </button>
-      ))} 
-      </div> }
-      <BlurCircle positionClassName="left-0 top-0 z-1" size="lg" />
+        }
+        <BlurCircle positionClassName="left-0 top-0 z-1" size="lg"/>
     </div>
   );
 }
