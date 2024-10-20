@@ -1337,7 +1337,6 @@ export default function Home() {
                                         <p className="text-[#686870] text-[12px] lg:text-[14px] font-inter mb-2 lg:mb-[20px] mt-4">
                                             {blog?.date}
                                         </p>
-
                                         <p className="font-inter font-[500] text-[14px] lg:text-[18px]  text-[#434C69] leading-[25px] mb-4">
                                             {blog?.title}
                                         </p>
