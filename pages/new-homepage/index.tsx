@@ -44,6 +44,7 @@ type BlogPost = {
     date: string;
     slug: string;
     author: string;
+    authorProfile: string;
 }
 
 export default function Home() {
@@ -72,7 +73,9 @@ export default function Home() {
     useEffect(() => {
       const fetchPosts = async () => {
         try {
-          const response = await axios.get(`/api/blog?locale=${locale}`);
+          const response = await axios.get(`/api/blog/?locale=${locale}`);
+
+          console.log('response.data.data:', response.data.data);
 
           setBlogPosts(response.data.data);
         } catch (error) {
@@ -358,7 +361,7 @@ export default function Home() {
                             <img
                                 src="/images/home/channel.svg"
                                 alt="globe"
-                                className=" h-[221px] w-[243px] ld:h-[401px] lg:w-[423px] object-contain mb-4 mt-4"
+                                className=" h-[221px] w-[243px] md:h-[401px] md:w-[423px] object-contain mb-4 mt-4"
                             />
                         </div>
 
@@ -1342,12 +1345,15 @@ export default function Home() {
                                         <div className="flex items-center">
 
                                             <img
-                                                src={blog?.imageUrl}
+                                                src={blog?.authorProfile}
                                                 alt="card"
                                                 className="w-[34px] h-[34px] object-cover rounded-full"
                                                 loading="lazy"
+                                                onError={(e) => {
+                                                    e.target.src = "https://via.placeholder.com/34";
+                                                }}
                                             />
-                                            <p className="font-inter font-[500px] text-[14px] lg:text-[18px] text-[#434C69] leading-[25px] ml-2">
+                                            <p className="font-inter font-[500] text-[14px] lg:text-[18px] text-[#434C69] leading-[25px] ml-2">
                                                 {blog?.author || 'N/A'}
                                             </p>
                                         </div>
