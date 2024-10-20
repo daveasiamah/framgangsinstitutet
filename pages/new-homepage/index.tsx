@@ -73,10 +73,10 @@ export default function Home() {
       const fetchPosts = async () => {
         try {
           const response = await axios.get(`/api/blog?locale=${locale}`);
-          console.log('response.data.data:', response.data.data);
+
           setBlogPosts(response.data.data);
         } catch (error) {
-          console.error('Error fetching blog posts:', error);
+         // console.error('Error fetching blog posts:', error);
         }
       };
       fetchPosts();
@@ -1342,9 +1342,9 @@ export default function Home() {
                                         <div className="flex items-center">
 
                                             <img
-                                                src="/images/home/lady-avatar.svg"
+                                                src={blog?.imageUrl}
                                                 alt="card"
-                                                className="border-b border-1 border-[#E5E6EA] w-[24] h-[34px] object-contain rounded-full"
+                                                className="w-[34px] h-[34px] object-cover rounded-full"
                                                 loading="lazy"
                                             />
                                             <p className="font-inter font-[500px] text-[14px] lg:text-[18px] text-[#434C69] leading-[25px] ml-2">
