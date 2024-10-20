@@ -1350,7 +1350,8 @@ export default function Home() {
                                                 className="w-[34px] h-[34px] object-cover rounded-full"
                                                 loading="lazy"
                                                 onError={(e) => {
-                                                    e.target.src = "https://via.placeholder.com/34";
+                                                    const target = e.target as HTMLImageElement;
+                                                    target.src = "https://via.placeholder.com/34";
                                                 }}
                                             />
                                             <p className="font-inter font-[500] text-[14px] lg:text-[18px] text-[#434C69] leading-[25px] ml-2">
