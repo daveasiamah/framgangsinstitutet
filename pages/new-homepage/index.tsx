@@ -1214,23 +1214,10 @@ export default function Home() {
                 </section>
 
                 <section className="lg:h-80 md:h-80 lg:px-20 lg:py-10 md:px-20 md:py-10 mb-16 text-white ">
-                    <div className="relative left-0 right-0 flex flex-col items-center justify-center bg-[#2E56F5] rounded-[20px] md:px-4 lg:px-20 md:py-5 lg:py-5 shadow-bg">
-
+                    <div className="relative left-0 right-0 flex flex-col items-center justify-center bg-[#2E56F5] rounded-[20px] md:px-4 lg:px-20 md:py-5 lg:py-5 back-background">
                         <div className="text-center ">
-                            <div className="hidden  md:block lg:block left-[1rem] top-[10px] absolute h-[300px]">
-                                <img
-                                    alt="checkified logo" loading="lazy" decoding="async" data-nimg="fill"
-                                    src="/images/home/bgc-image.svg"
-                                    style={{
-
-                                        height: "100%",
-                                        width: "100%",
-                                        inset: "0px",
-                                        color: "transparent"
-                                    }}/>
-                            </div>
                             <div className="pl-10 pr-10">
-                                <h1 className="text-white text-center text-[20px] leading-[48px] lg:text-[24px] font-[500px] lg:font-[700px] font-jakarta">
+                                <h1 className="text-white text-center text-[20px] leading-[48px] md:text-[24px] font-[500px] font-jakarta mb-2 mt-4">
                                     Testa Checkified gratis
                                 </h1>
                                 <p className="mb-4 max-w-3xl mx-auto text-center lg:text-[16px] text-[12px] font-inter">Perfekt
@@ -1272,37 +1259,10 @@ export default function Home() {
                                 </div>
                             </div>
 
-                            <div
-                                className="hidden md:block lg:block right-[-1rem]  top-[-30px] text-white  absolute h-[300px]">
-                                <svg width="272" height="323" viewBox="0 0 272 323" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M92.8885 109.821C123.858 56.1609 193.331 38.2557 248.071 69.8709C302.81 101.486 322.046 170.625 291.076 224.285C260.106 277.946 190.633 295.851 135.894 264.236C81.1537 232.62 61.9185 163.482 92.8885 109.821Z"
-                                        stroke="url(#paint0_linear_7844_4684)" strokeWidth="1.5"/>
-                                    <rect x="0.274561" y="1.02468" width="127.577" height="253.318" rx="63.7885"
-                                          transform="matrix(0.865949 0.500132 -0.499868 0.866102 173.338 -111.295)"
-                                          stroke="url(#paint1_linear_7844_4684)" strokeWidth="1.5"/>
-                                    <defs>
-                                        <linearGradient id="paint0_linear_7844_4684" x1="135.519" y1="264.885"
-                                                        x2="248.505" y2="69.2558"
-                                                        gradientUnits="userSpaceOnUse">
-                                            <stop stop-color="white"/>
-                                            <stop offset="1" stop-color="white" stop-opacity="0"/>
-                                        </linearGradient>
-                                        <linearGradient id="paint1_linear_7844_4684" x1="196.875" y1="191.298"
-                                                        x2="-31.3906" y2="66.1411"
-                                                        gradientUnits="userSpaceOnUse">
-                                            <stop stop-color="white"/>
-                                            <stop offset="1" stop-color="white" stop-opacity="0"/>
-                                        </linearGradient>
-                                    </defs>
-                                </svg>
-                            </div>
-                            <button onClick={openModal} className="h-[28px] md:h-[38px] rounded-[5px] w-[300px] md:w-[150px] text-[10px] md:text-[14px] btn-white mb-4 lg:mt-10 mt-5 font-normal text-[#15133A]">
+                            <button onClick={openModal} className="h-[28px] md:h-[38px] rounded-[5px] w-[300px] md:w-[150px] text-[10px] md:text-[14px] btn-white mb-6 lg:mt-10 mt-5 font-normal text-[#15133A]">
                                 Gå med gratis
                             </button>
                         </div>
-
                     </div>
                 </section>
 

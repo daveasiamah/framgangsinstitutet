@@ -831,6 +831,16 @@ h1{
     border-radius: 35px;
 }
 
+.back-background {
+    border-radius: 35px;
+    background-image: url("/bcg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
 /* Mobile responsiveness */
 /* This media query targets screens with a maximum width of 768px */
 @media (max-width: 768px) {
