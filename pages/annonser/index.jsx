@@ -41,7 +41,8 @@ const Annonser = () => {
               <span>
                 <img src="/img/ad.svg" className="ad-svg_ann" alt="adsvg" />
               </span>
-              Shopify <span className="andsign_ann">&</span> Meta officiell partners
+              Shopify <span className="andsign_ann">&</span> Meta officiell
+              partners
             </p>
             <h1>Låt din butik växa med</h1>
             <h1>
@@ -49,13 +50,17 @@ const Annonser = () => {
               <span className="highlight_ann">högkvalitativa annonser</span>
             </h1>
             <p className="ad-details_ann">
-              <img src="/img/shopify1.png" alt="Shopify" className="shopify_ann" />
+              <img
+                src="/img/shopify1.png"
+                alt="Shopify"
+                className="shopify_ann"
+              />
               <span>159+ Sålda Annonser</span>
             </p>
             <div className="video-wrapper_ann">
               <img src="/img/ss.svg" alt="Video Placeholder" />
               <iframe
-                src="https://www.youtube.com/embed/-61N0rafuPk"
+                src="https://www.youtube.com/embed/kObRfo9JXtw"
                 title="Högkonverterande Annonser"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -308,7 +313,11 @@ const Annonser = () => {
         </div>
 
         <div className="faq_ann how-we-help_ann section_ann">
-          <img src="/img/dropship-faq%206.png" alt="Setting" className="star_ann" />
+          <img
+            src="/img/dropship-faq%206.png"
+            alt="Setting"
+            className="star_ann"
+          />
           <h2>Vanliga Frågor</h2>
           <div className="faq-items_ann container_ann  mobile-show_ann">
             <Accordion data={faqData} />

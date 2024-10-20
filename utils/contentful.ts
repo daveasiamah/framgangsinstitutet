@@ -10,7 +10,7 @@ export async function fetchBlogPosts(locale: string = 'sv', nolimit = false) {
         const entries = await client.getEntries({
             content_type: 'checkifiedBlogPost',
             locale,
-            select: ['fields.title,fields.description,fields.slug,fields.featuredImage', 'sys.createdAt'],
+            select: ['fields.title,fields.description,fields.slug,fields.featuredImage', 'fields.author','fields.authorProfile', 'sys.createdAt'],
             order: ['-sys.createdAt'],
             ...nolimit ? {}:{ limit: 6 }
         });
@@ -50,3 +50,4 @@ function formatBlogPostEntries (entries: any) {
         authorProfile: `https:${entry.fields.authorProfile?.fields?.file?.url}` || "",
       }));
 }
+
