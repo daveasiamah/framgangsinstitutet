@@ -1217,7 +1217,7 @@ export default function Home() {
                     <div className="relative left-0 right-0 flex flex-col items-center justify-center bg-[#2E56F5] rounded-[20px] md:px-4 lg:px-20 md:py-5 lg:py-5 back-background">
                         <div className="text-center ">
                             <div className="pl-10 pr-10">
-                                <h1 className="text-white text-center text-[20px] leading-[48px] md:text-[24px] font-[500px] font-jakarta mb-2 mt-4">
+                                <h1 className="text-white text-center text-[20px] leading-[48px] md:text-[24px] font-[500] font-jakarta mb-2 mt-4">
                                     Testa Checkified gratis
                                 </h1>
                                 <p className="mb-4 max-w-3xl mx-auto text-center lg:text-[16px] text-[12px] font-inter">Perfekt
@@ -1282,10 +1282,13 @@ export default function Home() {
                         </button>
                     </ScrollReveal>
                     <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-12 gap-5">
-                        {
-                            blogPosts?.map((blog)=>{
-                                return (
-                                    <Link href={`/blog/${blog?.slug}`}  key={blog?.id} className="rounded-[2rem] border border-1 border-[#BBBBBF] p-5 ">
+                        {blogPosts?.map((blog) => {
+                            return (
+                                <Link
+                                    href={`/blog/${blog?.slug}`}
+                                    key={blog?.id}
+                                    className="rounded-[2rem] border border-1 border-[#BBBBBF] p-5 flex flex-col"
+                                >
                                     <img
                                         src={blog?.imageUrl}
                                         alt="card"
@@ -1293,19 +1296,18 @@ export default function Home() {
                                         loading="lazy"
                                     />
 
-                                    <div className="text-left ">
+                                    <div className="text-left flex flex-col flex-grow">
                                         <p className="text-[#686870] text-[12px] lg:text-[14px] font-inter mb-2 lg:mb-[20px] mt-4">
                                             {blog?.date}
                                         </p>
-                                        <p className="font-inter font-[500] text-[14px] lg:text-[18px]  text-[#434C69] leading-[25px] mb-4">
+                                        <p className="font-inter font-[500] text-[14px] lg:text-[18px] text-[#434C69] leading-[25px] mb-4">
                                             {blog?.title}
                                         </p>
 
                                         <div className="flex items-center gap-2 mt-auto">
-
                                             <img
                                                 src={blog?.authorProfile}
-                                                alt="card"
+                                                alt="author"
                                                 className="w-[34px] h-[34px] object-cover rounded-full"
                                                 loading="lazy"
                                                 onError={(e) => {
@@ -1319,11 +1321,10 @@ export default function Home() {
                                         </div>
                                     </div>
                                 </Link>
-                                )
-                            })
-                        }
-
+                            );
+                        })}
                     </div>
+
                 </section>
 
 
