@@ -1164,7 +1164,6 @@ export default function Home() {
                                                 sizes="100vw"
                                                 style={{width: '300px', height: '100%'}}
                                                 className="rounded-lg"
-                                                loading="lazy"
                                             />
                                         </div>
                                     ))}
@@ -1203,7 +1202,7 @@ export default function Home() {
                 <section>
                     <div className="relative py-10 full-bg">
                         <ScrollReveal>
-                            <h1  className="text-center font-jakarta text-[22px] md:text-[36px] md:leading-[40px] leading-[22px] md:font-[700] mb-10 mt-5">
+                            <h1  className="text-center font-jakarta text-[22px] md:text-[36px] md:leading-[40px] leading-[22px] font-[700] mb-10 mt-5">
                                 Vanliga Frågor
                             </h1>
                         </ScrollReveal>
