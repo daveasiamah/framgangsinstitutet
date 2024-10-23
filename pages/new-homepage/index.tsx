@@ -361,7 +361,7 @@ export default function Home() {
                             <img
                                 src="/images/home/channel.svg"
                                 alt="globe"
-                                className=" h-[221px] w-[243px] md:h-[401px] md:w-[423px] object-contain mb-4 mt-4"
+                                className="h-[221px] w-[243px] md:h-[401px] md:w-[423px] object-contain mb-4 mt-4"
                             />
                         </div>
 
@@ -438,13 +438,10 @@ export default function Home() {
                     </ScrollReveal>
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
                         <div className="p-3 pt-5 pb-5 lg:p-5 rounded-[2rem] border border-1 border-[#BBBBBF]">
-                            <Image
+                            <img
                                 src="/images/home/logo.svg"
                                 alt="card"
-                                height={43}
-                                width={46}
-                                className="object-contain"
-                                loading="lazy"
+                                className="object-contain h-[43px] w-[46px]"
                             />
 
                             <div className="text-left">
@@ -540,17 +537,15 @@ export default function Home() {
 
                         </div>
                         <div className="p-3 pt-5 pb-5 lg:p-5 rounded-[2rem] border border-1 border-[#BBBBBF]">
-                            <Image
+                            <img
                                 src="/images/home/logo.svg"
                                 alt="card"
-                                height={43}
-                                width={46}
-                                className="object-contain"
-                                loading="lazy"
+                                className="object-contain h-[43px] w-[46px]"
                             />
 
                             <div className="text-left">
-                                <h1 className="font-[700] text-[16px]  lg:text-[22px] text-[#151E3A] leading-[28px] mt-2">Checkified Premium</h1>
+                                <h1 className="font-[700] text-[16px]  lg:text-[22px] text-[#151E3A] leading-[28px] mt-2">Checkified
+                                    Premium</h1>
                                 <p className="font-[500] font-inter text-[13px] text-[#434C69] leading-[22px]">Gå från 0-100k/mån med
                                     dropshipping. Över 45+ avsnitt. Tryck på knappen nedan för att gå med👇</p>
                             </div>
@@ -640,17 +635,15 @@ export default function Home() {
 
                         </div>
                         <div className="p-3 pt-5 pb-5 lg:p-5 rounded-[2rem] border border-1 border-[#BBBBBF]">
-                            <Image
+                            <img
                                 src="/images/home/logo.svg"
                                 alt="card"
-                                height={43}
-                                width={46}
-                                className="object-contain"
-                                loading="lazy"
+                                className="object-contain h-[43px] w-[46px]"
                             />
 
                             <div className="text-left">
-                                <h1 className="font-[700] text-[16px]  lg:text-[22px] text-[#151E3A] leading-[28px] mt-2">Checkified E-butik</h1>
+                                <h1 className="font-[700] text-[16px]  lg:text-[22px] text-[#151E3A] leading-[28px] mt-2">Checkified
+                                    E-butik</h1>
                                 <p className="font-[500] font-inter text-[13px] text-[#434C69] leading-[22px]">Köp din e-butik med 20 vinnande
                                     produkter, logotyp, leverantör, och e-bok här👇</p>
                             </div>
@@ -740,17 +733,15 @@ export default function Home() {
 
                         </div>
                         <div className="p-3 pt-5 pb-5 lg:p-5 rounded-[2rem] border border-1 border-[#BBBBBF]">
-                            <Image
+                            <img
                                 src="/images/home/logo.svg"
                                 alt="card"
-                                height={43}
-                                width={46}
-                                className="object-contain"
-                                loading="lazy"
+                                className="object-contain h-[43px] w-[46px]"
                             />
 
                             <div className="text-left">
-                                <h1 className="font-[700] text-[16px]  lg:text-[22px] text-[#151E3A] leading-[28px] mt-2">Checkified Ads</h1>
+                                <h1 className="font-[700] text-[16px]  lg:text-[22px] text-[#151E3A] leading-[28px] mt-2">Checkified
+                                    Ads</h1>
                                 <p className="font-[500] font-inter text-[13px] text-[#434C69] leading-[22px]">Köp videoannonser för att
                                     marknadsföra innehåll för endast 699 SEK här👇</p>
                             </div>
@@ -839,21 +830,21 @@ export default function Home() {
 
                         </div>
                         <div className="p-3 pt-5 pb-5 lg:p-5 rounded-[2rem] border border-1 border-[#BBBBBF]">
-                            <Image
+                            <img
                                 src="/images/home/logo.svg"
                                 alt="card"
-                                height={43}
-                                width={46}
-                                className="object-contain"
-                                loading="lazy"
+                                className="object-contain h-[43px] w-[46px]"
                             />
 
                             <div className="text-left">
-                                <h1 className="font-[700] text-[16px]  lg:text-[22px] text-[#151E3A] leading-[28px] mt-2">Checkified Mentorskap</h1>
-                                <p className="font-[500] font-inter text-[13px] text-[#434C69] leading-[22px]">Köp 1-on-1 mentorskap med
+                                <h1 className="font-[700] text-[16px]  lg:text-[22px] text-[#151E3A] leading-[28px] mt-2">Checkified
+                                    Mentorskap</h1>
+                                <p className="font-[500] font-inter text-[13px] text-[#434C69] leading-[22px]">Köp
+                                    1-on-1 mentorskap med
                                     e-handelsmiljonären Dominic för att lära dig allt om dropshipping här👇</p>
                             </div>
-                            <button onClick={() => window.open("https://shopify.pxf.io/checkified", "_blank")} className="h-[36px] md:h-[40px] text-white rounded-[7px] bg-[#225AEA] border-0 w-full  text-[14px] mt-5 mb-5">
+                            <button onClick={() => window.open("https://shopify.pxf.io/checkified", "_blank")}
+                                    className="h-[36px] md:h-[40px] text-white rounded-[7px] bg-[#225AEA] border-0 w-full  text-[14px] mt-5 mb-5">
                                 LÄGG TILL I KUNDVAGN
                             </button>
                             <div className="text-left">
@@ -861,7 +852,8 @@ export default function Home() {
                                     <li className="mt-4 text-[11px] lg:text-[12px]">
                                         <div className="flex justify-between items-center">
                                             <div className="flex items-center">
-                        <span className="border border-1 border-[#BBBBBF] flex justify-center items-center p-1 lg:p-2 mr-1 lg:mr-2 rounded-lg">
+                        <span
+                            className="border border-1 border-[#BBBBBF] flex justify-center items-center p-1 lg:p-2 mr-1 lg:mr-2 rounded-lg">
                         <Image
                             src="/images/home/check.svg"
                             alt="card"
@@ -892,7 +884,8 @@ export default function Home() {
                       </span>
                                                 Målgrupp
                                             </div>
-                                           <small className="lg:text-[11px] text-[9px]"> De som vill tjäna över 1MSEK</small>
+                                            <small className="lg:text-[11px] text-[9px]"> De som vill tjäna över
+                                                1MSEK</small>
                                         </div>
                                     </li>
                                     <li className="mt-4 text-[10px] lg:text-[12px]">
@@ -911,7 +904,8 @@ export default function Home() {
                       </span>
                                                 Innehåll
                                             </div>
-                                            <small className="lg:text-[11px] text-[9px]">1-on-1 mentorskap, individuell vägledning</small>
+                                            <small className="lg:text-[11px] text-[9px]">1-on-1 mentorskap, individuell
+                                                vägledning</small>
                                         </div>
                                     </li>
                                     <li className="mt-4 text-[10px] lg:text-[12px]">
@@ -930,7 +924,8 @@ export default function Home() {
                       </span>
                                                 Expertisnivå
                                             </div>
-                                            <small className="lg:text-[10px] text-[9px]">Lär från en erfaren dropshipping-expert</small>
+                                            <small className="lg:text-[10px] text-[9px]">Lär från en erfaren
+                                                dropshipping-expert</small>
                                         </div>
                                     </li>
                                 </ul>
@@ -938,21 +933,21 @@ export default function Home() {
 
                         </div>
                         <div className="p-3 pt-5 pb-5 lg:p-5 rounded-[2rem] border border-1 border-[#BBBBBF]">
-                            <Image
+                            <img
                                 src="/images/home/logo.svg"
                                 alt="card"
-                                height={43}
-                                width={46}
-                                className="object-contain"
-                                loading="lazy"
+                                className="object-contain h-[43px] w-[46px]"
                             />
 
                             <div className="text-left">
-                                <h1 className="font-[700] text-[16px]  lg:text-[22px] text-[#151E3A] leading-[28px] mt-2">Checkified Shopify</h1>
-                                <p className="font-[500] font-inter text-[13px] text-[#434C69] leading-[22px]">Checkified är stolt partner med
+                                <h1 className="font-[700] text-[16px]  lg:text-[22px] text-[#151E3A] leading-[28px] mt-2">Checkified
+                                    Shopify</h1>
+                                <p className="font-[500] font-inter text-[13px] text-[#434C69] leading-[22px]">Checkified
+                                    är stolt partner med
                                     Shopify – börja med Shopify för bara 10 kr första månaden👇</p>
                             </div>
-                            <button onClick={() => window.open("https://shopify.pxf.io/checkified", "_blank")} className="h-[36px] md:h-[40px] text-white rounded-[7px] bg-[#225AEA] border-0 w-full  text-[14px] mt-5 mb-5">
+                            <button onClick={() => window.open("https://shopify.pxf.io/checkified", "_blank")}
+                                    className="h-[36px] md:h-[40px] text-white rounded-[7px] bg-[#225AEA] border-0 w-full  text-[14px] mt-5 mb-5">
                                 FÅ DIN BUTIK
                             </button>
                             <div className="text-left">
@@ -994,7 +989,8 @@ export default function Home() {
                                                 Målgrupp
                                             </div>
 
-                                            <small className="lg:text-[11px] text-[9px]">Nybörjare inom dropshipping</small>
+                                            <small className="lg:text-[11px] text-[9px]">Nybörjare inom
+                                                dropshipping</small>
                                         </div>
                                     </li>
                                     <li className="mt-4 text-[11px] lg:text-[12px]">
@@ -1067,7 +1063,7 @@ export default function Home() {
 
                 </section>
 
-                <section className="relative text-center lg:mb-16 lg:mb-20 lg:mt-20">
+                <section className="relative text-center lg:mb-[16px] lg:[mb-20px] lg:mt-20">
 
                     <ScrollReveal>
                         <h1 className="lg:block text-left text-[22px] leading-[55px] lg:text-[32px] lg:leading-[55px] font-bold lg:mb-[-7]">
@@ -1156,11 +1152,9 @@ export default function Home() {
                                             className="rounded-2xl h-full grid place-content-center"
                                             style={{paddingRight: "30px"}}
                                         >
-                                            <Image
+                                            <img
                                                 src={data.imageUrl}
                                                 alt="testimonial"
-                                                width="0"
-                                                height="0"
                                                 sizes="100vw"
                                                 style={{width: '300px', height: '100%'}}
                                                 className="rounded-lg"
