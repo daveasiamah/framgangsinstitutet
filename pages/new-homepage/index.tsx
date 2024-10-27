@@ -339,13 +339,13 @@ export default function Home() {
 
                             <h1 className="lg:hidden md:hidden text-[20px] leading-[22px] font-jakarta font-[700]"><span className="text-[#2E56F5]">Steg-för-steg guide</span> till att <br/> bygga dropshipping företag</h1>
 
-                            <p onClick={openModal} className="mt-4 text-[#434C69] text-[12px]  lg:text-[14px] leading-[22px] font-[500] font-inter">
+                            <p className="mt-4 text-[#434C69] text-[12px]  lg:text-[14px] leading-[22px] font-[500] font-inter">
                                 Lär dig hur du bygger, skalar och drar nytta av e-handelsbutiker. Från din första miljon
                                 i intäkter till en potentiell exit. Det närmaste du kommer en doktorsexamen i e-handel
                                 och digital
                                 marknadsföring.
                             </p>
-                            <button
+                            <button onClick={openModal}
                                 className="h-[30px] text-white rounded w-[161px]  pl-2 pr-2 border-0 bg-[#225AEA] md:w-[161px] text-[10px] md:text-[10px] md:leading-[22px] mt-5 button-shadow font-inter">
                                 Se Gratis Dropshipping Kurs
                             </button>
