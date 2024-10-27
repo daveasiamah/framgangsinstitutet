@@ -69,28 +69,28 @@ const currentYear = new Date().getFullYear();
                 <li>
                   <Link
                       className='hover:underline underline-offset-4 md:text-[16px] font-[500] font-inter'
-                      href='/annonser'>
+                      href='/skool'>
                     Dropshipping Kurs
                   </Link>
                 </li>
                 <li>
                   <Link
                       className='hover:underline underline-offset-4 md:text-[16px] font-[500] font-inter'
-                      href='/affiliate'>
+                      href='/butiker'>
                     Färdig E-butik
                   </Link>
                 </li>
                 <li>
                   <Link
                       className='hover:underline underline-offset-4 md:text-[16px] font-[500] font-inter'
-                      href='/careers'>
+                      href='/annonser'>
                     Dropshipping Ads
                   </Link>
                 </li>
                 <li>
                   <Link
                       className='hover:underline underline-offset-4 md:text-[16px] font-[500] font-inter'
-                      href='/careers'>
+                      href='/mentorskap'>
                     Mentorskap
                   </Link>
                 </li>
@@ -174,7 +174,7 @@ const currentYear = new Date().getFullYear();
           <div className='flex justify-center flex-wrap lg:justify-start items-center gap-5 order-0 md:order-2'>
             {socialMedia(24).map((data) => (
                 <Link key={data.id} href={data.url} target='_blank'>
-                  <div className='rounded-lg hover:bg-white hover:text-primary text-primary'>
+                  <div className='rounded-lg hover:bg-white hover:text-primary text-primary bg-[#225AEA]'>
                     {data.logo}
                   </div>
                 </Link>
@@ -191,14 +191,14 @@ const currentYear = new Date().getFullYear();
             <li>
               <Link
                   className='hover:underline underline-offset-4 text-[12px] md:text-[14px] font-[500] font-inter'
-                  href='/privacy-policy'>
+                  href='/terms-of-service'>
                 Allmänna villkor
               </Link>
             </li>
             <li>
               <Link
                   className='hover:underline underline-offset-4 text-[12px] md:text-[14px] font-[500] font-inter'
-                  href='/cookie-policy'>
+                  href='/terms-of-service'>
                 Integritetspolicy
               </Link>
             </li>

@@ -545,7 +545,7 @@ export default function Home() {
 
                             <div className="text-left">
                                 <h1 className="font-[700] text-[16px]  lg:text-[22px] text-[#151E3A] leading-[28px] mt-2">Checkified
-                                    Premium</h1>
+                                    Platinum</h1>
                                 <p className="font-[500] font-inter text-[13px] text-[#434C69] leading-[22px]">Gå från 0-100k/mån med
                                     dropshipping. Över 45+ avsnitt. Tryck på knappen nedan för att gå med👇</p>
                             </div>
@@ -743,7 +743,7 @@ export default function Home() {
                                 <h1 className="font-[700] text-[16px]  lg:text-[22px] text-[#151E3A] leading-[28px] mt-2">Checkified
                                     Ads</h1>
                                 <p className="font-[500] font-inter text-[13px] text-[#434C69] leading-[22px]">Köp videoannonser för att
-                                    marknadsföra innehåll för endast 699 SEK här👇</p>
+                                    marknadsföra innehåll för endast 499 SEK här👇</p>
                             </div>
                             <button onClick={() => window.open("https://buy.stripe.com/8wM15i52CfwJ492148", "_blank")} className="h-[36px] md:h-[40px] text-white rounded-[7px] bg-[#225AEA] border-0 w-full  text-[14px] mt-5 mb-5">
                                 LÄGG TILL I KUNDVAGN
@@ -843,7 +843,7 @@ export default function Home() {
                                     1-on-1 mentorskap med
                                     e-handelsmiljonären Dominic för att lära dig allt om dropshipping här👇</p>
                             </div>
-                            <button onClick={() => window.open("https://shopify.pxf.io/checkified", "_blank")}
+                            <button onClick={() => window.open("https://checkout.revolut.com/pay/c1874ce2-0c58-4e4b-8b47-413171d61ec5", "_blank")}
                                     className="h-[36px] md:h-[40px] text-white rounded-[7px] bg-[#225AEA] border-0 w-full  text-[14px] mt-5 mb-5">
                                 LÄGG TILL I KUNDVAGN
                             </button>
