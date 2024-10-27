@@ -174,7 +174,7 @@ const currentYear = new Date().getFullYear();
           <div className='flex justify-center flex-wrap lg:justify-start items-center gap-5 order-0 md:order-2'>
             {socialMedia(24).map((data) => (
                 <Link key={data.id} href={data.url} target='_blank'>
-                  <div className='rounded-lg hover:bg-white hover:text-primary text-primary bg-[#225AEA]'>
+                  <div className='rounded-lg hover:bg-white hover:text-primary text-[#225AEA]'>
                     {data.logo}
                   </div>
                 </Link>
