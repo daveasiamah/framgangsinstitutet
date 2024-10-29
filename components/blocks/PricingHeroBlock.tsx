@@ -5,6 +5,7 @@ import BlurCircle from "@/components/graphic/BlurCircle";
 import LineGraphic from "@/components/graphic/LineGraphic";
 import ScrollReveal from "@/components/transition/ScrollReveal";
 import Image from "next/image";
+import ReactPlayer from "react-player";
 
 export default function PricingHeroBlock({
                                              openModal
@@ -42,14 +43,10 @@ export default function PricingHeroBlock({
                     className="mb-2 lg:mb-14 relative lg:w-[706px] w-full px-4 mx-auto flex flex-col items-center justify-center gap-1 lg:mt-12 mt-4">
 
                     <div className="video-container">
-                        <iframe
-                            width="706"
-                            height="397"
-                            src="https://www.youtube.com/embed/RE7W-JGPpOk"
-                            title="YouTube video player"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowFullScreen
-                        ></iframe>
+
+<iframe src="https://fast.wistia.net/embed/iframe/0qo58jia32?seo=true&videoFoam=false" title="Dan Mills - Young and Free Video" allow="autoplay; fullscreen"   scrolling="no"  name="wistia_embed" width="706" height="397"></iframe>
+<script src="https://fast.wistia.net/assets/external/E-v1.js" async></script>
+
                     </div>
                     <div className="w-full mt-0 lg:mt-8 flex flex-col items-center">
                         <button
