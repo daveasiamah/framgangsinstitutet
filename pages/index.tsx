@@ -346,7 +346,7 @@ export default function Home() {
                                 marknadsföring.
                             </p>
                             <button onClick={openModal}
-                                className="h-[30px] text-white rounded w-[161px]  pl-2 pr-2 border-0 bg-[#225AEA] md:w-[161px] text-[10px] md:text-[10px] md:leading-[22px] mt-5 button-shadow font-inter">
+                                className="h-[30px] text-white rounded w-[161px]  pl-2 pr-2 border-0 bg-[#225AEA] md:w-[161px] text-[12px] md:text-[10px] md:leading-[22px] mt-5 button-shadow font-inter">
                                 Se Gratis Dropshipping Kurs
                             </button>
                         </div>

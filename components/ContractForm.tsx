@@ -283,7 +283,7 @@ export default function ContactForm({
                     </div>
                 </div>
                 <button onClick={() => {
-                    window.open("skool.com/dropshipping-sverige-2012", '_blank');
+                    window.open("https://skool.com/dropshipping-sverige-2012", '_blank');
                 }} className="btn-primary mt-6 w-full drop-shadow-none popupSuccessRedirectButtons rounded-[7px]"
                         style={{
                             paddingRight: 0,
