@@ -43,6 +43,9 @@ export default function TOS({}: Props) {
       <section className="relative flex flex-col lg:flex-row gap-10 justify-between mb-12 lg:mb-16">
         <div className="section__content container flex flex-col space-y-[28px]">
           {/* INLEDNING */}
+          <span className="block text-xl font-bold leading-[32px]">
+            INLEDNING
+          </span>
           <p>
             Dessa allmänna villkor ("Villkoren") är en central del av det avtal
             ("Avtalet") som har ingåtts mellan Checkified ("Leverantören") och den
@@ -59,8 +62,8 @@ export default function TOS({}: Props) {
           </p>
 
           {/* Erhållna Tjänster */}
-          <span className="block text-xl font-semibold leading-[32px]">
-            1. Erhållna Tjänster
+          <span className="block text-xl font-bold leading-[32px]">
+           ERHÅLLNA TJÄNSTER
           </span>
           <p>
             Leverantören åtar sig att leverera de överenskomna tjänsterna ("Tjänsterna")
@@ -68,7 +71,7 @@ export default function TOS({}: Props) {
           </p>
           <ul className="list-disc pl-8">
             <li>
-              <strong>Digitalt Kursinnehåll:</strong> Kursen består av ett omfattande
+              <strong>1. Digitalt Kursinnehåll:</strong> Kursen består av ett omfattande
               utbildningsprogram, levererat genom en molnbaserad plattform (SaaS).
               Kunden får tillgång till kursinnehållet efter att Avtalet trätt i kraft och
               betalningen har fullgjorts. Kursen täcker ämnesområden som:
@@ -83,13 +86,13 @@ export default function TOS({}: Props) {
               </ul>
             </li>
             <li>
-              <strong>Digitalt Mentorskap:</strong> Leverantören erbjuder mentorskap via
+              <strong>2. Digitalt Mentorskap:</strong> Leverantören erbjuder mentorskap via
               gruppträning och handledning inom de ämnesområden som anges ovan. Gruppmentorskapet
               genomförs genom digitala videomöten, och Leverantörens representanter leder dessa
               sessioner. Kunden har rätt att delta i mentorskapet enligt det upplägg Leverantören bestämmer.
             </li>
             <li>
-              <strong>Digitalt Community:</strong> Leverantören erbjuder en digital plattform,
+              <strong>3. Digitalt Community:</strong> Leverantören erbjuder en digital plattform,
               till exempel genom Discord, där Kunden kan interagera med andra kursdeltagare och
               Leverantörens representanter. Leverantören förbehåller sig rätten att vid behov ändra
               teknisk lösning eller format för communityn för att säkerställa tjänstens funktionalitet.
@@ -98,7 +101,7 @@ export default function TOS({}: Props) {
 
           {/* Kunddata */}
           <span className="block text-xl font-semibold leading-[32px]">
-            2. Kunddata
+            KUNDDATA
           </span>
           <p>
             Kunden samtycker till att Leverantören får använda anonymiserad data som genereras genom
@@ -109,7 +112,7 @@ export default function TOS({}: Props) {
 
           {/* Tillhandahållande av Tjänster */}
           <span className="block text-xl font-semibold leading-[32px]">
-            3. Tillhandahållande av Tjänster
+            TILLHANDAHÅLLANDE AV TJÄNSTER
           </span>
           <p>
             Leverantören påbörjar leveransen av Tjänsterna först efter att Kunden har fullgjort betalningen
@@ -120,7 +123,7 @@ export default function TOS({}: Props) {
 
           {/* Avbrott i Tjänsterna */}
           <span className="block text-xl font-semibold leading-[32px]">
-            4. Avbrott i Tjänsterna
+            AVBROTT I TJÄNSTERNA
           </span>
           <p>
             Leverantören förbehåller sig rätten att vid behov temporärt avbryta eller begränsa åtkomsten
@@ -131,7 +134,7 @@ export default function TOS({}: Props) {
 
           {/* Underleverantörer */}
           <span className="block text-xl font-semibold leading-[32px]">
-            5. Underleverantörer
+            UNDERLEVERANTÖRER
           </span>
           <p>
             För att uppfylla sina åtaganden enligt Avtalet kan Leverantören anlita underleverantörer.
@@ -141,7 +144,7 @@ export default function TOS({}: Props) {
 
           {/* Ersättning och Betalning */}
           <span className="block text-xl font-semibold leading-[32px]">
-            6. Ersättning och Betalning
+            ERSÄTTNING OCH BETALNING
           </span>
           <p>
             Kunden ska erlägga en ersättning om totalt femton tusen (15 000) SEK, inklusive moms, för
@@ -152,7 +155,7 @@ export default function TOS({}: Props) {
 
           {/* Immateriella Rättigheter */}
           <span className="block text-xl font-semibold leading-[32px]">
-            7. Immateriella Rättigheter
+            IMMATERIELLA RÄTTIGHETER
           </span>
           <p>
             Alla immateriella rättigheter relaterade till Tjänsterna, inklusive men inte begränsat till
@@ -163,30 +166,16 @@ export default function TOS({}: Props) {
 
           {/* Ansvarsbegränsning */}
           <span className="block text-xl font-semibold leading-[32px]">
-            8. Ansvarsbegränsning
+            ANSVARSBEGRÄNSNING OCH ÅNGERRÄTT
           </span>
           <p>
-            Leverantören ansvarar inte för indirekta skador eller förlust av data som kan uppkomma genom användning av Tjänsterna.
-            Leverantörens ansvar är begränsat till den summa som Kunden betalat för Tjänsterna under de senaste 12 månaderna.
+           Leverantörens ansvar är begränsat till den summa som Kunden har betalat för Tjänsterna.
+           Leverantören ansvarar inte för indirekta skador, dataförluster, inkomstbortfall eller andra
+           följdskador. Eftersom tjänsten levereras digitalt och anses påbörjad när Kunden får åtkomst
+           till innehållet, gäller ingen ångerrätt i enlighet med Distansavtalslagen.
           </p>
 
-          {/* Avtalets Varaktighet och Uppsägning */}
-          <span className="block text-xl font-semibold leading-[32px]">
-            9. Avtalets Varaktighet och Uppsägning
-          </span>
-          <p>
-            Avtalet träder i kraft vid godkännande och förblir giltigt tills Tjänsterna har fullgjorts. Kunden kan säga upp Avtalet
-            med skriftligt meddelande. Leverantören kan säga upp avtalet om Kunden inte uppfyller sina skyldigheter enligt Avtalet.
-          </p>
-
-          {/* Tillämplig Lag */}
-          <span className="block text-xl font-semibold leading-[32px]">
-            10. Tillämplig Lag
-          </span>
-          <p>
-            Detta Avtal regleras av svensk lag. Tvister mellan Parterna ska i första hand lösas genom förhandling och medling.
-            Om tvisten inte kan lösas på det sättet, ska den avgöras av svensk domstol med tillämpning av svensk rätt.
-          </p>
+         
         </div>
       </section>
     </Layout>

@@ -184,7 +184,7 @@ const currentYear = new Date().getFullYear();
             <li>
               <Link
                   className='hover:underline underline-offset-4 text-[12px] md:text-[14px] font-[500] font-inter'
-                  href='/terms-of-service'>
+                  href='/cookie-policy'>
                 Cookiepolicy
               </Link>
             </li>
@@ -198,7 +198,7 @@ const currentYear = new Date().getFullYear();
             <li>
               <Link
                   className='hover:underline underline-offset-4 text-[12px] md:text-[14px] font-[500] font-inter'
-                  href='/terms-of-service'>
+                  href='/privacy-policy'>
                 Integritetspolicy
               </Link>
             </li>
