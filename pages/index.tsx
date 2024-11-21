@@ -358,11 +358,14 @@ export default function Home() {
                     <div className="flex flex-col lg:flex-row justify-between items-center">
                         {/* Image Section */}
                         <div className="w-full lg:w-1/2 lg:mr-20 flex justify-center lg:justify-start mb-8 lg:mb-0">
-                            <img
-                                src="/images/home/channel.svg"
-                                alt="globe"
-                                className="h-[221px] w-[243px] md:h-[401px] md:w-[423px] object-contain mb-4 mt-4"
-                            />
+                          <Image
+        src="/images/home/channel.svg" // Source of the image
+        alt="globe" // Alt text for accessibility
+        width={243} // The default width (it will be scaled up on larger screens)
+        height={221} // The default height (it will be scaled up on larger screens)
+        className="object-contain mb-4 mt-4" // CSS classes for styling
+        sizes="(min-width: 768px) 423px, 100vw" // Sizes attribute for responsive behavior
+      />
                         </div>
 
                         {/* Text Section */}

@@ -368,12 +368,6 @@ export const homeData: HomeData = {
       answer:
         "24 - 48 timmar efter att du har lagt din beställning skickar vi din inloggningsinformation till din nya Shopify Dropshipping Store. Allt du behöver göra är att logga in, ändra lösenordet och butiken är helt och hållet din!"
     },
-    {
-      id: 8,
-      question: "Kan jag få en återbetalning om jag inte gillar min Shopify-butik?",
-      answer:
-        "Vi har 30 dagars garanti."
-    },
   ],
 
   popupBlackTitle: "Se Gratis",

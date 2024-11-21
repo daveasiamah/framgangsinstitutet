@@ -308,12 +308,6 @@ export const homeData: HomeData = {
       answer:
         "24 - 48 hours after you place your order, we will send you your login information to your new Shopify Dropshipping Store. All you have to do is log in, change the password, and the store is all yours!"
     },
-    {
-      id: 8,
-      question: "Can I get a refund if I don't like my Shopify store?",
-      answer:
-        "We have a 30-day guarantee."
-    },
   ],
 
   popupBlackTitle: "View Free",
