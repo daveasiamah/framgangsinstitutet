@@ -361,7 +361,7 @@ export default function Home() {
                           <Image
         src="/images/home/channel.svg" // Source of the image
         alt="globe" // Alt text for accessibility
-        width={243} // The default width (it will be scaled up on larger screens)
+        width={500} // The default width (it will be scaled up on larger screens)
         height={221} // The default height (it will be scaled up on larger screens)
         className="object-contain mb-4 mt-4" // CSS classes for styling
         sizes="(min-width: 768px) 423px, 100vw" // Sizes attribute for responsive behavior
@@ -844,7 +844,7 @@ export default function Home() {
                                     Mentorskap</h1>
                                 <p className="font-[500] font-inter text-[13px] text-[#434C69] leading-[22px]">Köp 1-on-1 mentorskap med privat vägledning och hemliga strategier inom dropshipping & ehandel här👇</p>
                             </div>
-                            <button onClick={() => window.open("https://checkout.revolut.com/pay/c1874ce2-0c58-4e4b-8b47-413171d61ec5", "_blank")}
+                            <button onClick={() => window.open("https://whop.com/checkified-mentorskap", "_blank")}
                                     className="h-[36px] md:h-[40px] text-white rounded-[7px] bg-[#225AEA] border-0 w-full  text-[14px] mt-5 mb-5">
                                 LÄGG TILL I KUNDVAGN
                             </button>

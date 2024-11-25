@@ -142,14 +142,14 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
         <Link className="" href="/">
           <div className="flex items-center justify-start gap-2">
             <Image
-              className="svg-primary object-contain"
-              src="/logo.svg"
+              className="object-contain"
+              src="/logo.png"
               alt="checkified"
               height={44}
-              width={44}
+              width={210}
               priority
             />
-            <p className="font-bold font-roboto text-2xl">Checkified</p>
+            {/* <p className="font-bold font-roboto text-2xl">Checkified</p> */}
           </div>
         </Link>
 

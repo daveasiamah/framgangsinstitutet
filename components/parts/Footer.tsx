@@ -31,14 +31,14 @@ const currentYear = new Date().getFullYear();
           <div className="w-full lg:w-1/3">
            <div className="flex align-items-center">
              <img
-                 className="mt-4 md:h-[60px] md:w-[60px] w-[47px] h-[51px]"
-                 src="/logonew.svg"
+                 className="mt-4 md:h-[60px] md:w-[220px] w-[47px] h-[51px]"
+                 src="/logo.png"
                  alt="checkified"
              />
 
-             <h3 className="my-3 text-[28px] font-[700] font-jakarta">
+             {/* <h3 className="my-3 text-[28px] font-[700] font-jakarta">
                Checkified
-             </h3>
+             </h3> */}
            </div>
             <p className="text-[#434C69] text-[14px] leading-[22px] md:text-[16px] font-[600] font-inter md:leading-[32px]">Börja Med Dropshipping Sverige</p>
            <div>
