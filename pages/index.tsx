@@ -443,7 +443,7 @@ export default function Home() {
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
                         <div className="p-3 pt-5 pb-5 lg:p-5 rounded-[2rem] border border-1 border-[#BBBBBF]">
                             <img
-                                src="/images/home/logo.svg"
+                                src="/images/home/Logo.png"
                                 alt="card"
                                 className="object-contain h-[43px] w-[46px]"
                             />
@@ -542,7 +542,7 @@ export default function Home() {
                         </div>
                         <div className="p-3 pt-5 pb-5 lg:p-5 rounded-[2rem] border border-1 border-[#BBBBBF]">
                             <img
-                                src="/images/home/logo.svg"
+                                src="/images/home/Logo.png"
                                 alt="card"
                                 className="object-contain h-[43px] w-[46px]"
                             />
@@ -640,7 +640,7 @@ export default function Home() {
                         </div>
                         <div className="p-3 pt-5 pb-5 lg:p-5 rounded-[2rem] border border-1 border-[#BBBBBF]">
                             <img
-                                src="/images/home/logo.svg"
+                                src="/images/home/Logo.png"
                                 alt="card"
                                 className="object-contain h-[43px] w-[46px]"
                             />
@@ -737,7 +737,7 @@ export default function Home() {
                         </div>
                         <div className="p-3 pt-5 pb-5 lg:p-5 rounded-[2rem] border border-1 border-[#BBBBBF]">
                             <img
-                                src="/images/home/logo.svg"
+                                src="/images/home/Logo.png"
                                 alt="card"
                                 className="object-contain h-[43px] w-[46px]"
                             />
@@ -834,7 +834,7 @@ export default function Home() {
                         </div>
                         <div className="p-3 pt-5 pb-5 lg:p-5 rounded-[2rem] border border-1 border-[#BBBBBF]">
                             <img
-                                src="/images/home/logo.svg"
+                                src="/images/home/Logo.png"
                                 alt="card"
                                 className="object-contain h-[43px] w-[46px]"
                             />
@@ -935,7 +935,7 @@ export default function Home() {
                         </div>
                         <div className="p-3 pt-5 pb-5 lg:p-5 rounded-[2rem] border border-1 border-[#BBBBBF]">
                             <img
-                                src="/images/home/logo.svg"
+                                src="/images/home/Logo.png"
                                 alt="card"
                                 className="object-contain h-[43px] w-[46px]"
                             />
