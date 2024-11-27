@@ -142,7 +142,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
         <Link className="" href="/">
           <div className="flex items-center justify-start gap-2">
             <Image
-                className="mt-4 md:h-[60px] md:w-[150px] w-[130px] h-[41px]"
+                className="mt-4 md:h-[60px] md:w-[150px] w-[220px] h-[41px]"
               src="/logo.png"
               alt="checkified"
               height={44}

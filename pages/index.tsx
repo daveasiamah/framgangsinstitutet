@@ -449,7 +449,7 @@ export default function Home() {
                             />
 
                             <div className="text-left">
-                                <h1 className="font-[700] text-[16px]  lg:text-[22px] text-[#151E3A] leading-[28px] mt-2">Checkified Premium</h1>
+                                <h1 className="font-[700] text-[16px]  lg:text-[22px] text-[#151E3A] leading-[28px] mt-2">Dropshipping Gratis Kurs</h1>
                                 <p className="font-[500] font-inter text-[13px] text-[#434C69] leading-[22px]">I kursen kommer du lära dig om
                                     dropshipping e-handel och marknadsföring. Gå med idag gratis👇</p>
                             </div>
@@ -548,8 +548,7 @@ export default function Home() {
                             />
 
                             <div className="text-left">
-                                <h1 className="font-[700] text-[16px]  lg:text-[22px] text-[#151E3A] leading-[28px] mt-2">Checkified
-                                    Platinum</h1>
+                                <h1 className="font-[700] text-[16px]  lg:text-[22px] text-[#151E3A] leading-[28px] mt-2">Dropshipping Sverige Kurs</h1>
                                 <p className="font-[500] font-inter text-[13px] text-[#434C69] leading-[22px]">Gå från 0-100k/mån med
                                     dropshipping. Över 45+ avsnitt. Tryck på knappen nedan för att gå med👇</p>
                             </div>
@@ -646,8 +645,7 @@ export default function Home() {
                             />
 
                             <div className="text-left">
-                                <h1 className="font-[700] text-[16px]  lg:text-[22px] text-[#151E3A] leading-[28px] mt-2">Checkified
-                                    E-butik</h1>
+                                <h1 className="font-[700] text-[16px]  lg:text-[22px] text-[#151E3A] leading-[28px] mt-2">Dropshipping Platinum Kurs</h1>
                                 <p className="font-[500] font-inter text-[13px] text-[#434C69] leading-[22px]">Köp din e-butik med 20 vinnande produkter, logotyp, leverantör, e-bok, och 5 video annonser här👇</p>
                             </div>
                             <button onClick={() => window.open("https://buy.stripe.com/eVaeW80Mmckx34YdQT", "_blank")} className="h-[36px] md:h-[40px] text-white rounded-[7px] bg-[#225AEA] border-0 w-full  text-[14px] mt-5 mb-5">
@@ -743,8 +741,7 @@ export default function Home() {
                             />
 
                             <div className="text-left">
-                                <h1 className="font-[700] text-[16px]  lg:text-[22px] text-[#151E3A] leading-[28px] mt-2">Checkified
-                                    Ads</h1>
+                                <h1 className="font-[700] text-[16px]  lg:text-[22px] text-[#151E3A] leading-[28px] mt-2">Dropshipping Annonser</h1>
                                 <p className="font-[500] font-inter text-[13px] text-[#434C69] leading-[22px]">Köp videoannonser för att
                                     marknadsföra innehåll för endast 399 SEK här👇</p>
                             </div>
@@ -840,11 +837,10 @@ export default function Home() {
                             />
 
                             <div className="text-left">
-                                <h1 className="font-[700] text-[16px]  lg:text-[22px] text-[#151E3A] leading-[28px] mt-2">Checkified
-                                    Mentorskap</h1>
+                                <h1 className="font-[700] text-[16px]  lg:text-[22px] text-[#151E3A] leading-[28px] mt-2">Dropshipping Mentorskap</h1>
                                 <p className="font-[500] font-inter text-[13px] text-[#434C69] leading-[22px]">Köp 1-on-1 mentorskap med privat vägledning och hemliga strategier inom dropshipping & ehandel här👇</p>
                             </div>
-                            <button onClick={() => window.open("https://whop.com/checkified-mentorskap", "_blank")}
+                            <button onClick={() => window.open("https://whop.com/dropshipping-mentorskap", "_blank")}
                                     className="h-[36px] md:h-[40px] text-white rounded-[7px] bg-[#225AEA] border-0 w-full  text-[14px] mt-5 mb-5">
                                 LÄGG TILL I KUNDVAGN
                             </button>
@@ -941,8 +937,7 @@ export default function Home() {
                             />
 
                             <div className="text-left">
-                                <h1 className="font-[700] text-[16px]  lg:text-[22px] text-[#151E3A] leading-[28px] mt-2">Checkified
-                                    Shopify</h1>
+                                <h1 className="font-[700] text-[16px]  lg:text-[22px] text-[#151E3A] leading-[28px] mt-2">Dropshipping Färdig Butik</h1>
                                 <p className="font-[500] font-inter text-[13px] text-[#434C69] leading-[22px]">Checkified
                                     är stolt partner med
                                     Shopify – börja med Shopify för bara 10 kr första månaden👇</p>
