@@ -31,7 +31,7 @@ const currentYear = new Date().getFullYear();
           <div className="w-full lg:w-1/3">
            <div className="flex align-items-center">
              <img
-                 className="mt-4 md:h-[60px] md:w-[220px] w-[150px] h-[51px]"
+                 className="mt-4 md:h-[60px] md:w-[280px] w-[280px] h-[51px]"
                  src="/logo.png"
                  alt="checkified"
              />
