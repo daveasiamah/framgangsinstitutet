@@ -146,7 +146,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
               src="/logo.png"
               alt="checkified"
               height={44}
-              width={220}
+              width={250}
               priority
             />
           </div>

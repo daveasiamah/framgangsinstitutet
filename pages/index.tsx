@@ -248,7 +248,7 @@ export default function Home() {
                                     <iframe
                                         width="706"
                                         height="397"
-                                        src="https://www.youtube.com/embed/V2PqDLwVNgA"
+                                        src="https://www.youtube.com/embed/mww78ZM23zI"
                                         title="YouTube video player"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                         frameBorder="0"
@@ -552,7 +552,7 @@ export default function Home() {
                                 <p className="font-[500] font-inter text-[13px] text-[#434C69] leading-[22px]">Gå från 0-100k/mån med
                                     dropshipping. Över 45+ avsnitt. Tryck på knappen nedan för att gå med👇</p>
                             </div>
-                            <button onClick={() => window.open("https://checkified.se/platinum", "_blank")} className="h-[36px] md:h-[40px] text-white rounded-[7px] bg-[#225AEA] border-0 w-full  text-[14px] mt-5 mb-5">
+                            <button onClick={() => window.open("https://whop.com/dropshipping-sverige", "_blank")} className="h-[36px] md:h-[40px] text-white rounded-[7px] bg-[#225AEA] border-0 w-full  text-[14px] mt-5 mb-5">
                                 LÄGG TILL I KUNDVAGN
                             </button>
                             <div className="text-left">
@@ -573,7 +573,7 @@ export default function Home() {
                       </span>
                                                 Månadskostnad
                                             </div>
-                                            <small className="lg:text-[11px] text-[9px]">150 kr</small>
+                                            <small className="lg:text-[11px] text-[9px]">1500 kr</small>
                                         </div>
                                     </li>
                                     <li className="mt-4 text-[11px] lg:text-[12px]">
@@ -646,7 +646,7 @@ export default function Home() {
 
                             <div className="text-left">
                                 <h1 className="font-[700] text-[16px]  lg:text-[22px] text-[#151E3A] leading-[28px] mt-2">Dropshipping Platinum Kurs</h1>
-                                <p className="font-[500] font-inter text-[13px] text-[#434C69] leading-[22px]">Köp din e-butik med 20 vinnande produkter, logotyp, leverantör, e-bok, och 5 video annonser här👇</p>
+                                <p className="font-[500] font-inter text-[13px] text-[#434C69] leading-[22px]">Gå från 0-100k/mån med dropshipping. Över 45+ avsnitt. Tryck på knappen nedan för att gå med👇</p>
                             </div>
                             <button onClick={() => window.open("https://buy.stripe.com/eVaeW80Mmckx34YdQT", "_blank")} className="h-[36px] md:h-[40px] text-white rounded-[7px] bg-[#225AEA] border-0 w-full  text-[14px] mt-5 mb-5">
                                 LÄGG TILL I KUNDVAGN
@@ -667,9 +667,9 @@ export default function Home() {
                             loading="lazy"
                         />
                       </span>
-                                                Engångskostnad
+                                                Månadskostnad
                                             </div>
-                                            <small className="lg:text-[11px] text-[9px]">999 kr</small>
+                                            <small className="lg:text-[11px] text-[9px]">150 kr</small>
                                         </div>
                                     </li>
                                     <li className="mt-4 text-[11px] lg:text-[12px]">
@@ -688,7 +688,7 @@ export default function Home() {
                       </span>
                                                 Målgrupp
                                             </div>
-                                            <small className="lg:text-[11px] text-[9px]">De som vill tjäna över 10k/mån</small>
+                                            <small className="lg:text-[11px] text-[9px]">De som vill tjäna över 1M/mån</small>
                                         </div>
                                     </li>
                                     <li className="mt-4 text-[11px] lg:text-[12px]">
@@ -707,7 +707,7 @@ export default function Home() {
                       </span>
                                                 Innehåll
                                             </div>
-                                            <small className="lg:text-[11px] text-[9px]">20 produkter, logotyp, och leverantör</small>
+                                            <small className="lg:text-[11px] text-[9px]">Marknadsföring, SEO, Webbutveckling, & AI</small>
                                         </div>
                                     </li>
                                     <li className="mt-4 text-[11px] lg:text-[12px]">
@@ -724,9 +724,9 @@ export default function Home() {
                             loading="lazy"
                         />
                       </span>
-                                                Leverans
+                                                Supportnivå
                                             </div>
-                                            <small className="lg:text-[11px] text-[9px]">24 - 48 timmar</small>
+                                            <small className="lg:text-[11px] text-[9px]">24/7 Platinum support</small>
                                         </div>
                                     </li>
                                 </ul>
@@ -765,7 +765,7 @@ export default function Home() {
                       </span>
                                                 Engångskostnad
                                             </div>
-                                            <small className="lg:text-[11px] text-[9px]">399 kr</small>
+                                            <small className="lg:text-[11px] text-[9px]">299 kr</small>
                                         </div>
                                     </li>
                                     <li className="mt-4 text-[10px] lg:text-[12px]">
@@ -938,9 +938,7 @@ export default function Home() {
 
                             <div className="text-left">
                                 <h1 className="font-[700] text-[16px]  lg:text-[22px] text-[#151E3A] leading-[28px] mt-2">Dropshipping Färdig Butik</h1>
-                                <p className="font-[500] font-inter text-[13px] text-[#434C69] leading-[22px]">Checkified
-                                    är stolt partner med
-                                    Shopify – börja med Shopify för bara 10 kr första månaden👇</p>
+                                <p className="font-[500] font-inter text-[13px] text-[#434C69] leading-[22px]">Köp din e-butik med 20 vinnande produkter, 5 video annonser, logotyp, leverantör, och e-bok här👇</p>
                             </div>
                             <button onClick={() => window.open("https://shopify.pxf.io/checkified", "_blank")}
                                     className="h-[36px] md:h-[40px] text-white rounded-[7px] bg-[#225AEA] border-0 w-full  text-[14px] mt-5 mb-5">
@@ -965,7 +963,7 @@ export default function Home() {
                                                 Engångskostnad
                                             </div>
 
-                                            <small className="lg:text-[11px] text-[9px]"> 10 kr</small>
+                                            <small className="lg:text-[11px] text-[9px]">999 kr</small>
                                         </div>
                                     </li>
                                     <li className="mt-4 text-[11px] lg:text-[12px]">
@@ -985,8 +983,7 @@ export default function Home() {
                                                 Målgrupp
                                             </div>
 
-                                            <small className="lg:text-[11px] text-[9px]">Nybörjare inom
-                                                dropshipping</small>
+                                            <small className="lg:text-[11px] text-[9px]">De som vill tjäna över 100k/mån</small>
                                         </div>
                                     </li>
                                     <li className="mt-4 text-[11px] lg:text-[12px]">
@@ -1006,7 +1003,7 @@ export default function Home() {
                                                 Innehåll
                                             </div>
 
-                                            <small className="lg:text-[11px] text-[9px]">Shopify prenumeration</small>
+                                            <small className="lg:text-[11px] text-[9px]">20 produkter, video annonser & logotyp</small>
                                         </div>
                                     </li>
                                     <li className="mt-4 text-[11px] lg:text-[12px]">
@@ -1023,10 +1020,10 @@ export default function Home() {
                             loading="lazy"
                         />
                       </span>
-                                                Format
+                                                Leverans
                                             </div>
 
-                                            <small className="lg:text-[11px] text-[9px]">Digital butik</small>
+                                            <small className="lg:text-[11px] text-[9px]">24 - 48 timmar</small>
                                         </div>
                                     </li>
                                 </ul>
