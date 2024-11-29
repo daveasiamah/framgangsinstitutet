@@ -630,7 +630,7 @@ export default function Home() {
                       </span>
                                                 Supportnivå
                                             </div>
-                                            <small className="lg:text-[11px] text-[9px]">Premium support, mer personlig hjälp</small>
+                                            <small className="lg:text-[11px] text-[9px]">Premium support</small>
                                         </div>
                                     </li>
                                 </ul>
@@ -648,7 +648,7 @@ export default function Home() {
                                 <h1 className="font-[700] text-[16px]  lg:text-[22px] text-[#151E3A] leading-[28px] mt-2">Dropshipping Platinum Kurs</h1>
                                 <p className="font-[500] font-inter text-[13px] text-[#434C69] leading-[22px]">Gå från 0-100k/mån med dropshipping. Över 45+ avsnitt. Tryck på knappen nedan för att gå med👇</p>
                             </div>
-                            <button onClick={() => window.open("https://buy.stripe.com/eVaeW80Mmckx34YdQT", "_blank")} className="h-[36px] md:h-[40px] text-white rounded-[7px] bg-[#225AEA] border-0 w-full  text-[14px] mt-5 mb-5">
+                            <button onClick={() => window.open("https://whop.com/dropshipping-sverige-kurs", "_blank")} className="h-[36px] md:h-[40px] text-white rounded-[7px] bg-[#225AEA] border-0 w-full  text-[14px] mt-5 mb-5">
                                 LÄGG TILL I KUNDVAGN
                             </button>
                             <div className="text-left">
@@ -669,7 +669,7 @@ export default function Home() {
                       </span>
                                                 Månadskostnad
                                             </div>
-                                            <small className="lg:text-[11px] text-[9px]">150 kr</small>
+                                            <small className="lg:text-[11px] text-[9px]">250 kr</small>
                                         </div>
                                     </li>
                                     <li className="mt-4 text-[11px] lg:text-[12px]">
@@ -741,11 +741,11 @@ export default function Home() {
                             />
 
                             <div className="text-left">
-                                <h1 className="font-[700] text-[16px]  lg:text-[22px] text-[#151E3A] leading-[28px] mt-2">Dropshipping Annonser</h1>
+                                <h1 className="font-[700] text-[16px]  lg:text-[22px] text-[#151E3A] leading-[28px] mt-2">Dropshipping Färdiga Annonser</h1>
                                 <p className="font-[500] font-inter text-[13px] text-[#434C69] leading-[22px]">Köp videoannonser för att
                                     marknadsföra innehåll för endast 399 SEK här👇</p>
                             </div>
-                            <button onClick={() => window.open("https://buy.stripe.com/8wM15i52CfwJ492148", "_blank")} className="h-[36px] md:h-[40px] text-white rounded-[7px] bg-[#225AEA] border-0 w-full  text-[14px] mt-5 mb-5">
+                            <button onClick={() => window.open("https://whop.com/dropshipping-fardig-annons", "_blank")} className="h-[36px] md:h-[40px] text-white rounded-[7px] bg-[#225AEA] border-0 w-full  text-[14px] mt-5 mb-5">
                                 LÄGG TILL I KUNDVAGN
                             </button>
                             <div className="text-left">
@@ -940,7 +940,7 @@ export default function Home() {
                                 <h1 className="font-[700] text-[16px]  lg:text-[22px] text-[#151E3A] leading-[28px] mt-2">Dropshipping Färdig Butik</h1>
                                 <p className="font-[500] font-inter text-[13px] text-[#434C69] leading-[22px]">Köp din e-butik med 20 vinnande produkter, 5 video annonser, logotyp, leverantör, och e-bok här👇</p>
                             </div>
-                            <button onClick={() => window.open("https://shopify.pxf.io/checkified", "_blank")}
+                            <button onClick={() => window.open("https://buy.stripe.com/3cscO09iSdoBgVOeUZ", "_blank")}
                                     className="h-[36px] md:h-[40px] text-white rounded-[7px] bg-[#225AEA] border-0 w-full  text-[14px] mt-5 mb-5">
                                 FÅ DIN BUTIK
                             </button>
