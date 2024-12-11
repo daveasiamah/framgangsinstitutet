@@ -1,4 +1,4 @@
-import { FooterData } from "../types/footer"
+import { FooterData } from "../types/footer";
 
 export const footerData: FooterData = {
   footerTitle: "Lås upp din potential",
@@ -8,21 +8,21 @@ export const footerData: FooterData = {
     title: "Produkt",
     linkOne: "Checkified Ads",
     linkTwo: "Affiliate",
-    linkThree: "Karriär"
+    linkThree: "",
   },
   company: {
     title: "Företag",
     linkOne: "E-Butiker",
     linkTwo: "Om oss",
-    linkThree: "Kontakt"
+    linkThree: "Kontakt",
   },
   resources: {
     title: "Resurser",
     linkOne: "Blogg",
     linkTwo: "Press",
-    linkThree: "University"
+    linkThree: "",
   },
   terms: "Allmänna villkor",
   privacy: "Integritetspolicy",
-  cookie: "Cookiepolicy"
-}
+  cookie: "Cookiepolicy",
+};

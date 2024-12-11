@@ -1,30 +1,30 @@
-import axios from "axios";
-import { useRouter } from "next/router";
+import axios from "axios"
+import { useRouter } from "next/router"
 
 export const AuthApi = async (email, password) => {
   try {
     const response = await axios.post(process.env.API_BASE + "auth/login", {
       email: email,
       password: password,
-    });
-    return response;
+    })
+    return response
   } catch (error) {
-    return error;
+    return error
   }
-};
+}
 
 export const registerOfContract = async (data) => {
-  console.log('registerOfContract ', data);
-  const { firstName, email, phone } = data;
+  console.log("registerOfContract ", data)
+  const { firstName, email, phone } = data
   try {
     const response = await axios.post(process.env.API_BASE + "auth/register", {
       name: firstName,
       email,
-      phoneNumber: phone
-    });
-    return response ;
+      phoneNumber: phone,
+    })
+    return response
   } catch (error) {
-    return error;
+    return error
   }
 }
 
@@ -35,13 +35,13 @@ export const contact = async (data) => {
       lastName: data.lastName,
       email: data.email,
       phone: data.phone,
-      message: data.message 
-    });
-    return response;
+      message: data.message,
+    })
+    return response
   } catch (error) {
-    return error;
+    return error
   }
-};
+}
 
 export const get_user = async () => {
   try {
@@ -50,14 +50,21 @@ export const get_user = async () => {
       {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       }
-    );
-    return response;
+    )
+    return response
   } catch (error) {
-    return error;
+    return error
   }
-};
+}
 
-export const Register = async (firstName, lastName, role, email, password,phoneNumber) => {
+export const Register = async (
+  firstName,
+  lastName,
+  role,
+  email,
+  password,
+  phoneNumber
+) => {
   try {
     const response = await axios.post(process.env.API_BASE + "auth/register", {
       firstName: firstName,
@@ -65,13 +72,13 @@ export const Register = async (firstName, lastName, role, email, password,phoneN
       role: role,
       email: email,
       password: password,
-      phoneNumber:phoneNumber
-    });
-    return response;
+      phoneNumber: phoneNumber,
+    })
+    return response
   } catch (error) {
-    return error;
+    return error
   }
-};
+}
 
 export const for_pass = async (email) => {
   try {
@@ -80,12 +87,12 @@ export const for_pass = async (email) => {
       {
         email: email,
       }
-    );
-    return response;
+    )
+    return response
   } catch (error) {
-    return error;
+    return error
   }
-};
+}
 
 export const resend_mail = async (email) => {
   try {
@@ -94,12 +101,12 @@ export const resend_mail = async (email) => {
       {
         email: email,
       }
-    );
-    return response;
+    )
+    return response
   } catch (error) {
-    return error;
+    return error
   }
-};
+}
 
 export const otpcheck = async (otp) => {
   try {
@@ -107,72 +114,72 @@ export const otpcheck = async (otp) => {
       otp: otp,
       email: localStorage.getItem("email"),
     })
-    const response = await axios.post(process.env.API_BASE + "auth/forgetPasswordotpcheck",
-    
-    {
+    const response = await axios.post(
+      process.env.API_BASE + "auth/forgetPasswordotpcheck",
+
+      {
         otp: parseInt(otp),
-        email: localStorage.getItem("email")
+        email: localStorage.getItem("email"),
       },
       {
-        headers: { 
-          'Content-Type': 'application/json'
-          }
-      },
-      );
-    return response;
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
+    return response
   } catch (error) {
-    return error;
+    return error
   }
-};
+}
 
 export const set_new_password = async (data) => {
   try {
-    console.log({...data,email:localStorage.getItem("email")})
-    const response = await axios.post(process.env.API_BASE + "auth/forgetChangepasswordMw",
-    
-    {...data,
-      email:localStorage.getItem("email")
-    },
+    console.log({ ...data, email: localStorage.getItem("email") })
+    const response = await axios.post(
+      process.env.API_BASE + "auth/forgetChangepasswordMw",
+
+      { ...data, email: localStorage.getItem("email") },
       {
-        headers: { 
-          "Content-Type": 'application/json',
-          }
-      },
-      );
-    return response;
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
+    return response
   } catch (error) {
-    return error;
+    return error
   }
-};
+}
 
 export const course_add = async (name, content, category, videoThumbnail) => {
-  console.log(videoThumbnail);
-  console.log(name);
-  console.log(content);
-  console.log(category);
+  console.log(videoThumbnail)
+  console.log(name)
+  console.log(content)
+  console.log(category)
   try {
-    const formData = new FormData();
-    formData.append("name", name);
-    formData.append("courseImage", videoThumbnail);
-    formData.append("content", content);
-    formData.append("category", category);
+    const formData = new FormData()
+    formData.append("name", name)
+    formData.append("courseImage", videoThumbnail)
+    formData.append("content", content)
+    formData.append("category", category)
     const response = await axios.post(
       process.env.API_BASE + `courses`,
       formData, // Use formData directly as the request body
       {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       }
-    );
+    )
 
-    return response;
+    return response
   } catch (error) {
-    return error;
+    return error
   }
-};
+}
 
 export const course_add_step_2_api = async (videoTitle) => {
   try {
-    console.log(localStorage.getItem("courseid"));
+    console.log(localStorage.getItem("courseid"))
     const response = await axios.post(
       process.env.API_BASE +
         `courses/${localStorage.getItem("courseid")}/courseSteps`,
@@ -183,20 +190,20 @@ export const course_add_step_2_api = async (videoTitle) => {
       {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       }
-    );
-    return response;
+    )
+    return response
   } catch (error) {
-    return error;
+    return error
   }
-};
+}
 
 export const video_add = async (multivideo) => {
   try {
-    console.log(multivideo);
-    const formData = new FormData();
-    formData.append("name", multivideo.title);
-    formData.append("content", multivideo.content);
-    formData.append("courseVideo", multivideo.file);
+    console.log(multivideo)
+    const formData = new FormData()
+    formData.append("name", multivideo.title)
+    formData.append("content", multivideo.content)
+    formData.append("courseVideo", multivideo.file)
     const response = await axios.post(
       process.env.API_BASE +
         `courses/${localStorage.getItem(
@@ -206,12 +213,12 @@ export const video_add = async (multivideo) => {
       {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       }
-    );
-    return response;
+    )
+    return response
   } catch (error) {
-    return error;
+    return error
   }
-};
+}
 
 export const admin_get_course = async () => {
   try {
@@ -220,12 +227,12 @@ export const admin_get_course = async () => {
       {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       }
-    );
-    return response;
+    )
+    return response
   } catch (error) {
-    return error;
+    return error
   }
-};
+}
 
 export const admin_get_course_byid = async (courseId) => {
   try {
@@ -234,28 +241,28 @@ export const admin_get_course_byid = async (courseId) => {
       {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       }
-    );
-    console.log("courseId:-", courseId);
-    return response;
+    )
+    console.log("courseId:-", courseId)
+    return response
   } catch (error) {
-    return error;
+    return error
   }
-};
+}
 
 export const update_course_byid = async (courseId) => {
   try {
-    console.log("courseId:-", courseId);
+    console.log("courseId:-", courseId)
     const response = await axios.patch(
       process.env.API_BASE + `courses/${courseId}`,
       {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       }
-    );
-    return response;
+    )
+    return response
   } catch (error) {
-    return error;
+    return error
   }
-};
+}
 
 export const get_courses = async (itemsToShow, searchQuery) => {
   try {
@@ -265,12 +272,12 @@ export const get_courses = async (itemsToShow, searchQuery) => {
       {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       }
-    );
-    return response;
+    )
+    return response
   } catch (error) {
-    return error;
+    return error
   }
-};
+}
 
 export const get_user_courses = async (limit, pages) => {
   try {
@@ -289,24 +296,24 @@ export const get_user_courses = async (limit, pages) => {
       {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       }
-    );
-    return response;
+    )
+    return response
   } catch (error) {
-    return error;
+    return error
   }
-};
+}
 
 export const Community_post = async (postImage, postVideo, content) => {
   try {
-    console.log(postVideo);
-    const formData = new FormData();
+    console.log(postVideo)
+    const formData = new FormData()
 
-    formData.append("content", content);
+    formData.append("content", content)
     if (postImage) {
-      formData.append("postImage", postImage);
+      formData.append("postImage", postImage)
     }
     if (postVideo) {
-    formData.append("postVideo", postVideo);
+      formData.append("postVideo", postVideo)
     }
     //console.log(postImage);
     const response = await axios.post(
@@ -318,66 +325,63 @@ export const Community_post = async (postImage, postVideo, content) => {
           "Content-Type": "multipart/form-data",
         },
       }
-    );
+    )
     // console.log(response);
-    return response;
+    return response
   } catch (error) {
-    return error;
+    return error
   }
-};
+}
 
 export const Get_Community_post = async (id) => {
   try {
+    const response = await axios.get(process.env.API_BASE + `posts/${id}`, {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+        "Content-Type": "multipart/form-data",
+      },
+    })
+    //console.log(response);
+    return response
+  } catch (error) {
+    return error
+  }
+}
+
+export const Get_Community_posts = async (page) => {
+  try {
     const response = await axios.get(
-      process.env.API_BASE + `posts/${id}`,
+      process.env.API_BASE + `posts?limit=10&page=${page}`,
       {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
           "Content-Type": "multipart/form-data",
         },
       }
-    );
+    )
     //console.log(response);
-    return response;
+    return response
   } catch (error) {
-    return error;
+    return error
   }
-};
-
-export const Get_Community_posts = async (page) => {
-    try {
-      const response = await axios.get(
-        process.env.API_BASE + `posts?limit=10&page=${page}`,
-        {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-            "Content-Type": "multipart/form-data",
-          },
-        }
-      );
-      //console.log(response);
-      return response;
-    } catch (error) {
-      return error;
-    }
-  };
+}
 
 export const post_like = async (c, id) => {
   try {
     if (c == false) {
-    const response = await axios.post(
-      process.env.API_BASE + "likes",
-      {
-        postId: id,
-      },
-      {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-          // "Content-Type": "multipart/form-data",
+      const response = await axios.post(
+        process.env.API_BASE + "likes",
+        {
+          postId: id,
         },
-      }
-      );
-      return response;
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+            // "Content-Type": "multipart/form-data",
+          },
+        }
+      )
+      return response
     } else {
       const response = await axios.post(
         process.env.API_BASE + "likes",
@@ -390,14 +394,14 @@ export const post_like = async (c, id) => {
             // "Content-Type": "multipart/form-data",
           },
         }
-        );
-        return response;
+      )
+      return response
     }
     // console.log(response);
   } catch (error) {
-    return error;
+    return error
   }
-};
+}
 
 export const post_cr_like = async (id) => {
   try {
@@ -412,14 +416,13 @@ export const post_cr_like = async (id) => {
           // "Content-Type": "multipart/form-data",
         },
       }
-      );
-      return response;
+    )
+    return response
     // console.log(response);
   } catch (error) {
-    return error;
+    return error
   }
-};
-
+}
 
 export const get_likes = async () => {
   try {
@@ -431,13 +434,13 @@ export const get_likes = async () => {
           // "Content-Type": "multipart/form-data",
         },
       }
-    );
+    )
     // console.log(response);
-    return response;
+    return response
   } catch (error) {
-    return error;
+    return error
   }
-};
+}
 
 export const get_like = async (id) => {
   try {
@@ -449,17 +452,16 @@ export const get_like = async (id) => {
       //   postId: data,
       // },
       headers: {
-        Authorization: `Bearer ${localStorage.getItem('token')}`,
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
         // 'Content-Type': 'application/x-www-form-urlencoded',
       },
-    });
+    })
     // console.log(response);
-    return response;
+    return response
   } catch (error) {
-    return error;
+    return error
   }
-};
-
+}
 
 export const del_likes = async (postid) => {
   try {
@@ -471,56 +473,56 @@ export const del_likes = async (postid) => {
           // "Content-Type": "multipart/form-data",
         },
       }
-    );
+    )
     // console.log(response);
-    return response;
+    return response
   } catch (error) {
-    return error;
+    return error
   }
-};
+}
 
 export const post_comment = async (id, data) => {
   try {
-    const formData = new FormData();
-    formData.append("comment", data);
+    const formData = new FormData()
+    formData.append("comment", data)
     const response = await axios.post(
       process.env.API_BASE + `posts/${id}/comments`,
-        formData,
-      
+      formData,
+
       {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
           // "Content-Type": "multipart/form-data",
         },
       }
-    );
+    )
     // console.log(response);
-    return response;
+    return response
   } catch (error) {
-    return error;
+    return error
   }
-};
+}
 
 export const post_comment_r = async (postrid, commentrid, inputValuec) => {
   try {
-    const formData = new FormData();
-    formData.append("comment", inputValuec);
+    const formData = new FormData()
+    formData.append("comment", inputValuec)
     const response = await axios.post(
       process.env.API_BASE + `posts/${postrid}/comments/${commentrid}/replies`,
-        formData,
+      formData,
       {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
           // "Content-Type": "multipart/form-data",
         },
       }
-    );
+    )
     // console.log(response);
-    return response;
+    return response
   } catch (error) {
-    return error;
+    return error
   }
-};
+}
 
 export const get_commentsr = async (postid, commentid) => {
   try {
@@ -532,13 +534,13 @@ export const get_commentsr = async (postid, commentid) => {
           // "Content-Type": "multipart/form-data",
         },
       }
-    );
+    )
     // console.log(response);
-    return response;
+    return response
   } catch (error) {
-    return error;
+    return error
   }
-};
+}
 
 export const get_comments = async (postid) => {
   try {
@@ -550,23 +552,23 @@ export const get_comments = async (postid) => {
           // "Content-Type": "multipart/form-data",
         },
       }
-    );
+    )
     // console.log(response);
-    return response;
+    return response
   } catch (error) {
-    return error;
+    return error
   }
-};
+}
 
 export const updateProfile = async (data) => {
   try {
-    const formData = new FormData();
-    formData.append("firstName", data.firstName);
-    formData.append("lastName", data.lastName);
-    formData.append("email", data.mail);
+    const formData = new FormData()
+    formData.append("firstName", data.firstName)
+    formData.append("lastName", data.lastName)
+    formData.append("email", data.mail)
     //formData.append("password", data.password);
-    formData.append("avatar", data.profileImage);
-    console.log(data.profileImage);
+    formData.append("avatar", data.profileImage)
+    console.log(data.profileImage)
     const response = await axios.patch(
       process.env.API_BASE + `users/${localStorage.getItem("id")}`,
       formData,
@@ -581,16 +583,16 @@ export const updateProfile = async (data) => {
       {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       }
-    );
+    )
     // console.log(data);
-    return response;
+    return response
   } catch (error) {
-    return error;
+    return error
   }
-};
+}
 
 export const userpassword_post = async (data) => {
-  console.log(data);
+  console.log(data)
   try {
     const response = await axios.post(
       process.env.API_BASE +
@@ -603,13 +605,13 @@ export const userpassword_post = async (data) => {
       {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       }
-    );
-    console.log(response);
-    return response;
+    )
+    console.log(response)
+    return response
   } catch (error) {
-    return error;
+    return error
   }
-};
+}
 
 export const getUserData = async () => {
   try {
@@ -618,12 +620,12 @@ export const getUserData = async () => {
       {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       }
-    );
-    return response.data; // Assuming the user data is available in the response's data property
+    )
+    return response.data // Assuming the user data is available in the response's data property
   } catch (error) {
-    return error;
+    return error
   }
-};
+}
 
 export const get_course_details = async () => {
   try {
@@ -633,12 +635,12 @@ export const get_course_details = async () => {
       {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       }
-    );
-    return response;
+    )
+    return response
   } catch (error) {
-    return error;
+    return error
   }
-};
+}
 
 export const VerificationTokenRequestAPI = async (tokendata) => {
   try {
@@ -647,13 +649,13 @@ export const VerificationTokenRequestAPI = async (tokendata) => {
       {
         tokendata: tokendata,
       }
-    );
-    console.log(response);
-    return response;
+    )
+    console.log(response)
+    return response
   } catch (error) {
-    return error;
+    return error
   }
-};
+}
 
 export const activecourse = async (limit, page) => {
   try {
@@ -666,12 +668,12 @@ export const activecourse = async (limit, page) => {
       {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       }
-    );
-    return response;
+    )
+    return response
   } catch (error) {
-    return error;
+    return error
   }
-};
+}
 
 export const draftcourse = async (limit, page) => {
   try {
@@ -684,12 +686,12 @@ export const draftcourse = async (limit, page) => {
       {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       }
-    );
-    return response;
+    )
+    return response
   } catch (error) {
-    return error;
+    return error
   }
-};
+}
 
 export const pausecourse = async (limit, page) => {
   try {
@@ -702,12 +704,12 @@ export const pausecourse = async (limit, page) => {
       {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       }
-    );
-    return response;
+    )
+    return response
   } catch (error) {
-    return error;
+    return error
   }
-};
+}
 
 export const UpdateCourseStatus = async (courseid, course_status) => {
   try {
@@ -715,12 +717,12 @@ export const UpdateCourseStatus = async (courseid, course_status) => {
       process.env.API_BASE + `courses/` + courseid + `/UpdateCourseStatus`,
       { course_status: course_status },
       { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } }
-    );
-    return response;
+    )
+    return response
   } catch (error) {
-    return error;
+    return error
   }
-};
+}
 
 export const getcourseMiniSteps = async (courseid, stepid) => {
   try {
@@ -734,51 +736,57 @@ export const getcourseMiniSteps = async (courseid, stepid) => {
       {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       }
-    );
-    return response;
+    )
+    return response
   } catch (error) {
-    return error;
+    return error
   }
-};
+}
 
 export const getVideoSizeInMB = async (videoUrl) => {
   try {
     const response = await axios.get(videoUrl, {
       headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
-    });
+    })
 
     if (response.headers && response.headers["content-length"]) {
-      const contentLength = parseInt(response.headers["content-length"], 10);
-      const sizeInMB = contentLength / (1024 * 1024); // Convert to MB
-      return sizeInMB.toFixed(2); // Round to 2 decimal places
+      const contentLength = parseInt(response.headers["content-length"], 10)
+      const sizeInMB = contentLength / (1024 * 1024) // Convert to MB
+      return sizeInMB.toFixed(2) // Round to 2 decimal places
     } else {
-      throw new Error("Unable to determine video size.");
+      throw new Error("Unable to determine video size.")
     }
   } catch (error) {
-    console.error("Error fetching video size:", error);
-    return null;
+    console.error("Error fetching video size:", error)
+    return null
   }
-};
+}
 
-export const UpdateCourse = async (courseid, name, content, category, videoThumbnail) => {
+export const UpdateCourse = async (
+  courseid,
+  name,
+  content,
+  category,
+  videoThumbnail
+) => {
   try {
-    console.log(videoThumbnail);
-    const formData = new FormData();
-    formData.append("name", name);
-    formData.append("content", content);
-    formData.append("category", category);
-    formData.append("courseImage", videoThumbnail);
+    console.log(videoThumbnail)
+    const formData = new FormData()
+    formData.append("name", name)
+    formData.append("content", content)
+    formData.append("category", category)
+    formData.append("courseImage", videoThumbnail)
     const response = await axios.patch(
       process.env.API_BASE + `courses/` + courseid,
       formData,
       { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } }
-    );
-    console.log(response);
-    return response;
+    )
+    console.log(response)
+    return response
   } catch (error) {
-    return error;
+    return error
   }
-};
+}
 
 export const updatecourseMiniSteps = async (
   courseid,
@@ -788,9 +796,9 @@ export const updatecourseMiniSteps = async (
   content
 ) => {
   try {
-    const formData = new FormData();
-    formData.append("name", name);
-    formData.append("content", content);
+    const formData = new FormData()
+    formData.append("name", name)
+    formData.append("content", content)
     const response = await axios.patch(
       process.env.API_BASE +
         "courses/" +
@@ -803,12 +811,12 @@ export const updatecourseMiniSteps = async (
       {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       }
-    );
-    return response;
+    )
+    return response
   } catch (error) {
-    return error;
+    return error
   }
-};
+}
 
 export const deletecourseMiniSteps = async (
   courseid,
@@ -829,12 +837,12 @@ export const deletecourseMiniSteps = async (
       {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       }
-    );
-    return response;
+    )
+    return response
   } catch (error) {
-    return error;
+    return error
   }
-};
+}
 
 export const DeleteCourseStatus = async (courseid) => {
   try {
@@ -843,37 +851,37 @@ export const DeleteCourseStatus = async (courseid) => {
       {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       }
-    );
-    return response;
+    )
+    return response
   } catch (error) {
-    return error;
+    return error
   }
-};
+}
 
 export const getVideoDuration = async (videoUrl) => {
   try {
-    const response = await fetch(videoUrl, { method: "HEAD" });
+    const response = await fetch(videoUrl, { method: "HEAD" })
     if (response.ok) {
-      const contentLength = response.headers.get("Content-Length");
-      const videoBitrate = 8000; // Example video bitrate in kbps
-      const videoDurationInSeconds = contentLength / videoBitrate;
-      return videoDurationInSeconds;
+      const contentLength = response.headers.get("Content-Length")
+      const videoBitrate = 8000 // Example video bitrate in kbps
+      const videoDurationInSeconds = contentLength / videoBitrate
+      return videoDurationInSeconds
     } else {
-      console.error("Failed to fetch video duration");
-      return 0;
+      console.error("Failed to fetch video duration")
+      return 0
     }
   } catch (error) {
-    console.error("Error fetching video duration:", error);
-    return 0;
+    console.error("Error fetching video duration:", error)
+    return 0
   }
-};
+}
 
 export const admin_get_users = async (
   PerPageRecord,
   PageNumber,
   searchQuery
 ) => {
-  console.log(searchQuery);
+  console.log(searchQuery)
   try {
     const response = await axios.get(
       process.env.API_BASE +
@@ -881,16 +889,16 @@ export const admin_get_users = async (
       {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       }
-    );
-    return response;
+    )
+    return response
   } catch (error) {
-    return error;
+    return error
   }
-};
+}
 
 export const admin_update_users = async (id, uisActive) => {
-  console.log(id);
-  console.log(uisActive);
+  console.log(id)
+  console.log(uisActive)
   try {
     const response = await axios.post(
       process.env.API_BASE + `auth/UpdateStatusVerifyEmail/${id}`,
@@ -900,16 +908,16 @@ export const admin_update_users = async (id, uisActive) => {
       {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       }
-    );
-    return response;
+    )
+    return response
   } catch (error) {
-    return error;
+    return error
   }
-};
+}
 
 export const admin_update_users_payment = async (id, uisActive) => {
-  console.log(id);
-  console.log(uisActive);
+  console.log(id)
+  console.log(uisActive)
   try {
     const response = await axios.post(
       process.env.API_BASE + `auth/UpdatepaymentvalidationId/${id}`,
@@ -919,29 +927,25 @@ export const admin_update_users_payment = async (id, uisActive) => {
       {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       }
-    );
-    return response;
+    )
+    return response
   } catch (error) {
-    return error;
+    return error
   }
-};
-
+}
 
 export const admin_delete_user = async (id) => {
-  console.log(id);
+  console.log(id)
   // console.log(uisActive);
   try {
-    const response = await axios.delete(
-      process.env.API_BASE + `users/${id}`,
-      {
-        headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
-      }
-    );
-    return response;
+    const response = await axios.delete(process.env.API_BASE + `users/${id}`, {
+      headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+    })
+    return response
   } catch (error) {
-    return error;
+    return error
   }
-};
+}
 
 export const course_notification = async (
   postId,
@@ -960,14 +964,12 @@ export const course_notification = async (
       {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       }
-    );
-    return response;
+    )
+    return response
   } catch (error) {
-    return error;
+    return error
   }
-};
-
-
+}
 
 export const get_notification = async () => {
   try {
@@ -978,12 +980,12 @@ export const get_notification = async () => {
       {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       }
-    );
-    return response;
+    )
+    return response
   } catch (error) {
-    return error;
+    return error
   }
-};
+}
 export const del_notification = async () => {
   try {
     const response = await axios.delete(
@@ -992,12 +994,12 @@ export const del_notification = async () => {
       {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       }
-    );
-    return response;
+    )
+    return response
   } catch (error) {
-    return error;
+    return error
   }
-};
+}
 export const seen_notification = async (id) => {
   try {
     const response = await axios.patch(
@@ -1006,12 +1008,12 @@ export const seen_notification = async (id) => {
       {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       }
-    );
-    return response;
+    )
+    return response
   } catch (error) {
-    return error;
+    return error
   }
-};
+}
 //     export const craet_payment= async () => {
 //         try {
 //             const response = await axios.get(process.env.API_BASE + `payment/getAccess`, {
@@ -1037,43 +1039,56 @@ export const seen_notification = async (id) => {
 //         }
 //     };
 export const create_payment = async (data) => {
-    try {
-      const response = await axios.post(process.env.API_BASE + 'payment/getOrderCode/', {
+  try {
+    const response = await axios.post(
+      process.env.API_BASE + "payment/getOrderCode/",
+      {
         amount: 9997,
         customerTrns: "Checkified - Nyckeln Till Frihet",
         customer: data,
         merchantTrns: "Test No end from Italy 1404",
         tags: ["tag 1", "tag 2"],
-      },{
+      },
+      {
         headers: {
-                    Authorization: `Bearer ${localStorage.getItem("token")}`,
-                  }
-      });
-  
-      return response.data; // Assuming the response contains the data you need
-    } catch (error) {
-      console.error('API Error:', error.response ? error.response.data : error.message);
-      return error;
-    }
-  };
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      }
+    )
 
-  export const login_with_google = async (firstName,email,googleId,avatar) => {
-    try {
-      const response = await axios.post(process.env.API_BASE + 'auth/googleLogin/', {
-        "firstName": firstName,
-        "role": "USER",
-        "email": email,
-        "googleId": googleId,
-        "avatar": avatar
-      },{
-      });
-  
-      return response; // Assuming the response contains the data you need
-    } catch (error) {
-      console.error('API Error:', error.response ? error.response.data : error.message);
-      return error;
-    }
-  };
+    return response.data // Assuming the response contains the data you need
+  } catch (error) {
+    console.error(
+      "API Error:",
+      error.response ? error.response.data : error.message
+    )
+    return error
+  }
+}
+
+export const login_with_google = async (firstName, email, googleId, avatar) => {
+  try {
+    const response = await axios.post(
+      process.env.API_BASE + "auth/googleLogin/",
+      {
+        firstName: firstName,
+        role: "USER",
+        email: email,
+        googleId: googleId,
+        avatar: avatar,
+      },
+      {}
+    )
+
+    return response // Assuming the response contains the data you need
+  } catch (error) {
+    console.error(
+      "API Error:",
+      error.response ? error.response.data : error.message
+    )
+    return error
+  }
+}
 
 // export const create_payment2 = async (validate) => {
 //   console.log(validate);

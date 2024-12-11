@@ -1,20 +1,20 @@
-import React, { useEffect, useState, useRef } from "react";
-import Link from "next/link";
-import { Spin as Hamburger } from "hamburger-react";
-import Image from "next/image";
-import ReactPlayer from "react-player";
+import React, { useEffect, useState, useRef } from "react"
+import Link from "next/link"
+import { Spin as Hamburger } from "hamburger-react"
+import Image from "next/image"
+import ReactPlayer from "react-player"
 
-import { MdOutlineKeyboardArrowDown } from "react-icons/md";
-import { useRouter } from "next/router";
+import { MdOutlineKeyboardArrowDown } from "react-icons/md"
+import { useRouter } from "next/router"
 
-import en from "@/locales/en";
-import sv from "@/locales/sv";
-import ContractForm from "../ContractForm";
+import en from "@/locales/en"
+import sv from "@/locales/sv"
+import ContractForm from "../ContractForm"
 
 type Props = {
-  openSidebar: boolean;
-  setOpenSidebar: (value: boolean) => void;
-};
+  openSidebar: boolean
+  setOpenSidebar: (value: boolean) => void
+}
 
 const AuthButton = ({
   changeLanguage,
@@ -22,42 +22,47 @@ const AuthButton = ({
   t,
   className,
 }: {
-  changeLanguage: any;
-  locale: any;
-  t: any;
-  className: string;
+  changeLanguage: any
+  locale: any
+  t: any
+  className: string
 }) => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [showModal, setShowModal] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
+  const [showModal, setShowModal] = useState(false)
 
   const closeModal = () => {
-    setShowModal(false);
-  };
+    setShowModal(false)
+  }
 
   useEffect(() => {
-    const idFromLocalStorage = localStorage.getItem("id");
+    const idFromLocalStorage = localStorage.getItem("id")
     if (idFromLocalStorage) {
-      setIsLoggedIn(true);
+      setIsLoggedIn(true)
     }
-  }, []);
+  }, [])
 
   return (
     <div
       className={`items-center justify-center lg:justify-end gap-2 mt-8 lg:mt-0 ${className}`}
     >
-       <div 
+      <div
         data-theme="light"
-        className={`fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-25 backdrop-blur-sm  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full justify-center items-center transition ${showModal ? "flex" : "hidden"}`}
+        className={`fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-25 backdrop-blur-sm  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full justify-center items-center transition ${
+          showModal ? "flex" : "hidden"
+        }`}
         onClick={closeModal}
-        >
-          <ContractForm onClose={closeModal} />
+      >
+        <ContractForm onClose={closeModal} />
       </div>
       {!isLoggedIn && (
         <>
           {/* <Link className="btn btn-link" href="/signin">
             {t.headerData.login}
           </Link> */}
-          <div className="btn btn-primary btn-shadow" onClick={() => setShowModal(true)}>
+          <div
+            className="btn btn-primary btn-shadow"
+            onClick={() => setShowModal(true)}
+          >
             {t.headerData.getStarted}
           </div>
         </>
@@ -70,83 +75,91 @@ const AuthButton = ({
         </>
       )}
     </div>
-  );
-};
+  )
+}
 
 export default function Header({ openSidebar, setOpenSidebar }: Props) {
-  const [openMenu, setOpenMenu] = useState(false);
+  const [openMenu, setOpenMenu] = useState(false)
 
-  const router = useRouter();
-  const { locale, pathname } = router;
-  const t = locale === "en" ? en : sv;
+  const router = useRouter()
+  const { locale, pathname } = router
+  const t = locale === "en" ? en : sv
 
   const setDefaultLangToSV = () => {
-    router.push(router.pathname, router.asPath, { locale: "sv" });
-  };
+    router.push(router.pathname, router.asPath, { locale: "sv" })
+  }
 
   useEffect(() => {
     return () => {
-      setOpenMenu(false);
-    };
-  }, []);
+      setOpenMenu(false)
+    }
+  }, [])
 
   useEffect(() => {
     if (pathname === "/") {
-      setDefaultLangToSV();
+      setDefaultLangToSV()
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [])
 
   const changeLanguage = (e: { target: { value: any } }) => {
-    const locale = e.target.value;
-    router.push(router.pathname, router.asPath, { locale });
-  };
-  const videoRef = useRef<HTMLVideoElement>(null);
+    const locale = e.target.value
+    router.push(router.pathname, router.asPath, { locale })
+  }
+  const videoRef = useRef<HTMLVideoElement>(null)
   const toggleMenu = () => {
-    setOpenMenu(!openMenu);
+    setOpenMenu(!openMenu)
     if (videoRef.current) {
       if (!openMenu) {
         // If menu is opening, play the video
-        videoRef.current.pause();
-        setShowThumbnail(true);
+        videoRef.current.pause()
+        setShowThumbnail(true)
       } else {
         // If menu is closing, pause the video
-        videoRef.current.pause();
-        setShowThumbnail(true);
-        videoRef.current.currentTime = 0;
+        videoRef.current.pause()
+        setShowThumbnail(true)
+        videoRef.current.currentTime = 0
       }
     }
-  };
+  }
 
   // Add your video source and poster URL
-  const [showThumbnail, setShowThumbnail] = useState(false);
+  const [showThumbnail, setShowThumbnail] = useState(false)
 
   const videoSource =
-    "https://api.checkified.se/public/uploads/courses/videos/INTRO.MP4";
-  const posterURL = "/cover/1695042508_nyckeln-till-frihet.jpg";
+    "https://api.checkified.se/public/uploads/courses/videos/INTRO.MP4"
+  const posterURL = "/cover/1695042508_nyckeln-till-frihet.jpg"
 
   const handleThumbnailClick = () => {
     if (videoRef.current) {
-      videoRef.current.play();
-      setShowThumbnail(false); // Hide the thumbnail when video starts playing
+      videoRef.current.play()
+      setShowThumbnail(false) // Hide the thumbnail when video starts playing
     }
-  };
+  }
 
   const handleVideoPause = () => {
-    setShowThumbnail(true); // Show the thumbnail when video is paused
-  };
+    setShowThumbnail(true) // Show the thumbnail when video is paused
+  }
 
   return (
     <header className="bg-base-100 h-header-height fixed top-0 left-0 right-0 z-20 flex justify-between items-center">
       <div className="container mx-auto flex justify-between items-center">
         <Link className="" href="/">
           <div className="flex items-center justify-start gap-2">
-            <Image
-                className="mt-4 md:h-[60px] md:w-[220px] w-[150px] h-[51px]"
-              src="/logo.png"
+            {/* <Image
+              className="mt-4 md:h-[53px] md:w-[198.86px] w-[198.86px] h-[53px]"
+              src="/logo_main.png"
               alt="checkified"
-              height={44}
-              width={220}
+              height={53}
+              width={198.86}
+              priority
+            /> */}
+            <Image
+              className="h-[39px] md:h-[53px] w-[150.86px] md:w-[198.86px] max-w-full"
+              src="/logo_main.png"
+              alt="checkified"
+              height={53}
+              width={198.86}
               priority
             />
           </div>
@@ -186,7 +199,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                   {t.headerData.megaMenuData.map((data) => (
                     <Link key={data.id} href={data.link}>
-                      <div className="mega-menu-list flex gap-6 items-start hover:bg-base-200 p-2 rounded-lg">
+                      <div className="mega-menu-list flex gap-6 hover:bg-base-200 p-2 rounded-lg">
                         <div className="list-icon bg-base-200 p-2 rounded-lg">
                           <Image
                             src={data.imageUrl}
@@ -209,10 +222,10 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
                   ))}
                 </div>
                 <div className="">
-                  <h2 className="font-bold text-xl mb-4">
+                  {/* <h2 className="font-bold text-xl mb-4">
                     Checkified University
 
-                  </h2>
+                  </h2> */}
                   {/* <Image
                     src="/images/video-placeholder.png"
                     alt="Video Placeholder"
@@ -233,7 +246,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
                    */}
                   {/* <img src="/cover/1695042508_nyckeln-till-frihet.jpg" /> */}
                   <div className="relative">
-                  {/* <video
+                    {/* <video
                     width={350}
                     height={190}
                     controls
@@ -247,22 +260,24 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
                       type="video/mp4"
                     />
                   </video> */}
-                  <iframe 
-                    width="350" 
-                    height="190" 
-                    src="https://www.youtube.com/embed/pTVfynxC3-c?si=VXY1V0Wf90F4QeV9" 
-                    title="YouTube video player" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    className="home_video_cover mt-4 max-w-full hidden lg:block" 
-                  ></iframe>
+                    {/* <iframe
+                      width="350"
+                      height="190"
+                      src="https://www.youtube.com/embed/pTVfynxC3-c?si=VXY1V0Wf90F4QeV9"
+                      title="YouTube video player"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      className="home_video_cover mt-4 max-w-full hidden lg:block"
+                    ></iframe> */}
 
-                  {/* Display the thumbnail image */}
-                  {showThumbnail && (
-                    <div className="thumbnail" onClick={handleThumbnailClick}>
-                      <img src={posterURL} alt="Video Thumbnail" />
-                      <div className="cursor-pointer absolute  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white w-[4vw] h-[4vw] flex justify-center items-center rounded-full opacity-[70%]"><img src="/play.png" className="w-[1.25vw]"/></div>
-                    </div>
-                  )}
+                    {/* Display the thumbnail image */}
+                    {showThumbnail && (
+                      <div className="thumbnail" onClick={handleThumbnailClick}>
+                        <img src={posterURL} alt="Video Thumbnail" />
+                        <div className="cursor-pointer absolute  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white w-[4vw] h-[4vw] flex justify-center items-center rounded-full opacity-[70%]">
+                          <img src="/play.png" className="w-[1.25vw]" />
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
@@ -281,7 +296,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
           />
         </nav>
 
-         <AuthButton
+        <AuthButton
           locale={locale}
           changeLanguage={changeLanguage}
           t={t}
@@ -298,5 +313,5 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
         </button>
       </div>
     </header>
-  );
+  )
 }
