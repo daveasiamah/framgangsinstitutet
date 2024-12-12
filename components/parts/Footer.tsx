@@ -2,7 +2,6 @@ import React from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { useRouter } from "next/router"
-
 import { socialMedia } from "@/assets/data/socialMedia"
 
 import en from "@/locales/en"
@@ -24,7 +23,7 @@ export default function Footer({}: Props) {
             <div className="flex align-items-center">
               <Image
                 className="h-[39px] md:h-[53px] w-[150.86px] md:w-[198.86px] max-w-full mb-2"
-                src="/logo_main.png"
+                src="/checkified_logo.svg"
                 alt="checkified"
                 height={53}
                 width={198.86}

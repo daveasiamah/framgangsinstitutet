@@ -20,6 +20,7 @@ const ErrorAlert = dynamic(() => import("@/components/parts/ErrorAlert"), {
 
 import Title from "./parts/Title"
 import BlurCircle from "./graphic/BlurCircle"
+import { AxiosResponse } from "axios"
 
 type FormValues = {
   firstName: string
@@ -75,8 +76,8 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
 
   const senddata = async (data: any) => {
     console.log(data)
-    const res: any = await registerOfContract(data)
-    if (res.status == 201) {
+    const res = await registerOfContract(data)
+    if (res.success) {
       setShowSuccess(true)
       // setShowModal(true);
       // setalertMessage("Meddelande Skickat");

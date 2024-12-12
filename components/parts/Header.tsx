@@ -146,17 +146,9 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
       <div className="container mx-auto flex justify-between items-center">
         <Link className="" href="/">
           <div className="flex items-center justify-start gap-2">
-            {/* <Image
-              className="mt-4 md:h-[53px] md:w-[198.86px] w-[198.86px] h-[53px]"
-              src="/logo_main.png"
-              alt="checkified"
-              height={53}
-              width={198.86}
-              priority
-            /> */}
             <Image
               className="h-[39px] md:h-[53px] w-[150.86px] md:w-[198.86px] max-w-full"
-              src="/logo_main.png"
+              src="/checkified_logo.svg"
               alt="checkified"
               height={53}
               width={198.86}
@@ -188,7 +180,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
                 />
               </label>
               <div
-                className={`lg:absolute lg:w-[70%] ${
+                className={`lg:absolute lg:w-[50.5%] ${
                   openMenu ? "lg:top-[100px] block" : "lg:top-[90px] hidden"
                 } lg:transform lg:-translate-x-1/2 lg:left-1/2 shadow-lg lg:p-8 z-10 flex flex-col lg:flex-row lg:h-auto rounded-lg gap-6 bg-base-100 overflow-auto transition-all duration-200 ease-in-out ${
                   openMenu
@@ -196,7 +188,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
                     : "h-0 p-0 hidden"
                 } `}
               >
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                <div className="flex flex-wrap gap-4">
                   {t.headerData.megaMenuData.map((data) => (
                     <Link key={data.id} href={data.link}>
                       <div className="mega-menu-list flex gap-6 hover:bg-base-200 p-2 rounded-lg">
@@ -210,7 +202,6 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
                             priority
                           />
                         </div>
-                        {/* <div className="bg-primary w-[2px] h-6" /> */}
                         <div className="menu-content">
                           <h2 className="font-semibold text-left">
                             {data.title}
@@ -221,67 +212,9 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
                     </Link>
                   ))}
                 </div>
-                <div className="">
-                  {/* <h2 className="font-bold text-xl mb-4">
-                    Checkified University
-
-                  </h2> */}
-                  {/* <Image
-                    src="/images/video-placeholder.png"
-                    alt="Video Placeholder"
-                    width={300}
-                    height={190}
-                    priority
-                  /> */}
-                  {/* <video
-                    ref={videoRef}
-                    src={t.headerData.videoUrl}
-                    width="350"
-                    height="190"
-                    autoPlay
-                    muted
-                    controls
-                    poster="/images/video-placeholder.png"
-                  />
-                   */}
-                  {/* <img src="/cover/1695042508_nyckeln-till-frihet.jpg" /> */}
-                  <div className="relative">
-                    {/* <video
-                    width={350}
-                    height={190}
-                    controls
-                    autoPlay
-                    muted
-                    ref={videoRef}
-                    poster="/cover/1695042508_nyckeln-till-frihet.jpg"
-                  >
-                    <source
-                      src="https://api.checkified.se/public/uploads/courses/videos/INTRO.MP4"
-                      type="video/mp4"
-                    />
-                  </video> */}
-                    {/* <iframe
-                      width="350"
-                      height="190"
-                      src="https://www.youtube.com/embed/pTVfynxC3-c?si=VXY1V0Wf90F4QeV9"
-                      title="YouTube video player"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      className="home_video_cover mt-4 max-w-full hidden lg:block"
-                    ></iframe> */}
-
-                    {/* Display the thumbnail image */}
-                    {showThumbnail && (
-                      <div className="thumbnail" onClick={handleThumbnailClick}>
-                        <img src={posterURL} alt="Video Thumbnail" />
-                        <div className="cursor-pointer absolute  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white w-[4vw] h-[4vw] flex justify-center items-center rounded-full opacity-[70%]">
-                          <img src="/play.png" className="w-[1.25vw]" />
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                </div>
               </div>
             </li>
+
             <li>
               <Link className="btn btn-link" href="/butiker">
                 {t.headerData.pricing}

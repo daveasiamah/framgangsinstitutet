@@ -1,5 +1,6 @@
 import axios from "axios"
 import { useRouter } from "next/router"
+import { v4 as uuidv4 } from "uuid"
 
 export const AuthApi = async (email, password) => {
   try {
@@ -13,25 +14,49 @@ export const AuthApi = async (email, password) => {
   }
 }
 
-export const registerOfContract = async (data) => {
-  console.log("registerOfContract ", data)
-  const { firstName, email, phone } = data
+export const registerOfContract = async ({ firstName, email, phone }) => {
+  const ext_id = uuidv4()
+  // 0736878851 736878851
+
   try {
-    const response = await axios.post(process.env.API_BASE + "auth/register", {
-      name: firstName,
-      email,
-      phoneNumber: phone,
-    })
-    return response
+    const attributes = {
+      FIRSTNAME: firstName || "",
+      LASTNAME: "",
+      SMS: `+46${phone}`,
+      EXT_ID: ext_id,
+    }
+
+    const response = await axios.post(
+      `${process.env.SEND_IN_BLUE_BASE_URL}/v3/contacts`,
+      {
+        email,
+        attributes,
+        updateEnabled: true,
+      },
+      {
+        headers: {
+          accept: "application/json",
+          "api-key": process.env.SEND_IN_BLUE_API_KEY,
+          "content-type": "application/json",
+        },
+      }
+    )
+
+    console.log("Contact saved successfully:", response.data)
+    return { success: true, data: response.data }
   } catch (error) {
-    return error
+    console.error(
+      "Error saving contact:",
+      error.response?.data || error.message
+    )
+    return { success: false, error: error.response?.data || error.message }
   }
 }
 
 export const contact = async (data) => {
   try {
     const response = await axios.post(process.env.API_BASE + "contact-us", {
-      firstName: data.firstName,
+      firstName,
       lastName: data.lastName,
       email: data.email,
       phone: data.phone,
