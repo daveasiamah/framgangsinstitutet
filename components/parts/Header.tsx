@@ -1,15 +1,12 @@
-import React, { useEffect, useState, useRef } from "react"
-import Link from "next/link"
 import { Spin as Hamburger } from "hamburger-react"
-import Image from "next/image"
-import ReactPlayer from "react-player"
-
-import { MdOutlineKeyboardArrowDown } from "react-icons/md"
-import { useRouter } from "next/router"
-
 import en from "@/locales/en"
 import sv from "@/locales/sv"
 import ContractForm from "../ContractForm"
+import React, { useEffect, useRef, useState } from "react"
+import Link from "next/link"
+import Image from "next/image"
+import { useRouter } from "next/router"
+import { MdOutlineKeyboardArrowDown } from "react-icons/md"
 
 type Props = {
   openSidebar: boolean
@@ -80,7 +77,6 @@ const AuthButton = ({
 
 export default function Header({ openSidebar, setOpenSidebar }: Props) {
   const [openMenu, setOpenMenu] = useState(false)
-
   const router = useRouter()
   const { locale, pathname } = router
   const t = locale === "en" ? en : sv
@@ -90,61 +86,42 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
   }
 
   useEffect(() => {
-    return () => {
-      setOpenMenu(false)
-    }
-  }, [])
-
-  useEffect(() => {
     if (pathname === "/") {
       setDefaultLangToSV()
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, [pathname])
 
-  const changeLanguage = (e: { target: { value: any } }) => {
+  const changeLanguage = (e: { target: { value: string } }) => {
     const locale = e.target.value
     router.push(router.pathname, router.asPath, { locale })
   }
-  const videoRef = useRef<HTMLVideoElement>(null)
+
+  const menuRef = useRef<HTMLLIElement | null>(null)
+
   const toggleMenu = () => {
-    setOpenMenu(!openMenu)
-    if (videoRef.current) {
-      if (!openMenu) {
-        // If menu is opening, play the video
-        videoRef.current.pause()
-        setShowThumbnail(true)
-      } else {
-        // If menu is closing, pause the video
-        videoRef.current.pause()
-        setShowThumbnail(true)
-        videoRef.current.currentTime = 0
-      }
+    setOpenMenu((prev) => !prev)
+  }
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if (
+      menuRef.current &&
+      !menuRef.current.contains(event.target as Node) // Ensure event.target is not inside menuRef
+    ) {
+      setOpenMenu(false)
     }
   }
 
-  // Add your video source and poster URL
-  const [showThumbnail, setShowThumbnail] = useState(false)
-
-  const videoSource =
-    "https://api.checkified.se/public/uploads/courses/videos/INTRO.MP4"
-  const posterURL = "/cover/1695042508_nyckeln-till-frihet.jpg"
-
-  const handleThumbnailClick = () => {
-    if (videoRef.current) {
-      videoRef.current.play()
-      setShowThumbnail(false) // Hide the thumbnail when video starts playing
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside)
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside)
     }
-  }
-
-  const handleVideoPause = () => {
-    setShowThumbnail(true) // Show the thumbnail when video is paused
-  }
+  }, [])
 
   return (
     <header className="bg-base-100 h-header-height fixed top-0 left-0 right-0 z-20 flex justify-between items-center">
       <div className="container mx-auto flex justify-between items-center">
-        <Link className="" href="/">
+        <Link href="/">
           <div className="flex items-center justify-start gap-2">
             <Image
               className="h-[39px] md:h-[53px] w-[150.86px] md:w-[198.86px] max-w-full"
@@ -169,7 +146,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
               </Link>
             </li>
 
-            <li>
+            <li ref={menuRef}>
               <label className="btn btn-link" onClick={toggleMenu}>
                 {t.headerData.resources}
                 <MdOutlineKeyboardArrowDown
@@ -186,7 +163,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
                   openMenu
                     ? "h-[400px] p-8 shadow-none border block"
                     : "h-0 p-0 hidden"
-                } `}
+                }`}
               >
                 <div className="flex flex-wrap gap-4">
                   {t.headerData.megaMenuData.map((data) => (

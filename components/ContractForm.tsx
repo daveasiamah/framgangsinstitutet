@@ -78,9 +78,6 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
     const res = await registerOfContract(data)
     if (res.success) {
       setShowSuccess(true)
-      // setShowModal(true);
-      // setalertMessage("Meddelande Skickat");
-      // onClose();
     } else {
       setalertMessage("Misslyckas")
       setShowModalCls(true)
