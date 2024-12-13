@@ -20,7 +20,6 @@ const ErrorAlert = dynamic(() => import("@/components/parts/ErrorAlert"), {
 
 import Title from "./parts/Title"
 import BlurCircle from "./graphic/BlurCircle"
-import { AxiosResponse } from "axios"
 
 type FormValues = {
   firstName: string
@@ -79,9 +78,6 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
     const res = await registerOfContract(data)
     if (res.success) {
       setShowSuccess(true)
-      // setShowModal(true);
-      // setalertMessage("Meddelande Skickat");
-      // onClose();
     } else {
       setalertMessage("Misslyckas")
       setShowModalCls(true)
@@ -139,14 +135,6 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
       {!showSuccess && (
         <div>
           <div className="flex-col justify-center items-center">
-            {/* <iframe
-          width="311" 
-          height="175" 
-          src="https://www.youtube.com/embed/pTVfynxC3-c?si=VXY1V0Wf90F4QeV9" 
-          title="YouTube video player" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          className="home_video_cover mt-4 max-w-full hidden lg:block mx-auto" 
-        ></iframe> */}
             <Image
               src="/images/home/nyckeln-till-frihet.jpg"
               alt="video"

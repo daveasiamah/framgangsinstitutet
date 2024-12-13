@@ -16,8 +16,6 @@ export const AuthApi = async (email, password) => {
 
 export const registerOfContract = async ({ firstName, email, phone }) => {
   const ext_id = uuidv4()
-  // 0736878851 736878851
-
   try {
     const attributes = {
       FIRSTNAME: firstName || "",
