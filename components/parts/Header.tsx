@@ -157,18 +157,28 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
                 />
               </label>
               <div
-                className={`lg:absolute lg:w-[50.5%] ${
+                className={`lg:absolute md:w-[99%] lg:w-[58.5%] ${
                   openMenu ? "lg:top-[100px] block" : "lg:top-[90px] hidden"
                 } lg:transform lg:-translate-x-1/2 lg:left-1/2 shadow-lg lg:p-8 z-10 flex flex-col lg:flex-row lg:h-auto rounded-lg gap-6 bg-base-100 overflow-auto transition-all duration-200 ease-in-out ${
                   openMenu
-                    ? "h-[400px] p-8 shadow-none border block"
+                    ? "h-[400px] p-8 shadow-none border"
                     : "h-0 p-0 hidden"
                 }`}
               >
-                <div className="flex flex-wrap gap-4">
-                  {t.headerData.megaMenuData.map((data) => (
-                    <Link key={data.id} href={data.link}>
-                      <div className="mega-menu-list flex gap-6 hover:bg-base-200 p-2 rounded-lg">
+                <div className="flex flex-wrap gap-1 w-[100] md:w-[535px] lg:w-[535px]">
+                  {t.headerData.megaMenuData.map((data, index) => (
+                    <Link
+                      key={data.id}
+                      href={data.link}
+                      className="w-[263.36px]"
+                    >
+                      <div
+                        className={`mega-menu-list flex gap-6 hover:bg-base-200 p-2 rounded-lg items-center ${
+                          index === t.headerData.megaMenuData.length - 1
+                            ? "order-first"
+                            : ""
+                        }`}
+                      >
                         <div className="list-icon bg-base-200 p-2 rounded-lg">
                           <Image
                             src={data.imageUrl}

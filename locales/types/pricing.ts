@@ -1,95 +1,95 @@
-import { MetaData } from "./meta"
+import { MetaData } from "./meta";
 
 type PricingList = {
-  id: number
-  text: string
-}
+  id: number;
+  text: string;
+};
 type StudentSayData = {
-  id: number
-  imageUrl: string
-  message: string
-  name: string
-  position: string
-}
+  id: number;
+  imageUrl: string;
+  message: string;
+  name: string;
+  position: string;
+};
 
-type FaqData = { id: number; question: string; answer: string }
+type FaqData = { id: number; question: string; answer: string };
 
 type Pricing = {
-  id: number
-  name: string
-  imageUrl: string
-  isPopular: boolean
-  price: string
+  id: number;
+  name: string;
+  imageUrl: string;
+  isPopular: boolean;
+  price: string;
   lists: {
-    id: number
-    label: string
-  }[]
-  buttonText: string
-  secureText: string
-}
+    id: number;
+    label: string;
+  }[];
+  buttonText: string;
+  secureText: string;
+};
 
 export type PricingData = {
-  metaData: MetaData
+  metaData: MetaData;
 
-  pricingTitle: string
-  pricingSubtitle: string
-  pricingList: PricingList[]
-  pricingData: Pricing[]
+  pricingTitle: string;
+  pricingSubtitle: string;
+  pricingList: PricingList[];
+  pricingData: Pricing[];
 
-  enterpriseTitle: string
-  enterpriseSubtitle: string
-  enterpriseButton: string
+  enterpriseTitle: string;
+  enterpriseSubtitle: string;
+  enterpriseButton: string;
 
-  outstandingTitle: string
-  outstandingSubtitleFirst: string
-  outstandingSubtitleSecond: string
+  outstandingTitle: string;
+  outstandingSubtitleFirst: string;
+  outstandingSubtitleSecond: string;
 
-  studentSayBlackTitle: string
-  studentSayBlueTitle: string
-  studentsSayData: StudentSayData[]
+  studentSayBlackTitle: string;
+  studentSayBlueTitle: string;
+  studentsSayData: StudentSayData[];
 
-  faqBlackTitle: string
-  faqBlueTitle: string
-  faqData: FaqData[]
+  faqBlackTitle: string;
+  faqBlueTitle: string;
+  faqData: FaqData[];
 
-  howItWorkData: {
-    title: string
-    subtitle: string
-    button: string
+  howItWorksData: {
+    title: string;
     items: {
-        id: number
-        imageUrl: string
-        desc1: string
-        desc2: string
-    }[]
-  }
+      id: number;
+      imageUrl: string;
+      title: string;
+      description: string[];
+    }[];
+  };
   hero: {
-    title: string
-    desc: string
-    button: string
-    buttonDesc: string
-    descTitle: string
-  }
+    title: string;
+    desc: string;
+    button: string;
+    buttonDesc: string;
+    descTitle: string;
+  };
 
   reviews: {
-    title: string
-    items: string[]
-  }
-
+    title: string;
+    items: string[];
+  };
 
   bonuses: {
-    title: string
-    cards: string[]
-    redPrice: string
-    bottomDesc: string
-    greenPrice: string
-  }
+    title: string;
+    items: {
+      id: string;
+      image: string;
+      title: string;
+      description: string;
+      price: string;
+    }[];
+  };
 
   orderNow: {
-    title: string
+    title: string;
     items: {
-      title: string
-      desc: string
-    }[]
-  }
-}
+      title: string;
+      desc: string;
+    }[];
+  };
+};
