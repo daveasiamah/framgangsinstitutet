@@ -50,39 +50,13 @@ export default function Home() {
   const router = useRouter()
   const { locale } = router
   const t = locale === "en" ? en : sv
-  // if (typeof window !== "undefined") {
-  //   const role = localStorage.getItem("role");
-  //   console.log("role found :- " + role);
-  // if (role === "USER") {
-  //     router.push("/dashboard");
-  //   } else if (role === "ADMIN") {
-  //     router.push("/admin_dashboard");
-  //   }
-  // } else {
-  //   console.log("role not found");
-  // }
+
   // mobile view close auto play
   const matches = useMediaQuery("(max-width: 1024px)")
   const [showModal, setShowModal] = useState(false)
   const swiperRef1 = useRef<SwiperType>()
   const swiperRef2 = useRef<SwiperType>()
   const swiperRef3 = useRef<SwiperType>()
-  // Fetch Blog List
-  //   const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
-  //   useEffect(() => {
-  //     const fetchPosts = async () => {
-  //       try {
-  //         const response = await axios.get(`/api/blog/?locale=${locale}`);
-
-  //         console.log("response.data.data:", response.data.data);
-
-  //         setBlogPosts(response.data.data);
-  //       } catch (error) {
-  //         // console.error('Error fetching blog posts:', error);
-  //       }
-  //     };
-  //     fetchPosts();
-  //   }, [locale]);
 
   useEffect(() => {
     if (matches) {
@@ -1320,13 +1294,6 @@ export default function Home() {
               </button>
             </div>
           </ScrollReveal>
-          {/* <div className="lg:mx-auto md:w-[418px] lg:w-1/2 ">
-            <img
-              src="/images/home/connect.svg"
-              alt="checkified university"
-              className="lg:h-[400px] lg:w-[500px]"
-            />
-          </div> */}
         </section>
 
         <section>
@@ -1421,68 +1388,6 @@ export default function Home() {
               </button>
             </div>
           </div>
-        </section>
-
-        <section className="relative text-center lg:mb-20 lg:mt-40">
-          <ScrollReveal className="flex justify-between items-center mb-4">
-            <h1 className="hidden lg:block text-left text-[32px] leading-[55px] font-[700] font-jakarta">
-              Bläddra bland våra senaste artiklar
-            </h1>
-            <h1 className="lg:hidden text-left text-[18px] leading-[28px] font-[700] font-jakarta">
-              Bläddra bland våra senaste artiklar
-            </h1>
-            <button
-              onClick={() =>
-                (window.location.href = "https://checkified.se/blog")
-              }
-              className="hidden lg:block text-left text-[16px] text-[#434C69] leading-[20px] font-normal mb-5 border border-1 border-[#BBBBBF] p-2 rounded-md"
-            >
-              Visa blogg
-            </button>
-          </ScrollReveal>
-          {/* <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-12 gap-5">
-                        {blogPosts?.map((blog) => {
-                            return (
-                                <Link
-                                    href={`/blog/${blog?.slug}`}
-                                    key={blog?.id}
-                                    className="rounded-[2rem] border border-1 border-[#BBBBBF] p-5 flex flex-col"
-                                >
-                                    <img
-                                        src={blog?.imageUrl}
-                                        alt="card"
-                                        className="border-b border-1 border-[#E5E6EA] w-full h-[192px] rounded-[20px] mb-5"
-                                        loading="lazy"
-                                    />
-
-                                    <div className="text-left flex flex-col flex-grow">
-                                        <p className="text-[#686870] text-[12px] lg:text-[14px] font-inter mb-2 lg:mb-[20px] mt-4">
-                                            {blog?.date}
-                                        </p>
-                                        <p className="font-inter font-[500] text-[14px] lg:text-[18px] text-[#434C69] leading-[25px] mb-4">
-                                            {blog?.title}
-                                        </p>
-
-                                        <div className="flex items-center gap-2 mt-auto">
-                                            <img
-                                                src={blog?.authorProfile}
-                                                alt="author"
-                                                className="w-[34px] h-[34px] object-cover rounded-full"
-                                                loading="lazy"
-                                                onError={(e) => {
-                                                    const target = e.target as HTMLImageElement;
-                                                    target.src = "https://via.placeholder.com/34";
-                                                }}
-                                            />
-                                            <p className="font-inter font-[500] text-[14px] lg:text-[14px] text-[#434C69] leading-[25px] ml-2">
-                                                {blog?.author || 'N/A'}
-                                            </p>
-                                        </div>
-                                    </div>
-                                </Link>
-                            );
-                        })}
-                    </div> */}
         </section>
       </Layout>
     </>
