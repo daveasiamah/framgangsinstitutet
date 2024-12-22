@@ -1,18 +1,11 @@
-import en from "@/locales/en";
-import sv from "@/locales/sv";
-import { useRouter } from "next/router";
-import Title from "@/components/parts/Title";
-import "swiper/css";
-import "swiper/css/effect-cards";
-import "swiper/css/pagination";
-import { Pagination } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-import styles from "./ReviewsBlock.module.scss";
+import en from "@/locales/en"
+import sv from "@/locales/sv"
+import { useRouter } from "next/router"
 
 export default function BonusesBlock() {
-  const router = useRouter();
-  const { locale } = router;
-  const t = locale === "en" ? en : sv;
+  const router = useRouter()
+  const { locale } = router
+  const t = locale === "en" ? en : sv
 
   return (
     <section className="flex flex-col items-center justify-center pb-[70px] mt-6">
@@ -24,16 +17,16 @@ export default function BonusesBlock() {
           {t.pricingData.bonuses.items.map((item, index) => (
             <div
               key={index}
-              className="flex items-center justify-center w-full h-[373px] md:w-[413px] md:h-[426px] lg:w-[413px] lg:h-[426px] shadow-[0px_0.5px_15px_0.5px_rgba(155,155,155,0.25)] rounded-[25px] p-6 md:p-8"
+              className="flex items-center justify-center w-full h-full lg:max-h-[426px] shadow-[0px_0.5px_15px_0.5px_rgba(155,155,155,0.25)] rounded-[25px] p-6 md:p-8"
             >
               <div className="flex flex-col items-center">
                 <p className="font-[16px] text-[#c5cce3]">{item.id}</p>
                 <img
                   src={item.image}
                   alt="bonuses image"
-                  className="w-[172px] h-[172px] object-contain mt-5"
+                  className="w-[174px] h-[174px] object-contain mt-5"
                 />
-                <h4 className="font-bold text-base lg:text-xl mb-4 mt-3 text-center">
+                <h4 className="font-bold text-base lg:text-lg mb-4 mt-3 text-center font-jakarta">
                   {item.title}
                 </h4>
                 <p className="font-[500] text-xs lg:text-base text-center text-[#464c69] mb-4">
@@ -48,5 +41,5 @@ export default function BonusesBlock() {
         </div>
       </div>
     </section>
-  );
+  )
 }

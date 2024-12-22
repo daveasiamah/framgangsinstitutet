@@ -70,7 +70,7 @@ export default function Footer({}: Props) {
                     className="hover:underline underline-offset-4 md:text-[16px] font-[500] font-inter"
                     href="/butiker"
                   >
-                    Färdig E-butik
+                    Färdig E-Butik
                   </Link>
                 </li>
                 <li>
@@ -84,9 +84,9 @@ export default function Footer({}: Props) {
                 <li>
                   <Link
                     className="hover:underline underline-offset-4 md:text-[16px] font-[500] font-inter"
-                    href="/mentorskap"
+                    href="https://whop.com/dropshipping-mentorskap"
                   >
-                    Mentorskap
+                    Dropshipping Mentorskap
                   </Link>
                 </li>
               </ul>
@@ -137,6 +137,14 @@ export default function Footer({}: Props) {
                     href="/university"
                   >
                     University
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="hover:underline underline-offset-4 md:text-[16px] font-[500] font-inter"
+                    href="/faq"
+                  >
+                    FAQ
                   </Link>
                 </li>
               </ul>

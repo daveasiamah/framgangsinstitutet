@@ -1,4 +1,4 @@
-import { PricingData } from "../types/pricing";
+import { PricingData } from "../types/pricing"
 
 export const pricingData: PricingData = {
   metaData: {
@@ -295,6 +295,15 @@ export const pricingData: PricingData = {
       "Jag blev positivt överraskad av den höga kvaliteten på min butik och produkterna. Trots min initiala skepsis är jag nu en nöjd kund och ser fram emot att göra fler affärer med Checkified butiker.",
     ],
   },
+  topReview: {
+    title: "Recension",
+    avatar: "JM",
+    stars: 5,
+    time: "18 minuter sen",
+    verified: "Verifierad",
+    description:
+      "Jag är verkligen imponerad av Checkifeds färdiga e-butik med 20 produkter och 5 videoannonser redo att marknadsföras! Tack vare deras hjälp har jag nu en verksamhet som omsätter 350 000 kr. Butiken var färdigbyggd med professionellt utvalda produkter, och jag kunde börja sälja direkt. Det bästa var att jag fick tillgång till en gratis kurs om hur man driver en framgångsrik dropshipping-butik, vilket gjorde det enkelt för mig att förstå allt från marknadsföring till logistik. Supporten har också varit fantastisk – när jag behövt hjälp har de alltid funnits där. Det enda jag behövde göra efteråt var att köpa ett domännamn och sätta igång med marknadsföringen. För mig, som inte hade någon tidigare erfarenhet av e-handel, har det här varit en riktig gamechanger. Rekommenderar verkligen till alla som vill börja med dropshipping!",
+  },
 
   bonuses: {
     title: "6 gratis bonusar för dagens köpare:",
@@ -351,24 +360,20 @@ export const pricingData: PricingData = {
   },
 
   orderNow: {
-    title: "Beställ Nu Så Får Du",
+    title: "Beställ nu och du får",
     items: [
       {
-        title: "20 Lönsamma Produkter Utvalda Av Våra Experter",
-        desc: "till i din butik (inklusive produktbeskrivningar)...",
+        id: "01",
+        desc: "Beprövad dropshipping butik utformad för att sälja produkter online utan att behöva köpa något lager...",
       },
       {
-        title: "Exklusiv Tillgång Till Min Personliga Leverantör",
-        desc: "som lagrar produkterna du säljer och skickar dem till dina kunder billigt och snabbt...",
+        id: "02",
+        desc: "Exklusiv tillgång till våra betrodda leverans partners som lagrar de produkter du säljer och skickar dem till dina kunder billigt och snabbt......",
       },
       {
-        title: "Dropshipping E-handelsbok",
-        desc: "så att du kan förstå grunden till dropshipping utan att behöva lägga pengar på dyra e-handel kurser...",
-      },
-      {
-        title: "Prisbelönt Kundsupport Dygnet Runt ",
-        desc: "så att du kan ha ett team av e-handelsexperter vid din sida för att hjälpa dig göra din första försäljning online...",
+        id: "03",
+        desc: "Prisbelönt marknadsföringsteam som skapar 5 video annonser så att du kan göra din första försäljning online med din dropshipping butik...",
       },
     ],
   },
-};
+}

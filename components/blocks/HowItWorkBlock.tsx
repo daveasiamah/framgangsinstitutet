@@ -1,80 +1,75 @@
-import Title from "@/components/parts/Title";
-import en from "@/locales/en";
-import sv from "@/locales/sv";
-import { useRouter } from "next/router";
-import Image from "next/image";
-import ScrollReveal from "@/components/transition/ScrollReveal";
+import en from "@/locales/en"
+import sv from "@/locales/sv"
+import { useRouter } from "next/router"
 
-export default function HowItWorkBlock({
-  openModal,
-}: {
-  openModal: () => void;
-}) {
-  const router = useRouter();
-  const { locale } = router;
-  const t = locale === "en" ? en : sv;
-  const { howItWorksData } = t.pricingData;
+export default function HowItWorkBlock() {
+  const router = useRouter()
+  const { locale } = router
+  const t = locale === "en" ? en : sv
+  const { howItWorksData } = t.pricingData
 
   return (
-    <section className="flex flex-col p-4 md:p-20">
-      <h1 className="font-bold text-[22px] md:text-[32px] text-center mb-12">
+    <section className="flex flex-col py-4 px-6 mb-8">
+      <h1 className="font-bold text-[22px] md:text-[32px] text-center md:text-left mb-12">
         {howItWorksData.title}
       </h1>
 
-      <div className="flex flex-col items-center md:grid md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-stretch">
         {/* First Step */}
-        <div className="w-full rounded-[30px] border-[0.5px] border-[#BBBBBF80]">
-          <div className="flex flex-col p-7">
+        <div className="w-full rounded-[30px] border-[0.5px] border-[#BBBBBF80] flex flex-col">
+          <div className="flex flex-col p-7 pr-[38px] pl-[17px] h-full">
             <img
               src="/images/pricing/how_it_works1.svg"
-              className="w-[40.57px] h-[40.57px] self-end"
+              className="w-[40px] h-[40px] md:w-[50px] md:h-[50px] self-end"
             />
-            <div className="text-black font-bold text-[18px] mb-4 mt-6 font-jakarta">
+            <div className="text-black font-bold text-[16px] md:text-[18px] mb-4 mt-6 font-jakarta">
               {howItWorksData.items[0].title}
             </div>
-            <p className="text-[#464C69] text-[14px] md:text-[16px] mb-4">
+            <p className="text-[#464C69] text-[12px] md:text-[15px] mb-4">
               {howItWorksData.items[0].description[0]}
             </p>
-            <p className="text-[#464C69] text-[14px] md:text-[16px]">
+            <p className="text-[#464C69] text-[12px] md:text-[15px]">
               {howItWorksData.items[0].description[1]}
             </p>
           </div>
         </div>
 
         {/* Second Step */}
-        <div className="w-full rounded-[30px] border-[0.5px] border-[#BBBBBF80]">
-          <div className="flex flex-col p-7">
+        <div className="w-full rounded-[30px] border-[0.5px] border-[#BBBBBF80] flex flex-col">
+          <div className="flex flex-col p-7 pr-[38px] pl-[17px] h-full">
             <img
               src="/images/pricing/how_it_works2.svg"
-              className="w-[40.57px] h-[40.57px] self-end"
+              className="w-[40px] h-[40px] md:w-[50px] md:h-[50px] self-end"
             />
-            <div className="text-black font-bold text-[18px] mb-4 mt-6 font-jakarta">
+            <div className="text-black font-bold text-[16px] md:text-[18px] mb-4 mt-6 font-jakarta">
               {howItWorksData.items[1].title}
             </div>
-            <p className="text-[#464C69] text-[14px] md:text-[16px] mb-4">
+            <p className="text-[#464C69] text-[12px] md:text-[15px] mb-4">
               {howItWorksData.items[1].description[0]}
             </p>
-            <p className="text-[#464C69] text-[14px] md:text-[16px]">
+            <p className="text-[#464C69] text-[12px] md:text-[15px]">
               {howItWorksData.items[1].description[1]}
             </p>
           </div>
         </div>
 
         {/* Third Step */}
-        <div className="w-full md:col-span-2 rounded-[30px] border-[0.5px] border-[#BBBBBF80] relative overflow-hidden">
+        <div className="w-full md:col-span-2 lg:col-span-2 rounded-[30px] border-[0.5px] border-[#BBBBBF80] relative overflow-hidden flex flex-col">
           {/* Content Layer */}
-          <div className="flex flex-col p-7 relative z-10">
+          <div className="flex w-full flex-col p-7 pl-[17px] relative z-10 h-full">
             <img
               src="/images/pricing/how_it_works3.svg"
-              className="w-[40.57px] h-[40.57px] self-end"
+              className="w-[40px] h-[40px] md:w-[50px] md:h-[50px] self-end"
             />
-            <div className="text-black font-bold text-[18px] mb-2 mt-[76px] font-jakarta">
+            <div className="text-black font-bold text-[18px] mb-4 mt-6 lg:mt-[76px] font-jakarta">
               {howItWorksData.items[2].title}
             </div>
-            <p className="text-[#464C69] text-[12px] md:text-[14px] max-w-2xl">
-              {howItWorksData.items[2].description[0]}
-              {howItWorksData.items[2].description[1]}
-            </p>
+            <div className="md:pr-[38px] lg:pr-[38px] max-w-2xl">
+              <p className="text-[#464C69] text-[12px] md:text-[15px] max-w-2xl">
+                {howItWorksData.items[2].description[0]}
+                {howItWorksData.items[2].description[1]}
+              </p>
+            </div>
           </div>
 
           {/* Background Layer */}
@@ -87,5 +82,5 @@ export default function HowItWorkBlock({
         </div>
       </div>
     </section>
-  );
+  )
 }

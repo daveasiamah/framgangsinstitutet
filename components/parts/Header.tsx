@@ -7,6 +7,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { useRouter } from "next/router"
 import { MdOutlineKeyboardArrowDown } from "react-icons/md"
+import { headerData } from "@/locales/en/header"
 
 type Props = {
   openSidebar: boolean
@@ -42,24 +43,12 @@ const AuthButton = ({
     <div
       className={`items-center justify-center lg:justify-end gap-2 mt-8 lg:mt-0 ${className}`}
     >
-      <div
-        data-theme="light"
-        className={`fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-25 backdrop-blur-sm  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full justify-center items-center transition ${
-          showModal ? "flex" : "hidden"
-        }`}
-        onClick={closeModal}
-      >
-        <ContractForm onClose={closeModal} />
-      </div>
       {!isLoggedIn && (
         <>
           {/* <Link className="btn btn-link" href="/signin">
             {t.headerData.login}
           </Link> */}
-          <div
-            className="btn btn-primary btn-shadow"
-            onClick={() => setShowModal(true)}
-          >
+          <div className="" onClick={() => setShowModal(true)}>
             {t.headerData.getStarted}
           </div>
         </>
@@ -77,6 +66,16 @@ const AuthButton = ({
 
 export default function Header({ openSidebar, setOpenSidebar }: Props) {
   const [openMenu, setOpenMenu] = useState(false)
+  const [showModal, setShowModal] = useState(false)
+
+  const openModal = () => {
+    setShowModal(true)
+  }
+
+  const closeModal = () => {
+    setShowModal(false)
+  }
+
   const router = useRouter()
   const { locale, pathname } = router
   const t = locale === "en" ? en : sv
@@ -120,7 +119,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
 
   return (
     <header className="bg-base-100 h-header-height fixed top-0 left-0 right-0 z-20 flex justify-between items-center">
-      <div className="container mx-auto flex justify-between items-center">
+      <div className="container mx-auto flex justify-between items-center ">
         <Link href="/">
           <div className="flex items-center justify-start gap-2">
             <Image
@@ -208,21 +207,35 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
               </Link>
             </li>
           </ul>
-          <AuthButton
-            locale={locale}
-            changeLanguage={changeLanguage}
-            t={t}
-            className="flex lg:hidden"
-          />
         </nav>
 
-        <AuthButton
-          locale={locale}
-          changeLanguage={changeLanguage}
-          t={t}
-          className="hidden lg:flex"
-        />
+        <div
+          data-theme="light"
+          className={`fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-25 backdrop-blur-sm  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full justify-center items-center transition ${
+            showModal ? "flex" : "hidden"
+          }`}
+          onClick={closeModal}
+        >
+          <ContractForm onClose={closeModal} />
+        </div>
 
+        {/* CTA Button */}
+        <div className="hidden mt-2 mb-5 lg:mt-8 lg:flex items-center justify-center">
+          <button
+            onClick={() => openModal()}
+            className="text-[#fff] bg-[#225AEA] font-jakarta h-full px-6 py-3 rounded-[7px] shadow-inner button-shadow"
+            style={{
+              boxShadow: `
+            inset 11px 1px 19.4px 0px rgba(255, 255, 255, 0.3), 
+            inset -4px 0px 5.8px 0px rgba(255, 255, 255, 0.25)`,
+            }}
+          >
+            <p className="text-[16px] font-semibold">
+              {t.headerData.getStarted}
+            </p>
+          </button>
+        </div>
+        {/* CTA Button End */}
         <button className="lg:hidden rounded-md text-primary bg-base-200">
           <Hamburger
             size={26}

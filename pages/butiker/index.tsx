@@ -1,43 +1,47 @@
-import Image from "next/image";
-import { useRouter } from "next/router";
-import { useState } from "react";
+import Image from "next/image"
+import { useRouter } from "next/router"
+import { useState } from "react"
 
-import Layout from "@/components/Layout";
-import Accordion from "@/components/parts/Accordion";
-import Title from "@/components/parts/Title";
+import Layout from "@/components/Layout"
+import Accordion from "@/components/parts/Accordion"
+import Title from "@/components/parts/Title"
 
-import ScrollReveal from "@/components/transition/ScrollReveal";
+import ScrollReveal from "@/components/transition/ScrollReveal"
 
 // Import Swiper styles
-import "swiper/css";
-import "swiper/css/effect-cards";
+import "swiper/css"
+import "swiper/css/effect-cards"
 
-import BonusesBlock from "@/components/blocks/BonusesBlock";
-import ExampleStoresBlock from "@/components/blocks/ExampleStoresBlock";
-import GraphicsBlock from "@/components/blocks/GraphicsBlock";
-import HowItWorkBlock from "@/components/blocks/HowItWorkBlock";
-import OrderNowAndGetItBlock from "@/components/blocks/OrderNowAndGetItBlock";
-import PricingHeroBlock from "@/components/blocks/PricingHeroBlock";
-import ReviewsBlock from "@/components/blocks/ReviewsBlock";
-import ContractForm from "@/components/ContractForm";
-import en from "@/locales/en";
-import sv from "@/locales/sv";
+import BonusesBlock from "@/components/blocks/BonusesBlock"
+import ExampleStoresBlock from "@/components/blocks/ExampleStoresBlock"
+import GraphicsBlock from "@/components/blocks/GraphicsBlock"
+import HowItWorkBlock from "@/components/blocks/HowItWorkBlock"
+import OrderNowAndGetItBlock from "@/components/blocks/OrderNowAndGetItBlock"
+import PricingHeroBlock from "@/components/blocks/PricingHeroBlock"
+import ReviewsBlock from "@/components/blocks/ReviewsBlock"
+import ContractForm from "@/components/ContractForm"
+import en from "@/locales/en"
+import sv from "@/locales/sv"
+import { CTABannerBlock } from "@/components/blocks/CTABannerBlock"
+import { TopReviewBlock } from "@/components/blocks/TopReviewBlock"
+import { PricingDiscountBlock } from "@/components/blocks/PricingDiscountBlock"
+import { PricingCTAButtonBlock } from "@/components/blocks/PricingCTABlock"
 
-type Props = {};
+type Props = {}
 
 export default function Pricing({}: Props) {
-  const router = useRouter();
-  const { locale } = router;
-  const t = locale === "en" ? en : sv;
-  const [showModal, setShowModal] = useState(false);
+  const router = useRouter()
+  const { locale } = router
+  const t = locale === "en" ? en : sv
+  const [showModal, setShowModal] = useState(false)
 
   const openModal = () => {
-    setShowModal(true);
-  };
+    setShowModal(true)
+  }
 
   const closeModal = () => {
-    setShowModal(false);
-  };
+    setShowModal(false)
+  }
 
   return (
     <Layout headTitle={t.pricingData.metaData.title}>
@@ -46,60 +50,25 @@ export default function Pricing({}: Props) {
         className={`fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-25 backdrop-blur-sm  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full justify-center items-center transition ${
           showModal ? "flex" : "hidden"
         }`}
-        onClick={() => setShowModal(false)}
+        onClick={() => openModal()}
       >
         <ContractForm onClose={closeModal} />
       </div>
       <PricingHeroBlock
         openModal={() => {
-          window.open("https://buy.stripe.com/3cscO09iSdoBgVOeUZ");
+          window.open("https://buy.stripe.com/3cscO09iSdoBgVOeUZ")
         }}
       />
-
+      <TopReviewBlock />
+      <OrderNowAndGetItBlock />
       <BonusesBlock />
-
-      {/* Price Block */}
-      {/* TODO: */}
-
-      {/* Hur det fungerar?  Block*/}
-      <HowItWorkBlock
-        openModal={() => {
-          window.open("https://buy.stripe.com/3cscO09iSdoBgVOeUZ");
-        }}
-      />
-      {/* Hur det fungerar?  Block*/}
-      <div className="w-50 flex items-center justify-center">
-        <button
-          onClick={openModal}
-          className="text-[#fff] bg-[#225AEA] text-[14px] w-50 flex items-center justify-center font-jakarta font-bold w-[194px] h-[36px] rounded-[7px] shadow-inner button-shadow"
-          style={{
-            boxShadow: `
-        inset 11px 1px 19.4px 0px rgba(255, 255, 255, 0.3), 
-        inset -4px 0px 5.8px 0px rgba(255, 255, 255, 0.25)`,
-            borderRadius: "7px",
-          }}
-        >
-          Köp för 999,00 kr
-        </button>
-      </div>
-
+      <PricingDiscountBlock />
+      <HowItWorkBlock />
+      <PricingCTAButtonBlock openModal={openModal} />
       <ExampleStoresBlock />
       <ReviewsBlock />
-      <GraphicsBlock
-        openModal={() => {
-          router.push("https://buy.stripe.com/eVaeW80Mmckx34YdQT");
-        }}
-      />
-
       <section>
         <div className="relative py-10 full-bg mx-auto max-w-[900px]">
-          <Image
-            src="/images/home/question.gif"
-            width={151}
-            height={151}
-            alt="faq"
-            className="mx-auto w-[65px] h-[65px] lg:w-[151px] lg:h-[151px]"
-          />
           <ScrollReveal>
             <Title
               blackText={
@@ -111,95 +80,8 @@ export default function Pricing({}: Props) {
           <Accordion data={t.pricingData.faqData} />
         </div>
       </section>
-      {/* Vanliga Fragor section */}
-      <section className="flex item-center text-center border-2 border-red-500">
-        <h1 className="text-black text-center text-[20px] leading-[48px] md:text-[24px] font-[500] font-jakarta mb-2 mt-4">
-          Redo att få din butik?
-        </h1>
-      </section>
-      {/* Bottom CTA */}
-      <section className="lg:h-80 md:h-80 lg:px-20 lg:py-10 md:px-20 md:py-10 mb-16 text-white ">
-        <div className="relative left-0 right-0 flex flex-col items-center justify-center bg-[#2E56F5] rounded-[20px] md:px-4 lg:px-20 md:py-5 lg:py-5 back-background">
-          <div className="text-center ">
-            <div className="pl-10 pr-10">
-              <h1 className="text-white text-center text-[20px] leading-[48px] md:text-[24px] font-[500] font-jakarta mb-2 mt-4">
-                Redo att få din butik?
-              </h1>
-              <p className="mb-4 max-w-3xl mx-auto text-center lg:text-[16px] text-[12px] font-inter">
-                Perfekt för nybörjare som vill dyka in i dropshipping! Säkra din
-                butik idag <br />
-                och gör försäljning imorgon.
-              </p>
-              <div className="lg:pl-8 lg:pr-8 mt-4">
-                <div className="flex justify-center flex-wrap lg:flex lg:justify-between">
-                  <span className="flex justify-center   align-items-center mr-5  text-[8px] lg:text-[14px] text-white font-inter font-[500px]">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="mr-2 "
-                    >
-                      <path
-                        d="M7.3308 7.61447H17.4496M6.87467 2.0001V3.8317M6.87467 3.8317L17.4994 3.8315M6.87467 3.8317C5.11425 3.8317 3.68732 5.28333 3.68741 7.07419L3.6879 17.8826C3.68798 19.6734 5.11501 21.125 6.87531 21.125H17.5C19.2604 21.125 20.6875 19.6732 20.6874 17.8823L20.6869 7.07389C20.6868 5.28314 19.2597 3.8315 17.4994 3.8315M17.4994 2V3.8315M10.0629 17.342V10.8569L7.93792 12.4782M15.9064 17.342V10.8569L13.7815 12.4782"
-                        stroke="white"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    <span className="mt-1">Beprövade e-butiker</span>
-                  </span>
-                  <span className="flex  align-items-center mb-2  text-[8px] lg:text-[14px] text-white font-inter font-[500px]">
-                    <svg
-                      width="20"
-                      height="22"
-                      viewBox="0 0 20 22"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="mr-2"
-                    >
-                      <path
-                        d="M5.72937 18.512C5.20498 18.6853 4.92036 19.2509 5.09367 19.7753C5.26697 20.2997 5.83256 20.5843 6.35695 20.411L5.72937 18.512ZM11.8622 19.8462L11.7722 18.8502L11.8622 19.8462ZM15.3536 19.0769L15.7891 19.9771H15.7891L15.3536 19.0769ZM18.6897 16.0681L17.9153 15.4354L18.6897 16.0681ZM16.408 14.1854L17.1121 14.8955L16.408 14.1854ZM14.8715 15.7087L15.5756 16.4188L14.8715 15.7087ZM10.6984 15.3846C10.1461 15.3846 9.69838 15.8323 9.69838 16.3846C9.69838 16.9369 10.1461 17.3846 10.6984 17.3846V15.3846ZM18.335 13.9962L17.7836 14.8305L18.335 13.9962ZM7.22402 13.4915L7.66816 14.3875H7.66816L7.22402 13.4915ZM11.4001 13.1128L11.6611 12.1475H11.6611L11.4001 13.1128ZM13.0309 13.5538L12.7699 14.5191H12.7699L13.0309 13.5538ZM13.5476 15.4829L12.8435 14.7727L13.5476 15.4829ZM11.934 15.6745C11.5418 16.0633 11.5391 16.6965 11.9279 17.0887C12.3168 17.4809 12.9499 17.4836 13.3421 17.0948L11.934 15.6745ZM6.35695 20.411C6.4545 20.3788 6.67974 20.3518 7.10006 20.3815C7.50005 20.4098 7.96832 20.4794 8.50785 20.5634C9.52864 20.7224 10.8321 20.9433 11.9521 20.8421L11.7722 18.8502C10.9526 18.9242 9.92845 18.7605 8.81559 18.5872C8.2883 18.5051 7.73824 18.4216 7.24113 18.3865C6.76435 18.3528 6.21371 18.352 5.72937 18.512L6.35695 20.411ZM11.9521 20.8421C13.4538 20.7065 14.2079 20.7421 15.7891 19.9771L14.9181 18.1767C13.7223 18.7553 13.3478 18.7079 11.7722 18.8502L11.9521 20.8421ZM15.7891 19.9771C17.219 19.2853 18.6284 17.7238 19.4642 16.7007L17.9153 15.4354C17.0698 16.4704 15.9056 17.699 14.9181 18.1767L15.7891 19.9771ZM15.7039 13.4753L14.1675 14.9986L15.5756 16.4188L17.1121 14.8955L15.7039 13.4753ZM13.2257 15.3846H10.6984V17.3846H13.2257V15.3846ZM14.1675 14.9986C13.9191 15.2448 13.5805 15.3846 13.2257 15.3846V17.3846C14.1054 17.3846 14.9509 17.0382 15.5756 16.4188L14.1675 14.9986ZM18.8864 13.162C17.8866 12.5011 16.5558 12.6307 15.7039 13.4753L17.1121 14.8955C17.2897 14.7194 17.572 14.6906 17.7836 14.8305L18.8864 13.162ZM19.4642 16.7007C20.4053 15.5487 20.046 13.9284 18.8864 13.162L17.7836 14.8305C18.0394 14.9995 18.0448 15.2769 17.9153 15.4354L19.4642 16.7007ZM1.77587 13.5385H4.87935V11.5385H1.77587V13.5385ZM4.65522 13.3077V20.2308H6.65522V13.3077H4.65522ZM4.87935 20H1.77587V22H4.87935V20ZM2 20.2308V13.3077H0V20.2308H2ZM1.77587 20C1.89153 20 2 20.0952 2 20.2308H0C0 21.216 0.803209 22 1.77587 22V20ZM4.65522 20.2308C4.65522 20.0952 4.76369 20 4.87935 20V22C5.85201 22 6.65522 21.216 6.65522 20.2308H4.65522ZM4.87935 13.5385C4.76369 13.5385 4.65522 13.4432 4.65522 13.3077H6.65522C6.65522 12.3225 5.85202 11.5385 4.87935 11.5385V13.5385ZM1.77587 11.5385C0.803205 11.5385 0 12.3225 0 13.3077H2C2 13.4432 1.89153 13.5385 1.77587 13.5385V11.5385ZM6.4873 14.9729L7.66816 14.3875L6.77987 12.5956L5.59901 13.181L6.4873 14.9729ZM9.65288 13.9231H9.97106V11.9231H9.65288V13.9231ZM11.1391 14.0781L12.7699 14.5191L13.2919 12.5884L11.6611 12.1475L11.1391 14.0781ZM12.8435 14.7727L11.934 15.6745L13.3421 17.0948L14.2517 16.193L12.8435 14.7727ZM12.7699 14.5191C12.8963 14.5533 12.922 14.6949 12.8435 14.7727L14.2517 16.193C15.4369 15.0179 14.8897 13.0205 13.2919 12.5884L12.7699 14.5191ZM9.97106 13.9231C10.3657 13.9231 10.7585 13.9752 11.1391 14.0781L11.6611 12.1475C11.1102 11.9985 10.5419 11.9231 9.97106 11.9231V13.9231ZM7.66816 14.3875C8.284 14.0822 8.96354 13.9231 9.65288 13.9231V11.9231C8.65591 11.9231 7.67231 12.1532 6.77987 12.5956L7.66816 14.3875ZM14.7415 7.15385C14.7415 8.29281 13.8079 9.23077 12.6381 9.23077V11.2308C14.8962 11.2308 16.7415 9.41355 16.7415 7.15385H14.7415ZM12.6381 9.23077C11.4682 9.23077 10.5346 8.29281 10.5346 7.15385H8.53457C8.53457 9.41355 10.3799 11.2308 12.6381 11.2308V9.23077ZM10.5346 7.15385C10.5346 6.01488 11.4682 5.07692 12.6381 5.07692V3.07692C10.3799 3.07692 8.53457 4.89414 8.53457 7.15385H10.5346ZM12.6381 5.07692C13.8079 5.07692 14.7415 6.01488 14.7415 7.15385H16.7415C16.7415 4.89414 14.8962 3.07692 12.6381 3.07692V5.07692ZM9.53458 6.15385C8.36473 6.15385 7.43109 5.21589 7.43109 4.07692H5.43109C5.43109 6.33663 7.2764 8.15385 9.53458 8.15385V6.15385ZM7.43109 4.07692C7.43109 2.93796 8.36473 2 9.53458 2V0C7.2764 0 5.43109 1.81722 5.43109 4.07692H7.43109ZM9.53458 2C10.7044 2 11.6381 2.93796 11.6381 4.07692H13.6381C13.6381 1.81722 11.7927 0 9.53458 0V2Z"
-                        fill="white"
-                      />
-                    </svg>
-                    <span className="mt-1">100% riskfritt </span>
-                  </span>
-                  <span className="flex  align-items-center  text-[8px] lg:text-[14px] text-white font-inter font-[500px]">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="mr-2"
-                    >
-                      <path
-                        d="M15.142 9.98299L10.875 14.25L9.42049 12.7955M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3Z"
-                        stroke="white"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-
-                    <span className="mt-1"> Verifierade partners </span>
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <button
-              onClick={openModal}
-              className="h-[28px] md:h-[38px] rounded-[5px] w-[300px] md:w-[150px] text-[10px] md:text-[14px] btn-white mb-6 lg:mt-10 mt-5 font-normal text-[#15133A]"
-            >
-              Få din butik
-            </button>
-          </div>
-        </div>
-      </section>
+      {/* FAQ section / Vanliga Fragor section */}
+      <CTABannerBlock openModal={openModal} />
     </Layout>
-  );
+  )
 }
