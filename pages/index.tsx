@@ -50,39 +50,13 @@ export default function Home() {
   const router = useRouter()
   const { locale } = router
   const t = locale === "en" ? en : sv
-  // if (typeof window !== "undefined") {
-  //   const role = localStorage.getItem("role");
-  //   console.log("role found :- " + role);
-  // if (role === "USER") {
-  //     router.push("/dashboard");
-  //   } else if (role === "ADMIN") {
-  //     router.push("/admin_dashboard");
-  //   }
-  // } else {
-  //   console.log("role not found");
-  // }
+
   // mobile view close auto play
   const matches = useMediaQuery("(max-width: 1024px)")
   const [showModal, setShowModal] = useState(false)
   const swiperRef1 = useRef<SwiperType>()
   const swiperRef2 = useRef<SwiperType>()
   const swiperRef3 = useRef<SwiperType>()
-  // Fetch Blog List
-  //   const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
-  //   useEffect(() => {
-  //     const fetchPosts = async () => {
-  //       try {
-  //         const response = await axios.get(`/api/blog/?locale=${locale}`);
-
-  //         console.log("response.data.data:", response.data.data);
-
-  //         setBlogPosts(response.data.data);
-  //       } catch (error) {
-  //         // console.error('Error fetching blog posts:', error);
-  //       }
-  //     };
-  //     fetchPosts();
-  //   }, [locale]);
 
   useEffect(() => {
     if (matches) {
@@ -270,16 +244,23 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="w-50 mt-2 lg:mt-8 flex items-center justify-center ">
+              <div className="w-full mt-2 lg:mt-5 flex items-center justify-center ">
                 <button
                   onClick={openModal}
-                  className="text-[#fff] bg-[#225AEA] text-[14px] font-jakarta font-[600px] w-full h-[33px] md:w-1/4 rounded button-shadow"
+                  className="text-[#fff] bg-[#225AEA] font-jakarta h-full px-4 py-3 rounded-[7px] shadow-inner button-shadow"
+                  style={{
+                    boxShadow: `
+            inset 11px 1px 19.4px 0px rgba(255, 255, 255, 0.3), 
+            inset -4px 0px 5.8px 0px rgba(255, 255, 255, 0.25)`,
+                  }}
                 >
-                  Se gratis dropshipping kurs
+                  <p className="text-[14px] font-semibold font-jakarta">
+                    Starta Gratis Provperiod
+                  </p>
                 </button>
               </div>
 
-              <div className="icons-container_ann mt-2">
+              <div className="icons-container_ann mt-8">
                 <div className="icon-section_ann font-inter">
                   <span className="font-inter">
                     <img src="/img/calender.svg" alt="svg" />
@@ -365,11 +346,19 @@ export default function Home() {
                 potentiell exit. Det närmaste du kommer en doktorsexamen i
                 e-handel och digital marknadsföring.
               </p>
+
               <button
-                onClick={openModal}
-                className="h-[35px] text-white rounded pl-2 pr-2 border-0 bg-[#225AEA] md:w-[170] text-[12px] md:text-[12px] md:leading-[22px] mt-5 button-shadow font-inter"
+                onClick={() => openModal()}
+                className="text-[#fff] bg-[#225AEA] font-jakarta h-full px-4 py-2 mt-4 rounded-[7px] shadow-inner button-shadow"
+                style={{
+                  boxShadow: `
+            inset 11px 1px 19.4px 0px rgba(255, 255, 255, 0.3), 
+            inset -4px 0px 5.8px 0px rgba(255, 255, 255, 0.25)`,
+                }}
               >
-                Se Gratis Dropshipping Kurs
+                <p className="text-[14px] font-semibold font-jakarta">
+                  Prova Gratis
+                </p>
               </button>
             </div>
           </div>
@@ -471,10 +460,17 @@ export default function Home() {
               </ul>
 
               <button
-                onClick={openModal}
-                className="h-[26px] w-[161px] md:h-[36px] lg:[36px] text-white rounded pl-2 pr-2 border-0 bg-[#225AEA] md:w-50 text-[10px] leading-[10px] md:text-[12px] md:leading-[13px] mt-3 button-shadow"
+                onClick={() => openModal()}
+                className="text-[#fff] bg-[#225AEA] font-jakarta h-full px-4 py-2 mt-4 rounded-[7px] shadow-inner button-shadow"
+                style={{
+                  boxShadow: `
+            inset 11px 1px 19.4px 0px rgba(255, 255, 255, 0.3), 
+            inset -4px 0px 5.8px 0px rgba(255, 255, 255, 0.25)`,
+                }}
               >
-                Gå med gratis idag
+                <p className="text-[14px] font-semibold font-jakarta">
+                  Prova Gratis
+                </p>
               </button>
             </div>
           </div>
@@ -1316,17 +1312,10 @@ export default function Home() {
                 onClick={openModal}
                 className=" h-[23px] lg:h-[38px] rounded-[5px] btn-white mt-5 font-inter font-[500] text-[10px] md:text-[14px] w-full lg:w-[120px] text-[#151E3A] "
               >
-                Gå med gratis
+                Prova Gratis
               </button>
             </div>
           </ScrollReveal>
-          {/* <div className="lg:mx-auto md:w-[418px] lg:w-1/2 ">
-            <img
-              src="/images/home/connect.svg"
-              alt="checkified university"
-              className="lg:h-[400px] lg:w-[500px]"
-            />
-          </div> */}
         </section>
 
         <section>
@@ -1345,12 +1334,11 @@ export default function Home() {
             <div className="text-center ">
               <div className="pl-10 pr-10">
                 <h1 className="text-white text-center text-[20px] leading-[48px] md:text-[24px] font-[500] font-jakarta mb-2 mt-4">
-                  Testa Checkified gratis
+                  Prova Checkified med en 7-dagars gratis provperiod
                 </h1>
                 <p className="mb-4 max-w-3xl mx-auto text-center lg:text-[16px] text-[12px] font-inter">
                   Perfekt för nybörjare som vill dyka in i dropshipping!
-                  Utforska vår kurs gratis, <br />
-                  utan förpliktelse – för alltid.
+                  Utforska vår kurs gratis, utan förpliktelse – för alltid.
                 </p>
                 <div className="lg:pl-8 lg:pr-8 mt-4">
                   <div className="flex justify-center flex-wrap lg:flex lg:justify-between">
@@ -1415,74 +1403,12 @@ export default function Home() {
 
               <button
                 onClick={openModal}
-                className="h-[28px] md:h-[38px] rounded-[5px] w-[300px] md:w-[150px] text-[10px] md:text-[14px] btn-white mb-6 lg:mt-10 mt-5 font-normal text-[#15133A]"
+                className="h-[28px] md:h-[38px] rounded-[5px] w-[300px] md:w-[150px] text-[10px] md:text-[14px] btn-white mb-6 lg:mt-10 mt-5 font-medium text-[#15133A]"
               >
-                Gå med gratis
+                Prova Gratis
               </button>
             </div>
           </div>
-        </section>
-
-        <section className="relative text-center lg:mb-20 lg:mt-40">
-          <ScrollReveal className="flex justify-between items-center mb-4">
-            <h1 className="hidden lg:block text-left text-[32px] leading-[55px] font-[700] font-jakarta">
-              Bläddra bland våra senaste artiklar
-            </h1>
-            <h1 className="lg:hidden text-left text-[18px] leading-[28px] font-[700] font-jakarta">
-              Bläddra bland våra senaste artiklar
-            </h1>
-            <button
-              onClick={() =>
-                (window.location.href = "https://checkified.se/blog")
-              }
-              className="hidden lg:block text-left text-[16px] text-[#434C69] leading-[20px] font-normal mb-5 border border-1 border-[#BBBBBF] p-2 rounded-md"
-            >
-              Visa blogg
-            </button>
-          </ScrollReveal>
-          {/* <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-12 gap-5">
-                        {blogPosts?.map((blog) => {
-                            return (
-                                <Link
-                                    href={`/blog/${blog?.slug}`}
-                                    key={blog?.id}
-                                    className="rounded-[2rem] border border-1 border-[#BBBBBF] p-5 flex flex-col"
-                                >
-                                    <img
-                                        src={blog?.imageUrl}
-                                        alt="card"
-                                        className="border-b border-1 border-[#E5E6EA] w-full h-[192px] rounded-[20px] mb-5"
-                                        loading="lazy"
-                                    />
-
-                                    <div className="text-left flex flex-col flex-grow">
-                                        <p className="text-[#686870] text-[12px] lg:text-[14px] font-inter mb-2 lg:mb-[20px] mt-4">
-                                            {blog?.date}
-                                        </p>
-                                        <p className="font-inter font-[500] text-[14px] lg:text-[18px] text-[#434C69] leading-[25px] mb-4">
-                                            {blog?.title}
-                                        </p>
-
-                                        <div className="flex items-center gap-2 mt-auto">
-                                            <img
-                                                src={blog?.authorProfile}
-                                                alt="author"
-                                                className="w-[34px] h-[34px] object-cover rounded-full"
-                                                loading="lazy"
-                                                onError={(e) => {
-                                                    const target = e.target as HTMLImageElement;
-                                                    target.src = "https://via.placeholder.com/34";
-                                                }}
-                                            />
-                                            <p className="font-inter font-[500] text-[14px] lg:text-[14px] text-[#434C69] leading-[25px] ml-2">
-                                                {blog?.author || 'N/A'}
-                                            </p>
-                                        </div>
-                                    </div>
-                                </Link>
-                            );
-                        })}
-                    </div> */}
         </section>
       </Layout>
     </>

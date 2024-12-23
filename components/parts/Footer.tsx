@@ -16,7 +16,7 @@ export default function Footer({}: Props) {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-[#fff] text-[#434C69] py-14 relative mt-12 lg:mt-20">
+    <footer className="bg-[#fff] text-[#434C69] py-14 relative mt-12 lg:mt-10">
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row justify-between items-center text-left md:text-center lg:text-left lg:items-end gap-10 lg:gap-[120px]">
           <div className="w-full lg:w-1/3">
@@ -55,7 +55,7 @@ export default function Footer({}: Props) {
           </div>
           <div className="w-full lg:w-1/2 grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-[90px] footer-links mt-10 lg:mt-0">
             <div>
-              <h4 className="text-xl">Produkter</h4>
+              <h4 className="text-xl font-jakarta">Produkter</h4>
               <ul>
                 <li>
                   <Link
@@ -70,7 +70,7 @@ export default function Footer({}: Props) {
                     className="hover:underline underline-offset-4 md:text-[16px] font-[500] font-inter"
                     href="/butiker"
                   >
-                    Färdig E-butik
+                    Färdig E-Butik
                   </Link>
                 </li>
                 <li>
@@ -84,15 +84,17 @@ export default function Footer({}: Props) {
                 <li>
                   <Link
                     className="hover:underline underline-offset-4 md:text-[16px] font-[500] font-inter"
-                    href="/mentorskap"
+                    href="https://whop.com/dropshipping-mentorskap"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    Mentorskap
+                    Dropshipping Mentorskap
                   </Link>
                 </li>
               </ul>
             </div>
             <div>
-              <h4 className="text-xl">Företag</h4>
+              <h4 className="text-xl font-jakarta">Företag</h4>
               <ul>
                 <li>
                   <Link
@@ -113,7 +115,7 @@ export default function Footer({}: Props) {
               </ul>
             </div>
             <div>
-              <h4 className="text-xl">Resurser</h4>
+              <h4 className="text-xl font-jakarta">Resurser</h4>
               <ul>
                 <li>
                   <Link
@@ -137,6 +139,14 @@ export default function Footer({}: Props) {
                     href="/university"
                   >
                     University
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="hover:underline underline-offset-4 md:text-[16px] font-[500] font-inter"
+                    href="/faq"
+                  >
+                    FAQ
                   </Link>
                 </li>
               </ul>

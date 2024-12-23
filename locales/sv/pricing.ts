@@ -1,4 +1,4 @@
-import { PricingData } from "../types/pricing";
+import { PricingData } from "../types/pricing"
 
 export const pricingData: PricingData = {
   metaData: {
@@ -199,7 +199,8 @@ export const pricingData: PricingData = {
   faqData: [
     {
       id: 1,
-      question: "Behöver jag ha ett Shopify-konto innan jag använder e-butiken?",
+      question:
+        "Behöver jag ha ett Shopify-konto innan jag använder e-butiken?",
       answer:
         "Nej! Alla våra Shopify Dropshipping-butiker kommer som helt nya butiker som du får en 3 dagars gratis provperiod med. Efter 3 dagars gratis provperiod kommer Shopify att kosta $1 för 1 månad och efter 3 månader kommer Shopify att kosta $39/månad.  Om du inte vill betala $39 kan du avbryta din $1 månad provperiod. Risken är mycket låg.",
     },
@@ -211,10 +212,8 @@ export const pricingData: PricingData = {
     },
     {
       id: 3,
-      question:
-        "Hur många produkter kommer jag att få i min e-butik?",
-      answer:
-        "Alla våra butiker kommer färdigimplementerade med 20 produkter.",
+      question: "Hur många produkter kommer jag att få i min e-butik?",
+      answer: "Alla våra butiker kommer färdigimplementerade med 20 produkter.",
     },
     {
       id: 4,
@@ -242,84 +241,148 @@ export const pricingData: PricingData = {
     },
   ],
 
-  howItWorkData: {
-    title: "Hur Det Fungerar",
-    subtitle: "Det är så enkelt som 1, 2, 3.",
-    button: "Bara 499 kr? Ja Tack!",
-    items:  [
+  howItWorksData: {
+    title: "Hur det fungerar?",
+    items: [
       {
         id: 1,
-        imageUrl: "/icons/home/feature-unlimited-access.png",
-        desc1: "Beställ din e-handelswebbplats från oss så konfigurerar vi den helt åt dig för endast 499 SEK.",
-        desc2: "När vi har designat webbplatsen lägger vi till 20 produkter som du kan börja sälja direkt.",
+        imageUrl: "/icons/home/build-site-icon.png",
+        title: "Vi bygger din webbplats och lägger till 20 produkter",
+        description: [
+          "Beställ din e-handelswebbplats från oss för endast 999 kr så är du igång inom 24 timmar.",
+          "Vi designar och sätter upp allt – inklusive 20 produkter, 5 videoannonser, logotyp, leverantör, och e-bok så du kan börja sälja direkt.",
+        ],
       },
       {
         id: 2,
-        imageUrl: "/icons/home/feature-create-content.png",
-        desc1: "Låt oss säga att du hade en sminkborste listad på din kosmetikwebbplats för 299 SEK",
-        desc2: "Vi kommer att integrera en leverantör som kan skicka den exakta sminkborsten till någon i världen för endast 99 SEK",
+        imageUrl: "/icons/home/ship-orders-icon.png",
+        title: "Leverantören skickar dina beställningar när du säljer",
+        description: [
+          "Låt oss säga att du hade en sminkborste listad på din kosmetikwebbplats för 399 kr.",
+          "Vi kommer att integrera en leverantör som kan skicka den exakta sminkborsten till vem som helst i världen för endast 99 kr.",
+        ],
       },
       {
         id: 3,
-        imageUrl: "/icons/home/feature-selling-service.png",
-        desc1: "Om du gör allt detta på rätt sätt kommer detta att vara en bra plattform för en hög avkastning med bara ett minimum av uppmärksamhet!",
-        desc2: "Återinvestera tillbaka i ditt företag och upprepa vad som fungerar!",
-      }
-    ]
+        imageUrl: "/icons/home/retain-profits-icon.png",
+        title: "Behåll vinsten och utveckla din butik",
+        description: [
+          "Om du gör allt detta korrekt kommer detta att vara en bra plattform för en hög avkastning med bara ett minimum av uppmärksamhet! Återinvestera tillbaka i ditt företag och upprepa det som fungerar!",
+        ],
+      },
+    ],
   },
 
   hero: {
-    title: 'E-handelsexperter bygger en optimerad e-handelsbutik på under 24 timmar för endast 499 kr!',
-    desc: 'Vårt team av e-handelsexperter har designat över 478+ dropshipping-butiker och är här för att hjälpa dig att bygga din butik för endast 499kr!',
-    button: 'Få din butik 499 SEK!',
-    buttonDesc: '& Lås upp 2 GRATIS gåvor',
-    descTitle: '478+ Sålda Butiker'
+    title:
+      "E-handelsexperter bygger dig en helt\n optimerad e-handelsbutik på under\n 24 timmar för endast 999 kr",
+    desc: "Vårt team av e-handelsexperter har designat över 834+ dropshipping butiker och är här för att hjälpa dig att starta din nästa butik för endast 999 kr!",
+    button: "Få din butik 499 SEK!",
+    buttonDesc: "& Lås upp 2 GRATIS gåvor",
+    descTitle: "478+ Sålda Butiker",
   },
 
   reviews: {
-    title: 'Recensioner',
+    title: "Recensioner",
     items: [
-        'Efter att ha testat flera onlineföretag som Amazon FBA, SMMA, och affiliate marketing, insåg jag att de mest bara var ute efter att ta mina pengar utan att ge något verkligt värde tillbaka. När jag stötte på checkified-butiker bestämde jag mig för att ge dropshipping en chans, och jag är så glad att jag gjorde det. Inom en enda dag hade jag en fullständig butik redo att köra, och tack vare TikTok-annonser har jag redan återhämtat min investering. Jag rekommenderar starkt detta till alla nybörjare!',
-        'Som ny inom dropshipping blev jag positivt överraskad av den snabba och enkla installationen av min butik. Nu kan jag fokusera på marknadsföring och ser fram emot min resa med dropshipping.',
-        'Checkified ebutiker överträffade mina förväntningar med en modern design och unika produkter. Jag rekommenderar att välja deras färdig byggda e-handelsbutiker.',
-        'Trots min initiala skepsis över det låga priset blev jag positivt överraskad av kvaliteten på butiken och produkterna. Checkified ebutiker erbjuder enastående värde för nybörjare som mig och jag är mycket nöjd med mitt köp.',
-        'Jag är imponerad av den höga kvaliteten på min butik och de tillhörande produkterna till ett sådant överkomligt pris. Tack vare Checkified kan jag spara massor av tid och pengar.',
-        'Jag hade ingen erfarenhet av dropshipping men beslutade ändå att prova det här och blev glatt överraskad av den professionella butiken och de högkvalitativa produkterna. Bonus boken var ovärderlig och jag skulle definitivt rekommendera Checkified-butiker till alla. ',
-        'Jag beställde min butik och blev förvånad över att få den levererad redan nästa dag. Tack vare Checkified kan jag nu generera betydande intäkter varje dag. Tack så mycket!',
-        'Jag blev positivt överraskad av den höga kvaliteten på min butik och produkterna. Trots min initiala skepsis är jag nu en nöjd kund och ser fram emot att göra fler affärer med Checkified butiker.',
-    ]
+      "Efter att ha testat flera onlineföretag som Amazon FBA, SMMA, och affiliate marketing, insåg jag att de mest bara var ute efter att ta mina pengar utan att ge något verkligt värde tillbaka. När jag stötte på checkified-butiker bestämde jag mig för att ge dropshipping en chans, och jag är så glad att jag gjorde det. Inom en enda dag hade jag en fullständig butik redo att köra, och tack vare TikTok-annonser har jag redan återhämtat min investering. Jag rekommenderar starkt detta till alla nybörjare!",
+      "Som ny inom dropshipping blev jag positivt överraskad av den snabba och enkla installationen av min butik. Nu kan jag fokusera på marknadsföring och ser fram emot min resa med dropshipping.",
+      "Checkified ebutiker överträffade mina förväntningar med en modern design och unika produkter. Jag rekommenderar att välja deras färdig byggda e-handelsbutiker.",
+      "Trots min initiala skepsis över det låga priset blev jag positivt överraskad av kvaliteten på butiken och produkterna. Checkified ebutiker erbjuder enastående värde för nybörjare som mig och jag är mycket nöjd med mitt köp.",
+      "Jag är imponerad av den höga kvaliteten på min butik och de tillhörande produkterna till ett sådant överkomligt pris. Tack vare Checkified kan jag spara massor av tid och pengar.",
+      "Jag hade ingen erfarenhet av dropshipping men beslutade ändå att prova det här och blev glatt överraskad av den professionella butiken och de högkvalitativa produkterna. Bonus boken var ovärderlig och jag skulle definitivt rekommendera Checkified-butiker till alla. ",
+      "Jag beställde min butik och blev förvånad över att få den levererad redan nästa dag. Tack vare Checkified kan jag nu generera betydande intäkter varje dag. Tack så mycket!",
+      "Jag blev positivt överraskad av den höga kvaliteten på min butik och produkterna. Trots min initiala skepsis är jag nu en nöjd kund och ser fram emot att göra fler affärer med Checkified butiker.",
+    ],
+  },
+  topReview: {
+    title: "Recension",
+    avatar: "JM",
+    stars: 5,
+    time: "18 minuter sen",
+    verified: "Verifierad",
+    description:
+      "Jag är verkligen imponerad av Checkifeds färdiga e-butik med 20 produkter och 5 videoannonser redo att marknadsföras! Tack vare deras hjälp har jag nu en verksamhet som omsätter 350 000 kr. Butiken var färdigbyggd med professionellt utvalda produkter, och jag kunde börja sälja direkt. Det bästa var att jag fick tillgång till en gratis kurs om hur man driver en framgångsrik dropshipping-butik, vilket gjorde det enkelt för mig att förstå allt från marknadsföring till logistik. Supporten har också varit fantastisk – när jag behövt hjälp har de alltid funnits där. Det enda jag behövde göra efteråt var att köpa ett domännamn och sätta igång med marknadsföringen. För mig, som inte hade någon tidigare erfarenhet av e-handel, har det här varit en riktig gamechanger. Rekommenderar verkligen till alla som vill börja med dropshipping!",
   },
 
   bonuses: {
-    title: '2 GRATIS bonusar för dagens köpare:',
-    cards: [
-      '/images/pricing/bonus1.png',
-      '/images/pricing/bonus2.png'
-    ],
-    bottomDesc: '(ENGÅNGSBETALNING)',
-    redPrice: 'Normal Kostnad: 2,000 SEK+',
-    greenPrice: 'Bara 499 SEK!',
-  },
-
-  orderNow: {
-    title: 'Beställ Nu Så Får Du',
+    title: "6 gratis bonusar för dagens köpare:",
     items: [
       {
-        title: '20 Lönsamma Produkter Utvalda Av Våra Experter',
-        desc: 'till i din butik (inklusive produktbeskrivningar)...'
+        id: "Bonus #1",
+        title: "Varumärkeslogotyp",
+        image: "/images/pricing/bonus1.png",
+        description:
+          "(Vårt team av e-handelsexperter kommer att ge dig en logotyp som du kan använda i din butik.",
+        price: "997.00 kr värde",
       },
       {
-        title: 'Exklusiv Tillgång Till Min Personliga Leverantör',
-        desc: 'som lagrar produkterna du säljer och skickar dem till dina kunder billigt och snabbt...'
+        id: "Bonus #2",
+        title: "Fullständig Dropshipping Kurs",
+        image: "/images/pricing/bonus2.png",
+        description:
+          "Tillgång till en fullständig AÖ-guide om hur man startar en lönsam dropshipping butik 2025.",
+        price: "4997.00 kr värde",
       },
       {
-        title: 'Dropshipping E-handelsbok',
-        desc: 'så att du kan förstå grunden till dropshipping utan att behöva lägga pengar på dyra e-handel kurser...'
+        id: "Bonus #3",
+        title: "Mystery Gift",
+        image: "/images/pricing/bonus3.png",
+        description:
+          "Beställ idag och få en Mystery Gift med ditt köp som kommer att slå dig med häpnad.",
+        price: "1997.00 kr värde",
       },
       {
-        title: 'Prisbelönt Kundsupport Dygnet Runt ',
-        desc: 'så att du kan ha ett team av e-handelsexperter vid din sida för att hjälpa dig göra din första försäljning online...'
+        id: "Bonus #4",
+        title: "5 Videoannonser",
+        image: "/images/pricing/bonus4.png",
+        description:
+          "Vårt team kommer att skapa video annonser som du kan använda i din marknadsföring.",
+        price: "4997.00 kr värde",
       },
-    ]
-  }
-};
+      {
+        id: "Bonus #5",
+        title: "Dropshipping E-bok",
+        image: "/images/pricing/bonus5.png",
+        description:
+          "Ladda ner dropshipping e-bok som täcker de grundläggande kunskaper som krävs för dropshipping e-handel.",
+        price: "2997.00 kr värde",
+      },
+      {
+        id: "Bonus #6",
+        title: "Dropshipping Leverantör",
+        image: "/images/pricing/bonus6.png",
+        description:
+          "Du får vår personliga dropshipping leverantör med snabb leverans på 6-10 arbetsdagar och billiga inköpriser.",
+        price: "997.00 kr värde",
+      },
+    ],
+  },
+
+  discountPrice: {
+    redPrice: "Normal Kostnad: 16,000 SEK+",
+    greenPrice: "Bara 999.00 KR!",
+    paymentMode: "Engångsbetalning",
+  },
+  exampleStoreTitle: "Exempel På Butiker",
+  buyNowPrice: "Köp för 999,00 kr",
+  createMyStore: "Fixa mig min butik",
+
+  orderNow: {
+    title: "Beställ nu och du får",
+    items: [
+      {
+        id: "01",
+        desc: "Beprövad dropshipping butik utformad för att sälja produkter online utan att behöva köpa något lager...",
+      },
+      {
+        id: "02",
+        desc: "Exklusiv tillgång till våra betrodda leverans partners som lagrar de produkter du säljer och skickar dem till dina kunder billigt och snabbt......",
+      },
+      {
+        id: "03",
+        desc: "Prisbelönt marknadsföringsteam som skapar 5 video annonser så att du kan göra din första försäljning online med din dropshipping butik...",
+      },
+    ],
+  },
+}

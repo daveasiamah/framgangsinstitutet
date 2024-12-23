@@ -1,48 +1,45 @@
-import en from "@/locales/en";
-import sv from "@/locales/sv";
-import {useRouter} from "next/router";
-import Title from "@/components/parts/Title";
-import "swiper/css"
-import "swiper/css/effect-cards"
-import 'swiper/css/pagination'
-import {Pagination} from "swiper"
-import {Swiper, SwiperSlide} from "swiper/react"
-import styles from "./ReviewsBlock.module.scss"
+import en from "@/locales/en"
+import sv from "@/locales/sv"
+import { useRouter } from "next/router"
 
 export default function BonusesBlock() {
-    const router = useRouter()
-    const {locale} = router
-    const t = locale === "en" ? en : sv
+  const router = useRouter()
+  const { locale } = router
+  const t = locale === "en" ? en : sv
 
-    return (
-        <section className="relative flex flex-col items-center py-5 lg:py-10 bg-[#EDF5FE] px-4">
-            <img
-                className="lg:w-[105px] w-[88px] lg:h-[105px] h-[88px] mb-4"
-                alt={'star'}
-                src={'/star-with-bg.gif'}
-            />
-            <h1 className="text-[30px] lg:text-[50px] text-center font-bold text-[#07BE72] mb-10 underline capitalize">
-                {t.pricingData.bonuses.title}
-            </h1>
-            <div className="flex flex-col items-center lg:space-y-10 space-x-2 lg:mb-20 mb-2">
-                {t.pricingData.bonuses.cards.map((item, index) => (
-                    <img
-                        key={index}
-                        className="lg:w-[1000px] lg:h-[300px] w-full h-[100px] mb-4"
-                        alt={'bonus card'}
-                        src={item}
-                    />
-                ))}
+  return (
+    <section className="flex flex-col items-center justify-center pb-[70px] mt-6">
+      <div className="flex flex-col">
+        <h1 className="font-bold text-[22px] md:text-[32px] lg:text-[32px] mb-5 md:mb-10 lg:mb-10 text-center">
+          {t.pricingData.bonuses.title}
+        </h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-10 lg:gap10">
+          {t.pricingData.bonuses.items.map((item, index) => (
+            <div
+              key={index}
+              className="flex items-center justify-center w-full h-full lg:max-h-[426px] shadow-[0px_0.5px_15px_0.5px_rgba(155,155,155,0.25)] rounded-[25px] p-6 md:p-8"
+            >
+              <div className="flex flex-col items-center">
+                <p className="font-[16px] text-[#c5cce3]">{item.id}</p>
+                <img
+                  src={item.image}
+                  alt="bonuses image"
+                  className="w-[174px] h-[174px] object-contain mt-5"
+                />
+                <h4 className="font-bold text-base lg:text-lg mb-4 mt-3 text-center font-jakarta">
+                  {item.title}
+                </h4>
+                <p className="font-[500] text-xs lg:text-base text-center text-[#464c69] mb-4">
+                  {item.description}
+                </p>
+                <p className="font-[700] text-base lg:text-xl text-center text-[#16895a] font-jakarta">
+                  {item.price}
+                </p>
+              </div>
             </div>
-            <p className="p-1 lg:w-[550px] w-[240px] px-4 text-[#D71349] font-bold lg:text-[24px] text-[10px] bg-[#FFF4F4] text-center rounded-[20px] mb-2">
-                {t.pricingData.bonuses.redPrice}
-            </p>
-            <h1 className="text-[20px] lg:text-[80px] font-bold text-[#07BE72] mb-2">
-                {t.pricingData.bonuses.greenPrice}
-            </h1>
-            <h1 className="text-[15px] lg:text-[45px] font-bold mb-2">
-                {t.pricingData.bonuses.bottomDesc}
-            </h1>
-        </section>
-    )
+          ))}
+        </div>
+      </div>
+    </section>
+  )
 }

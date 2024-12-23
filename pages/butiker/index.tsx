@@ -1,96 +1,73 @@
-import React, {useState} from "react"
 import Image from "next/image"
-import {FaCheckCircle} from "react-icons/fa"
-import {Autoplay, EffectCards, Navigation} from "swiper"
-import {Swiper, SwiperSlide} from "swiper/react"
-import {useRouter} from "next/router"
+import { useRouter } from "next/router"
+import { useState } from "react"
 
-import ButtonArrow from "@/components/parts/ButtonArrow"
-import TestimonyCard from "@/components/parts/TestimonyCard"
-import Title from "@/components/parts/Title"
 import Layout from "@/components/Layout"
 import Accordion from "@/components/parts/Accordion"
-import LineGraphic from "@/components/graphic/LineGraphic"
-import ShieldBadge from "@/components/graphic/ShieldBadge"
-import UserBadge from "@/components/graphic/UserBadge"
-import CacingOne from "@/components/graphic/CacingOne"
-import BlurCircle from "@/components/graphic/BlurCircle"
+import Title from "@/components/parts/Title"
 
 import ScrollReveal from "@/components/transition/ScrollReveal"
-import TiltParallax from "@/components/transition/TiltParallax"
 
 // Import Swiper styles
 import "swiper/css"
 import "swiper/css/effect-cards"
 
+import BonusesBlock from "@/components/blocks/BonusesBlock"
+import ExampleStoresBlock from "@/components/blocks/ExampleStoresBlock"
+import GraphicsBlock from "@/components/blocks/GraphicsBlock"
+import HowItWorkBlock from "@/components/blocks/HowItWorkBlock"
+import OrderNowAndGetItBlock from "@/components/blocks/OrderNowAndGetItBlock"
+import PricingHeroBlock from "@/components/blocks/PricingHeroBlock"
+import ReviewsBlock from "@/components/blocks/ReviewsBlock"
+import ContractForm from "@/components/ContractForm"
 import en from "@/locales/en"
 import sv from "@/locales/sv"
-import ExampleStoresBlock from "@/components/blocks/ExampleStoresBlock";
-import GraphicsBlock from "@/components/blocks/GraphicsBlock";
-import HowItWorkBlock from "@/components/blocks/HowItWorkBlock";
-import PricingHeroBlock from "@/components/blocks/PricingHeroBlock";
-import ReviewsBlock from "@/components/blocks/ReviewsBlock";
-import BonusesBlock from "@/components/blocks/BonusesBlock";
-import OrderNowAndGetItBlock from "@/components/blocks/OrderNowAndGetItBlock";
-import ContractForm from "@/components/ContractForm";
+import { CTABannerBlock } from "@/components/blocks/CTABannerBlock"
+import { TopReviewBlock } from "@/components/blocks/TopReviewBlock"
+import { PricingDiscountBlock } from "@/components/blocks/PricingDiscountBlock"
+import { PricingCTAButtonBlock } from "@/components/blocks/PricingCTAButtonBlock"
+import { CreateEStoreBlock } from "@/components/blocks/CreateEStoreBlock"
+import { FAQBlock } from "@/components/blocks/FAQBlock"
 
 type Props = {}
 
 export default function Pricing({}: Props) {
-    const router = useRouter()
-    const {locale} = router
-    const t = locale === "en" ? en : sv
-    const [showModal, setShowModal] = useState(false)
+  const router = useRouter()
+  const { locale } = router
+  const t = locale === "en" ? en : sv
+  const [showModal, setShowModal] = useState(false)
 
-    const openModal = () => {
-        setShowModal(true)
-    }
+  const openModal = () => {
+    setShowModal(true)
+  }
 
-    const closeModal = () => {
-        setShowModal(false)
-    }
+  const closeModal = () => {
+    setShowModal(false)
+  }
 
-    return (
-        <Layout headTitle={t.pricingData.metaData.title} isFullWidth>
-            <div
-                data-theme="light"
-                className={`fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-25 backdrop-blur-sm  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full justify-center items-center transition ${showModal ? "flex" : "hidden"}`}
-                onClick={() => setShowModal(false)}
-            >
-                <ContractForm onClose={closeModal}/>
-            </div>
-            <PricingHeroBlock openModal={() => {
-                window.open("https://buy.stripe.com/eVaeW80Mmckx34YdQT")
-            }}/>
-            <OrderNowAndGetItBlock/>
-            <BonusesBlock/>
-            <HowItWorkBlock openModal={() => {
-                window.open("https://buy.stripe.com/eVaeW80Mmckx34YdQT")
-            }}/>
-            <ExampleStoresBlock/>
-            <ReviewsBlock/>
-            <GraphicsBlock openModal={() => {
-                router.push("https://buy.stripe.com/eVaeW80Mmckx34YdQT")
-            }}/>
-
-            <section>
-                <div className="relative py-10 full-bg mx-auto max-w-[900px]">
-                    <Image
-                        src="/images/home/question.gif"
-                        width={151}
-                        height={151}
-                        alt="faq"
-                        className="mx-auto w-[65px] h-[65px] lg:w-[151px] lg:h-[151px]"
-                    />
-                    <ScrollReveal>
-                        <Title
-                            blackText={t.pricingData.faqBlackTitle + " " + t.pricingData.faqBlueTitle}
-                            className="text-center"
-                        />
-                    </ScrollReveal>
-                    <Accordion data={t.pricingData.faqData}/>
-                </div>
-            </section>
-        </Layout>
-    )
+  return (
+    <Layout headTitle={t.pricingData.metaData.title}>
+      <div
+        data-theme="light"
+        className={`fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-25 backdrop-blur-sm  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full justify-center items-center transition ${
+          showModal ? "flex" : "hidden"
+        }`}
+        onClick={() => openModal()}
+      >
+        <ContractForm onClose={closeModal} />
+      </div>
+      <PricingHeroBlock />
+      <TopReviewBlock />
+      <OrderNowAndGetItBlock />
+      <BonusesBlock />
+      <PricingDiscountBlock />
+      <HowItWorkBlock />
+      <PricingCTAButtonBlock openModal={openModal} />
+      <ExampleStoresBlock />
+      <ReviewsBlock />
+      <CreateEStoreBlock openModal={openModal} />
+      <FAQBlock />
+      <CTABannerBlock />
+    </Layout>
+  )
 }

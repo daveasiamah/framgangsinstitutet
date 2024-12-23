@@ -29,7 +29,7 @@ export const headerData: HeaderData = {
       id: 4,
       imageUrl: "/icons/header/4-briefcase.png",
       title: "Checkified Ads",
-      desc: "Checkified Ads",
+      desc: "Få marknadsföring videos",
       link: "/annonser",
     },
     {
@@ -43,6 +43,6 @@ export const headerData: HeaderData = {
   // videoUrl: "/images/videos/INTRO.mp4",
   pricing: "Färdig E-butik",
   login: "Logga In",
-  getStarted: "Gå med idag",
+  getStarted: "Starta Gratis Provperiod",
   dashboard: "Dashboard",
 }

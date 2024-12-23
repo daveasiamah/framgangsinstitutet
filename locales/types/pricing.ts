@@ -52,15 +52,13 @@ export type PricingData = {
   faqBlueTitle: string
   faqData: FaqData[]
 
-  howItWorkData: {
+  howItWorksData: {
     title: string
-    subtitle: string
-    button: string
     items: {
-        id: number
-        imageUrl: string
-        desc1: string
-        desc2: string
+      id: number
+      imageUrl: string
+      title: string
+      description: string[]
     }[]
   }
   hero: {
@@ -76,19 +74,38 @@ export type PricingData = {
     items: string[]
   }
 
+  topReview: {
+    title: string
+    avatar: string
+    stars: number
+    time: string
+    verified: string
+    description: string
+  }
 
   bonuses: {
     title: string
-    cards: string[]
-    redPrice: string
-    bottomDesc: string
-    greenPrice: string
+    items: {
+      id: string
+      image: string
+      title: string
+      description: string
+      price: string
+    }[]
   }
+  exampleStoreTitle: string
+  discountPrice: {
+    redPrice: string
+    greenPrice: string
+    paymentMode: string
+  }
+  createMyStore: string
+  buyNowPrice: string
 
   orderNow: {
     title: string
     items: {
-      title: string
+      id: string
       desc: string
     }[]
   }
