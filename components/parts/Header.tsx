@@ -14,56 +14,6 @@ type Props = {
   setOpenSidebar: (value: boolean) => void
 }
 
-const AuthButton = ({
-  changeLanguage,
-  locale,
-  t,
-  className,
-}: {
-  changeLanguage: any
-  locale: any
-  t: any
-  className: string
-}) => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false)
-  const [showModal, setShowModal] = useState(false)
-
-  const closeModal = () => {
-    setShowModal(false)
-  }
-
-  useEffect(() => {
-    const idFromLocalStorage = localStorage.getItem("id")
-    if (idFromLocalStorage) {
-      setIsLoggedIn(true)
-    }
-  }, [])
-
-  return (
-    <div
-      className={`items-center justify-center lg:justify-end gap-2 mt-8 lg:mt-0 ${className}`}
-    >
-      {!isLoggedIn && (
-        <>
-          {/* <Link className="btn btn-link" href="/signin">
-            {t.headerData.login}
-          </Link> */}
-          <div className="" onClick={() => setShowModal(true)}>
-            {t.headerData.getStarted}
-          </div>
-        </>
-      )}
-      {isLoggedIn && (
-        <>
-          <Link className="btn btn-primary btn-shadow" href="/dashboard">
-            hem
-          </Link>
-        </>
-      )}
-    </div>
-  )
-}
-
 export default function Header({ openSidebar, setOpenSidebar }: Props) {
   const [openMenu, setOpenMenu] = useState(false)
   const [showModal, setShowModal] = useState(false)
@@ -222,7 +172,11 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
         {/* CTA Button */}
         <div className="hidden mt-2 mb-5 lg:mt-8 lg:flex items-center justify-center">
           <button
-            onClick={() => openModal()}
+            onClick={() => {
+              pathname === "/"
+                ? openModal()
+                : window.open("https://buy.stripe.com/3cscO09iSdoBgVOeUZ")
+            }}
             className="text-[#fff] bg-[#225AEA] font-jakarta h-full px-6 py-3 rounded-[7px] shadow-inner button-shadow"
             style={{
               boxShadow: `
@@ -231,7 +185,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
             }}
           >
             <p className="text-base font-semibold font-jakarta">
-              {t.headerData.getStarted}
+              {pathname === "/" ? "Starta Gratis Provperiod" : "Få din butik"}
             </p>
           </button>
         </div>

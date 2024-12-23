@@ -244,16 +244,23 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="w-50 mt-2 lg:mt-8 flex items-center justify-center ">
+              <div className="w-full mt-2 lg:mt-5 flex items-center justify-center ">
                 <button
                   onClick={openModal}
-                  className="text-[#fff] bg-[#225AEA] text-[14px] font-jakarta font-[600px] w-full h-[33px] md:w-1/4 rounded button-shadow"
+                  className="text-[#fff] bg-[#225AEA] font-jakarta h-full px-4 py-3 rounded-[7px] shadow-inner button-shadow"
+                  style={{
+                    boxShadow: `
+            inset 11px 1px 19.4px 0px rgba(255, 255, 255, 0.3), 
+            inset -4px 0px 5.8px 0px rgba(255, 255, 255, 0.25)`,
+                  }}
                 >
-                  Se gratis dropshipping kurs
+                  <p className="text-[14px] font-semibold font-jakarta">
+                    Starta Gratis Provperiod
+                  </p>
                 </button>
               </div>
 
-              <div className="icons-container_ann mt-2">
+              <div className="icons-container_ann mt-8">
                 <div className="icon-section_ann font-inter">
                   <span className="font-inter">
                     <img src="/img/calender.svg" alt="svg" />
@@ -339,11 +346,19 @@ export default function Home() {
                 potentiell exit. Det närmaste du kommer en doktorsexamen i
                 e-handel och digital marknadsföring.
               </p>
+
               <button
-                onClick={openModal}
-                className="h-[35px] text-white rounded pl-2 pr-2 border-0 bg-[#225AEA] md:w-[170] text-[12px] md:text-[12px] md:leading-[22px] mt-5 button-shadow font-inter"
+                onClick={() => openModal()}
+                className="text-[#fff] bg-[#225AEA] font-jakarta h-full px-4 py-2 mt-4 rounded-[7px] shadow-inner button-shadow"
+                style={{
+                  boxShadow: `
+            inset 11px 1px 19.4px 0px rgba(255, 255, 255, 0.3), 
+            inset -4px 0px 5.8px 0px rgba(255, 255, 255, 0.25)`,
+                }}
               >
-                Se Gratis Dropshipping Kurs
+                <p className="text-[14px] font-semibold font-jakarta">
+                  Prova Gratis
+                </p>
               </button>
             </div>
           </div>
@@ -445,10 +460,17 @@ export default function Home() {
               </ul>
 
               <button
-                onClick={openModal}
-                className="h-[26px] w-[161px] md:h-[36px] lg:[36px] text-white rounded pl-2 pr-2 border-0 bg-[#225AEA] md:w-50 text-[10px] leading-[10px] md:text-[12px] md:leading-[13px] mt-3 button-shadow"
+                onClick={() => openModal()}
+                className="text-[#fff] bg-[#225AEA] font-jakarta h-full px-4 py-2 mt-4 rounded-[7px] shadow-inner button-shadow"
+                style={{
+                  boxShadow: `
+            inset 11px 1px 19.4px 0px rgba(255, 255, 255, 0.3), 
+            inset -4px 0px 5.8px 0px rgba(255, 255, 255, 0.25)`,
+                }}
               >
-                Gå med gratis idag
+                <p className="text-[14px] font-semibold font-jakarta">
+                  Prova Gratis
+                </p>
               </button>
             </div>
           </div>
@@ -1290,7 +1312,7 @@ export default function Home() {
                 onClick={openModal}
                 className=" h-[23px] lg:h-[38px] rounded-[5px] btn-white mt-5 font-inter font-[500] text-[10px] md:text-[14px] w-full lg:w-[120px] text-[#151E3A] "
               >
-                Gå med gratis
+                Prova Gratis
               </button>
             </div>
           </ScrollReveal>
@@ -1312,12 +1334,11 @@ export default function Home() {
             <div className="text-center ">
               <div className="pl-10 pr-10">
                 <h1 className="text-white text-center text-[20px] leading-[48px] md:text-[24px] font-[500] font-jakarta mb-2 mt-4">
-                  Testa Checkified gratis
+                  Prova Checkified med en 7-dagars gratis provperiod
                 </h1>
                 <p className="mb-4 max-w-3xl mx-auto text-center lg:text-[16px] text-[12px] font-inter">
                   Perfekt för nybörjare som vill dyka in i dropshipping!
-                  Utforska vår kurs gratis, <br />
-                  utan förpliktelse – för alltid.
+                  Utforska vår kurs gratis, utan förpliktelse – för alltid.
                 </p>
                 <div className="lg:pl-8 lg:pr-8 mt-4">
                   <div className="flex justify-center flex-wrap lg:flex lg:justify-between">
@@ -1382,9 +1403,9 @@ export default function Home() {
 
               <button
                 onClick={openModal}
-                className="h-[28px] md:h-[38px] rounded-[5px] w-[300px] md:w-[150px] text-[10px] md:text-[14px] btn-white mb-6 lg:mt-10 mt-5 font-normal text-[#15133A]"
+                className="h-[28px] md:h-[38px] rounded-[5px] w-[300px] md:w-[150px] text-[10px] md:text-[14px] btn-white mb-6 lg:mt-10 mt-5 font-medium text-[#15133A]"
               >
-                Gå med gratis
+                Prova Gratis
               </button>
             </div>
           </div>

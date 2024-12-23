@@ -93,7 +93,7 @@ export type PricingData = {
       price: string
     }[]
   }
-
+  exampleStoreTitle: string
   discountPrice: {
     redPrice: string
     greenPrice: string

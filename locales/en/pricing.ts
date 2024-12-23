@@ -366,4 +366,21 @@ export const pricingData: PricingData = {
       },
     ],
   },
+  topReview: {
+    title: "Review",
+    avatar: "JM",
+    stars: 5,
+    time: "18 minutes ago",
+    verified: "Verified",
+    description:
+      "I'm really impressed with Checkifed's ready-made e-shop with 20 products and 5 video ads ready to be marketed! Thanks to their help, I now have a business that turns over 350,000 SEK. The shop was ready-built with professionally selected products, and I was able to start selling straight away. The best part was that I got access to a free course on how to run a successful dropshipping shop, which made it easy for me to understand everything from marketing to logistics. The support has also been fantastic – when I needed help, they have always been there. All I had to do afterwards was buy a domain name and start marketing. For me, who had no previous experience with e-commerce, this has been a real game changer. I highly recommend it to anyone who wants to start dropshipping!",
+  },
+  discountPrice: {
+    redPrice: "Normal Cost: 16,000 SEK+",
+    greenPrice: "Only 999.00 KR!",
+    paymentMode: "One-time payment",
+  },
+  exampleStoreTitle: "Example Stores",
+  buyNowPrice: "Buy for 999.00 SEK",
+  createMyStore: "Fix my store",
 }

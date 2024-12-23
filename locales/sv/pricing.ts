@@ -364,8 +364,8 @@ export const pricingData: PricingData = {
     greenPrice: "Bara 999.00 KR!",
     paymentMode: "Engångsbetalning",
   },
-
-  buyNowPrice: " Köp för 999,00 kr",
+  exampleStoreTitle: "Exempel På Butiker",
+  buyNowPrice: "Köp för 999,00 kr",
   createMyStore: "Fixa mig min butik",
 
   orderNow: {

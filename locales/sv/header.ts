@@ -29,7 +29,7 @@ export const headerData: HeaderData = {
       id: 4,
       imageUrl: "/icons/header/4-briefcase.png",
       title: "Checkified Ads",
-      desc: "Checkified Ads",
+      desc: "Få marknadsföring videos",
       link: "/annonser",
     },
     {

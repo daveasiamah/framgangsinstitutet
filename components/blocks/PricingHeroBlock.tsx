@@ -5,11 +5,7 @@ import Image from "next/image"
 import ScrollReveal from "@/components/transition/ScrollReveal"
 import React from "react"
 
-export default function PricingHeroBlock({
-  openModal,
-}: {
-  openModal: () => void
-}) {
+export default function PricingHeroBlock() {
   const router = useRouter()
   const { locale } = router
   const t = locale === "en" ? en : sv
@@ -29,13 +25,14 @@ export default function PricingHeroBlock({
           <ScrollReveal className="flex justify-center">
             <Image
               src="/prebuilt-store-icon.png"
+              className="w-[38px] h-[38px] md:w-[70px] md:h-[70px] "
               width={70}
               height={70}
               alt="store-icon"
             />
           </ScrollReveal>
-          <div className="max-w-5xl h-auto flex items-center justify-center text-center px-5 mb-6">
-            <h1 className="text-[22px] md:text-[48px] font-bold font-jakarta">
+          <div className="max-w-5xl flex items-center justify-center text-center px-5 mb-6 mt-2">
+            <h1 className="text-[22px] md:text-[48px] md:leading-[3.5rem] font-bold font-jakarta">
               {t.pricingData.hero.title}
             </h1>
           </div>
@@ -65,20 +62,19 @@ export default function PricingHeroBlock({
                 {t.homeData.heroVideoDesc}
               </h3>
             </div>
-
             {/* Hero Image */}
-            <Image
-              src="/store_hero_image.png"
-              alt="hero-image"
-              style={{
-                objectFit: "cover",
-                width: "100%",
-                height: "100%",
-              }}
-              width={706}
-              height={423}
-              className="rounded-[15px] z-0"
-            />
+            <div className="relative w-full h-[187px] md:h-[423px] pt-4">
+              <iframe
+                width="100%"
+                height="100%"
+                className="rounded-b-[15px]"
+                src="https://www.youtube.com/embed/GsdQ2RFxmsg?si=84E2DuCi6YLRVL5f"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
+            </div>
           </div>
         </div>
         <div className="icons-container_ann hidden md:block lg:block w-full mt-2">
@@ -98,20 +94,25 @@ export default function PricingHeroBlock({
           </div>
         </div>
         {/* Button */}
-        <div className="mt-2 mb-5 lg:mt-8 flex items-center justify-center">
-          <button
-            onClick={openModal}
-            className="text-[#fff] bg-[#225AEA] font-jakarta py-3 px-6 rounded-[7px] shadow-inner button-shadow"
-            style={{
-              boxShadow: `
+        <div className="mt-2 mb-5 lg:mt-8 flex w-full items-center justify-center">
+          <div className="w-full max-w-[739px] mt-2 mb-5 lg:mt-8 flex items-center justify-center">
+            <button
+              onClick={() =>
+                window.open("https://buy.stripe.com/3cscO09iSdoBgVOeUZ")
+              }
+              className="text-[#fff] bg-[#225AEA] font-jakarta w-full h-[67.32px] rounded-[7px] shadow-inner button-shadow"
+              style={{
+                boxShadow: `
             inset 11px 1px 19.4px 0px rgba(255, 255, 255, 0.3), 
             inset -4px 0px 5.8px 0px rgba(255, 255, 255, 0.25)`,
-            }}
-          >
-            <p className="font-[600] text-xs md:text-[16px] font-jakarta">
-              {t.headerData.getStarted}
-            </p>
-          </button>
+              }}
+            >
+              <p className="font-[600] text-[18px]">Få din butik 999 SEK!</p>
+              <p className="font-[500] text-[12px] text-[#D4CFCF]">
+                & Lås upp 6 gratis gåvor
+              </p>
+            </button>
+          </div>
         </div>
         {/* Horizontal line */}
         <Image

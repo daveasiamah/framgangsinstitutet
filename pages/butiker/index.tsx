@@ -56,11 +56,7 @@ export default function Pricing({}: Props) {
       >
         <ContractForm onClose={closeModal} />
       </div>
-      <PricingHeroBlock
-        openModal={() => {
-          window.open("https://buy.stripe.com/3cscO09iSdoBgVOeUZ")
-        }}
-      />
+      <PricingHeroBlock />
       <TopReviewBlock />
       <OrderNowAndGetItBlock />
       <BonusesBlock />
@@ -69,11 +65,9 @@ export default function Pricing({}: Props) {
       <PricingCTAButtonBlock openModal={openModal} />
       <ExampleStoresBlock />
       <ReviewsBlock />
-      <hr className="w-full border-spacing-x-0.5 border-[#888A9180] mb-4 mt-10" />
       <CreateEStoreBlock openModal={openModal} />
-      {/* FAQ section / Vanliga Fragor section */}
       <FAQBlock />
-      <CTABannerBlock openModal={openModal} />
+      <CTABannerBlock />
     </Layout>
   )
 }

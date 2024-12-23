@@ -21,7 +21,9 @@ export default function ReviewsBlock() {
         alt={"star"}
         src={"/recensioner_icon.svg"}
       />
-      <h1 className="m-0 mb-8 text-4xl">{t.pricingData.reviews.title}</h1>
+      <h1 className="m-0 mb-8 text-[22px] md:text-[32px]">
+        {t.pricingData.reviews.title}
+      </h1>
       <hr className="w-full border-spacing-x-0.5 border-[#888A9180] mb-4" />
 
       <Swiper
@@ -35,7 +37,7 @@ export default function ReviewsBlock() {
         pagination={{
           clickable: true,
         }}
-        className={`lg:w-[1080px] w-full ${styles.swiper}`}
+        className={`p-2 w-full ${styles.swiper}`}
       >
         {t.pricingData.reviews.items.map((item, index) => (
           <SwiperSlide key={index}>
@@ -45,6 +47,7 @@ export default function ReviewsBlock() {
           </SwiperSlide>
         ))}
       </Swiper>
+      <hr className="w-full border-spacing-x-0.5 border-[#888A9180] mt-8" />
     </section>
   )
 }

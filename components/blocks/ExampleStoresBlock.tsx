@@ -19,19 +19,19 @@ export default function ExampleStoresBlock() {
   return (
     <section className="flex flex-col items-center justify-center pb-[70px] mt-6">
       <div className="flex flex-col">
-        <h1 className="font-bold text-[22px] md:text-[32px] lg:text-[32px] mb-5 md:mb-10 lg:mb-10 text-center">
-          {t.pricingData.bonuses.title}
+        <h1 className="font-bold text-[22px] md:text-[32px] lg:text-[32px] mb-5 md:mb-10 lg:mb-10 text-center lg:self-start">
+          {t.pricingData.exampleStoreTitle}
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-10 lg:gap10">
+        <div className="grid w-full grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-10 lg:gap10">
           {images.map((image, index) => (
             <div
               key={index}
-              className="flex items-center justify-center w-full lg:w-[365px] lg:h-[325px] mx-auto py-4 px-2 shadow-[0px_0.5px_15px_0.5px_rgba(155,155,155,0.25)] rounded-[25px]"
+              className="flex items-center justify-center w-full lg:w-full lg:h-[325px] mx-auto py-4 px-2 shadow-[0px_0.5px_15px_0.5px_rgba(155,155,155,0.25)] rounded-[25px]"
             >
               <img
                 src={image}
                 alt="Store Image"
-                className="w-full lg:w-[350px] lg:h-[245px] max-w-[90%] h-auto object-contain"
+                className="w-full lg:w-full lg:h-[245px] max-w-[90%] h-full object-contain"
               />
             </div>
           ))}
