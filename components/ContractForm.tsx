@@ -23,10 +23,8 @@ import BlurCircle from "./graphic/BlurCircle"
 
 type FormValues = {
   firstName: string
-  lastName: string
   email: string
   phone: number
-  message: string
 }
 
 const schema = yup
