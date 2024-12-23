@@ -359,6 +359,15 @@ export const pricingData: PricingData = {
     ],
   },
 
+  discountPrice: {
+    redPrice: "Normal Kostnad: 16,000 SEK+",
+    greenPrice: "Bara 999.00 KR!",
+    paymentMode: "Engångsbetalning",
+  },
+
+  buyNowPrice: " Köp för 999,00 kr",
+  createMyStore: "Fixa mig min butik",
+
   orderNow: {
     title: "Beställ nu och du får",
     items: [

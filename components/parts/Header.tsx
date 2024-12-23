@@ -230,12 +230,12 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
             inset -4px 0px 5.8px 0px rgba(255, 255, 255, 0.25)`,
             }}
           >
-            <p className="text-[16px] font-semibold">
+            <p className="text-base font-semibold font-jakarta">
               {t.headerData.getStarted}
             </p>
           </button>
         </div>
-        {/* CTA Button End */}
+
         <button className="lg:hidden rounded-md text-primary bg-base-200">
           <Hamburger
             size={26}

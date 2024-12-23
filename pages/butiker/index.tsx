@@ -25,7 +25,9 @@ import sv from "@/locales/sv"
 import { CTABannerBlock } from "@/components/blocks/CTABannerBlock"
 import { TopReviewBlock } from "@/components/blocks/TopReviewBlock"
 import { PricingDiscountBlock } from "@/components/blocks/PricingDiscountBlock"
-import { PricingCTAButtonBlock } from "@/components/blocks/PricingCTABlock"
+import { PricingCTAButtonBlock } from "@/components/blocks/PricingCTAButtonBlock"
+import { CreateEStoreBlock } from "@/components/blocks/CreateEStoreBlock"
+import { FAQBlock } from "@/components/blocks/FAQBlock"
 
 type Props = {}
 
@@ -67,20 +69,10 @@ export default function Pricing({}: Props) {
       <PricingCTAButtonBlock openModal={openModal} />
       <ExampleStoresBlock />
       <ReviewsBlock />
-      <section>
-        <div className="relative py-10 full-bg mx-auto max-w-[900px]">
-          <ScrollReveal>
-            <Title
-              blackText={
-                t.pricingData.faqBlackTitle + " " + t.pricingData.faqBlueTitle
-              }
-              className="text-center"
-            />
-          </ScrollReveal>
-          <Accordion data={t.pricingData.faqData} />
-        </div>
-      </section>
+      <hr className="w-full border-spacing-x-0.5 border-[#888A9180] mb-4 mt-10" />
+      <CreateEStoreBlock openModal={openModal} />
       {/* FAQ section / Vanliga Fragor section */}
+      <FAQBlock />
       <CTABannerBlock openModal={openModal} />
     </Layout>
   )

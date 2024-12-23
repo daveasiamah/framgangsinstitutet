@@ -94,6 +94,14 @@ export type PricingData = {
     }[]
   }
 
+  discountPrice: {
+    redPrice: string
+    greenPrice: string
+    paymentMode: string
+  }
+  createMyStore: string
+  buyNowPrice: string
+
   orderNow: {
     title: string
     items: {

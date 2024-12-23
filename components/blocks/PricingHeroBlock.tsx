@@ -108,13 +108,15 @@ export default function PricingHeroBlock({
             inset -4px 0px 5.8px 0px rgba(255, 255, 255, 0.25)`,
             }}
           >
-            <p className="font-[600] text-[18px]">{t.headerData.getStarted}</p>
+            <p className="font-[600] text-xs md:text-[16px] font-jakarta">
+              {t.headerData.getStarted}
+            </p>
           </button>
         </div>
         {/* Horizontal line */}
         <Image
           src="/horizontal-line.png"
-          className="w-[726px] mb-2"
+          className="w-[726px] hidden md:block mb-2"
           width={100}
           height={100}
           alt="hr"
@@ -122,7 +124,7 @@ export default function PricingHeroBlock({
         {/* Payment options */}
         <Image
           src="/e-payments.svg"
-          className="w-[577px]"
+          className="w-[577px] hidden md:block"
           width={577}
           height={31}
           alt="payment-options"

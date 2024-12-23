@@ -1,3 +1,6 @@
+import en from "@/locales/en"
+import sv from "@/locales/sv"
+import { useRouter } from "next/router"
 import React from "react"
 
 export function PricingCTAButtonBlock({
@@ -5,8 +8,12 @@ export function PricingCTAButtonBlock({
 }: {
   openModal: () => void
 }) {
+  const router = useRouter()
+  const { locale } = router
+  const t = locale === "en" ? en : sv
+  const { buyNowPrice } = t.pricingData
   return (
-    <div className="w-50 flex items-center justify-center my-5">
+    <div className="w-full flex items-center justify-center my-5">
       <button
         onClick={openModal}
         className="text-[#fff] bg-[#225AEA] text-[14px] w-50 flex items-center justify-center font-jakarta font-bold w-[194px] h-[36px] rounded-[7px] shadow-inner button-shadow"
@@ -17,7 +24,7 @@ export function PricingCTAButtonBlock({
           borderRadius: "7px",
         }}
       >
-        Köp för 999,00 kr
+        {buyNowPrice}
       </button>
     </div>
   )

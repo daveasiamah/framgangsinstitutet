@@ -12,7 +12,7 @@ export default function OrderNowAndGetItBlock() {
   const { orderNow } = t.pricingData
 
   return (
-    <section className="flex flex-col py-4 px-6">
+    <section className="flex flex-col md:py-4 md:px-6">
       <h1 className="font-bold text-[22px] md:text-[32px] text-center md:text-left mb-4">
         {orderNow.title}
       </h1>
