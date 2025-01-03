@@ -1,5 +1,6 @@
 import en from "@/locales/en"
 import sv from "@/locales/sv"
+import Image from "next/image"
 import { useRouter } from "next/router"
 import React from "react"
 
@@ -9,43 +10,55 @@ export function CTABannerBlock() {
   const t = locale === "en" ? en : sv
 
   return (
-    <section className="lg:h-80 md:h-80 lg:px-1 lg:py-10 md:py-10 mb-8 text-white ">
+    <section className="mt-10 mb-8 text-white">
       <div className="relative left-0 right-0 flex flex-col items-center justify-center bg-[#2E56F5] rounded-[20px] md:px-4 lg:px-6 md:py-5 lg:py-5 back-background">
-        <div className="text-center ">
-          <div className="pl-10 pr-10">
-            <h1 className="text-white text-center text-[20px] leading-[48px] md:text-[24px] font-[500] font-jakarta mb-2 mt-4">
-              Redo att få din butik?
+        <div className="text-center">
+          <div className="px-2">
+            <h1 className="text-white text-center text-[20px] leading-7 md:text-[24px] fong-semibold font-jakarta mb-2 mt-6">
+              Prova Checkified med en 7-dagars gratis provperiod
             </h1>
-            <p className="mb-4 max-w-3xl mx-auto text-center lg:text-[16px] text-[12px] font-inter">
+            <p className="mb-4 max-w-[289px] md:max-w-lg mx-auto text-center lg:text-[16px] text-[12px] font-inter">
               Perfekt för nybörjare som vill dyka in i dropshipping! Säkra din
-              butik idag <br />
+              butik idag och gör försäljning imorgon.
             </p>
-            <div className="icons-container_ann hidden md:block lg:block w-full mt-2">
-              <div className="icon-section_ann text-white font-inter">
-                <span className="font-inter text-white">
-                  <img
+            <div className="flex flex-wrap w-full gap-8 p-1">
+              <div className="flex flex-wrap gap-3 justify-center md:justify-between text-white font-inter w-full">
+                <div className="flex items-center gap-[2px] text-white">
+                  <Image
                     src="/images/pricing/calendar-06.svg"
-                    className="w-full h-[24px]"
+                    className="w-[19px] md:w-[24px] md:h-[24px]"
                     alt="svg"
+                    width={24}
+                    height={24}
                   />
-                  Beprövade e-butiker
-                </span>
-                <span className="font-inter text-white">
-                  <img
+                  <p className="text-white text-[10px] md:text-[14px]">
+                    Beprövade e-butiker
+                  </p>
+                </div>
+                <div className="flex items-center gap-[2px] text-white">
+                  <Image
                     src="/images/pricing/coin-hand.svg"
-                    className="w-full h-[24px]"
+                    className="w-[19px] md:w-[24px] md:h-[24px]"
                     alt="svg"
+                    width={24}
+                    height={24}
                   />
-                  100% riskfritt
-                </span>
-                <span className="font-inter text-white">
-                  <img
+                  <p className="text-white text-[10px] md:text-[14px]">
+                    100% riskfritt
+                  </p>
+                </div>
+                <div className="flex items-center gap-[2px] text-white">
+                  <Image
                     src="/images/pricing/check-contained.svg"
-                    className="w-full h-[24px]"
+                    className="w-[19px] md:w-[24px] md:h-[24px]"
                     alt="svg"
+                    width={24}
+                    height={24}
                   />
-                  Verifierade partners
-                </span>
+                  <p className="text-white text-[10px] md:text-[14px]">
+                    Verifierade partners
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -54,7 +67,7 @@ export function CTABannerBlock() {
             onClick={() =>
               window.open("https://buy.stripe.com/3cscO09iSdoBgVOeUZ")
             }
-            className="h-[28px] md:h-[38px] max-w-[275px] rounded-[5px] w-[300px] md:w-[150px] text-[10px] md:text-[14px] btn-white mb-5 lg:mt-10 mt-5 font-normal text-[#15133A]"
+            className="h-[28px] md:h-[38px] max-w-[275px] rounded-[5px] w-5/6 md:w-[150px] text-[10px] md:text-[14px] btn-white mb-5 lg:mt-10 mt-5 font-normal text-[#15133A]"
           >
             Få din butik
           </button>

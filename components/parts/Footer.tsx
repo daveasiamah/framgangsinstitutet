@@ -17,49 +17,53 @@ export default function Footer({}: Props) {
 
   return (
     <footer className="bg-[#fff] text-[#434C69] py-14 relative mt-12 lg:mt-10">
-      <div className="container mx-auto">
-        <div className="flex flex-col lg:flex-row justify-between items-center text-left md:text-center lg:text-left lg:items-end gap-10 lg:gap-[120px]">
-          <div className="w-full lg:w-1/3">
-            <div className="flex align-items-center">
-              <Image
-                className="h-[39px] md:h-[53px] w-[150.86px] md:w-[198.86px] max-w-full mb-2"
-                src="/checkified_logo.svg"
-                alt="checkified"
-                height={53}
-                width={198.86}
-                priority
-              />
-            </div>
-            <p className="text-[#434C69] text-[14px] leading-[22px] md:text-[16px] font-[600] font-inter md:leading-[32px]">
-              Börja Med Dropshipping Sverige
-            </p>
+      <div className="container mx-auto border-2">
+        <div className="flex flex-col lg:flex-row justify-between items-center text-left md:text-center lg:text-left lg:items-end lg:gap-[120px]">
+          <div className="w-full h-full flex flex-col lg:w-1/3 items-start md:items-center lg:self-start">
+            <Image
+              className="mb-2 md:w-[153px] md:h-full"
+              src="/checkified-logo-main.svg"
+              alt="checkified"
+              height={51}
+              width={153}
+              priority
+            />
             <div>
+              <p className="text-[#434C69] text-[14px] leading-[22px] md:text-[16px] font-[600] font-inter md:leading-[32px]">
+                Börja Med Dropshipping Sverige
+              </p>
+            </div>
+
+            {/* Partner Logos Section */}
+            <div className="flex flex-col">
               <img
-                className=" md:h-[51px] md:w-[167px] w-[155px] h-[51px]"
+                className="md:h-[51px] md:w-[167px] w-[155px] h-[51px]"
                 src="/shopifypartner.svg"
-                alt="checkified"
+                alt="Shopify Partner"
               />
               <img
+                className="md:h-[51px] md:w-[167px] w-[155px] h-[51px]"
                 src="/stripe.svg"
-                alt="checkified"
-                className=" md:h-[51px] md:w-[167px] w-[155px] h-[51px]"
+                alt="Stripe Partner"
               />
               <img
-                className=" md:h-[51px] md:w-[167px] w-[155px] h-[51px]"
+                className="md:h-[51px] md:w-[167px] w-[155px] h-[51px]"
                 src="/google.svg"
-                alt="checkified"
-                height={27}
-                width={167}
+                alt="Google Partner"
               />
             </div>
           </div>
+
+          {/* Links Section */}
           <div className="w-full lg:w-1/2 grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-[90px] footer-links mt-10 lg:mt-0">
             <div>
-              <h4 className="text-xl font-jakarta">Produkter</h4>
+              <h5 className="font-bold text-[22px] leading-[22px] md:leading-[32px] mb-[10px] md:mb-[20px] font-jakarta">
+                Produkter
+              </h5>
               <ul>
                 <li>
                   <Link
-                    className="hover:underline underline-offset-4 md:text-[16px] font-[500] font-inter"
+                    className="hover:underline underline-offset-4 text-xs md:text-[16px] font-[500] font-inter"
                     href="/skool"
                   >
                     Dropshipping Kurs
@@ -67,7 +71,7 @@ export default function Footer({}: Props) {
                 </li>
                 <li>
                   <Link
-                    className="hover:underline underline-offset-4 md:text-[16px] font-[500] font-inter"
+                    className="hover:underline underline-offset-4 text-xs md:text-[16px] font-[500] font-inter"
                     href="/butiker"
                   >
                     Färdig E-Butik
@@ -75,7 +79,7 @@ export default function Footer({}: Props) {
                 </li>
                 <li>
                   <Link
-                    className="hover:underline underline-offset-4 md:text-[16px] font-[500] font-inter"
+                    className="hover:underline underline-offset-4 text-xs md:text-[16px] font-[500] font-inter"
                     href="/annonser"
                   >
                     Dropshipping Ads
@@ -83,7 +87,7 @@ export default function Footer({}: Props) {
                 </li>
                 <li>
                   <Link
-                    className="hover:underline underline-offset-4 md:text-[16px] font-[500] font-inter"
+                    className="hover:underline underline-offset-4 text-xs md:text-[16px] font-[500] font-inter"
                     href="https://whop.com/dropshipping-mentorskap"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -93,12 +97,16 @@ export default function Footer({}: Props) {
                 </li>
               </ul>
             </div>
+
+            {/* Företag Section */}
             <div>
-              <h4 className="text-xl font-jakarta">Företag</h4>
+              <h5 className="font-bold text-[22px] leading-[22px] md:leading-[32px] mb-[10px] md:mb-[20px] font-jakarta">
+                Företag
+              </h5>
               <ul>
                 <li>
                   <Link
-                    className="hover:underline underline-offset-4 md:text-[16px] font-[500] font-inter"
+                    className="hover:underline underline-offset-4 text-xs md:text-[16px] font-[500] font-inter"
                     href="/about"
                   >
                     Om oss
@@ -106,7 +114,7 @@ export default function Footer({}: Props) {
                 </li>
                 <li>
                   <Link
-                    className="hover:underline underline-offset-4 md:text-[16px] font-[500] font-inter"
+                    className="hover:underline underline-offset-4 text-xs md:text-[16px] font-[500] font-inter"
                     href="/butiker"
                   >
                     Affiliate
@@ -114,12 +122,16 @@ export default function Footer({}: Props) {
                 </li>
               </ul>
             </div>
+
+            {/* Resurser Section */}
             <div>
-              <h4 className="text-xl font-jakarta">Resurser</h4>
+              <h5 className="font-bold text-[22px] leading-[22px] md:leading-[32px] mb-[10px] md:mb-[20px] font-jakarta">
+                Resurser
+              </h5>
               <ul>
                 <li>
                   <Link
-                    className="hover:underline underline-offset-4 md:text-[16px] font-[500] font-inter"
+                    className="hover:underline underline-offset-4 text-xs md:text-[16px] font-[500] font-inter"
                     href="/blog"
                   >
                     Blogg
@@ -127,7 +139,7 @@ export default function Footer({}: Props) {
                 </li>
                 <li>
                   <Link
-                    className="hover:underline underline-offset-4 md:text-[16px] font-[500] font-inter"
+                    className="hover:underline underline-offset-4 text-xs md:text-[16px] font-[500] font-inter"
                     href="/contact-us"
                   >
                     Kontakt
@@ -135,7 +147,7 @@ export default function Footer({}: Props) {
                 </li>
                 <li>
                   <Link
-                    className="hover:underline underline-offset-4 md:text-[16px] font-[500] font-inter"
+                    className="hover:underline underline-offset-4 text-xs md:text-[16px] font-[500] font-inter"
                     href="/university"
                   >
                     University
@@ -143,7 +155,7 @@ export default function Footer({}: Props) {
                 </li>
                 <li>
                   <Link
-                    className="hover:underline underline-offset-4 md:text-[16px] font-[500] font-inter"
+                    className="hover:underline underline-offset-4 text-xs md:text-[16px] font-[500] font-inter"
                     href="/faq"
                   >
                     FAQ
@@ -154,10 +166,11 @@ export default function Footer({}: Props) {
           </div>
         </div>
 
-        <hr className="my-12" />
+        <hr className="my-12 bg-slate-600" />
         <div className="flex flex-col lg:flex-row text-center lg:text-left justify-between items-center">
           <p className="mb-4 lg:mb-0 text-[12px] md:text-[14px] font-[500] font-inter order-3 md:order-1">
-            Copyright © {currentYear} Checkified. All rights reserved.
+            Copyright © {new Date().getFullYear()} Checkified. All rights
+            reserved.
           </p>
           <div className="flex justify-center flex-wrap lg:justify-start items-center gap-5 order-0 md:order-2">
             {socialMedia(24).map((data) => (
