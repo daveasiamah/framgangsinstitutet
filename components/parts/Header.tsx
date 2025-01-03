@@ -45,6 +45,19 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
     router.push(router.pathname, router.asPath, { locale })
   }
 
+  const getButtonTitle = (pathname: string) => {
+    switch (pathname) {
+      case "/":
+        return "Starta Gratis Provperiod"
+      case "/butiker":
+        return "Få din butik"
+      case "/annonser":
+        return "Få dina annonser"
+      default:
+        return "Starta Gratis Provperiod"
+    }
+  }
+
   const menuRef = useRef<HTMLLIElement | null>(null)
 
   const toggleMenu = () => {
@@ -105,24 +118,19 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
                   }`}
                 />
               </label>
+              {/* MegaMenu */}
               <div
-                className={`lg:absolute md:w-[99%] lg:w-[58.5%] ${
+                className={`lg:absolute ${
                   openMenu ? "lg:top-[100px] block" : "lg:top-[90px] hidden"
-                } lg:transform lg:-translate-x-1/2 lg:left-1/2 shadow-lg lg:p-8 z-10 flex flex-col lg:flex-row lg:h-auto rounded-lg gap-6 bg-base-100 overflow-auto transition-all duration-200 ease-in-out ${
-                  openMenu
-                    ? "h-[400px] p-8 shadow-none border"
-                    : "h-0 p-0 hidden"
+                } lg:transform lg:-translate-x-1/2 lg:left-1/2 shadow-lg lg:p-8 z-10 flex flex-col lg:flex-row lg:h-auto rounded-[30px] gap-6 bg-base-100 overflow-auto transition-all duration-200 ease-in-out ${
+                  openMenu ? "h-[400px] p-8 shadow-lg" : "h-0 p-0 hidden"
                 }`}
               >
-                <div className="flex flex-wrap gap-1 w-[100] md:w-[535px] lg:w-[535px]">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[22px]">
                   {t.headerData.megaMenuData.map((data, index) => (
-                    <Link
-                      key={data.id}
-                      href={data.link}
-                      className="w-[263.36px]"
-                    >
+                    <Link key={data.id} href={data.link}>
                       <div
-                        className={`mega-menu-list flex gap-6 hover:bg-base-200 p-2 rounded-lg items-center ${
+                        className={`flex gap-6 hover:bg-base-200 p-2 rounded-lg items-center ${
                           index === t.headerData.megaMenuData.length - 1
                             ? "order-first"
                             : ""
@@ -138,6 +146,12 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
                             priority
                           />
                         </div>
+                        <Image
+                          src="/images/menu-separator.svg"
+                          height={0}
+                          width={4}
+                          alt="separator"
+                        />
                         <div className="menu-content">
                           <h2 className="font-semibold text-left">
                             {data.title}
@@ -185,7 +199,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
             }}
           >
             <p className="text-base font-semibold font-jakarta">
-              {pathname === "/" ? "Starta Gratis Provperiod" : "Få din butik"}
+              {getButtonTitle(pathname)}
             </p>
           </button>
         </div>
