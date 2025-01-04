@@ -41,7 +41,7 @@ export const headerData: HeaderData = {
     },
     {
       id: 6,
-      imageUrl: "/icons/header/6-sms.png",
+      imageUrl: "/icons/header/2-clipboard.png",
       title: "Kontakta oss",
       desc: "Hör av dig till oss",
       link: "/contact-us",

@@ -120,23 +120,30 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
               </label>
               {/* MegaMenu */}
               <div
-                className={`lg:absolute ${
-                  openMenu ? "lg:top-[100px] block" : "lg:top-[90px] hidden"
-                } lg:transform lg:-translate-x-1/2 lg:left-1/2 shadow-lg lg:p-8 z-10 flex flex-col lg:flex-row lg:h-auto rounded-[30px] gap-6 bg-base-100 overflow-auto transition-all duration-200 ease-in-out ${
-                  openMenu ? "h-[400px] p-8 shadow-lg" : "h-0 p-0 hidden"
-                }`}
+                className={`absolute ${
+                  openMenu ? "top-[100px] block" : "top-[90px] hidden"
+                } transform -translate-x-1/2 left-1/2 shadow-lg p-4 md:p-6 lg:p-8 z-10 md:h-auto lg:h-auto w-11/12 md:w-5/6 lg:w-11/12 xl:w-4/6 3xl:w-1/2 rounded-[30px] 
+  gap-6 bg-base-100 overflow-auto transition-all duration-200 ease-in-out ${
+    openMenu ? "h-[400px] p-6 shadow-lg" : "h-0 p-0 hidden"
+  }`}
               >
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[22px]">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-4 lg:gap-[22px]">
                   {t.headerData.megaMenuData.map((data, index) => (
                     <Link key={data.id} href={data.link}>
                       <div
-                        className={`flex gap-6 hover:bg-base-200 p-2 rounded-lg items-center ${
+                        className={`flex gap-2 items-center hover:bg-base-200 p-2 rounded-lg ${
                           index === t.headerData.megaMenuData.length - 1
                             ? "order-first"
                             : ""
                         }`}
+                        style={{
+                          maxWidth: "339px",
+                          height: "58px",
+                          padding: "10px 6px",
+                        }}
                       >
-                        <div className="list-icon bg-base-200 p-2 rounded-lg">
+                        {/*Menu item icon */}
+                        <div className="list-icon bg-base-200 p-2 rounded-lg flex-shrink-0">
                           <Image
                             src={data.imageUrl}
                             alt="Mega menu icon"
@@ -146,17 +153,27 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
                             priority
                           />
                         </div>
+                        {/* Separator */}
                         <Image
                           src="/images/menu-separator.svg"
-                          height={0}
-                          width={4}
+                          height={25}
+                          width={2}
                           alt="separator"
+                          className="flex-shrink-0"
                         />
-                        <div className="menu-content">
-                          <h2 className="font-semibold text-left">
+                        <div className="menu-content w-full">
+                          <h2
+                            className="text-sm font-poppins font-semibold text-left truncate"
+                            style={{ lineHeight: "1.2" }}
+                          >
                             {data.title}
                           </h2>
-                          <p className="text-sm text-left">{data.desc}</p>
+                          <p
+                            className="text-xs font-poppins text-left text-gray-600 truncate"
+                            style={{ lineHeight: "1.1" }}
+                          >
+                            {data.desc}
+                          </p>
                         </div>
                       </div>
                     </Link>
