@@ -20,10 +20,10 @@ function Accordion({ data }: Props) {
       {data.map((item, index) => (
         <div
           key={item.id}
-          className="accordion-wrapper text-left bg-white px-6 rounded-lg cursor-pointer"
+          className="accordion-wrapper text-left bg-white px-6 shadow-sm rounded-lg cursor-pointer"
         >
           <div
-            className="cursor-pointer py-2 flex items-center gap-4"
+            className="cursor-pointer py-4 flex items-center gap-4"
             onClick={() => toggle(index)}
           >
             <img
@@ -33,7 +33,7 @@ function Accordion({ data }: Props) {
               }`}
               alt="arrow-icon"
             />
-            <h2 className="font-semibold lg:text-sm text-subtitle-dark font-jakarta">
+            <h2 className="font-semibold lg:text-lg text-subtitle-dark font-jakarta">
               {item.question}
             </h2>
           </div>
@@ -41,6 +41,7 @@ function Accordion({ data }: Props) {
             className={`overflow-hidden transition-all duration-300 ease-out`}
             style={{
               maxHeight: selected === index ? "1000px" : "0",
+              paddingBottom: selected === index ? "16px" : "0px",
             }}
           >
             <p className="text-[12px] md:text-[14px] ml-6 mt-2">
