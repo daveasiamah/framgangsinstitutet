@@ -23,9 +23,17 @@ const FAQ = () => {
       </Head>
       <div className="container mx-auto px-4 py-10">
         <section>
-          <div className="relative py-10 full-bg">
+          <div className="relative py-10">
             <ScrollReveal>
-              <h1 className="text-center font-jakarta text-[22px] md:text-[36px] md:leading-[40px] leading-[22px] font-[700] mb-10 mt-5">
+              <h1
+                className="text-center font-jakarta text-[22px] md:text-4xl md:leading-[40px] leading-[22px] font-[700] mb-10 mt-2"
+                style={{
+                  letterSpacing: "-1.92px",
+                  fontSize: "3rem",
+                  fontWeight: 600,
+                  lineHeight: 1.2,
+                }}
+              >
                 Vanliga Frågor
               </h1>
             </ScrollReveal>

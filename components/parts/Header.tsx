@@ -99,7 +99,8 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
         <nav
           className={`bg-base-100 absolute top-header-height ${
             openSidebar ? "left-0" : "left-[150%]"
-          } lg:static p-8 pb-10 lg:p-0 text-center w-full lg:w-auto lg:flex flex-col lg:flex-row items-center shadow-lg lg:shadow-none rounded-b-3xl lg:rounded-none transition-all duration-200 ease-linear max-h-screen`}
+          } lg:static p-8 pb-10 lg:p-0 text-center w-full lg:w-auto lg:flex flex-col lg:flex-row items-center shadow-lg 
+          lg:shadow-none rounded-b-3xl lg:rounded-none transition-all duration-200 ease-linear max-h-screen`}
         >
           <ul className="flex flex-col lg:flex-row gap-2 lg:gap-8 h-full">
             <li>
@@ -143,7 +144,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
                         }}
                       >
                         {/*Menu item icon */}
-                        <div className="list-icon bg-base-200 p-2 rounded-lg flex-shrink-0">
+                        <div className="p-2 rounded-lg shadow-md flex-shrink-0">
                           <Image
                             src={data.imageUrl}
                             alt="Mega menu icon"
@@ -156,8 +157,8 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
                         {/* Separator */}
                         <Image
                           src="/images/menu-separator.svg"
-                          height={25}
-                          width={2}
+                          height={0}
+                          width={3}
                           alt="separator"
                           className="flex-shrink-0"
                         />
