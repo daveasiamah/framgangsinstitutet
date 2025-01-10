@@ -45,6 +45,19 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
     router.push(router.pathname, router.asPath, { locale })
   }
 
+  const getButtonTitle = (pathname: string) => {
+    switch (pathname) {
+      case "/":
+        return "Starta Gratis Provperiod"
+      case "/butiker":
+        return "Få din butik"
+      case "/annonser":
+        return "Få dina annonser"
+      default:
+        return "Starta Gratis Provperiod"
+    }
+  }
+
   const menuRef = useRef<HTMLLIElement | null>(null)
 
   const toggleMenu = () => {
@@ -86,7 +99,8 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
         <nav
           className={`bg-base-100 absolute top-header-height ${
             openSidebar ? "left-0" : "left-[150%]"
-          } lg:static p-8 pb-10 lg:p-0 text-center w-full lg:w-auto lg:flex flex-col lg:flex-row items-center shadow-lg lg:shadow-none rounded-b-3xl lg:rounded-none transition-all duration-200 ease-linear max-h-screen`}
+          } lg:static p-8 pb-10 lg:p-0 text-center w-full lg:w-auto lg:flex flex-col lg:flex-row items-center shadow-lg 
+          lg:shadow-none rounded-b-3xl lg:rounded-none transition-all duration-200 ease-linear max-h-screen`}
         >
           <ul className="flex flex-col lg:flex-row gap-2 lg:gap-8 h-full">
             <li>
@@ -105,30 +119,32 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
                   }`}
                 />
               </label>
+              {/* MegaMenu */}
               <div
-                className={`lg:absolute md:w-[99%] lg:w-[58.5%] ${
-                  openMenu ? "lg:top-[100px] block" : "lg:top-[90px] hidden"
-                } lg:transform lg:-translate-x-1/2 lg:left-1/2 shadow-lg lg:p-8 z-10 flex flex-col lg:flex-row lg:h-auto rounded-lg gap-6 bg-base-100 overflow-auto transition-all duration-200 ease-in-out ${
-                  openMenu
-                    ? "h-[400px] p-8 shadow-none border"
-                    : "h-0 p-0 hidden"
-                }`}
+                className={`absolute ${
+                  openMenu ? "top-[100px] block" : "top-[90px] hidden"
+                } transform -translate-x-1/2 left-1/2 shadow-lg p-4 md:p-6 lg:p-8 z-10 md:h-auto lg:h-auto w-11/12 md:w-5/6 lg:w-11/12 xl:w-4/6 3xl:w-1/2 rounded-[30px] 
+  gap-6 bg-base-100 overflow-auto transition-all duration-200 ease-in-out ${
+    openMenu ? "h-[400px] p-6 shadow-lg" : "h-0 p-0 hidden"
+  }`}
               >
-                <div className="flex flex-wrap gap-1 w-[100] md:w-[535px] lg:w-[535px]">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-4 lg:gap-[22px]">
                   {t.headerData.megaMenuData.map((data, index) => (
-                    <Link
-                      key={data.id}
-                      href={data.link}
-                      className="w-[263.36px]"
-                    >
+                    <Link key={data.id} href={data.link}>
                       <div
-                        className={`mega-menu-list flex gap-6 hover:bg-base-200 p-2 rounded-lg items-center ${
+                        className={`flex gap-2 items-center hover:bg-base-200 p-2 rounded-lg ${
                           index === t.headerData.megaMenuData.length - 1
                             ? "order-first"
                             : ""
                         }`}
+                        style={{
+                          maxWidth: "339px",
+                          height: "58px",
+                          padding: "10px 6px",
+                        }}
                       >
-                        <div className="list-icon bg-base-200 p-2 rounded-lg">
+                        {/*Menu item icon */}
+                        <div className="p-2 rounded-lg shadow-md flex-shrink-0">
                           <Image
                             src={data.imageUrl}
                             alt="Mega menu icon"
@@ -138,11 +154,27 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
                             priority
                           />
                         </div>
-                        <div className="menu-content">
-                          <h2 className="font-semibold text-left">
+                        {/* Separator */}
+                        <Image
+                          src="/images/menu-separator.svg"
+                          height={0}
+                          width={3}
+                          alt="separator"
+                          className="flex-shrink-0"
+                        />
+                        <div className="menu-content w-full">
+                          <h2
+                            className="text-sm font-poppins font-semibold text-left truncate"
+                            style={{ lineHeight: "1.2" }}
+                          >
                             {data.title}
                           </h2>
-                          <p className="text-sm text-left">{data.desc}</p>
+                          <p
+                            className="text-xs font-poppins text-left text-gray-600 truncate"
+                            style={{ lineHeight: "1.1" }}
+                          >
+                            {data.desc}
+                          </p>
                         </div>
                       </div>
                     </Link>
@@ -185,7 +217,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
             }}
           >
             <p className="text-base font-semibold font-jakarta">
-              {pathname === "/" ? "Starta Gratis Provperiod" : "Få din butik"}
+              {getButtonTitle(pathname)}
             </p>
           </button>
         </div>

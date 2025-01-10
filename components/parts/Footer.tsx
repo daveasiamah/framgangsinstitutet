@@ -18,72 +18,55 @@ export default function Footer({}: Props) {
   return (
     <footer className="bg-[#fff] text-[#434C69] py-14 relative mt-12 lg:mt-10">
       <div className="container mx-auto">
-        <div className="flex flex-col lg:flex-row justify-between items-center text-left md:text-center lg:text-left lg:items-end gap-10 lg:gap-[120px]">
-          <div className="w-full lg:w-1/3">
-            <div className="flex align-items-center">
-              <Image
-                className="h-[39px] md:h-[53px] w-[150.86px] md:w-[198.86px] max-w-full mb-2"
-                src="/checkified_logo.svg"
-                alt="checkified"
-                height={53}
-                width={198.86}
-                priority
-              />
-            </div>
-            <p className="text-[#434C69] text-[14px] leading-[22px] md:text-[16px] font-[600] font-inter md:leading-[32px]">
+        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-10">
+          {/* Logo Section */}
+          <div className="w-full lg:w-1/3 flex flex-col items-start text-left">
+            <img
+              src="/checkified-logo-main.svg"
+              alt="checkified"
+              className="h-[48px] w-[213px] object-left object-contain"
+            />
+            <p className="text-[14px] md:text-[16px] font-semibold leading-[22px] md:leading-[32px]">
               Börja Med Dropshipping Sverige
             </p>
-            <div>
+
+            {/* Partner Logos */}
+            <div className="flex flex-col flex-wrap gap-2 mt-6">
               <img
-                className=" md:h-[51px] md:w-[167px] w-[155px] h-[51px]"
                 src="/shopifypartner.svg"
-                alt="checkified"
+                alt="Shopify Partner"
+                className="h-[27px] w-[166px] md:w-[167px]"
               />
               <img
                 src="/stripe.svg"
-                alt="checkified"
-                className=" md:h-[51px] md:w-[167px] w-[155px] h-[51px]"
+                alt="Stripe Partner"
+                className="h-[34px] w-[166px] md:w-[167px]"
               />
               <img
-                className=" md:h-[51px] md:w-[167px] w-[155px] h-[51px]"
                 src="/google.svg"
-                alt="checkified"
-                height={27}
-                width={167}
+                alt="Google Partner"
+                className="h-[44px] w-[166px] md:w-[167px]"
               />
             </div>
           </div>
-          <div className="w-full lg:w-1/2 grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-[90px] footer-links mt-10 lg:mt-0">
+
+          {/* Links Section */}
+          <div className="w-full lg:w-2/3 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-10">
+            {/* Produkter */}
             <div>
-              <h4 className="text-xl font-jakarta">Produkter</h4>
-              <ul>
+              <h5 className="font-bold font-jakarta text-xl mb-4">Produkter</h5>
+              <ul className="space-y-2 flex flex-col gap-3">
                 <li>
-                  <Link
-                    className="hover:underline underline-offset-4 md:text-[16px] font-[500] font-inter"
-                    href="/skool"
-                  >
-                    Dropshipping Kurs
-                  </Link>
+                  <Link href="/skool">Dropshipping Kurs</Link>
+                </li>
+                <li>
+                  <Link href="/butiker">Färdig E-Butik</Link>
+                </li>
+                <li>
+                  <Link href="/annonser">Dropshipping Ads</Link>
                 </li>
                 <li>
                   <Link
-                    className="hover:underline underline-offset-4 md:text-[16px] font-[500] font-inter"
-                    href="/butiker"
-                  >
-                    Färdig E-Butik
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className="hover:underline underline-offset-4 md:text-[16px] font-[500] font-inter"
-                    href="/annonser"
-                  >
-                    Dropshipping Ads
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className="hover:underline underline-offset-4 md:text-[16px] font-[500] font-inter"
                     href="https://whop.com/dropshipping-mentorskap"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -93,102 +76,83 @@ export default function Footer({}: Props) {
                 </li>
               </ul>
             </div>
+
+            {/* Företag */}
             <div>
-              <h4 className="text-xl font-jakarta">Företag</h4>
-              <ul>
+              <h5 className="font-bold font-jakarta text-lg mb-4">Företag</h5>
+              <ul className="space-y-2 flex flex-col gap-3">
                 <li>
-                  <Link
-                    className="hover:underline underline-offset-4 md:text-[16px] font-[500] font-inter"
-                    href="/about"
-                  >
-                    Om oss
-                  </Link>
+                  <Link href="/about">Om oss</Link>
                 </li>
                 <li>
-                  <Link
-                    className="hover:underline underline-offset-4 md:text-[16px] font-[500] font-inter"
-                    href="/butiker"
-                  >
-                    Affiliate
-                  </Link>
+                  <Link href="/butiker">Affiliate</Link>
                 </li>
               </ul>
             </div>
+
+            {/* Resurser */}
             <div>
-              <h4 className="text-xl font-jakarta">Resurser</h4>
-              <ul>
+              <h5 className="font-bold font-jakarta text-lg mb-4">Resurser</h5>
+              <ul className="space-y-2 flex flex-col gap-3">
                 <li>
-                  <Link
-                    className="hover:underline underline-offset-4 md:text-[16px] font-[500] font-inter"
-                    href="/blog"
-                  >
-                    Blogg
-                  </Link>
+                  <Link href="/blog">Blogg</Link>
                 </li>
                 <li>
-                  <Link
-                    className="hover:underline underline-offset-4 md:text-[16px] font-[500] font-inter"
-                    href="/contact-us"
-                  >
-                    Kontakt
-                  </Link>
+                  <Link href="/contact-us">Kontakt</Link>
                 </li>
                 <li>
-                  <Link
-                    className="hover:underline underline-offset-4 md:text-[16px] font-[500] font-inter"
-                    href="/university"
-                  >
-                    University
-                  </Link>
+                  <Link href="/university">University</Link>
                 </li>
                 <li>
-                  <Link
-                    className="hover:underline underline-offset-4 md:text-[16px] font-[500] font-inter"
-                    href="/faq"
-                  >
-                    FAQ
-                  </Link>
+                  <Link href="/faq">FAQ</Link>
                 </li>
               </ul>
             </div>
           </div>
         </div>
 
-        <hr className="my-12" />
-        <div className="flex flex-col lg:flex-row text-center lg:text-left justify-between items-center">
-          <p className="mb-4 lg:mb-0 text-[12px] md:text-[14px] font-[500] font-inter order-3 md:order-1">
+        <hr className="my-10 stroke-slate-400" />
+
+        {/* Bottom Section */}
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
+          {/* Copyright Section */}
+          <p className="text-sm md:order-1 order-1">
             Copyright © {currentYear} Checkified. All rights reserved.
           </p>
-          <div className="flex justify-center flex-wrap lg:justify-start items-center gap-5 order-0 md:order-2">
+
+          {/* Social Media Icons */}
+          <div className="flex gap-4 justify-center md:order-2 order-2">
             {socialMedia(24).map((data) => (
               <Link key={data.id} href={data.url} target="_blank">
-                <div className="rounded-lg hover:bg-white hover:text-primary text-[#225AEA]">
+                <div className="text-[#225AEA] hover:text-primary">
                   {data.logo}
                 </div>
               </Link>
             ))}
           </div>
-          <ul className="flex flex-wrap items-center justify-center gap-5 order-1 md:order-3">
+
+          {/* Links Section */}
+          <ul className="flex flex-wrap justify-center gap-4 md:order-3 order-3">
             <li>
               <Link
-                className="hover:underline underline-offset-4 text-[12px] md:text-[14px] font-[500] font-inter"
                 href="/cookie-policy"
+                className="hover:underline underline-offset-4 text-sm font-medium"
               >
                 Cookiepolicy
               </Link>
             </li>
             <li>
               <Link
-                className="hover:underline underline-offset-4 text-[12px] md:text-[14px] font-[500] font-inter"
                 href="/terms-of-service"
+                className="hover:underline underline-offset-4 text-sm font-medium"
               >
                 Allmänna villkor
               </Link>
             </li>
             <li>
               <Link
-                className="hover:underline underline-offset-4 text-[12px] md:text-[14px] font-[500] font-inter"
                 href="/privacy-policy"
+                className="hover:underline underline-offset-4 text-sm font-medium"
               >
                 Integritetspolicy
               </Link>

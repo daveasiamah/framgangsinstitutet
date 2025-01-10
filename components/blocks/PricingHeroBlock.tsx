@@ -32,7 +32,7 @@ export default function PricingHeroBlock() {
             />
           </ScrollReveal>
           <div className="max-w-5xl flex items-center justify-center text-center px-5 mb-6 mt-2">
-            <h1 className="text-[22px] md:text-[48px] md:leading-[3.5rem] font-bold font-jakarta">
+            <h1 className="text-[22px] md:text-[48px] md:leading-[55px] font-bold font-jakarta">
               {t.pricingData.hero.title}
             </h1>
           </div>
@@ -94,8 +94,8 @@ export default function PricingHeroBlock() {
           </div>
         </div>
         {/* Button */}
-        <div className="mt-2 mb-5 lg:mt-8 flex w-full items-center justify-center">
-          <div className="w-full max-w-[739px] mt-2 mb-5 lg:mt-8 flex items-center justify-center">
+        <div className="mt-2 mb-5 lg:mt-2 flex w-full items-center justify-center">
+          <div className="w-full max-w-[739px] mt-2 mb-5 lg:mt-2 flex items-center justify-center">
             <button
               onClick={() =>
                 window.open("https://buy.stripe.com/3cscO09iSdoBgVOeUZ")
