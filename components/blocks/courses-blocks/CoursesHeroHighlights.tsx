@@ -47,7 +47,7 @@ export const CoursesHeroHighlights: React.FC = () => {
           <h4 className="font-jakarta text-[1.6rem] font-extrabold text-[#151e3a] mt-4">
             {highlight.title}
           </h4>
-          <p className="font-inter text-[#707ba0] text-xs md:text-lg mt-2">
+          <p className="font-inter text-[#707ba0] text-sm md:text-lg mt-2">
             {highlight.description}
           </p>
         </div>
