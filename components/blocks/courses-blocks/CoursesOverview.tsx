@@ -1,6 +1,6 @@
 import React from "react"
 
-export const CoursesOverview = () => {
+export default function CoursesOverview() {
   return (
     <section className="flex flex-col items-center justify-center md:px-2 mt-14 bg-gray-50 text-center">
       <h1 className="text-[1.2rem] md:text-[1.4rem] lg:text-3xl font-extrabold font-jakarta text-[#151e3a] mb-6">

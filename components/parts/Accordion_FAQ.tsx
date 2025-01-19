@@ -8,13 +8,17 @@ type Props = {
   }[]
 }
 
+import Image from "next/image"
+
+// Replace <img> with <Image> in RightArrow component
 const RightArrow = React.memo(
   ({ index, selected }: { index: number; selected: number[] }) => {
     return (
       <span className="cursor-pointer inline-block">
-        <img
+        <Image
           src="/images/pricing/right-arrow.svg"
-          className={`w-[10px] h-[10px]`}
+          width={10}
+          height={10}
           style={{
             transform: selected.includes(index)
               ? "rotate(90deg)"
@@ -27,6 +31,7 @@ const RightArrow = React.memo(
     )
   }
 )
+RightArrow.displayName = "RightArrow"
 
 const AccordionContent = React.memo(
   ({ content, isSelected }: { content: string; isSelected: boolean }) => {
@@ -53,6 +58,7 @@ const AccordionContent = React.memo(
     )
   }
 )
+AccordionContent.displayName = "AccordionContent"
 
 function Accordion({ data }: Props) {
   const [selected, setSelected] = useState<number[]>([])

@@ -1,6 +1,6 @@
 import React from "react"
 
-export const WhoCanJoin = () => {
+export default function WhoCanJoin() {
   return (
     <section className="flex flex-col items-center justify-center md:py-6 gap-6 text-center">
       <h4 className="text-2xl md:text-[30px] lg:text-[40px] font-jakarta font-extrabold text-[#151e3a] mb-2 md:mb-2 md:self-center">
