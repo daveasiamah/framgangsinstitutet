@@ -30,7 +30,7 @@ const FAQ = () => {
                 style={{
                   letterSpacing: "-1.92px",
                   fontSize: "3rem",
-                  fontWeight: 600,
+                  fontWeight: "bold",
                   lineHeight: 1.2,
                 }}
               >

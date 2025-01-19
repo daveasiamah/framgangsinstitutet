@@ -1,7 +1,7 @@
 import { HeaderData } from "../types/header"
 
 export const headerData: HeaderData = {
-  university: "University",
+  university: "utbildningar",
   resources: "Resurser",
   megaMenuData: [
     {
