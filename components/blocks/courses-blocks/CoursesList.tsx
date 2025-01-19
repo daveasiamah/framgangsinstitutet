@@ -89,7 +89,7 @@ const courses = [
     tags: { distance: "Distans", new: "Nyhet" },
     videoInfo: {
       count: 15,
-      totalTime: 3.5,
+      totalTime: 4.5,
       level: "Avancerad",
       icons: {
         count: "/icons/courses/location.png",
