@@ -104,7 +104,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
         >
           <ul className="flex flex-col lg:flex-row gap-2 lg:gap-8 h-full">
             <li>
-              <Link className="btn btn-link" href="/university">
+              <Link className="btn btn-link" href="/utbildningar">
                 {t.headerData.university}
               </Link>
             </li>

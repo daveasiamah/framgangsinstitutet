@@ -101,7 +101,7 @@ export default function Footer({}: Props) {
                   <Link href="/contact-us">Kontakt</Link>
                 </li>
                 <li>
-                  <Link href="/university">University</Link>
+                  <Link href="/utbildningar">Utbildningar</Link>
                 </li>
                 <li>
                   <Link href="/faq">FAQ</Link>

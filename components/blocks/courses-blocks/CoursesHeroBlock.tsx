@@ -13,7 +13,7 @@ export default function CoursesHeroBlock() {
   const t = locale === "en" ? en : sv
 
   return (
-    <section className="relative hero-height pt-2 flex w-full flex-col justify-between items-center gap-10 mb-16">
+    <section className="relative hero-height flex w-full flex-col justify-between items-center gap-10 pt-10 mb-16">
       <div className="w-full text-center mb-6 md:mb-0 lg:mb-0 flex flex-col items-center">
         <div
           className="flex flex-col items-center w-full justify-center"
