@@ -1,25 +1,19 @@
-import React from "react"
+import React, { useEffect } from "react"
 import Image from "next/image"
+import Skeleton from "react-loading-skeleton"
 
-interface VideoInfo {
-  count: number
-  totalTime: number
-  level: string
-  icons: { count: string; time: string; level: string }
-}
-
-interface CourseProps {
-  id: number
-  imageUrl: string
-  tags?: { distance: string; new: string }
-  title: string
-  description: string
-  price: string
-  videoInfo?: VideoInfo
-}
+import { CourseProps } from "./types"
 
 const CourseCard = ({ course }: { course: CourseProps }) => {
-  const { videoInfo, price, description, title, tags, imageUrl } = course
+  const {
+    videoInfo,
+    price,
+    purchaseLink,
+    shortDescription,
+    title,
+    tags,
+    imageUrl,
+  } = course
 
   return (
     <div
@@ -28,24 +22,26 @@ const CourseCard = ({ course }: { course: CourseProps }) => {
     >
       {/* Image Section */}
       <div className="relative h-[170px] md:h-[190px]">
-        <Image
-          src={imageUrl}
-          alt="course image"
-          layout="fill"
-          objectFit="cover"
-          className="rounded-[20px] drop-shadow-2xl"
-        />
+        {
+          <Image
+            src={imageUrl}
+            alt="course image"
+            fill
+            style={{ objectFit: "cover" }}
+            className="rounded-[20px] drop-shadow-2xl"
+          />
+        }
         {/* Tags */}
         {tags && (
           <div className="absolute top-3 left-3 flex gap-2">
             {tags.distance && (
               <span className="bg-[#225AEA] text-white text-[0.625rem] font-bold py-1 px-3 rounded-full">
-                {tags.distance}
+                {tags?.distance}
               </span>
             )}
             {tags.new && (
               <span className="bg-[#E0E0E0] text-[#434C69] text-[0.625rem] font-bold py-1 px-3 rounded-full">
-                {tags.new}
+                {tags?.new}
               </span>
             )}
           </div>
@@ -60,47 +56,49 @@ const CourseCard = ({ course }: { course: CourseProps }) => {
             <>
               <div className="flex items-center gap-1">
                 <img
-                  src={videoInfo.icons.count}
+                  src={videoInfo?.icons?.count}
                   alt="videos"
                   className="w-3 h-3"
                 />
-                <span>{videoInfo.count} videos</span>
+                <span>{videoInfo?.count} videos</span>
               </div>
               <div className="flex items-center gap-1">
                 <img
-                  src={videoInfo.icons.time}
+                  src={videoInfo?.icons?.time}
                   alt="total time"
                   className="w-3 h-3"
                 />
-                <span>{videoInfo.totalTime} h</span>
+                <span>{videoInfo?.totalTime} h</span>
               </div>
               <div className="flex items-center gap-1">
                 <img
-                  src={videoInfo.icons.level}
+                  src={videoInfo?.icons?.level}
                   alt="level"
                   className="w-3 h-3"
                 />
-                <span>{videoInfo.level}</span>
+                <span>{videoInfo?.level}</span>
               </div>
             </>
           )}
         </div>
 
         {/* Title */}
-        <h4 className="font-bold text-base md:text-[1.25rem] text-[#151E3A] mt-4 mb-2">
+        <h4 className="font-bold font-jakarta text-base md:text-[1.25rem] text-[#151E3A] mt-4 mb-2">
           {title}
         </h4>
 
         {/* Description */}
         <p className="font-medium text-sm md:text-[0.875rem] text-[#151E3A] line-clamp-2 overflow-hidden">
-          {description}
+          {shortDescription}
         </p>
       </div>
 
       {/* Price */}
-      <button className="w-full py-2 bg-[#225AEA] text-white font-semibold rounded-xl">
-        {price}
-      </button>
+      <a href={purchaseLink} target="_blank" rel="noopener noreferrer">
+        <button className="w-full py-2 bg-[#225AEA] text-white font-semibold rounded-xl">
+          {price} {"SEK"}
+        </button>
+      </a>
     </div>
   )
 }

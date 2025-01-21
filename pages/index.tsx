@@ -529,9 +529,11 @@ export default function Home() {
                             loading="lazy"
                           />
                         </span>
-                        Engångskostnad
+                        Månadskostnad
                       </div>
-                      <small className="lg:text-[11px] text-[9px]">0 kr</small>
+                      <small className="lg:text-[11px] text-[9px]">
+                        499 kr
+                      </small>
                     </div>
                   </li>
                   <li className="mt-4 text-[11px] lg:text-[12px]">
@@ -637,10 +639,10 @@ export default function Home() {
                             loading="lazy"
                           />
                         </span>
-                        Månadskostnad
+                        Engångskostnad
                       </div>
                       <small className="lg:text-[11px] text-[9px]">
-                        1500 kr
+                        3995 kr
                       </small>
                     </div>
                   </li>
@@ -749,10 +751,10 @@ export default function Home() {
                             loading="lazy"
                           />
                         </span>
-                        Månadskostnad
+                        Engångskostnad
                       </div>
                       <small className="lg:text-[11px] text-[9px]">
-                        250 kr
+                        7995 kr
                       </small>
                     </div>
                   </li>
