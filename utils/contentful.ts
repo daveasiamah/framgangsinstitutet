@@ -1,4 +1,5 @@
 import { createClient } from "contentful"
+import { Document } from "@contentful/rich-text-types"
 
 const client = createClient({
   space: `${process.env.CONTENTFUL_SPACE_ID}`,
@@ -61,6 +62,53 @@ function formatBlogPostEntries(entries: any) {
   }))
 }
 
+export async function fetchCourseBySlug(slug: string) {
+  try {
+    const entries = await client.getEntries({
+      content_type: "courses",
+      "fields.slug": slug,
+      limit: 1, // Fetch only the single course with the matching slug
+    })
+
+    if (entries.items.length === 0) {
+      return null // Return null if no course matches the slug
+    }
+
+    const formattedEntries = entries.items.map((entry: any) => {
+      // Extract the "value" from the nested structure in shortDescription
+      const shortDescriptionContent = entry.fields.shortDescription?.content
+      const shortDescription =
+        shortDescriptionContent?.[0]?.content?.[0]?.value || ""
+
+      // Ensure longDescription is properly returned
+      const longDescription = entry.fields.longDescription as
+        | Document
+        | undefined
+
+      return {
+        id: entry.sys.id,
+        title: entry.fields.title,
+        shortDescription: shortDescription,
+        longDescription: longDescription,
+        imageUrl: `https:${entry.fields.imageUrl?.fields?.file?.url}`,
+        price: entry.fields.price,
+        slug: entry.fields.slug,
+        purchaseLink: entry.fields.purchaseLink,
+        videoInfo: entry.fields.videoInfo.videoInfo || {
+          count: 0,
+          totalTime: 0,
+          level: "",
+          icons: { count: "", time: "", level: "" },
+        },
+      }
+    })
+    return formattedEntries
+  } catch (error) {
+    console.error("Error fetching course by slug:", error)
+    return null
+  }
+}
+
 export async function getCourses() {
   try {
     const entries = await client.getEntries({
@@ -76,9 +124,10 @@ export async function getCourses() {
         id: entry.sys.id,
         title: entry.fields.title,
         shortDescription: shortDescription,
-        longDescription: shortDescription,
+        longDescription: entry.fields.longDescription,
         imageUrl: `https:${entry.fields.imageUrl?.fields?.file?.url}`,
         price: entry.fields.price,
+        slug: entry.fields.slug,
         purchaseLink: entry.fields.purchaseLink,
         videoInfo: entry.fields.videoInfo.videoInfo || {
           count: 0,

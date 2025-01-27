@@ -1,24 +1,34 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
+import { useRouter } from "next/router"
+import Skeleton from "react-loading-skeleton"
+import "react-loading-skeleton/dist/skeleton.css"
+
 import CourseCard from "./CourseCard"
 import CoursePageTitle from "@/components/parts/CoursePageTitle"
-import { useEffect, useState } from "react"
 import { getCourses } from "@/utils/contentful"
-import { CourseProps } from "./types"
+import { Course } from "./types"
 
-function CoursesList() {
-  const [courses, setCourses] = useState<CourseProps[]>([])
+const CoursesList = () => {
+  const [courses, setCourses] = useState<Course[]>([])
+  const [isLoading, setIsLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+  const router = useRouter()
 
   useEffect(() => {
     const fetchCourses = async () => {
+      setIsLoading(true)
+      setError(null)
       try {
         const allCourses = await getCourses()
-        if (allCourses) {
+        if (allCourses && allCourses.length > 0) {
           setCourses(allCourses)
         } else {
-          console.error("Failed to fetch courses")
+          setError("No courses found.")
         }
-      } catch (error) {
-        console.error("Error fetching courses:", error)
+      } catch (err) {
+        setError("Failed to fetch courses. Please try again later.")
+      } finally {
+        setIsLoading(false)
       }
     }
 
@@ -27,14 +37,47 @@ function CoursesList() {
 
   return (
     <section className="w-full">
-      {/* Section Title */}
       <CoursePageTitle blackText="Populära" blueText="utbildningar" />
 
-      {/* Courses Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 gap-6 place-items-center mt-8 mb-8">
-        {courses.map((course: CourseProps) => (
-          <CourseCard course={course} key={course.id} />
-        ))}
+        {isLoading &&
+          Array.from({ length: 6 }).map((_, i) => (
+            <div
+              key={i}
+              className="flex flex-col max-w-[345px] min-w-[345px] max-h-[365px] md:max-h-[433px] lg:min-w-[396px] lg:min-h-[433px] xl:min-w-[396px] xl:min-h-[433px] 2xl:min-w-[463px] 2xl:min-h-[443px] px-4 pt-5 pb-5 border rounded-[29px]"
+              style={{ borderColor: "#BBBBBF" }}
+            >
+              <Skeleton height="170px" className="rounded-[20px]" />
+              <div className="mt-3">
+                <Skeleton width="60%" height="20px" />
+                <Skeleton width="40%" height="20px" className="mt-1" />
+              </div>
+              <Skeleton height="24px" width="80%" className="mt-4 mb-2" />
+              <Skeleton height="16px" width="90%" className="mb-1" />
+              <Skeleton height="16px" width="85%" />
+              <Skeleton
+                height="40px"
+                width="100%"
+                className="mt-3 rounded-xl"
+              />
+            </div>
+          ))}
+
+        {!isLoading &&
+          !error &&
+          courses.map((course: Course) => (
+            <div
+              key={course.id}
+              onClick={() => router.push(`/utbildningar/${course.slug}`)}
+              className="cursor-pointer"
+            >
+              <CourseCard course={course} />
+            </div>
+          ))}
+
+        {!isLoading && error && (
+          <p className="text-center text-red-500 font-semibold">{error}</p>
+        )}
       </div>
     </section>
   )

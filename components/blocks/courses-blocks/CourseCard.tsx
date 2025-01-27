@@ -2,22 +2,14 @@ import React, { useEffect } from "react"
 import Image from "next/image"
 import Skeleton from "react-loading-skeleton"
 
-import { CourseProps } from "./types"
+import { Course } from "./types"
 
-const CourseCard = ({ course }: { course: CourseProps }) => {
-  const {
-    videoInfo,
-    price,
-    purchaseLink,
-    shortDescription,
-    title,
-    tags,
-    imageUrl,
-  } = course
+const CourseCard = ({ course }: { course: Course }) => {
+  const { videoInfo, price, shortDescription, title, tags, imageUrl } = course
 
   return (
     <div
-      className="flex flex-col max-w-[345px] min-w-[345px] max-h-[365px] md:max-h-[433px] lg:min-w-[396px] lg:min-h-[433px] xl:min-w-[396px] xl:min-h-[433px] 2xl:min-w-[463px] 2xl:min-h-[443px] px-4 pt-5 pb-5 border rounded-[29px] overflow-hidden"
+      className="flex flex-col max-w-[345px] min-w-[345px] max-h-[365px] md:max-h-[433px] lg:min-w-[396px] lg:min-h-[433px] xl:min-w-[396px] xl:min-h-[433px] 2xl:min-w-[463px] 2xl:min-h-[443px] px-4 pt-5 pb-5 border rounded-[29px] cursor-pointer overflow-hidden"
       style={{ borderColor: "#BBBBBF" }}
     >
       {/* Image Section */}
@@ -93,12 +85,10 @@ const CourseCard = ({ course }: { course: CourseProps }) => {
         </p>
       </div>
 
-      {/* Price */}
-      <a href={purchaseLink} target="_blank" rel="noopener noreferrer">
-        <button className="w-full py-2 bg-[#225AEA] text-white font-semibold rounded-xl">
-          {price} {"SEK"}
-        </button>
-      </a>
+      {/* Learn more */}
+      <button className="w-full py-2 bg-[#225AEA] text-white font-semibold rounded-xl">
+        <p className="uppercase">lär dig mer</p>
+      </button>
     </div>
   )
 }
