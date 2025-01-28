@@ -16,7 +16,7 @@ export default function Courses({}: Props) {
   const t = locale === "en" ? en : sv
 
   return (
-    <Layout headTitle={"Courses"}>
+    <Layout headTitle={"Utbildningar"}>
       <section className="w-full">
         {/* Courses Hero Section */}
         <CoursesHeroBlock />

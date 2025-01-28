@@ -23,7 +23,7 @@ export const headerData: HeaderData = {
       imageUrl: "/icons/header/teacher.svg",
       title: "Dropshipping Mentorskap",
       desc: "Få privat coachningsprogram",
-      link: "/dropshipping",
+      link: "https://checkified.se/dropshipping-mentorskap",
     },
     {
       id: 4,
@@ -44,7 +44,7 @@ export const headerData: HeaderData = {
       imageUrl: "/icons/header/bookmark.svg",
       title: "Checkified Vendum",
       desc: "Lär dig skapa en online kurs",
-      link: "/vendum",
+      link: "https://checkified.se/skapa-en-egen-online-kurs ",
     },
     {
       id: 7,
@@ -65,7 +65,7 @@ export const headerData: HeaderData = {
       imageUrl: "/icons/header/crown.svg",
       title: "Skool Community",
       desc: "Community om entreprenörskap",
-      link: "/community",
+      link: "https://skool.com/dropshipping-sverige-2012",
     },
   ],
   // videoUrl: "/images/videos/INTRO.mp4",

@@ -58,6 +58,8 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
     }
   }
 
+  const excludedPaths = ["/annonser", "/", "/butiker"]
+
   const menuRef = useRef<HTMLLIElement | null>(null)
 
   const toggleMenu = () => {
@@ -205,9 +207,11 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
         <div className="hidden mt-2 mb-5 lg:mt-8 lg:flex items-center justify-center">
           <button
             onClick={() => {
-              pathname === "/"
-                ? openModal()
-                : window.open("https://buy.stripe.com/3cscO09iSdoBgVOeUZ")
+              if (!excludedPaths.includes(pathname)) {
+                openModal() // Open modal for all paths except "/annonser", "/" and "/butiker/"
+              } else {
+                window.open("https://buy.stripe.com/3cscO09iSdoBgVOeUZ")
+              }
             }}
             className="text-[#fff] bg-[#225AEA] font-jakarta h-full px-6 py-3 rounded-[7px] shadow-inner button-shadow"
             style={{

@@ -1,135 +1,83 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
+import { useRouter } from "next/router"
+import Skeleton from "react-loading-skeleton"
+import "react-loading-skeleton/dist/skeleton.css"
+
 import CourseCard from "./CourseCard"
 import CoursePageTitle from "@/components/parts/CoursePageTitle"
+import { getCourses } from "@/utils/contentful"
+import { Course } from "./types"
 
-const courses = [
-  {
-    id: 1,
-    title: "E-commerce Manager",
-    description:
-      "I den här kursen lär du lära dig att starta e-handel med fördjupad kunskap för att växa försäljning.",
-    price: "9995 SEK",
-    imageUrl: "/images/courses/course-image-placeholder.png",
-    tags: { distance: "Distans", new: "Nyhet" },
-    videoInfo: {
-      count: 18,
-      totalTime: 4.5,
-      level: "För nybörjare",
-      icons: {
-        count: "/icons/courses/location.png",
-        time: "/icons/courses/direct-right.png",
-        level: "/icons/courses/shield-tick.png",
-      },
-    },
-  },
-  {
-    id: 2,
-    title: "Social Media Marketing",
-    description:
-      "Lär dig att hantera sociala medier och bygga starka kampanjer som driver tillväxt.",
-    price: "8495 SEK",
-    imageUrl: "/images/courses/course-image-placeholder.png",
-    tags: { distance: "Distans", new: "Nyhet" },
-    videoInfo: {
-      count: 20,
-      totalTime: 5,
-      level: "Mellanliggande",
-      icons: {
-        count: "/icons/courses/location.png",
-        time: "/icons/courses/direct-right.png",
-        level: "/icons/courses/shield-tick.png",
-      },
-    },
-  },
-  {
-    id: 3,
-    title: "SEO Specialist",
-    description:
-      "Förbättra din webbplats ranking och dra in mer trafik genom SEO-strategier.",
-    price: "7595 SEK",
-    imageUrl: "/images/courses/course-image-placeholder.png",
-    tags: { distance: "Distans", new: "Nyhet" },
-    videoInfo: {
-      count: 15,
-      totalTime: 3.5,
-      level: "Avancerad",
-      icons: {
-        count: "/icons/courses/location.png",
-        time: "/icons/courses/direct-right.png",
-        level: "/icons/courses/shield-tick.png",
-      },
-    },
-  },
-  {
-    id: 5,
-    title: "SEO Specialist",
-    description:
-      "Förbättra din webbplats ranking och dra in mer trafik genom SEO-strategier.",
-    price: "7595 SEK",
-    imageUrl: "/images/courses/course-image-placeholder.png",
-    tags: { distance: "Distans", new: "Nyhet" },
-    videoInfo: {
-      count: 15,
-      totalTime: 3.5,
-      level: "Avancerad",
-      icons: {
-        count: "/icons/courses/location.png",
-        time: "/icons/courses/direct-right.png",
-        level: "/icons/courses/shield-tick.png",
-      },
-    },
-  },
-  {
-    id: 6,
-    title: "SEO Specialist",
-    description:
-      "Förbättra din webbplats ranking och dra in mer trafik genom SEO-strategier.",
-    price: "7595 SEK",
-    imageUrl: "/images/courses/course-image-placeholder.png",
-    tags: { distance: "Distans", new: "Nyhet" },
-    videoInfo: {
-      count: 15,
-      totalTime: 4.5,
-      level: "Avancerad",
-      icons: {
-        count: "/icons/courses/location.png",
-        time: "/icons/courses/direct-right.png",
-        level: "/icons/courses/shield-tick.png",
-      },
-    },
-  },
-  {
-    id: 4,
-    title: "SEO Specialist",
-    description:
-      "Förbättra din webbplats ranking och dra in mer trafik genom SEO-strategier.",
-    price: "7595 SEK",
-    imageUrl: "/images/courses/course-image-placeholder.png",
-    tags: { distance: "Distans", new: "Nyhet" },
-    videoInfo: {
-      count: 15,
-      totalTime: 3.5,
-      level: "Avancerad",
-      icons: {
-        count: "/icons/courses/location.png",
-        time: "/icons/courses/direct-right.png",
-        level: "/icons/courses/shield-tick.png",
-      },
-    },
-  },
-]
+const CoursesList = () => {
+  const [courses, setCourses] = useState<Course[]>([])
+  const [isLoading, setIsLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+  const router = useRouter()
 
-function CoursesList() {
+  useEffect(() => {
+    const fetchCourses = async () => {
+      setIsLoading(true)
+      setError(null)
+      try {
+        const allCourses = await getCourses()
+        if (allCourses && allCourses.length > 0) {
+          setCourses(allCourses)
+        } else {
+          setError("No courses found.")
+        }
+      } catch (err) {
+        setError("Failed to fetch courses. Please try again later.")
+      } finally {
+        setIsLoading(false)
+      }
+    }
+
+    fetchCourses()
+  }, [])
+
   return (
     <section className="w-full">
-      {/* Section Title */}
       <CoursePageTitle blackText="Populära" blueText="utbildningar" />
 
-      {/* Courses Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 gap-6 place-items-center mt-8 mb-8">
-        {courses.map((course) => (
-          <CourseCard course={course} key={course.id} />
-        ))}
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 gap-6 place-items-center mt-8 mb-8">
+        {isLoading &&
+          Array.from({ length: 6 }).map((_, i) => (
+            <div
+              key={i}
+              className="flex flex-col max-w-[345px] min-w-[345px] max-h-[365px] md:max-h-[433px] lg:min-w-[396px] lg:min-h-[433px] xl:min-w-[396px] xl:min-h-[433px] 2xl:min-w-[463px] 2xl:min-h-[443px] px-4 pt-5 pb-5 border rounded-[29px]"
+              style={{ borderColor: "#BBBBBF" }}
+            >
+              <Skeleton height="170px" className="rounded-[20px]" />
+              <div className="mt-3">
+                <Skeleton width="60%" height="20px" />
+                <Skeleton width="40%" height="20px" className="mt-1" />
+              </div>
+              <Skeleton height="24px" width="80%" className="mt-4 mb-2" />
+              <Skeleton height="16px" width="90%" className="mb-1" />
+              <Skeleton height="16px" width="85%" />
+              <Skeleton
+                height="40px"
+                width="100%"
+                className="mt-3 rounded-xl"
+              />
+            </div>
+          ))}
+
+        {!isLoading &&
+          !error &&
+          courses.map((course: Course) => (
+            <div
+              key={course.id}
+              onClick={() => router.push(`/utbildningar/${course.slug}`)}
+              className="cursor-pointer"
+            >
+              <CourseCard course={course} />
+            </div>
+          ))}
+
+        {!isLoading && error && (
+          <p className="text-center text-red-500 font-semibold">{error}</p>
+        )}
       </div>
     </section>
   )

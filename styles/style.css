@@ -64,6 +64,9 @@ nav,
 section {
   display: block;
 }
+b {
+  font-family: "Segoe UI", sans-serif;
+}
 body {
   margin: 0;
   font-family: Nunito, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -2240,8 +2243,8 @@ fieldset:disabled a.btn {
 }
 .btn-primary {
   color: #fff;
-  background-color: #225AEA;
-  border-color: #225AEA;
+  background-color: #225aea;
+  border-color: #225aea;
 }
 .btn-primary:hover {
   color: #fff;
@@ -4410,7 +4413,7 @@ input[type="submit"].btn-block {
     display: inline-block;
     width: 100%;
   }
-  h1{
+  h1 {
     font-size: 14px !important;
     line-height: 20px;
   }
@@ -4984,7 +4987,7 @@ a.badge-dark:focus {
     margin-left: -1px;
     border-left-width: 1px;
   }
-  h1{
+  h1 {
     font-size: 14px !important;
     line-height: 20px;
   }
@@ -5415,7 +5418,7 @@ a.close.disabled {
   .modal-sm {
     max-width: 300px;
   }
-  h1{
+  h1 {
     font-size: 14px !important;
     line-height: 20px;
   }
@@ -6174,7 +6177,7 @@ button.bg-dark:hover {
   .d-sm-inline-flex {
     display: inline-flex !important;
   }
-  h1{
+  h1 {
     font-size: 14px !important;
     line-height: 20px;
   }
@@ -8810,7 +8813,7 @@ button.bg-dark:hover {
   .text-sm-center {
     text-align: center !important;
   }
-  h1{
+  h1 {
     font-size: 14px !important;
     line-height: 20px;
   }
