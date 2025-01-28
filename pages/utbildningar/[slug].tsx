@@ -55,7 +55,7 @@ const CourseDetailPage = ({ course }: { course: Course[] }) => {
         </div>
 
         {/* Right Column (Sidebar) */}
-        <div className="w-full lg:w-auto lg:min-w-[386px] mt-12 lg:mt-0 lg:pl-6 order-2 border-2 border-red-500">
+        <div className="w-full lg:w-auto lg:min-w-[386px] mt-12 lg:mt-0 lg:pl-6 order-2">
           <div className="flex flex-col items-center lg:sticky lg:top-[600px]">
             <h2 className="font-jakarta text-lg font-bold mb-4 text-center">
               Checkified Erbjudanden

@@ -482,6 +482,8 @@ export default function Home() {
               dropshipping resa
             </p>
           </ScrollReveal>
+
+          {/* Cards container */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             <div className="p-3 pt-5 pb-5 lg:p-5 rounded-[2rem] border border-1 border-[#BBBBBF]">
               <img
@@ -614,7 +616,10 @@ export default function Home() {
               </div>
               <button
                 onClick={() =>
-                  window.open("https://whop.com/dropshipping-sverige", "_blank")
+                  window.open(
+                    "https://whop.com/checkout/plan_UXvX61VjbhXV0",
+                    "_blank"
+                  )
                 }
                 className="h-[36px] md:h-[40px] text-white rounded-[7px] bg-[#225AEA] border-0 w-full  text-[14px] mt-5 mb-5"
               >
@@ -724,7 +729,7 @@ export default function Home() {
               <button
                 onClick={() =>
                   window.open(
-                    "https://whop.com/dropshipping-sverige-kurs",
+                    "https://whop.com/checkout/plan_bghrnuOeV21r0",
                     "_blank"
                   )
                 }
@@ -836,7 +841,7 @@ export default function Home() {
               <button
                 onClick={() =>
                   window.open(
-                    "https://whop.com/dropshipping-fardig-annons",
+                    "https://whop.com/checkout/plan_YvhNS2Gd4XP9j",
                     "_blank"
                   )
                 }
@@ -950,7 +955,7 @@ export default function Home() {
               <button
                 onClick={() =>
                   window.open(
-                    "https://whop.com/dropshipping-mentorskap",
+                    "https://whop.com/checkout/plan_iozJ6Y3UXcqzp",
                     "_blank"
                   )
                 }
@@ -1062,10 +1067,7 @@ export default function Home() {
               </div>
               <button
                 onClick={() =>
-                  window.open(
-                    "https://buy.stripe.com/3cscO09iSdoBgVOeUZ",
-                    "_blank"
-                  )
+                  window.open("https://buy.stripe.com/3cscO09iSdoBgVOeUZ")
                 }
                 className="h-[36px] md:h-[40px] text-white rounded-[7px] bg-[#225AEA] border-0 w-full  text-[14px] mt-5 mb-5"
               >

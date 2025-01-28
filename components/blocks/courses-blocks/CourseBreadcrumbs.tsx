@@ -23,13 +23,13 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ courseTitle }) => {
   ]
 
   return (
-    <nav className="text-sm mb-4" aria-label="Breadcrumb">
+    <nav className="text-sm mb-4 pl-4" aria-label="Breadcrumb">
       <ol className="flex items-center space-x-2">
         {breadcrumbs.map((breadcrumb, index) => (
           <li key={index} className="flex items-center">
             <a
               href={breadcrumb.href}
-              className="text-gray-400 hover:text-gray-700"
+              className="text-gray-400 font-jakarta hover:text-gray-700"
             >
               {breadcrumb.name}
             </a>
@@ -46,7 +46,7 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ courseTitle }) => {
               {">"}
             </span>
             <li className="text-gray-700 flex-1 min-w-0">
-              <span className="block truncate">{courseTitle}</span>
+              <span className="block truncate font-jakarta">{courseTitle}</span>
             </li>
           </>
         )}

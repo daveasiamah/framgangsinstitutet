@@ -9,7 +9,7 @@ const CourseCard = ({ course }: { course: Course }) => {
 
   return (
     <div
-      className="flex flex-col max-w-[345px] min-w-[345px] max-h-[365px] md:max-h-[433px] lg:min-w-[396px] lg:min-h-[433px] xl:min-w-[396px] xl:min-h-[433px] 2xl:min-w-[463px] 2xl:min-h-[443px] px-4 pt-5 pb-5 border rounded-[29px] cursor-pointer overflow-hidden"
+      className="flex flex-col max-w-[345px] min-w-[345px] max-h-[365px] md:min-h-full md:max-w-full lg:min-w-[463px] lg:min-h-[433px] xl:min-w-[380px] xl:min-h-[433px] 2xl:min-w-[483px] 2xl:min-h-[443px] px-4 pt-5 pb-5 border rounded-[29px] cursor-pointer overflow-hidden"
       style={{ borderColor: "#BBBBBF" }}
     >
       {/* Image Section */}
@@ -86,7 +86,7 @@ const CourseCard = ({ course }: { course: Course }) => {
       </div>
 
       {/* Learn more */}
-      <button className="w-full py-2 bg-[#225AEA] text-white font-semibold rounded-xl">
+      <button className="w-full py-3 lg:py-4 bg-[#225AEA] text-white font-semibold text-sm rounded-xl mt-4">
         <p className="uppercase">lär dig mer</p>
       </button>
     </div>

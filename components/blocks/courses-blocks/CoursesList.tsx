@@ -39,7 +39,7 @@ const CoursesList = () => {
     <section className="w-full">
       <CoursePageTitle blackText="Populära" blueText="utbildningar" />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 gap-6 place-items-center mt-8 mb-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 gap-6 place-items-center mt-8 mb-8">
         {isLoading &&
           Array.from({ length: 6 }).map((_, i) => (
             <div
