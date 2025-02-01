@@ -42,3 +42,80 @@ export const faqData: { id: number; question: string; answer: string }[] = [
       "Checkified är helt gratis och erbjuder en kostnadsfri kurs inom dropshipping. Utöver det finns tjänster som Checkified E-butiker, Checkified Ads, Platinum-kursen och Checkified Mentorskap. För att överleva som organisation samarbetar Checkified med flera partners",
   },
 ]
+
+export const faqPageData: { id: number; question: string; answer: string }[] = [
+  {
+    id: 1,
+    question: "Vad är Checkified?",
+    answer: `Checkified.se är ett ledande digitalt universitet inom e-handel och dropshipping, utformat för att stödja både blivande och etablerade entreprenörer i att bygga, lansera och skala framgångsrika onlinebutiker. 
+    \nMed Checkified.se kan du:\n
+    - Hitta vinnande produkter: Få tillgång till en kuraterad lista över lönsamma produkter.
+    - Utföra produktforskning: Hitta trendande produkter med hög försäljningspotential.
+    - Lansera färdiga butiker: Få en professionellt designad butik redo att sälja.
+    - Få färdiga annonser: Använd högkonverterande annonsmallar direkt.
+    - Arbeta med mentorer: Få personlig vägledning från erfarna dropshipping-experter.`,
+  },
+  {
+    id: 2,
+    question: "Finns det en gratis provperiod?",
+    answer:
+      "Absolut, du kan skapa ett konto med Checkified gratis. Vi erbjuder en 7-dagars testperiod som du kan avbryta när som helst.",
+  },
+  {
+    id: 3,
+    question: "Kan jag avbryta när som helst?",
+    answer:
+      "Ja, du kan säga upp din prenumeration när som helst. Om du säger upp din prenumeration kommer den att upphöra vid slutet av den aktuella perioden utan ytterligare avgifter.",
+  },
+  {
+    id: 4,
+    question: "Vilka betalningsmetoder accepterar du?",
+    answer: `Checkified accepterar följande betalningsmetoder genom säker betalningshantering:\n
+    - Visa
+    - Mastercard
+    - American Express
+    - Discover
+    - Diner’s Club
+    - JCB
+    - Kina UnionPay\n
+    **PayPal-betalningar accepteras inte för närvarande.**`,
+  },
+  {
+    id: 5,
+    question: "Vad är dropshipping?",
+    answer: `Dropshipping är en affärsmodell som gör att du kan sälja produkter utan att behöva köpa och fylla på lagret i förväg. \n
+    När du får en försäljning i din butik, ger du en leverantör orderinformationen och betalar för produkten och fraktkostnaden. Leverantören skickar därefter beställningen direkt till din kund. \n
+    På så sätt behöver du inte köpa in lager i förväg och det sänker tröskeln för att testa många produkter och hitta vinnare.`,
+  },
+  {
+    id: 6,
+    question: "Vad är Checkifieds prissättning?",
+    answer: `Checkified erbjuder en 7-dagars gratis provperiod. Därefter:\n
+    - 299 kr/månad
+    - 2790 kr/år\n
+    **Övriga tjänster:**\n
+    - Dropshipping Färdig Butik: 999 SEK
+    - Dropshipping Färdiga Annonser: 299 SEK
+    - Dropshipping Mentorskap: 15,000 SEK`,
+  },
+  {
+    id: 7,
+    question:
+      "Måste jag ha ett Shopify-konto innan jag kan använda webbplatserna?",
+    answer: `Nej! Våra Shopify Dropshipping-butiker kommer som helt nya butiker som du får en 3-dagars gratis provperiod med. Efter det tar Shopify $1 för en månad, och därefter $39/månad.\n
+    Shopify erbjuder 30 dagars test innan du behöver betala fullt pris.`,
+  },
+  {
+    id: 8,
+    question: "Vem är detta mentorskap till för?",
+    answer:
+      "Vårt mentorskap är för människor som vill leva ett liv där de inte är kedjade vid ett skrivbord eller ett jobb hela dagen för att producera inkomst för sig själva.",
+  },
+  {
+    id: 9,
+    question: "Hur vet jag att det här kommer att fungera för mig?",
+    answer: `Vi kan inte garantera något, men vi erbjuder en **100% garantin utan frågor**. Du kan testa det och om det inte fungerar för dig, får du pengarna tillbaka.`,
+  },
+]
+
+export default faqData

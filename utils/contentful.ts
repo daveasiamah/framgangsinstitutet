@@ -94,6 +94,7 @@ export async function fetchCourseBySlug(slug: string) {
         price: entry.fields.price,
         slug: entry.fields.slug,
         purchaseLink: entry.fields.purchaseLink,
+        tags: entry.fields.tags,
         videoInfo: entry.fields.videoInfo.videoInfo || {
           count: 0,
           totalTime: 0,
@@ -128,6 +129,7 @@ export async function getCourses() {
         imageUrl: `https:${entry.fields.imageUrl?.fields?.file?.url}`,
         price: entry.fields.price,
         slug: entry.fields.slug,
+        tags: entry.fields.tags,
         purchaseLink: entry.fields.purchaseLink,
         videoInfo: entry.fields.videoInfo.videoInfo || {
           count: 0,
@@ -140,6 +142,27 @@ export async function getCourses() {
     return formattedEntries
   } catch (error) {
     console.log("Error fetching courses:", error)
+    return []
+  }
+}
+
+export async function getFAQs() {
+  try {
+    const entries = await client.getEntries({
+      content_type: "faq",
+    })
+
+    const formattedEntries = entries.items.map((entry: any) => {
+      return {
+        id: entry.sys.id,
+        question: entry.fields.question,
+        answer: entry.fields.answer as Document,
+        lastUpdated: entry.fields.lastUpdated,
+      }
+    })
+    return formattedEntries
+  } catch (error) {
+    console.log("Error fetching FAQs:", error)
     return []
   }
 }

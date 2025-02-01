@@ -9,10 +9,19 @@ type Props = {
 export default function MetaHead({ title, path }: Props) {
   return (
     <Head>
-      <title>{`${title} - Lär Dig Sälja Med Dropshipping`}</title>
-      <meta name="description" content={`Börja sälja med dropshipping och bygg en lönsam e-handel. Vi ger dig de bästa strategierna för framgång inom e-handel. Bli en dropshipping-expert nu!. ${title}`} />
-      <meta property="og:title" content={`${title} - Lär Dig Sälja Med Dropshipping`} />
-      <meta property="og:description" content={`Börja sälja med dropshipping och bygg en lönsam e-handel. Vi ger dig de bästa strategierna för framgång inom e-handel. Bli en dropshipping-expert nu!. ${title}`} />
+      <title>{`${title} - Utbildningar och kurser på distans`}</title>
+      <meta
+        name="description"
+        content={`Börja din framtid Checkified! Våra praktiska och digitala utbildningar ger dig rätt kompetens för jobb inom e-handel och tech. Lär dig på distans och ta nästa steg i karriären. ${title}`}
+      />
+      <meta
+        property="og:title"
+        content={`${title} - Utbildningar och kurser på distans`}
+      />
+      <meta
+        property="og:description"
+        content={`Börja din framtid Checkified! Våra praktiska och digitala utbildningar ger dig rätt kompetens för jobb inom e-handel och tech. Lär dig på distans och ta nästa steg i karriären.. ${title}`}
+      />
       <meta property="og:image" content="/logo.png" />
       {/* <meta
         property="og:URL"
@@ -20,7 +29,13 @@ export default function MetaHead({ title, path }: Props) {
       /> */}
       <meta property="og:type" content="website" />
       <link rel="icon" href="/favicon.ico" />
-      <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="967764a7-1d94-4754-953e-373f89d43089"  type="text/javascript" async></script>
+      <script
+        id="Cookiebot"
+        src="https://consent.cookiebot.com/uc.js"
+        data-cbid="967764a7-1d94-4754-953e-373f89d43089"
+        type="text/javascript"
+        async
+      ></script>
     </Head>
   )
 }

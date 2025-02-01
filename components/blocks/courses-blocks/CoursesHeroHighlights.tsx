@@ -18,13 +18,13 @@ const highlightData: HighlightData[] = [
     image: "/images/courses/3d-hero-image2.svg",
     title: "Ledarprogram",
     description:
-      "Vi erbjuder onlineutbildningar via Zoom och digitalt verktyg som lärstöd före, under och efter utbildningen.",
+      "För oss har alltid ett gott ledarskap utgått från individen – det personliga ledarskapet – ett ledarskap som baseras på självkännedom.",
   },
   {
     image: "/images/courses/3d-hero-image3.svg",
     title: "Coachning",
     description:
-      "Vi erbjuder onlineutbildningar via Zoom och digitalt verktyg som lärstöd före, under och efter utbildningen.",
+      "Coachning frigör kraften i individen och organisationen. Hos oss finner du landets ledande konsulter för coachning av samhället.",
   },
 ]
 
