@@ -1,40 +1,43 @@
 import React, { useState, useRef, useEffect, useCallback } from "react"
-
-type Props = {
-  data: {
-    id: number
-    question: string
-    answer: string
-  }[]
-}
-
 import Image from "next/image"
 
-// Replace <img> with <Image> in RightArrow component
-const RightArrow = React.memo(
-  ({ index, selected }: { index: number; selected: number[] }) => {
-    return (
-      <span className="cursor-pointer inline-block">
-        <Image
-          src="/images/pricing/right-arrow.svg"
-          width={10}
-          height={10}
-          style={{
-            transform: selected.includes(index)
-              ? "rotate(90deg)"
-              : "rotate(0deg)",
-            transition: "transform 0.3s ease-in-out",
-          }}
-          alt="arrow-icon"
-        />
-      </span>
-    )
-  }
-)
+type AccordionProps = {
+  children: React.ReactNode
+}
+
+type AccordionItemProps = {
+  title: string
+  children: React.ReactNode
+}
+
+// RightArrow component
+const RightArrow = React.memo(({ isOpen }: { isOpen: boolean }) => {
+  return (
+    <span className="cursor-pointer inline-block">
+      <Image
+        src="/images/pricing/right-arrow.svg"
+        width={10}
+        height={10}
+        style={{
+          transform: isOpen ? "rotate(90deg)" : "rotate(0deg)",
+          transition: "transform 0.3s ease-in-out",
+        }}
+        alt="arrow-icon"
+      />
+    </span>
+  )
+})
 RightArrow.displayName = "RightArrow"
 
+// AccordionContent now accepts children
 const AccordionContent = React.memo(
-  ({ content, isSelected }: { content: string; isSelected: boolean }) => {
+  ({
+    children,
+    isSelected,
+  }: {
+    children: React.ReactNode
+    isSelected: boolean
+  }) => {
     const contentRef = useRef<HTMLDivElement>(null)
     const [height, setHeight] = useState(0)
 
@@ -52,7 +55,7 @@ const AccordionContent = React.memo(
         style={{ maxHeight: `${height}px` }}
       >
         <div ref={contentRef} className="py-2 pl-6">
-          <p className="text-gray-600">{content}</p>
+          {children}
         </div>
       </div>
     )
@@ -60,43 +63,34 @@ const AccordionContent = React.memo(
 )
 AccordionContent.displayName = "AccordionContent"
 
-function Accordion({ data }: Props) {
-  const [selected, setSelected] = useState<number[]>([])
+// Accordion Component (Now accepts children)
+export const Accordion = ({ children }: AccordionProps) => {
+  return <div className="grid gap-4">{children}</div>
+}
 
-  const toggle = useCallback((index: number) => {
-    setSelected(
-      (prevSelected) =>
-        prevSelected.includes(index)
-          ? prevSelected.filter((item) => item !== index) // Close the item
-          : [...prevSelected, index] // Open the item
-    )
-  }, [])
+// AccordionItem Component
+export const AccordionItem = ({ title, children }: AccordionItemProps) => {
+  const [isSelected, setIsSelected] = useState(false)
+
+  const toggle = () => {
+    setIsSelected((prev) => !prev)
+  }
 
   return (
-    <div className="grid gap-4">
-      {data.map((item, index) => (
-        <div
-          key={item.id}
-          className="accordion-wrapper w-full bg-white shadow-md py-4 px-6 rounded-xl"
-        >
-          {/* Accordion Header */}
-          <div
-            onClick={() => toggle(index)}
-            className="cursor-pointer py-2 flex gap-4 items-center"
-          >
-            <RightArrow index={index} selected={selected} />
-            <h2 className="font-semibold text-lg text-gray-800 font-jakarta">
-              {item.question}
-            </h2>
-          </div>
+    <div className="accordion-wrapper w-full bg-white shadow-md py-4 px-6 rounded-xl">
+      {/* Accordion Header */}
+      <div
+        onClick={toggle}
+        className="cursor-pointer py-2 flex gap-4 items-center"
+      >
+        <RightArrow isOpen={isSelected} />
+        <h2 className="font-bold text-lg text-gray-800 font-jakarta">
+          {title}
+        </h2>
+      </div>
 
-          {/* Accordion Content */}
-          <AccordionContent
-            content={item.answer}
-            isSelected={selected.includes(index)} // Only animate selected items
-          />
-        </div>
-      ))}
+      {/* Accordion Content */}
+      <AccordionContent isSelected={isSelected}>{children}</AccordionContent>
     </div>
   )
 }

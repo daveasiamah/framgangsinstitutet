@@ -24,6 +24,7 @@
     "axios": "^1.6.2",
     "contentful": "^10.6.21",
     "daisyui": "^2.51.3",
+    "date-fns": "^4.1.0",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
     "framer-motion": "^10.8.4",

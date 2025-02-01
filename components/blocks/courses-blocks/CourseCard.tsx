@@ -5,7 +5,7 @@ import Skeleton from "react-loading-skeleton"
 import { Course } from "./types"
 
 const CourseCard = ({ course }: { course: Course }) => {
-  const { videoInfo, price, shortDescription, title, tags, imageUrl } = course
+  const { videoInfo, shortDescription, title, tags, imageUrl } = course
 
   return (
     <div
@@ -14,7 +14,7 @@ const CourseCard = ({ course }: { course: Course }) => {
     >
       {/* Image Section */}
       <div className="relative h-[170px] md:h-[190px]">
-        {
+        {imageUrl ? (
           <Image
             src={imageUrl}
             alt="course image"
@@ -22,18 +22,20 @@ const CourseCard = ({ course }: { course: Course }) => {
             style={{ objectFit: "cover" }}
             className="rounded-[20px] drop-shadow-2xl"
           />
-        }
+        ) : (
+          <Skeleton height="100%" width="100%" className="mt-4 mb-2" />
+        )}
         {/* Tags */}
         {tags && (
           <div className="absolute top-3 left-3 flex gap-2">
-            {tags.distance && (
+            {tags && (
               <span className="bg-[#225AEA] text-white text-[0.625rem] font-bold py-1 px-3 rounded-full">
-                {tags?.distance}
+                {tags[0]}
               </span>
             )}
-            {tags.new && (
+            {tags[1] && (
               <span className="bg-[#E0E0E0] text-[#434C69] text-[0.625rem] font-bold py-1 px-3 rounded-full">
-                {tags?.new}
+                {tags[1]}
               </span>
             )}
           </div>
@@ -86,7 +88,7 @@ const CourseCard = ({ course }: { course: Course }) => {
       </div>
 
       {/* Learn more */}
-      <button className="w-full py-3 lg:py-4 bg-[#225AEA] text-white font-semibold text-sm rounded-xl mt-4">
+      <button className="w-full py-3 lg:py-3 bg-[#225AEA] text-white font-semibold text-sm rounded-xl mt-4">
         <p className="uppercase">lär dig mer</p>
       </button>
     </div>

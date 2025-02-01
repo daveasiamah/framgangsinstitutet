@@ -23,7 +23,7 @@ const CourseDetailPage = ({ course }: { course: Course[] }) => {
           <Breadcrumbs courseTitle={title} />
           <ScrollReveal>
             <div className="flex flex-col pl-4">
-              <h1 className="font-jakarta text-left text-[32px] md:text-[48px] text-wrap leading-[40px] md:leading-[55px]">
+              <h1 className="font-jakarta text-left font-bold text-[32px] md:text-[48px] text-wrap leading-[40px] md:leading-[55px]">
                 {title}
               </h1>
               <div className="flex flex-col items-center">
@@ -79,7 +79,7 @@ const CourseDetailPage = ({ course }: { course: Course[] }) => {
                   </div>
                 </div>
                 <a
-                  href="https://whop.com/checkified"
+                  href="https://skool.com/dropshipping-sverige-2012"
                   className="w-full text-center py-3 bg-white text-[#151e3a] font-semibold rounded-[10px]"
                 >
                   <p className="text-xs">Få Erbjudande</p>
