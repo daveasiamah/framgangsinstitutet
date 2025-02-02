@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useCallback } from "react"
+import React, { useState, useRef, useEffect } from "react"
 import Image from "next/image"
 
 type AccordionProps = {
@@ -13,14 +13,15 @@ type AccordionItemProps = {
 // RightArrow component
 const RightArrow = React.memo(({ isOpen }: { isOpen: boolean }) => {
   return (
-    <span className="cursor-pointer inline-block">
+    <span className="cursor-pointer inline-block flex-shrink-0">
       <Image
         src="/images/pricing/right-arrow.svg"
         width={10}
         height={10}
         style={{
           transform: isOpen ? "rotate(90deg)" : "rotate(0deg)",
-          transition: "transform 0.3s ease-in-out",
+          transition: "transform 0.2s ease-in-out",
+          objectFit: "contain", // Ensures the image fits well
         }}
         alt="arrow-icon"
       />
@@ -51,10 +52,10 @@ const AccordionContent = React.memo(
 
     return (
       <div
-        className="overflow-hidden transition-[max-height] duration-500 ease-in-out"
+        className="overflow-hidden transition-[max-height] duration-300 ease-in-out"
         style={{ maxHeight: `${height}px` }}
       >
-        <div ref={contentRef} className="py-2 pl-6">
+        <div ref={contentRef} className="pl-6">
           {children}
         </div>
       </div>
@@ -77,16 +78,14 @@ export const AccordionItem = ({ title, children }: AccordionItemProps) => {
   }
 
   return (
-    <div className="accordion-wrapper w-full bg-white shadow-md py-4 px-6 rounded-xl">
+    <div className="accordion-wrapper w-full md:py-2 md:px-6">
       {/* Accordion Header */}
       <div
         onClick={toggle}
-        className="cursor-pointer py-2 flex gap-4 items-center"
+        className="cursor-pointer py-2 flex gap-2 md:gap-4 items-center"
       >
         <RightArrow isOpen={isSelected} />
-        <h2 className="font-bold text-lg text-gray-800 font-jakarta">
-          {title}
-        </h2>
+        <h2 className="font-bold text-sm text-[#151e3a] font-inter">{title}</h2>
       </div>
 
       {/* Accordion Content */}

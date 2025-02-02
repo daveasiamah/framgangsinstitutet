@@ -150,16 +150,16 @@ export async function getFAQs() {
   try {
     const entries = await client.getEntries({
       content_type: "faq",
+      order: ["fields.position"], // Orders by the "position" field in ascending order
     })
+    const formattedEntries = entries.items.map((entry: any) => ({
+      id: entry.sys.id,
+      question: entry.fields.question,
+      answer: entry.fields.answer as Document,
+      lastUpdated: entry.fields.lastUpdated,
+      position: entry.fields.position,
+    }))
 
-    const formattedEntries = entries.items.map((entry: any) => {
-      return {
-        id: entry.sys.id,
-        question: entry.fields.question,
-        answer: entry.fields.answer as Document,
-        lastUpdated: entry.fields.lastUpdated,
-      }
-    })
     return formattedEntries
   } catch (error) {
     console.log("Error fetching FAQs:", error)
