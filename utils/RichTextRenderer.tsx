@@ -16,16 +16,18 @@ const RichTextRenderer: React.FC<RichTextRendererProps> = ({ richText }) => {
   const options: Options = {
     renderNode: {
       [BLOCKS.HEADING_1]: (node: Node, children: React.ReactNode) => (
-        <h1 className="text-4xl font-jakarta font-bold mb-6">{children}</h1>
+        <h1 className="text-4xl font-inter font-bold mb-6">{children}</h1>
       ),
       [BLOCKS.HEADING_2]: (node: Node, children: React.ReactNode) => (
-        <h2 className="text-2xl font-jakarta font-semibold mb-4">{children}</h2>
+        <h2 className="text-sm font-inter font-semibold mb-4">{children}</h2>
       ),
       [BLOCKS.HEADING_3]: (node: Node, children: React.ReactNode) => (
-        <h3 className="text-xl font-jakarta font-semibold mb-4">{children}</h3>
+        <h3 className="text-xl font-inter font-semibold mb-4">{children}</h3>
       ),
       [BLOCKS.PARAGRAPH]: (node: Node, children: React.ReactNode) => (
-        <p className="text-lg leading-relaxed mb-4">{children}</p>
+        <p className="text-[14px] leading-relaxed mb-4 font-inter">
+          {children}
+        </p>
       ),
       [BLOCKS.UL_LIST]: (node: Node, children: React.ReactNode) => (
         <ul className="ml-6 mb-1">{children}</ul>

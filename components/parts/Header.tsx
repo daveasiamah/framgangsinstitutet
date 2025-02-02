@@ -84,7 +84,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
     <header className="bg-base-100 h-header-height fixed top-0 left-0 right-0 z-20 flex items-center">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
-        <Link href="/">
+        <Link href="/" onClick={() => setOpenSidebar(false)}>
           <div className="flex items-center justify-start gap-2">
             <Image
               className="h-[39px] md:h-[53px] w-[150.86px] md:w-[198.86px] max-w-full"
@@ -101,12 +101,16 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
         <nav
           className={`bg-base-100 absolute top-header-height lg:static p-8 pb-10 lg:p-0 text-center w-full lg:w-auto lg:flex flex-col lg:flex-row items-center shadow-lg 
             lg:shadow-none rounded-b-3xl lg:rounded-none transition-all duration-200 ease-linear max-h-screen ${
-              pathname === "/utbildningar" ? "mx-auto" : ""
-            }`}
+              openSidebar ? "left-0" : "left-[150%]"
+            } ${pathname === "/utbildningar" ? "mx-auto" : ""}`}
         >
           <ul className="flex flex-col lg:flex-row gap-2 lg:gap-8 h-full">
             <li>
-              <Link className="btn btn-link" href="/utbildningar">
+              <Link
+                className="btn btn-link"
+                href="/utbildningar"
+                onClick={() => setOpenSidebar(false)}
+              >
                 {t.headerData.university}
               </Link>
             </li>
@@ -132,7 +136,14 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
               >
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-4 lg:gap-[22px]">
                   {t.headerData.megaMenuData.map((data, index) => (
-                    <Link key={data.id} href={data.link}>
+                    <Link
+                      key={data.id}
+                      href={data.link}
+                      onClick={() => {
+                        setOpenSidebar(false)
+                        setOpenMenu(false)
+                      }}
+                    >
                       <div
                         className={`flex gap-2 items-center hover:bg-base-200 p-2 rounded-lg ${
                           index === t.headerData.megaMenuData.length - 1
@@ -186,7 +197,11 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
             </li>
 
             <li>
-              <Link className="btn btn-link" href="/butiker">
+              <Link
+                className="btn btn-link"
+                href="/butiker"
+                onClick={() => setOpenSidebar(false)}
+              >
                 {t.headerData.pricing}
               </Link>
             </li>
@@ -194,8 +209,8 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
         </nav>
 
         {/* CTA Button: Only render when pathname is not "/utbildningar" */}
-        {pathname !== "/utbildningar" && (
-          <div className="hidden mt-2 mb-5 lg:mt-8 lg:flex items-center justify-center">
+        <div className="hidden mt-2 mb-5 lg:mt-8 lg:flex items-center justify-center">
+          {pathname !== "/utbildningar" ? (
             <button
               onClick={() => {
                 if (!excludedPaths.includes(pathname)) {
@@ -218,8 +233,12 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
                 {getButtonTitle(pathname)}
               </p>
             </button>
-          </div>
-        )}
+          ) : (
+            <div className="hidden mt-2 mb-5 lg:mt-8 lg:flex items-center justify-center w-40">
+              {}
+            </div>
+          )}
+        </div>
 
         <button className="lg:hidden rounded-md text-primary bg-base-200">
           <Hamburger

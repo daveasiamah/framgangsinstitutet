@@ -8,10 +8,10 @@ import ScrollReveal from "@/components/transition/ScrollReveal"
 import { Accordion, AccordionItem } from "@/components/parts/Accordion_FAQ"
 import { getFAQs } from "@/utils/contentful"
 
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { Document } from "@contentful/rich-text-types"
 import { format } from "date-fns"
 import { sv } from "date-fns/locale"
+import RichTextRenderer from "@/utils/RichTextRenderer"
 
 interface FAQ {
   id: string
@@ -26,10 +26,7 @@ interface FAQPageProps {
 
 const FAQPage: React.FC<FAQPageProps> = ({ faqs }) => {
   const router = useRouter()
-  const { locale } = router
-  const t = locale === "en" ? en : swedish
 
-  // Defensive programming: if there are no FAQs, display a fallback message.
   if (!faqs || faqs.length === 0) {
     return (
       <Layout headTitle="FAQ">
@@ -40,7 +37,8 @@ const FAQPage: React.FC<FAQPageProps> = ({ faqs }) => {
             content="Frequently asked questions about our platform and services."
           />
         </Head>
-        <div className="container mx-auto px-4 py-10">
+        {/* Use full width on mobile and container on md+ */}
+        <div className="w-full md:container md:mx-auto px-4 py-10">
           <p className="text-center text-red-500">No FAQs available.</p>
         </div>
       </Layout>
@@ -68,23 +66,16 @@ const FAQPage: React.FC<FAQPageProps> = ({ faqs }) => {
           content="Frequently asked questions about our platform and services."
         />
       </Head>
-      <div className="container mx-auto px-4 py-10">
-        <section>
+      {/* Full width on mobile, container centered on md and above */}
+      <div className="w-full md:container md:mx-auto md:px-4 py-10">
+        <section className="mx-auto max-w-5xl">
           <div className="relative py-10">
             <ScrollReveal>
-              <h1
-                className="text-center font-jakarta text-[22px] md:text-4xl md:leading-[40px] leading-[22px] font-[700] mb-10 mt-2"
-                style={{
-                  letterSpacing: "-1.92px",
-                  fontSize: "3rem",
-                  fontWeight: "bold",
-                  lineHeight: 1.2,
-                }}
-              >
+              <h1 className="text-center font-jakarta text-[1.3rem] md:text-[3rem] lg:text-[3.5rem] md:leading-[40px] leading-[22px] font-[700] mb-10 mt-2">
                 Vanliga frågor och svar
               </h1>
               {/* Render the formatted update date */}
-              <h2 className="text-center leading-5 text-lg font-inter font-medium text-[22px] text-[#707BA0] mb-9">
+              <h2 className="text-center leading-2 text-base font-inter font-medium md:text-[22px] text-[#707BA0] mb-9">
                 {finalOutput}
               </h2>
             </ScrollReveal>
@@ -93,10 +84,23 @@ const FAQPage: React.FC<FAQPageProps> = ({ faqs }) => {
             <Accordion>
               {faqs.map((item) => (
                 <AccordionItem key={item.id} title={item.question}>
-                  {documentToReactComponents(item.answer)}
+                  <RichTextRenderer richText={item.answer} />
                 </AccordionItem>
               ))}
             </Accordion>
+            <div className="flex justify-between items-center border border-gray px-[18px] py-[12px] rounded-[20px] mt-14">
+              <p className="font-inter font-medium text-[11px] md:text-sm">
+                Har vi missat något?
+              </p>
+              <div
+                onClick={() => router.push("/contact-us")}
+                className="rounded-[12px] border border-gray text-center py-2 px-3 hover:cursor-pointer"
+              >
+                <p className="font-inter font-medium text-[10px] md:text-xs">
+                  Ta kontakt med oss
+                </p>
+              </div>
+            </div>
           </div>
         </section>
       </div>
@@ -109,8 +113,8 @@ export async function getStaticProps() {
     const allFAQs = (await getFAQs()) || [] // Ensure faqs is always an array.
     return {
       props: { faqs: allFAQs },
-      // Revalidate every 60 seconds
-      revalidate: 60,
+      // Revalidate every 120 seconds
+      revalidate: 120,
     }
   } catch (error) {
     console.error("Error fetching FAQs:", error)
