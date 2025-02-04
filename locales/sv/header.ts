@@ -23,7 +23,7 @@ export const headerData: HeaderData = {
       imageUrl: "/icons/header/teacher.svg",
       title: "Dropshipping Mentorskap",
       desc: "Få privat coachningsprogram",
-      link: "https://checkified.se/dropshipping-mentorskap",
+      link: "https://whop.com/dropshipping-mentorskap/",
     },
     {
       id: 4,
@@ -44,7 +44,7 @@ export const headerData: HeaderData = {
       imageUrl: "/icons/header/bookmark.svg",
       title: "Checkified Vendum",
       desc: "Lär dig skapa en online kurs",
-      link: "https://checkified.se/skapa-en-egen-online-kurs ",
+      link: "https://checkified.se/utbildningar/skapa-en-egen-online-kurs/",
     },
     {
       id: 7,
