@@ -85,7 +85,7 @@ export default function Footer({}: Props) {
                   <Link href="/about">Om oss</Link>
                 </li>
                 <li>
-                  <Link href="/butiker">Affiliate</Link>
+                  <Link href="/affiliate">Affiliate</Link>
                 </li>
               </ul>
             </div>
