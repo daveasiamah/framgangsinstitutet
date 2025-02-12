@@ -213,7 +213,7 @@ export const pricingData: PricingData = {
     {
       id: 3,
       question: "Hur många produkter kommer jag att få i min e-butik?",
-      answer: "Alla våra butiker kommer färdigimplementerade med 20 produkter.",
+      answer: "Alla våra butiker kommer färdigimplementerade med 30 produkter.",
     },
     {
       id: 4,
@@ -250,7 +250,7 @@ export const pricingData: PricingData = {
         title: "Vi bygger din webbplats och lägger till 20 produkter",
         description: [
           "Beställ din e-handelswebbplats från oss för endast 999 kr så är du igång inom 24 timmar.",
-          "Vi designar och sätter upp allt – inklusive 20 produkter, 5 videoannonser, logotyp, leverantör, och e-bok så du kan börja sälja direkt.",
+          "Vi designar och sätter upp allt – inklusive 30 produkter, 5 videoannonser, logotyp, leverantör, och e-bok så du kan börja sälja direkt.",
         ],
       },
       {
@@ -302,7 +302,7 @@ export const pricingData: PricingData = {
     time: "18 minuter sen",
     verified: "Verifierad",
     description:
-      "Jag är verkligen imponerad av Checkifeds färdiga e-butik med 20 produkter och 5 videoannonser redo att marknadsföras! Tack vare deras hjälp har jag nu en verksamhet som omsätter 350 000 kr. Butiken var färdigbyggd med professionellt utvalda produkter, och jag kunde börja sälja direkt. Det bästa var att jag fick tillgång till en gratis kurs om hur man driver en framgångsrik dropshipping-butik, vilket gjorde det enkelt för mig att förstå allt från marknadsföring till logistik. Supporten har också varit fantastisk – när jag behövt hjälp har de alltid funnits där. Det enda jag behövde göra efteråt var att köpa ett domännamn och sätta igång med marknadsföringen. För mig, som inte hade någon tidigare erfarenhet av e-handel, har det här varit en riktig gamechanger. Rekommenderar verkligen till alla som vill börja med dropshipping!",
+      "Jag är verkligen imponerad av Checkifeds färdiga e-butik med 30 produkter och 5 videoannonser redo att marknadsföras! Tack vare deras hjälp har jag nu en verksamhet som omsätter 350 000 kr. Butiken var färdigbyggd med professionellt utvalda produkter, och jag kunde börja sälja direkt. Det bästa var att jag fick tillgång till en gratis kurs om hur man driver en framgångsrik dropshipping-butik, vilket gjorde det enkelt för mig att förstå allt från marknadsföring till logistik. Supporten har också varit fantastisk – när jag behövt hjälp har de alltid funnits där. Det enda jag behövde göra efteråt var att köpa ett domännamn och sätta igång med marknadsföringen. För mig, som inte hade någon tidigare erfarenhet av e-handel, har det här varit en riktig gamechanger. Rekommenderar verkligen till alla som vill börja med dropshipping!",
   },
 
   bonuses: {
