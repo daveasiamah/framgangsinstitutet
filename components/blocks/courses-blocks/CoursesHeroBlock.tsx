@@ -1,16 +1,16 @@
-import en from "@/locales/en";
-import sv from "@/locales/sv";
-import { useRouter } from "next/router";
-import Image from "next/image";
-import ScrollReveal from "@/components/transition/ScrollReveal";
-import React from "react";
-import { CoursesHeroHighlights } from "./CoursesHeroHighlights";
-import CoursePageTitle from "@/components/parts/CoursePageTitle";
+import en from "@/locales/en"
+import sv from "@/locales/sv"
+import { useRouter } from "next/router"
+import Image from "next/image"
+import ScrollReveal from "@/components/transition/ScrollReveal"
+import React from "react"
+import { CoursesHeroHighlights } from "./CoursesHeroHighlights"
+import CoursePageTitle from "@/components/parts/CoursePageTitle"
 
 export default function CoursesHeroBlock() {
-  const router = useRouter();
-  const { locale } = router;
-  const t = locale === "en" ? en : sv;
+  const router = useRouter()
+  const { locale } = router
+  const t = locale === "en" ? en : sv
 
   return (
     <section className="relative hero-height flex w-full flex-col justify-between items-center gap-10 pt-10 mb-16">
@@ -34,7 +34,10 @@ export default function CoursesHeroBlock() {
             />
           </ScrollReveal>
 
-          <CoursePageTitle blackText={"Våra"} blueText={"utbildningar"} />
+          <CoursePageTitle
+            blackText={"E-böcker & "}
+            blueText={"Studiematerial"}
+          />
           <div className="text-[#707BA0] font-inter max-w-[760px] text-[0.756rem] md:text-sm text-center px-2 mb-6">
             Vi är övertygade om att människans förmåga att växa är en
             förutsättning för utveckling av både gott ledarskap och
@@ -50,5 +53,5 @@ export default function CoursesHeroBlock() {
         </div>
       </div>
     </section>
-  );
+  )
 }
