@@ -1,13 +1,14 @@
 import Layout from "@/components/Layout"
-import CoursesHeroBlock from "@/components/blocks/courses-blocks/CoursesHeroBlock"
-import CoursesList from "@/components/blocks/courses-blocks/CoursesList"
-import CourseTestimonials from "@/components/blocks/courses-blocks/CourseTestimonials"
 import WhoCanJoin from "@/components/blocks/courses-blocks/WhoCanJoin"
 import WhoCanJoinBottomSection from "@/components/blocks/courses-blocks/WhoCanJoinBottom"
-import CoursesOverview from "@/components/blocks/courses-blocks/CoursesOverview"
 import en from "@/locales/en"
 import sv from "@/locales/sv"
 import { useRouter } from "next/router"
+import EbooksHeroBlock from "@/components/blocks/ebooks-blocks/EbooksHeroBlock"
+import EbooksList from "@/components/blocks/ebooks-blocks/EbooksList"
+import EbookTestimonials from "@/components/blocks/ebooks-blocks/EbookTestimonials"
+import EbookOverview from "@/components/blocks/ebooks-blocks/EbookOverview"
+import { EasyWayToBuy } from "@/components/blocks/ebooks-blocks/EasyWayToBuy"
 
 type Props = {}
 export default function Ebooks({}: Props) {
@@ -18,17 +19,16 @@ export default function Ebooks({}: Props) {
   return (
     <Layout headTitle={"Eböcker"}>
       <section className="w-full">
-        {/* Courses Hero Section */}
-        <CoursesHeroBlock />
+        {/* Ebooks Hero Section */}
+        <EbooksHeroBlock />
         {/* Popular Courses List Section */}
-        <CoursesList />
-        {/* Who Is This For Section */}
-        <WhoCanJoin />
-        <WhoCanJoinBottomSection />
+        <EbooksList />
+        {/* Easy way to buy E-books Section */}
+        <EasyWayToBuy />
         {/* Testimonials Section */}
-        <CourseTestimonials />
+        <EbookTestimonials />
         {/* Learn Digital Courses Section */}
-        <CoursesOverview />
+        <EbookOverview />
       </section>
     </Layout>
   )

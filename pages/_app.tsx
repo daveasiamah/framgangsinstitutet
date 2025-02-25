@@ -1,6 +1,6 @@
 "use client"
-import "@/styles/globals.scss";
-import "@/styles/annonser.css";
+import "@/styles/globals.scss"
+import "@/styles/annonser.css"
 // import ReactDOM from 'react-dom'
 // import { library } from '@fortawesome/fontawesome-svg-core'
 // import { fas } from '@fortawesome/free-solid-svg-icons'
@@ -10,28 +10,27 @@ import "@/styles/annonser.css";
 // // import { faPlateUtensils } from '@fortawesome/sharp-regular-svg-icons'
 
 // library.add(fas)
-import {useSession,SessionProvider} from 'next-auth/react'
+import { useSession, SessionProvider } from "next-auth/react"
 
-import type { AppProps } from "next/app";
-import Script from "next/script";
-import { useRouter } from "next/router";
-import { useEffect } from "react";
+import type { AppProps } from "next/app"
+import Script from "next/script"
+import { useRouter } from "next/router"
+import { useEffect } from "react"
 
-
-export default function App({ Component,  pageProps: { session, ...pageProps } }: AppProps) {
-  const router = useRouter();
+export default function App({
+  Component,
+  pageProps: { session, ...pageProps },
+}: AppProps) {
+  const router = useRouter()
 
   // Conditionally apply CSS for specific pages
   // router.pathname === "/annonser" ? require("@/styles/annonser.css") : require("@/styles/globals.scss");
 
-
-
-
-  return(
+  return (
     <>
-       {/* Add the Hotjar tracking code */}
-       
-       <Script
+      {/* Add the Hotjar tracking code */}
+
+      <Script
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=G-FF7H6JCNB6`}
       />
@@ -49,8 +48,8 @@ export default function App({ Component,  pageProps: { session, ...pageProps } }
           `,
         }}
       />
-       <Script
-       id="gtag-init1"
+      <Script
+        id="gtag-init1"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
@@ -67,7 +66,7 @@ export default function App({ Component,  pageProps: { session, ...pageProps } }
       />
       {/* Add the Google Tag Manager (GTM) code here */}
       <Script
-      id="gtag-init2"
+        id="gtag-init2"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
@@ -79,12 +78,22 @@ export default function App({ Component,  pageProps: { session, ...pageProps } }
           `,
         }}
       />
-      <script src="//code.tidio.co/b3qsg0t7uu4nseq9piuuayi3u5gx3bi6.js" async></script>
-      <meta name="facebook-domain-verification" content="t53l0hv3hj3lqy0wlcz3y3mt0aywav" />
-      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5BC5XVQ" height="0" width="0" style={{display:'none',visibility:'hidden'}}></iframe></noscript>
+      {/* <script src="//code.tidio.co/b3qsg0t7uu4nseq9piuuayi3u5gx3bi6.js" async></script> */}
+      <meta
+        name="facebook-domain-verification"
+        content="t53l0hv3hj3lqy0wlcz3y3mt0aywav"
+      />
+      <noscript>
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-5BC5XVQ"
+          height="0"
+          width="0"
+          style={{ display: "none", visibility: "hidden" }}
+        ></iframe>
+      </noscript>
       <SessionProvider session={pageProps.session}>
         <Component {...pageProps} />
       </SessionProvider>
     </>
-    );
+  )
 }
