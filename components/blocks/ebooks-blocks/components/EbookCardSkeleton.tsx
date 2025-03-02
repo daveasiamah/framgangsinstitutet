@@ -3,13 +3,10 @@ import Skeleton from "react-loading-skeleton"
 
 export const EbookCardSkeleton = () => {
   return (
-    <div
-      className="flex flex-col max-w-[198px] min-w-[198px] max-h-[389px] lg:min-w-[198px] lg:min-h-[398px] cursor-pointer overflow-hidden"
-      style={{ borderColor: "#BBBBBF", borderWidth: "0.5px" }}
-    >
-      {/* Image Section */}
-      <div className="relative h-[280px] md:h-[280px]">
-        <Skeleton height={280} width="100%" className="mt-4 mb-2" />
+    <div className="flex flex-col w-full max-w-[250px] min-h-[470px] cursor-pointer border border-[#BBBBBF] overflow-hidden">
+      {/* Image Skeleton */}
+      <div className="w-full h-[335.06px] md:h-[281px]">
+        <Skeleton height="100%" width="100%" />
       </div>
 
       {/* Content Section */}
@@ -18,8 +15,8 @@ export const EbookCardSkeleton = () => {
         <Skeleton height={20} width="60%" className="mt-2" />
       </div>
 
-      {/* Learn more */}
-      <Skeleton height={48} width="100%" className="mt-2 rounded-xl" />
+      {/* Button Skeleton */}
+      <Skeleton height={48} width="100%" className="mt-auto rounded-xl" />
     </div>
   )
 }
