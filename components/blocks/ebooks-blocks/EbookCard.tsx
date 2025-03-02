@@ -7,7 +7,7 @@ const EbookCard = ({ ebook }: { ebook: Ebook }) => {
   const { title, price, imageUrl } = ebook
 
   return (
-    <div className="flex flex-col cursor-pointer w-full max-w-[250px] min-h-[470px]">
+    <div className="flex flex-col cursor-pointer w-full min-h-[470px]">
       {imageUrl ? (
         <Image
           src={imageUrl}
@@ -26,7 +26,7 @@ const EbookCard = ({ ebook }: { ebook: Ebook }) => {
         </p>
 
         {/* Price Button */}
-        <button className="w-full max-w-[250px] py-3 bg-[#225AEA] text-white text-sm rounded-xl mt-auto">
+        <button className="w-full py-3 bg-[#225AEA] text-white text-sm rounded-xl mt-auto">
           <p className="font-semibold text-base font-poppins">{price}</p>
         </button>
       </div>
