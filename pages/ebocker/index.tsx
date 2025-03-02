@@ -5,7 +5,7 @@ import EbookTestimonials from "@/components/blocks/ebooks-blocks/EbookTestimonia
 import EbookOverview from "@/components/blocks/ebooks-blocks/EbookOverview"
 import { EasyWayToBuy } from "@/components/blocks/ebooks-blocks/EasyWayToBuy"
 import { GetServerSideProps } from "next"
-import { getCourses } from "@/utils/contentful"
+import { getEbooks } from "@/utils/contentful"
 import { Ebook } from "@/components/blocks/ebooks-blocks/types"
 
 interface EbooksProps {
@@ -29,7 +29,7 @@ export default function Ebooks({ ebooks, error }: EbooksProps) {
 
 export const getServerSideProps: GetServerSideProps = async () => {
   try {
-    const ebooks = await getCourses()
+    const ebooks = await getEbooks()
     return { props: { ebooks } }
   } catch (error) {
     return { props: { ebooks: [], error: "Failed to fetch ebooks." } }

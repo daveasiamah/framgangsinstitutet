@@ -2,10 +2,10 @@ import React from "react"
 import { useRouter } from "next/router"
 
 interface BreadcrumbsProps {
-  courseTitle?: string // The course title to display as the last breadcrumb
+  ebookTitle?: string // The course title to display as the last breadcrumb
 }
 
-const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ courseTitle }) => {
+const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ ebookTitle }) => {
   const router = useRouter()
   const { locale } = router
 
@@ -13,13 +13,13 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ courseTitle }) => {
   const isEnglish = locale === "en"
   const translations = {
     home: isEnglish ? "Home" : "Hem",
-    courses: isEnglish ? "Courses" : "Utbildningar",
+    courses: isEnglish ? "Ebooks" : "E-böcker",
   }
 
   // Generate dynamic breadcrumbs
   const breadcrumbs = [
     { name: translations.home, href: `/${locale}/` },
-    { name: translations.courses, href: `/${locale}/utbildningar` },
+    { name: translations.courses, href: `/${locale}/ebocker` },
   ]
 
   return (
@@ -40,13 +40,13 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ courseTitle }) => {
             )}
           </li>
         ))}
-        {courseTitle && (
+        {ebookTitle && (
           <>
             <span aria-hidden="true" className="mx-2 text-gray-400">
               {">"}
             </span>
             <li className="text-gray-700 flex-1 min-w-0">
-              <span className="block truncate font-jakarta">{courseTitle}</span>
+              <span className="block truncate font-jakarta">{ebookTitle}</span>
             </li>
           </>
         )}

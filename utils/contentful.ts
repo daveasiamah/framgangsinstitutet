@@ -146,6 +146,64 @@ export async function getCourses() {
   }
 }
 
+export async function fetchEbookBySlug(slug: string) {
+  try {
+    const entries = await client.getEntries({
+      content_type: "ebooks",
+      "fields.slug": slug,
+      limit: 1, // Fetch only the single course with the matching slug
+    })
+
+    if (entries.items.length === 0) {
+      return null // Return null if no course matches the slug
+    }
+
+    const formattedEntries = entries.items.map((entry: any) => {
+      // Extract the "value" from the nested structure in shortDescription
+      const description = entry.fields.description || null
+
+      return {
+        id: entry.sys.id,
+        title: entry.fields.title,
+        description: description,
+        imageUrl: `https:${entry.fields.imageUrl?.fields?.file?.url}`,
+        price: entry.fields.price,
+        slug: entry.fields.slug,
+        purchaseLink: entry.fields.purchaseLink,
+      }
+    })
+    return formattedEntries
+  } catch (error) {
+    console.error("Error fetching course by slug:", error)
+    return null
+  }
+}
+
+export async function getEbooks() {
+  try {
+    const entries = await client.getEntries({
+      content_type: "ebooks",
+    })
+    const formattedEntries = entries.items.map((entry: any) => {
+      // Extract the "value" from the nested structure in shortDescription
+
+      return {
+        id: entry.sys.id,
+        title: entry.fields.title,
+        description: entry.fields.description,
+        imageUrl: `https:${entry.fields.imageUrl?.fields?.file?.url}`,
+        price: entry.fields.price,
+        slug: entry.fields.slug,
+        purchaseLink: entry.fields.purchaseLink,
+      }
+    })
+    return formattedEntries
+  } catch (error) {
+    console.log("Error fetching ebooks:", error)
+    return []
+  }
+}
+
 export async function getFAQs() {
   try {
     const entries = await client.getEntries({

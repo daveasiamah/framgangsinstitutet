@@ -1,26 +1,28 @@
 // pages/utbildningar/[slug].tsx
 
-import { fetchCourseBySlug } from "@/utils/contentful"
-import { Course } from "@/components/blocks/courses-blocks/types"
+import { fetchEbookBySlug } from "@/utils/contentful"
+import { Ebook } from "@/components/blocks/ebooks-blocks/types"
 import Image from "next/image"
 import ScrollReveal from "@/components/transition/ScrollReveal"
-import Breadcrumbs from "@/components/blocks/courses-blocks/CourseBreadcrumbs"
+import Breadcrumbs from "@/components/blocks/ebooks-blocks/EbookBreadcrumbs"
 import Layout from "@/components/Layout"
 import RichTextRenderer from "@/utils/RichTextRenderer"
 
-const CourseDetailPage = ({ course }: { course: Course[] }) => {
-  if (!course) {
-    return <div>Course not found</div>
+const EbookDetailPage = ({ ebook }: { ebook: Ebook[] }) => {
+  if (!ebook) {
+    return <div>Ebook not found</div>
   }
 
-  const { title, price, purchaseLink, longDescription, imageUrl } = course[0]
+  const { title, price, purchaseLink, description, imageUrl } = ebook[0]
+
+  console.log({ ebook })
 
   return (
     <Layout headTitle={`Utbilningar - ${title}`}>
       <section className="flex flex-col lg:flex-row py-10 mb-16">
         {/* Left Column */}
         <div className="w-full lg:flex-1 lg:min-w-0 px-1 md:px-1 order-1">
-          <Breadcrumbs courseTitle={title} />
+          <Breadcrumbs ebookTitle={title} />
           <ScrollReveal>
             <div className="flex flex-col pl-4">
               <h1 className="font-jakarta text-left font-bold text-[32px] md:text-[48px] text-wrap leading-[40px] md:leading-[55px]">
@@ -28,7 +30,7 @@ const CourseDetailPage = ({ course }: { course: Course[] }) => {
               </h1>
               <div className="flex flex-col items-center">
                 <Image
-                  alt="course image"
+                  alt="ebook image"
                   src={imageUrl}
                   width={680}
                   height={360}
@@ -44,12 +46,12 @@ const CourseDetailPage = ({ course }: { course: Course[] }) => {
               </div>
             </div>
           </ScrollReveal>
-          {longDescription && (
+          {description && (
             <div
               className="prose font-inter mt-6 md:mt-8 pl-4"
               style={{ maxWidth: "100%" }}
             >
-              <RichTextRenderer richText={longDescription} />
+              <RichTextRenderer richText={description} />
             </div>
           )}
         </div>
@@ -117,21 +119,22 @@ const CourseDetailPage = ({ course }: { course: Course[] }) => {
   )
 }
 
-// Get a single course by slug
+// Get a single ebook by slug
 export const getServerSideProps = async ({ params }: any) => {
   const { slug } = params as { slug: string }
   try {
-    const course = await fetchCourseBySlug(slug) // Fetch course data by slug
+    const ebook = await fetchEbookBySlug(slug) // Fetch ebook data by slug
+    console.log({ ebook })
     return {
       props: {
-        course,
+        ebook,
       },
     }
   } catch (error) {
     return {
-      notFound: true, // If course not found, return a 404 page
+      notFound: true, // If ebook not found, return a 404 page
     }
   }
 }
 
-export default CourseDetailPage
+export default EbookDetailPage

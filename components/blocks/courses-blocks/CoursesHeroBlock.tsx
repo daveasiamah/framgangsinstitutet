@@ -34,10 +34,7 @@ export default function CoursesHeroBlock() {
             />
           </ScrollReveal>
 
-          <CoursePageTitle
-            blackText={"E-böcker & "}
-            blueText={"Studiematerial"}
-          />
+          <CoursePageTitle blackText={"Våra "} blueText={"utbildningar"} />
           <div className="text-[#707BA0] font-inter max-w-[760px] text-[0.756rem] md:text-sm text-center px-2 mb-6">
             Vi är övertygade om att människans förmåga att växa är en
             förutsättning för utveckling av både gott ledarskap och

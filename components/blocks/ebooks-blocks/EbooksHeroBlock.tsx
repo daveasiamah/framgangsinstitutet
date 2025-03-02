@@ -5,7 +5,7 @@ import Image from "next/image"
 import ScrollReveal from "@/components/transition/ScrollReveal"
 import React from "react"
 import { EbooksHeroHighlights } from "./EbooksHeroHighlights"
-import CoursePageTitle from "@/components/parts/CoursePageTitle"
+import EbookPageTitle from "@/components/parts/EbookPageTitle"
 
 export default function EbooksHeroBlock() {
   const router = useRouter()
@@ -27,7 +27,7 @@ export default function EbooksHeroBlock() {
             />
           </ScrollReveal>
 
-          <CoursePageTitle
+          <EbookPageTitle
             blackText={"E-böcker & "}
             blueText={"Studiematerial"}
           />
