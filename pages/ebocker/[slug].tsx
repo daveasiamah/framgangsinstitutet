@@ -7,6 +7,7 @@ import ScrollReveal from "@/components/transition/ScrollReveal"
 import Breadcrumbs from "@/components/blocks/ebooks-blocks/EbookBreadcrumbs"
 import Layout from "@/components/Layout"
 import RichTextRenderer from "@/utils/RichTextRenderer"
+import Skeleton from "react-loading-skeleton"
 
 const EbookDetailPage = ({ ebook }: { ebook: Ebook[] }) => {
   if (!ebook) {
@@ -14,8 +15,6 @@ const EbookDetailPage = ({ ebook }: { ebook: Ebook[] }) => {
   }
 
   const { title, price, purchaseLink, description, imageUrl } = ebook[0]
-
-  console.log({ ebook })
 
   return (
     <Layout headTitle={`Utbilningar - ${title}`}>
@@ -29,14 +28,18 @@ const EbookDetailPage = ({ ebook }: { ebook: Ebook[] }) => {
                 {title}
               </h1>
               <div className="flex flex-col items-center">
-                <Image
-                  alt="ebook image"
-                  src={imageUrl}
-                  width={680}
-                  height={360}
-                  style={{ objectFit: "contain" }}
-                  className="rounded-[20px] mt-[24px] md:mt-[48px] mb-6 md:mb-9"
-                />
+                {imageUrl.length > 1 ? (
+                  <Image
+                    alt="ebook image"
+                    src={imageUrl}
+                    width={280}
+                    height={160}
+                    style={{ objectFit: "contain" }}
+                    className="rounded-[20px] mt-[24px] md:mt-[48px] mb-6 md:mb-9"
+                  />
+                ) : (
+                  <Skeleton width="280px" height="160px" />
+                )}
                 <button
                   onClick={() => window.open(purchaseLink)}
                   className="w-full max-w-[318px] py-3 md:py-2 bg-[#225AEA] text-white font-semibold rounded-xl"
