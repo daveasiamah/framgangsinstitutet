@@ -16,7 +16,16 @@ export default function EbooksHeroBlock() {
     <section className="relative hero-height flex w-full flex-col justify-between items-center gap-10 pt-10 mb-16">
       <div className="w-full text-center mb-6 md:mb-0 lg:mb-0 flex flex-col items-center">
         {/* Container always visible, background only from md and above */}
-        <div className="flex flex-col items-center w-full justify-center bg-none md:bg-[url('/images/pricing/store-hero-bg.svg')] md:bg-cover md:bg-center md:bg-no-repeat">
+        <div
+          className="flex flex-col items-center w-full justify-center"
+          style={{
+            backgroundImage: `url('/images/pricing/store-hero-bg.svg')`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundPosition: "center bottom",
+          }}
+        >
+          {" "}
           <ScrollReveal className="flex justify-center">
             <Image
               src="/prebuilt-store-icon.png"
@@ -26,7 +35,6 @@ export default function EbooksHeroBlock() {
               alt="store-icon"
             />
           </ScrollReveal>
-
           <EbookPageTitle
             blackText={"E-böcker & "}
             blueText={"Studiematerial"}

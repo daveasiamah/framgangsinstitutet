@@ -4,6 +4,7 @@ import { EbookCardSkeleton } from "./components/EbookCardSkeleton"
 import EbookListTitle from "./components/EbookListTitle"
 import { Ebook } from "./types"
 import { useState } from "react"
+import { FaChevronDown } from "react-icons/fa"
 
 const ITEMS_PER_PAGE = 10
 
@@ -58,12 +59,16 @@ const EbooksList = ({ ebooks, error }: EbooksListProps) => {
       </div>
 
       {!error && visibleEbooks.length < ebooks.length && (
-        <div className="text-center mt-4">
+        <div className="text-center items-center flex justify-center mt-4">
           <button
             onClick={loadMore}
-            className="px-10 font-jakarta py-2 bg-[#225AEA] text-white rounded-lg hover:bg-blue-600 w-full sm:w-auto"
+            className="flex items-center justify-center gap-2 px-10 py-3 text-lg font-semibold bg-[#225AEA] text-white rounded-xl hover:bg-blue-500 w-full sm:w-auto transition-colors duration-400 shadow-md"
           >
-            Load More
+            Ladda mer
+            <FaChevronDown
+              className="animate-bounce"
+              style={{ marginLeft: "8px" }}
+            />
           </button>
         </div>
       )}

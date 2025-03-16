@@ -247,7 +247,7 @@ export const pricingData: PricingData = {
       {
         id: 1,
         imageUrl: "/icons/home/build-site-icon.png",
-        title: "Vi bygger din webbplats och lägger till 20 produkter",
+        title: "Vi bygger din webbplats och lägger till 30 produkter",
         description: [
           "Beställ din e-handelswebbplats från oss för endast 999 kr så är du igång inom 24 timmar.",
           "Vi designar och sätter upp allt – inklusive 30 produkter, 5 videoannonser, logotyp, leverantör, och e-bok så du kan börja sälja direkt.",

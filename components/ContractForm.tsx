@@ -71,33 +71,25 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
     resolver: yupResolver(schema),
   })
 
-  const senddata = async (data: any) => {
-    console.log(data)
-    const res = await registerOfContract(data)
-    if (res.success) {
-      setShowSuccess(true)
-    } else {
-      setalertMessage("Misslyckas")
-      setShowModalCls(true)
-    }
+  const sendData = async (data: any) => {
+    console.log("Form submitted:", data)
+
+    router.push("/thank-you").then(() => {
+      console.log("Route changed to /thank-you")
+      onClose() // Optional, close the modal when navigating away
+    })
   }
 
-  const onSubmit: SubmitHandler<FormValues> = (data) => senddata(data)
+  const onSubmit: SubmitHandler<FormValues> = (data) => sendData(data)
   const [firstNameValid, setFirstNameValid] = useState(false)
-  const [lastNameValid, setLastNameValid] = useState(false)
   const [emailValid, setEmailValid] = useState(false)
   const [mobileValid, setmobileValid] = useState(false)
-  const [messageValid, setmessageValid] = useState(false)
 
   const handleFirstNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value
     setFirstNameValid(value.trim() !== "") // Custom validation logic for first name
   }
 
-  const handleLastNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value
-    setLastNameValid(value.trim() !== "") // Custom validation logic for last name
-  }
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value
     setEmailValid(/^\S+@\S+\.\S+$/.test(value)) // Custom validation logic for email
@@ -106,11 +98,6 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
   const handlemobileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value
     setmobileValid(/^[0-9]+$/.test(value)) // Custom validation logic for password
-  }
-
-  const handleMessageChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    const value = e.target.value
-    setmessageValid(value.trim() !== "") // Custom validation logic for last name
   }
 
   const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {

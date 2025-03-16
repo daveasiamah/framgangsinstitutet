@@ -63,9 +63,9 @@ export const headerData: HeaderData = {
     {
       id: 9,
       imageUrl: "/icons/header/crown.svg",
-      title: "Skool Community",
-      desc: "Community om entreprenörskap",
-      link: "https://skool.com/dropshipping-sverige-2012",
+      title: "Ebocker",
+      desc: "Ebocker",
+      link: "/ebocker",
     },
   ],
   // videoUrl: "/images/videos/INTRO.mp4",

@@ -7,7 +7,6 @@ import Link from "next/link"
 import Image from "next/image"
 import { useRouter } from "next/router"
 import { MdOutlineKeyboardArrowDown } from "react-icons/md"
-import { headerData } from "@/locales/en/header"
 
 type Props = {
   openSidebar: boolean
@@ -210,7 +209,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
 
         {/* CTA Button: Only render when pathname is not "/utbildningar" */}
         <div className="hidden mt-2 mb-5 lg:mt-8 lg:flex items-center justify-center">
-          {pathname !== "/utbildningar" ? (
+          {pathname !== "/utbildningar" && pathname !== "/ebocker" ? (
             <button
               onClick={() => {
                 if (!excludedPaths.includes(pathname)) {

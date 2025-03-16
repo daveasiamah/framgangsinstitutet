@@ -10,8 +10,8 @@ export const testimonials: ThankYouTestimonial[] = [
   {
     id: 1,
     text: "Jag skapade och lanserade min kurs snabbt med hjälp av Vendum Masterclass och såg snabbt resultat!",
-    avatar: "/images/thank-you/anna-l.svg",
-    name: "Anna L",
+    avatar: "/images/thank-you/elof-l.svg",
+    name: "Elof L",
     role: "Checkified student",
   },
   {
@@ -59,8 +59,8 @@ export const testimonials: ThankYouTestimonial[] = [
   {
     id: 8,
     text: "Jag startade min kursresa med Checkified Vendum och nu har jag en växande kundbas. Tack för all hjälp!",
-    avatar: "/images/thank-you/carolina-r.svg",
-    name: "Carolina R",
+    avatar: "/images/thank-you/pontus-r.svg",
+    name: "Pontus R",
     role: "Checkified student",
   },
   {

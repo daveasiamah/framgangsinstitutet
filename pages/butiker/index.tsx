@@ -7,7 +7,7 @@ import "swiper/css/effect-cards"
 
 import BonusesBlock from "@/components/blocks/BonusesBlock"
 import ExampleStoresBlock from "@/components/blocks/ExampleStoresBlock"
-import HowItWorkBlock from "@/components/blocks/HowItWorkBlock"
+import HowItWorksBlock from "@/components/blocks/HowItWorksBlock"
 import OrderNowAndGetItBlock from "@/components/blocks/OrderNowAndGetItBlock"
 import PricingHeroBlock from "@/components/blocks/PricingHeroBlock"
 import ReviewsBlock from "@/components/blocks/ReviewsBlock"
@@ -53,7 +53,7 @@ export default function Pricing({}: Props) {
       <OrderNowAndGetItBlock />
       <BonusesBlock />
       <PricingDiscountBlock />
-      <HowItWorkBlock />
+      <HowItWorksBlock />
       <PricingCTAButtonBlock openModal={openModal} />
       <ExampleStoresBlock />
       <ReviewsBlock />

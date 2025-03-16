@@ -1,6 +1,20 @@
 export const ThankYouButton = () => {
   return (
-    <button className="bg-[#225AEA] font-extrabold font-jakarta mt-[17px] flex mx-auto justify-center text-white text-[8px] md:text-[1.5rem] rounded-[20px] min-w-[115px] px-[48px] py-[21px]">
+    <button
+      onClick={() =>
+        window.open("https://form.jotform.com/checkifiedse/formulr")
+      }
+      className="
+        bg-[#225AEA] 
+        font-extrabold font-jakarta 
+        flex mx-auto justify-center items-center 
+        text-white 
+        text-[14px] md:text-[1.256rem] lg:text-[1.5rem] 
+        rounded-[12px] md:rounded-[20px]
+        px-[24px] py-[14px]
+        md:px-[36px] md:py-[18px]
+      "
+    >
       Skicka din ansökan idag!
     </button>
   )
