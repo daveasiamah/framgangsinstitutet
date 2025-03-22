@@ -44,7 +44,7 @@ export const headerData: HeaderData = {
       imageUrl: "/icons/header/bookmark.svg",
       title: "Checkified Vendum",
       desc: "Lär dig skapa en online kurs",
-      link: "https://checkified.se/utbildningar/skapa-en-egen-online-kurs/",
+      link: "https://checkified.se/utbildningar/e-learning-creator",
     },
     {
       id: 7,
@@ -63,14 +63,14 @@ export const headerData: HeaderData = {
     {
       id: 9,
       imageUrl: "/icons/header/crown.svg",
-      title: "Ebocker",
-      desc: "Ebocker",
+      title: "E-böcker & Studiematerial",
+      desc: "Hitta e-böcker till ditt lärande",
       link: "/ebocker",
     },
   ],
   // videoUrl: "/images/videos/INTRO.mp4",
   pricing: "Färdig E-butik",
   login: "Logga In",
-  getStarted: "Starta Gratis Provperiod",
+  getStarted: "Ansök idag",
   dashboard: "Dashboard",
 }

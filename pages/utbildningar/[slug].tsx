@@ -7,6 +7,7 @@ import ScrollReveal from "@/components/transition/ScrollReveal"
 import Breadcrumbs from "@/components/blocks/courses-blocks/CourseBreadcrumbs"
 import Layout from "@/components/Layout"
 import RichTextRenderer from "@/utils/RichTextRenderer"
+import Link from "next/link"
 
 const CourseDetailPage = ({ course }: { course: Course[] }) => {
   if (!course) {
@@ -71,19 +72,20 @@ const CourseDetailPage = ({ course }: { course: Course[] }) => {
                   />
                   <div className="flex flex-col gap-2 max-h-[61px] text-white">
                     <h4 className="font-jakarta font-bold text-sm">
-                      Testa Checkified
+                      Din Framtid Börjar Här
                     </h4>
                     <p className="font-jakarta font-semibold text-xs">
-                      Utforska dropshipping utbildning för att sälja idag.
+                      Utforska över 30+ utbildningar inom Tech, Finans och
+                      Kommunikation
                     </p>
                   </div>
                 </div>
-                <a
-                  href="https://skool.com/dropshipping-sverige-2012"
+                <Link
+                  href="https://checkified.se/utbildningar/"
                   className="w-full text-center py-3 bg-white text-[#151e3a] font-semibold rounded-[10px]"
                 >
-                  <p className="text-xs">Få Erbjudande</p>
-                </a>
+                  <p className="text-xs">Utforska Utbildningar</p>
+                </Link>
               </div>
               <div className="flex flex-col px-4 md:px-8 py-4 rounded-[25px] bg-[#95BF47] mb-4">
                 <div className="flex gap-4 mb-4">
@@ -102,12 +104,12 @@ const CourseDetailPage = ({ course }: { course: Course[] }) => {
                     </p>
                   </div>
                 </div>
-                <a
+                <Link
                   href="https://shopify.pxf.io/checkified"
                   className="w-full text-center py-3 bg-white text-[#151e3a] font-semibold rounded-[10px]"
                 >
                   <p className="text-xs">Få Erbjudande</p>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

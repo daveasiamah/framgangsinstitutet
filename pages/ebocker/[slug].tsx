@@ -63,7 +63,7 @@ const EbookDetailPage = ({ ebook }: { ebook: Ebook[] }) => {
         <div className="w-full lg:w-auto lg:min-w-[386px] mt-12 lg:mt-0 lg:pl-6 order-2">
           <div className="flex flex-col items-center lg:sticky lg:top-[600px]">
             <h2 className="font-jakarta text-lg font-bold mb-4 text-center">
-              Checkified Erbjudanden
+              Din Framtid Börjar Här{" "}
             </h2>
             <div className="max-w-full md:max-w-[386px] rounded-[30px] border-2 border-[#DCE2F8] p-[20px] md:p-[28px]">
               <div className="flex flex-col px-4 md:px-8 py-4 rounded-[25px] bg-[#225aea] mb-4">
@@ -76,18 +76,19 @@ const EbookDetailPage = ({ ebook }: { ebook: Ebook[] }) => {
                   />
                   <div className="flex flex-col gap-2 max-h-[61px] text-white">
                     <h4 className="font-jakarta font-bold text-sm">
-                      Testa Checkified
+                      Din Framtid Börjar Här
                     </h4>
                     <p className="font-jakarta font-semibold text-xs">
-                      Utforska dropshipping utbildning för att sälja idag.
+                      Utforska över 30+ utbildningar inom Tech, Finans och
+                      Kommunikation
                     </p>
                   </div>
                 </div>
                 <a
-                  href="https://skool.com/dropshipping-sverige-2012"
+                  href="https://checkified.se/utbildningar"
                   className="w-full text-center py-3 bg-white text-[#151e3a] font-semibold rounded-[10px]"
                 >
-                  <p className="text-xs">Få Erbjudande</p>
+                  <p className="text-xs">Utforska Utbildningar</p>
                 </a>
               </div>
               <div className="flex flex-col px-4 md:px-8 py-4 rounded-[25px] bg-[#95BF47] mb-4">

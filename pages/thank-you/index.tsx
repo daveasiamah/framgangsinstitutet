@@ -8,7 +8,7 @@ import { ThankYouButton } from "./thank-you-button"
 
 export default function ThankYou() {
   return (
-    <Layout headTitle={"Thank you"} isFullWidth>
+    <Layout headTitle={"Thank you"}>
       <div
         className="flex flex-col items-center w-full justify-center"
         style={{
@@ -154,7 +154,7 @@ export default function ThankYou() {
         </div>
       </section>
 
-      <section className="flex flex-col mx-auto md:container bg-[#EDF5FE] py-10 justify-center items-center">
+      <section className="flex flex-col md:container bg-[#EDF5FE] py-10 justify-center items-center">
         <div className="flex flex-col container text-center items-center">
           <h2 className="font-jakarta font-bold text-[20px] md:text-[3rem] text-center">
             1000 + studenter...

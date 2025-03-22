@@ -1,4 +1,3 @@
-import { useStars } from "@/hooks/useStarRating"
 import en from "@/locales/en"
 import sv from "@/locales/sv"
 import { useRouter } from "next/router"
@@ -8,7 +7,6 @@ export function TopReviewBlock() {
   const { locale } = router
   const t = locale === "en" ? en : sv
   const { topReview } = t.pricingData
-  const getStars = useStars()
 
   return (
     <section
@@ -46,7 +44,26 @@ export function TopReviewBlock() {
 
       <div className="flex flex-col [@media(min-width:412px)]:flex-row justify-between items-start [@media(min-width:412px)]:items-center mb-6 w-full">
         <div className="max-w-[176px] flex items-center">
-          {getStars(topReview.stars)}
+          <img
+            src="/images/pricing/green-star.svg"
+            className="w-5 h-full p-[0.25px]"
+          />
+          <img
+            src="/images/pricing/green-star.svg"
+            className="w-5 h-full p-[0.25px]"
+          />
+          <img
+            src="/images/pricing/green-star.svg"
+            className="w-5 h-full p-[0.25px]"
+          />
+          <img
+            src="/images/pricing/green-star.svg"
+            className="w-5 h-full p-[0.25px]"
+          />
+          <img
+            src="/images/pricing/green-star.svg"
+            className="w-5 h-full p-[0.25px]"
+          />
           <div className="flex items-center gap-1 ml-3">
             <img
               src="/images/pricing/verified-check.png"

@@ -46,12 +46,14 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
 
   const getButtonTitle = (pathname: string) => {
     switch (pathname) {
-      case "checkified.se/":
-        return "Starta Gratis Provperiod"
+      case "/":
+        return "Börja Din Resa Idag"
       case "/butiker":
         return "Få din butik"
       case "/annonser":
         return "Få dina annonser"
+      case "/thank-you":
+        return "Ansök idag!"
       default:
         return "Starta Gratis Provperiod"
     }
@@ -78,6 +80,8 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
       document.removeEventListener("mousedown", handleClickOutside)
     }
   }, [])
+
+  console.log({ pathname })
 
   return (
     <header className="bg-base-100 h-header-height fixed top-0 left-0 right-0 z-20 flex items-center">

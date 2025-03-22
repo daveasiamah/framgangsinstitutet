@@ -57,7 +57,13 @@ export default function Footer({}: Props) {
               <h5 className="font-bold font-jakarta text-xl mb-4">Produkter</h5>
               <ul className="space-y-2 flex flex-col gap-3">
                 <li>
-                  <Link href="/skool">Dropshipping Kurs</Link>
+                  <Link
+                    href="https://whop.com/dropshipping-sverige/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Dropshipping Kurs
+                  </Link>
                 </li>
                 <li>
                   <Link href="/butiker">Färdig E-Butik</Link>
@@ -87,6 +93,12 @@ export default function Footer({}: Props) {
                 <li>
                   <Link href="/affiliate">Affiliate</Link>
                 </li>
+                <li>
+                  <Link href="/contact-us">Kontakt</Link>
+                </li>
+                <li>
+                  <Link href="/faq">FAQ</Link>
+                </li>
               </ul>
             </div>
 
@@ -95,16 +107,13 @@ export default function Footer({}: Props) {
               <h5 className="font-bold font-jakarta text-lg mb-4">Resurser</h5>
               <ul className="space-y-2 flex flex-col gap-3">
                 <li>
+                  <Link href="/ebocker">E-böcker</Link>
+                </li>
+                <li>
                   <Link href="/blog">Blogg</Link>
                 </li>
                 <li>
-                  <Link href="/contact-us">Kontakt</Link>
-                </li>
-                <li>
                   <Link href="/utbildningar">Utbildningar</Link>
-                </li>
-                <li>
-                  <Link href="/faq">FAQ</Link>
                 </li>
               </ul>
             </div>
