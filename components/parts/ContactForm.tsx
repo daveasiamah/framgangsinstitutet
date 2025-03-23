@@ -3,8 +3,7 @@ import { SubmitHandler, useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
 import { contact } from "../../service/Apis/api"
-import SuccessAlert from "@/components/parts/SuccessAlert"
-import ErrorAlert from "@/components/parts/ErrorAlert"
+import { useRouter } from "next/router"
 
 type FormValues = {
   firstName: string
@@ -42,9 +41,8 @@ type Props = {
 }
 
 export default function ContactForm({ contactData }: Props) {
-  const [showModal, setShowModal] = useState(false)
-  const [showModalCls, setShowModalCls] = useState(false)
-  const [alertMessage, setalertMessage] = useState("")
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
   const {
     register,
     handleSubmit,
@@ -53,47 +51,59 @@ export default function ContactForm({ contactData }: Props) {
     resolver: yupResolver(schema),
   })
 
-  const senddata = async (data: any) => {
-    console.log(data)
-    const res: any = await contact(data)
-    if (res.status == 201) {
-      setShowModal(true)
-      setalertMessage("Meddelande Skickat")
-    } else {
-      setalertMessage("Misslyckas")
-      setShowModalCls(true)
+  const router = useRouter()
+
+  const sendData = async (data: any) => {
+    setIsSubmitting(true)
+    try {
+      const res: any = await contact(data)
+
+      if (res.status === 201) {
+        // Navigate immediately (or add a delay if you prefer)
+        router.push("/thank-you")
+      } else {
+        // Optional: handle failure cases here (e.g., show an error message)
+        alert("Något gick fel. Försök igen!") // Simple fallback
+      }
+    } catch (error) {
+      console.error(error)
+      alert("Ett fel uppstod. Försök igen senare.") // Optional error fallback
+    } finally {
+      setIsSubmitting(false)
     }
   }
 
-  const onSubmit: SubmitHandler<FormValues> = (data) => senddata(data)
+  const onSubmit: SubmitHandler<FormValues> = (data) => sendData(data)
+
   const [firstNameValid, setFirstNameValid] = useState(false)
   const [lastNameValid, setLastNameValid] = useState(false)
   const [emailValid, setEmailValid] = useState(false)
-  const [mobileValid, setmobileValid] = useState(false)
-  const [messageValid, setmessageValid] = useState(false)
+  const [mobileValid, setMobileValid] = useState(false)
+  const [messageValid, setMessageValid] = useState(false)
 
   const handleFirstNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value
-    setFirstNameValid(value.trim() !== "") // Custom validation logic for first name
+    setFirstNameValid(value.trim() !== "")
   }
 
   const handleLastNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value
-    setLastNameValid(value.trim() !== "") // Custom validation logic for last name
-  }
-  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value
-    setEmailValid(/^\S+@\S+\.\S+$/.test(value)) // Custom validation logic for email
+    setLastNameValid(value.trim() !== "")
   }
 
-  const handlemobileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value
-    setmobileValid(/^[0-9]+$/.test(value)) // Custom validation logic for password
+    setEmailValid(/^\S+@\S+\.\S+$/.test(value))
+  }
+
+  const handleMobileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value
+    setMobileValid(/^[0-9]+$/.test(value))
   }
 
   const handleMessageChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const value = e.target.value
-    setmessageValid(value.trim() !== "") // Custom validation logic for last name
+    setMessageValid(value.trim() !== "")
   }
 
   return (
@@ -115,7 +125,9 @@ export default function ContactForm({ contactData }: Props) {
             placeholder={contactData?.firstName}
             className="input input-bordered"
             {...register("firstName")}
-            onChange={handleFirstNameChange}
+            onChange={(e) => {
+              handleFirstNameChange(e)
+            }}
           />
           {errors.firstName && (
             <p className="text-red-400 text-sm mt-1">
@@ -135,7 +147,9 @@ export default function ContactForm({ contactData }: Props) {
             placeholder={contactData?.lastName}
             className="input input-bordered"
             {...register("lastName")}
-            onChange={handleLastNameChange}
+            onChange={(e) => {
+              handleLastNameChange(e)
+            }}
           />
           {errors.lastName && (
             <p className="text-red-400 text-sm mt-1">
@@ -155,7 +169,9 @@ export default function ContactForm({ contactData }: Props) {
             placeholder={contactData?.email}
             className="input input-bordered"
             {...register("email")}
-            onChange={handleEmailChange}
+            onChange={(e) => {
+              handleEmailChange(e)
+            }}
           />
           {errors.email && (
             <p className="text-red-400 text-sm mt-1">{errors.email.message}</p>
@@ -173,7 +189,9 @@ export default function ContactForm({ contactData }: Props) {
             placeholder={contactData?.phoneNumber}
             className="input input-bordered"
             {...register("phone")}
-            onChange={handlemobileChange}
+            onChange={(e) => {
+              handleMobileChange(e)
+            }}
           />
           {errors.phone && (
             <p className="text-red-400 text-sm mt-1">{errors.phone.message}</p>
@@ -192,7 +210,9 @@ export default function ContactForm({ contactData }: Props) {
           rows={6}
           placeholder={contactData?.message}
           {...register("message")}
-          onChange={handleMessageChange}
+          onChange={(e) => {
+            handleMessageChange(e)
+          }}
         ></textarea>
         {errors.message && (
           <p className="text-red-400 text-sm mt-1">{errors.message.message}</p>
@@ -205,31 +225,24 @@ export default function ContactForm({ contactData }: Props) {
       messageValid ? (
         <button
           type="submit"
-          className=" btn-primary mt-8 w-full drop-shadow-none"
+          className={`btn-primary mt-8 w-full drop-shadow-none ${
+            isSubmitting ? "opacity-50 cursor-not-allowed" : ""
+          }`}
+          disabled={isSubmitting}
         >
-          {contactData?.button}
+          {isSubmitting ? "Skickar..." : contactData?.button}
         </button>
       ) : (
         <div className="!cursor-not-allowed">
           <button
             type="submit"
-            className=" btn btn-grey !bg-gray mt-8 h-14 w-full drop-shadow-none "
+            className="btn btn-grey !bg-gray mt-8 h-14 w-full drop-shadow-none"
             disabled
           >
             {contactData?.button}
           </button>
         </div>
       )}
-      <SuccessAlert
-        isVisible={showModal}
-        alertMessage={alertMessage}
-        onClose={() => setShowModal(false)}
-      />
-      <ErrorAlert
-        isVisibleclose={showModalCls}
-        alertMessage={alertMessage}
-        onClose={() => setShowModalCls(false)}
-      />
     </form>
   )
 }

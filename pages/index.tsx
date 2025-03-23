@@ -251,7 +251,7 @@ export default function Home() {
                   }}
                 >
                   <p className="text-[14px] font-semibold font-jakarta">
-                    Starta Gratis Provperiod
+                    Se Gratis Guide
                   </p>
                 </button>
               </div>
@@ -353,7 +353,7 @@ export default function Home() {
                 }}
               >
                 <p className="text-[14px] font-semibold font-jakarta">
-                  Prova Gratis
+                  Se Video
                 </p>
               </button>
             </div>
@@ -1296,24 +1296,35 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="lg:bg-[#225AEA] bg-[#3E6FED] p-4 lg:pl-10 mb-16 lg:mb-20 rounded-3xl text-white text-left flex flex-col items-center lg:flex-row lg:gap-20">
-          <ScrollReveal className="w-full lg:w-2/3 pl-12 mr-12 pt-4">
-            <h2 className="lg:text-[24px] lg:leading-[28px] md:text-[24px] md:leading-[28px]  text-[18px] leading-[22px]  font-[700] mb-2 font-jakarta">
-              Gå med i 750+ studenter som använder Checkified
-            </h2>
-            <p className="mb-2 text-[12px] md:text-[14px] lg:text-[16px] lg:leading-[22px] font-[500] font-inter mt-4">
-              Allt du behöver göra är att hitta din första framgångsrika
-              produkt. Vi på Checkified finns här för att guida dig på vägen
-              till framgång!
-            </p>
+        <section className="lg:bg-[#225AEA] bg-[#3E6FED] mb-16 lg:mb-20 rounded-3xl text-white">
+          <ScrollReveal className="flex flex-col md:flex-row px-6 md:px-12 lg:px-[48px] py-10 md:py-[44px] gap-10 lg:gap-20 items-center">
+            <div className="flex flex-col justify-center items-start w-full md:w-2/3 gap-6">
+              <h2 className="font-jakarta font-[700] text-[20px] leading-[26px] md:text-[24px] md:leading-[30px] lg:text-[28px] lg:leading-[34px]">
+                Gå med 850+ studenter som använder Checkified
+              </h2>
 
-            <div>
+              <p className="font-inter font-[500] text-[14px] md:text-[16px] lg:text-[18px] lg:leading-[26px]">
+                Allt du behöver göra är att hitta din första framgångsrika
+                produkt. Vi på Checkified finns här för att guida dig på vägen
+                till framgång!
+              </p>
+
               <button
                 onClick={openModal}
-                className=" h-[23px] lg:h-[38px] rounded-[5px] btn-white mt-5 font-inter font-[500] text-[10px] md:text-[14px] w-full lg:w-[120px] text-[#151E3A] "
+                className="w-auto rounded-md bg-white px-6 py-3 mt-2 md:mt-5 text-[#151E3A] text-[12px] md:text-[14px] font-inter font-[500] hover:bg-gray-200 transition"
               >
-                Prova Gratis
+                Ansök till Checkified
               </button>
+            </div>
+
+            <div className="flex justify-center w-full md:w-1/3">
+              <Image
+                src="/images/home/connect.svg"
+                alt="connect-checkified"
+                width={618}
+                height={479}
+                className="w-full max-w-[480px] h-auto"
+              />
             </div>
           </ScrollReveal>
         </section>
@@ -1334,15 +1345,15 @@ export default function Home() {
             <div className="text-center ">
               <div className="pl-10 pr-10">
                 <h1 className="text-white text-center text-[20px] leading-[48px] md:text-[24px] font-[500] font-jakarta mb-2 mt-4">
-                  Prova Checkified med en 7-dagars gratis provperiod
+                  Starta din resa idag.
                 </h1>
                 <p className="mb-4 max-w-3xl mx-auto text-center lg:text-[16px] text-[12px] font-inter">
-                  Perfekt för nybörjare som vill dyka in i dropshipping!
-                  Utforska vår kurs gratis, utan förpliktelse – för alltid.
+                  Se vår kostnadsfrit introguide för att lära dig om hur
+                  e-handel kan förändra ditt liv till det bättre.
                 </p>
                 <div className="lg:pl-8 lg:pr-8 mt-4">
                   <div className="flex justify-center flex-wrap lg:flex lg:justify-between">
-                    <span className="flex justify-center   align-items-center mr-5  text-[8px] lg:text-[14px] text-white font-inter font-[500px]">
+                    <span className="flex justify-center align-items-center mr-5 text-[8px] lg:text-[14px] text-white font-inter font-[500px]">
                       <svg
                         width="24"
                         height="24"

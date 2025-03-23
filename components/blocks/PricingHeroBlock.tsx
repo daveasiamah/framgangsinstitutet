@@ -81,11 +81,11 @@ export default function PricingHeroBlock() {
           <div className="icon-section_ann font-inter">
             <span className="font-inter">
               <img src="/img/calender.svg" alt="svg" />
-              Prova gratis idag
+              Beprövade e-butiker
             </span>
             <span className="font-inter">
               <img src="/img/hand.svg" alt="svg" />
-              100% riskfritt
+              Snabb leverans
             </span>
             <span className="font-inter">
               <img src="/img/check.svg" alt="svg" />

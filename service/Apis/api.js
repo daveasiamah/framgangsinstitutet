@@ -40,7 +40,6 @@ export const registerOfContract = async ({ firstName, email, phone }) => {
       }
     )
 
-    console.log("Contact saved successfully:", response.data)
     return { success: true, data: response.data }
   } catch (error) {
     console.error(

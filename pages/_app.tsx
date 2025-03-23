@@ -78,6 +78,46 @@ export default function App({
           `,
         }}
       />
+
+      {/* Chatbase initialization script */}
+      <Script id="chatbase-init" strategy="beforeInteractive">
+        {`
+          (function(){
+            if (!window.chatbase || window.chatbase("getState") !== "initialized") {
+              window.chatbase = (...arguments) => {
+                if (!window.chatbase.q) {
+                  window.chatbase.q = [];
+                }
+                window.chatbase.q.push(arguments);
+              };
+
+              window.chatbase = new Proxy(window.chatbase, {
+                get(target, prop) {
+                  if (prop === "q") {
+                    return target.q;
+                  }
+                  return (...args) => target(prop, ...args);
+                }
+              });
+            }
+
+            const onLoad = function() {
+              const script = document.createElement("script");
+              script.src = "https://www.chatbase.co/embed.min.js";
+              script.id = "9FKzKqGL58yZU4C5KxhTD"; // <-- Replace with your chatbot ID
+              script.domain = "www.chatbase.co";
+              document.body.appendChild(script);
+            };
+
+            if (document.readyState === "complete") {
+              onLoad();
+            } else {
+              window.addEventListener("load", onLoad);
+            }
+          })();
+        `}
+      </Script>
+
       {/* <script src="//code.tidio.co/b3qsg0t7uu4nseq9piuuayi3u5gx3bi6.js" async></script> */}
       <meta
         name="facebook-domain-verification"

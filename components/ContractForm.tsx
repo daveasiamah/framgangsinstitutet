@@ -71,33 +71,25 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
     resolver: yupResolver(schema),
   })
 
-  const senddata = async (data: any) => {
-    console.log(data)
-    const res = await registerOfContract(data)
-    if (res.success) {
-      setShowSuccess(true)
-    } else {
-      setalertMessage("Misslyckas")
-      setShowModalCls(true)
-    }
+  const sendData = async (data: any) => {
+    console.log("Form submitted:", data)
+
+    router.push("/thank-you").then(() => {
+      console.log("Route changed to /thank-you")
+      onClose() // Optional, close the modal when navigating away
+    })
   }
 
-  const onSubmit: SubmitHandler<FormValues> = (data) => senddata(data)
+  const onSubmit: SubmitHandler<FormValues> = (data) => sendData(data)
   const [firstNameValid, setFirstNameValid] = useState(false)
-  const [lastNameValid, setLastNameValid] = useState(false)
   const [emailValid, setEmailValid] = useState(false)
   const [mobileValid, setmobileValid] = useState(false)
-  const [messageValid, setmessageValid] = useState(false)
 
   const handleFirstNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value
     setFirstNameValid(value.trim() !== "") // Custom validation logic for first name
   }
 
-  const handleLastNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value
-    setLastNameValid(value.trim() !== "") // Custom validation logic for last name
-  }
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value
     setEmailValid(/^\S+@\S+\.\S+$/.test(value)) // Custom validation logic for email
@@ -106,11 +98,6 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
   const handlemobileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value
     setmobileValid(/^[0-9]+$/.test(value)) // Custom validation logic for password
-  }
-
-  const handleMessageChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    const value = e.target.value
-    setmessageValid(value.trim() !== "") // Custom validation logic for last name
   }
 
   const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -134,21 +121,21 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
         <div>
           <div className="flex-col justify-center items-center">
             <Image
-              src="/images/home/nyckeln-till-frihet.jpg"
+              src="/images/home/contract-form-banner.jpg"
               alt="video"
-              width="240"
-              height="100"
-              className="mx-auto object-cover rounded-4xl"
+              width="311"
+              height="175"
+              className="mx-auto object-cover shadow-2xl"
             />
             <div className="lg:mt-6">
               <div className="flex items-center justify-center gap-2 text-lg lg:text-xl font-bold">
-                <h1 className="text-[20px]">{t.homeData.popupBlackTitle}</h1>
-                <h1 className="text-primary text-[20px]">
-                  {t.homeData.popupBlueTitle}
+                <h1 className="font-jakarta font-extrabold text-xl text-[#151e3a">
+                  Se Vår Gratis Intro Video
                 </h1>
               </div>
-              <p className="text-gray-500 mt-1 lg:mt-4 text-sm lg:text-lg">
-                {t.homeData.popupSubtitle}
+              <p className="mt-1 lg:mt-4 text-sm text-[#707BA0] lg:text-lg">
+                Se insidan av kursen och hur du kan omsätta minst 100 000+
+                SEK/månad utan tidigare erfarenhet.
               </p>
             </div>
           </div>
@@ -347,10 +334,7 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
               loading="lazy"
             />
 
-            <span className="mt-1">
-              {" "}
-              Börja med Shopify för 10kr i en månad.
-            </span>
+            <span className="mt-1">Börja med Shopify för 10kr i en månad.</span>
           </button>
         </div>
       )}

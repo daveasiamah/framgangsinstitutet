@@ -14,12 +14,12 @@ export function CTABannerBlock() {
       <div className="relative left-0 right-0 flex flex-col items-center justify-center bg-[#2E56F5] rounded-[20px] md:px-4 lg:px-6 md:py-5 lg:py-5 back-background">
         <div className="text-center">
           <div className="px-2">
-            <h1 className="text-white text-center text-[20px] leading-7 md:text-[24px] fong-semibold font-jakarta mb-2 mt-6">
-              Prova Checkified med en 7-dagars gratis provperiod
+            <h1 className="text-white text-center text-[20px] leading-[48px] md:text-[24px] font-bold font-jakarta mb-2 mt-4">
+              Redo att få din butik?
             </h1>
-            <p className="mb-4 max-w-[289px] md:max-w-lg mx-auto text-center lg:text-[16px] text-[12px] font-inter">
+            <p className="mb-4 max-w-3xl mx-auto text-center lg:text-[16px] text-[12px] font-inter">
               Perfekt för nybörjare som vill dyka in i dropshipping! Säkra din
-              butik idag och gör försäljning imorgon.
+              butik idag
             </p>
             <div className="flex flex-wrap w-full gap-8 p-1">
               <div className="flex flex-wrap gap-3 justify-center md:justify-between text-white font-inter w-full">

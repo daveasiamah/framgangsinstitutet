@@ -1,21 +1,13 @@
-import Image from "next/image"
 import { useRouter } from "next/router"
 import { useState } from "react"
 
 import Layout from "@/components/Layout"
-import Accordion from "@/components/parts/Accordion"
-import Title from "@/components/parts/Title"
-
-import ScrollReveal from "@/components/transition/ScrollReveal"
-
-// Import Swiper styles
 import "swiper/css"
 import "swiper/css/effect-cards"
 
 import BonusesBlock from "@/components/blocks/BonusesBlock"
 import ExampleStoresBlock from "@/components/blocks/ExampleStoresBlock"
-import GraphicsBlock from "@/components/blocks/GraphicsBlock"
-import HowItWorkBlock from "@/components/blocks/HowItWorkBlock"
+import HowItWorksBlock from "@/components/blocks/HowItWorksBlock"
 import OrderNowAndGetItBlock from "@/components/blocks/OrderNowAndGetItBlock"
 import PricingHeroBlock from "@/components/blocks/PricingHeroBlock"
 import ReviewsBlock from "@/components/blocks/ReviewsBlock"
@@ -61,7 +53,7 @@ export default function Pricing({}: Props) {
       <OrderNowAndGetItBlock />
       <BonusesBlock />
       <PricingDiscountBlock />
-      <HowItWorkBlock />
+      <HowItWorksBlock />
       <PricingCTAButtonBlock openModal={openModal} />
       <ExampleStoresBlock />
       <ReviewsBlock />

@@ -2,7 +2,7 @@ import en from "@/locales/en"
 import sv from "@/locales/sv"
 import { useRouter } from "next/router"
 
-export default function HowItWorkBlock() {
+export default function HowItWorksBlock() {
   const router = useRouter()
   const { locale } = router
   const t = locale === "en" ? en : sv
