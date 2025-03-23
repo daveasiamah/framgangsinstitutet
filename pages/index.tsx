@@ -1300,12 +1300,13 @@ export default function Home() {
           <ScrollReveal className="flex flex-col md:flex-row px-6 md:px-12 lg:px-[48px] py-10 md:py-[44px] gap-10 lg:gap-20 items-center">
             <div className="flex flex-col justify-center items-start w-full md:w-2/3 gap-6">
               <h2 className="font-jakarta font-[700] text-[20px] leading-[26px] md:text-[24px] md:leading-[30px] lg:text-[28px] lg:leading-[34px]">
-                Starta din resa idag
+                Gå med 850+ studenter som använder Checkified
               </h2>
 
               <p className="font-inter font-[500] text-[14px] md:text-[16px] lg:text-[18px] lg:leading-[26px]">
-                Se vår kostnadsfria introguide för att lära dig om hur e-handel
-                kan förändra ditt liv till det bättre.
+                Allt du behöver göra är att hitta din första framgångsrika
+                produkt. Vi på Checkified finns här för att guida dig på vägen
+                till framgång!
               </p>
 
               <button

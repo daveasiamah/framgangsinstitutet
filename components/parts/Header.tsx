@@ -26,8 +26,10 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
   }
 
   const router = useRouter()
-  const { locale, pathname } = router
+  const { locale, pathname, query } = router
   const t = locale === "en" ? en : sv
+
+  const isSlugPage = !!query.slug
 
   const setDefaultLangToSV = () => {
     router.push(router.pathname, router.asPath, { locale: "sv" })
@@ -55,7 +57,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
       case "/thank-you":
         return "Ansök idag!"
       default:
-        return "Starta Gratis Provperiod"
+        return "Ansök idag!"
     }
   }
 
@@ -81,12 +83,9 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
     }
   }, [])
 
-  console.log({ pathname })
-
   return (
     <header className="bg-base-100 h-header-height fixed top-0 left-0 right-0 z-20 flex items-center">
       <div className="container mx-auto flex justify-between items-center">
-        {/* Logo */}
         <Link href="/" onClick={() => setOpenSidebar(false)}>
           <div className="flex items-center justify-start gap-2">
             <Image
@@ -210,26 +209,35 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
             </li>
           </ul>
         </nav>
-
-        {/* CTA Button: Only render when pathname is not "/utbildningar" */}
+        {/* CTA Button: Only render when pathname is not "/utbildningar", "/ebocker", or a [slug] dynamic page */}
         <div className="hidden mt-2 mb-5 lg:mt-8 lg:flex items-center justify-center">
-          {pathname !== "/utbildningar" && pathname !== "/ebocker" ? (
+          {!isSlugPage &&
+          pathname !== "/utbildningar" &&
+          pathname !== "/ebocker" ? (
             <button
               onClick={() => {
-                if (!excludedPaths.includes(pathname)) {
-                  openModal() // Open modal for all paths except those in excludedPaths
+                const buttonTitle = getButtonTitle(pathname)
+
+                if (buttonTitle === "Ansök idag!") {
+                  window.open(
+                    "https://form.jotform.com/checkifiedse/formulr",
+                    "_blank"
+                  )
+                } else if (!excludedPaths.includes(pathname)) {
+                  openModal()
                 } else {
                   window.open(
-                    "https://whop.com/checkout/plan_YvhNS2Gd4XP9j?d2c=true"
+                    "https://whop.com/checkout/plan_YvhNS2Gd4XP9j?d2c=true",
+                    "_blank"
                   )
                 }
               }}
               className="text-[#fff] bg-[#225AEA] font-jakarta h-full px-6 py-3 rounded-[7px] shadow-inner button-shadow"
               style={{
                 boxShadow: `
-                  inset 11px 1px 19.4px 0px rgba(255, 255, 255, 0.3), 
-                  inset -4px 0px 5.8px 0px rgba(255, 255, 255, 0.25)
-                `,
+          inset 11px 1px 19.4px 0px rgba(255, 255, 255, 0.3), 
+          inset -4px 0px 5.8px 0px rgba(255, 255, 255, 0.25)
+        `,
               }}
             >
               <p className="text-base font-semibold font-jakarta">
@@ -238,7 +246,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
             </button>
           ) : (
             <div className="hidden mt-2 mb-5 lg:mt-8 lg:flex items-center justify-center w-40">
-              {}
+              {/* Empty space if needed */}
             </div>
           )}
         </div>
