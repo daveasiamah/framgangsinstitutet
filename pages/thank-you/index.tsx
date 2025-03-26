@@ -1,10 +1,10 @@
 import Layout from "@/components/Layout"
 import Image from "next/image"
 import React from "react"
-import { testimonials } from "./testimonials"
-import { ThankYouVideoBanner } from "./thank-you-video-banner"
-import { listItems } from "./listItems"
-import { ThankYouButton } from "./thank-you-button"
+import { testimonials } from "../../components/blocks/thank-you/testimonials"
+import { ThankYouVideoBanner } from "../../components/blocks/thank-you/thank-you-video-banner"
+import { listItems } from "../../components/blocks/thank-you/listItems"
+import { ThankYouButton } from "../../components/blocks/thank-you/thank-you-button"
 
 export default function ThankYou() {
   return (
