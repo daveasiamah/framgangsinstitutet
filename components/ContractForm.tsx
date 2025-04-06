@@ -75,7 +75,6 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
     console.log("Form submitted:", data)
     try{
       const res = await registerOfContract(data)
-      console.log("Response from API:", res)
       if(res.success){
         router.push("/thank-you")
       }
