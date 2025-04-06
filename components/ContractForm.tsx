@@ -73,11 +73,16 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
 
   const sendData = async (data: any) => {
     console.log("Form submitted:", data)
-
-    router.push("/thank-you").then(() => {
-      console.log("Route changed to /thank-you")
-      onClose() // Optional, close the modal when navigating away
-    })
+    try{
+      const res = await registerOfContract(data)
+      console.log("Response from API:", res)
+      if(res.success){
+        router.push("/thank-you")
+      }
+    }
+      catch(error){
+      console.log("ERROR SENDING CONTACT FORM: ",error)
+    }
   }
 
   const onSubmit: SubmitHandler<FormValues> = (data) => sendData(data)
