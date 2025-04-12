@@ -18,16 +18,11 @@ export default function Courses({}: Props) {
   return (
     <Layout headTitle={"Utbildningar"}>
       <section className="w-full">
-        {/* Courses Hero Section */}
         <CoursesHeroBlock />
-        {/* Popular Courses List Section */}
         <CoursesList />
-        {/* Who Is This For Section */}
         <WhoCanJoin />
         <WhoCanJoinBottomSection />
-        {/* Testimonials Section */}
         <CourseTestimonials />
-        {/* Learn Digital Courses Section */}
         <CoursesOverview />
       </section>
     </Layout>
