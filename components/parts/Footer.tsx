@@ -16,7 +16,7 @@ export default function Footer({}: Props) {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-[#fff] text-[#434C69] py-14 relative mt-12 lg:mt-10">
+    <footer className="bg-[#fff] text-[#434C69] py-1 relative mt-2 lg:mt-10">
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-10">
           {/* Logo Section */}
