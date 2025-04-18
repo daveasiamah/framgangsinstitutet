@@ -4,6 +4,7 @@ import Layout from "@/components/Layout"
 import en from "@/locales/en"
 import sv from "@/locales/sv"
 import {
+  homePageCTAData,
   homePageFaqs,
   homePagePartners,
 } from "@/components/blocks/home-blocks/HomePageData"
@@ -13,6 +14,14 @@ import Image from "next/image"
 import { useCourses } from "@/hooks/useCourses"
 import CourseCard from "@/components/blocks/courses-blocks/CourseCard"
 import { useMemo } from "react"
+import {
+  AlmegaIcon,
+  StarIcon,
+  UserIcon,
+  BadgeIcon,
+} from "@/components/blocks/home-blocks/HomePageSvgs"
+import ScrollReveal from "@/components/transition/ScrollReveal"
+import Link from "next/link.js"
 
 export default function Home() {
   const router = useRouter()
@@ -21,7 +30,7 @@ export default function Home() {
   const { courses } = useCourses()
 
   const randomCourses = useMemo(() => {
-    if (!courses || courses.length === 0) return [] // guard in case courses is not loaded yet
+    if (!courses || courses.length === 0) return []
     const shuffled = [...courses].sort(() => 0.5 - Math.random())
     return shuffled.slice(0, 3)
   }, [courses])
@@ -29,8 +38,172 @@ export default function Home() {
   return (
     <>
       <Layout headTitle={t.homeData.metaData.title}>
+        <section className="relative hero-height flex w-full flex-col justify-between items-center gap-10 md:pt-10 mb-16">
+          <div className="w-full text-center mb-6 md:mb-0 lg:mb-0 flex flex-col items-center">
+            <div
+              className="flex flex-col items-center w-full justify-center"
+              style={{
+                backgroundImage: `url('/images/pricing/store-hero-bg.svg')`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+                backgroundPosition: "center bottom",
+              }}
+            >
+              <ScrollReveal className="flex justify-center flex-col items-center mb-10 md:mb-24">
+                <h1 className="text-[18px] md:text-[48px] font-bold font-jakarta">
+                  Din framtid börjar här
+                </h1>
+                <h2 className="text-xs md:text-[18px] text-[#434C69] max-w-[276px] md:max-w-[415px] py-2 md:leading-6 mt-2 font-inter mb-6">
+                  Hitta distans utbildningar som leder till jobb. Studera när du
+                  vill, hur du vill och var du vill.
+                </h2>
+                <button
+                  onClick={() => router.push("/utbildningar")}
+                  className="w-[141px] py-3 bg-[#225AEA] text-white font-semibold text-sm rounded-lg mb-[52px]"
+                >
+                  <p className="font-jakarta text-xs md:text-base">
+                    Hitta Utbildning
+                  </p>
+                </button>
+
+                <Image
+                  src={"/new-home/hero-image-home.jpg"}
+                  alt={`hero image`}
+                  width={1196}
+                  height={691}
+                  className="w-full h-full object-cover"
+                />
+              </ScrollReveal>
+            </div>
+          </div>
+        </section>
+
+        <div className="bg-blue-600 rounded-3xl px-5 md:px-10 py-5 md:py-14 md:mt-10 mb-5 md:mb-20">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-4 justify-between items-center">
+            <div className="flex flex-col items-center text-center gap-3">
+              <div className="flex justify-center items-center rounded-full bg-[#90adf5] w-12 h-12 md:w-16 md:h-16">
+                <UserIcon className="w-4 h-4 md:w-6 md:h-6" />
+              </div>
+              <h4 className="text-white text-xs md:text-lg md:font-bold">
+                7500+ deltagare
+              </h4>
+            </div>
+
+            <div className="flex flex-col items-center text-center gap-3">
+              <div className="flex justify-center items-center rounded-full bg-[#90adf5] w-12 h-12 md:w-16 md:h-16">
+                <StarIcon className="w-4 h-4 md:w-6 md:h-6" />
+              </div>
+              <h4 className="text-white text-xs md:text-lg md:font-bold">
+                2500+ recensioner
+              </h4>
+            </div>
+
+            <div className="flex flex-col items-center text-center gap-3">
+              <div className="flex justify-center items-center rounded-full bg-[#90adf5] w-12 h-12 md:w-16 md:h-16">
+                <BadgeIcon className="w-3 h-4 md:w-5 md:h-6" />
+              </div>
+              <h4 className="text-white text-xs md:text-lg md:font-bold">
+                Sveriges ledande experter
+              </h4>
+            </div>
+
+            <div className="flex flex-col items-center text-center gap-3">
+              <div className="flex justify-center items-center rounded-full bg-[#90adf5] w-12 h-12 md:w-16 md:h-16">
+                <AlmegaIcon className="w-5 h-4 md:w-7 md:h-6" />
+              </div>
+              <h4 className="text-white text-xs md:text-lg md:font-bold">
+                ALMEGA-auktoriserade
+              </h4>
+            </div>
+          </div>
+        </div>
+
+        {homePageCTAData.map((item, index) => (
+          <section
+            key={index}
+            className="mb-4 md:mb-14 md:px-10 w-full flex justify-center"
+          >
+            <div
+              className={`flex flex-col md:flex-row ${
+                index % 2 !== 0 ? "md:flex-row-reverse" : ""
+              } gap-5 md:gap-12 w-full max-w-[1200px]`}
+            >
+              <div className="flex-1 flex flex-col items-start gap-5 px-4 max-w-[617px]">
+                <h2 className="font-jakarta text-xl md:text-4xl font-bold text-gray-900">
+                  {item.title}
+                </h2>
+                <p className="text-gray-300 text-sm md:text-base">
+                  {item.text}
+                </p>
+                {index === 0 && (
+                  <>
+                    <div className="flex gap-2 items-center">
+                      <Image
+                        src="/new-home/check-mark.svg"
+                        alt="check-mark"
+                        width={16}
+                        height={11}
+                      />
+                      <p className="text-gray-600 text-xs md:text-base">
+                        Över 90% av våra studenter får jobb
+                      </p>
+                    </div>
+                    <div className="flex gap-2 items-center">
+                      <Image
+                        src="/new-home/check-mark.svg"
+                        alt="check-mark"
+                        width={16}
+                        height={11}
+                      />
+                      <p className="text-gray-600 text-xs md:text-base">
+                        Över 1 000 arbetsgivare i nätverket
+                      </p>
+                    </div>
+                    <div className="flex gap-2 items-center">
+                      <Image
+                        src="/new-home/check-mark.svg"
+                        alt="check-mark"
+                        width={16}
+                        height={11}
+                      />
+                      <p className="text-gray-600 text-xs md:text-base">
+                        Pricksäkra utbildningslösningar
+                      </p>
+                    </div>
+                  </>
+                )}
+                <Link
+                  href={
+                    index === 2
+                      ? "https://checkified.se/ebocker/"
+                      : "https://checkified.se/utbildningar"
+                  }
+                  className="w-[99px] md:w-[140px] px-3 py-3 bg-blue-600 text-white font-semibold text-xs md:text-base rounded-lg text-center font-sans"
+                >
+                  {item.buttonText}
+                </Link>
+              </div>
+
+              <div className="flex-1 flex justify-center">
+                <div className="rounded-[20px] max-w-[500px] w-full h-full overflow-hidden">
+                  <Image
+                    src={item.image}
+                    alt={`Section ${index + 1}`}
+                    width={308}
+                    height={206}
+                    className="w-full h-[206px] md:w-[500px] md:h-[333px] object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+        ))}
+
         <section className="flex flex-col items-center justify-center my-10">
-          <div className="flex flex-col md:flex-row gap-6">
+          <h2 className="text-[1.25rem] md:text-[2.6rem] text-center font-jakarta font-bold text-[#151E3A]">
+            Våra mest populära distansutbildningar.
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-5">
             {randomCourses.map((course) => (
               <CourseCard key={course.id} course={course} />
             ))}
@@ -46,26 +219,29 @@ export default function Home() {
           </button>
         </section>
 
-        <section className="grid grid-cols-1 md:grid-cols-2 items-center gap-[1rem] md:gap-[1.625rem]">
-          <div className="flex flex-col px-[1.313rem] py-[1.5rem] md:px-[1.625rem] md:py-[2.375rem] rounded-[15px] border-[0.5px] border-gray-200 gap-2 md:gap-4">
-            <h2 className="font-jakarta font-bold text-[0.875rem] md:text-[1.225rem] lg:text-[1.75rem]">
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-[2rem]">
+          <div className="flex flex-col items-baseline px-[2.063rem] py-6 md:py-[3rem] rounded-[30px] border-[0.5px] border-gray-200 gap-4 md:gap-4">
+            <h2 className="font-jakarta font-bold text-[1.25rem] md:text-[2.188rem]">
               Få tillgång till digitalt innehåll
             </h2>
-            <p className="font-jakarta font-medium text-xs md:text-base max-w-[518px]">
-              När du startar ditt lärande får du tillgång till förinspelade
-              videoföreläsningar, text- och bilddokument och övningar ledda av
-              våra experter.
+            <p className="font-jakarta font-medium text-sm md:text-base">
+              Vi har grundligt utformat våra läroplaner för att täcka alla
+              viktiga delar av varje ämne. Från grundläggande koncept till
+              avancerade tekniker. Våra utbildningar ger en holistisk
+              inlärningsupplevelse som utrustar dig med de färdigheter du
+              behöver för att få det jobb du önskar.
             </p>
           </div>
 
-          <div className="flex flex-col px-[1.313rem] py-[1.5rem] md:px-[1.625rem] md:py-[2.375rem] rounded-[15px] border-[0.5px] border-gray-200 gap-2 md:gap-4">
-            <h2 className="font-jakarta font-bold text-[0.875rem] md:text-[1.225rem] lg:text-[1.75rem]">
-              Få tillgång till digitalt innehåll
+          <div className="flex flex-col items-baseline px-[2.063rem] py-6 md:py-[3rem] rounded-[30px] border-[0.5px] border-gray-200 gap-4 md:gap-4">
+            <h2 className="font-jakarta font-bold text-[1.25rem] md:text-[2.188rem]">
+              Flexibla studier
             </h2>
-            <p className="font-jakarta font-medium text-xs md:text-base max-w-[518px]">
-              När du startar ditt lärande får du tillgång till förinspelade
-              videoföreläsningar, text- och bilddokument och övningar ledda av
-              våra experter.
+            <p className="font-jakarta font-medium text-sm md:text-base">
+              I vår plattform har du flexibiliteten att lära dig i din egen takt
+              och sätta ditt eget schema. Oavsett om du arbetar heltid eller om
+              du är en person med en hektisk livsstil kan du studera på distans
+              när som helst, var som helst. Du skapar dina egna rutiner.
             </p>
           </div>
         </section>
@@ -190,7 +366,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="mt-[25px]">
+        <section className="mt-[25px] md:mt-[44px]">
           <Title blackText="Börja studera på " blueText="distans idag." />
           <SubTitle subtitleText="Utforska vårt utbildningsutbud och ta första steget mot din personliga utveckling." />
           <Title

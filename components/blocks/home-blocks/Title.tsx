@@ -19,7 +19,7 @@ const Title: React.FC<Props> = ({
   const baseTextClass =
     textClassName ??
     `${
-      textSize ? textSize : "text-[34px]"
+      textSize ? textSize : "text-[20px]"
     } md:text-[45px] leading-[35px] font-jakarta font-bold text-center mb-4 md:mb-6 md:leading-[45px]`
 
   return (

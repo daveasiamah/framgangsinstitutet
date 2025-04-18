@@ -9,7 +9,7 @@ const CourseCard = ({ course }: { course: Course }) => {
 
   return (
     <div
-      className="flex flex-col max-w-[345px] min-w-[345px] max-h-[365px] md:min-h-full md:max-w-full lg:min-w-[463px] lg:min-h-[433px] xl:min-w-[380px] xl:min-h-[433px] 2xl:min-w-[483px] 2xl:min-h-[443px] px-4 pt-5 pb-5 border rounded-[29px] cursor-pointer overflow-hidden"
+      className="flex flex-col max-w-[345px] min-w-[345px] max-h-[365px] min-h-[365px] md:min-w-[396px] md:max-w-[396px] md:min-h-[433px] md:max-h-[433px] px-4 pt-5 pb-5 border rounded-[29px] cursor-pointer overflow-hidden"
       style={{ borderColor: "#BBBBBF" }}
     >
       {/* Image Section */}

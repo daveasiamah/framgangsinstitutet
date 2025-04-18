@@ -13,6 +13,13 @@ interface Partner {
   }
 }
 
+interface CTA {
+  title: string
+  text: string
+  image: string
+  buttonText: string
+}
+
 export const homePageFaqs: FAQ[] = [
   {
     id: 0,
@@ -121,5 +128,26 @@ export const homePagePartners: Partner[] = [
       mobile: "w-[144px] h-[57px]",
       lg: "w-[200px] h-[70px]",
     },
+  },
+]
+
+export const homePageCTAData: CTA[] = [
+  {
+    title: "Utbildningar skapade av experter.",
+    text: "Våra utbildningar är framtagna av ämnesexperter som har omfattande kunskap och praktisk erfarenhet inom sina respektive områden. Du kommer att att lära av de bästa och få kompetenser som är efterfrågade på arbetsmarknaden.",
+    image: "/new-home/distance-learning.jpg",
+    buttonText: "Ansök nu",
+  },
+  {
+    title: "Lär och utveckla dig själv genom distansstudier.",
+    text: "Det är otroligt viktigt med kontinuerligt lärande och kompetensutveckling för att vara attraktiv i dagens dynamiska arbetsmiljö. Vi har noggrant designat utbildningar som leder till jobb inom populära yrken.",
+    image: "/new-home/online-study.jpg",
+    buttonText: "Läs mer",
+  },
+  {
+    title: "Allt samlat på ett ställe.",
+    text: "Glöm tunga väskor och förlorade papper – alla dina studieresurser finns lättillgängliga i vår app, när du behöver dem.",
+    image: "/new-home/self-learning.jpg",
+    buttonText: "Utforska här",
   },
 ]
