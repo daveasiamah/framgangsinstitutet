@@ -59,7 +59,7 @@ export default function Home() {
                 </h2>
                 <button
                   onClick={() => router.push("/utbildningar")}
-                  className="w-[141px] py-3 bg-[#225AEA] text-white font-semibold text-sm rounded-lg mb-[52px]"
+                  className="w-[141px] py-3 bg-[#225AEA] text-white font-semibold text-xs md:text-sm rounded-lg mb-[52px]"
                 >
                   <p className="font-jakarta text-xs md:text-base">
                     Hitta Utbildning
@@ -78,13 +78,13 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="bg-blue-600 rounded-3xl px-5 md:px-10 py-5 md:py-14 md:mt-10 mb-5 md:mb-20">
+        <div className="bg-blue-600 rounded-[45px] px-5 md:px-10 py-5 md:py-14 md:mt-10 mb-5 md:mb-20">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-4 justify-between items-center">
             <div className="flex flex-col items-center text-center gap-3">
               <div className="flex justify-center items-center rounded-full bg-[#90adf5] w-12 h-12 md:w-16 md:h-16">
                 <UserIcon className="w-4 h-4 md:w-6 md:h-6" />
               </div>
-              <h4 className="text-white text-xs md:text-lg md:font-bold">
+              <h4 className="font-jakarta text-white text-xs md:text-sm md:font-semibold lg:font-bold">
                 7500+ deltagare
               </h4>
             </div>
@@ -93,7 +93,7 @@ export default function Home() {
               <div className="flex justify-center items-center rounded-full bg-[#90adf5] w-12 h-12 md:w-16 md:h-16">
                 <StarIcon className="w-4 h-4 md:w-6 md:h-6" />
               </div>
-              <h4 className="text-white text-xs md:text-lg md:font-bold">
+              <h4 className="font-jakarta text-white text-xs md:text-sm md:font-semibold lg:font-bold">
                 2500+ recensioner
               </h4>
             </div>
@@ -102,7 +102,7 @@ export default function Home() {
               <div className="flex justify-center items-center rounded-full bg-[#90adf5] w-12 h-12 md:w-16 md:h-16">
                 <BadgeIcon className="w-3 h-4 md:w-5 md:h-6" />
               </div>
-              <h4 className="text-white text-xs md:text-lg md:font-bold">
+              <h4 className="font-jakarta text-white text-xs md:text-sm md:font-semibold lg:font-bold">
                 Sveriges ledande experter
               </h4>
             </div>
@@ -111,7 +111,7 @@ export default function Home() {
               <div className="flex justify-center items-center rounded-full bg-[#90adf5] w-12 h-12 md:w-16 md:h-16">
                 <AlmegaIcon className="w-5 h-4 md:w-7 md:h-6" />
               </div>
-              <h4 className="text-white text-xs md:text-lg md:font-bold">
+              <h4 className="font-jakarta text-white text-xs md:text-sm md:font-semibold lg:font-bold">
                 ALMEGA-auktoriserade
               </h4>
             </div>
@@ -121,7 +121,7 @@ export default function Home() {
         {homePageCTAData.map((item, index) => (
           <section
             key={index}
-            className="mb-4 md:mb-14 md:px-10 w-full flex justify-center"
+            className="mb-4 md:mb-14 lg:px-10 w-full flex justify-center"
           >
             <div
               className={`flex flex-col md:flex-row ${
@@ -129,7 +129,7 @@ export default function Home() {
               } gap-5 md:gap-12 w-full max-w-[1200px]`}
             >
               <div className="flex-1 flex flex-col items-start gap-5 px-4 max-w-[617px]">
-                <h2 className="font-jakarta text-xl md:text-4xl font-bold text-gray-900">
+                <h2 className="font-jakarta text-xl md:text-[1.8rem] font-bold text-gray-900">
                   {item.title}
                 </h2>
                 <p className="text-gray-300 text-sm md:text-base">
@@ -190,8 +190,8 @@ export default function Home() {
                     src={item.image}
                     alt={`Section ${index + 1}`}
                     width={308}
-                    height={206}
-                    className="w-full h-[206px] md:w-[500px] md:h-[333px] object-cover"
+                    height={260}
+                    className="w-full h-[206px] md:h-[260px] lg:w-[500px] lg:h-[333px] object-cover"
                   />
                 </div>
               </div>
@@ -200,10 +200,10 @@ export default function Home() {
         ))}
 
         <section className="flex flex-col items-center justify-center my-10">
-          <h2 className="text-[1.25rem] md:text-[2.6rem] text-center font-jakarta font-bold text-[#151E3A]">
+          <h2 className="text-[1.25rem] md:text-[2rem] lg:text-[2.8rem] text-center font-jakarta font-bold text-[#151E3A]">
             Våra mest populära distansutbildningar.
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-5">
             {randomCourses.map((course) => (
               <CourseCard key={course.id} course={course} />
             ))}
@@ -211,12 +211,12 @@ export default function Home() {
         </section>
 
         <section className="w-[200px] flex mx-auto mb-10">
-          <button
-            onClick={() => router.push("/utbildningar")}
-            className="w-full py-3 lg:py-3 bg-[#225AEA] text-white font-semibold text-sm rounded-lg"
+          <Link
+            href="https://checkified.se/utbildningar"
+            className="w-[99px] md:w-[140px] px-3 py-3 bg-blue-600 text-white font-semibold text-xs md:text-base rounded-lg text-center font-sans"
           >
-            <p className="font-jakarta">Lär dig mer</p>
-          </button>
+            Lär dig mer
+          </Link>
         </section>
 
         <section className="grid grid-cols-1 md:grid-cols-2 gap-[2rem]">

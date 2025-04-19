@@ -9,18 +9,18 @@ const CourseCard = ({ course }: { course: Course }) => {
 
   return (
     <div
-      className="flex flex-col max-w-[345px] min-w-[345px] max-h-[365px] min-h-[365px] md:min-w-[396px] md:max-w-[396px] md:min-h-[433px] md:max-h-[433px] px-4 pt-5 pb-5 border rounded-[29px] cursor-pointer overflow-hidden"
+      className="flex flex-col w-full sm:max-w-[345px] sm:min-w-[280px] md:min-w-[330px] lg:min-w-[426px] px-4 pt-5 pb-5 border rounded-3xl cursor-pointer overflow-hidden"
       style={{ borderColor: "#BBBBBF" }}
     >
       {/* Image Section */}
-      <div className="relative h-[170px] md:h-[190px]">
+      <div className="relative h-[170px] md:h-[180px] w-full">
         {imageUrl ? (
           <Image
             src={imageUrl}
             alt="course image"
             fill
             style={{ objectFit: "cover" }}
-            className="rounded-[20px] drop-shadow-2xl"
+            className="rounded-2xl drop-shadow-2xl"
           />
         ) : (
           <Skeleton height="100%" width="100%" className="mt-4 mb-2" />
@@ -29,12 +29,12 @@ const CourseCard = ({ course }: { course: Course }) => {
         {tags && (
           <div className="absolute top-3 left-3 flex gap-2">
             {tags && (
-              <span className="bg-[#225AEA] text-white text-[0.625rem] font-bold py-1 px-3 rounded-full">
+              <span className="bg-blue-600 text-white text-xs font-inter font-medium py-1 px-3 rounded-full">
                 {tags[0]}
               </span>
             )}
             {tags[1] && (
-              <span className="bg-[#E0E0E0] text-[#434C69] text-[0.625rem] font-bold py-1 px-3 rounded-full">
+              <span className="bg-[#9B9B9B] text-gray-600 text-xs font-inter font-medium py-1 px-3 rounded-full">
                 {tags[1]}
               </span>
             )}
@@ -45,7 +45,7 @@ const CourseCard = ({ course }: { course: Course }) => {
       {/* Content Section */}
       <div className="flex flex-col flex-grow p-2 mt-3">
         {/* Metadata */}
-        <div className="flex items-center text-xs text-[#707BA0] font-medium gap-4">
+        <div className="flex items-center text-xs text-gray-500 font-medium gap-4">
           {videoInfo && (
             <>
               <div className="flex items-center gap-1">
@@ -77,19 +77,19 @@ const CourseCard = ({ course }: { course: Course }) => {
         </div>
 
         {/* Title */}
-        <h4 className="font-bold font-jakarta text-base md:text-[1.25rem] text-[#151E3A] mt-4 mb-2">
+        <h4 className="font-bold font-jakarta text-base md:text-lg text-gray-900 mt-4 mb-2">
           {title}
         </h4>
 
         {/* Description */}
-        <p className="font-medium text-sm md:text-[0.875rem] text-[#151E3A] line-clamp-2 overflow-hidden">
+        <p className="font-medium font-inter text-sm text-gray-900 line-clamp-2 overflow-hidden">
           {shortDescription}
         </p>
       </div>
 
       {/* Learn more */}
-      <button className="w-full py-3 lg:py-3 bg-[#225AEA] text-white font-semibold text-sm rounded-xl mt-4">
-        <p className="uppercase">lär dig mer</p>
+      <button className="w-full py-3 bg-blue-600 text-white font-semibold text-sm rounded-xl mt-4 uppercase">
+        lär dig mer
       </button>
     </div>
   )
