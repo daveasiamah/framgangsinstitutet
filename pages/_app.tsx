@@ -1,21 +1,12 @@
 "use client"
 import "@/styles/globals.scss"
 import "@/styles/annonser.css"
-// import ReactDOM from 'react-dom'
-// import { library } from '@fortawesome/fontawesome-svg-core'
-// import { fas } from '@fortawesome/free-solid-svg-icons'
-// // import { faTwitter, faFontAwesome } from '@fortawesome/free-brands-svg-icons'
-// // import { faHatCowboy } from '@fortawesome/pro-thin-svg-icons'
-// // import { faHatChef } from '@fortawesome/sharp-solid-svg-icons'
-// // import { faPlateUtensils } from '@fortawesome/sharp-regular-svg-icons'
 
-// library.add(fas)
 import { useSession, SessionProvider } from "next-auth/react"
 
 import type { AppProps } from "next/app"
 import Script from "next/script"
 import { useRouter } from "next/router"
-import { useEffect } from "react"
 
 export default function App({
   Component,
