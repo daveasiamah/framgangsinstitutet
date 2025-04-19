@@ -121,7 +121,7 @@ export default function Home() {
         {homePageCTAData.map((item, index) => (
           <section
             key={index}
-            className="mb-4 md:mb-14 lg:px-10 w-full flex justify-center"
+            className="mb-4 md:mb-14 w-full flex justify-center"
           >
             <div
               className={`flex flex-col md:flex-row ${
@@ -275,7 +275,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="mt-[16px] md:mt-[58px]">
+        <section className="mt-[16px] md:mt-[58px] px-[60px]">
           <h1 className="font-jakarta font-bold text-center text-[1.125rem] md:text-[2.625rem] lg:text-[3.0rem] mb-2 md:mb-8">
             Så här fungerar dina studier.
           </h1>
