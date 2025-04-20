@@ -145,8 +145,8 @@ export const homePageCTAData: CTA[] = [
     buttonText: "Läs mer",
   },
   {
-    title: "Allt samlat på ett ställe.",
-    text: "Glöm tunga väskor och förlorade papper – alla dina studieresurser finns lättillgängliga i vår app, när du behöver dem.",
+    title: "E-böcker för dina studier.",
+    text: "Upptäck vårt stora utbud av e-böcker för dina studier – kursböcker, lärmaterial och resurser till ett överkomligt pris, allt digitalt och lättillgängligt när du behöver det, oavsett var du är.",
     image: "/new-home/self-learning.jpg",
     buttonText: "Utforska här",
   },

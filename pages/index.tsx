@@ -129,7 +129,7 @@ export default function Home() {
               } gap-5 md:gap-12 w-full max-w-[1200px]`}
             >
               <div className="flex-1 flex flex-col items-start gap-5 px-4 max-w-[617px]">
-                <h2 className="font-jakarta text-xl md:text-[1.8rem] font-bold text-gray-900">
+                <h2 className="font-jakarta text-xl md:text-[2rem] md:leading-[2.5rem] font-bold text-gray-900">
                   {item.title}
                 </h2>
                 <p className="text-gray-300 text-sm md:text-base">
@@ -210,12 +210,12 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="w-[200px] flex mx-auto mb-10">
+        <section className="flex items-center justify-center mb-10">
           <Link
             href="https://checkified.se/utbildningar"
-            className="w-[99px] md:w-[140px] px-3 py-3 bg-blue-600 text-white font-semibold text-xs md:text-base rounded-lg text-center font-sans"
+            className="px-6 py-3 bg-blue-600 text-white font-semibold text-xs md:text-base rounded-lg text-center font-sans"
           >
-            Lär dig mer
+            Utforska alla utbildningar
           </Link>
         </section>
 
