@@ -227,7 +227,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
                   openModal()
                 } else {
                   window.open(
-                    "https://whop.com/checkout/plan_YvhNS2Gd4XP9j?d2c=true",
+                    "https://buy.stripe.com/3cscO09iSdoBgVOeUZ",
                     "_blank"
                   )
                 }

@@ -14,11 +14,11 @@ export const AuthApi = async (email, password) => {
   }
 }
 
-export const registerOfContract = async ({ firstName, email, phone }) => {
+export const registerOfContract = async ({ name, email, phone }) => {
   const ext_id = uuidv4()
   try {
     const attributes = {
-      FIRSTNAME: firstName || "",
+      FIRSTNAME: name || "",
       LASTNAME: "",
       SMS: `+46${phone}`,
       EXT_ID: ext_id,
@@ -39,7 +39,6 @@ export const registerOfContract = async ({ firstName, email, phone }) => {
         },
       }
     )
-
     return { success: true, data: response.data }
   } catch (error) {
     console.error(
