@@ -42,7 +42,7 @@ type BlogPost = {
   authorProfile: string
 }
 
-export default function Home() {
+export default function OldHome() {
   const router = useRouter()
   const { locale } = router
   const t = locale === "en" ? en : sv

@@ -37,10 +37,10 @@ export default function ThankYou() {
             className="object-contain w-[44px] h-[9px] md:w-[88px] md:h-[16px]"
           />
         </div>
-        <div className="mt-5 md:mt-10 flex justify-center px-4 md:px-8">
-          <h1 className="text-[1.125rem] md:text-[2rem] lg:text-[3rem] text-[#151E3A] md:max-w-[800px] lg:max-w-[1260px] text-center leading-[1.4] md:leading-[1.5] lg:leading-[55px] font-extrabold font-jakarta">
-            Lär dig bygga ett framgångsrikt e-handelsföretag från 0 till 100k+
-            <br className="lg:hidden" />i månaden, utan tidigare erfarenhet!
+        <div className="mt-6 md:mt-10 flex justify-center px-4 md:px-8">
+          <h1 className="text-[1.125rem] md:text-[2rem] lg:text-[3rem] text-[#151E3A] md:max-w-[800px] lg:max-w-[1060px] text-center leading-[1.4] md:leading-[1.5] lg:leading-[55px] font-extrabold font-jakarta">
+            Lär dig nya färdigheter och ta kontroll över din framtid med våra
+            30+ onlineutbildningar!
           </h1>
         </div>
         <ThankYouVideoBanner />
@@ -78,12 +78,13 @@ export default function ThankYou() {
           </h2>
         </div>
 
-        <div className="max-w-[297px] md:max-w-[697px] mt-[38px]">
+        <div className="max-w-[297px] md:max-w-[900px] mt-[38px]">
           <p className="font-inter text-[12px] md:text-[14px] lg:text-base text-white font-medium text-center">
-            Checkified är uppdelad i 4 moduler. Du kan se vad som finns inuti
-            var och en nedan.
-            <br /> När du går med idag får du en färdig dropshipping butik
-            (Värde 16 000 SEK).
+            Checkified erbjuder 30+ praktiska onlinekurser, uppdelade i olika
+            kategorier så att du enkelt hittar det du vill lära dig – oavsett om
+            du är nybörjare eller vill ta nästa steg i din karriär. När du går
+            med får du omedelbar tillgång till alla kurser och framtida
+            uppdateringar – värde över 100 000 SEK.
           </p>
         </div>
 
@@ -97,12 +98,12 @@ export default function ThankYou() {
                 alt="icon"
               />
               <h4 className="text-white font-inter font-bold">
-                Modul 1: Lansera
+                E-handel & Dropshipping
               </h4>
             </div>
             <p className="font-inter text-[12px] md:text-[14px] text-[#ffffffc7] text-start mt-3.5">
-              Grunden till affärsmodellen, mindset, och hur man skalar till 100k
-              inom e-handel.
+              Lär dig starta och driva en framgångsrik e-butik – från idé till
+              skalning.
             </p>
           </div>
           <div className="flex flex-col max-w-[265px] justify-start">
@@ -114,11 +115,12 @@ export default function ThankYou() {
                 alt="icon"
               />
               <h4 className="text-white font-inter font-bold">
-                Modul 2: Bygga
+                Marknadsföring & Sociala Medier
               </h4>
             </div>
             <p className="font-inter text-[12px] md:text-[14px] text-[#ffffffc7] text-start mt-3.5">
-              Bygg din e-handelsverksamhet med e-handelsplattform Shopify.
+              Behärska TikTok, Meta Ads, e-postmarknadsföring, funnels, och
+              content creation.
             </p>
           </div>
           <div className="flex flex-col max-w-[259px] justify-start">
@@ -129,10 +131,13 @@ export default function ThankYou() {
                 height={16}
                 alt="icon"
               />
-              <h4 className="text-white font-inter font-bold">Modul 3: Sälj</h4>
+              <h4 className="text-white font-inter font-bold">
+                Ekonomi & Investeringar
+              </h4>
             </div>
             <p className="font-inter text-[12px] md:text-[14px] text-[#ffffffc7] text-start mt-3.5">
-              Lär dig försäljning, e-postlistor, och optimering.
+              Få koll på privatekonomi, investeringar och hur du bygger en
+              hållbar framtid.
             </p>
           </div>
           <div className="flex flex-col max-w-[276px] justify-start">
@@ -143,12 +148,11 @@ export default function ThankYou() {
                 height={16}
                 alt="icon"
               />
-              <h4 className="text-white font-inter font-bold">
-                Modul 4: Skala
-              </h4>
+              <h4 className="text-white font-inter font-bold">AI & Tech</h4>
             </div>
             <p className="font-inter text-[12px] md:text-[14px] text-[#ffffffc7] text-start mt-3.5">
-              Få guide för marknadsföring, sociala medier och annonser.
+              Lär dig använda AI-verktyg som ChatGPT, Midjourney och mer för att
+              jobba smartare.
             </p>
           </div>
         </div>
@@ -157,10 +161,10 @@ export default function ThankYou() {
       <section className="flex flex-col md:container bg-[#EDF5FE] py-10 justify-center items-center">
         <div className="flex flex-col container text-center items-center">
           <h2 className="font-jakarta font-bold text-[20px] md:text-[3rem] text-center">
-            1000 + studenter...
+            15 000 + studenter...
           </h2>
           <p className="font-inter font-medium text-xs md:text-base text-center text-[#37354ase] mb-3 max-w-[622px]">
-            Vi har hjälp över 1000+ studenter att förändra deras liv med våra
+            Vi har hjälp över 15 000+ studenter att förändra deras liv med våra
             utbildningar och den siffran växer dagligen. Vill du förändra ditt
             liv till det bästa så ska du se vad våra studenter har uppnått för
             resultat.

@@ -37,7 +37,6 @@ const FAQPage: React.FC<FAQPageProps> = ({ faqs }) => {
             content="Frequently asked questions about our platform and services."
           />
         </Head>
-        {/* Use full width on mobile and container on md+ */}
         <div className="w-full md:container md:mx-auto px-4 py-10">
           <p className="text-center text-red-500">No FAQs available.</p>
         </div>
@@ -74,13 +73,11 @@ const FAQPage: React.FC<FAQPageProps> = ({ faqs }) => {
               <h1 className="text-center font-jakarta text-[1.3rem] md:text-[3rem] lg:text-[3.5rem] md:leading-[40px] leading-[22px] font-[700] mb-10 mt-2">
                 Vanliga frågor och svar
               </h1>
-              {/* Render the formatted update date */}
               <h2 className="text-center leading-2 text-base font-inter font-medium md:text-[22px] text-[#707BA0] mb-9">
                 {finalOutput}
               </h2>
             </ScrollReveal>
 
-            {/* Render Accordion with FAQ Data */}
             <Accordion>
               {faqs.map((item) => (
                 <AccordionItem key={item.id} title={item.question}>
@@ -110,10 +107,9 @@ const FAQPage: React.FC<FAQPageProps> = ({ faqs }) => {
 
 export async function getStaticProps() {
   try {
-    const allFAQs = (await getFAQs()) || [] // Ensure faqs is always an array.
+    const allFAQs = (await getFAQs()) || []
     return {
       props: { faqs: allFAQs },
-      // Revalidate every 120 seconds
       revalidate: 120,
     }
   } catch (error) {

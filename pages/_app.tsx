@@ -70,46 +70,57 @@ export default function App({
         }}
       />
 
-      {/* Chatbase initialization script */}
-      <Script id="chatbase-init" strategy="beforeInteractive">
+      <script
+        src="//code.tidio.co/b3qsg0t7uu4nseq9piuuayi3u5gx3bi6.js"
+        async
+      ></script>
+
+      {/* <!-- TikTok Pixel Code Start --> */}
+      <Script id="tiktok-pixel" strategy="afterInteractive">
         {`
-          (function(){
-            if (!window.chatbase || window.chatbase("getState") !== "initialized") {
-              window.chatbase = (...arguments) => {
-                if (!window.chatbase.q) {
-                  window.chatbase.q = [];
-                }
-                window.chatbase.q.push(arguments);
-              };
-
-              window.chatbase = new Proxy(window.chatbase, {
-                get(target, prop) {
-                  if (prop === "q") {
-                    return target.q;
-                  }
-                  return (...args) => target(prop, ...args);
-                }
-              });
+          !function (w, d, t) {
+            w.TiktokAnalyticsObject = t;
+            var ttq = w[t] = w[t] || [];
+            ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie", "holdConsent", "revokeConsent", "grantConsent"];
+            ttq.setAndDefer = function(t, e) {
+              t[e] = function() {
+                t.push([e].concat(Array.prototype.slice.call(arguments, 0)))
+              }
+            };
+            for (var i = 0; i < ttq.methods.length; i++) {
+              ttq.setAndDefer(ttq, ttq.methods[i]);
             }
-
-            const onLoad = function() {
-              const script = document.createElement("script");
-              script.src = "https://www.chatbase.co/embed.min.js";
-              script.id = "9FKzKqGL58yZU4C5KxhTD"; // <-- Replace with your chatbot ID
-              script.domain = "www.chatbase.co";
-              document.body.appendChild(script);
+            ttq.instance = function(t) {
+              var e = ttq._i[t] || [];
+              for (var n = 0; n < ttq.methods.length; n++) {
+                ttq.setAndDefer(e, ttq.methods[n]);
+              }
+              return e;
+            };
+            ttq.load = function(e, n) {
+              var r = "https://analytics.tiktok.com/i18n/pixel/events.js";
+              var o = n && n.partner;
+              ttq._i = ttq._i || {};
+              ttq._i[e] = [];
+              ttq._i[e]._u = r;
+              ttq._t = ttq._t || {};
+              ttq._t[e] = +new Date();
+              ttq._o = ttq._o || {};
+              ttq._o[e] = n || {};
+              n = d.createElement("script");
+              n.type = "text/javascript";
+              n.async = !0;
+              n.src = r + "?sdkid=" + e + "&lib=" + t;
+              e = d.getElementsByTagName("script")[0];
+              e.parentNode.insertBefore(n, e);
             };
 
-            if (document.readyState === "complete") {
-              onLoad();
-            } else {
-              window.addEventListener("load", onLoad);
-            }
-          })();
+            ttq.load('CV2PRLBC77UDUE7BPJ50');
+            ttq.page();
+          }(window, document, 'ttq');
         `}
       </Script>
-
-      {/* <script src="//code.tidio.co/b3qsg0t7uu4nseq9piuuayi3u5gx3bi6.js" async></script> */}
+      {/* <!-- TikTok Pixel Code End --> */}
       <meta
         name="facebook-domain-verification"
         content="t53l0hv3hj3lqy0wlcz3y3mt0aywav"

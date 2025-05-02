@@ -79,7 +79,6 @@ export const AccordionItem = ({ title, children }: AccordionItemProps) => {
 
   return (
     <div className="accordion-wrapper w-full md:py-2 md:px-6">
-      {/* Accordion Header */}
       <div
         onClick={toggle}
         className="cursor-pointer py-2 flex gap-2 md:gap-4 items-center"
@@ -88,7 +87,6 @@ export const AccordionItem = ({ title, children }: AccordionItemProps) => {
         <h2 className="font-bold text-sm text-[#151e3a] font-inter">{title}</h2>
       </div>
 
-      {/* Accordion Content */}
       <AccordionContent isSelected={isSelected}>{children}</AccordionContent>
     </div>
   )

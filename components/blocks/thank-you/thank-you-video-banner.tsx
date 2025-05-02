@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export function ThankYouVideoBanner() {
   return (
-    <div className="relative w-[80%] max-w-4xl mt-4 mb-5 md:mt-8">
+    <div className="relative w-[302px] md:w-[80%] max-w-4xl mt-4 mb-5 md:mt-8">
       <iframe
         width="1024px"
         height="590px"

@@ -22,6 +22,11 @@ import {
 } from "@/components/blocks/home-blocks/HomePageSvgs"
 import ScrollReveal from "@/components/transition/ScrollReveal"
 import Link from "next/link.js"
+import Accordion, {
+  AccordionItem,
+} from "@/components/blocks/home-blocks/HomePageAccordion"
+import RichTextRenderer from "@/utils/RichTextRenderer"
+import { ConsultationForm } from "@/components/blocks/home-blocks/ConsultationForm"
 
 export default function Home() {
   const router = useRouter()
@@ -129,7 +134,7 @@ export default function Home() {
               } gap-5 md:gap-12 w-full max-w-[1200px]`}
             >
               <div className="flex-1 flex flex-col items-start gap-5 px-4 max-w-[617px]">
-                <h2 className="font-jakarta text-xl md:text-[1.8rem] font-bold text-gray-900">
+                <h2 className="font-jakarta text-xl md:text-[2rem] md:leading-[2.5rem] font-bold text-gray-900">
                   {item.title}
                 </h2>
                 <p className="text-gray-300 text-sm md:text-base">
@@ -210,12 +215,12 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="w-[200px] flex mx-auto mb-10">
+        <section className="flex items-center justify-center mb-10">
           <Link
             href="https://checkified.se/utbildningar"
-            className="w-[99px] md:w-[140px] px-3 py-3 bg-blue-600 text-white font-semibold text-xs md:text-base rounded-lg text-center font-sans"
+            className="px-6 py-3 bg-blue-600 text-white font-semibold text-xs md:text-base rounded-lg text-center font-sans"
           >
-            Lär dig mer
+            Utforska alla utbildningar
           </Link>
         </section>
 
@@ -247,7 +252,7 @@ export default function Home() {
         </section>
 
         <section className="mt-[16px] md:mt-[58px]">
-          <div className="flex flex-col bg-[#225AEA] p-6 rounded-[20px]">
+          <div className="flex flex-col bg-[#225AEA] p-6 md:p-[54px] rounded-[20px]">
             <div className="flex flex-col">
               <div className="flex flex-col items-center justify-center align-middle bg-[#90adf5] rounded-full w-[45px] h-[45px] md:w-[76px] md:h-[76px]">
                 <Image
@@ -262,10 +267,7 @@ export default function Home() {
               <h1 className="font-jakarta text-white font-bold text-[1.5rem] md:text-[2.0rem] lg:text-[2.5rem] mb-4">
                 Praktiskt lärande
               </h1>
-              <h2 className="font-jakarta text-white font-bold text-[0.875rem] md:text-[1.5rem]">
-                Tillgängligt studiematerial.
-              </h2>
-              <p className="font-jakarta text-white text-xs md:text-base max-w-[916px]">
+              <p className="font-inter text-white text-xs md:text-base max-w-[916px]">
                 Vi tror på kraften i praktisk applicering i dina studier. Våra
                 utbildningar innehåller case och övningar hämtade från
                 arbetslivet vilket gör att du kan tillämpa dina nyvunna
@@ -328,7 +330,7 @@ export default function Home() {
         </section>
 
         <section>
-          <div className="flex flex-col bg-[#225AEA] p-4 md:p-14 rounded-[20px]">
+          <div className="flex flex-col bg-[#225AEA] p-4 md:p-[54px] rounded-[20px]">
             <div className="flex flex-col">
               <h1 className="font-jakarta text-white font-bold text-[1.5rem] md:text-[3.0rem] mb-4">
                 Detta får du.
@@ -395,24 +397,30 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="mb-[90px]">
+        <section className="flex flex-col items-center mb-[90px] max-w-[900px] mx-auto">
           <h2 className="font-jakarta font-bold text-[1.5rem] md:text-[3.0rem] text-center">
             Frågor och svar
           </h2>
-          <h4 className="font-inter text-sm md:text-[18px] text-center mb-8 mt-3 text-[#434c69]">
+          <h4 className="font-inter text-xs md:text-[16px] text-center mb-8 mt-3 text-[#434c69]">
             Här har vi samlat vanliga frågor och svar om våra utbildningar och
             studier på Checkified
           </h4>
-          {homePageFaqs.map((faq) => (
-            <div key={faq.id} className="flex flex-col gap-2 mb-4">
-              <h2 className="text-[#151e3a] font-jakarta font-bold text-sm md:text-lg">
-                {faq.question}
-              </h2>
-              <p className="text-xs md:text-base text-[#434c69]">
-                {faq.answer}
-              </p>
-            </div>
-          ))}
+          {/* Add FAQs here from FAQ component */}
+          <div className="flex justify-center self-center">
+            <Accordion>
+              {homePageFaqs.map((item) => (
+                <AccordionItem key={item.id} title={item.question}>
+                  <p className="text-xs md:text-base text-[#434c69]">
+                    {item.answer}
+                  </p>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </section>
+
+        <section>
+          <ConsultationForm />
         </section>
       </Layout>
     </>
