@@ -405,7 +405,6 @@ export default function Home() {
             Här har vi samlat vanliga frågor och svar om våra utbildningar och
             studier på Checkified
           </h4>
-          {/* Add FAQs here from FAQ component */}
           <div className="flex justify-center self-center">
             <Accordion>
               {homePageFaqs.map((item) => (
