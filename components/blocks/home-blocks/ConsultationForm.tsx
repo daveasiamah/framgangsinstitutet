@@ -114,7 +114,6 @@ export function ConsultationForm() {
           )}
         </div>
 
-        {/* Phone */}
         <div className="form-control w-full">
           <div className={inputWrapperClass}>
             <Image
@@ -136,7 +135,6 @@ export function ConsultationForm() {
           )}
         </div>
 
-        {/* Selected Course */}
         <div className="form-control w-full">
           <div className={inputWrapperClass}>
             <Image
@@ -160,7 +158,6 @@ export function ConsultationForm() {
           )}
         </div>
 
-        {/* Submit Button */}
         <button
           type="submit"
           disabled={submitted}
