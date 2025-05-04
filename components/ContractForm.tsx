@@ -73,14 +73,13 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
 
   const sendData = async (data: any) => {
     console.log("Form submitted:", data)
-    try{
+    try {
       const res = await registerOfContract(data)
-      if(res.success){
+      if (res.success) {
         router.push("/thank-you")
       }
-    }
-      catch(error){
-      console.log("ERROR SENDING CONTACT FORM: ",error)
+    } catch (error) {
+      console.log("ERROR SENDING CONTACT FORM: ", error)
     }
   }
 
@@ -125,22 +124,18 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
         <div>
           <div className="flex-col justify-center items-center">
             <Image
-              src="/images/home/contract-form-banner.jpg"
+              src="/new-home/contract-form-banner.png"
               alt="video"
               width="311"
               height="175"
-              className="mx-auto object-cover shadow-2xl"
+              className="mx-auto object-cover"
             />
-            <div className="lg:mt-6">
-              <div className="flex items-center justify-center gap-2 text-lg lg:text-xl font-bold">
-                <h1 className="font-jakarta font-extrabold text-xl text-[#151e3a">
-                  Se Vår Gratis Intro Video
+            <div>
+              <div className="flex items-center justify-center gap-2 text-lg lg:text-xl h-12 border-2 border-red-500">
+                <h1 className="font-jakarta font-extrabold text-base text-[#151e3a">
+                  Ansök om en kostnadsfri konsultation
                 </h1>
               </div>
-              <p className="mt-1 lg:mt-4 text-sm text-[#707BA0] lg:text-lg">
-                Se insidan av kursen och hur du kan omsätta minst 100 000+
-                SEK/månad utan tidigare erfarenhet.
-              </p>
             </div>
           </div>
           <form onSubmit={handleSubmit(onSubmit)} action="">
@@ -157,7 +152,7 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
                   <input
                     type="text"
                     placeholder={t.homeData.popupForm.firstName}
-                    className="input focus:outline-0 flex-1 bg-white"
+                    className="input outline-red-500 focus:outline-0 flex-1 bg-black"
                     {...register("firstName")}
                     onChange={handleFirstNameChange}
                   />
