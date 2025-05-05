@@ -1,116 +1,75 @@
-import React, { useState } from "react"
+import React from "react"
 import Image from "next/image"
-import dynamic from "next/dynamic"
 import { useRouter } from "next/router"
-
 import { SubmitHandler, useForm } from "react-hook-form"
 import * as yup from "yup"
-
 import { yupResolver } from "@hookform/resolvers/yup"
-import en from "@/locales/en"
-import sv from "@/locales/sv"
 import { registerOfContract } from "../service/Apis/api"
 
-const SuccessAlert = dynamic(() => import("@/components/parts/SuccessAlert"), {
-  loading: () => <p>Loading...</p>,
-})
-const ErrorAlert = dynamic(() => import("@/components/parts/ErrorAlert"), {
-  loading: () => <p>Loading...</p>,
-})
-
-import Title from "./parts/Title"
-import BlurCircle from "./graphic/BlurCircle"
-
 type FormValues = {
-  firstName: string
+  name: string
   email: string
-  phone: number
+  phone: string
+  selectedCourse?: string
 }
 
-const schema = yup
-  .object({
-    firstName: yup.string().required("Förnamn krävs"),
-    // lastName: yup.string().required("Efternamn krävs"),
-    email: yup
-      .string()
-      .email("Ange en giltig e-postadress")
-      .required("E-post krävs"),
-    phone: yup
-      .number()
-      .typeError("Telefonen måste vara ett nummer")
-      .required("Telefonnummer krävs"),
-    // message: yup.string().required("Meddelande krävs"),
-  })
-  .required()
-
-type Props = {
-  contactData: {
-    firstName: string
-    lastName: string
-    email: string
-    phoneNumber: string
-    message: string
-    button: string
-  }
+const defaultValues: FormValues = {
+  name: "",
+  email: "",
+  phone: "",
+  selectedCourse: "",
 }
 
 export default function ContactForm({ onClose }: { onClose: () => void }) {
   const router = useRouter()
-  const { locale } = router
-  const t = locale === "en" ? en : sv
 
-  const [showModal, setShowModal] = useState(false)
-  const [showModalCls, setShowModalCls] = useState(false)
-  const [alertMessage, setalertMessage] = useState("")
-  const [showSuccess, setShowSuccess] = useState(false)
+  const schema = yup.object().shape({
+    name: yup.string().required("Namn er påkrævet"),
+    email: yup.string().email("Ogiltig email").required("Email er påkrævet"),
+    phone: yup
+      .string()
+      .required("Telefonnummer er påkrævet")
+      .matches(
+        /^7\d{8}$/,
+        "Ange ett giltigt svenskt telefonnummer (7XXXXXXXX)"
+      ),
+    selectedCourse: yup.string(),
+  })
+
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isValid, isDirty },
+    reset,
   } = useForm<FormValues>({
     resolver: yupResolver(schema),
+    mode: "onChange",
+    defaultValues,
   })
 
   const sendData = async (data: any) => {
-    console.log("Form submitted:", data)
+    console.log({ data })
     try {
       const res = await registerOfContract(data)
       if (res.success) {
+        reset()
         router.push("/thank-you")
       }
     } catch (error) {
       console.log("ERROR SENDING CONTACT FORM: ", error)
     }
   }
-
   const onSubmit: SubmitHandler<FormValues> = (data) => sendData(data)
-  const [firstNameValid, setFirstNameValid] = useState(false)
-  const [emailValid, setEmailValid] = useState(false)
-  const [mobileValid, setmobileValid] = useState(false)
 
-  const handleFirstNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value
-    setFirstNameValid(value.trim() !== "") // Custom validation logic for first name
-  }
-
-  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value
-    setEmailValid(/^\S+@\S+\.\S+$/.test(value)) // Custom validation logic for email
-  }
-
-  const handlemobileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value
-    setmobileValid(/^[0-9]+$/.test(value)) // Custom validation logic for password
-  }
-
-  const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
-    e.stopPropagation()
-  }
+  const inputWrapperClass =
+    "relative border rounded-lg bg-white flex items-center"
+  const inputClass =
+    "input w-full pl-10 pr-4 py-4 focus:outline-0 bg-white text-base"
 
   return (
     <div
-      className="relative bg-white py-4 lg:py-10 px-6 max-w-[360px] box-content rounded-lg"
-      onClick={handleClick}
+      className="relative bg-white py-4 lg:py-10 px-6 w-full max-w-[360px] md:max-w-[390px] box-content rounded-lg"
+      onClick={(e) => e.stopPropagation()}
     >
       <Image
         src="/icons/close.svg"
@@ -120,224 +79,128 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
         className="absolute top-4 right-4 cursor-pointer"
         onClick={onClose}
       />
-      {!showSuccess && (
-        <div>
-          <div className="flex-col justify-center items-center">
-            <Image
-              src="/new-home/contract-form-banner.png"
-              alt="video"
-              width="311"
-              height="175"
-              className="mx-auto object-cover"
-            />
-            <div>
-              <div className="flex items-center justify-center gap-2 text-lg lg:text-xl h-12 border-2 border-red-500">
-                <h1 className="font-jakarta font-extrabold text-base text-[#151e3a">
-                  Ansök om en kostnadsfri konsultation
-                </h1>
-              </div>
+      <div className="w-full">
+        <div className="flex-col justify-center items-center">
+          <Image
+            src="/new-home/contract-form-banner.png"
+            alt="video"
+            width="311"
+            height="175"
+            className="mx-auto object-cover"
+          />
+          <div>
+            <div className="flex items-center justify-center gap-2 text-lg lg:text-xl h-12 mt-4">
+              <h1 className="font-jakarta font-extrabold text-base text-[#151e3a">
+                Ansök om en kostnadsfri konsultation
+              </h1>
             </div>
           </div>
-          <form onSubmit={handleSubmit(onSubmit)} action="">
-            <div className="mt-4 grid grid-cols-1 gap-4">
-              <div className="form-control">
-                <div className="flex pl-4 border rounded-lg">
-                  <Image
-                    src="/icons/form/user.svg"
-                    alt="user"
-                    width={24}
-                    height={24}
-                    className="flex-shrink-0"
-                  />
-                  <input
-                    type="text"
-                    placeholder={t.homeData.popupForm.firstName}
-                    className="input outline-red-500 focus:outline-0 flex-1 bg-black"
-                    {...register("firstName")}
-                    onChange={handleFirstNameChange}
-                  />
-                </div>
-                {errors.firstName && (
-                  <p className="text-red-400 text-sm mt-1">
-                    {errors.firstName.message}
-                  </p>
-                )}
-              </div>
-              <div className="form-control">
-                <div className="flex pl-4 border rounded-lg">
-                  <Image
-                    src="/icons/form/email.svg"
-                    alt="email"
-                    width={24}
-                    height={24}
-                    className="flex-shrink-0"
-                  />
-                  <input
-                    type="email"
-                    placeholder={t.homeData.popupForm.email}
-                    className="input focus:outline-0 flex-1 bg-white"
-                    {...register("email")}
-                    onChange={handleEmailChange}
-                  />
-                </div>
-                {errors.email && (
-                  <p className="text-red-400 text-sm mt-1">
-                    {errors.email.message}
-                  </p>
-                )}
-              </div>
-              <div className="form-control">
-                <div className="flex pl-4 border rounded-lg">
-                  <Image
-                    src="/icons/form/phone.svg"
-                    alt="phone"
-                    width={24}
-                    height={24}
-                    className="flex-shrink-0"
-                  />
-                  <input
-                    type="text"
-                    placeholder={t.homeData.popupForm.phoneNumber}
-                    className="input focus:outline-0 flex-1 bg-white"
-                    {...register("phone")}
-                    onChange={handlemobileChange}
-                  />
-                </div>
-                {errors.phone && (
-                  <p className="text-red-400 text-sm mt-1">
-                    {errors.phone.message}
-                  </p>
-                )}
-              </div>
+        </div>
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          action=""
+          className="flex flex-col items-center gap-4 mt-4"
+        >
+          {/* First Name */}
+          <div className="form-control w-full">
+            <div className={inputWrapperClass}>
+              <Image
+                src="/new-home/user.svg"
+                alt="user"
+                width={24}
+                height={24}
+                className="absolute left-3"
+              />
+              <input
+                type="text"
+                placeholder="Namn"
+                className={inputClass}
+                {...register("name")}
+              />
             </div>
-            {firstNameValid && emailValid && mobileValid ? (
-              <button
-                type="submit"
-                className="btn-primary mt-6 w-full drop-shadow-none"
-              >
-                {t.homeData.popupButton}
-              </button>
-            ) : (
-              <div className="!cursor-not-allowed">
-                <button
-                  type="submit"
-                  className=" btn btn-grey !bg-gray mt-6 h-14 w-full drop-shadow-none "
-                  disabled
-                >
-                  {t.homeData.popupButton}
-                </button>
-              </div>
+            {errors.name && (
+              <p className="text-red-500 text-xs pt-1">{errors.name.message}</p>
             )}
-            <SuccessAlert
-              isVisible={showModal}
-              alertMessage={alertMessage}
-              onClose={() => {
-                setShowModal(false)
-                onClose()
-              }}
-            />
-            <ErrorAlert
-              isVisibleclose={showModalCls}
-              alertMessage={alertMessage}
-              onClose={() => setShowModalCls(false)}
-            />
-          </form>
-        </div>
-      )}
-      {showSuccess && (
-        <div>
-          <div className="flex-col justify-center items-center">
-            <Image
-              src={`${t.homeData.popupSuccessImage}`}
-              alt="video"
-              width="300"
-              height="100"
-              className="mx-auto object-cover rounded-4xl"
-              loading="lazy"
-            />
-            <div className="lg:mt-6">
-              <div className="flex items-center justify-center gap-2 text-lg lg:text-xl font-bold">
-                <h1 className="text-[20px]">
-                  {t.homeData.popupSuccessBlackTitle}
-                </h1>
-                <h1 className="text-primary text-[20px]">
-                  {t.homeData.popupSuccessBlueTitle}
-                </h1>
-              </div>
-              <p className="text-gray-500 mt-1 lg:mt-4 text-sm lg:text-lg">
-                Du är nu ett steg närmare till din framgång med dropshipping. Vi
-                ses på insidan! 🎉
-              </p>
-            </div>
           </div>
-          <button
-            onClick={() => {
-              window.open(
-                "https://skool.com/dropshipping-sverige-2012",
-                "_blank"
-              )
-            }}
-            className="btn-primary mt-6 w-full drop-shadow-none popupSuccessRedirectButtons rounded-[7px]"
-            style={{
-              paddingRight: 0,
-              paddingLeft: "5px",
-              fontSize: 14,
-              display: "flex",
-              alignItems: "center",
-            }}
-          >
-            <Image
-              src="/sk.svg"
-              alt="user"
-              width={24}
-              height={18}
-              className="flex-shrink-0"
-              style={{
-                marginLeft: "18px",
-                // marginLeft: 11,
-                display: "inline-block",
-                marginRight: "10px",
-              }}
-              loading="lazy"
-            />
+          {/* Email */}
+          <div className="form-control w-full">
+            <div className={inputWrapperClass}>
+              <Image
+                src="/new-home/message.svg"
+                alt="email"
+                width={24}
+                height={24}
+                className="absolute left-3"
+              />
+              <input
+                type="email"
+                placeholder="E-Post"
+                className={inputClass}
+                {...register("email")}
+              />
+            </div>
+            {errors.email && (
+              <p className="text-red-500 text-xs pt-1">
+                {errors.email.message}
+              </p>
+            )}
+          </div>
 
-            <span className="mt-1"> Gå till gratis dropshipping kurs</span>
-          </button>
-          <button
-            onClick={() => {
-              window.open("https://shopify.pxf.io/checkified", "_blank")
-            }}
-            className="btn-primary mt-6 w-full drop-shadow-none popupSuccessRedirectButtons rounded-[7px]"
-            style={{
-              textAlign: "center",
-              paddingRight: 0,
-              paddingLeft: "5px",
-              fontSize: 14,
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <Image
-              src="/shopify.svg"
-              alt="user"
-              width={24}
-              height={18}
-              className="flex-shrink-0"
-              style={{
-                marginLeft: "-18px",
-                // marginLeft: 11,
-                display: "inline-block",
-                marginRight: "10px",
-              }}
-              loading="lazy"
-            />
+          <div className="form-control w-full">
+            <div className={inputWrapperClass}>
+              <Image
+                src="/new-home/phone.svg"
+                alt="phone"
+                width={24}
+                height={24}
+                className="absolute left-3"
+              />
+              <input
+                type="text"
+                placeholder="Telefonnummer"
+                className={inputClass}
+                {...register("phone")}
+              />
+            </div>
+            {errors.phone && (
+              <p className="text-red-500 text-xs pt-1">
+                {errors.phone.message}
+              </p>
+            )}
+          </div>
 
-            <span className="mt-1">Börja med Shopify för 10kr i en månad.</span>
+          <div className="form-control w-full">
+            <div className={inputWrapperClass}>
+              <Image
+                src="/new-home/teacher.svg"
+                alt="message"
+                width={24}
+                height={24}
+                className="absolute left-3"
+              />
+              <input
+                type="text"
+                placeholder="Vilken utbildning är du intresserad av?"
+                className={inputClass}
+                {...register("selectedCourse")}
+              />
+            </div>
+            {errors.selectedCourse && (
+              <p className="text-red-500 text-xs pt-1">
+                {errors.selectedCourse.message}
+              </p>
+            )}
+          </div>
+
+          <button
+            type="submit"
+            disabled={!isDirty || !isValid}
+            className="font-inter w-full text-xs md:text-base btn btn-primary mt-4"
+          >
+            Ansök
           </button>
-        </div>
-      )}
-      <BlurCircle positionClassName="left-0 top-0 z-1" size="lg" />
+        </form>
+      </div>
     </div>
   )
 }

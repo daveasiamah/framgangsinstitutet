@@ -219,10 +219,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
                 const buttonTitle = getButtonTitle(pathname)
 
                 if (buttonTitle === "Ansök idag!") {
-                  window.open(
-                    "https://form.jotform.com/checkifiedse/formulr",
-                    "_blank"
-                  )
+                  openModal()
                 } else if (!excludedPaths.includes(pathname)) {
                   openModal()
                 } else {

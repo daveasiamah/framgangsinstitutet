@@ -29,13 +29,13 @@ export default function MetaHead({ title, path }: Props) {
       /> */}
       <meta property="og:type" content="website" />
       <link rel="icon" href="/favicon.ico" />
-      <script
+      {/* <script
         id="Cookiebot"
         src="https://consent.cookiebot.com/uc.js"
         data-cbid="967764a7-1d94-4754-953e-373f89d43089"
         type="text/javascript"
         async
-      ></script>
+      ></script> */}
     </Head>
   )
 }
