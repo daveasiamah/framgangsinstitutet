@@ -20,7 +20,12 @@ export default function App({
   return (
     <>
       {/* Add the Hotjar tracking code */}
-
+      <Script
+        id="Cookiebot"
+        strategy="afterInteractive"
+        data-cbid="967764a7-1d94-4754-953e-373f89d43089"
+        src="https://consent.cookiebot.com/uc.js"
+      ></Script>
       <Script
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=G-FF7H6JCNB6`}
