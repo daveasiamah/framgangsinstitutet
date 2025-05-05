@@ -61,9 +61,10 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
   const onSubmit: SubmitHandler<FormValues> = (data) => sendData(data)
 
   const inputWrapperClass =
-    "relative border rounded-lg bg-white flex items-center"
+    "relative border border-[#AFBAD2] rounded-lg bg-white flex items-center"
+
   const inputClass =
-    "input w-full pl-10 pr-4 py-4 focus:outline-0 bg-white text-base"
+    "input w-full pl-10 pr-4 py-4 focus:outline-0 bg-white border-[#AFBAD2] text-base"
 
   return (
     <div
@@ -83,8 +84,8 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
           <Image
             src="/new-home/contract-form-banner.png"
             alt="video"
-            width="311"
-            height="175"
+            width="289"
+            height="200"
             className="mx-auto object-cover"
           />
           <div>
