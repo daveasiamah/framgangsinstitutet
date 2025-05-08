@@ -302,7 +302,7 @@ export const pricingData: PricingData = {
     time: "18 minuter sen",
     verified: "Verifierad",
     description:
-      "Jag är verkligen imponerad av Checkifeds färdiga e-butik med 30 produkter och 5 videoannonser redo att marknadsföras! Tack vare deras hjälp har jag nu en verksamhet som omsätter 350 000 kr. Butiken var färdigbyggd med professionellt utvalda produkter, och jag kunde börja sälja direkt. Det bästa var att jag fick tillgång till en gratis kurs om hur man driver en framgångsrik dropshipping-butik, vilket gjorde det enkelt för mig att förstå allt från marknadsföring till logistik. Supporten har också varit fantastisk – när jag behövt hjälp har de alltid funnits där. Det enda jag behövde göra efteråt var att köpa ett domännamn och sätta igång med marknadsföringen. För mig, som inte hade någon tidigare erfarenhet av e-handel, har det här varit en riktig gamechanger. Rekommenderar verkligen till alla som vill börja med dropshipping!",
+      "Jag är verkligen imponerad av Checkifeds färdiga e-butik med 30 produkter och 10 videoannonser redo att marknadsföras! Tack vare deras hjälp har jag nu en verksamhet som omsätter 350 000 kr. Butiken var färdigbyggd med professionellt utvalda produkter, och jag kunde börja sälja direkt. Det bästa var att jag fick tillgång till en gratis kurs om hur man driver en framgångsrik dropshipping-butik, vilket gjorde det enkelt för mig att förstå allt från marknadsföring till logistik. Supporten har också varit fantastisk – när jag behövt hjälp har de alltid funnits där. Det enda jag behövde göra efteråt var att köpa ett domännamn och sätta igång med marknadsföringen. För mig, som inte hade någon tidigare erfarenhet av e-handel, har det här varit en riktig gamechanger. Rekommenderar verkligen till alla som vill börja med dropshipping!",
   },
 
   bonuses: {
@@ -334,7 +334,7 @@ export const pricingData: PricingData = {
       },
       {
         id: "Bonus #4",
-        title: "5 Videoannonser",
+        title: "10 Videoannonser",
         image: "/images/pricing/bonus4.png",
         description:
           "Vårt team kommer att skapa video annonser som du kan använda i din marknadsföring.",
@@ -381,7 +381,7 @@ export const pricingData: PricingData = {
       },
       {
         id: "03",
-        desc: "Prisbelönt marknadsföringsteam som skapar 5 video annonser så att du kan göra din första försäljning online med din dropshipping butik...",
+        desc: "Prisbelönt marknadsföringsteam som skapar 10 video annonser så att du kan göra din första försäljning online med din dropshipping butik...",
       },
     ],
   },
