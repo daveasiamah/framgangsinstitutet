@@ -68,7 +68,7 @@ export default function PricingHeroBlock() {
                 width="100%"
                 height="100%"
                 className="rounded-b-[15px]"
-                src="https://www.youtube.com/embed/GsdQ2RFxmsg?si=84E2DuCi6YLRVL5f"
+                src="https://www.youtube.com/embed/axerunSyAkQ?si=K5XkGqHUtujw6EZ-"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"

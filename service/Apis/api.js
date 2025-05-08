@@ -14,7 +14,7 @@ export const AuthApi = async (email, password) => {
   }
 }
 
-export const registerOfContract = async ({ name, email, phone }) => {
+export const registerOfContract = async ({ name, email, phone, selectedCourse }) => {
   const ext_id = uuidv4()
   try {
     const attributes = {
@@ -22,6 +22,7 @@ export const registerOfContract = async ({ name, email, phone }) => {
       LASTNAME: "",
       SMS: `+46${phone}`,
       EXT_ID: ext_id,
+      COURSE_INTEREST: selectedCourse,
     }
 
     const response = await axios.post(

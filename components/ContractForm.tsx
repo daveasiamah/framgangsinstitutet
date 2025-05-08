@@ -168,6 +168,28 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
               </p>
             )}
           </div>
+          <div className="form-control w-full">
+            <div className={inputWrapperClass}>
+              <Image
+                src="/new-home/teacher.svg"
+                alt="message"
+                width={24}
+                height={24}
+                className="absolute left-3"
+              />
+              <input
+                type="text"
+                placeholder="Vilken utbildning är du intresserad av?"
+                className={inputClass}
+                {...register("selectedCourse")}
+              />
+            </div>
+            {errors.selectedCourse && (
+              <p className="text-red-500 text-xs pt-1">
+                {errors.selectedCourse.message}
+              </p>
+            )}
+          </div>
           <button
             type="submit"
             disabled={!isDirty || !isValid}
