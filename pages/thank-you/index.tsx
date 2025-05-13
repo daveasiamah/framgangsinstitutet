@@ -43,6 +43,10 @@ export default function ThankYou() {
             30+ onlineutbildningar!
           </h1>
         </div>
+        <p className="text-[10px] md:text-base text-[#434C69] font-inter font-medium text-center mt-4 md:mt-6 lg:mt-8 max-w-[647px]">
+          Från e-handel och marknadsföring till AI och ekonomiska investeringar
+          - allt på ett ställe, inga förkunskaper krävs.
+        </p>
         <ThankYouVideoBanner />
         <div className="md:mb-10">
           <ThankYouButton />
@@ -69,28 +73,23 @@ export default function ThankYou() {
         <h2 className="text-white font-inter text-[18px]">
           HÄR ÄR VAD DU FÅR...
         </h2>
-        <div className="flex gap-2">
-          <h2 className="font-inter font-bold text-[20px] md:text-[45px] text-white">
-            Vad finns i
-          </h2>
-          <h2 className="font-inter font-bold text-[20px] md:text-[45px] text-transparent bg-clip-text bg-gradient-to-t from-blue-600 to-white">
-            Checkified
-          </h2>
-        </div>
+        <h2 className="font-inter font-bold text-base md:text-[35px] mt-8 text-white">
+          Vad finns i Checkified utbildningar?
+        </h2>
 
-        <div className="max-w-[297px] md:max-w-[900px] mt-[38px]">
+        <div className="max-w-[297px] md:max-w-[900px] mt-[38px] px-10">
           <p className="font-inter text-[12px] md:text-[14px] lg:text-base text-white font-medium text-center">
             Checkified erbjuder 30+ praktiska onlinekurser, uppdelade i olika
-            kategorier så att du enkelt hittar det du vill lära dig – oavsett om
+            kategorier så att du enkelt hittar det du vill lära dig - oavsett om
             du är nybörjare eller vill ta nästa steg i din karriär. När du går
             med får du omedelbar tillgång till alla kurser och framtida
-            uppdateringar – värde över 100 000 SEK.
+            uppdateringar - värde över 100 000 SEK.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 w-auto max-w-[1030px] gap-10 p-10 justify-center items-center mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 w-auto max-w-[1230px] gap-10 p-10 justify-center items-center mt-10">
           <div className="flex flex-col  max-w-[318px] justify-start">
-            <div className="flex text-center items-center gap-2">
+            <div className="flex items-center gap-2">
               <Image
                 src="/images/thank-you/gauge1.png"
                 width={16}
@@ -102,12 +101,12 @@ export default function ThankYou() {
               </h4>
             </div>
             <p className="font-inter text-[12px] md:text-[14px] text-[#ffffffc7] text-start mt-3.5">
-              Lär dig starta och driva en framgångsrik e-butik – från idé till
+              Lär dig starta och driva en framgångsrik e-butik - från idé till
               skalning.
             </p>
           </div>
-          <div className="flex flex-col max-w-[265px] justify-start">
-            <div className="flex text-center items-center gap-2">
+          <div className="flex flex-col justify-start">
+            <div className="flex items-center gap-2">
               <Image
                 src="/images/thank-you/chart-line.png"
                 width={16}
@@ -124,7 +123,7 @@ export default function ThankYou() {
             </p>
           </div>
           <div className="flex flex-col max-w-[259px] justify-start">
-            <div className="flex text-center items-center gap-2">
+            <div className="flex gap-2">
               <Image
                 src="/images/thank-you/list-checks.png"
                 width={16}
@@ -141,7 +140,7 @@ export default function ThankYou() {
             </p>
           </div>
           <div className="flex flex-col max-w-[276px] justify-start">
-            <div className="flex text-center items-center gap-2">
+            <div className="flex items-center gap-2">
               <Image
                 src="/images/thank-you/cursor-click.png"
                 width={16}

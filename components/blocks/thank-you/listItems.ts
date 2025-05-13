@@ -7,21 +7,26 @@ export const listItems = [
   {
     id: 1,
     icon: "/images/thank-you/green-checkmark.svg",
-    text: "Gå från 0 till 100k i vinst/månad utan erfarenhet.",
+    text: "Starta och väx i flera olika områden - e-handel, marknadsföring, AI, ekonomi, självutveckling m.m..",
   },
   {
     id: 2,
     icon: "/images/thank-you/green-checkmark.svg",
-    text: "Få ekonomisk och geografisk frihet, arbeta när och var du vill.",
+    text: "Få strukturerade, nybörjarvänliga kurser skapade av experter.",
   },
   {
     id: 3,
     icon: "/images/thank-you/green-checkmark.svg",
-    text: "Bli din egen chef och bygg ditt e-handelsföretag från A till Ö.",
+    text: "Praktiska steg-för-steg-videor och mallar.",
   },
   {
     id: 4,
     icon: "/images/thank-you/green-checkmark.svg",
-    text: "Omsätt 100.000:- på 12 månader eller pengarna tillbaka* – Allmänna villkor gäller.",
+    text: "Tillgång till ett community med tusentals elever.",
+  },
+  {
+    id: 5,
+    icon: "/images/thank-you/green-checkmark.svg",
+    text: "Resultatgaranti - eller pengarna tillbaka.",
   },
 ]
