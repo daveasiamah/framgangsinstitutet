@@ -25,7 +25,6 @@ import Link from "next/link.js"
 import Accordion, {
   AccordionItem,
 } from "@/components/blocks/home-blocks/HomePageAccordion"
-import RichTextRenderer from "@/utils/RichTextRenderer"
 import { ConsultationForm } from "@/components/blocks/home-blocks/ConsultationForm"
 
 export default function Home() {

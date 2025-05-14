@@ -41,11 +41,6 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
     }
   }, [pathname])
 
-  const changeLanguage = (e: { target: { value: string } }) => {
-    const locale = e.target.value
-    router.push(router.pathname, router.asPath, { locale })
-  }
-
   const getButtonTitle = (pathname: string) => {
     switch (pathname) {
       case "/":

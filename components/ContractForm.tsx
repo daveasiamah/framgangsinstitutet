@@ -30,8 +30,8 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
       .string()
       .required("Telefonnummer er påkrævet")
       .matches(
-        /^7\d{8}$/,
-        "Ange ett giltigt svenskt telefonnummer (7XXXXXXXX)"
+        /^(\+46|0)7\d{8}$/,
+        "Ange ett giltigt svenskt telefonnummer (+467XXXXXXXX eller 07XXXXXXXX)"
       ),
     selectedCourse: yup.string(),
   })
