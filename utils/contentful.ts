@@ -210,7 +210,7 @@ export async function getFAQs() {
       content_type: "faq",
       order: ["fields.position"], // Orders by the "position" field in ascending order
     })
-    const formattedEntries = entries.items.map((entry: any) => ({
+    const formattedEntries = entries.items.map((entry) => ({
       id: entry.sys.id,
       question: entry.fields.question,
       answer: entry.fields.answer as Document,

@@ -108,7 +108,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
                 href="/utbildningar"
                 onClick={() => setOpenSidebar(false)}
               >
-                {t.headerData.university}
+                {t.headerData.trainingCourses}
               </Link>
             </li>
 
@@ -196,10 +196,19 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
             <li>
               <Link
                 className="btn btn-link"
-                href="/butiker"
+                href="/contact-us"
                 onClick={() => setOpenSidebar(false)}
               >
-                {t.headerData.pricing}
+                {t.headerData.contactUs}
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="btn btn-link"
+                href="/faq"
+                onClick={() => setOpenSidebar(false)}
+              >
+                {t.headerData.faq}
               </Link>
             </li>
           </ul>

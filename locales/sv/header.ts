@@ -1,7 +1,7 @@
 import { HeaderData } from "../types/header"
 
 export const headerData: HeaderData = {
-  university: "utbildningar",
+  trainingCourses: "utbildningar",
   resources: "Resurser",
   megaMenuData: [
     {
@@ -69,8 +69,10 @@ export const headerData: HeaderData = {
     },
   ],
   // videoUrl: "/images/videos/INTRO.mp4",
-  pricing: "Färdig E-butik",
+  estore: "Färdig E-butik",
   login: "Logga In",
   getStarted: "Ansök idag",
   dashboard: "Dashboard",
+  contactUs: "Kontakta oss",
+  faq: "Frågor och svar",
 }
