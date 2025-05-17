@@ -1,8 +1,8 @@
 import { HeaderData } from "../types/header"
 
 export const headerData: HeaderData = {
-  university: "University",
-  resources: "Resources",
+  trainingCourses: "Utbildningar",
+  resources: "Resurser",
   megaMenuData: [
     {
       id: 1,
@@ -48,8 +48,10 @@ export const headerData: HeaderData = {
     },
   ],
   // videoUrl: "/images/videos/INTRO.mp4",
-  pricing: "E-shops",
+  estore: "E-butik",
   login: "Log In",
   getStarted: "Join today",
   dashboard: "Dashboard",
+  faq: "Frågor och svar",
+  contactUs: "Kontakta oss",
 }
