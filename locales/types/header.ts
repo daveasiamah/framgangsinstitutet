@@ -5,14 +5,16 @@ type MegaMenuData = {
   desc: string
   link: string
 }
- 
+
 export type HeaderData = {
   //videoUrl:string
-  university: string
+  trainingCourses: string
   resources: string
   megaMenuData: MegaMenuData[]
-  pricing: string
+  estore: string
   login: string
-  getStarted: string,
+  getStarted: string
   dashboard: string
+  faq: string
+  contactUs: string
 }
