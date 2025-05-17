@@ -20,11 +20,10 @@ export const registerOfContract = async ({ name, email, phone, selectedCourse })
     const attributes = {
       FIRSTNAME: name || "",
       LASTNAME: "",
-      SMS:phone,
+      SMS:`+46${phone}`,
       EXT_ID: ext_id,
       COURSE_INTEREST: selectedCourse,
     }
-
     const response = await axios.post(
       `${process.env.SEND_IN_BLUE_BASE_URL}/v3/contacts`,
       {

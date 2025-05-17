@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import Image from "next/image"
 import { useRouter } from "next/router"
 import { SubmitHandler, useForm } from "react-hook-form"
@@ -21,6 +21,7 @@ const defaultValues: FormValues = {
 }
 
 export default function ContactForm({ onClose }: { onClose: () => void }) {
+  const [APIErrors, setAPIErrors] = useState<any>(null)
   const router = useRouter()
 
   const schema = yup.object().shape({
@@ -30,8 +31,8 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
       .string()
       .required("Telefonnummer er påkrævet")
       .matches(
-        /^(\+46|0)7\d{8}$/,
-        "Ange ett giltigt svenskt telefonnummer (+467XXXXXXXX eller 07XXXXXXXX)"
+        /^\d{9,12}$/,
+        "Ange ett giltigt telefonnummer (minst 9 siffror)"
       ),
     selectedCourse: yup.string(),
   })
@@ -48,14 +49,18 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
   })
 
   const sendData = async (data: any) => {
+    setAPIErrors(null)
     try {
       const res = await registerOfContract(data)
       if (res.success) {
         reset()
         router.push("/thank-you")
       }
+      if (res.error) {
+        setAPIErrors(res.error)
+      }
     } catch (error) {
-      console.log("ERROR SENDING CONTACT FORM: ", error)
+      setAPIErrors(error)
     }
   }
   const onSubmit: SubmitHandler<FormValues> = (data) => sendData(data)
@@ -77,7 +82,10 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
         width={20}
         height={20}
         className="absolute top-4 right-4 cursor-pointer"
-        onClick={onClose}
+        onClick={() => {
+          setAPIErrors(null)
+          onClose()
+        }}
       />
       <div className="w-full">
         <div className="flex-col justify-center items-center">
@@ -101,6 +109,10 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
           action=""
           className="flex flex-col items-center gap-4 mt-4"
         >
+          {/* Error Alert */}
+          <div className="text-red-500 text-sm">
+            {APIErrors && APIErrors.message}
+          </div>
           {/* First Name */}
           <div className="form-control w-full">
             <div className={inputWrapperClass}>

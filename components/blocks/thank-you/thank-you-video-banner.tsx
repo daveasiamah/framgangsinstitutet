@@ -6,7 +6,7 @@ export function ThankYouVideoBanner() {
       <iframe
         width="1024"
         height="590"
-        src="https://www.youtube.com/embed/kIpxmKhidVE"
+        src="https://www.youtube.com/embed/huopI7UVG4k"
         title="Ansök till Checkified"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
