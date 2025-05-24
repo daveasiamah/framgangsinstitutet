@@ -51,18 +51,27 @@ export const registerOfContract = async ({ name, email, phone, selectedCourse })
 
 export const contact = async (data) => {
   try {
-    const response = await axios.post(process.env.API_BASE + "contact-us", {
-      firstName,
-      lastName: data.lastName,
-      email: data.email,
-      phone: data.phone,
-      message: data.message,
-    })
-    return response
+    const response = await axios.post(
+      `${process.env.NEXT_PUBLIC_API_BASE}contact-us`,
+      {
+        firstName: data.firstName,
+        lastName: data.lastName,
+        email: data.email,
+        phone: data.phone,
+        message: data.message,
+      },
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    return response;
   } catch (error) {
-    return error
+    return error;
   }
-}
+};
+
 
 export const get_user = async () => {
   try {

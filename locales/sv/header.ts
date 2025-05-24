@@ -42,9 +42,9 @@ export const headerData: HeaderData = {
     {
       id: 6,
       imageUrl: "/icons/header/bookmark.svg",
-      title: "Checkified Vendum",
-      desc: "Lär dig skapa en online kurs",
-      link: "https://checkified.se/utbildningar/e-learning-creator",
+      title: "Färdig Butik",
+      desc: "Få högkonverterande butik",
+      link: "butiker",
     },
     {
       id: 7,
