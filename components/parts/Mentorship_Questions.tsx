@@ -1,18 +1,26 @@
-import React from 'react';
+import { id } from "date-fns/locale";
+import React from "react";
+import Accordion, { AccordionItem } from "./Accordion_FAQ";
 
 const MentorshipQuestions = () => {
     const questions = [
         {
+            id: 1,
             question: "Vem är detta mentorskap till för?",
-            answer:"Vårt mentorskap är till för människor som inte vill leva ett liv med att vara kedjade vid ett skrivbord eller ett jobb hela dagen för att skapa inkomst till sig själva. Om du verkligen vill ha frihet i din ekonomi, kommer detta att vägleda dig mot att tjäna inkomst utan att någonsin visa ditt ansikte eller lämna huset."
+            answer:
+                "Vårt mentorskap är till för människor som inte vill leva ett liv med att vara kedjade vid ett skrivbord eller ett jobb hela dagen för att skapa inkomst till sig själva. Om du verkligen vill ha frihet i din ekonomi, kommer detta att vägleda dig mot att tjäna inkomst utan att någonsin visa ditt ansikte eller lämna huset."
         },
         {
+            id: 2,
             question: "Hur vet jag att detta kommer att fungera för mig?",
-            answer: "Vi vet inte säkert - vilket är en av anledningarna till att vi erbjuder en 100% garanti utan frågor. Så du kan prova det här och se om det fungerar för dig som det gjorde för oss och de 750+ elever som vi redan har lärt det för! Det enda sättet att fatta ett välgrundat beslut är på insidan, så det är därför vi är villiga att ta på oss ALL risk för dig."
+            answer:
+                "Vi vet inte säkert - vilket är en av anledningarna till att vi erbjuder en 100% garanti utan frågor. Så du kan prova det här och se om det fungerar för dig som det gjorde för oss och de 750+ elever som vi redan har lärt det för! Det enda sättet att fatta ett välgrundat beslut är på insidan, så det är därför vi är villiga att ta på oss ALL risk för dig."
         },
         {
+            id: 3,
             question: "Kan jag göra detta från var som helst i världen?",
-            answer: "Ja du kan göra detta från vart som helst i världen. Dropshipping är mångsidigt och enkelt att komma igång med."
+            answer:
+                "Ja du kan göra detta från vart som helst i världen. Dropshipping är mångsidigt och enkelt att komma igång med."
         }
     ];
 
@@ -25,26 +33,15 @@ const MentorshipQuestions = () => {
 
             {/* Questions List */}
             <div className="space-y-6">
-                {questions.map((item, index) => (
-                    <div key={index} className="flex flex-col">
-                        {/* Question */}
-                        <div className="flex items-center  gap-2">
-                            <span className="text-[#151e3a] text-xl ">›</span>
-                            <p className="font-bold font-inter text-[#151e3a] text-sm flex-1">
-                                {item.question}
+                <Accordion>
+                    {questions.map(item =>
+                        <AccordionItem key={item.id} title={item.question}>
+                            <p className="text-xs md:text-base text-[#434c69]">
+                                {item.answer}
                             </p>
-                        </div>
-                        
-                        {/* Answer (if exists) */}
-                        {item.answer && (
-                            <div className="ml-6 mt-2">
-                                <p className="font-medium text-[#151e3a] text-[12px] leading-normal font-inter">
-                                    {item.answer}
-                                </p>
-                            </div>
-                        )}
-                    </div>
-                ))}
+                        </AccordionItem>
+                    )}
+                </Accordion>
             </div>
         </div>
     );

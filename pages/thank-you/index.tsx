@@ -5,6 +5,7 @@ import { testimonials } from "../../components/blocks/thank-you/testimonials"
 import { ThankYouVideoBanner } from "../../components/blocks/thank-you/thank-you-video-banner"
 import { listItems } from "../../components/blocks/thank-you/listItems"
 import { ThankYouButton } from "../../components/blocks/thank-you/thank-you-button"
+import ThankyouVidGrid from "@/components/parts/Thankyou_VidGrid"
 
 export default function ThankYou() {
   return (
@@ -68,6 +69,8 @@ export default function ThankYou() {
           ))}
         </ul>
       </section>
+
+      <ThankyouVidGrid />
 
       <section className="flex flex-col py-10 items-center bg-gradient-to-br from-[#225AEA] to-[#020103]">
         <h2 className="text-white font-inter text-[18px]">

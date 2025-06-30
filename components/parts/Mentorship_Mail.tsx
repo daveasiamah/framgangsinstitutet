@@ -2,28 +2,23 @@ import Image from "next/image";
 
 const MentorshipMailer = () => {
     return (
-        <div className="relative w-full max-w-[689px] px-0 sm:px-6 lg:px-8 mb-10 mt-10 mx-auto">
-            <div className="relative w-full min-h-[1273px] sm:min-h-[780px] lg:min-h-[1153px]  mt-5 bg-white rounded-[25px] border-[0.2px] border-solid border-[#9b9b9b40] shadow-[0px_0.5px_15px_0.5px_#9b9b9b40] ">
+        <div className="relative w-full max-w-[689px] px-4 sm:px-6 lg:px-8 mb-9 mt-10 mx-auto">
+            <div className="relative w-full bg-white rounded-[25px] border-[0.2px] border-solid border-[#9b9b9b40] shadow-[0px_0.5px_15px_0.5px_#9b9b9b40] pb-8 sm:pb-10 lg:pb-12">
                 <div className="w-full relative font-inter">
-                    <div className="w-full">
-                        <div className="relative min-h-[600px] sm:min-h-[800px] lg:min-h-[1024px]">
-                            {/* Email container */}
-                            <div className="" />
-
-                            {/* Email icon */}
-                            <Image
-                                className="absolute w-[40px] h-[40px] sm:w-[45px] sm:h-[45px] lg:w-[51px] lg:h-[51px] -top-5 right-4 sm:right-6 lg:right-0"
-                                alt="Rectangle"
-                                src={"/images/mentorship/emailUp.png"}
-                                width={40}
-                                height={40}
-                            />
-                        </div>
+                    {/* Email icon */}
+                    <div className="relative">
+                        <Image
+                            className="absolute w-[40px] h-[40px] sm:w-[45px] sm:h-[45px] lg:w-[51px] lg:h-[51px] -top-5 right-4 sm:right-6 lg:right-4 z-10"
+                            alt="Email Icon"
+                            src={"/images/mentorship/emailUp.png"}
+                            width={51}
+                            height={51}
+                        />
                     </div>
 
                     {/* Email content */}
-                    <div className="absolute top-8 sm:top-10 lg:top-12 left-4 sm:left-6 lg:left-10 right-4 sm:right-6 lg:right-10 text-sm sm:text-base leading-normal">
-                        <div className="space-y-4">
+                    <div className="pt-8 sm:pt-10 lg:pt-12 px-4 sm:px-6 lg:px-10 text-sm sm:text-base leading-normal font-inter">
+                        <div className="space-y-3 sm:space-y-4">
                             {/* From field */}
                             <div>
                                 <span className="font-medium text-[#434c69]">
@@ -45,7 +40,7 @@ const MentorshipMailer = () => {
                             </div>
 
                             {/* Subject field */}
-                            <div className="mb-6">
+                            <div className="mb-4 sm:mb-6">
                                 <span className="font-medium text-[#434c69]">
                                     Ämne:
                                 </span>
@@ -55,7 +50,7 @@ const MentorshipMailer = () => {
                             </div>
 
                             {/* Email body */}
-                            <div className="space-y-4 text-[#434c69] font-medium">
+                            <div className="space-y-3 sm:space-y-4 text-[#434c69] font-medium">
                                 <p>
                                     Hej, jag heter Dominic och jag är grundaren
                                     av Checkified.se... Jag kunde inte vara mer
@@ -108,7 +103,7 @@ const MentorshipMailer = () => {
                                     </span>
                                 </p>
 
-                                <div className="space-y-2">
+                                <div className="space-y-1 sm:space-y-2">
                                     <p>
                                         Jag har pensionerat båda mina
                                         föräldrar...
@@ -143,7 +138,7 @@ const MentorshipMailer = () => {
                                     från 99,99% av gurus, har varit i dina skor.
                                 </p>
 
-                                <div className="space-y-2">
+                                <div className="space-y-1 sm:space-y-2">
                                     <p>Jag hade inget miljonärsnätverk.</p>
                                     <p>Jag hade inga pengar till kurser.</p>
                                     <p>

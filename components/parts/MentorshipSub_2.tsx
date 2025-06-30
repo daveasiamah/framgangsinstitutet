@@ -2,27 +2,27 @@ import MentorshipButton from "./Mentorship_Mail_Button";
 
 const MentorshipSubEhandler = () => {
     return (
-        <div className="relative w-full max-w-[772px] mx-auto px-4 sm:px-6 lg:px-8 mt-14 mb-10">
+        <div className="relative w-full max-w-[572px] md:max-w-[652px] lg:max-w-[872px] mx-auto px-0 mt-10 mb-10">
             <div className="w-full">
                 <div className="space-y-4 sm:space-y-6">
                     {/* Header text */}
-                    <div className="w-full max-w-[200px]">
+                    <div className="w-full max-w-[200px] lg:mx-0 text-center mx-auto">
                         <p className="font-semibold text-[#9b9b9b] font-inter text-xs sm:text-sm tracking-[0] leading-normal">
                             Med Checkified Mentorskap™
                         </p>
                     </div>
 
                     {/* Main headline */}
-                    <div className="w-full max-w-[668px] font-jakarta">
-                        <h2 className="font-extrabold text-lg sm:text-xl md:text-2xl lg:text-2xl tracking-[0] leading-tight sm:leading-[31px]">
+                    <div className="w-full max-w-[390px] md:max-w-[598px] lg:max-w-[598px] font-jakarta">
+                        <h2 className="font-extrabold text-[20px] sm:text-xl md:text-2xl lg:text-2xl">
                             <span className="text-black">
                                 Det är som att ha
                             </span>
                             <span className="text-[#1e5aea]">
-                                {" "}personlig tränare för E-handel
+                                {" "}personlig tränare för E-handel{" "}
                             </span>
                             <span className="text-black">
-                                ,<br />utan den höga månadsavgiften.
+                                utan den höga månadsavgiften.
                             </span>
                         </h2>
                     </div>
