@@ -5,8 +5,7 @@ import { testimonials } from "../../components/blocks/thank-you/testimonials"
 import { ThankYouVideoBanner } from "../../components/blocks/thank-you/thank-you-video-banner"
 import { listItems } from "../../components/blocks/thank-you/listItems"
 import { ThankYouButton } from "../../components/blocks/thank-you/thank-you-button"
-import { testimonialVideos } from "@/components/blocks/thank-you/testimonialVideos"
-import { TestimonialVideo } from "@/components/blocks/thank-you/TestimonialVideo"
+import ThankyouVidGrid from "@/components/parts/Thankyou_VidGrid"
 
 export default function ThankYou() {
   return (
@@ -71,74 +70,7 @@ export default function ThankYou() {
         </ul>
       </section>
 
-      <section className="flex flex-col mt-[99px] justify-center items-center">
-        <h2 className="font-jakarta font-bold leading-5 text-[1.25rem] md:text-[2.875rem]">
-          Studentintervjuer
-        </h2>
-        <p className="text-[10px] md:text-base text-[#434C69] font-inter font-medium text-center mt-4 md:mt-6 lg:mt-8 max-w-[690px]">
-          Lär känna några av våra medlemmar som omsatt miljontals kronor
-          tillsammans i akademin.
-        </p>
-
-        {/* Testimonial Videos */}
-        <div className="w-full md:max-w-[1300px] p-8 mx-auto px-2 mt-4 mb-12 flex flex-col gap-6">
-          <div className="flex flex-col gap-6 justify-center border-2 border-red-500 w-full md:grid md:grid-cols-3 md:gap-6">
-            {testimonialVideos.slice(0, 3).map((video: any, idx: number) => (
-              <TestimonialVideo
-                key={video.id}
-                source={video.source}
-                width={"100%"}
-                height={video.height}
-                id={video.id}
-                className={
-                  idx === 0
-                    ? "w-full md:col-span-2 md:row-span-2 md:h-full md:aspect-video"
-                    : "w-full md:h-full md:aspect-video"
-                }
-              />
-            ))}
-          </div>
-
-          <div className="flex flex-col gap-6 justify-center w-full md:flex-col md:items-center">
-            <div
-              className="flex flex-col gap-6 justify-center w-full border-2 border-green-500
-              md:grid md:grid-cols-2 md:grid-rows-2 md:gap-6
-              md:[grid-template-areas:'a_a''b_c'] md:auto-rows-fr"
-            >
-              {testimonialVideos.slice(3, 6).map((video: any, idx: number) => (
-                <TestimonialVideo
-                  key={video.id}
-                  source={video.source}
-                  width={video.width}
-                  height={video.height}
-                  id={video.id}
-                  className={
-                    "w-full " +
-                    (idx === 0
-                      ? "md:[grid-area:a]"
-                      : idx === 1
-                      ? "md:[grid-area:b]"
-                      : "md:col-span-2 md:[grid-area:c]")
-                  }
-                />
-              ))}
-            </div>
-
-            <div className="flex flex-col gap-6 items-center border-2 border-yellow-500 w-full md:mt-6 md:w-full">
-              {testimonialVideos.slice(6, 8).map((video: any) => (
-                <TestimonialVideo
-                  key={video.id}
-                  source={video.source}
-                  width={video.width}
-                  height={video.height}
-                  id={video.id}
-                  // className="w-full"
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      <ThankyouVidGrid />
 
       <section className="flex flex-col py-10 items-center bg-gradient-to-br from-[#225AEA] to-[#020103]">
         <h2 className="text-white font-inter text-[18px]">
