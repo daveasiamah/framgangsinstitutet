@@ -1,8 +1,13 @@
 import React from "react"
+interface VideoProps {
+  id: number
+  src: string
+  title: string
+}
 
 const ThankyouVidGrid = () => {
   // Sample video data - replace with your actual video sources
-  const videos = [
+  const videos: VideoProps[] = [
     {
       id: 1,
       src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
@@ -45,14 +50,8 @@ const ThankyouVidGrid = () => {
     },
   ]
 
-  interface Video {
-    id: number
-    src: string
-    title: string
-  }
-
   interface VideoCardProps {
-    video: Video
+    video: VideoProps
     aspectRatio?: string
   }
 
@@ -61,11 +60,9 @@ const ThankyouVidGrid = () => {
     aspectRatio = "56.25%",
   }) => (
     <div
-      className={`relative w-full rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ${
-        aspectRatio === "100%" ? "lg:h-full" : ""
-      }`}
+      className="relative w-full rounded-[1.6rem] overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
       style={{
-        paddingBottom: aspectRatio === "100%" ? "56.25%" : aspectRatio,
+        paddingBottom: aspectRatio,
       }}
     >
       <video
@@ -86,7 +83,7 @@ const ThankyouVidGrid = () => {
   )
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 py-8">
+    <div className="w-full border-2 border-yellow-300 max-w-[1300px] mx-auto px-2 md:px-8 my-8">
       {/* Header Section */}
       <div className="text-center mb-12">
         <h1 className="text-3xl md:text-5xl font-bold text-[#151e3a] mb-4 leading-tight font-jakarta">
@@ -101,49 +98,49 @@ const ThankyouVidGrid = () => {
       {/* Video Grid Container */}
       <div className="container mx-auto space-y-6">
         {/* First Row - 3 videos (1 wide + 2 equal width) */}
-        <div className="flex flex-col lg:flex-row gap-4 lg:gap-6 lg:h-80">
+        <div className="flex flex-col lg:flex-row gap-4 lg:gap-6">
           {/* First video - wider */}
-          <div className="flex-1 lg:flex-[2] lg:h-full">
-            <VideoCard video={videos[0]} aspectRatio="100%" />
+          <div className="flex-1 lg:flex-[2]">
+            <VideoCard video={videos[0]} aspectRatio="50%" />
           </div>
 
           {/* Second and third videos - equal width */}
-          <div className="flex-1 lg:h-full">
+          <div className="flex-1">
             <VideoCard video={videos[1]} aspectRatio="100%" />
           </div>
 
-          <div className="flex-1 lg:h-full">
+          <div className="flex-1">
             <VideoCard video={videos[2]} aspectRatio="100%" />
           </div>
         </div>
 
         {/* Second Section - Flex Row */}
-        <div className="flex flex-col lg:flex-row gap-4 lg:gap-6 lg:h-96">
+        <div className="flex border-2 border-red-500 flex-col lg:flex-row gap-4 lg:gap-6 h-full min-h-[400px]">
           {/* Left Column - Contains row of 2 videos + 1 full width video */}
-          <div className="flex-1 lg:flex-[2] flex flex-col gap-4 lg:h-full">
+          <div className="flex-1 lg:flex-[2] flex flex-col gap-4">
             {/* Row with 2 videos */}
-            <div className="flex flex-col sm:flex-row gap-4 lg:flex-1">
-              <div className="flex-1 lg:h-full">
-                <VideoCard video={videos[3]} aspectRatio="100%" />
+            <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex-1">
+                <VideoCard video={videos[3]} aspectRatio="56.25%" />
               </div>
-              <div className="flex-1 lg:h-full">
-                <VideoCard video={videos[4]} aspectRatio="100%" />
+              <div className="flex-1">
+                <VideoCard video={videos[4]} aspectRatio="56.25%" />
               </div>
             </div>
 
             {/* Full width video */}
-            <div className="w-full lg:flex-1">
-              <VideoCard video={videos[5]} aspectRatio="100%" />
+            <div className="w-full">
+              <VideoCard video={videos[5]} aspectRatio="56.25%" />
             </div>
           </div>
 
           {/* Right Column - 2 videos stacked vertically */}
-          <div className="flex-1 flex flex-col gap-4 lg:h-full">
-            <div className="lg:flex-1">
-              <VideoCard video={videos[6]} aspectRatio="100%" />
+          <div className="flex-1 border-2 border-green-500 flex flex-col gap-4 h-full min-h-0">
+            <div className="flex-1 h-full min-h-0">
+              <VideoCard video={videos[6]} aspectRatio="80%" />
             </div>
-            <div className="lg:flex-1">
-              <VideoCard video={videos[7]} aspectRatio="100%" />
+            <div className="flex-1 h-full min-h-0">
+              <VideoCard video={videos[7]} aspectRatio="86%" />
             </div>
           </div>
         </div>
