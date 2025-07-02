@@ -4,7 +4,7 @@ const MentorshipDetailsText = () => {
     return (
         <div className="w-full  max-w-[1050px] mx-auto px-4 sm:px-6 lg:px-0 mt-10 mb-10">
             <div className="text-black text-sm sm:text-base lg:text-lg leading-relaxed font-inter">
-                <span className="font-bold text-lg sm:text-xl lg:text-2xl">
+                <span className="font-bold text-lg sm:text-xl lg:text-2xl font-inter">
                     Kort sagt:
                 </span>
 
