@@ -28,7 +28,7 @@ const MentorshipPage = () => {
         <MentorshipHero />
         <MentorshipHeroSub />
         <MentorshipMail />
-        <MentorshipButton className="mt-5" />
+        <MentorshipButton />
         <MentorshipSubEhandler />
         <MentorshipMentor />
         <MentorshipDetails />
