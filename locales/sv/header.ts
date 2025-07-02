@@ -23,7 +23,7 @@ export const headerData: HeaderData = {
       imageUrl: "/icons/header/teacher.svg",
       title: "Dropshipping Mentorskap",
       desc: "Få privat coachningsprogram",
-      link: "https://checkified.se/utbildningar/dropshipping-mentorskap",
+      link: "https://checkified.se/mentorskap",
     },
     {
       id: 4,
