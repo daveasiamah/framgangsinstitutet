@@ -72,7 +72,7 @@ export default function ThankYou() {
 
       <ThankyouVidGrid />
 
-      <section className="flex flex-col py-10 items-center bg-gradient-to-br from-[#225AEA] to-[#020103]">
+      <section className="flex flex-col py-10 items-center bg-gradient-to-br from-[#225AEA] to-[#020103] mt-8">
         <h2 className="text-white font-inter text-[18px]">
           HÄR ÄR VAD DU FÅR...
         </h2>
