@@ -81,18 +81,37 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
   return (
     <header className="bg-base-100 h-header-height fixed top-0 left-0 right-0 z-20 flex items-center">
       <div className="container mx-auto flex justify-between items-center">
-        <Link href="/" onClick={() => setOpenSidebar(false)}>
-          <div className="flex items-center justify-start gap-2">
-            <Image
-              className="h-[39px] md:h-[53px] w-[150.86px] md:w-[198.86px] max-w-full"
-              src="/checkified_logo.svg"
-              alt="checkified"
-              height={53}
-              width={198.86}
-              priority
-            />
-          </div>
-        </Link>
+        {pathname === "/" ? (
+          <a
+            href="https://checkified.se/utbildningar"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="flex items-center justify-start gap-2">
+              <Image
+                className="h-[39px] md:h-[53px] w-[150.86px] md:w-[198.86px] max-w-full"
+                src="/checkified_logo.svg"
+                alt="checkified"
+                height={53}
+                width={198.86}
+                priority
+              />
+            </div>
+          </a>
+        ) : (
+          <Link href="/">
+            <div className="flex items-center justify-start gap-2">
+              <Image
+                className="h-[39px] md:h-[53px] w-[150.86px] md:w-[198.86px] max-w-full"
+                src="/checkified_logo.svg"
+                alt="checkified"
+                height={53}
+                width={198.86}
+                priority
+              />
+            </div>
+          </Link>
+        )}
 
         {/* Navigation */}
         <nav
@@ -220,6 +239,10 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
           pathname !== "/ebocker" ? (
             <button
               onClick={() => {
+                if (pathname === "/") {
+                  router.push("/utbildningar")
+                  return
+                }
                 const buttonTitle = getButtonTitle(pathname)
 
                 if (buttonTitle === "Ansök idag!") {
