@@ -1,7 +1,7 @@
 import Image from "next/image"
 import React from "react"
 
-const MentorshipPayout = () => {
+const MentorshipPayout = ({ openModal }: { openModal?: () => void }) => {
   return (
     <div className="w-full max-w-[1258px] mx-auto px-4 mt-10 mb-10">
       <div className="relative w-full max-w-[1170px] mx-auto h-[314px] bg-[url(/images/mentorship/payout.svg)] bg-[100%_100%] rounded-3xl flex flex-col items-center justify-center text-center px-6 py-8">
@@ -28,7 +28,10 @@ const MentorshipPayout = () => {
         </p>
 
         {/* CTA Button */}
-        <button className="bg-white text-[#151e3a] font-semibold text-xs px-6 py-2 rounded-lg hover:bg-gray-100 transition-colors duration-200 font-jakarta">
+        <button
+          onClick={openModal}
+          className="bg-white text-[#151e3a] font-semibold text-xs px-6 py-2 rounded-lg hover:bg-gray-100 transition-colors duration-200 font-jakarta"
+        >
           Ansök Här
         </button>
       </div>
