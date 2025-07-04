@@ -1,9 +1,9 @@
 import React from "react"
 import MentorshipButton from "./Mentorship_Button"
 
-type MentorshipNextStepProps = { onOpenModal?: () => void }
+type MentorshipNextStepProps = { openModal?: () => void }
 
-const MentorshipNextStep = ({ onOpenModal }: MentorshipNextStepProps) => {
+const MentorshipNextStep = ({ openModal }: MentorshipNextStepProps) => {
   return (
     <div className="relative w-full max-w-[1217px] mx-auto  py-8 md:py-12">
       {/* Main Headline */}
@@ -24,7 +24,7 @@ const MentorshipNextStep = ({ onOpenModal }: MentorshipNextStepProps) => {
         className="mx-0 mt-7 !text-[9px] lg:!text-[12px]"
         text="Gå Med i Mentorskap Idag"
         size="small"
-        onClick={onOpenModal}
+        onClick={openModal}
       />
     </div>
   )

@@ -37,17 +37,17 @@ const MentorshipPage = () => {
         <MentorshipMail />
         <MentorshipButton onClick={openModal} />
         <MentorshipSubEhandler onOpenModal={openModal} />
-        <MentorshipMentor />
+        <MentorshipMentor onOpenModal={openModal} />
         <MentorshipDetails />
         <MentorshipDetailsText onOpenModal={openModal} />
         <SuccessStoriesGrid />
-        <MentorshipStaticImage />
+        <MentorshipStaticImage openModal={openModal} />
         <MentorWhyThisWorksSection />
-        <MentorshipNextStep onOpenModal={openModal} />
+        <MentorshipNextStep openModal={openModal} />
         <MentorshipSteps />
         <MentorshipGuarantee />
         <MentorshipQuestions />
-        <MentorshipPayout />
+        <MentorshipPayout openModal={openModal} />
       </section>
       {showModal && (
         <div
