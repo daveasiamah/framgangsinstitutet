@@ -10,14 +10,12 @@ type FormValues = {
   name: string
   email: string
   phone: string
-  selectedCourse?: string
 }
 
 const defaultValues: FormValues = {
   name: "",
   email: "",
   phone: "",
-  selectedCourse: "",
 }
 
 export default function ContactForm({ onClose }: { onClose: () => void }) {
@@ -34,7 +32,6 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
         /^\d{9,12}$/,
         "Ange ett giltigt telefonnummer (minst 9 siffror)"
       ),
-    selectedCourse: yup.string(),
   })
 
   const {
@@ -89,20 +86,29 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
       />
       <div className="w-full">
         <div className="flex-col justify-center items-center">
-          <Image
-            src="/new-home/contract-form-banner.png"
-            alt="video"
-            width="289"
-            height="200"
-            className="mx-auto object-cover"
-          />
-          <div>
-            <div className="flex items-center justify-center gap-2 text-lg lg:text-xl h-12 mt-4">
-              <h1 className="font-jakarta font-extrabold text-base text-[#151e3a">
-                Ansök om en kostnadsfri konsultation
-              </h1>
-            </div>
+          <div className="flex flex-row align-middle gap-2 justify-center items-center">
+            <Image
+              src="/logo.svg"
+              alt="logo"
+              width="40"
+              height="40"
+              className="object-cover"
+            />
+            <h1 className="font-poppins font-bold text-[20px] text-[#151e3a">
+              Checkified
+            </h1>
           </div>
+
+          <div className="flex items-center text-center justify-center gap-2 text-lg lg:text-xl h-12 mt-4">
+            <h1 className="font-jakarta font-bold max-w-[342px] text-[18px] text-[#151e3a]">
+              Se vår kostnadsfria introduktionsguide!
+            </h1>
+          </div>
+          <p className="text-[#000000] text-[14px] text-center mt-4">
+            Lär dig hur Dominic nådde sin framgång och hur du kan göra samma
+            resa. Få insikt och metoder för att gå från noll till att kunna
+            försörja dig på e-handel.
+          </p>
         </div>
         <form
           onSubmit={handleSubmit(onSubmit)}
@@ -110,7 +116,7 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
           className="flex flex-col items-center gap-4 mt-4"
         >
           {/* Error Alert */}
-          <div className="text-red-500 text-sm">
+          <div className="text-red-500 text-xs">
             {APIErrors && APIErrors.message}
           </div>
           {/* First Name */}
@@ -180,7 +186,7 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
               </p>
             )}
           </div>
-          <div className="form-control w-full">
+          {/* <div className="form-control w-full">
             <div className={inputWrapperClass}>
               <Image
                 src="/new-home/teacher.svg"
@@ -201,7 +207,7 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
                 {errors.selectedCourse.message}
               </p>
             )}
-          </div>
+          </div> */}
           <button
             type="submit"
             disabled={!isDirty || !isValid}
