@@ -7,7 +7,7 @@ export const listItems = [
   {
     id: 1,
     icon: "/images/thank-you/green-checkmark.svg",
-    text: "Starta och väx i flera olika områden - e-handel, marknadsföring, AI, ekonomi, självutveckling m.m..",
+    text: "Gå från 0-100k/månad - utan tidigare erfarenhet.",
   },
   {
     id: 2,
@@ -27,6 +27,6 @@ export const listItems = [
   {
     id: 5,
     icon: "/images/thank-you/green-checkmark.svg",
-    text: "Resultatgaranti - eller pengarna tillbaka.",
+    text: "Resultatgaranti - eller pengarna tillbaka.*",
   },
 ]

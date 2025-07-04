@@ -42,7 +42,7 @@ function Accordion({ data }: Props) {
           <div
             ref={ref}
             style={{
-              height: selected === index ? "auto" : 0
+              height: selected === index ? "auto" : 0,
             }}
             className={`text-subtitle pr-4 ${
               selected === index

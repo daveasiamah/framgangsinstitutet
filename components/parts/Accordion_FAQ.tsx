@@ -70,8 +70,12 @@ export const Accordion = ({ children }: AccordionProps) => {
 }
 
 // AccordionItem Component
-export const AccordionItem = ({ title, children }: AccordionItemProps) => {
-  const [isSelected, setIsSelected] = useState(true)
+export const AccordionItem = ({
+  title,
+  children,
+  defaultOpen = false,
+}: AccordionItemProps & { defaultOpen?: boolean }) => {
+  const [isSelected, setIsSelected] = useState(defaultOpen)
 
   const toggle = () => {
     setIsSelected((prev) => !prev)

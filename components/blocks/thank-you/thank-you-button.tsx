@@ -6,13 +6,13 @@ export const ThankYouButton = () => {
       }
       className="
         bg-[#225AEA] 
-        font-bold font-jakarta 
+        font-semibold font-jakarta 
         flex mx-auto justify-center items-center 
         text-white 
-        text-[14px] md:text-[1.256rem] 
-        rounded-[12px] md:rounded-[20px]
+        text-[12px] md:text-[1rem] 
+        rounded-[8px] md:rounded-[14px]
         px-[24px] py-[14px]
-        md:px-[55px] md:py-[20px]
+        md:px-[24px] md:py-[16px]
       "
     >
       Skicka din ansökan idag!

@@ -13,7 +13,7 @@ export default function ThankYou() {
       <div
         className="flex flex-col items-center w-full justify-center"
         style={{
-          backgroundImage: `url('/images/pricing/store-hero-bg.svg')`,
+          backgroundImage: `url('/images/bg-lines.png')`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "center bottom",
@@ -39,14 +39,14 @@ export default function ThankYou() {
           />
         </div>
         <div className="mt-6 md:mt-10 flex justify-center px-4 md:px-8">
-          <h1 className="text-[1.125rem] md:text-[2rem] lg:text-[3rem] text-[#151E3A] md:max-w-[800px] lg:max-w-[1060px] text-center leading-[1.4] md:leading-[1.5] lg:leading-[55px] font-extrabold font-jakarta">
-            Lär dig nya färdigheter och ta kontroll över din framtid med våra
-            30+ onlineutbildningar!
+          <h1 className="text-[1.125rem] md:text-[1.4rem] lg:text-[2.5rem] text-[#151E3A] max-w-[332px] md:max-w-[1172px] text-center leading-[1.4] md:leading-[1.5] lg:leading-[55px] font-extrabold font-jakarta">
+            Lär dig hur du kan bygga ett framgångsrikt e-handelsföretag och ta
+            kontroll över ditt liv.
           </h1>
         </div>
-        <p className="text-[10px] md:text-base text-[#434C69] font-inter font-medium text-center mt-4 md:mt-6 lg:mt-8 max-w-[647px]">
-          Från e-handel och marknadsföring till AI och ekonomiska investeringar
-          - allt på ett ställe, inga förkunskaper krävs.
+        <p className="text-[10px] md:text-base text-[#434C69] font-inter font-medium text-center mt-4 md:mt-6 lg:mt-8 max-w-[347px] md:max-w-[642px]">
+          Se hur vi har hjälpt över 1000 svenskar att förändra sina liv – nu är
+          det din tur att lyckas med e-handel!
         </p>
         <ThankYouVideoBanner />
         <div className="md:mb-10">
@@ -55,7 +55,31 @@ export default function ThankYou() {
       </div>
 
       <section className="flex flex-col justify-center items-center md:mt-[33px] mt-[23px] mb-[14px] md:mb-[52px]">
-        <h2 className="font-jakarta font-bold leading-5 text-[1.25rem] md:text-[2.875rem]">
+        <div className="mt-8 md:mt-8">
+          <div className="flex items-center justify-center bg-[#225AEA] px-3 py-1 rounded-[74px]">
+            <Image
+              src="/images/thank-you/medals.png"
+              alt="medals"
+              width={32}
+              height={26}
+              className="object-cover self-center"
+            />
+            <Image
+              src="/images/thank-you/student-stars.png"
+              alt="student-stars"
+              width={100}
+              height={22}
+              className="object-cover"
+            />
+          </div>
+        </div>
+        <div className="flex flex-col items-center max-w-[347px] md:max-w-[700px]">
+          <p className="text-[10px] md:text-[14px] lg:text-base text-[#434C69] font-inter font-medium text-center mt-2 md:mt-2 lg:mt-4 max-w-[347px] md:max-w-[600px] lg:max-w-[700px]">
+            Över 1000+ nöjda studenter som har omsatt miljontals kronor
+            tillsammans i akademin.
+          </p>
+        </div>
+        <h2 className="font-jakarta font-bold leading-5 text-[1.25rem] md:text-[2.875rem] mt-10 md:mt-16">
           Du kommer att lära dig:
         </h2>
         <ul className="mt-5 md:mt-10 max-w-[647px]">
@@ -70,7 +94,7 @@ export default function ThankYou() {
         </ul>
       </section>
 
-      <ThankyouVidGrid />
+      {/* <ThankyouVidGrid /> */}
 
       <section className="flex flex-col py-10 items-center bg-gradient-to-br from-[#225AEA] to-[#020103] mt-8">
         <h2 className="text-white font-inter text-[18px]">
