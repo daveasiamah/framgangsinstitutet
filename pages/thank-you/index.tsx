@@ -44,7 +44,7 @@ export default function ThankYou() {
             kontroll över ditt liv.
           </h1>
         </div>
-        <p className="text-[10px] md:text-base text-[#434C69] font-inter font-medium text-center mt-4 md:mt-6 lg:mt-8 max-w-[347px] md:max-w-[642px]">
+        <p className="text-[14px] md:text-[13px] lg:text-base text-[#434C69] font-inter font-medium text-center mt-4 md:mt-6 lg:mt-8 max-w-[347px] md:max-w-[642px]">
           Se hur vi har hjälpt över 1000 svenskar att förändra sina liv – nu är
           det din tur att lyckas med e-handel!
         </p>
@@ -60,21 +60,21 @@ export default function ThankYou() {
             <Image
               src="/images/thank-you/medals.png"
               alt="medals"
-              width={32}
+              width={52}
               height={26}
               className="object-cover self-center"
             />
             <Image
               src="/images/thank-you/student-stars.png"
               alt="student-stars"
-              width={100}
-              height={22}
+              width={152}
+              height={56}
               className="object-cover"
             />
           </div>
         </div>
         <div className="flex flex-col items-center max-w-[347px] md:max-w-[700px]">
-          <p className="text-[10px] md:text-[14px] lg:text-base text-[#434C69] font-inter font-medium text-center mt-2 md:mt-2 lg:mt-4 max-w-[347px] md:max-w-[600px] lg:max-w-[700px]">
+          <p className="text-[14px] md:text-[14px] lg:text-base text-[#434C69] font-inter text-center mt-2 md:mt-2 lg:mt-4 max-w-[347px] md:max-w-[600px] lg:max-w-[700px]">
             Över 1000+ nöjda studenter som har omsatt miljontals kronor
             tillsammans i akademin.
           </p>
