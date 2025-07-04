@@ -13,7 +13,7 @@ export default function ThankYou() {
       <div
         className="flex flex-col items-center w-full justify-center"
         style={{
-          backgroundImage: `url('/images/pricing/store-hero-bg.svg')`,
+          backgroundImage: `url('/images/bg-lines.png')`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "center bottom",
@@ -39,14 +39,14 @@ export default function ThankYou() {
           />
         </div>
         <div className="mt-6 md:mt-10 flex justify-center px-4 md:px-8">
-          <h1 className="text-[1.125rem] md:text-[2rem] lg:text-[3rem] text-[#151E3A] md:max-w-[800px] lg:max-w-[1060px] text-center leading-[1.4] md:leading-[1.5] lg:leading-[55px] font-extrabold font-jakarta">
-            Lär dig nya färdigheter och ta kontroll över din framtid med våra
-            30+ onlineutbildningar!
+          <h1 className="text-[1.125rem] md:text-[1.6rem] lg:text-[3rem] text-[#151E3A] max-w-[332px] md:max-w-[1172px] text-center leading-[1.4] md:leading-[1.5] lg:leading-[55px] font-extrabold font-jakarta">
+            Lär dig hur du kan bygga ett framgångsrikt e-handelsföretag och ta
+            kontroll över ditt liv.
           </h1>
         </div>
         <p className="text-[10px] md:text-base text-[#434C69] font-inter font-medium text-center mt-4 md:mt-6 lg:mt-8 max-w-[647px]">
-          Från e-handel och marknadsföring till AI och ekonomiska investeringar
-          - allt på ett ställe, inga förkunskaper krävs.
+          Se hur vi har hjälpt över 1000 svenskar att förändra sina liv – nu är
+          det din tur att lyckas med e-handel!
         </p>
         <ThankYouVideoBanner />
         <div className="md:mb-10">
@@ -70,7 +70,7 @@ export default function ThankYou() {
         </ul>
       </section>
 
-      <ThankyouVidGrid />
+      {/* <ThankyouVidGrid /> */}
 
       <section className="flex flex-col py-10 items-center bg-gradient-to-br from-[#225AEA] to-[#020103] mt-8">
         <h2 className="text-white font-inter text-[18px]">
