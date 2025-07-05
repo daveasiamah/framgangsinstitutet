@@ -97,24 +97,23 @@ export default function ThankYou() {
       {/* <ThankyouVidGrid /> */}
 
       <section className="flex flex-col py-10 items-center bg-gradient-to-br from-[#225AEA] to-[#020103] mt-8">
-        <h2 className="text-white font-inter text-[18px]">
+        <h2 className="text-white font-inter font-semibold text-[14px] md:[text-[18px]">
           HÄR ÄR VAD DU FÅR...
         </h2>
-        <h2 className="font-inter font-bold text-base md:text-[35px] mt-8 text-white">
-          Vad finns i Checkified utbildningar?
+        <h2 className="font-inter font-bold text-center text-[16px] md:text-[32px] lg:text-[45px] mt-8 text-white">
+          Vad finns i Checkified Mentorskap?
         </h2>
 
-        <div className="max-w-[297px] md:max-w-[900px] mt-[38px] px-10">
-          <p className="font-inter text-[12px] md:text-[14px] lg:text-base text-white font-medium text-center">
-            Checkified erbjuder 30+ praktiska onlinekurser, uppdelade i olika
-            kategorier så att du enkelt hittar det du vill lära dig - oavsett om
-            du är nybörjare eller vill ta nästa steg i din karriär. När du går
-            med får du omedelbar tillgång till alla kurser och framtida
-            uppdateringar - värde över 100 000 SEK.
+        <div className="md:max-w-[800px] mt-[38px] px-4">
+          <p className="font-inter text-[12px] md:text-[14px] lg:text-[18px] text-center text-white">
+            Få allt du behöver för att lyckas med e-handel – en färdig
+            dropshippingbutik, onlinekurs och 10 veckors mentorskap med Dominic.
+            Perfekt för både nybörjare och dig som vill växa. Allt ingår,
+            inklusive framtida uppdateringar (värde över 100 000 kr).
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 w-auto max-w-[1230px] gap-10 p-10 justify-center items-center mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 w-auto max-w-[1230px] gap-10 p-10 justify-center items-center mt-2">
           <div className="flex flex-col  max-w-[318px] justify-start">
             <div className="flex items-center gap-2">
               <Image
@@ -124,12 +123,12 @@ export default function ThankYou() {
                 alt="icon"
               />
               <h4 className="text-white font-inter font-bold">
-                E-handel & Dropshipping
+                Mentorskap inom E-handel
               </h4>
             </div>
-            <p className="font-inter text-[12px] md:text-[14px] text-[#ffffffc7] text-start mt-3.5">
-              Lär dig starta och driva en framgångsrik e-butik - från idé till
-              skalning.
+            <p className="font-inter text-[12px] md:text-[14px] text-[#ffffffbb] text-start mt-3.5 max-w-[332px]">
+              Få veckovis stöd av en e-handelsmentor - från idé till färdig
+              butik.
             </p>
           </div>
           <div className="flex flex-col justify-start">
@@ -141,12 +140,12 @@ export default function ThankYou() {
                 alt="icon"
               />
               <h4 className="text-white font-inter font-bold">
-                Marknadsföring & Sociala Medier
+                Marknadsföring på TikTok & Facebook
               </h4>
             </div>
-            <p className="font-inter text-[12px] md:text-[14px] text-[#ffffffc7] text-start mt-3.5">
-              Behärska TikTok, Meta Ads, e-postmarknadsföring, funnels, och
-              content creation.
+            <p className="font-inter text-[12px] md:text-[14px] text-[#ffffffbb] text-start mt-3.5 max-w-[332px]">
+              Lär dig skapa kampanjer som konverterar genom smart annonsering
+              och content.
             </p>
           </div>
           <div className="flex flex-col max-w-[259px] justify-start">
@@ -158,12 +157,12 @@ export default function ThankYou() {
                 alt="icon"
               />
               <h4 className="text-white font-inter font-bold">
-                Ekonomi & Investeringar
+                Färdig Dropshippingbutik
               </h4>
             </div>
-            <p className="font-inter text-[12px] md:text-[14px] text-[#ffffffc7] text-start mt-3.5">
-              Få koll på privatekonomi, investeringar och hur du bygger en
-              hållbar framtid.
+            <p className="font-inter text-[12px] md:text-[14px] text-[#ffffffbb] text-start mt-3.5 max-w-[332px]">
+              Du får en komplett, professionellt designad butik som är redo att
+              lanseras direkt.
             </p>
           </div>
           <div className="flex flex-col max-w-[276px] justify-start">
@@ -174,11 +173,13 @@ export default function ThankYou() {
                 height={16}
                 alt="icon"
               />
-              <h4 className="text-white font-inter font-bold">AI & Tech</h4>
+              <h4 className="text-white font-inter font-bold">
+                AI & Hemliga Verktyg
+              </h4>
             </div>
-            <p className="font-inter text-[12px] md:text-[14px] text-[#ffffffc7] text-start mt-3.5">
-              Lär dig använda AI-verktyg som ChatGPT, Midjourney och mer för att
-              jobba smartare.
+            <p className="font-inter text-[12px] md:text-[14px] text-[#ffffffbb] text-start mt-3.5 max-w-[332px]">
+              Använd verktyg som ChatGPT och Midjourney för att spara tid och
+              bli effektiv.
             </p>
           </div>
         </div>
@@ -187,10 +188,10 @@ export default function ThankYou() {
       <section className="flex flex-col md:container bg-[#EDF5FE] py-10 justify-center items-center">
         <div className="flex flex-col container text-center items-center">
           <h2 className="font-jakarta font-bold text-[20px] md:text-[3rem] text-center">
-            15 000 + studenter...
+            Checkified förändrar liv...
           </h2>
-          <p className="font-inter font-medium text-xs md:text-base text-center text-[#37354ase] mb-3 max-w-[622px]">
-            Vi har hjälp över 15 000+ studenter att förändra deras liv med våra
+          <p className="font-inter font-medium text-xs md:text-base text-center text-[#EDF5FE] mb-3 max-w-[622px]">
+            Vi har hjälp över 1000+ studenter att förändra deras liv med våra
             utbildningar och den siffran växer dagligen. Vill du förändra ditt
             liv till det bästa så ska du se vad våra studenter har uppnått för
             resultat.
