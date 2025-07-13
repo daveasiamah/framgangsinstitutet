@@ -21,7 +21,7 @@ import { PricingCTAButtonBlock } from "@/components/blocks/PricingCTAButtonBlock
 import { CreateEStoreBlock } from "@/components/blocks/CreateEStoreBlock"
 import { FAQBlock } from "@/components/blocks/FAQBlock"
 import { EstoreShowCaseVideo } from "@/components/blocks/EstoreShowCaseVideo"
-import { ThankYouVideoBanner } from "@/components/blocks/thank-you/thank-you-video-banner"
+import PrivateCoachingBlock from "@/components/blocks/PrivateCoachingBlock"
 
 const Butiker = () => {
   const router = useRouter()
@@ -63,6 +63,8 @@ const Butiker = () => {
         <div className="w-full flex items-center justify-center my-1">
           <a
             href="https://checkout.revolut.com/pay/598dfb4a-51fc-43c5-970d-2bd4646c9309"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-[#fff] bg-[#225AEA] text-[14px] w-50 py-2 flex items-center justify-center font-jakarta font-bold w-[194px] h-[36px] rounded-[7px] shadow-inner button-shadow"
             style={{
               boxShadow: `
@@ -71,12 +73,13 @@ const Butiker = () => {
               borderRadius: "7px",
             }}
           >
-            Fixa mig min butik
+            Få privat coachning
           </a>
         </div>
       </section>
       <ExampleStoresBlock />
       <ReviewsBlock />
+      <PrivateCoachingBlock />
       <CreateEStoreBlock openModal={openModal} />
       <FAQBlock />
       <CTABannerBlock />
