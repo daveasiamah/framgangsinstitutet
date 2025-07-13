@@ -72,18 +72,7 @@ const MentorshipHero = ({ onOpenModal }: MentorshipHeroProps) => {
           </p>
         </div>
       </div>
-      <div className="relative mt-5 px-8">
-        <button
-          type="button"
-          onClick={onOpenModal}
-          className="relative w-full h-full bg-[#225aea] font-jakarta rounded-[9px] text-white flex items-center justify-center py-2 px-10"
-        >
-          Ansök Här{" "}
-          <span className="ml-2 text-lg font-jakarta font bold text-white">
-            {">"}
-          </span>
-        </button>
-      </div>
+
       <div
         style={{
           padding: 18,
@@ -108,6 +97,18 @@ const MentorshipHero = ({ onOpenModal }: MentorshipHeroProps) => {
             }}
           ></div>
         </div>
+      </div>
+      <div className="relative mt-5 px-8">
+        <button
+          type="button"
+          onClick={onOpenModal}
+          className="relative w-full h-full bg-[#225aea] font-jakarta rounded-[9px] text-white flex items-center justify-center py-2 px-10"
+        >
+          Ansök Här{" "}
+          <span className="ml-2 text-lg font-jakarta font bold text-white">
+            {">"}
+          </span>
+        </button>
       </div>
     </div>
   )
