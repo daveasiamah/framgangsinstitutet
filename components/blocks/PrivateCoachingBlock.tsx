@@ -4,19 +4,9 @@ import Image from "next/image"
 export default function PrivateCoachingBlock() {
   return (
     <section className="w-full flex flex-col items-center mt-10">
-      <h2 className="text-center font-jakarta font-bold text-[#151e3a] text-xl md:text-4xl">
+      <h2 className="text-center font-jakarta font-extrabold text-[#151e3a] text-3xl max-w-[300px] md:max-w-full md:text-[38px]">
         Uppgradera med Privat Coachning
       </h2>
-      <Image
-        src="/images/pricing/private-coaching-underline.png"
-        alt="Uppgradera med Privat Coachning"
-        width={600}
-        height={37}
-        style={{
-          width: "auto",
-          height: "auto",
-        }}
-      />
       <div className="grid grid-cols-1 md:grid-cols-2 w-full mx-auto mt-8">
         {/* Top Left */}
         <div className="flex flex-col items-start justify-center py-6 px-6 md:px-10">

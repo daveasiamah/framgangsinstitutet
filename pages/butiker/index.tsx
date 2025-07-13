@@ -56,7 +56,7 @@ const Butiker = () => {
       <HowItWorksBlock />
       <PricingCTAButtonBlock openModal={openModal} />
       <section className="flex flex-col md:py-4 md:px-6 items-center">
-        <h1 className="font-bold text-[22px] md:text-[32px] leading-loose text-center md:text-left mb-4">
+        <h1 className="font-bold text-[22px] md:text-[32px] max-w-[260px] md:max-w-full leading-loose text-center md:text-left mb-4">
           Så Här Ser En Butik Vi Gjort Till Kund
         </h1>
         <EstoreShowCaseVideo />
@@ -77,7 +77,7 @@ const Butiker = () => {
           </a>
         </div>
       </section>
-      <ExampleStoresBlock />
+      {/* <ExampleStoresBlock /> */}
       <ReviewsBlock />
       <PrivateCoachingBlock />
       <CreateEStoreBlock openModal={openModal} />
