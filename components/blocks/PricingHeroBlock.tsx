@@ -4,6 +4,7 @@ import { useRouter } from "next/router"
 import Image from "next/image"
 import ScrollReveal from "@/components/transition/ScrollReveal"
 import React from "react"
+import ReactPlayer from "react-player"
 
 export default function PricingHeroBlock() {
   const router = useRouter()
@@ -62,18 +63,16 @@ export default function PricingHeroBlock() {
                 {t.homeData.heroVideoDesc}
               </h3>
             </div>
-            {/* Hero Image */}
+            {/* Hero Video */}
             <div className="relative w-full h-[187px] md:h-[423px] pt-4">
-              <iframe
+              <ReactPlayer
+                url="https://www.youtube.com/embed/1cfr66hYlhU?si=RSnbRnwkPHlEmatj"
                 width="100%"
                 height="100%"
-                className="rounded-b-[15px]"
-                src="https://www.youtube.com/embed/1cfr66hYlhU?si=RSnbRnwkPHlEmatj"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              ></iframe>
+                style={{ borderRadius: 15, overflow: "hidden" }}
+                className="rounded-b-[15px] object-cover"
+                controls
+              />
             </div>
           </div>
         </div>

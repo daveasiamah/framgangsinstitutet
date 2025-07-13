@@ -55,32 +55,32 @@ const Butiker = () => {
       <PricingDiscountBlock />
       <HowItWorksBlock />
       <PricingCTAButtonBlock openModal={openModal} />
-      <section className="flex flex-col md:py-4 md:px-6 items-center">
+      <section className="flex flex-col md:py-1 md:px-6 items-center">
         <h1 className="font-bold text-[22px] md:text-[32px] max-w-[260px] md:max-w-full leading-loose text-center md:text-left mb-4">
           Så Här Ser En Butik Vi Gjort Till Kund
         </h1>
         <EstoreShowCaseVideo />
-        <div className="w-full flex items-center justify-center my-1">
-          <a
-            href="https://checkout.revolut.com/pay/598dfb4a-51fc-43c5-970d-2bd4646c9309"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#fff] bg-[#225AEA] text-[14px] w-50 py-2 flex items-center justify-center font-jakarta font-bold w-[194px] h-[36px] rounded-[7px] shadow-inner button-shadow"
-            style={{
-              boxShadow: `
-        inset 11px 1px 19.4px 0px rgba(255, 255, 255, 0.3), 
-        inset -4px 0px 5.8px 0px rgba(255, 255, 255, 0.25)`,
-              borderRadius: "7px",
-            }}
-          >
-            Få privat coachning
-          </a>
-        </div>
+        <CreateEStoreBlock openModal={openModal} />
       </section>
-      {/* <ExampleStoresBlock /> */}
       <ReviewsBlock />
       <PrivateCoachingBlock />
-      <CreateEStoreBlock openModal={openModal} />
+      <div className="w-full flex items-center justify-center my-12">
+        <a
+          href="https://checkout.revolut.com/pay/598dfb4a-51fc-43c5-970d-2bd4646c9309"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#fff] bg-[#225AEA] text-[14px] w-50 py-2 flex items-center justify-center font-jakarta font-bold w-[194px] h-[36px] rounded-[7px] shadow-inner button-shadow"
+          style={{
+            boxShadow: `
+        inset 11px 1px 19.4px 0px rgba(255, 255, 255, 0.3), 
+        inset -4px 0px 5.8px 0px rgba(255, 255, 255, 0.25)`,
+            borderRadius: "7px",
+          }}
+        >
+          Få privat coachning
+        </a>
+      </div>
+
       <FAQBlock />
       <CTABannerBlock />
     </Layout>
