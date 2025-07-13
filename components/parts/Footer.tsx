@@ -72,13 +72,7 @@ export default function Footer({}: Props) {
                   <Link href="/annonser">Dropshipping Ads</Link>
                 </li>
                 <li>
-                  <Link
-                    href="https://whop.com/dropshipping-mentorskap"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Dropshipping Mentorskap
-                  </Link>
+                  <Link href="/mentorskap">Dropshipping Mentorskap</Link>
                 </li>
               </ul>
             </div>

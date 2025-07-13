@@ -20,6 +20,7 @@ import en from "@/locales/en"
 import sv from "@/locales/sv"
 import { useRouter } from "next/router"
 import ContractForm from "@/components/ContractForm"
+import { EstoreShowCaseVideo } from "@/components/blocks/EstoreShowCaseVideo"
 
 const MentorshipPage = () => {
   const router = useRouter()
@@ -48,6 +49,7 @@ const MentorshipPage = () => {
         <MentorshipGuarantee />
         <MentorshipQuestions />
         <MentorshipPayout openModal={openModal} />
+        <EstoreShowCaseVideo />
       </section>
       {showModal && (
         <div
