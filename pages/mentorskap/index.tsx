@@ -49,7 +49,6 @@ const MentorshipPage = () => {
         <MentorshipGuarantee />
         <MentorshipQuestions />
         <MentorshipPayout openModal={openModal} />
-        <EstoreShowCaseVideo />
       </section>
       {showModal && (
         <div
