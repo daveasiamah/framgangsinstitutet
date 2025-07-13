@@ -5,7 +5,7 @@ import { testimonials } from "../../components/blocks/thank-you/testimonials"
 import { ThankYouVideoBanner } from "../../components/blocks/thank-you/thank-you-video-banner"
 import { listItems } from "../../components/blocks/thank-you/listItems"
 import { ThankYouButton } from "../../components/blocks/thank-you/thank-you-button"
-import ThankyouVidGrid from "@/components/parts/Thankyou_VidGrid"
+// import ThankyouVidGrid from "@/components/parts/Thankyou_VidGrid"
 
 export default function ThankYou() {
   return (
@@ -190,7 +190,7 @@ export default function ThankYou() {
           <h2 className="font-jakarta font-bold text-[20px] md:text-[3rem] text-center">
             Checkified förändrar liv...
           </h2>
-          <p className="font-inter font-medium text-xs md:text-base text-center text-[#EDF5FE] mb-3 max-w-[622px]">
+          <p className="font-inter font-medium text-xs md:text-base text-center text-[#242323] mb-3 max-w-[622px]">
             Vi har hjälp över 1000+ studenter att förändra deras liv med våra
             utbildningar och den siffran växer dagligen. Vill du förändra ditt
             liv till det bästa så ska du se vad våra studenter har uppnått för

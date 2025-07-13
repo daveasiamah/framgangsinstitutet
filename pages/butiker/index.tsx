@@ -1,5 +1,5 @@
 import { useRouter } from "next/router"
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 import Layout from "@/components/Layout"
 import "swiper/css"
@@ -20,10 +20,10 @@ import { PricingDiscountBlock } from "@/components/blocks/PricingDiscountBlock"
 import { PricingCTAButtonBlock } from "@/components/blocks/PricingCTAButtonBlock"
 import { CreateEStoreBlock } from "@/components/blocks/CreateEStoreBlock"
 import { FAQBlock } from "@/components/blocks/FAQBlock"
+import { EstoreShowCaseVideo } from "@/components/blocks/EstoreShowCaseVideo"
+import { ThankYouVideoBanner } from "@/components/blocks/thank-you/thank-you-video-banner"
 
-type Props = {}
-
-export default function Pricing({}: Props) {
+const Butiker = () => {
   const router = useRouter()
   const { locale } = router
   const t = locale === "en" ? en : sv
@@ -55,6 +55,26 @@ export default function Pricing({}: Props) {
       <PricingDiscountBlock />
       <HowItWorksBlock />
       <PricingCTAButtonBlock openModal={openModal} />
+      <section className="flex flex-col md:py-4 md:px-6 items-center">
+        <h1 className="font-bold text-[22px] md:text-[32px] leading-loose text-center md:text-left mb-4">
+          Så Här Ser En Butik Vi Gjort Till Kund
+        </h1>
+        <EstoreShowCaseVideo />
+        <div className="w-full flex items-center justify-center my-1">
+          <a
+            href="https://checkout.revolut.com/pay/598dfb4a-51fc-43c5-970d-2bd4646c9309"
+            className="text-[#fff] bg-[#225AEA] text-[14px] w-50 py-2 flex items-center justify-center font-jakarta font-bold w-[194px] h-[36px] rounded-[7px] shadow-inner button-shadow"
+            style={{
+              boxShadow: `
+        inset 11px 1px 19.4px 0px rgba(255, 255, 255, 0.3), 
+        inset -4px 0px 5.8px 0px rgba(255, 255, 255, 0.25)`,
+              borderRadius: "7px",
+            }}
+          >
+            Fixa mig min butik
+          </a>
+        </div>
+      </section>
       <ExampleStoresBlock />
       <ReviewsBlock />
       <CreateEStoreBlock openModal={openModal} />
@@ -63,3 +83,4 @@ export default function Pricing({}: Props) {
     </Layout>
   )
 }
+export default Butiker

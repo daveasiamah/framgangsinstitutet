@@ -1,13 +1,16 @@
 import { useEffect, useRef } from "react"
+import Image from "next/image"
 
-export function ThankYouVideoBanner() {
+export function EstoreShowCaseVideo() {
   const vidalyticsRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const existing = document.getElementById("vidalytics-embed-script-thankyou")
+    // Use a unique script ID for this video
+    const scriptId = "vidalytics-embed-script-estore"
+    const existing = document.getElementById(scriptId)
     if (existing) existing.remove()
     const script = document.createElement("script")
-    script.id = "vidalytics-embed-script-thankyou"
+    script.id = scriptId
     script.type = "text/javascript"
     script.innerHTML = `
       (function (v, i, d, a, l, y, t, c, s) {
@@ -18,7 +21,7 @@ export function ThankYouVideoBanner() {
           i.getElementsByTagName("head")[0].appendChild(s);
         };}
         vsl(l+'loader.min.js',function(){if(!vli){var vlc=v[c][vl];vli=new vlc();}vli.loadScript(l+'player.min.js',function(){var vec=v[d][ve];t=new vec();t.run(a);});});
-      })(window, document, 'Vidalytics', 'vidalytics_embed_JWXndOCYjDR7w7_U', 'https://fast.vidalytics.com/embeds/P54EXqAT/JWXndOCYjDR7w7_U/');
+      })(window, document, 'Vidalytics', 'vidalytics_embed_Pt_Ws3ofhxnllDRK', 'https://fast.vidalytics.com/embeds/P54EXqAT/Pt_Ws3ofhxnllDRK/');
     `
     if (vidalyticsRef.current) {
       vidalyticsRef.current.appendChild(script)
@@ -29,7 +32,7 @@ export function ThankYouVideoBanner() {
     <div className="relative w-[302px] md:w-[80%] max-w-4xl mt-4 mb-5 md:mt-8">
       <div ref={vidalyticsRef} style={{ borderRadius: 16, overflow: "hidden" }}>
         <div
-          id="vidalytics_embed_JWXndOCYjDR7w7_U"
+          id="vidalytics_embed_Pt_Ws3ofhxnllDRK"
           style={{ width: "100%", position: "relative", paddingTop: "56.25%" }}
         ></div>
       </div>

@@ -82,11 +82,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
     <header className="bg-base-100 h-header-height fixed top-0 left-0 right-0 z-20 flex items-center">
       <div className="container mx-auto flex justify-between items-center">
         {pathname === "/" ? (
-          <a
-            href="https://checkified.se/utbildningar"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="/utbildningar" target="_blank" rel="noopener noreferrer">
             <div className="flex items-center justify-start gap-2">
               <Image
                 className="h-[39px] md:h-[53px] w-[150.86px] md:w-[198.86px] max-w-full"
