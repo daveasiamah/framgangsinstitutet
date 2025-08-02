@@ -5,10 +5,6 @@ export const homeData: HomeData = {
     title: "Checkified",
   },
 
-  /*=============================================
-  =            Hero Section            =
-  =============================================*/
-
   heroBlackTitle: "Börja Med",
   heroBlueTitle: "Dropshipping",
   heroBlackTitleTwo: "och bli din egna chef! ",
@@ -20,18 +16,10 @@ export const homeData: HomeData = {
   heroInteractiveText: "Interaktiv community",
   heroOutstandingText: "Enastående Plattform",
 
-  /*=====  End of Hero Section  ======*/
-
   knowledgeText: "KUNSKAP INOM",
-
-  /*=============================================
-  =            Platform Section            =
-  =============================================*/
 
   platformBlackTitle: "Investera i din",
   platformBlueTitle: "framtid",
-  // platformSubtitle:
-  //   "Checkified använder automatiserade processer för att underlätta sömlöst lärande. Vi gör det möjligt för enskilda personer att enkelt etablera sina egna företag.",
   featureData: [
     {
       id: 1,
@@ -202,12 +190,6 @@ export const homeData: HomeData = {
       isImageLeft: true,
     },
   ],
-  /*=====  End of Platform Section  ======*/
-
-  /*=============================================
-  =            Start Selling            =
-  =============================================*/
-
   medsosTitle: "Vad lär du dig i",
   medsosBlueTitle: " Checkified?",
 
@@ -230,13 +212,6 @@ export const homeData: HomeData = {
     },
   ],
   startSellingButton: "Starta nu",
-
-  /*=====  End of Start Selling  ======*/
-
-  /*=============================================
-  =            Checkified University Section            =
-  =============================================*/
-
   checkifiedUnivTitle: "Är du redo att förändra ditt liv?",
   checkifiedUnivListTDesc: `Allt du behöver göra är att hitta din första framgångsrika produkt.Vi på Checkified finns här för att guida dig på vägen!`,
   checkifiedUnivList: [
@@ -262,8 +237,6 @@ export const homeData: HomeData = {
     },
   ],
   checkifiedUnivButton: "Gå med gratis",
-
-  /*=====  End of Checkified University Section  ======*/
 
   featuresExploreBlackTitle: "Utforska Framtidens",
   featuresExploreBlueTitle: "Dropshipping Utbildning",
@@ -401,9 +374,6 @@ export const homeData: HomeData = {
       link: "https://youtube.com/@checkifiedse",
     },
   ],
-  /*=============================================
-  =            Benefit Data            =
-  =============================================*/
 
   benefitBlackTitle: "Fördelar med",
   benefitBlueTitle: "Checkified",
@@ -430,13 +400,6 @@ export const homeData: HomeData = {
         "Vi erbjuder expertis inom e-handel för att hjälpa dig att bryta dig loss från den moderna rått racet.",
     },
   ],
-
-  /*=====  End of Benefit Data   ======*/
-
-  /*=============================================
-  =            Testimony Section            =
-  =============================================*/
-
   testimonyBlackTitle: "Vad Våra",
   testimonyBlueTitle: "Studenter Säger",
   testimonyData: [
@@ -481,13 +444,6 @@ export const homeData: HomeData = {
         "Absolutely the best decision I've made in starting my own online business. You can hardly believe it when you get several sales.",
     },
   ],
-
-  /*=====  End of Testimony Section  ======*/
-
-  /*=============================================
-  =            Contact Us Section            =
-  =============================================*/
-
   contactBlackTitle: "Kom",
   contactBlueTitle: "igång",
   contactSubtitle:
@@ -500,24 +456,11 @@ export const homeData: HomeData = {
     message: "Meddelande",
     button: "Skicka",
   },
-
-  /*=====  End of Contact Us Section  ======*/
-
-  /*=============================================
-  =           Examples stores            =
-  =============================================*/
   examplesStores: {
     title: "Exempel På Butiker",
   },
-  /*=====  End of Examples stores  ======*/
-
-  /*=============================================
-  =           Graphics Block            =
-  =============================================*/
   graphicsBlock: {
     buttonBottom: "Börja Tjäna Idag!",
     buttonTop: "Låt Oss Hjälpa Dig!",
   },
-
-  /*=====  End of Graphics Block  ======*/
 }

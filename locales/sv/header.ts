@@ -44,7 +44,7 @@ export const headerData: HeaderData = {
       imageUrl: "/icons/header/bookmark.svg",
       title: "Färdig Butik",
       desc: "Få högkonverterande butik",
-      link: "butiker",
+      link: "/butik",
     },
     {
       id: 7,
