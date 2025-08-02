@@ -1,12 +1,11 @@
 import { useRouter } from "next/router"
-import { useEffect, useRef, useState } from "react"
+import { useState } from "react"
 
 import Layout from "@/components/Layout"
 import "swiper/css"
 import "swiper/css/effect-cards"
 
 import BonusesBlock from "@/components/blocks/BonusesBlock"
-import ExampleStoresBlock from "@/components/blocks/ExampleStoresBlock"
 import HowItWorksBlock from "@/components/blocks/HowItWorksBlock"
 import OrderNowAndGetItBlock from "@/components/blocks/OrderNowAndGetItBlock"
 import PricingHeroBlock from "@/components/blocks/PricingHeroBlock"
