@@ -66,7 +66,7 @@ export default function Footer({}: Props) {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/butik">Färdig E-Butik</Link>
+                  <Link href="/butiker">Färdig E-Butik</Link>
                 </li>
                 <li>
                   <Link href="/annonser">Dropshipping Ads</Link>
