@@ -45,7 +45,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
     switch (pathname) {
       case "/":
         return "Börja Din Resa Idag"
-      case "/butik":
+      case "/butiker":
         return "Få din butik"
       case "/annonser":
         return "Få dina annonser"
@@ -57,7 +57,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
   }
 
   // Excluded paths for the CTA button
-  const excludedPaths = ["/annonser", "checkified.se/", "/butik"]
+  const excludedPaths = ["/annonser", "checkified.se/", "/butiker"]
 
   const menuRef = useRef<HTMLLIElement | null>(null)
 
