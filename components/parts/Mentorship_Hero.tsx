@@ -1,17 +1,14 @@
 import Image from "next/image"
 import ScrollReveal from "../transition/ScrollReveal"
 import { useEffect, useRef } from "react"
+import Link from "next/link"
 
-type MentorshipHeroProps = { onOpenModal?: () => void }
-
-const MentorshipHero = ({ onOpenModal }: MentorshipHeroProps) => {
+const MentorshipHero = () => {
   const vidalyticsRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    // Remove any existing script to avoid duplicates
     const existing = document.getElementById("vidalytics-embed-script")
     if (existing) existing.remove()
-    // Create script
     const script = document.createElement("script")
     script.id = "vidalytics-embed-script"
     script.type = "text/javascript"
@@ -99,16 +96,17 @@ const MentorshipHero = ({ onOpenModal }: MentorshipHeroProps) => {
         </div>
       </div>
       <div className="relative mt-5 px-8">
-        <button
-          type="button"
-          onClick={onOpenModal}
+        <Link
+          href="https://checkout.revolut.com/payment-link/d3eb03dc-e14d-4695-a085-a01903b02e54"
+          target="_blank"
+          rel="noopener noreferrer"
           className="relative w-full h-full bg-[#225aea] font-jakarta rounded-[9px] text-white flex items-center justify-center py-2 px-10"
         >
           Ansök Här{" "}
           <span className="ml-2 text-lg font-jakarta font bold text-white">
             {">"}
           </span>
-        </button>
+        </Link>
       </div>
     </div>
   )

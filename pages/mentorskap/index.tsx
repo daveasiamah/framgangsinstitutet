@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import Layout from "@/components/Layout"
 import MentorshipDetailsText from "@/components/parts/Mentorship_Detail_Text"
 import MentorshipDetails from "@/components/parts/Mentorship_Details"
@@ -16,49 +16,28 @@ import MentorshipSteps from "@/components/parts/Mentorship_Steps"
 import MentorshipHeroSub from "@/components/parts/Mentorship_Sub"
 import SuccessStoriesGrid from "@/components/parts/Mentorship_Success"
 import MentorshipSubEhandler from "@/components/parts/MentorshipSub_2"
-import en from "@/locales/en"
-import sv from "@/locales/sv"
-import { useRouter } from "next/router"
-import ContractForm from "@/components/ContractForm"
-import { EstoreShowCaseVideo } from "@/components/blocks/EstoreShowCaseVideo"
 
 const MentorshipPage = () => {
-  const router = useRouter()
-  const { locale } = router
-  const t = locale === "en" ? en : sv
-  const [showModal, setShowModal] = useState(false)
-  const openModal = () => setShowModal(true)
-  const closeModal = () => setShowModal(false)
-
   return (
     <Layout headTitle="Mentorship">
       <section className="w-full flex flex-col items-center justify-center h-full">
-        <MentorshipHero onOpenModal={openModal} />
+        <MentorshipHero />
         <MentorshipHeroSub />
         <MentorshipMail />
-        <MentorshipButton onClick={openModal} />
-        <MentorshipSubEhandler onOpenModal={openModal} />
-        <MentorshipMentor onOpenModal={openModal} />
+        <MentorshipButton />
+        <MentorshipSubEhandler />
+        <MentorshipMentor />
         <MentorshipDetails />
-        <MentorshipDetailsText onOpenModal={openModal} />
+        <MentorshipDetailsText />
         <SuccessStoriesGrid />
-        <MentorshipStaticImage openModal={openModal} />
+        <MentorshipStaticImage />
         <MentorWhyThisWorksSection />
-        <MentorshipNextStep openModal={openModal} />
+        <MentorshipNextStep />
         <MentorshipSteps />
         <MentorshipGuarantee />
         <MentorshipQuestions />
-        <MentorshipPayout openModal={openModal} />
+        <MentorshipPayout />
       </section>
-      {showModal && (
-        <div
-          data-theme="light"
-          className="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-25 backdrop-blur-sm p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full flex justify-center items-center"
-          onClick={closeModal}
-        >
-          <ContractForm onClose={closeModal} />
-        </div>
-      )}
     </Layout>
   )
 }

@@ -1,6 +1,7 @@
 import Image from "next/image"
+import Link from "next/link"
 
-const MentorshipMentor = ({ onOpenModal }: { onOpenModal?: () => void }) => {
+const MentorshipMentor = () => {
   return (
     <div className="w-full max-w-[987px] mx-auto px-0 sm:px-6 lg:px-0 mt-6 sm:mt-8 lg:mt-14 mb-6 sm:mb-8 lg:mb-10">
       <div className="w-full">
@@ -39,8 +40,10 @@ const MentorshipMentor = ({ onOpenModal }: { onOpenModal?: () => void }) => {
           </div>
 
           {/* Right side - Single large image */}
-          <div
-            onClick={onOpenModal}
+          <Link
+            href="https://checkout.revolut.com/payment-link/d3eb03dc-e14d-4695-a085-a01903b02e54"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex w-full hover:cursor-pointer justify-center lg:justify-start flex-shrink-0"
           >
             <Image
@@ -50,7 +53,7 @@ const MentorshipMentor = ({ onOpenModal }: { onOpenModal?: () => void }) => {
               width={432}
               height={437}
             />
-          </div>
+          </Link>
         </div>
       </div>
     </div>

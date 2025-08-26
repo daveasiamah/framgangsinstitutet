@@ -1,7 +1,8 @@
 import React from "react"
 import Image from "next/image"
+import Link from "next/link"
 
-const MentorshipStaticImage = ({ openModal }: { openModal?: () => void }) => {
+const MentorshipStaticImage = () => {
   return (
     <div className="w-full max-w-[1258px] mx-auto px-4 sm:px-6 lg:px-4 mt-6 sm:mt-8 lg:mt-10 mb-6 sm:mb-8 lg:mb-10">
       <div className="relative w-full max-w-[1170px] mx-auto min-h-[280px] sm:min-h-[300px] lg:h-[314px] bg-[url(/images/mentorship/next-success.svg)] bg-cover bg-center sm:bg-[100%_100%] rounded-2xl sm:rounded-3xl flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-6 py-6 sm:py-8">
@@ -30,12 +31,14 @@ const MentorshipStaticImage = ({ openModal }: { openModal?: () => void }) => {
         </p>
 
         {/* CTA Button */}
-        <button
-          onClick={openModal}
+        <Link
+          href="https://checkout.revolut.com/payment-link/d3eb03dc-e14d-4695-a085-a01903b02e54"
+          target="_blank"
+          rel="noopener noreferrer"
           className="bg-white text-[#151e3a] hover:cursor-pointer font-semibold text-xs sm:text-sm px-4 sm:px-6 py-2 sm:py-3 rounded-md sm:rounded-lg hover:bg-gray-100 transition-colors duration-200 font-jakarta min-w-[120px] sm:min-w-auto"
         >
           Börja Din Resa Här {""} {">"}
-        </button>
+        </Link>
       </div>
     </div>
   )

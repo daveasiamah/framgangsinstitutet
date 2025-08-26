@@ -1,4 +1,3 @@
-import { id } from "date-fns/locale"
 import React from "react"
 import Accordion, { AccordionItem } from "./Accordion_FAQ"
 

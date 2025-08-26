@@ -1,8 +1,6 @@
 import MentorshipButton from "./Mentorship_Button"
 
-type MentorshipSubEhandlerProps = { onOpenModal?: () => void }
-
-const MentorshipSubEhandler = ({ onOpenModal }: MentorshipSubEhandlerProps) => {
+const MentorshipSubEhandler = () => {
   return (
     <div className="relative w-full max-w-[572px] md:max-w-[652px] lg:max-w-[872px] mx-auto px-0 mt-10 mb-10">
       <div className="w-full">
@@ -48,7 +46,6 @@ const MentorshipSubEhandler = ({ onOpenModal }: MentorshipSubEhandlerProps) => {
           className="mt-7 text-sm"
           text="Börja Din Resa Idag"
           size="small"
-          onClick={onOpenModal}
         />
       </div>
     </div>
