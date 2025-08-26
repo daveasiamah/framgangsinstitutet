@@ -1,10 +1,11 @@
+import Link from "next/link"
+
 type ButtonSize = "small" | "medium" | "large"
 type ButtonVariant = "primary" | "secondary" | "outline" | "success" | "danger"
 
 interface ReusableButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   text?: string
-  onClick?: React.MouseEventHandler<HTMLButtonElement>
   disabled?: boolean
   variant?: ButtonVariant
   size?: ButtonSize
@@ -13,12 +14,10 @@ interface ReusableButtonProps
 
 const MentorshipButton = ({
   text = "Börja Din Resa Idag",
-  onClick,
   disabled = false,
   variant = "primary",
   size = "medium",
   className = "mt-5",
-  ...props
 }: ReusableButtonProps) => {
   // Size configurations
   const sizeClasses: Record<ButtonSize, string> = {
@@ -67,15 +66,15 @@ const MentorshipButton = ({
     `.trim()
 
   return (
-    <button
+    <Link
+      href="https://checkout.revolut.com/payment-link/d3eb03dc-e14d-4695-a085-a01903b02e54"
+      target="_blank"
+      rel="noopener noreferrer"
       className={combinedClasses}
       style={boxShadowStyle}
-      onClick={disabled ? undefined : onClick}
-      disabled={disabled}
-      {...props}
     >
       {text}
-    </button>
+    </Link>
   )
 }
 

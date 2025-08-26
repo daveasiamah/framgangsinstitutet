@@ -1,5 +1,4 @@
 import React from "react"
-import { User, Plug, Shield } from "lucide-react"
 import Image from "next/image"
 
 const MentorWhyThisWorksSection = () => {

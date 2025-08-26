@@ -1,7 +1,8 @@
 import Image from "next/image"
+import Link from "next/link"
 import React from "react"
 
-const MentorshipPayout = ({ openModal }: { openModal?: () => void }) => {
+const MentorshipPayout = () => {
   return (
     <div className="w-full max-w-[1258px] mx-auto px-4 mt-10 mb-10">
       <div className="relative w-full max-w-[1170px] mx-auto h-[314px] bg-[url(/images/mentorship/payout.svg)] bg-[100%_100%] rounded-3xl flex flex-col items-center justify-center text-center px-6 py-8">
@@ -28,12 +29,14 @@ const MentorshipPayout = ({ openModal }: { openModal?: () => void }) => {
         </p>
 
         {/* CTA Button */}
-        <button
-          onClick={openModal}
+        <Link
+          href="https://checkout.revolut.com/payment-link/d3eb03dc-e14d-4695-a085-a01903b02e54"
+          target="_blank"
+          rel="noopener noreferrer"
           className="bg-white text-[#151e3a] font-semibold text-xs px-6 py-2 rounded-lg hover:bg-gray-100 transition-colors duration-200 font-jakarta"
         >
           Ansök Här
-        </button>
+        </Link>
       </div>
     </div>
   )
