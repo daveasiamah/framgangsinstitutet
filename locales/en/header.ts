@@ -47,11 +47,7 @@ export const headerData: HeaderData = {
       link: "/contact-us",
     },
   ],
-  // videoUrl: "/images/videos/INTRO.mp4",
   estore: "E-butik",
-  login: "Log In",
+  dropShippingMentorship: "Mentorskap",
   getStarted: "Join today",
-  dashboard: "Dashboard",
-  faq: "Frågor och svar",
-  contactUs: "Kontakta oss",
 }

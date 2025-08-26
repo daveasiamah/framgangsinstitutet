@@ -7,14 +7,10 @@ type MegaMenuData = {
 }
 
 export type HeaderData = {
-  //videoUrl:string
   trainingCourses: string
   resources: string
   megaMenuData: MegaMenuData[]
   estore: string
-  login: string
+  dropShippingMentorship?: string
   getStarted: string
-  dashboard: string
-  faq: string
-  contactUs: string
 }

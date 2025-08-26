@@ -211,19 +211,19 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
             <li>
               <Link
                 className="btn btn-link"
-                href="/contact-us"
+                href="/butiker"
                 onClick={() => setOpenSidebar(false)}
               >
-                {t.headerData.contactUs}
+                {t.headerData.estore}
               </Link>
             </li>
             <li>
               <Link
                 className="btn btn-link"
-                href="/faq"
+                href="/mentorskap"
                 onClick={() => setOpenSidebar(false)}
               >
-                {t.headerData.faq}
+                Mentorskap
               </Link>
             </li>
           </ul>
