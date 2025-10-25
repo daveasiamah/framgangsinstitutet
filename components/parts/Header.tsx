@@ -44,7 +44,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
   const getButtonTitle = (pathname: string) => {
     switch (pathname) {
       case "/":
-        return "Börja Din Resa Idag"
+        return "Ansök till Mentorskap"
       case "/butiker":
         return "Få din butik"
       case "/annonser":
