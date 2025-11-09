@@ -8,6 +8,81 @@ import ScrollReveal from "@/components/transition/ScrollReveal"
 import Link from "next/link.js"
 import { HiQuestionMarkCircle } from "react-icons/hi"
 import { MdOutlineKeyboardArrowRight } from "react-icons/md"
+import { FAQBlock } from "@/components/blocks/FAQBlock"
+import Accordion from "@/components/parts/Accordion_Home"
+
+export function CTABannerBlock() {
+  const router = useRouter()
+  const { locale } = router
+  const t = locale === "en" ? en : sv
+
+  return (
+    <section className="mt-10 mb-8 text-white">
+      <div className="relative left-0 right-0 flex flex-col items-center justify-center bg-[#2E56F5] rounded-[20px] md:px-4 lg:px-6 md:py-5 lg:py-5 back-background">
+        <div className="text-center">
+          <div className="px-2">
+            <h1 className="text-white text-center text-[20px] leading-[48px] md:text-[24px] font-bold font-jakarta mb-2 mt-4">
+              Gå med Checkified Mentorskap idag!
+            </h1>
+            <p className="mb-4 max-w-3xl mx-auto text-center lg:text-[16px] text-[12px] font-inter">
+              Kom ihåg: Du är några klick från att leva livet som du vill... Har
+              du verkligen råd att vänta?
+            </p>
+            <div className="flex flex-wrap w-full gap-8 p-1">
+              <div className="flex flex-wrap gap-3 justify-center md:justify-between text-white font-inter w-full">
+                <div className="flex items-center gap-[2px] text-white">
+                  <Image
+                    src="/images/pricing/calendar-06.svg"
+                    className="w-[19px] md:w-[24px] md:h-[24px]"
+                    alt="svg"
+                    width={24}
+                    height={24}
+                  />
+                  <p className="text-white text-[10px] md:text-[14px]">
+                    Beprövade e-butiker
+                  </p>
+                </div>
+                <div className="flex items-center gap-[2px] text-white">
+                  <Image
+                    src="/images/pricing/coin-hand.svg"
+                    className="w-[19px] md:w-[24px] md:h-[24px]"
+                    alt="svg"
+                    width={24}
+                    height={24}
+                  />
+                  <p className="text-white text-[10px] md:text-[14px]">
+                    100% riskfritt
+                  </p>
+                </div>
+                <div className="flex items-center gap-[2px] text-white">
+                  <Image
+                    src="/images/pricing/check-contained.svg"
+                    className="w-[19px] md:w-[24px] md:h-[24px]"
+                    alt="svg"
+                    width={24}
+                    height={24}
+                  />
+                  <p className="text-white text-[10px] md:text-[14px]">
+                    Verifierade partners
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button
+            onClick={() =>
+              window.open("https://buy.stripe.com/3cscO09iSdoBgVOeUZ")
+            }
+            className="h-[28px] md:h-[38px] max-w-[275px] rounded-[5px] w-5/6 md:w-[150px] text-[10px] md:text-[14px] btn-white mb-5 lg:mt-10 mt-5 font-normal text-[#15133A]"
+          >
+            Få din butik
+          </button>
+        </div>
+      </div>
+    </section>
+  )
+}
 
 export default function Home() {
   const router = useRouter()
@@ -24,7 +99,7 @@ export default function Home() {
                 <h1 className="font-bold font-jakarta text-[24px] md:text-[40px] lg:text-[60px] leading-6 md:leading-[46px] lg:leading-[56px] text-[#151E3A] max-w-[336px] md:max-w-[900px] lg:max-w-[1260px]">
                   Din allt i ett e-handelsskola
                 </h1>
-                <h2 className="text-xs lg:text-xs text-[#434C69] max-w-[376px] md:max-w-[630px] py-2 md:leading-6 mt-2 font-inter mb-6">
+                <h2 className="text-xs md:text-[14px] text-[#434C69] max-w-[376px] md:max-w-[630px] py-2 md:leading-6 mt-2 font-inter mb-6">
                   Bygg, lansera och skala din digitala verksamhet på ett och
                   samma ställe. Få tillgång till beprövade utbildningar, färdiga
                   butiker och personlig vägledning, allt designat för att ta dig
@@ -696,12 +771,13 @@ export default function Home() {
             <p className="font-inter text-xs font-light text-[#235AE9]">FAQs</p>
           </div>
 
-          <h2 className="font-jakarta font-semibold text-[18px] md:text-[40px] lg:text-[40px] leading-[48px] mb-10">
-            Vanliga frågor
-          </h2>
-          
-          <div className="w-full max-w-4xl px-4 md:px-0 mb-16">
-            <FAQAccordion />
+          <h1 className="font-semibold font-jakarta text-[22px] md:text-[48px] mb-5 mt-10 md:mb-10 lg:mb-10 text-center">
+            Vanliga Frågor
+          </h1>
+          <div className="w-full bg-[#F5F9FF] rounded-[20px] max-w-4xl py-4 px-3 md:px-3 mb-16">
+            <>
+              <Accordion data={t.pricingData.faqData} />
+            </>
           </div>
         </section>
       </Layout>

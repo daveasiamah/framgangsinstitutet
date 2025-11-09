@@ -64,11 +64,6 @@ export default function Succesalert({
               blueText=""
               className="text-center text-3xl font-semibold text-primary lg:leading-[2rem]"
             />
-            <Titleh6
-              blackText="User Successfully login"
-              blueText=""
-              className="text-center text-lg font-semibold"
-            />
           </div>
         </div>
       </div>
