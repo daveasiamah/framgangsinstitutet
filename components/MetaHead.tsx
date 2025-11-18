@@ -9,18 +9,18 @@ type Props = {
 export default function MetaHead({ title, path }: Props) {
   return (
     <Head>
-      <title>{`${title} - Utbildningar och kurser på distans`}</title>
+      <title>{`${title} - Checkified - Sveriges största e-handelsutbildning som fokuserar på resultat!`}</title>
       <meta
         name="description"
-        content={`Börja din framtid Checkified! Våra praktiska och digitala utbildningar ger dig rätt kompetens för jobb inom e-handel och tech. Lär dig på distans och ta nästa steg i karriären. ${title}`}
+        content={`Skapa mer frihet i vardagen genom att bygga ditt eget e-handelsföretag. Följ över 1000 svenskar som redan tagit steget och upptäck hur det känns att jobba digitalt på riktigt. Gör det smarta valet, utbilda dig genom framtidens skola och börja få resultat medan du lär dig. Se guide.${title}`}
       />
       <meta
         property="og:title"
-        content={`${title} - Utbildningar och kurser på distans`}
+        content={`${title} - Checkified - Sveriges största e-handelsutbildning som fokuserar på resultat!`}
       />
       <meta
         property="og:description"
-        content={`Börja din framtid Checkified! Våra praktiska och digitala utbildningar ger dig rätt kompetens för jobb inom e-handel och tech. Lär dig på distans och ta nästa steg i karriären.. ${title}`}
+        content={`Skapa mer frihet i vardagen genom att bygga ditt eget e-handelsföretag. Följ över 1000 svenskar som redan tagit steget och upptäck hur det känns att jobba digitalt på riktigt. Gör det smarta valet, utbilda dig genom framtidens skola och börja få resultat medan du lär dig. Se guide.${title}`}
       />
       <meta property="og:image" content="/logo.png" />
       {/* <meta

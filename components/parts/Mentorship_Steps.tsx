@@ -16,30 +16,53 @@ const MentorshipSteps = () => {
       title:
         "Steg 3: Våra experter kommer att börja bygga din butik medan du går igenom modulerna (så att du kan tjäna medan du lär dig)...",
     },
+    {
+      number: "Steg 4",
+      title:
+        "Steg 4: Hoppa på en snabb framgångssession online med en av mina rådgivare för att skapa en personlig spelplan...",
+    },
   ]
 
   return (
     <div className="w-full max-w-[1266px] mx-auto py-8">
-      <p className="font-inter text-xl font-semibold mb-3"> Dina nästa steg</p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {steps.map((step, index) => (
-          <div
-            key={index}
-            className="relative w-full h-[262px] bg-gray-100 rounded-3xl overflow-hidden border border-gray"
-          >
-            {/* Step Badge */}
-            <div className="absolute top-6 left-[16px] w-16 h-[21px] bg-[#edf5fe] rounded-[5px] shadow-[0px_32px_115px_#00000029]">
-              <div className="absolute w-[39px] left-[17px] h-3 top-1 font-medium text-[#225aea] text-[10px] text-center">
-                {step.number}
-              </div>
-            </div>
+      <p className="font-inter text-xl font-semibold mb-3">Dina nästa steg</p>
 
-            {/* Step Content */}
-            <p className="absolute bottom-[20px] left-[16px] right-[20px] font-semibold text-[#151e3a] text-lg leading-[25px] font-inter">
-              {step.title}
-            </p>
-          </div>
-        ))}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {steps.map((step, index) => {
+          const isLast = index === 3
+
+          return (
+            <div
+              key={index}
+              className={`
+                relative w-full h-[262px] p-[18px] bg-gray-100 rounded-3xl overflow-hidden border border-gray
+                ${
+                  isLast
+                    ? "col-span-1 lg:col-span-3 pb-[64px] bg-[url('/your-image.png')] bg-no-repeat bg-bottom bg-[length:117px]"
+                    : ""
+                }
+              `}
+            >
+              {/* Step Badge */}
+              <div className="flex items-center justify-center w-16 h-[21px] bg-[#edf5fe] rounded-[5px] shadow-[0px_32px_115px_#00000029]">
+                <div className="font-medium text-[#225aea] text-[10px] text-left">
+                  {step.number}
+                </div>
+              </div>
+
+              {/* Step Content (centered text) */}
+              <p
+                className={
+                  isLast
+                    ? "absolute left-4 right-4 bottom-[64px] font-inter font-semibold text-[#151e3a] text-lg leading-[25px]"
+                    : "absolute bottom-[20px] left-4 right-4 font-inter max-w-[327px] font-semibold text-[#151e3a] text-lg leading-[25px]"
+                }
+              >
+                {step.title}
+              </p>
+            </div>
+          )
+        })}
       </div>
     </div>
   )

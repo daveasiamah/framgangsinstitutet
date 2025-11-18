@@ -29,10 +29,10 @@ function Accordion({ data }: Props) {
         <button
           onClick={() => toggle(index)}
           key={data.id}
-          className="accordion-wrapper text-left border-2 border-[#E5E5E5] bg-white py-4 px-6 rounded-lg cursor-pointer focus:border-primary transition-all w-full"
+          className="accordion-wrapper text-left border-2 border-[#E5E5E5] bg-white py-4 px-6 rounded-2xl cursor-pointer focus:border-primary transition-all w-full"
         >
           <div className="cursor-pointer py-2 flex justify-between items-center">
-            <h2 className="font-semibold lg:text-lg text-subtitle-dark font-jakarta">
+            <h2 className="text-neutral-900 font-inter font-semibold text-md">
               {data.question}
             </h2>
             <span
@@ -46,7 +46,7 @@ function Accordion({ data }: Props) {
             style={{
               height: isExpanded(index) ? "auto" : 0,
             }}
-            className={`text-subtitle pr-4 ${
+            className={`text-subtitle font-inter text-sm pr-4 ${
               isExpanded(index)
                 ? "accordion-content show bounce-pricing"
                 : "accordion-content"

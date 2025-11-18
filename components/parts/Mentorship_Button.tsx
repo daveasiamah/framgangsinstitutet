@@ -13,7 +13,7 @@ interface ReusableButtonProps
 }
 
 const MentorshipButton = ({
-  text = "Börja Din Resa Idag",
+  text = "Starta din resa idag",
   disabled = false,
   variant = "primary",
   size = "medium",

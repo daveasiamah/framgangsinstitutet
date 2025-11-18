@@ -10,6 +10,8 @@ import { HiQuestionMarkCircle } from "react-icons/hi"
 import { MdOutlineKeyboardArrowRight } from "react-icons/md"
 import { FAQBlock } from "@/components/blocks/FAQBlock"
 import Accordion from "@/components/parts/Accordion_Home"
+import { MainFAQ } from "@/components/parts/MainFAQ"
+import { HomePageFaqData } from "@/data/data"
 
 export function CTABannerBlock() {
   const router = useRouter()
@@ -749,7 +751,7 @@ export default function Home() {
               alt="ultimate plan badge"
               width={751}
               height={663}
-              className="object-contain w-[751px] h-[663px] mt-6"
+              className="object-contain w-[751px] h-[663px] items-center mt-6"
             />
           </div>
           <div className="flex items-center rounded-lg bg-[#f3f6fe] h-[26px] justify-center align-middle self-center px-3 inset-3 shadow-inner max-w-[178px] mb-4">
@@ -766,20 +768,7 @@ export default function Home() {
           />
         </section>
 
-        <section className="flex flex-col items-center gap-3 w-full">
-          <div className="flex items-center rounded-lg bg-[#f3f6fe] h-[26px] justify-center align-middle self-center px-3 inset-3 shadow-inner max-w-[178px] mb-4">
-            <p className="font-inter text-xs font-light text-[#235AE9]">FAQs</p>
-          </div>
-
-          <h1 className="font-semibold font-jakarta text-[22px] md:text-[48px] mb-5 mt-10 md:mb-10 lg:mb-10 text-center">
-            Vanliga Frågor
-          </h1>
-          <div className="w-full bg-[#F5F9FF] rounded-[20px] max-w-4xl py-4 px-3 md:px-3 mb-16">
-            <>
-              <Accordion data={t.pricingData.faqData} />
-            </>
-          </div>
-        </section>
+        <MainFAQ faqData={HomePageFaqData} />
       </Layout>
     </>
   )

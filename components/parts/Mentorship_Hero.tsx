@@ -54,7 +54,7 @@ const MentorshipHero = () => {
             className="relative w-full max-w-[320px] md:max-w-[600px] lg:max-w-[749px] font-jakarta font-extrabold text-black 
           text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-center mb-4 sm:mb-6 lg:mb-4 mx-auto px-4 sm:px-6 lg:px-0 leading-tight sm:leading-snug lg:leading-normal "
           >
-            Snabbspår till onlineinkomst med bara din telefon &amp; AI
+            Snabbspår till onlineinkomst med bara din telefon & AI
           </h1>
           <p
             className="w-full font-inter font-medium text-black text-[10px] md:text-[14px] lg:text-[18px] text-center

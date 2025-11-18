@@ -7,7 +7,7 @@ const MentorshipSubEhandler = () => {
         <div className="space-y-4 sm:space-y-6">
           {/* Header text */}
           <div className="w-full max-w-[200px] lg:mx-0 text-center mx-auto">
-            <p className="font-semibold text-[#9b9b9b] font-inter text-xs sm:text-sm tracking-[0] leading-normal">
+            <p className="font-semibold text-[#000000] font-inter text-xs sm:text-sm tracking-[0] leading-normal">
               Med Checkified Mentorskap™
             </p>
           </div>
@@ -18,7 +18,7 @@ const MentorshipSubEhandler = () => {
               <span className="text-black font-jakarta">Det är som att ha</span>
               <span className="text-[#1e5aea] font-jakarta">
                 {" "}
-                personlig tränare för E-handel{" "}
+                personlig tränare för E-handel{", "}
               </span>
               <span className="text-black font-jakarta">
                 utan den höga månadsavgiften.
@@ -28,12 +28,12 @@ const MentorshipSubEhandler = () => {
 
           {/* Description */}
           <div className="w-full max-w-[772px] mt-6 sm:mt-8 font-inter">
-            <p className="font-medium font-jakarta text-[#9b9b9b] text-base md:text-base tracking-[0] leading-normal">
+            <p className="font-medium font-jakarta text-[#434C69] text-base md:text-base tracking-[0] leading-normal">
               Till skillnad från ditt typiska "coachingprogram", community eller
               föråldrad kurs...
             </p>
             <br />
-            <p className="font-medium font-jakarta text-[#9b9b9b] text-base md:text-base tracking-[0] leading-normal">
+            <p className="font-medium font-jakarta text-[#434C69] text-base md:text-base tracking-[0] leading-normal">
               Checkified Mentorskap™ är det enda stället som erbjuder utbildning
               i världsklass med praktiskt stöd och vägledning till ett
               användarvänligt e-handelsystem.
@@ -44,8 +44,8 @@ const MentorshipSubEhandler = () => {
       <div className="w-full text-left">
         <MentorshipButton
           className="mt-7 text-sm"
-          text="Börja Din Resa Idag"
-          size="small"
+          text="Ansök Här →"
+          // size="small"
         />
       </div>
     </div>

@@ -89,7 +89,9 @@ export const AccordionItem = ({
         className="cursor-pointer py-2 flex gap-2 md:gap-4 items-center"
       >
         <RightArrow isOpen={isSelected} />
-        <h2 className="font-bold text-sm text-[#151e3a] font-inter">{title}</h2>
+        <h2 className="font-bold text-base text-[#151e3a] font-inter">
+          {title}
+        </h2>
       </div>
 
       {/* Accordion Content */}

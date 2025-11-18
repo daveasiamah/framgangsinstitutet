@@ -43,11 +43,7 @@ const MentorshipDetailsText = () => {
           </p>
         </div>
       </div>
-      <MentorshipButton
-        className="mx-0 mt-7 text-xs"
-        text="Ansök Här"
-        size="small"
-      />
+      <MentorshipButton className="mx-0 mt-7 text-xs" size="small" />
     </div>
   )
 }
