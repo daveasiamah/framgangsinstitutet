@@ -19,7 +19,7 @@ const MentorshipSteps = () => {
     {
       number: "Steg 4",
       title:
-        "Steg 4: Hoppa på en snabb framgångssession online med en av mina rådgivare för att skapa en personlig spelplan...",
+        "Steg 4: Se din dropshippingbutik (och bankkonto) explodera, medan dina stressnivåer sjunker...",
     },
   ]
 
@@ -38,7 +38,7 @@ const MentorshipSteps = () => {
                 relative w-full h-[262px] p-[18px] bg-gray-100 rounded-3xl overflow-hidden border border-gray
                 ${
                   isLast
-                    ? "col-span-1 lg:col-span-3 pb-[64px] bg-[url('/your-image.png')] bg-no-repeat bg-bottom bg-[length:117px]"
+                    ? "col-span-1 lg:col-span-3 pb-[64px] lg:bg-[url('/images/mentorship/mentorship-products/step4-bg.svg')] bg-no-repeat bg-[90%_300%] lg:bg-[length:1300px]"
                     : ""
                 }
               `}

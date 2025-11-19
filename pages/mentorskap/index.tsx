@@ -33,8 +33,8 @@ const MentorshipPage = () => {
         <MentorshipNextStep />
         <MentorshipSteps />
         <MentorshipGuarantee />
-        <MentorshipQuestions />
         <MentorshipPayout />
+        <MentorshipQuestions />
       </section>
     </Layout>
   )
