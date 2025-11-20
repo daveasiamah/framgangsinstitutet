@@ -2,7 +2,7 @@ import Image from "next/image"
 
 const MentorshipMailer = () => {
   return (
-    <div className="relative w-full max-w-[689px] px-4 sm:px-6 lg:px-8 mb-9 mt-10 mx-auto font-inter">
+    <div className="relative w-full px-4 mb-9 mt-10 font-inter">
       <div className="relative w-full bg-white rounded-[25px] border-[0.2px] border-solid border-[#9b9b9b40] shadow-[0px_0.5px_15px_0.5px_#9b9b9b40] pb-8 sm:pb-10 lg:pb-12">
         <div className="w-full relative">
           {/* Email icon */}

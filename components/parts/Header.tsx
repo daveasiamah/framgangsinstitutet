@@ -50,9 +50,9 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
       case "/annonser":
         return "Få dina annonser"
       case "/thank-you":
-        return "Ansök idag!"
+        return "Ansök till Mentorskap"
       default:
-        return "Ansök idag!"
+        return "Ansök till Mentorskap"
     }
   }
 
@@ -81,33 +81,18 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
   return (
     <header className="bg-base-100 h-header-height fixed top-0 left-0 right-0 z-20 flex items-center">
       <div className="container mx-auto flex justify-between items-center">
-        {pathname === "/" ? (
-          <a href="/utbildningar" target="_blank" rel="noopener noreferrer">
-            <div className="flex items-center justify-start gap-2">
-              <Image
-                className="h-[39px] md:h-[53px] w-[150.86px] md:w-[198.86px] max-w-full"
-                src="/checkified_logo.svg"
-                alt="checkified"
-                height={53}
-                width={198.86}
-                priority
-              />
-            </div>
-          </a>
-        ) : (
-          <Link href="/">
-            <div className="flex items-center justify-start gap-2">
-              <Image
-                className="h-[39px] md:h-[53px] w-[150.86px] md:w-[198.86px] max-w-full"
-                src="/checkified_logo.svg"
-                alt="checkified"
-                height={53}
-                width={198.86}
-                priority
-              />
-            </div>
-          </Link>
-        )}
+        <Link href="/">
+          <div className="flex items-center justify-start gap-2">
+            <Image
+              className="h-[39px] md:h-[53px] w-[150.86px] md:w-[198.86px] max-w-full"
+              src="/checkified_logo.svg"
+              alt="checkified"
+              height={53}
+              width={198.86}
+              priority
+            />
+          </div>
+        </Link>
 
         {/* Navigation */}
         <nav
@@ -120,90 +105,121 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
             <li>
               <Link
                 className="btn btn-link"
-                href="/utbildningar"
+                href="/om-oss"
                 onClick={() => setOpenSidebar(false)}
               >
-                {t.headerData.trainingCourses}
+                Om oss
               </Link>
             </li>
 
-            <li ref={menuRef}>
+            <li ref={menuRef} onMouseEnter={() => setOpenMenu(true)}>
               <label className="btn btn-link" onClick={toggleMenu}>
-                {t.headerData.resources}
+                Utbildning
                 <MdOutlineKeyboardArrowDown
                   size={26}
-                  className={`ml-1 transform ${
+                  className={`ml-1 transform transition-transform duration-300 ease-in-out ${
                     openMenu ? "rotate-180" : "rotate-0"
                   }`}
                 />
               </label>
               {/* MegaMenu */}
               <div
-                className={`absolute ${
-                  openMenu ? "top-[100px] block" : "top-[90px] hidden"
-                } transform -translate-x-1/2 left-1/2 shadow-lg p-4 md:p-6 lg:p-8 z-10 md:h-auto lg:h-auto w-11/12 md:w-5/6 lg:w-11/12 xl:w-4/6 3xl:w-1/2 rounded-[30px] 
-                gap-6 bg-base-100 overflow-auto transition-all duration-200 ease-in-out ${
-                  openMenu ? "h-[400px] p-6 shadow-lg" : "h-0 p-0 hidden"
+                onMouseEnter={() => setOpenMenu(true)}
+                onMouseLeave={() => setOpenMenu(false)}
+                className={`absolute transform -translate-x-1/2 left-1/2 shadow-lg p-4 md:p-6 lg:p-8 z-10 md:h-auto lg:h-auto w-11/12 sm:w-4/5 md:w-3/4 lg:w-2/3 xl:w-1/2 2xl:w-5/12 3xl:w-2/5 max-w-[660px] rounded-[20px] 
+                gap-[14px] bg-base-100 overflow-auto transition-all duration-300 ease-in-out ${
+                  openMenu
+                    ? "opacity-100 visible top-[70px] translate-y-0 max-h-[320px] lg:max-h-[420px] h-auto p-6 shadow-lg"
+                    : "opacity-0 invisible top-[70px] -translate-y-2 max-h-0 h-0 p-0 pointer-events-none"
                 }`}
               >
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-4 lg:gap-[22px]">
-                  {t.headerData.megaMenuData.map((data, index) => (
-                    <Link
-                      key={data.id}
-                      href={data.link}
-                      onClick={() => {
-                        setOpenSidebar(false)
-                        setOpenMenu(false)
+                <div className="flex flex-col gap-[14px] rounded-lg w-full">
+                  <Link
+                    href="/dropshipping"
+                    className="w-full border-[0.2px] border-solid border-[#9b9b9b40] shadow-[0px_0.5px_15px_0.5px_#9b9b9b40] rounded-lg"
+                  >
+                    <div
+                      className="p-2 flex gap-4 rounded-lg transition-shadow duration-200 ease-in-out"
+                      style={{
+                        boxShadow: "0 1px 4px 0 rgba(0, 0, 0, 0.1)",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.boxShadow =
+                          "0 1px 4px 0 rgba(0, 0, 0, 0.15)"
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.boxShadow =
+                          "0 1px 4px 0 rgba(0, 0, 0, 0.1)"
                       }}
                     >
-                      <div
-                        className={`flex gap-2 items-center hover:bg-base-200 p-2 rounded-lg ${
-                          index === t.headerData.megaMenuData.length - 1
-                            ? "order-first"
-                            : ""
-                        }`}
-                        style={{
-                          maxWidth: "339px",
-                          height: "58px",
-                          padding: "10px 6px",
-                        }}
-                      >
-                        {/* Menu item icon */}
-                        <div className="p-2 rounded-lg shadow-md flex-shrink-0">
-                          <Image
-                            src={data.imageUrl}
-                            alt="Mega menu icon"
-                            className="object-contain"
-                            width={30}
-                            height={30}
-                            priority
-                          />
-                        </div>
-                        {/* Separator */}
-                        <Image
-                          src="/images/menu-separator.svg"
-                          height={0}
-                          width={3}
-                          alt="separator"
-                          className="flex-shrink-0"
-                        />
-                        <div className="menu-content w-full">
-                          <h2
-                            className="text-sm font-poppins font-semibold text-left truncate"
-                            style={{ lineHeight: "1.2" }}
-                          >
-                            {data.title}
-                          </h2>
-                          <p
-                            className="text-xs font-poppins text-left text-gray-600 truncate"
-                            style={{ lineHeight: "1.1" }}
-                          >
-                            {data.desc}
-                          </p>
-                        </div>
+                      <Image
+                        src="/images/home/graphics/teacher.svg"
+                        alt="Mega menu icon"
+                        className="object-contain"
+                        width={30}
+                        height={30}
+                        priority
+                      />
+                      <div className="flex flex-col gap-2">
+                        <h2
+                          className="text-sm font-poppins font-semibold text-left break-words"
+                          style={{ lineHeight: "1.2" }}
+                        >
+                          Dropshipping
+                        </h2>
+                        <p
+                          className="text-sm font-poppins text-left text-gray-600 break-words"
+                          style={{ lineHeight: "1.1" }}
+                        >
+                          Allt du behöver lära dig för lyckas med Dropshipping
+                          2026
+                        </p>
                       </div>
-                    </Link>
-                  ))}
+                    </div>
+                  </Link>
+                  <Link
+                    href="/e-handel"
+                    className="w-full border-[0.2px] border-solid border-[#9b9b9b40] shadow-[0px_0.5px_15px_0.5px_#9b9b9b40] rounded-xl"
+                  >
+                    <div
+                      className="p-2 flex gap-4 rounded-lg transition-shadow duration-200 ease-in-out"
+                      style={{
+                        boxShadow: "0 1px 4px 0 rgba(0, 0, 0, 0.1)",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.boxShadow =
+                          "0 1px 4px 0 rgba(0, 0, 0, 0.15)"
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.boxShadow =
+                          "0 1px 4px 0 rgba(0, 0, 0, 0.1)"
+                      }}
+                    >
+                      <Image
+                        src="/images/home/graphics/note-2.svg"
+                        alt="Mega menu icon"
+                        className="object-contain"
+                        width={30}
+                        height={30}
+                        priority
+                      />
+                      <div className="flex flex-col gap-2">
+                        <h2
+                          className="text-sm font-poppins font-semibold text-left break-words"
+                          style={{ lineHeight: "1.2" }}
+                        >
+                          E-handel
+                        </h2>
+                        <p
+                          className="text-sm font-poppins text-left text-gray-600 break-words"
+                          style={{ lineHeight: "1.1" }}
+                        >
+                          Lär dig driva e-handel lönsamt 2026: Online utbildning
+                          på distans
+                        </p>
+                      </div>
+                    </div>
+                  </Link>
                 </div>
               </div>
             </li>
@@ -211,19 +227,15 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
             <li>
               <Link
                 className="btn btn-link"
-                href="/butiker"
-                onClick={() => setOpenSidebar(false)}
-              >
-                {t.headerData.estore}
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="btn btn-link"
                 href="/mentorskap"
                 onClick={() => setOpenSidebar(false)}
               >
                 Mentorskap
+              </Link>
+            </li>
+            <li>
+              <Link className="btn btn-link" href="/blogg">
+                Blogg
               </Link>
             </li>
           </ul>
@@ -241,7 +253,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
                 }
                 const buttonTitle = getButtonTitle(pathname)
 
-                if (buttonTitle === "Ansök idag!") {
+                if (buttonTitle === "Ansök till Mentorskap") {
                   window.open(
                     "https://form.jotform.com/checkifiedse/formulr",
                     "_blank"

@@ -1,7 +1,7 @@
 import { HeaderData } from "../types/header"
 
 export const headerData: HeaderData = {
-  trainingCourses: "utbildningar",
+  trainingCourses: "Om oss",
   resources: "Resurser",
   megaMenuData: [
     {
@@ -9,7 +9,7 @@ export const headerData: HeaderData = {
       imageUrl: "/icons/header/folder-2.svg",
       title: "Blogg",
       desc: "Bloggar om online företag",
-      link: "/blog",
+      link: "/blogg",
     },
     {
       id: 2,

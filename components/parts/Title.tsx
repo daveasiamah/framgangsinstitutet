@@ -13,7 +13,6 @@ type Props = {
 const Title: React.FC<Props> = React.memo(
   ({
     blackText,
-    blackTexttwo,
     blueText,
     isBlock,
     className,

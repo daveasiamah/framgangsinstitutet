@@ -10,6 +10,7 @@ import Image from "next/image"
 
 import en from "@/locales/en"
 import sv from "@/locales/sv"
+import Link from "next/link"
 
 type Props = {
   blogPost: BlogPost
@@ -28,7 +29,7 @@ type BlogPost = {
   authorProfile: string
 }
 
-export default function Blog({ blogPost, locale }: Props) {
+export default function Blogg({ blogPost, locale }: Props) {
   const t = locale === "en" ? en : sv
 
   return (
@@ -38,10 +39,10 @@ export default function Blog({ blogPost, locale }: Props) {
         <nav className="text-sm" aria-label="Breadcrumb">
           <ol className="flex">
             <li className="mr-2">
-              <a
+              <Link
                 href={`../../${locale}/`}
                 className="text-gray-400 hover:text-gray-700"
-              >{`${t.blogData.blogNav.home}`}</a>
+              >{`${t.blogData.blogNav.home}`}</Link>
             </li>
             <li className="mr-2">
               <span aria-hidden="true" className="text-gray-400">
@@ -49,10 +50,10 @@ export default function Blog({ blogPost, locale }: Props) {
               </span>
             </li>
             <li className="mr-2">
-              <a
-                href={`../../${locale}/blog`}
+              <Link
+                href={`../../${locale}/blogg`}
                 className="text-gray-400 hover:text-gray-700"
-              >{`${t.blogData.blogTitle}`}</a>
+              >{`${t.blogData.blogTitle}`}</Link>
             </li>
             <li className="mr-2">
               <span aria-hidden="true" className="text-gray-400">
@@ -64,40 +65,38 @@ export default function Blog({ blogPost, locale }: Props) {
             </li>
           </ol>
         </nav>
-        {/* <a className="mt-auto flex items-center gap-2 my-3" href="/blog">
-              <HiArrowLeft size={15} />
-              {`${t.blogData.blogTitle}`}
-        </a> */}
+
         <ScrollReveal>
-          <Title blackText={blogPost.title} className="text-left">
-            <div
-              className="grid md:grid-cols-2 sm:grid-cols-1"
-              style={{ width: "max-content" }}
-            >
-              {blogPost.authorProfile && (
-                <div className="flex items-center">
-                  <Image
-                    src={blogPost.authorProfile}
-                    alt="Author"
-                    width={15}
-                    height={15}
-                    className="w-10 h-10 rounded-full"
-                  />
-                  <div>
-                    <p className="text-subtitle text-sm mt-auto flex items-center">
-                      {blogPost.author}
-                    </p>
-                  </div>
+          <h1 className="font-jakarta font-bold text-[26px] lg:text-[40px] leading-[2rem] lg:leading-[3rem] mb-8">
+            {blogPost.title}
+          </h1>
+          <div
+            className="grid md:grid-cols-2 sm:grid-cols-1 mt-4"
+            style={{ width: "max-content" }}
+          >
+            {blogPost.authorProfile && (
+              <div className="flex items-center justify-center gap-4">
+                <Image
+                  src={blogPost.authorProfile}
+                  alt="Author"
+                  width={64}
+                  height={64}
+                  className="w-16 h-16 rounded-full"
+                />
+                <div>
+                  <p className="text-subtitle font-inter text-sm flex items-center">
+                    {blogPost.author}
+                  </p>
                 </div>
-              )}
-              <div style={{ marginTop: "10px" }}>
-                <p className="text-subtitle text-sm mt-auto flex items-center gap-2 ml-2">
-                  <HiOutlineClock size={20} />
-                  {blogPost.date}
-                </p>
               </div>
+            )}
+            <div className="flex items-center justify-center gap-4">
+              <p className="text-subtitle text-sm font-inter flex items-center gap-2 ml-2">
+                <HiOutlineClock size={20} />
+                {blogPost.date}
+              </p>
             </div>
-          </Title>
+          </div>
         </ScrollReveal>
         {blogPost.blogContent && (
           <div className="prose" style={{ maxWidth: "100%" }}>

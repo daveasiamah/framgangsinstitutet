@@ -88,7 +88,7 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
         <div className="flex-col justify-center items-center">
           <div className="flex flex-row align-middle gap-2 justify-center items-center">
             <Image
-              src="/logo.svg"
+              src="/public/checkified-logo-main.svg"
               alt="logo"
               width="40"
               height="40"

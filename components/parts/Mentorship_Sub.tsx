@@ -1,9 +1,9 @@
 const MentorshipHeroSub = () => {
   return (
-    <div className="relative mt-9">
+    <div className="relative mt-9 flex justify-center items-center text-center">
       <div className="max-w-[555px]">
         <div className="mb-2 ">
-          <h2 className="font-extrabold text-[#151e3a] font-jakarta">
+          <h2 className="font-bold text-xl md:text-3xl lg:text-4xl text-[#151e3a] font-jakarta">
             Speciell inbjudan
           </h2>
         </div>

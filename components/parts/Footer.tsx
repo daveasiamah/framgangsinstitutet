@@ -16,37 +16,31 @@ export default function Footer({}: Props) {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-[#fff] text-[#434C69] py-1 relative mt-2 lg:mt-10">
-      <div className="container mx-auto">
+    <footer className="bg-[#225AEA] text-white h-[445px] flex-col justify-center items-center bg-[url('/images/home/footer-vector-mesh.svg')] bg-cover mt-2 lg:mt-10">
+      <div className="container flex flex-col justify-center mx-auto pt-12">
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-10">
           {/* Logo Section */}
           <div className="w-full lg:w-1/3 flex flex-col items-start text-left">
-            <img
-              src="/checkified-logo-main.svg"
+            <Image
+              src="/images/home/graphics/new-checkified-logo.svg"
               alt="checkified"
+              width={212}
+              height={61}
               className="h-[48px] w-[213px] object-left object-contain"
             />
-            <p className="text-[14px] md:text-[16px] font-semibold leading-[22px] md:leading-[32px]">
-              Börja Med Dropshipping Sverige
+            <p className="text-[14px] md:text-[16px font-inter font-semibold leading-[22px] md:leading-[32px]">
+              Registrera dig på vårt nyhetsbrev för att inte missa event,
+              uppdateringar och e-handelsinspiration.
             </p>
-
-            {/* Partner Logos */}
-            <div className="flex flex-col flex-wrap gap-2 mt-6">
-              <img
-                src="/shopifypartner.svg"
-                alt="Shopify Partner"
-                className="h-[27px] w-[166px] md:w-[167px]"
+            <div className="flex gap-1 h-[48px]">
+              <input
+                type="email"
+                placeholder="Skriv in din e-post"
+                className="bg-[#fff] border border-[#434C69] rounded-[8px] w-[2/3] py-[14px] px-[26px] text-[#434C69] text-[14px] md:text-[16px] font-semibold leading-[22px] md:leading-[32px]"
               />
-              <img
-                src="/stripe.svg"
-                alt="Stripe Partner"
-                className="h-[34px] w-[166px] md:w-[167px]"
-              />
-              <img
-                src="/google.svg"
-                alt="Google Partner"
-                className="h-[44px] w-[166px] md:w-[167px]"
-              />
+              <button className="bg-[#072F94] text-white text-[12px] items-center text-center flex md:text-[16px] font-semibold leading-[22px] md:leading-[32px] rounded-[6px] w-[1/3] py-[14px] px-[26px]">
+                Registrera dig
+              </button>
             </div>
           </div>
 
@@ -54,7 +48,7 @@ export default function Footer({}: Props) {
           <div className="w-full lg:w-2/3 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-10">
             {/* Produkter */}
             <div>
-              <h5 className="font-bold font-jakarta text-xl mb-4">Produkter</h5>
+              <h5 className="font-bold font-jakarta text-xl mb-4">Företaget</h5>
               <ul className="space-y-2 flex flex-col gap-3">
                 <li>
                   <Link
@@ -62,33 +56,35 @@ export default function Footer({}: Props) {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Dropshipping Kurs
+                    Om oss
                   </Link>
                 </li>
                 <li>
-                  <Link href="/butiker">Färdig E-Butik</Link>
+                  <Link href="/butiker">Allmänna villkor</Link>
                 </li>
                 <li>
-                  <Link href="/annonser">Dropshipping Ads</Link>
+                  <Link href="/mentorskap">Kontakta oss</Link>
                 </li>
                 <li>
-                  <Link href="/mentorskap">Mentorskap</Link>
+                  <Link href="/annonser">Cookiepolicy</Link>
                 </li>
               </ul>
             </div>
 
             {/* Företag */}
             <div>
-              <h5 className="font-bold font-jakarta text-lg mb-4">Företag</h5>
+              <h5 className="font-bold font-jakarta text-lg mb-4">
+                Snabblänkar
+              </h5>
               <ul className="space-y-2 flex flex-col gap-3">
                 <li>
-                  <Link href="/about">Om oss</Link>
+                  <Link href="/utbildningar">Utbildning</Link>
                 </li>
                 <li>
-                  <Link href="/affiliate">Affiliate</Link>
+                  <Link href="/blogg">Blogg</Link>
                 </li>
                 <li>
-                  <Link href="/contact-us">Kontakt</Link>
+                  <Link href="/mentorskap">Mentorskap</Link>
                 </li>
                 <li>
                   <Link href="/faq">FAQ</Link>
@@ -98,16 +94,22 @@ export default function Footer({}: Props) {
 
             {/* Resurser */}
             <div>
-              <h5 className="font-bold font-jakarta text-lg mb-4">Resurser</h5>
+              <h5 className="font-bold font-jakarta text-lg mb-4">
+                Kontakta oss
+              </h5>
               <ul className="space-y-2 flex flex-col gap-3">
                 <li>
-                  <Link href="/ebocker">E-böcker</Link>
+                  <p className="text-white font-medium font-inter">
+                    Sveriges ledande utbildning inom e-handel och dropshipping
+                  </p>
                 </li>
                 <li>
-                  <Link href="/blog">Blogg</Link>
+                  <p className="text-white font-medium font-inter">
+                    E-post: info@checkified.se
+                  </p>
                 </li>
                 <li>
-                  <Link href="/utbildningar">Utbildningar</Link>
+                  <Link href="/intervjuer">Intervjuer</Link>
                 </li>
               </ul>
             </div>
@@ -126,7 +128,12 @@ export default function Footer({}: Props) {
           {/* Social Media Icons */}
           <div className="flex gap-4 justify-center md:order-2 order-2">
             {socialMedia(24).map((data) => (
-              <Link key={data.id} href={data.url} target="_blank">
+              <Link
+                key={data.id}
+                href={data.url}
+                target="_blank"
+                className="p-1 rounded-md bg-white"
+              >
                 <div className="text-[#225AEA] hover:text-primary">
                   {data.logo}
                 </div>
@@ -135,32 +142,13 @@ export default function Footer({}: Props) {
           </div>
 
           {/* Links Section */}
-          <ul className="flex flex-wrap justify-center gap-4 md:order-3 order-3">
-            <li>
-              <Link
-                href="/cookie-policy"
-                className="hover:underline underline-offset-4 text-sm font-medium"
-              >
-                Cookiepolicy
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/terms-of-service"
-                className="hover:underline underline-offset-4 text-sm font-medium"
-              >
-                Allmänna villkor
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/privacy-policy"
-                className="hover:underline underline-offset-4 text-sm font-medium"
-              >
-                Integritetspolicy
-              </Link>
-            </li>
-          </ul>
+          <Image
+            src="/images/home/graphics/shopify-partner-1.svg"
+            alt="Shopify Partner"
+            width={166}
+            height={27}
+            className="md:order-3 order-3"
+          />
         </div>
       </div>
     </footer>

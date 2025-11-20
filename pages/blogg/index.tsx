@@ -42,7 +42,7 @@ type BlogPost = {
   slug: string
 }
 
-export default function Blog() {
+export default function Blogg() {
   const router = useRouter()
   const { locale } = router
   const t = locale === "en" ? en : sv
@@ -88,11 +88,6 @@ export default function Blog() {
         />
         <ShieldBadge positionClassName="left-[1rem] top-[1rem] lg:top-[6rem] lg:left-[8rem]" />
         <UserBadge positionClassName="right-[1rem] top-[1rem] lg:top-[4rem] lg:right-[16rem]" />
-        {/* <CacingOne
-              positionClassName="left-[-12rem] 2xl:left-[-8rem] rotate-[-40deg] top-[2rem]"
-              sizeClassName="w-[24rem] h-[24rem]"
-              className="z-[-1]"
-          /> */}
 
         <ScrollReveal>
           <Title
@@ -133,11 +128,11 @@ export default function Blog() {
                     className="absolute object-cover"
                   />
                 </div>
-                <h1 className="font-bold text-xl mb-2 hover:text-primary hover:underline transition-all duration-200">
+                <h1 className="font-bold font-inter text-xl mb-2 hover:text-primary hover:underline transition-all duration-200">
                   {data.title}
                 </h1>
-                <p className="text-subtitle mb-3">{data.subtitle}</p>
-                <p className="text-subtitle text-sm mt-auto flex items-center gap-2">
+                <p className="text-subtitle font-inter mb-3">{data.subtitle}</p>
+                <p className="text-subtitl font-inter text-sm mt-auto flex items-center gap-2">
                   <HiOutlineClock size={20} />
                   {data.date}
                 </p>
@@ -146,7 +141,7 @@ export default function Blog() {
           ))}
         </div>
         <div className="flex justify-center mt-10">
-          <Link className="btn btn-primary btn-shadow" href="/blog/general">
+          <Link className="btn btn-primary btn-shadow" href="/blogg/general">
             {t.blogData.blogNav.viewMore}
           </Link>
         </div>
