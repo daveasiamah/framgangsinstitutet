@@ -51,7 +51,7 @@ const MentorshipButton = ({
       : {}
 
   const baseClasses =
-    "font-semibold text-center font-jakarta tracking-[0] leading-none whitespace-nowrap rounded-[7px] shadow-inner transition-all duration-200 ease-in-out transform flex items-center justify-center"
+    "font-normal text-center font-jakarta tracking-[0] leading-none whitespace-nowrap rounded-[7px] shadow-inner transition-all duration-200 ease-in-out transform flex items-center justify-center"
 
   const disabledClasses = disabled
     ? "opacity-50 cursor-not-allowed hover:scale-100 active:scale-100"

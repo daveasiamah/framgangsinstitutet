@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "@/components/Layout"
+import Image from "next/image"
 import MentorshipDetailsText from "@/components/parts/Mentorship_Detail_Text"
 import { MentorshipGuarantee } from "@/components/parts/Mentorship_Guarantee"
 import MentorshipHero from "@/components/parts/Mentorship_Hero"
@@ -15,6 +16,7 @@ import MentorshipHeroSub from "@/components/parts/Mentorship_Sub"
 import SuccessStoriesGrid from "@/components/parts/Mentorship_Success"
 import MentorshipSubEhandler from "@/components/parts/MentorshipSub_2"
 import MentorshipProducts from "@/components/parts/MentorshipProducts"
+import MentorshipCard from "./mentorship-card"
 
 const MentorshipPage = () => {
   return (
@@ -23,9 +25,27 @@ const MentorshipPage = () => {
         <MentorshipHero />
         <MentorshipHeroSub />
         <MentorshipMail />
-        <MentorshipButton />
+        <MentorshipButton size="small" />
         <MentorshipSubEhandler />
         <MentorshipProducts />
+        <section className="w-full flex flex-col items-center justify-center h-full">
+          <Image
+            src="/images/mentorship/mentorship-packages.svg"
+            width={700}
+            height={470}
+            alt="mentorship packages"
+          />
+          <h2 className="text-[#000000] max-w-[303px] md:max-w-[604px] font-jakarta text-center text-[22px] md:text-[48px] font-semibold mt-10 mb-4 md:mb-2">
+            Dropshipping Mentorskap
+          </h2>
+          <p className="font-inter text-center max-w=[272px] md:max-w-[640px]  text-md md:text-lg text-[#000000]">
+            Ett mentorskap med så mycket värde att den verkar för bra för att
+            vara sann, plus ett pris som passar alla som är redo att vara
+            ambitiösa.
+          </p>
+        </section>
+
+        <MentorshipCard />
         <MentorshipDetailsText />
         <SuccessStoriesGrid />
         <MentorshipStaticImage />

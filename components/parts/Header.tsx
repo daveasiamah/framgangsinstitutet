@@ -14,8 +14,9 @@ type Props = {
 }
 
 export default function Header({ openSidebar, setOpenSidebar }: Props) {
-  const [openMenu, setOpenMenu] = useState(false)
   const [showModal, setShowModal] = useState(false)
+  const [isMegaMenuHovered, setIsMegaMenuHovered] = useState(false)
+  const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null)
 
   const openModal = () => {
     setShowModal(true)
@@ -41,6 +42,14 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
     }
   }, [pathname])
 
+  useEffect(() => {
+    return () => {
+      if (closeTimeoutRef.current) {
+        clearTimeout(closeTimeoutRef.current)
+      }
+    }
+  }, [])
+
   const getButtonTitle = (pathname: string) => {
     switch (pathname) {
       case "/":
@@ -59,28 +68,31 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
   // Excluded paths for the CTA button
   const excludedPaths = ["/annonser", "checkified.se/", "/butiker"]
 
-  const menuRef = useRef<HTMLLIElement | null>(null)
-
-  const toggleMenu = () => {
-    setOpenMenu((prev) => !prev)
+  const handleMegaMenuEnter = () => {
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current)
+      closeTimeoutRef.current = null
+    }
+    setIsMegaMenuHovered(true)
   }
 
-  const handleClickOutside = (event: MouseEvent) => {
-    if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-      setOpenMenu(false)
-    }
+  const handleMegaMenuLeave = () => {
+    closeTimeoutRef.current = setTimeout(() => {
+      setIsMegaMenuHovered(false)
+    }, 150) // Small delay to allow moving to dropdown
   }
 
-  useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside)
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside)
+  const handleOtherMenuItemEnter = () => {
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current)
+      closeTimeoutRef.current = null
     }
-  }, [])
+    setIsMegaMenuHovered(false)
+  }
 
   return (
     <header className="bg-base-100 h-header-height fixed top-0 left-0 right-0 z-20 flex items-center">
-      <div className="container mx-auto flex justify-between items-center">
+      <div className="container mx-auto flex justify-between items-center px-4 w-full">
         <Link href="/">
           <div className="flex items-center justify-start gap-2">
             <Image
@@ -102,7 +114,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
             } ${pathname === "/utbildningar" ? "mx-auto" : ""}`}
         >
           <ul className="flex flex-col lg:flex-row gap-2 lg:gap-8 h-full">
-            <li>
+            <li onMouseEnter={handleOtherMenuItemEnter}>
               <Link
                 className="btn btn-link"
                 href="/om-oss"
@@ -112,31 +124,36 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
               </Link>
             </li>
 
-            <li ref={menuRef} onMouseEnter={() => setOpenMenu(true)}>
-              <label className="btn btn-link" onClick={toggleMenu}>
+            <li
+              className="group relative"
+              onMouseEnter={handleMegaMenuEnter}
+              onMouseLeave={handleMegaMenuLeave}
+            >
+              <label className="btn btn-link cursor-pointer">
                 Utbildning
                 <MdOutlineKeyboardArrowDown
                   size={26}
                   className={`ml-1 transform transition-transform duration-300 ease-in-out ${
-                    openMenu ? "rotate-180" : "rotate-0"
+                    isMegaMenuHovered ? "rotate-180" : "rotate-0"
                   }`}
                 />
               </label>
               {/* MegaMenu */}
               <div
-                onMouseEnter={() => setOpenMenu(true)}
-                onMouseLeave={() => setOpenMenu(false)}
-                className={`absolute transform -translate-x-1/2 left-1/2 shadow-lg p-4 md:p-6 lg:p-8 z-10 md:h-auto lg:h-auto w-11/12 sm:w-4/5 md:w-3/4 lg:w-2/3 xl:w-1/2 2xl:w-5/12 3xl:w-2/5 max-w-[660px] rounded-[20px] 
-                gap-[14px] bg-base-100 overflow-auto transition-all duration-300 ease-in-out ${
-                  openMenu
-                    ? "opacity-100 visible top-[70px] translate-y-0 max-h-[320px] lg:max-h-[420px] h-auto p-6 shadow-lg"
-                    : "opacity-0 invisible top-[70px] -translate-y-2 max-h-0 h-0 p-0 pointer-events-none"
+                onMouseEnter={handleMegaMenuEnter}
+                onMouseLeave={handleMegaMenuLeave}
+                className={`absolute transform -translate-x-1/2 left-1/2 shadow-lg z-10 md:h-auto lg:h-auto w-11/12 sm:w-4/5 md:w-3/4 lg:w-2/3 xl:w-1/2 2xl:w-5/12 3xl:w-2/5 max-w-[660px] rounded-[20px] 
+                gap-[14px] bg-base-100 overflow-auto transition-all duration-300 ease-in-out 
+                ${
+                  isMegaMenuHovered
+                    ? "opacity-100 visible top-[60px] translate-y-0 max-h-[320px] lg:max-h-[420px] h-auto p-4 md:p-6 lg:p-8 shadow-lg pointer-events-auto"
+                    : "opacity-0 invisible top-[60px] -translate-y-2 max-h-0 h-0 pointer-events-none"
                 }`}
               >
                 <div className="flex flex-col gap-[14px] rounded-lg w-full">
                   <Link
                     href="/dropshipping"
-                    className="w-full border-[0.2px] border-solid border-[#9b9b9b40] shadow-[0px_0.5px_15px_0.5px_#9b9b9b40] rounded-lg"
+                    className="w-full border-[0.2px] border-solid border-[#9b9b9b40] shadow-md rounded-lg"
                   >
                     <div
                       className="p-2 flex gap-4 rounded-lg transition-shadow duration-200 ease-in-out"
@@ -168,7 +185,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
                           Dropshipping
                         </h2>
                         <p
-                          className="text-sm font-poppins text-left text-gray-600 break-words"
+                          className="text-sm font-poppins text-left text-[#707BA0] break-words"
                           style={{ lineHeight: "1.1" }}
                         >
                           Allt du behöver lära dig för lyckas med Dropshipping
@@ -179,7 +196,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
                   </Link>
                   <Link
                     href="/e-handel"
-                    className="w-full border-[0.2px] border-solid border-[#9b9b9b40] shadow-[0px_0.5px_15px_0.5px_#9b9b9b40] rounded-xl"
+                    className="w-full border-[0.2px] border-solid border-[#9b9b9b40] shadow-md rounded-xl"
                   >
                     <div
                       className="p-2 flex gap-4 rounded-lg transition-shadow duration-200 ease-in-out"
@@ -211,7 +228,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
                           E-handel
                         </h2>
                         <p
-                          className="text-sm font-poppins text-left text-gray-600 break-words"
+                          className="text-sm font-poppins text-left text-[#707BA0] break-words"
                           style={{ lineHeight: "1.1" }}
                         >
                           Lär dig driva e-handel lönsamt 2026: Online utbildning
@@ -224,7 +241,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
               </div>
             </li>
 
-            <li>
+            <li onMouseEnter={handleOtherMenuItemEnter}>
               <Link
                 className="btn btn-link"
                 href="/mentorskap"
@@ -233,7 +250,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
                 Mentorskap
               </Link>
             </li>
-            <li>
+            <li onMouseEnter={handleOtherMenuItemEnter}>
               <Link className="btn btn-link" href="/blogg">
                 Blogg
               </Link>

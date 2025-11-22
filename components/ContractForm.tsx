@@ -5,6 +5,7 @@ import { SubmitHandler, useForm } from "react-hook-form"
 import * as yup from "yup"
 import { yupResolver } from "@hookform/resolvers/yup"
 import { registerOfContract } from "../service/Apis/api"
+import Link from "next/link"
 
 type FormValues = {
   name: string
@@ -62,15 +63,14 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
   }
   const onSubmit: SubmitHandler<FormValues> = (data) => sendData(data)
 
-  const inputWrapperClass =
-    "relative border border-[#AFBAD2] rounded-lg bg-white flex items-center"
+  const inputWrapperClass = "relative rounded-[8px] flex items-center"
 
   const inputClass =
-    "input w-full pl-10 pr-4 py-4 focus:outline-0 bg-white border-[#AFBAD2] text-base"
+    "input w-full pl-10 pr-4 py-2 font-inter text-[#4F4F4F] focus:outline-0 bg-[#F6F6F6] border-1 border-[#AAA1A1] text-2xl placeholder:text-[#4F4F4F]"
 
   return (
     <div
-      className="relative bg-white py-4 lg:py-10 px-6 w-full max-w-[360px] md:max-w-[390px] box-content rounded-lg"
+      className="relative bg-white py-4 lg:py-10 px-6 lg:px-10 w-full max-w-[360px] md:max-w-[740px] box-content rounded-lg"
       onClick={(e) => e.stopPropagation()}
     >
       <Image
@@ -88,32 +88,24 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
         <div className="flex-col justify-center items-center">
           <div className="flex flex-row align-middle gap-2 justify-center items-center">
             <Image
-              src="/public/checkified-logo-main.svg"
+              src="/images/checkified-new-logo-dark.svg"
               alt="logo"
-              width="40"
-              height="40"
-              className="object-cover"
+              width={235}
+              height={64}
+              className="object-cover h-[64px] w-[235px]"
             />
-            <h1 className="font-poppins font-bold text-[20px] text-[#151e3a">
-              Checkified
-            </h1>
           </div>
 
-          <div className="flex items-center text-center justify-center gap-2 text-lg lg:text-xl h-12 mt-4">
-            <h1 className="font-jakarta font-bold max-w-[342px] text-[18px] text-[#151e3a]">
+          <div className="flex items-center text-center justify-center gap-2 text-lg lg:text-xl h-12 mt-8">
+            <h1 className="font-jakarta font-extrabold max-w-[342px] text-[18px] md:text-[32px] text-[#151e3a]">
               Se vår kostnadsfria introduktionsguide!
             </h1>
           </div>
-          <p className="text-[#000000] text-[14px] text-center mt-4">
-            Lär dig hur Dominic nådde sin framgång och hur du kan göra samma
-            resa. Få insikt och metoder för att gå från noll till att kunna
-            försörja dig på e-handel.
-          </p>
         </div>
         <form
           onSubmit={handleSubmit(onSubmit)}
           action=""
-          className="flex flex-col items-center gap-4 mt-4"
+          className="flex flex-col gap-4 mt-4"
         >
           {/* Error Alert */}
           <div className="text-red-500 text-xs">
@@ -121,9 +113,12 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
           </div>
           {/* First Name */}
           <div className="form-control w-full">
+            <label className="text-[#4F4F4F] font-inter font-base">
+              Förnamn
+            </label>
             <div className={inputWrapperClass}>
               <Image
-                src="/new-home/user.svg"
+                src="/icons/user-square.svg"
                 alt="user"
                 width={24}
                 height={24}
@@ -131,7 +126,7 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
               />
               <input
                 type="text"
-                placeholder="Namn"
+                placeholder="Ange ditt förnamn"
                 className={inputClass}
                 {...register("name")}
               />
@@ -142,9 +137,12 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
           </div>
           {/* Email */}
           <div className="form-control w-full">
+            <label className="text-[#4F4F4F] font-inter font-base">
+              E-postadress
+            </label>
             <div className={inputWrapperClass}>
               <Image
-                src="/new-home/message.svg"
+                src="/icons/post-message.svg"
                 alt="email"
                 width={24}
                 height={24}
@@ -152,7 +150,7 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
               />
               <input
                 type="email"
-                placeholder="E-Post"
+                placeholder="Din e-postadress"
                 className={inputClass}
                 {...register("email")}
               />
@@ -163,36 +161,25 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
               </p>
             )}
           </div>
-
-          <div className="form-control w-full">
-            <div className={inputWrapperClass}>
-              <Image
-                src="/new-home/phone.svg"
-                alt="phone"
-                width={24}
-                height={24}
-                className="absolute left-3"
-              />
-              <input
-                type="text"
-                placeholder="Telefonnummer"
-                className={inputClass}
-                {...register("phone")}
-              />
-            </div>
-            {errors.phone && (
-              <p className="text-red-500 text-xs pt-1">
-                {errors.phone.message}
-              </p>
-            )}
+          <div className="font-inter flex flex-col gap-2">
+            <p className="text-sm text-[#4F4F4F]">
+              Vill du lyckas inom e-handel på under 30 minuter?
+            </p>
+            <p className="text-sm text-[#4F4F4F]">
+              Genom att kolla på våra kostnadsfria introguide så godkänner jag
+              Checkified{" "}
+              <Link href="/gdpr" className="underline">
+                GDPR Policy
+              </Link>
+              .
+            </p>
           </div>
-
           <button
             type="submit"
             disabled={!isDirty || !isValid}
-            className="font-inter w-full text-xs md:text-base btn btn-primary mt-4"
+            className="font-inter flex items-center justify-center self-end w-[100px] md:w-[190px] max-w-[190px] btn btn-primary mt-4"
           >
-            Se kostnadsfria guide
+            <p className="text-sm text-white">Se gratis introguide!</p>
           </button>
         </form>
       </div>

@@ -45,7 +45,7 @@ const MentorshipSubEhandler = () => {
         <MentorshipButton
           className="mt-7 text-sm"
           text="Ansök Här →"
-          // size="small"
+          size="small"
         />
       </div>
     </div>

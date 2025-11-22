@@ -49,21 +49,26 @@ const products = [
 function MentorshipProducts() {
   return (
     <>
+      <h2 className="text-[#000000] max-w-[272px] md:max-w-full font-jakarta text-center text-[20px] md:text-[24px] lg:text-[36px] font-bold mt-10 mb-4 md:mb-6">
+        6 bonusar När Du Går Med Dropshiping Mentorskap:
+      </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[27px]">
         {products.map((product) => (
           <div
             key={product.id}
-            className="flex flex-col items-center text-center bg-[#F5F9FF] rounded-[24px] px-[20px] py-[12px] shadow-sm"
+            className="group flex flex-col items-center text-center bg-[#F5F9FF] rounded-[24px] px-[20px] py-[12px] shadow-sm transition-all duration-300 ease-out hover:shadow-md hover:-translate-y-1 hover:scale-[1.01] cursor-pointer"
           >
-            <Image
-              width={502}
-              height={170}
-              src={product.image}
-              alt={product.title}
-              className="mb-4"
-            />
+            <div className="overflow-hidden rounded-[16px] mb-4 w-full">
+              <Image
+                width={502}
+                height={170}
+                src={product.image}
+                alt={product.title}
+                className="mb-4 transition-transform duration-500 ease-out group-hover:scale-110"
+              />
+            </div>
             <div className="max-w-[350px] md:max-w-[400px]">
-              <h3 className="font-jakarta text-sm md:text-base text-[#000000] font-semibold mb-2">
+              <h3 className="font-jakarta text-sm md:text-base text-[#000000] font-semibold mb-2 transition-colors duration-300 group-hover:text-[#235AE9]">
                 {product.title}
               </h3>
               <p className="font-inter text-xs md:text-sm text-[#235AE9]">
