@@ -1,12 +1,26 @@
-import { Spin as Hamburger } from "hamburger-react"
-import en from "@/locales/en"
-import sv from "@/locales/sv"
-import ContractForm from "../ContractForm"
-import React, { useEffect, useRef, useState } from "react"
+import React, { useEffect, useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { useRouter } from "next/router"
-import { MdOutlineKeyboardArrowDown } from "react-icons/md"
+import ContractForm from "../ContractForm"
+import { motion, AnimatePresence } from "framer-motion"
+
+import en from "@/locales/en"
+import sv from "@/locales/sv"
+
+import {
+  Box,
+  Flex,
+  Button,
+  IconButton,
+  Stack,
+  useDisclosure,
+  Text,
+  Image as ChakraImage,
+  Heading,
+} from "@chakra-ui/react"
+
+import { MdOutlineKeyboardArrowDown, MdMenu, MdClose } from "react-icons/md"
 
 type Props = {
   openSidebar: boolean
@@ -14,23 +28,19 @@ type Props = {
 }
 
 export default function Header({ openSidebar, setOpenSidebar }: Props) {
-  const [showModal, setShowModal] = useState(false)
-  const [isMegaMenuHovered, setIsMegaMenuHovered] = useState(false)
-  const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null)
-
-  const openModal = () => {
-    setShowModal(true)
-  }
-
-  const closeModal = () => {
-    setShowModal(false)
-  }
-
   const router = useRouter()
-  const { locale, pathname, query } = router
+  const { pathname, query, locale } = router
   const t = locale === "en" ? en : sv
 
   const isSlugPage = !!query.slug
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  // CTA modal
+  const {
+    open: isModalOpen,
+    onOpen: openModal,
+    onClose: closeModal,
+  } = useDisclosure()
 
   const setDefaultLangToSV = () => {
     router.push(router.pathname, router.asPath, { locale: "sv" })
@@ -42,287 +52,418 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
     }
   }, [pathname])
 
-  useEffect(() => {
-    return () => {
-      if (closeTimeoutRef.current) {
-        clearTimeout(closeTimeoutRef.current)
-      }
-    }
-  }, [])
-
-  const getButtonTitle = (pathname: string) => {
-    switch (pathname) {
+  const getButtonTitle = (path: string) => {
+    switch (path) {
       case "/":
+      case "/thank-you":
         return "Ansök till Mentorskap"
       case "/butiker":
         return "Få din butik"
       case "/annonser":
         return "Få dina annonser"
-      case "/thank-you":
-        return "Ansök till Mentorskap"
       default:
         return "Ansök till Mentorskap"
     }
   }
 
-  // Excluded paths for the CTA button
   const excludedPaths = ["/annonser", "checkified.se/", "/butiker"]
 
-  const handleMegaMenuEnter = () => {
-    if (closeTimeoutRef.current) {
-      clearTimeout(closeTimeoutRef.current)
-      closeTimeoutRef.current = null
-    }
-    setIsMegaMenuHovered(true)
-  }
-
-  const handleMegaMenuLeave = () => {
-    closeTimeoutRef.current = setTimeout(() => {
-      setIsMegaMenuHovered(false)
-    }, 150) // Small delay to allow moving to dropdown
-  }
-
-  const handleOtherMenuItemEnter = () => {
-    if (closeTimeoutRef.current) {
-      clearTimeout(closeTimeoutRef.current)
-      closeTimeoutRef.current = null
-    }
-    setIsMegaMenuHovered(false)
-  }
-
   return (
-    <header className="bg-base-100 h-header-height fixed top-0 left-0 right-0 z-20 flex items-center">
-      <div className="container mx-auto flex justify-between items-center px-4 w-full">
+    <Box
+      as="header"
+      position="fixed"
+      top="0"
+      left="0"
+      right="0"
+      zIndex={20}
+      bg="white"
+      height="80px"
+    >
+      <Flex
+        height="100%"
+        align="center"
+        justify="space-between"
+        px={4}
+        maxW="container.xl"
+        mx="auto"
+      >
+        {/* Logo */}
         <Link href="/">
-          <div className="flex items-center justify-start gap-2">
+          <Flex align="center">
             <Image
-              className="h-[39px] md:h-[53px] w-[150.86px] md:w-[198.86px] max-w-full"
               src="/checkified_logo.svg"
               alt="checkified"
-              height={53}
-              width={198.86}
+              width={187}
+              height={64}
               priority
             />
-          </div>
+          </Flex>
         </Link>
 
-        {/* Navigation */}
-        <nav
-          className={`bg-base-100 absolute top-header-height lg:static p-8 pb-10 lg:p-0 text-center w-full lg:w-auto lg:flex flex-col lg:flex-row items-center shadow-lg 
-            lg:shadow-none rounded-b-3xl lg:rounded-none transition-all duration-200 ease-linear max-h-screen ${
-              openSidebar ? "left-0" : "left-[150%]"
-            } ${pathname === "/utbildningar" ? "mx-auto" : ""}`}
+        {/* DESKTOP NAV */}
+        <Flex
+          display={["none", null, "flex"]}
+          gap={8}
+          align="center"
+          fontWeight={600}
+          fontFamily={"poppins"}
         >
-          <ul className="flex flex-col lg:flex-row gap-2 lg:gap-8 h-full">
-            <li onMouseEnter={handleOtherMenuItemEnter}>
-              <Link
-                className="btn btn-link"
-                href="/om-oss"
-                onClick={() => setOpenSidebar(false)}
-              >
-                Om oss
-              </Link>
-            </li>
+          <Link href="/om-oss">Om oss</Link>
 
-            <li
-              className="group relative"
-              onMouseEnter={handleMegaMenuEnter}
-              onMouseLeave={handleMegaMenuLeave}
+          {/* Mega Menu - Custom Implementation */}
+          <Box position="relative">
+            <Button
+              variant="ghost"
+              onMouseEnter={() => setIsMenuOpen(true)}
+              onFocus={() => setIsMenuOpen(true)}
+              onBlur={(e) => {
+                // Delay to allow focus to move to menu items
+                setTimeout(() => {
+                  if (
+                    !e.currentTarget.parentElement
+                      ?.querySelector('[role="menu"]')
+                      ?.contains(document.activeElement)
+                  ) {
+                    setIsMenuOpen(false)
+                  }
+                }, 150)
+              }}
             >
-              <label className="btn btn-link cursor-pointer">
-                Utbildning
-                <MdOutlineKeyboardArrowDown
-                  size={26}
-                  className={`ml-1 transform transition-transform duration-300 ease-in-out ${
-                    isMegaMenuHovered ? "rotate-180" : "rotate-0"
-                  }`}
-                />
-              </label>
-              {/* MegaMenu */}
-              <div
-                onMouseEnter={handleMegaMenuEnter}
-                onMouseLeave={handleMegaMenuLeave}
-                className={`absolute transform -translate-x-1/2 left-1/2 shadow-lg z-10 md:h-auto lg:h-auto w-11/12 sm:w-4/5 md:w-3/4 lg:w-2/3 xl:w-1/2 2xl:w-5/12 3xl:w-2/5 max-w-[660px] rounded-[20px] 
-                gap-[14px] bg-base-100 overflow-auto transition-all duration-300 ease-in-out 
-                ${
-                  isMegaMenuHovered
-                    ? "opacity-100 visible top-[60px] translate-y-0 max-h-[320px] lg:max-h-[420px] h-auto p-4 md:p-6 lg:p-8 shadow-lg pointer-events-auto"
-                    : "opacity-0 invisible top-[60px] -translate-y-2 max-h-0 h-0 pointer-events-none"
-                }`}
+              Utbildning
+              <MdOutlineKeyboardArrowDown
+                style={{
+                  marginLeft: "4px",
+                  transform: isMenuOpen ? "rotate(180deg)" : "rotate(0deg)",
+                  transition: "transform 0.3s ease-in-out",
+                }}
+              />
+            </Button>
+            {isMenuOpen && (
+              <Box
+                role="menu"
+                position="absolute"
+                left="50%"
+                transform="translateX(-50%)"
+                top="100%"
+                mt={2}
+                p={6}
+                borderRadius="20px"
+                boxShadow="xl"
+                bg="white"
+                width={["90vw", "500px", "650px"]}
+                zIndex={50}
+                onMouseEnter={() => setIsMenuOpen(true)}
+                onMouseLeave={() => setIsMenuOpen(false)}
+                onFocus={() => setIsMenuOpen(true)}
+                onBlur={(e) => {
+                  setTimeout(() => {
+                    if (!e.currentTarget.contains(document.activeElement)) {
+                      setIsMenuOpen(false)
+                    }
+                  }, 150)
+                }}
               >
-                <div className="flex flex-col gap-[14px] rounded-lg w-full">
+                <Stack gap={4}>
                   <Link
                     href="/dropshipping"
-                    className="w-full border-[0.2px] border-solid border-[#9b9b9b40] shadow-md rounded-lg"
+                    style={{ display: "block", width: "100%" }}
+                    onClick={() => setIsMenuOpen(false)}
                   >
-                    <div
-                      className="p-2 flex gap-4 rounded-lg transition-shadow duration-200 ease-in-out"
-                      style={{
-                        boxShadow: "0 1px 4px 0 rgba(0, 0, 0, 0.1)",
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.boxShadow =
-                          "0 1px 4px 0 rgba(0, 0, 0, 0.15)"
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.boxShadow =
-                          "0 1px 4px 0 rgba(0, 0, 0, 0.1)"
-                      }}
+                    <Flex
+                      p={2}
+                      gap={4}
+                      _hover={{ bg: "gray.50" }}
+                      borderRadius="lg"
+                      border="1px solid"
+                      borderColor="gray.200"
                     >
-                      <Image
+                      <ChakraImage
                         src="/images/home/graphics/teacher.svg"
-                        alt="Mega menu icon"
-                        className="object-contain"
-                        width={30}
-                        height={30}
-                        priority
+                        alt="Dropshipping"
+                        boxSize="30px"
                       />
-                      <div className="flex flex-col gap-2">
-                        <h2
-                          className="text-sm font-poppins font-semibold text-left break-words"
-                          style={{ lineHeight: "1.2" }}
-                        >
-                          Dropshipping
-                        </h2>
-                        <p
-                          className="text-sm font-poppins text-left text-[#707BA0] break-words"
-                          style={{ lineHeight: "1.1" }}
-                        >
+                      <Box>
+                        <Text fontWeight="semibold">Dropshipping</Text>
+                        <Text fontSize="sm" color="gray.500">
                           Allt du behöver lära dig för lyckas med Dropshipping
                           2026
-                        </p>
-                      </div>
-                    </div>
+                        </Text>
+                      </Box>
+                    </Flex>
                   </Link>
+
                   <Link
                     href="/e-handel"
-                    className="w-full border-[0.2px] border-solid border-[#9b9b9b40] shadow-md rounded-xl"
+                    style={{ display: "block", width: "100%" }}
+                    onClick={() => setIsMenuOpen(false)}
                   >
-                    <div
-                      className="p-2 flex gap-4 rounded-lg transition-shadow duration-200 ease-in-out"
-                      style={{
-                        boxShadow: "0 1px 4px 0 rgba(0, 0, 0, 0.1)",
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.boxShadow =
-                          "0 1px 4px 0 rgba(0, 0, 0, 0.15)"
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.boxShadow =
-                          "0 1px 4px 0 rgba(0, 0, 0, 0.1)"
-                      }}
+                    <Flex
+                      p={2}
+                      gap={4}
+                      _hover={{ bg: "gray.50" }}
+                      borderRadius="lg"
+                      border="1px solid"
+                      borderColor="gray.200"
                     >
-                      <Image
+                      <ChakraImage
                         src="/images/home/graphics/note-2.svg"
-                        alt="Mega menu icon"
-                        className="object-contain"
-                        width={30}
-                        height={30}
-                        priority
+                        alt="E-handel"
+                        boxSize="30px"
                       />
-                      <div className="flex flex-col gap-2">
-                        <h2
-                          className="text-sm font-poppins font-semibold text-left break-words"
-                          style={{ lineHeight: "1.2" }}
-                        >
-                          E-handel
-                        </h2>
-                        <p
-                          className="text-sm font-poppins text-left text-[#707BA0] break-words"
-                          style={{ lineHeight: "1.1" }}
-                        >
-                          Lär dig driva e-handel lönsamt 2026: Online utbildning
-                          på distans
-                        </p>
-                      </div>
-                    </div>
+                      <Box>
+                        <Text fontWeight="semibold">E-handel</Text>
+                        <Text fontSize="sm" color="gray.500">
+                          Lär dig driva e-handel lönsamt 2026
+                        </Text>
+                      </Box>
+                    </Flex>
                   </Link>
-                </div>
-              </div>
-            </li>
+                </Stack>
+              </Box>
+            )}
+          </Box>
 
-            <li onMouseEnter={handleOtherMenuItemEnter}>
-              <Link
-                className="btn btn-link"
-                href="/mentorskap"
-                onClick={() => setOpenSidebar(false)}
-              >
-                Mentorskap
-              </Link>
-            </li>
-            <li onMouseEnter={handleOtherMenuItemEnter}>
-              <Link className="btn btn-link" href="/blogg">
-                Blogg
-              </Link>
-            </li>
-          </ul>
-        </nav>
-        {/* CTA Button: Only render when pathname is not "/utbildningar", "/ebocker", or a [slug] dynamic page */}
-        <div className="hidden mt-2 mb-5 lg:mt-8 lg:flex items-center justify-center">
+          <Link href="/mentorskap">Mentorskap</Link>
+          <Link href="/blogg">Blogg</Link>
+        </Flex>
+
+        {/* DESKTOP CTA BUTTON */}
+        <Flex display={["none", null, "flex"]} align="center">
           {!isSlugPage &&
           pathname !== "/utbildningar" &&
           pathname !== "/ebocker" ? (
-            <button
+            <Button
+              color="white"
+              bg="#225AEA"
+              px={3.6}
+              py={1.8}
+              fontSize="xs"
+              className="font-jakarta px-2"
+              borderRadius="7px"
+              boxShadow="inset 11px 1px 19.4px rgba(255,255,255,0.3),
+                         inset -4px 0px 5.8px rgba(255,255,255,0.25)"
               onClick={() => {
+                const title = getButtonTitle(pathname)
+
                 if (pathname === "/") {
                   router.push("/utbildningar")
                   return
                 }
-                const buttonTitle = getButtonTitle(pathname)
 
-                if (buttonTitle === "Ansök till Mentorskap") {
+                if (title === "Ansök till Mentorskap") {
                   window.open(
                     "https://form.jotform.com/checkifiedse/formulr",
                     "_blank"
                   )
-                } else if (!excludedPaths.includes(pathname)) {
-                  openModal()
-                } else {
-                  window.open(
-                    "https://buy.stripe.com/3cscO09iSdoBgVOeUZ",
-                    "_blank"
-                  )
+                  return
                 }
-              }}
-              className="text-[#fff] bg-[#225AEA] font-jakarta h-full px-6 py-3 rounded-[7px] shadow-inner button-shadow"
-              style={{
-                boxShadow: `
-          inset 11px 1px 19.4px 0px rgba(255, 255, 255, 0.3), 
-          inset -4px 0px 5.8px 0px rgba(255, 255, 255, 0.25)
-        `,
+
+                if (!excludedPaths.includes(pathname)) {
+                  openModal()
+                  return
+                }
+
+                window.open(
+                  "https://buy.stripe.com/3cscO09iSdoBgVOeUZ",
+                  "_blank"
+                )
               }}
             >
-              <p className="text-base font-semibold font-jakarta">
-                {getButtonTitle(pathname)}
-              </p>
-            </button>
+              {getButtonTitle(pathname)}
+            </Button>
           ) : (
-            <div className="hidden mt-2 mb-5 lg:mt-8 lg:flex items-center justify-center w-40">
-              {/* Empty space if needed */}
-            </div>
+            <Box width="40px" />
           )}
-        </div>
+        </Flex>
 
-        <button className="lg:hidden rounded-md text-primary bg-base-200">
-          <Hamburger
-            size={26}
-            onToggle={(toggled) =>
-              toggled ? setOpenSidebar(true) : setOpenSidebar(false)
-            }
-          />
-        </button>
-      </div>
+        {/* MOBILE HAMBURGER */}
+        <IconButton
+          aria-label="Open menu"
+          display={["flex", null, "none"]}
+          onClick={() => setOpenSidebar(true)}
+          bg="#E8F2FF"
+          borderRadius="8px"
+        >
+          <MdMenu color="#2E56F5" size={24} />
+        </IconButton>
+      </Flex>
 
-      {/* Modal overlay for ContractForm */}
-      <div
-        data-theme="light"
-        className={`fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-25 backdrop-blur-sm p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full justify-center items-center transition ${
-          showModal ? "flex" : "hidden"
-        }`}
-        onClick={closeModal}
-      >
-        <ContractForm onClose={closeModal} />
-      </div>
-    </header>
+      {/* MOBILE SIDEBAR */}
+      <AnimatePresence>
+        {openSidebar && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              style={{
+                position: "fixed",
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                backgroundColor: "rgba(0, 0, 0, 0.5)",
+                zIndex: 40,
+              }}
+              transition={{ duration: 0.3 }}
+              onClick={() => setOpenSidebar(false)}
+            />
+            <motion.div
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              style={{
+                position: "fixed",
+                top: 0,
+                right: 0,
+                bottom: 0,
+                width: "80%",
+                maxWidth: "400px",
+                backgroundColor: "white",
+                boxShadow:
+                  "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+                zIndex: 50,
+                padding: "24px",
+              }}
+              transition={{
+                type: "spring",
+                damping: 25,
+                stiffness: 200,
+              }}
+            >
+              <Flex justify="space-between" align="center" mb={6}>
+                <Heading size="3xl" font="jakarta" fontWeight="bold">
+                  Meny
+                </Heading>
+                <IconButton
+                  aria-label="Close menu"
+                  variant="ghost"
+                  onClick={() => setOpenSidebar(false)}
+                >
+                  <MdClose />
+                </IconButton>
+              </Flex>
+              <Stack gap={4} align="start">
+                <Box
+                  px={4}
+                  py={2}
+                  borderRadius="md"
+                  width="100%"
+                  _hover={{
+                    bg: "#225AEA",
+                    color: "white",
+                  }}
+                  transition="all 0.2s"
+                >
+                  <Link
+                    href="/om-oss"
+                    onClick={() => setOpenSidebar(false)}
+                    style={{ color: "inherit", textDecoration: "none" }}
+                  >
+                    Om oss
+                  </Link>
+                </Box>
+                <Box
+                  px={4}
+                  py={2}
+                  borderRadius="md"
+                  width="100%"
+                  _hover={{
+                    bg: "#225AEA",
+                    color: "white",
+                  }}
+                  transition="all 0.2s"
+                >
+                  <Link
+                    href="/dropshipping"
+                    onClick={() => setOpenSidebar(false)}
+                    style={{ color: "inherit", textDecoration: "none" }}
+                  >
+                    Dropshipping
+                  </Link>
+                </Box>
+                <Box
+                  px={4}
+                  py={2}
+                  borderRadius="md"
+                  width="100%"
+                  _hover={{
+                    bg: "#225AEA",
+                    color: "white",
+                  }}
+                  transition="all 0.2s"
+                >
+                  <Link
+                    href="/e-handel"
+                    onClick={() => setOpenSidebar(false)}
+                    style={{ color: "inherit", textDecoration: "none" }}
+                  >
+                    E-handel
+                  </Link>
+                </Box>
+                <Box
+                  px={4}
+                  py={2}
+                  borderRadius="md"
+                  width="100%"
+                  _hover={{
+                    bg: "#225AEA",
+                    color: "white",
+                  }}
+                  transition="all 0.2s"
+                >
+                  <Link
+                    href="/mentorskap"
+                    onClick={() => setOpenSidebar(false)}
+                    style={{ color: "inherit", textDecoration: "none" }}
+                  >
+                    Mentorskap
+                  </Link>
+                </Box>
+                <Box
+                  px={4}
+                  py={2}
+                  borderRadius="md"
+                  width="100%"
+                  _hover={{
+                    bg: "#225AEA",
+                    color: "white",
+                  }}
+                  transition="all 0.2s"
+                >
+                  <Link
+                    href="/blogg"
+                    onClick={() => setOpenSidebar(false)}
+                    style={{ color: "inherit", textDecoration: "none" }}
+                  >
+                    Blogg
+                  </Link>
+                </Box>
+              </Stack>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+
+      {/* CONTRACT FORM MODAL */}
+      {isModalOpen && (
+        <Box
+          position="fixed"
+          top="0"
+          left="0"
+          right="0"
+          bottom="0"
+          bg="blackAlpha.300"
+          backdropFilter="blur(4px)"
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+          zIndex={100}
+          onClick={closeModal}
+        >
+          <ContractForm onClose={closeModal} />
+        </Box>
+      )}
+    </Box>
   )
 }

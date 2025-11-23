@@ -14,7 +14,7 @@ const MentorshipCard = () => {
 
   return (
     <div className="p-2 sm:p-4 mt-6 sm:mt-10">
-      <div className="bg-primary rounded-2xl sm:rounded-3xl p-3 sm:p-4 shadow-2xl">
+      <div className="bg-primary rounded-2xl sm:rounded-3xl p-3 sm:p-4">
         {/* Top card */}
         <div className="flex flex-col items-center justify-between rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 mb-4 bg-white">
           {/* Header */}

@@ -3,6 +3,7 @@ import "@/styles/globals.scss"
 import "@/styles/annonser.css"
 
 import { useSession, SessionProvider } from "next-auth/react"
+import { ChakraProvider, defaultSystem } from "@chakra-ui/react"
 
 import type { AppProps } from "next/app"
 import Script from "next/script"
@@ -138,9 +139,11 @@ export default function App({
           style={{ display: "none", visibility: "hidden" }}
         ></iframe>
       </noscript>
-      <SessionProvider session={pageProps.session}>
-        <Component {...pageProps} />
-      </SessionProvider>
+      <ChakraProvider value={defaultSystem}>
+        <SessionProvider session={pageProps.session}>
+          <Component {...pageProps} />
+        </SessionProvider>
+      </ChakraProvider>
     </>
   )
 }

@@ -23,7 +23,7 @@ const MentorshipStaticImage = () => {
         </h2>
 
         {/* Subtext */}
-        <p className="max-w-[280px] sm:max-w-[450px] lg:max-w-[590px] font-medium text-white text-xs sm:text-sm md:text-base leading-relaxed mb-6 sm:mb-8 font-inter">
+        <p className="max-w-[280px] sm:max-w-[450px] md:max-w-[590px] font-medium text-white text-xs sm:text-sm md:text-base leading-relaxed mb-6 sm:mb-8 font-inter">
           Vår mentorskapstjänst hjälper dig att ta kontroll över din framtid. Få
           <br className="hidden sm:block" />
           <span className="sm:hidden"> </span>
