@@ -131,8 +131,8 @@ export default function Blogg() {
                 <h1 className="font-bold font-inter text-xl mb-2 hover:text-primary hover:underline transition-all duration-200">
                   {data.title}
                 </h1>
-                <p className="text-subtitle font-inter mb-3">{data.subtitle}</p>
-                <p className="text-subtitl font-inter text-sm mt-auto flex items-center gap-2">
+                <p className="text-black font-inter mb-3">{data.subtitle}</p>
+                <p className="text-black font-inter text-sm mt-auto flex items-center gap-2">
                   <HiOutlineClock size={20} />
                   {data.date}
                 </p>

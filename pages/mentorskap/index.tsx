@@ -17,15 +17,23 @@ import SuccessStoriesGrid from "@/components/parts/Mentorship_Success"
 import MentorshipSubEhandler from "@/components/parts/MentorshipSub_2"
 import MentorshipProducts from "@/components/parts/MentorshipProducts"
 import MentorshipCard from "./mentorship-card"
+import TrustpilotScroll from "@/components/parts/TrustpilotScroll"
+
+import { useState } from "react"
+import ContractForm from "@/components/ContractForm"
 
 const MentorshipPage = () => {
+  const [showModal, setShowModal] = useState(false)
+  const openModal = () => setShowModal(true)
+  const closeModal = () => setShowModal(false)
+
   return (
     <Layout headTitle="Mentorskap">
       <section className="w-full flex flex-col items-center justify-center h-full">
-        <MentorshipHero />
+        <MentorshipHero onCtaClick={openModal} />
         <MentorshipHeroSub />
         <MentorshipMail />
-        <MentorshipButton size="small" />
+        <MentorshipButton size="small" onClick={openModal} />
         <MentorshipSubEhandler />
         <MentorshipProducts />
         <section className="w-full flex flex-col items-center justify-center h-full">
@@ -51,16 +59,26 @@ const MentorshipPage = () => {
             Totalt värde: 155 000 kr
           </p>
         </div>
-        <MentorshipDetailsText />
+        <MentorshipDetailsText onCtaClick={openModal} />
         <SuccessStoriesGrid />
         <MentorshipStaticImage />
         <MentorWhyThisWorksSection />
-        <MentorshipNextStep />
+        <MentorshipNextStep onCtaClick={openModal} />
         <MentorshipSteps />
         <MentorshipGuarantee />
-        <MentorshipPayout />
+        <MentorshipPayout onCtaClick={openModal} />
         <MentorshipQuestions />
       </section>
+
+      {/* Modal Overlay */}
+      {showModal && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+          onClick={closeModal}
+        >
+          <ContractForm onClose={closeModal} />
+        </div>
+      )}
     </Layout>
   )
 }

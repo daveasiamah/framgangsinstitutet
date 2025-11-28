@@ -3,7 +3,13 @@ import ScrollReveal from "../transition/ScrollReveal"
 import { useEffect, useRef } from "react"
 import Link from "next/link"
 
-const MentorshipHero = () => {
+interface MentorshipHeroProps {
+  onCtaClick?: () => void
+}
+
+import MentorshipButton from "./Mentorship_Button"
+
+const MentorshipHero = ({ onCtaClick }: MentorshipHeroProps) => {
   const vidalyticsRef = useRef<HTMLDivElement>(null)
 
   // useEffect(() => {
@@ -96,17 +102,12 @@ const MentorshipHero = () => {
         </div>
       </div>
       <div className="relative mt-5 px-8">
-        <Link
-          href="https://checkout.revolut.com/payment-link/d3eb03dc-e14d-4695-a085-a01903b02e54"
-          target="_blank"
-          rel="noopener noreferrer"
+        <MentorshipButton
+          text={"Ansök Här >"}
+          size="medium"
           className="relative w-full h-full bg-[#225aea] font-jakarta rounded-[9px] text-white flex items-center justify-center py-2 px-10"
-        >
-          Ansök Här{" "}
-          <span className="ml-2 text-lg font-jakarta font bold text-white">
-            {">"}
-          </span>
-        </Link>
+          onClick={onCtaClick}
+        />
       </div>
     </div>
   )

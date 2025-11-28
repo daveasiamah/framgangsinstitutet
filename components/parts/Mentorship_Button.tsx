@@ -18,6 +18,8 @@ const MentorshipButton = ({
   variant = "primary",
   size = "medium",
   className = "mt-5",
+  onClick,
+  ...rest
 }: ReusableButtonProps) => {
   // Size configurations
   const sizeClasses: Record<ButtonSize, string> = {
@@ -64,6 +66,21 @@ const MentorshipButton = ({
         ${disabledClasses}
         ${className}
     `.trim()
+
+  if (onClick) {
+    return (
+      <button
+        type="button"
+        className={combinedClasses}
+        style={boxShadowStyle}
+        disabled={disabled}
+        onClick={onClick}
+        {...rest}
+      >
+        {text}
+      </button>
+    )
+  }
 
   return (
     <Link

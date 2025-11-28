@@ -29,7 +29,7 @@ type BlogPost = {
   authorProfile: string
 }
 
-export default function Blogg({ blogPost, locale }: Props) {
+export default function Blog({ blogPost, locale }: Props) {
   const t = locale === "en" ? en : sv
 
   return (
@@ -41,7 +41,7 @@ export default function Blogg({ blogPost, locale }: Props) {
             <li className="mr-2">
               <Link
                 href={`../../${locale}/`}
-                className="text-gray-400 hover:text-gray-700"
+                className="text-gray-900 hover:text-gray-700"
               >{`${t.blogData.blogNav.home}`}</Link>
             </li>
             <li className="mr-2">
@@ -52,7 +52,7 @@ export default function Blogg({ blogPost, locale }: Props) {
             <li className="mr-2">
               <Link
                 href={`../../${locale}/blogg`}
-                className="text-gray-400 hover:text-gray-700"
+                className="text-gray-900 hover:text-gray-700"
               >{`${t.blogData.blogTitle}`}</Link>
             </li>
             <li className="mr-2">
@@ -84,14 +84,14 @@ export default function Blogg({ blogPost, locale }: Props) {
                   className="w-16 h-16 rounded-full"
                 />
                 <div>
-                  <p className="text-subtitle font-inter text-sm flex items-center">
+                  <p className="text-black font-inter text-sm flex items-center">
                     {blogPost.author}
                   </p>
                 </div>
               </div>
             )}
             <div className="flex items-center justify-center gap-4">
-              <p className="text-subtitle text-sm font-inter flex items-center gap-2 ml-2">
+              <p className="text-black text-sm font-inter flex items-center gap-2 ml-2">
                 <HiOutlineClock size={20} />
                 {blogPost.date}
               </p>

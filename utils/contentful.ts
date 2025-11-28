@@ -94,7 +94,7 @@ export async function fetchCourseBySlug(slug: string) {
         price: entry.fields.price,
         slug: entry.fields.slug,
         purchaseLink: entry.fields.purchaseLink,
-        tags: entry.fields.tags,
+        tags: entry.fields.tags || null,
         videoInfo: entry.fields.videoInfo.videoInfo || {
           count: 0,
           totalTime: 0,
@@ -129,7 +129,7 @@ export async function getCourses() {
         imageUrl: `https:${entry.fields.imageUrl?.fields?.file?.url}`,
         price: entry.fields.price,
         slug: entry.fields.slug,
-        tags: entry.fields.tags,
+        tags: entry.fields.tags || null,
         purchaseLink: entry.fields.purchaseLink,
         videoInfo: entry.fields.videoInfo.videoInfo || {
           count: 0,

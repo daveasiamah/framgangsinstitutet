@@ -1,5 +1,3 @@
-// pages/utbildningar/[slug].tsx
-
 import { fetchEbookBySlug } from "@/utils/contentful"
 import { Ebook } from "@/components/blocks/ebooks-blocks/types"
 import Image from "next/image"

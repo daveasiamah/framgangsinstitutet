@@ -3,10 +3,10 @@ import { MainFAQ } from "./MainFAQ"
 import { HomePageFaqData } from "@/data/data"
 import Accordion from "./Accordion_Home"
 
-function Mentorship_Questions() {
+function MentorshipQuestions() {
   return (
     <>
-      <div className="flex items-center rounded-lg bg-[#f3f6fe] h-[26px] justify-center align-middle self-center px-3 inset-3 shadow-inner max-w-[178px] mb-4 mt-8">
+      <div className="flex items-center rounded-lg bg-[#f3f6fe] h-[26px] justify-center align-middle self-center px-3 inset-3 shadow-inner max-w-[178px] mb-4">
         <p className="font-inter text-xs font-medium text-[#235AE9]">FAQs</p>
       </div>
       <h1 className="font-semibold font-jakarta text-[24px] md:text-[48px] mb-6 md:mb-10 lg:mb-10 text-center">
@@ -19,4 +19,4 @@ function Mentorship_Questions() {
   )
 }
 
-export default Mentorship_Questions
+export default MentorshipQuestions

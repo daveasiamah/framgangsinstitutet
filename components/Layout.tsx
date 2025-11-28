@@ -21,7 +21,7 @@ export default function Layout({ headTitle, isFullWidth, children }: Props) {
         className="flex flex-col min-h-screen overflow-hidden relative"
       >
         <Header setOpenSidebar={setOpenSidebar} openSidebar={openSidebar} />
-        <main className="flex-grow pt-header-height bg-base-100">
+        <main className="flex-grow pt-[80px] bg-base-100">
           <div className={`${isFullWidth ? "" : "container"} mx-auto isolate`}>
             {children}
           </div>

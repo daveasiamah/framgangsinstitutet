@@ -1,6 +1,10 @@
 import MentorshipButton from "./Mentorship_Button"
 
-const MentorshipDetailsText = () => {
+interface MentorshipDetailsTextProps {
+  onCtaClick?: () => void
+}
+
+const MentorshipDetailsText = ({ onCtaClick }: MentorshipDetailsTextProps) => {
   return (
     <div className="w-full  max-w-[1050px] mx-auto px-4 sm:px-6 lg:px-0 mt-10 mb-10">
       <div className="text-black text-sm sm:text-base lg:text-lg leading-relaxed font-inter">
@@ -43,7 +47,11 @@ const MentorshipDetailsText = () => {
           </p>
         </div>
       </div>
-      <MentorshipButton className="mx-0 mt-7 text-xs" size="small" />
+      <MentorshipButton
+        className="mx-0 mt-7 text-xs"
+        size="small"
+        onClick={onCtaClick}
+      />
     </div>
   )
 }

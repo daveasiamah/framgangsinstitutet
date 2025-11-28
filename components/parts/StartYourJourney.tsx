@@ -1,34 +1,16 @@
+import React from "react"
 import Image from "next/image"
 import Link from "next/link"
-import React from "react"
 
-interface MentorshipPayoutProps {
-  onCtaClick?: () => void
-}
-
-import MentorshipButton from "./Mentorship_Button"
-
-const MentorshipPayout = ({ onCtaClick }: MentorshipPayoutProps) => {
+function StartYourJourney() {
   return (
     <div className="w-full max-w-[1258px] bg-[#225AEA] bg-[url(/images/mentorship/mentorship-products/bg-mesh.svg)] bg-cover rounded-[20px] sm:rounded-[32px] mx-auto px-2 sm:px-4 py-4 sm:py-4 mt-10 mb-4">
       <div className="relative w-full max-w-[1170px] mx-auto min-h-[240px] sm:min-h-[260px] md:h-[366px] flex flex-col items-center justify-center">
-        {/* Icon placeholder */}
-        <div className="w-[120px] sm:w-[156px] h-[28px] sm:h-[36px] mb-2 sm:mb-3 text-white">
-          <Image
-            src={
-              "/images/mentorship/mentorship-products/checkified-logo-white.svg"
-            }
-            alt="checkified Icon"
-            width={156}
-            height={36}
-            className="w-[120px] sm:w-[156px] h-[28px] sm:h-[36px]"
-          />
-        </div>
 
         <div className="flex flex-col items-center px-2">
           {/* Main heading */}
-          <h3 className="max-w-[499px] font-bold text-white text-sm sm:text-base md:text-xl lg:text-2xl leading-tight mb-3 sm:mb-4 font-jakarta text-center px-2">
-            Gå med Dropshipping Mentorskap idag!
+          <h3 className="max-w-[499px] font-bold text-white text-sm sm:text-base md:text-xl lg:text-3xl leading-tight mb-3 sm:mb-4 font-jakarta text-center px-2">
+            Börja din resa redan idag.
           </h3>
 
           {/* Subtext */}
@@ -98,16 +80,17 @@ const MentorshipPayout = ({ onCtaClick }: MentorshipPayoutProps) => {
           </p>
         </div>
         {/* CTA Button */}
-        <MentorshipButton
-          text="Starta din resa nu →"
-          size="small"
-          variant="outline"
-          className="bg-white text-[#4E7BEE] font-semibold text-xs sm:text-sm mt-3 sm:mt-4 px-5 sm:px-6 py-2 rounded-lg hover:bg-gray-100 transition-colors duration-200 font-jakarta whitespace-nowrap"
-          onClick={onCtaClick}
-        />
+        <Link
+          href="https://checkout.revolut.com/payment-link/d3eb03dc-e14d-4695-a085-a01903b02e54"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-white text-[#000000] font-semibold text-xs sm:text-sm mt-3 sm:mt-4 px-5 sm:px-6 py-2 rounded-lg hover:bg-gray-100 transition-colors duration-200 font-jakarta whitespace-nowrap"
+        >
+          Starta din resa nu →
+        </Link>
       </div>
     </div>
   )
 }
 
-export default MentorshipPayout
+export default StartYourJourney

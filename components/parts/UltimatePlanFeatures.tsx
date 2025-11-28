@@ -1,0 +1,138 @@
+import React from "react"
+import Image from "next/image"
+import { CheckCircle2 } from "lucide-react"
+
+const features = [
+  { text: "Omedelbar tillgång", highlight: "till Checkified" },
+  { text: "Världsledande", highlight: "programvara för onlinekurser" },
+  { text: "45+ e-handelsavsnitt", highlight: "inom olika moduler" },
+  { text: "Privat community med över", highlight: "1000+ medlemmar" },
+  { text: "25 000+ förredigerade videor", highlight: "och klipp" },
+  { text: "Färdigbyggda webbplatsfunnels", highlight: "och mallar" },
+  { text: "Inbyggda 2025", highlight: "AI-instruktörer" },
+]
+
+function UltimatePlanFeatures() {
+  return (
+    <div
+      className="p-2 sm:p-4 mt-2 sm:mt-2 bg-[url('/images/mentorship/mentorship-products/
+    bg-mesh.svg')] bg-cover rounded-[20px] sm:rounded-[32px]"
+    >
+      <div className="bg-primary rounded-2xl sm:rounded-3xl p-3 sm:p-4">
+        {/* Top card */}
+        <div className="flex flex-col items-center justify-between rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 mb-4 bg-white">
+          {/* Header */}
+          <div className="flex items-center justify-center gap-2 sm:gap-3 mb-6 sm:mb-10">
+            <Image
+              src="/icons/checkified-icon-blue.svg"
+              alt=""
+              width={28}
+              height={28}
+              className="sm:w-[35px] sm:h-[35px]"
+            />
+            <h2 className="text-lg sm:text-2xl md:text-3xl font-jakarta font-bold text-[#1C46B0] leading-tight">
+              Dropshipping Mentorskap
+            </h2>
+          </div>
+
+          {/* Subtitle */}
+          <div className="flex items-center rounded-lg bg-[#f3f6fe] min-h-[26px] justify-center align-middle self-center px-2 sm:px-4 py-1.5 sm:py-2 inset-2 shadow-inner max-w-[434px] md:max-w-full mb-4 w-full">
+            <p className="font-inter text-[10px] sm:text-xs md:text-sm text-[#235AE9] text-center leading-tight px-1">
+              Få tillgång till din plug-and-play-onlineverksamhet
+            </p>
+          </div>
+
+          {/* CTA */}
+          <button onClick={() => { }} className="w-full bg-primary hover:bg-primary-deep text-white text-sm sm:text-md py-2.5 sm:py-2 md:py-2.5 rounded-xl mb-4 sm:mb-6 font-medium">
+            Ansök till Mentorskap →
+          </button>
+
+          {/* Rating */}
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
+            <span className="text-foreground font-inter text-xs sm:text-sm">
+              Strålande
+            </span>
+            <div className="flex gap-1">
+              <Image
+                src="/icons/trustpilot-stars.svg"
+                width={80}
+                height={14}
+                alt="trustpilot stars"
+                className="sm:w-[100px] sm:h-[17px] md:w-[120px] md:h-[20px]"
+              />
+            </div>
+            <span className="text-foreground font-inter text-xs sm:text-sm">
+              4.8 av 5
+            </span>
+          </div>
+        </div>
+
+        {/* Feature bar */}
+        <div className="bg-primary/90 border border-white rounded-full px-2 sm:px-4 md:px-6 py-3 sm:py-4 mb-4">
+          <div className="flex items-center border-1 border-white justify-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 text-white font-inter overflow-hidden">
+            <div className="flex items-center gap-1 sm:gap-1.5 md:gap-2 flex-shrink-0">
+              <Image
+                src="/icons/bolt.svg"
+                width={20}
+                height={18}
+                alt="bolt"
+                className="w-[20px] h-[18px]"
+              />
+              <span className="font-jakarta text-[9px] sm:text-[10px] md:text-xs lg:text-sm text-white whitespace-nowrap">
+                Få omedelbar åtkomst
+              </span>
+            </div>
+
+            <div className="flex items-center gap-1 sm:gap-1.5 md:gap-2 flex-shrink-0">
+              <Image
+                src="/icons/handshake.svg"
+                width={20}
+                height={18}
+                alt="handshake"
+                className="w-[20px] h-[18px]"
+              />
+              <span className="font-jakarta text-[9px] sm:text-[10px] md:text-xs lg:text-sm text-white whitespace-nowrap">
+                24/7 support
+              </span>
+            </div>
+
+            <div className="flex items-center gap-1 sm:gap-1.5 md:gap-2 flex-shrink-0">
+              <Image
+                src="/icons/hand.svg"
+                width={20}
+                height={18}
+                alt="hand"
+                className="w-[20px] h-[18px]"
+              />
+              <span className="font-jakarta text-[9px] sm:text-[10px] md:text-xs lg:text-sm text-white whitespace-nowrap">
+                Livstids tillgång
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {/* Feature list */}
+        <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-4 shadow-lg">
+          <ul className="space-y-3 sm:space-y-4">
+            {features.map((f, i) => (
+              <li
+                key={i}
+                className="flex items-start gap-2 sm:gap-3 text-[#225AEA]"
+              >
+                <CheckCircle2 className="w-5 h-5 sm:w-6 sm:h-6 text-[#225AEA] flex-shrink-0 mt-0.5" />
+                <p className="text-[#225AEA] text-sm sm:text-base font-inter leading-relaxed">
+                  {f.text}{" "}
+                  <span className="font-bold font-inter text-[#225AEA]">
+                    {f.highlight}
+                  </span>
+                </p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default UltimatePlanFeatures

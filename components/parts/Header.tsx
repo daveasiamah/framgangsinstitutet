@@ -76,16 +76,17 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
       left="0"
       right="0"
       zIndex={20}
-      bg="white"
+      bg="#FFFFFF"
       height="80px"
     >
       <Flex
         height="100%"
         align="center"
         justify="space-between"
-        px={4}
-        maxW="container.xl"
+        className="container"
+        px={[4, null, 6, 10]}
         mx="auto"
+        bg={"white"}
       >
         {/* Logo */}
         <Link href="/">
@@ -118,9 +119,10 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
               onFocus={() => setIsMenuOpen(true)}
               onBlur={(e) => {
                 // Delay to allow focus to move to menu items
+                const currentTarget = e.currentTarget
                 setTimeout(() => {
                   if (
-                    !e.currentTarget.parentElement
+                    !currentTarget?.parentElement
                       ?.querySelector('[role="menu"]')
                       ?.contains(document.activeElement)
                   ) {
@@ -235,39 +237,16 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
             <Button
               color="white"
               bg="#225AEA"
-              px={3.6}
-              py={1.8}
-              fontSize="xs"
-              className="font-jakarta px-2"
+              px={4}
+              py={2}
+              fontSize="sm"
+              fontWeight="semibold"
+              className="font-poppins"
               borderRadius="7px"
-              boxShadow="inset 11px 1px 19.4px rgba(255,255,255,0.3),
-                         inset -4px 0px 5.8px rgba(255,255,255,0.25)"
-              onClick={() => {
-                const title = getButtonTitle(pathname)
-
-                if (pathname === "/") {
-                  router.push("/utbildningar")
-                  return
-                }
-
-                if (title === "Ansök till Mentorskap") {
-                  window.open(
-                    "https://form.jotform.com/checkifiedse/formulr",
-                    "_blank"
-                  )
-                  return
-                }
-
-                if (!excludedPaths.includes(pathname)) {
-                  openModal()
-                  return
-                }
-
-                window.open(
-                  "https://buy.stripe.com/3cscO09iSdoBgVOeUZ",
-                  "_blank"
-                )
+              _hover={{
+                bg: "#1a4aca",
               }}
+              onClick={openModal}
             >
               {getButtonTitle(pathname)}
             </Button>

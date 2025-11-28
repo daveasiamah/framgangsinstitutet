@@ -63,71 +63,66 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
   }
   const onSubmit: SubmitHandler<FormValues> = (data) => sendData(data)
 
-  const inputWrapperClass = "relative rounded-[8px] flex items-center"
-
-  const inputClass =
-    "input w-full pl-10 pr-4 py-2 font-inter text-[#4F4F4F] focus:outline-0 bg-[#F6F6F6] border-1 border-[#AAA1A1] text-2xl placeholder:text-[#4F4F4F]"
-
+  // Modal overlay and card styling to match screenshot
   return (
-    <div
-      className="relative bg-white py-4 lg:py-10 px-6 lg:px-10 w-full max-w-[360px] md:max-w-[740px] box-content rounded-lg"
-      onClick={(e) => e.stopPropagation()}
-    >
-      <Image
-        src="/icons/close.svg"
-        alt="close"
-        width={20}
-        height={20}
-        className="absolute top-4 right-4 cursor-pointer"
-        onClick={() => {
-          setAPIErrors(null)
-          onClose()
-        }}
-      />
-      <div className="w-full">
-        <div className="flex-col justify-center items-center">
-          <div className="flex flex-row align-middle gap-2 justify-center items-center">
-            <Image
-              src="/images/checkified-new-logo-dark.svg"
-              alt="logo"
-              width={235}
-              height={64}
-              className="object-cover h-[64px] w-[235px]"
-            />
-          </div>
-
-          <div className="flex items-center text-center justify-center gap-2 text-lg lg:text-xl h-12 mt-8">
-            <h1 className="font-jakarta font-extrabold max-w-[342px] text-[18px] md:text-[32px] text-[#151e3a]">
-              Se vår kostnadsfria introduktionsguide!
-            </h1>
-          </div>
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#F4F4F6] bg-opacity-100">
+      <div
+        className="relative bg-white p-5 md:p-9 lg:p-[54px] w-full max-w-[360px] md:max-w-[740px] box-content rounded-2xl shadow-xl"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <button
+          type="button"
+          className="absolute top-6 right-6 md:top-8 md:right-8 text-gray-400 hover:text-gray-600 text-3xl md:text-4xl"
+          onClick={() => {
+            setAPIErrors(null)
+            onClose()
+          }}
+          aria-label="Stäng"
+        >
+          ×
+        </button>
+        <div className="w-full flex flex-col items-center">
+          <Image
+            src="/images/checkified-new-logo-dark.svg"
+            alt="logo"
+            width={235}
+            height={64}
+            className="object-cover h-[64px] w-[235px] mb-6"
+          />
+          <h1 className="font-jakarta font-extrabold text-center max-w-[480px] text-[22px] md:text-[32px] text-[#151e3a] mb-8">
+            Se vår kostnadsfria
+            <br className="hidden md:block" /> introduktionsguide!
+          </h1>
         </div>
         <form
           onSubmit={handleSubmit(onSubmit)}
           action=""
-          className="flex flex-col gap-4 mt-4"
+          className="flex flex-col gap-5"
         >
           {/* Error Alert */}
-          <div className="text-red-500 text-xs">
-            {APIErrors && APIErrors.message}
-          </div>
+          {APIErrors && (
+            <div className="text-red-500 text-xs mb-2 text-center">
+              {APIErrors.message}
+            </div>
+          )}
           {/* First Name */}
-          <div className="form-control w-full">
-            <label className="text-[#4F4F4F] font-inter font-base">
+          <div className="w-full">
+            <label className="block text-[#4F4F4F] font-inter font-medium mb-1 text-base">
               Förnamn
             </label>
-            <div className={inputWrapperClass}>
-              <Image
-                src="/icons/user-square.svg"
-                alt="user"
-                width={24}
-                height={24}
-                className="absolute left-3"
-              />
+            <div className="relative">
+              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
+                <Image
+                  src="/icons/user-square.svg"
+                  alt="user"
+                  width={24}
+                  height={24}
+                />
+              </span>
               <input
                 type="text"
                 placeholder="Ange ditt förnamn"
-                className={inputClass}
+                className="w-full pl-11 pr-4 py-3 rounded-lg bg-[#F6F6F6] border border-[#AAA1A1] text-base font-inter text-[#4F4F4F] placeholder-[#A0A0A0] focus:outline-none focus:ring-2 focus:ring-[#3E6FED]"
                 {...register("name")}
               />
             </div>
@@ -136,22 +131,23 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
             )}
           </div>
           {/* Email */}
-          <div className="form-control w-full">
-            <label className="text-[#4F4F4F] font-inter font-base">
+          <div className="w-full">
+            <label className="block text-[#4F4F4F] font-inter font-medium mb-1 text-base">
               E-postadress
             </label>
-            <div className={inputWrapperClass}>
-              <Image
-                src="/icons/post-message.svg"
-                alt="email"
-                width={24}
-                height={24}
-                className="absolute left-3"
-              />
+            <div className="relative">
+              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
+                <Image
+                  src="/icons/post-message.svg"
+                  alt="email"
+                  width={24}
+                  height={24}
+                />
+              </span>
               <input
                 type="email"
                 placeholder="Din e-postadress"
-                className={inputClass}
+                className="w-full pl-11 pr-4 py-3 rounded-lg bg-[#F6F6F6] border border-[#AAA1A1] text-base font-inter text-[#4F4F4F] placeholder-[#A0A0A0] focus:outline-none focus:ring-2 focus:ring-[#3E6FED]"
                 {...register("email")}
               />
             </div>
@@ -161,14 +157,18 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
               </p>
             )}
           </div>
-          <div className="font-inter flex flex-col gap-2">
+          <div className="font-inter flex flex-col gap-1 mt-2 mb-2">
             <p className="text-sm text-[#4F4F4F]">
               Vill du lyckas inom e-handel på under 30 minuter?
             </p>
             <p className="text-sm text-[#4F4F4F]">
               Genom att kolla på våra kostnadsfria introguide så godkänner jag
               Checkified{" "}
-              <Link href="/gdpr" className="underline">
+              <Link
+                href="/gdpr"
+                className="underline"
+                style={{ color: "#4F545A" }}
+              >
                 GDPR Policy
               </Link>
               .
@@ -177,9 +177,10 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
           <button
             type="submit"
             disabled={!isDirty || !isValid}
-            className="font-inter flex items-center justify-center self-end w-[100px] md:w-[190px] max-w-[190px] btn btn-primary mt-4"
+            className="font-inter font-semibold flex items-center justify-center w-full md:w-auto md:self-end px-8 py-3 rounded-lg text-white text-base md:text-lg mt-2 shadow-sm transition-colors
+              bg-[#3E6FED] hover:bg-[#225AEA] disabled:bg-[#AEBEE3]"
           >
-            <p className="text-sm text-white">Se gratis introguide!</p>
+            Se gratis introguide!
           </button>
         </form>
       </div>

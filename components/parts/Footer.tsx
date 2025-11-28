@@ -105,7 +105,7 @@ export default function Footer({}: Props) {
                 </li>
                 <li>
                   <Link
-                    href="/blogg"
+                    href="/blog"
                     className="font-inter text-[12px] sm:text-[14px] md:text-base"
                   >
                     Blogg
@@ -138,7 +138,7 @@ export default function Footer({}: Props) {
               <ul className="space-y-2 flex flex-col gap-2 sm:gap-3">
                 <li>
                   <Link
-                    href="/butiker"
+                    href="/terms-of-service"
                     className="font-inter text-[12px] sm:text-[14px] md:text-base"
                   >
                     Allmänna villkor
@@ -154,10 +154,10 @@ export default function Footer({}: Props) {
                 </li>
                 <li>
                   <Link
-                    href="/integritetspolicy"
+                    href="/vsl"
                     className="font-inter text-[12px] sm:text-[14px] md:text-base"
                   >
-                    Integritetspolicy
+                    Introguide
                   </Link>
                 </li>
               </ul>
