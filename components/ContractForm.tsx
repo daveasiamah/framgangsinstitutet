@@ -10,13 +10,11 @@ import Link from "next/link"
 type FormValues = {
   name: string
   email: string
-  phone: string
 }
 
 const defaultValues: FormValues = {
   name: "",
   email: "",
-  phone: "",
 }
 
 export default function ContactForm({ onClose }: { onClose: () => void }) {
@@ -24,15 +22,8 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
   const router = useRouter()
 
   const schema = yup.object().shape({
-    name: yup.string().required("Namn er påkrævet"),
+    name: yup.string().required("Förnamn er påkrævet"),
     email: yup.string().email("Ogiltig email").required("Email er påkrævet"),
-    phone: yup
-      .string()
-      .required("Telefonnummer er påkrævet")
-      .matches(
-        /^\d{9,12}$/,
-        "Ange ett giltigt telefonnummer (minst 9 siffror)"
-      ),
   })
 
   const {
@@ -65,9 +56,9 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
 
   // Modal overlay and card styling to match screenshot
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#F4F4F6] bg-opacity-100">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 backdrop-blur-sm">
       <div
-        className="relative bg-white p-5 md:p-9 lg:p-[54px] w-full max-w-[360px] md:max-w-[740px] box-content rounded-2xl shadow-xl"
+        className="relative bg-white p-5 md:p-9 lg:p-[54px] w-full max-w-[360px] md:max-w-[640px] box-content rounded-2xl shadow-xl"
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -89,7 +80,7 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
             height={64}
             className="object-cover h-[64px] w-[235px] mb-6"
           />
-          <h1 className="font-jakarta font-extrabold text-center max-w-[480px] text-[22px] md:text-[32px] text-[#151e3a] mb-8">
+          <h1 className="font-jakarta font-extrabold text-center max-w-[480px] text-[22px] md:text-[32px] text-[#151e3a] mb-8 leading-[35px] tracking-[0]">
             Se vår kostnadsfria
             <br className="hidden md:block" /> introduktionsguide!
           </h1>
@@ -177,8 +168,8 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
           <button
             type="submit"
             disabled={!isDirty || !isValid}
-            className="font-inter font-semibold flex items-center justify-center w-full md:w-auto md:self-end px-8 py-3 rounded-lg text-white text-base md:text-lg mt-2 shadow-sm transition-colors
-              bg-[#3E6FED] hover:bg-[#225AEA] disabled:bg-[#AEBEE3]"
+            className="font-inter font-semibold flex items-center justify-center cursor-pointer w-full md:w-auto md:self-end px-8 py-3 rounded-lg text-white text-base md:text-lg mt-2 shadow-sm transition-colors
+              bg-[#225AEA] hover:bg-[#3E6FED] disabled:bg-[#AEBEE3]"
           >
             Se gratis introguide!
           </button>

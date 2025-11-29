@@ -14,15 +14,44 @@ export const AuthApi = async (email, password) => {
   }
 }
 
-export const registerOfContract = async ({ name, email, phone, selectedCourse }) => {
+export const registerOfContract = async ({ name, email }) => {
   const ext_id = uuidv4()
   try {
     const attributes = {
-      FIRSTNAME: name || "",
-      LASTNAME: "",
-      SMS:`+46${phone}`,
-      EXT_ID: ext_id,
-      COURSE_INTEREST: selectedCourse,
+      FIRSTNAME: name,
+      EXT_ID: ext_id
+    }
+    const response = await axios.post(
+      `${process.env.SEND_IN_BLUE_BASE_URL}/v3/contacts`,
+      {
+        email,
+        attributes,
+        updateEnabled: true,
+      },
+      {
+        headers: {
+          accept: "application/json",
+          "api-key": process.env.SEND_IN_BLUE_API_KEY,
+          "content-type": "application/json",
+        },
+      }
+    )
+    console.log("Contact saved successfully:", response.data)
+    return { success: true, data: response.data }
+  } catch (error) {
+    console.error(
+      "Error saving contact:",
+      error.response?.data || error.message
+    )
+    return { success: false, error: error.response?.data || error.message }
+  }
+}
+export const registerOfContract2 = async ({ name, email }) => {
+  const ext_id = uuidv4()
+  try {
+    const attributes = {
+      FIRSTNAME: name,
+      EXT_ID: ext_id
     }
     const response = await axios.post(
       `${process.env.SEND_IN_BLUE_BASE_URL}/v3/contacts`,

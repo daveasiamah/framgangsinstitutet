@@ -8,6 +8,7 @@ import { ChakraProvider, defaultSystem } from "@chakra-ui/react"
 import type { AppProps } from "next/app"
 import Script from "next/script"
 import { useRouter } from "next/router"
+import { ModalProvider } from "@/components/ModalContext"
 
 export default function App({
   Component,
@@ -141,7 +142,9 @@ export default function App({
       </noscript>
       <ChakraProvider value={defaultSystem}>
         <SessionProvider session={pageProps.session}>
-          <Component {...pageProps} />
+          <ModalProvider>
+            <Component {...pageProps} />
+          </ModalProvider>
         </SessionProvider>
       </ChakraProvider>
     </>

@@ -1,5 +1,6 @@
 import React from "react"
 import Image from "next/image"
+import { useModal } from "./ModalContext"
 
 type Testimonial = {
   name: string
@@ -41,6 +42,7 @@ const testimonials: Testimonial[] = [
 ]
 
 export default function TestimonialsSection() {
+  const { openContractForm } = useModal()
   return (
     <section className="bg-white py-10 md:py-12 px-4">
       <div className="max-w-7xl mx-auto">
@@ -54,7 +56,6 @@ export default function TestimonialsSection() {
             Är du vår nästa succé?
           </p>
         </div>
-
         {/* Masonry Grid Layout - Max 1276x930 with 20px gaps */}
         <div className="max-w-[1276px] mx-auto space-y-5">
           {/* First Row - 3 columns: Johan (2 cols), Emma, Sofia */}
@@ -91,7 +92,6 @@ export default function TestimonialsSection() {
                 </svg>
               </div>
             </div>
-
             {/* Emma */}
             <div className="relative rounded-[20px] overflow-hidden w-full h-[280px] md:h-[260px] lg:h-[332px] group cursor-pointer">
               <Image
@@ -124,7 +124,6 @@ export default function TestimonialsSection() {
                 </svg>
               </div>
             </div>
-
             {/* Sofia */}
             <div className="relative rounded-[20px] overflow-hidden w-full h-[280px] md:h-[260px] lg:h-[332px] group cursor-pointer">
               <Image
@@ -158,7 +157,6 @@ export default function TestimonialsSection() {
               </div>
             </div>
           </div>
-
           {/* Second Row - 2 main columns with nested grids */}
           <div className="grid grid-cols-1 md:grid-cols-[60%_38.4%] lg:grid-cols-[766px_490px] gap-5">
             {/* Left Column - 766px wide, 2 rows */}
@@ -197,7 +195,6 @@ export default function TestimonialsSection() {
                     </svg>
                   </div>
                 </div>
-
                 {/* Sebastian */}
                 <div className="relative rounded-[20px] overflow-hidden w-full h-[180px] lg:h-[210px] group cursor-pointer">
                   <Image
@@ -231,7 +228,6 @@ export default function TestimonialsSection() {
                   </div>
                 </div>
               </div>
-
               {/* Row 2: Laptop image */}
               <div className="relative rounded-[20px] overflow-hidden w-full h-[280px] lg:h-[347px]">
                 <Image
@@ -242,7 +238,6 @@ export default function TestimonialsSection() {
                 />
               </div>
             </div>
-
             {/* Right Column - 490px wide, 2 rows */}
             <div className="hidden md:block space-y-5">
               {/* Row 1: Alex Rodriguez */}
@@ -277,7 +272,6 @@ export default function TestimonialsSection() {
                   </svg>
                 </div>
               </div>
-
               {/* Row 2: Trustpilot Section */}
               <div className="bg-[#F8F9FA] rounded-[20px] px-4 pt-5 md:px-5 md:py-6 lg:py-10 flex flex-col justify-between h-[225px] lg:h-[279px]">
                 <h3 className="text-[#151E3A] text-[20px] md:text-[24px] lg:text-[36px] font-bold font-jakarta mb-4 md:mb-4 lg:mb-6">

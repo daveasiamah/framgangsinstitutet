@@ -24,7 +24,7 @@ export default function Home() {
       <HeroSection />
       <TestimonialsSection />
       <WelcomeSection />
-      <section className="mb-8 text-whit max-w-7xl mx-auto px-4 md:px-6">
+      <section className="mb-8 text-white max-w-[1358px] mx-auto px-4 md:px-2">
         <div className="relative left-0 right-0 flex flex-col items-center justify-center bg-[#2E56F5] rounded-[20px] md:px-4 lg:px-6 md:py-5 lg:py-5 back-background">
           <HiQuestionMarkCircle
             className="mx-auto text-white mt-14"
@@ -41,35 +41,23 @@ export default function Home() {
               personligt stöd från experter som vet vad som krävs för att
               lyckas.
             </p>
-            <button
-              onClick={() =>
-                window.open("https://buy.stripe.com/3cscO09iSdoBgVOeUZ")
-              }
-              className="py-2 px-4 flex items-center justify-center rounded-[8px] font-semibold font-inters text-[10px] btn-white mb-5 lg:mt-[32px] mt-5 text-[#15133A]"
-            >
+            <button className="py-2 px-4 flex items-center justify-center rounded-[8px] font-semibold font-inters text-[10px] btn-white mb-5 lg:mt-[32px] mt-5 text-[#15133A]">
               Starta din resa idag →
             </button>
           </div>
         </div>
       </section>
 
-      <section className="mt-2 mb-8 items-center max-w-7xl mx-auto flex justify-center">
-        <Image
-          src="/images/Trustpilot-reviews.svg"
-          width={1181}
-          height={226}
-          alt="trustpilot reviews"
-          className="w-[1200px] h-[226px] object-cover"
-        />
-      </section>
+      <TrustPilotReviews />
+
       {/* Feature Cards Section */}
-      <section className="flex flex-col w-full max-w-7xl mx-auto items-center gap-3 mt-10 mb-20">
-        <div className="flex items-center rounded-lg bg-[#f3f6fe] h-[26px] justify-center align-middle self-center px-3 inset-3 shadow-sm max-w-[178px] mb-4">
-          <p className="font-inter text-xs font-light text-[#235AE9]">
+      <section className="flex flex-col w-full max-w-7xl mx-auto items-center gap-3 mt-20 mb-20">
+        <div className="flex items-center rounded-lg bg-[#f3f6fe] justify-center align-middle self-center px-4 inset-3 shadow-inner shadow-[#3c6ce4c8] mb-4">
+          <p className="font-inter text-sm font-regular py-2 text-[#235AE9]">
             Alla tillgängliga funktioner
           </p>
         </div>
-        <h2 className="font-jakarta font-semibold text-[18px] md:text-[24px] lg:text-[40px] leading-[48px] mb-10">
+        <h2 className="font-jakarta font-semibold text-[18px] md:text-[24px] lg:text-[40px] leading-[48px] mb-5">
           Allt du behöver för att börja sälja och skala upp
         </h2>
 
@@ -245,23 +233,16 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <TrustPilotReviews />
       {/* Plan Section */}
-      <section className="flex flex-col justify-center items-center py-10 mb-16">
+      <section className="flex flex-col justify-center items-center py-1 mb-16">
         <Image
-          src="/images/home/graphics/home_pics/ultimate_plan.png"
+          src="/images/ultimate-plan-banner.svg"
           alt="ultimate plan"
-          width={360}
-          height={268}
-          className="object-contain w-[360px] h-[268px] md:w-[1024px] md:h-[568px]"
+          width={768}
+          height={690}
+          className="object-contain w-[360px] h-[268px] md:w-[768px] md:h-[690px]"
         />
-        <Image
-          src="/images/home/graphics/home_pics/checkified-logo.png"
-          alt="logo"
-          width={92}
-          height={92}
-          className="object-contain w-[92px] h-[92px] md:w-[195px] md:h-[195px] mt-[-50px]"
-        />
+
         <h3 className="text-[22px] md:text-[48px] font-jakarta font-semibold text-[#151E3A] mt-6 mb-4">
           En ultimat plan
         </h3>

@@ -1,23 +1,24 @@
 import React from "react"
 import Image from "next/image"
+import { useModal } from "./ModalContext"
 
 export default function WelcomeSection() {
+  const { openContractForm } = useModal()
   return (
-    <section className="bg-white py-12 md:py-20 px-4">
+    <section className="bg-white py-2 md:py-2 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Main Title */}
-        <h2 className="text-[#151E3A] text-[32px] md:text-[40px] lg:text-[48px] font-bold font-jakarta text-center mb-16">
+        <h2 className="text-[#151E3A] text-[20px] leading-[25px] sm:text-[32px] sm:leading-[38px] md:text-[40px] md:leading-[48px] font-bold font-jakarta text-center mb-[24px] md:mb-8">
           Välkommen till Sveriges ledande
           <br />
           e-handelsutbildning
         </h2>
-
         {/* First Section - Lär dig av e-handelsexpert */}
         <div className="bg-[#F3F6FE] rounded-[20px] p-8 md:p-12 mb-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
             {/* Text Content */}
             <div className="order-2 lg:order-1">
-              <h3 className="text-[#151E3A] text-[28px] md:text-[36px] font-bold font-jakarta mb-6">
+              <h3 className="text-[#151E3A] text-[22px] md:text-[40px] font-bold font-jakarta mb-6">
                 Lär dig av e-handelsexpert
               </h3>
               <div className="space-y-4 max-w-[570px] font-inter font-normal text-sm max-h-[220px] text-[#434C69] text-[14px] md:text-[16px] leading-relaxed">
@@ -39,7 +40,6 @@ export default function WelcomeSection() {
                 </p>
               </div>
             </div>
-
             {/* Image */}
             <div className="order-1 lg:order-2">
               <div className="relative w-full aspect-[4/3] rounded-[40px] overflow-hidden">
@@ -53,10 +53,9 @@ export default function WelcomeSection() {
             </div>
           </div>
         </div>
-
         {/* Second Section - Omge dig med drivna entreprenörer */}
         <div className="bg-[#F3F6FE] rounded-[20px] p-8 md:p-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
             {/* Image */}
             <div className="order-1">
               <div className="relative w-full aspect-[4/3] rounded-[40px] overflow-hidden">
@@ -68,7 +67,6 @@ export default function WelcomeSection() {
                 />
               </div>
             </div>
-
             {/* Text Content */}
             <div className="order-2">
               <h3 className="text-[#151E3A] text-[28px] md:text-[36px] font-bold font-jakarta mb-6">
@@ -98,10 +96,9 @@ export default function WelcomeSection() {
             </div>
           </div>
         </div>
-
         {/* Third Section - Omge dig med drivna entreprenörer */}
         <div className="bg-[#F3F6FE] rounded-[20px] p-8 md:p-12 mt-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
             {/* Image */}
             <div className="order-2">
               <div className="relative w-full aspect-[4/3] rounded-[40px] overflow-hidden">
@@ -113,7 +110,6 @@ export default function WelcomeSection() {
                 />
               </div>
             </div>
-
             {/* Text Content */}
             <div className="order-2 md:order-1">
               <h3 className="text-[#151E3A] text-[28px] md:text-[36px] font-bold font-jakarta mb-6">

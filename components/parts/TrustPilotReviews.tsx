@@ -1,6 +1,6 @@
 import React from "react"
 import Image from "next/image"
-import { CheckCircle2 } from "lucide-react"
+import { clsx } from "clsx"
 
 const reviews = [
   {
@@ -41,30 +41,33 @@ const TrustPilotReviews: React.FC = () => {
       <div className="w-full overflow-x-auto">
         <div className="flex gap-4 min-w-[900px] items-center justify-center py-1 px-4">
           {reviews.map((review, idx) => (
-            <div
-              key={idx}
-              className="bg-[#F8F9FA] p-4 md:p-4 flex flex-col min-w-[216px] max-w-[260px]"
-            >
-              <div className="flex items-center gap-2 mb-1">
+            <div key={idx} className="bg-[#F8F9FA] p-4 flex flex-col w-[250px]">
+              <div className="flex mb-2">
                 <Image
-                  src="/icons/trustpilot-stars.svg"
+                  src="/icons/trustpilot-review-top.svg"
                   alt="stars"
-                  width={80}
+                  width={190}
                   height={16}
-                  className="object-contain w-[80px] h-[16px]"
+                  className="object-contain w-[190px] h-[16px]"
                 />
-                <CheckCircle2 size={16} color="gray" />
-                <span className="text-xs text-[#888] font-medium">
-                  Verifierat
-                </span>
               </div>
-              <h3 className="font-jakarta font-bold text-[15px] leading-tight mb-1">
+              <h3 className="font-jakarta font-bold text-[15px] leading-tight mb-2">
                 {review.title}
               </h3>
-              <p className="text-xs text-[#222] font-inter mb-2 leading-snug">
+              <p
+                className={clsx(
+                  "text-xs text-[#222] font-inter mb-0 leading-snug",
+                  "overflow-hidden",
+                  "[display:-webkit-box]",
+                  "[WebkitLineClamp:4]",
+                  "[WebkitBoxOrient:vertical]",
+                  "min-h-[4.8em]" // 4 lines at 1.2em line height (default for text-xs/leading-snug)
+                )}
+                style={{ lineHeight: "1.2em", maxHeight: "4.8em" }}
+              >
                 {review.text}
               </p>
-              <div className="text-xs text-[#444] font-inter mt-auto">
+              <div className="text-xs text-[#7c7c7c] font-inter mt-[14px]">
                 <span className="font-semibold">{review.reviewer}</span>,{" "}
                 {review.date}
               </div>
@@ -72,7 +75,7 @@ const TrustPilotReviews: React.FC = () => {
           ))}
         </div>
       </div>
-      <div className="mt-6 text-center text-[#222] text-[14px] md:text-[14px] font-inter">
+      <div className="mt-6 text-center text-[#27272A] text-[14px] md:text-[14px] font-inter">
         Har fått betyget{" "}
         <span className="font-semibold font-inter">4.5 / 5</span> baserat på 127
         omdömen. Visar våra 5-stjärniga omdömen.

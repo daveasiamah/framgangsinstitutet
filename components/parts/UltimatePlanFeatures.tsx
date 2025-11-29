@@ -43,7 +43,10 @@ function UltimatePlanFeatures() {
           </div>
 
           {/* CTA */}
-          <button onClick={() => { }} className="w-full bg-primary hover:bg-primary-deep text-white text-sm sm:text-md py-2.5 sm:py-2 md:py-2.5 rounded-xl mb-4 sm:mb-6 font-medium">
+          <button
+            onClick={() => {}}
+            className="w-full bg-primary hover:bg-primary-deep text-white text-sm sm:text-md py-2.5 sm:py-2 md:py-2.5 rounded-xl mb-4 sm:mb-6 font-medium"
+          >
             Ansök till Mentorskap →
           </button>
 
