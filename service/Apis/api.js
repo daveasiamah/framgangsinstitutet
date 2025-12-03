@@ -36,7 +36,6 @@ export const registerOfContract = async ({ name, email }) => {
         },
       }
     )
-    console.log("Contact saved successfully:", response.data)
     return { success: true, data: response.data }
   } catch (error) {
     console.error(
@@ -46,37 +45,37 @@ export const registerOfContract = async ({ name, email }) => {
     return { success: false, error: error.response?.data || error.message }
   }
 }
-export const registerOfContract2 = async ({ name, email }) => {
-  const ext_id = uuidv4()
-  try {
-    const attributes = {
-      FIRSTNAME: name,
-      EXT_ID: ext_id
-    }
-    const response = await axios.post(
-      `${process.env.SEND_IN_BLUE_BASE_URL}/v3/contacts`,
-      {
-        email,
-        attributes,
-        updateEnabled: true,
-      },
-      {
-        headers: {
-          accept: "application/json",
-          "api-key": process.env.SEND_IN_BLUE_API_KEY,
-          "content-type": "application/json",
-        },
-      }
-    )
-    return { success: true, data: response.data }
-  } catch (error) {
-    console.error(
-      "Error saving contact:",
-      error.response?.data || error.message
-    )
-    return { success: false, error: error.response?.data || error.message }
-  }
-}
+// export const registerOfContract2 = async ({ name, email }) => {
+//   const ext_id = uuidv4()
+//   try {
+//     const attributes = {
+//       FIRSTNAME: name,
+//       EXT_ID: ext_id
+//     }
+//     const response = await axios.post(
+//       `${process.env.SEND_IN_BLUE_BASE_URL}/v3/contacts`,
+//       {
+//         email,
+//         attributes,
+//         updateEnabled: true,
+//       },
+//       {
+//         headers: {
+//           accept: "application/json",
+//           "api-key": process.env.SEND_IN_BLUE_API_KEY,
+//           "content-type": "application/json",
+//         },
+//       }
+//     )
+//     return { success: true, data: response.data }
+//   } catch (error) {
+//     console.error(
+//       "Error saving contact:",
+//       error.response?.data || error.message
+//     )
+//     return { success: false, error: error.response?.data || error.message }
+//   }
+// }
 
 export const contact = async (data) => {
   try {

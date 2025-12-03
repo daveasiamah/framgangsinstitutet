@@ -1,27 +1,28 @@
-import React from "react"
+import React, { use } from "react"
 import Image from "next/image"
-import Link from "next/link"
+import { useModal } from "../ModalContext"
 
 function StartYourJourney() {
-  return (
-    <div className="w-full max-w-[1258px] bg-[#225AEA] bg-[url(/images/mentorship/mentorship-products/bg-mesh.svg)] bg-cover rounded-[20px] sm:rounded-[32px] mx-auto px-2 sm:px-4 py-4 sm:py-4 mt-10">
-      <div className="relative w-full max-w-[1170px] mx-auto min-h-[240px] sm:min-h-[260px] md:h-[366px] flex flex-col items-center justify-center">
+  const { openContractForm } = useModal()
 
-        <div className="flex flex-col items-center px-2">
+  return (
+    <section className="w-[calc(100%-20px)] max-w-7xl mx-auto bg-[#225AEA] bg-[url(/images/mentorship/mentorship-products/bg-mesh.svg)] bg-cover rounded-[16px] sm:rounded-[32px] px-4 sm:px-6 py-6 sm:py-8 md:py-10 mt-8 sm:mt-10">
+      <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center w-full px-2 sm:px-4">
           {/* Main heading */}
-          <h3 className="max-w-[499px] font-bold text-white text-sm sm:text-base md:text-xl lg:text-3xl leading-tight mb-3 sm:mb-4 font-jakarta text-center px-2">
+          <h3 className="max-w-[280px] sm:max-w-[380px] md:max-w-[500px] text-[16px] sm:text-[24px] md:text-[32px] font-bold sm:font-semibold text-white leading-[1.3] sm:leading-tight mb-2 sm:mb-3 md:mb-4 font-jakarta text-center">
             Börja din resa redan idag.
           </h3>
 
           {/* Subtext */}
-          <p className="max-w-[600px] text-center font-regular text-white text-[10px] sm:text-xs md:text-base leading-relaxed mb-3 sm:mb-4 font-inter px-1">
+          <p className="max-w-[300px] sm:max-w-[450px] md:max-w-[600px] text-center font-inter text-[10px] sm:text-[12px] md:text-[14px] font-normal text-white leading-[1.5] sm:leading-relaxed mb-4 sm:mb-5 md:mb-6">
             Kom ihåg: Du är några klick från att leva livet som du vill...
             <br />
             Har du verkligen råd att vänta?
           </p>
 
-          <div className="border border-white rounded-full px-2 sm:px-4 md:px-6 py-3 sm:py-4 mb-4">
-            <div className="flex items-center border-1 border-white justify-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 text-white font-inter overflow-hidden">
+          <div className="border border-white rounded-full px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 mb-4 sm:mb-5">
+            <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 text-white font-inter">
               <div className="flex items-center gap-1 sm:gap-1.5 md:gap-2 flex-shrink-0">
                 <Image
                   src="/icons/bolt.svg"
@@ -64,8 +65,8 @@ function StartYourJourney() {
           </div>
         </div>
 
-        <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-3 md:gap-4 mt-2 sm:mt-3">
-          <p className="text-white text-[9px] sm:text-[10px] md:text-[14px] whitespace-nowrap">
+        <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-3 md:gap-4 mt-3 sm:mt-4">
+          <p className="text-white text-[10px] sm:text-[12px] md:text-[14px] whitespace-nowrap">
             Strålande
           </p>
           <Image
@@ -75,21 +76,19 @@ function StartYourJourney() {
             width={124}
             height={24}
           />
-          <p className="text-white text-[9px] sm:text-[10px] md:text-[14px] whitespace-nowrap">
+          <p className="text-white text-[10px] sm:text-[12px] md:text-[14px] whitespace-nowrap">
             4.8 av 5.0
           </p>
         </div>
         {/* CTA Button */}
-        <Link
-          href="https://checkout.revolut.com/payment-link/d3eb03dc-e14d-4695-a085-a01903b02e54"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-white text-[#000000] font-semibold text-xs sm:text-sm mt-3 sm:mt-4 px-5 sm:px-6 py-2 rounded-lg hover:bg-gray-100 transition-colors duration-200 font-jakarta whitespace-nowrap"
+        <button
+          onClick={() => openContractForm()}
+          className="bg-white text-[#000000] font-semibold text-[10px] sm:text-[12px] md:text-sm mt-4 sm:mt-5 px-[12px] py-[8px] sm:px-[20px] sm:py-[10px] md:px-[28px] md:py-[12px] rounded-[8px] hover:bg-gray-100 transition-colors duration-200 font-jakarta whitespace-nowrap"
         >
           Starta din resa nu →
-        </Link>
+        </button>
       </div>
-    </div>
+    </section>
   )
 }
 

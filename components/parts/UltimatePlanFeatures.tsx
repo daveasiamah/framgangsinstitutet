@@ -1,6 +1,7 @@
 import React from "react"
 import Image from "next/image"
 import { CheckCircle2 } from "lucide-react"
+import { useModal } from "../ModalContext"
 
 const features = [
   { text: "Omedelbar tillgång", highlight: "till Checkified" },
@@ -13,6 +14,8 @@ const features = [
 ]
 
 function UltimatePlanFeatures() {
+  const { openContractForm } = useModal()
+
   return (
     <div
       className="p-2 sm:p-4 mt-2 sm:mt-2 bg-[url('/images/mentorship/mentorship-products/
@@ -44,7 +47,7 @@ function UltimatePlanFeatures() {
 
           {/* CTA */}
           <button
-            onClick={() => {}}
+            onClick={() => openContractForm()}
             className="w-full bg-primary hover:bg-primary-deep text-white text-sm sm:text-md py-2.5 sm:py-2 md:py-2.5 rounded-xl mb-4 sm:mb-6 font-medium"
           >
             Ansök till Mentorskap →

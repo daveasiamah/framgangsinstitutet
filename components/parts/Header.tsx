@@ -103,7 +103,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
 
         {/* DESKTOP NAV */}
         <Flex
-          display={["none", null, "flex"]}
+          display={["none", "none", "none", "flex"]}
           gap={8}
           align="center"
           fontWeight={600}
@@ -230,7 +230,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
         </Flex>
 
         {/* DESKTOP CTA BUTTON */}
-        <Flex display={["none", null, "flex"]} align="center">
+        <Flex display={["none", "none", "none", "flex"]} align="center">
           {!isSlugPage &&
           pathname !== "/utbildningar" &&
           pathname !== "/ebocker" ? (
@@ -255,10 +255,10 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
           )}
         </Flex>
 
-        {/* MOBILE HAMBURGER */}
+        {/* MOBILE/TABLET HAMBURGER */}
         <IconButton
           aria-label="Open menu"
-          display={["flex", null, "none"]}
+          display={["flex", "flex", "flex", "none"]}
           onClick={() => setOpenSidebar(true)}
           bg="#E8F2FF"
           borderRadius="8px"

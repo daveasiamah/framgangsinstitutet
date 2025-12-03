@@ -13,35 +13,42 @@ import HeroSection from "@/components/HeroSection"
 import UltimatePlanFeatures from "@/components/parts/UltimatePlanFeatures"
 import StartYourJourney from "@/components/parts/StartYourJourney"
 import TrustPilotReviews from "@/components/parts/TrustPilotReviews"
+import TitlePill from "@/components/parts/TitlePill"
+import { useDisclosure } from "@chakra-ui/react"
+import { useModal } from "@/components/ModalContext"
 
 export default function Home() {
   const router = useRouter()
   const { locale } = router
   const t = locale === "en" ? en : sv
+  const { openContractForm } = useModal()
 
   return (
     <Layout headTitle={t.homeData.metaData.title} isFullWidth={true}>
       <HeroSection />
       <TestimonialsSection />
       <WelcomeSection />
-      <section className="mb-8 text-white max-w-[1358px] mx-auto px-4 md:px-2">
-        <div className="relative left-0 right-0 flex flex-col items-center justify-center bg-[#2E56F5] rounded-[20px] md:px-4 lg:px-6 md:py-5 lg:py-5 back-background">
+      {/* CTA Section 1 */}
+      <section className="mb-8 text-white w-[calc(100%-20px)] md:w-full max-w-[1358px] mx-auto px-4 md:px-2">
+        <div className="relative left-0 right-0 flex flex-col items-center justify-center bg-[#2E56F5] rounded-[16px] md:rounded-[20px] px-4 md:px-4 lg:px-6 py-6 md:py-8 lg:py-10 back-background">
           <HiQuestionMarkCircle
-            className="mx-auto text-white mt-14"
+            className="mx-auto text-white mb-3 md:mb-4"
             size={38}
             aria-label="help"
           />
-          <div className="text-center flex flex-col items-center">
-            {/* <div className="px-2"> */}
-            <h1 className="text-white text-center text-[20px] leading-[48px] md:text-[24px] max-w-[600px] font-bold font-jakarta mb-2 mt-4">
+          <div className="text-center flex flex-col items-center w-full">
+            <h1 className="text-white text-center text-[18px] leading-[1.3] sm:text-[20px] sm:leading-[1.4] md:text-[24px] md:leading-[1.5] max-w-[90%] sm:max-w-[600px] font-bold font-jakarta mb-3 md:mb-4">
               Över 300 miljoner kronor i intäkter på plattformen
             </h1>
-            <p className="mb-4 max-w-xl mx-auto text-center lg:text-[16px] text-white text-[12px] font-inter">
+            <p className="mb-4 md:mb-6 max-w-[90%] sm:max-w-xl mx-auto text-center text-[11px] sm:text-[13px] md:text-[14px] lg:text-[16px] text-white font-inter leading-relaxed">
               Vår tjänst hjälper dig att ta kontroll över din framtid. Få
               personligt stöd från experter som vet vad som krävs för att
               lyckas.
             </p>
-            <button className="py-2 px-4 flex items-center justify-center rounded-[8px] font-semibold font-inters text-[10px] btn-white mb-5 lg:mt-[32px] mt-5 text-[#15133A]">
+            <button
+              onClick={() => openContractForm()}
+              className="py-2 px-4 md:py-2.5 md:px-5 flex items-center justify-center rounded-[8px] font-semibold font-inters text-[11px] md:text-[12px] btn-white text-[#15133A] hover:bg-gray-100 transition-colors"
+            >
               Starta din resa idag →
             </button>
           </div>
@@ -51,13 +58,9 @@ export default function Home() {
       <TrustPilotReviews />
 
       {/* Feature Cards Section */}
-      <section className="flex flex-col w-full max-w-7xl mx-auto items-center gap-3 mt-20 mb-20">
-        <div className="flex items-center rounded-lg bg-[#f3f6fe] justify-center align-middle self-center px-4 inset-3 shadow-inner shadow-[#3c6ce4c8] mb-4">
-          <p className="font-inter text-sm font-regular py-2 text-[#235AE9]">
-            Alla tillgängliga funktioner
-          </p>
-        </div>
-        <h2 className="font-jakarta font-semibold text-[18px] md:text-[24px] lg:text-[40px] leading-[48px] mb-5">
+      <section className="flex flex-col w-full max-w-7xl mx-auto items-center gap-3 mt-10 md:mt-20 mb-20">
+        <TitlePill text="Färdig e-handelsbutik" />
+        <h2 className="font-jakarta font-semibold text-[16px] md:text-[24px] lg:text-[40px] leading-[48px] mb-5">
           Allt du behöver för att börja sälja och skala upp
         </h2>
 
@@ -233,6 +236,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       {/* Plan Section */}
       <section className="flex flex-col justify-center items-center py-1 mb-16">
         <Image
@@ -251,6 +255,7 @@ export default function Home() {
           plus ett pris som passar alla som är redo att vara ambitiösa.
         </p>
         <UltimatePlanFeatures />
+        <TitlePill text="Totalt värde: 155 000 kr" />
         <StartYourJourney />
       </section>
 
