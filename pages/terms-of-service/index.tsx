@@ -42,7 +42,6 @@ export default function TOS({}: Props) {
 
       <section className="relative flex flex-col lg:flex-row gap-10 justify-between mb-12 lg:mb-16">
         <div className="section__content container flex flex-col space-y-[28px]">
-          {/* INLEDNING */}
           <span className="block text-xl font-bold leading-[32px]">
             INLEDNING
           </span>
@@ -58,7 +57,6 @@ export default function TOS({}: Props) {
             levererad.
           </p>
 
-          {/* ERHÅLLNA TJÄNSTER */}
           <span className="block text-xl font-bold leading-[32px]">
             ERHÅLLNA TJÄNSTER
           </span>
@@ -86,7 +84,6 @@ export default function TOS({}: Props) {
             och mentorer. Plattformen kan förändras över tid.
           </p>
 
-          {/* KUNDDATA */}
           <span className="block text-xl font-bold leading-[32px]">
             KUNDDATA
           </span>
@@ -99,7 +96,6 @@ export default function TOS({}: Props) {
             fortfarande användas.
           </p>
 
-          {/* TILLHANDAHÅLLANDE AV TJÄNSTER */}
           <span className="block text-xl font-bold leading-[32px]">
             TILLHANDAHÅLLANDE AV TJÄNSTER
           </span>
@@ -111,7 +107,6 @@ export default function TOS({}: Props) {
             avtalsgodkännande räknas som leveransdatum.
           </p>
 
-          {/* AVBROTT I TJÄNSTERNA */}
           <span className="block text-xl font-bold leading-[32px]">
             AVBROTT I TJÄNSTERNA
           </span>
@@ -123,7 +118,6 @@ export default function TOS({}: Props) {
             kompensation.
           </p>
 
-          {/* UNDERLEVERANTÖRER */}
           <span className="block text-xl font-bold leading-[32px]">
             UNDERLEVERANTÖRER
           </span>
@@ -132,7 +126,6 @@ export default function TOS({}: Props) {
             fullt ut för åtagandena enligt Avtalet.
           </p>
 
-          {/* ERSÄTTNING OCH BETALNING */}
           <span className="block text-xl font-bold leading-[32px]">
             ERSÄTTNING OCH BETALNING
           </span>
@@ -144,7 +137,6 @@ export default function TOS({}: Props) {
             tredjepartslösning ej används.
           </p>
 
-          {/* IMMATERIELLA RÄTTIGHETER */}
           <span className="block text-xl font-bold leading-[32px]">
             IMMATERIELLA RÄTTIGHETER
           </span>
@@ -156,7 +148,6 @@ export default function TOS({}: Props) {
             användas fritt.
           </p>
 
-          {/* SEKRETESS */}
           <span className="block text-xl font-bold leading-[32px]">
             SEKRETESS
           </span>
@@ -167,7 +158,6 @@ export default function TOS({}: Props) {
             betraktas inte som konfidentiell.
           </p>
 
-          {/* KUNDTJÄNST */}
           <span className="block text-xl font-bold leading-[32px]">
             KUNDTJÄNST
           </span>
@@ -176,7 +166,6 @@ export default function TOS({}: Props) {
             representanter kan ej garanteras.
           </p>
 
-          {/* SPARRING */}
           <span className="block text-xl font-bold leading-[32px]">
             SPARRING
           </span>
@@ -185,7 +174,6 @@ export default function TOS({}: Props) {
             marknadsföring.
           </p>
 
-          {/* ÅNGERRÄTT */}
           <span className="block text-xl font-bold leading-[32px]">
             ÅNGERRÄTT
           </span>
@@ -195,7 +183,6 @@ export default function TOS({}: Props) {
             via officiell blankett.
           </p>
 
-          {/* GARANTI */}
           <span className="block text-xl font-bold leading-[32px]">
             GARANTI
           </span>
@@ -206,7 +193,6 @@ export default function TOS({}: Props) {
             produkter med angiven budget.
           </p>
 
-          {/* FÖRSENAD BETALNING */}
           <span className="block text-xl font-bold leading-[32px]">
             FÖRSENAD BETALNING
           </span>
@@ -216,7 +202,6 @@ export default function TOS({}: Props) {
             betalning.
           </p>
 
-          {/* SKADESTÅND OCH VITE */}
           <span className="block text-xl font-bold leading-[32px]">
             SKADESTÅND OCH VITE
           </span>
@@ -225,7 +210,6 @@ export default function TOS({}: Props) {
             och ersätter skador enligt Avtalet.
           </p>
 
-          {/* BEFRIELSEGRUNDER */}
           <span className="block text-xl font-bold leading-[32px]">
             BEFRIELSEGRUNDER
           </span>
@@ -234,7 +218,6 @@ export default function TOS({}: Props) {
             kontroll, såsom pandemi eller naturkatastrofer.
           </p>
 
-          {/* ANSVARSBEGRÄNSNING */}
           <span className="block text-xl font-bold leading-[32px]">
             ANSVARSBEGRÄNSNING
           </span>
@@ -243,7 +226,6 @@ export default function TOS({}: Props) {
             begränsas till ersättningens storlek.
           </p>
 
-          {/* AVTALETS GILTIGHET */}
           <span className="block text-xl font-bold leading-[32px]">
             AVTALETS GILTIGHET
           </span>
@@ -253,7 +235,6 @@ export default function TOS({}: Props) {
             återbetalning vid uppsägning.
           </p>
 
-          {/* KOMMUNIKATION */}
           <span className="block text-xl font-bold leading-[32px]">
             KOMMUNIKATION
           </span>
@@ -262,7 +243,6 @@ export default function TOS({}: Props) {
             Direktkontakt sker via leverantörens officiella kontaktvägar.
           </p>
 
-          {/* HELA AVTALET */}
           <span className="block text-xl font-bold leading-[32px]">
             HELA AVTALET
           </span>
@@ -272,7 +252,6 @@ export default function TOS({}: Props) {
             kursvideor och mallar.
           </p>
 
-          {/* OGILTIGHET AV BESTÄMMELSE */}
           <span className="block text-xl font-bold leading-[32px]">
             OGILTIGHET AV BESTÄMMELSE
           </span>
@@ -281,7 +260,6 @@ export default function TOS({}: Props) {
             likvärdigt resultat.
           </p>
 
-          {/* ANVÄNDARÅTAGANDE */}
           <span className="block text-xl font-bold leading-[32px]">
             ANVÄNDARÅTAGANDE
           </span>
@@ -290,13 +268,12 @@ export default function TOS({}: Props) {
             sekretess och Avtalets övriga delar.
           </p>
 
-          {/* TOLKNING OCH TILLÄMPNING */}
           <span className="block text-xl font-bold leading-[32px]">
             TOLKNING OCH TILLÄMPNING
           </span>
+
           <p>Avtalet styrs av svensk lag.</p>
 
-          {/* TVISTELÖSNING */}
           <span className="block text-xl font-bold leading-[32px]">
             TVISTELÖSNING
           </span>
