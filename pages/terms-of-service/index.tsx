@@ -271,7 +271,9 @@ export default function TOS({}: Props) {
           <span className="block text-xl font-bold leading-[32px]">
             TOLKNING OCH TILLÄMPNING
           </span>
+
           <p>Avtalet styrs av svensk lag.</p>
+
           <span className="block text-xl font-bold leading-[32px]">
             TVISTELÖSNING
           </span>
