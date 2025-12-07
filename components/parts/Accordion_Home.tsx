@@ -24,7 +24,7 @@ function Accordion({ data }: Props) {
   const isExpanded = (index: number) => selected.includes(index)
 
   return (
-    <div className="mx-auto grid gap-6 max-w-4xl">
+    <div className="mx-auto grid gap-6 max-w-7xl">
       {data.map((data, index) => (
         <button
           onClick={() => toggle(index)}

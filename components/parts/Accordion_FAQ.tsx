@@ -55,7 +55,7 @@ const AccordionContent = React.memo(
         className="overflow-hidden transition-[max-height] duration-300 ease-in-out"
         style={{ maxHeight: `${height}px` }}
       >
-        <div ref={contentRef} className="pl-6">
+        <div ref={contentRef} className="text-subtitle font-inter text-sm pr-4">
           {children}
         </div>
       </div>
@@ -66,7 +66,7 @@ AccordionContent.displayName = "AccordionContent"
 
 // Accordion Component (Now accepts children)
 export const Accordion = ({ children }: AccordionProps) => {
-  return <div className="grid gap-4">{children}</div>
+  return <div className="grid gap-6">{children}</div>
 }
 
 // AccordionItem Component
@@ -82,16 +82,18 @@ export const AccordionItem = ({
   }
 
   return (
-    <div className="accordion-wrapper w-full md:py-2 md:px-6">
+    <div className="accordion-wrapper w-full border-2 border-[#E5E5E5] bg-white py-4 px-6 rounded-2xl cursor-pointer focus-within:border-primary transition-all">
       {/* Accordion Header */}
       <div
         onClick={toggle}
-        className="cursor-pointer py-2 flex gap-2 md:gap-4 items-center"
+        className="cursor-pointer py-2 flex justify-between items-center"
       >
-        <RightArrow isOpen={isSelected} />
-        <h2 className="font-bold text-base text-[#151e3a] font-inter">
+        <h2 className="text-neutral-900 font-inter font-semibold text-md">
           {title}
         </h2>
+        <span
+          className={`${isSelected ? "plusminus active" : "plusminus"}`}
+        ></span>
       </div>
 
       {/* Accordion Content */}

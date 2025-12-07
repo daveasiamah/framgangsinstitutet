@@ -65,7 +65,7 @@ const FAQPage: React.FC<FAQPageProps> = ({ faqs }) => {
       </Head>
       {/* Full width on mobile, container centered on md and above */}
       <div className="w-full md:container md:mx-auto md:px-4 py-10">
-        <section className="mx-auto max-w-5xl">
+        <section className="mx-auto max-w-7xl px-4">
           <div className="relative py-10">
             <ScrollReveal>
               <h1 className="text-center font-jakarta text-[1.3rem] md:text-[3rem] lg:text-[3.5rem] md:leading-[40px] leading-[22px] font-[700] mb-10 mt-2">
@@ -76,13 +76,15 @@ const FAQPage: React.FC<FAQPageProps> = ({ faqs }) => {
               </h2>
             </ScrollReveal>
 
-            <Accordion>
-              {faqs.map((item) => (
-                <AccordionItem key={item.id} title={item.question}>
-                  <RichTextRenderer richText={item.answer} />
-                </AccordionItem>
-              ))}
-            </Accordion>
+            <div className="w-full bg-[#F5F9FF] rounded-[20px] py-4 px-3 md:px-3 mb-16">
+              <Accordion>
+                {faqs.map((item) => (
+                  <AccordionItem key={item.id} title={item.question}>
+                    <RichTextRenderer richText={item.answer} />
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
             <div className="flex justify-between items-center border border-gray px-[18px] py-[12px] rounded-[20px] mt-14">
               <p className="font-inter font-medium text-[11px] md:text-sm">
                 Har vi missat något?

@@ -187,7 +187,7 @@ export default function Footer({}: Props) {
 
           {/* Links Section */}
           <Image
-            src="/images/home/graphics/shopify-partner-1.svg"
+            src="/images/home/graphics/shopify-partner1.png"
             alt="Shopify Partner"
             width={166}
             height={27}

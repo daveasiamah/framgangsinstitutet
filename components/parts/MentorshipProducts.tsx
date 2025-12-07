@@ -12,17 +12,17 @@ const products = [
   },
   {
     id: 2,
-    image: "/images/mentorship/mentorship-products/student-result.png",
-    title: "Student Resultat",
+    image: "/images/mentorship/mentorship-products/facebook-ads.svg",
+    title: "Annonsering På Facebook Ads",
     description:
-      "Över 200 studenter har gått vårt privata mentorskap och skapat riktiga resultat direkt hemifrån.",
+      "Du får en komplett lektion och vägledning hur du ska sätta upp kampanjer och annonser via Meta Ads.",
   },
   {
     id: 3,
-    image: "/images/mentorship/mentorship-products/shopify-butik.png",
-    title: "Klart För Dig Shopify Butik",
+    image: "/images/mentorship/mentorship-products/dropshipping-product.svg",
+    title: "Vinnande Dropshipping Produkt",
     description:
-      "Vi bygger en färdig dropshipping-butik med vinnande produkter, utan krånglig inlärning.",
+      "Vi kommer rekommendera en vinnande produkt som har sålts för miljonbelopp.",
   },
   {
     id: 4,

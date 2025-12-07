@@ -17,7 +17,6 @@ import SuccessStoriesGrid from "@/components/parts/Mentorship_Success"
 import MentorshipSubEhandler from "@/components/parts/MentorshipSub_2"
 import MentorshipProducts from "@/components/parts/MentorshipProducts"
 import MentorshipCard from "./mentorship-card"
-import TrustpilotScroll from "@/components/parts/TrustpilotScroll"
 
 import { useState } from "react"
 import ContractForm from "@/components/ContractForm"
@@ -53,7 +52,7 @@ const MentorshipPage = () => {
           </p>
         </section>
 
-        <MentorshipCard />
+        <MentorshipCard onCtaClick={openModal} />
         <div className="flex items-center rounded-lg bg-[#f3f6fe] min-h-[26px] justify-center align-middle self-center px-2 py-1.5 sm:py-2 inset-2 shadow-inner max-w-[185px] md:max-w-[208px] mb-4 mt-5">
           <p className="font-inter font-semibold text-[14px] text-[#235AE9] text-center leading-tight px-1">
             Totalt värde: 155 000 kr
@@ -61,7 +60,7 @@ const MentorshipPage = () => {
         </div>
         <MentorshipDetailsText onCtaClick={openModal} />
         <SuccessStoriesGrid />
-        <MentorshipStaticImage />
+        <MentorshipStaticImage onCtaClick={openModal} />
         <MentorWhyThisWorksSection />
         <MentorshipNextStep onCtaClick={openModal} />
         <MentorshipSteps />
