@@ -5,10 +5,10 @@ import { useModal } from "./ModalContext"
 export default function WelcomeSection() {
   const { openContractForm } = useModal()
   return (
-    <section className="bg-white py-2 md:py-2 px-4">
+    <section className="bg-white py-2 md:py-2 px-4 mb-[35px]">
       <div className="max-w-7xl mx-auto">
         {/* Main Title */}
-        <h2 className="text-[#151E3A] text-[20px] leading-[25px] sm:text-[32px] sm:leading-[38px] md:text-[40px] md:leading-[48px] font-bold font-jakarta text-center mb-[24px] md:mb-8">
+        <h2 className="text-[#151E3A] text-[20px] leading-[35px] sm:text-[32px] sm:leading-[38px] md:text-[40px] md:leading-[48px] font-bold font-jakarta text-center mb-[24px] md:mb-8">
           Välkommen till Sveriges ledande
           <br />
           e-handelsutbildning
@@ -18,7 +18,7 @@ export default function WelcomeSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-start">
             {/* Text Content */}
             <div className="order-2 lg:order-1">
-              <h3 className="text-[#151E3A] text-[18px] sm:text-[22px] md:text-[40px] font-bold font-jakarta mb-4 sm:mb-6">
+              <h3 className="text-[#151E3A] text-[18px] sm:text-[22px] md:text-[40px] font-semibold font-geist mb-4 sm:mb-6 leading-[35px]">
                 Lär dig av e-handelsexpert
               </h3>
               <div className="space-y-4 font-inter font-normal text-[12px] sm:text-sm text-[#434C69] md:text-[16px] leading-relaxed">
@@ -69,7 +69,7 @@ export default function WelcomeSection() {
             </div>
             {/* Text Content */}
             <div className="order-2">
-              <h3 className="text-[#151E3A] text-[18px] sm:text-[22px] md:text-[40px] font-bold font-jakarta mb-4 sm:mb-6">
+              <h3 className="text-[#151E3A] text-[18px] sm:text-[22px] md:text-[40px] font-semibold font-geist mb-4 sm:mb-6 leading-[35px]">
                 Omge dig med drivna
                 <br />
                 entreprenörer och mentorer.
@@ -112,7 +112,7 @@ export default function WelcomeSection() {
             </div>
             {/* Text Content */}
             <div className="order-2 md:order-1">
-              <h3 className="text-[#151E3A] text-[18px] sm:text-[22px] md:text-[40px] font-bold font-jakarta mb-4 sm:mb-6">
+              <h3 className="text-[#151E3A] text-[18px] sm:text-[22px] md:text-[40px] font-semibold font-geist mb-4 sm:mb-6 leading-[35px]">
                 Låt inte din framgång vara
                 <br />
                 en chansning

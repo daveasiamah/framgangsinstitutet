@@ -14,7 +14,7 @@ module.exports = {
         poppins: "'Poppins', sans-serif",
         roboto: "'Roboto', sans-serif",
         jakarta: "'Plus Jakarta Sans', sans-serif",
-        geist: "'Geist Sans', sans-serif",
+        geist: "'Geist', sans-serif",
         inter: "'Inter', sans-serif",
       },
       spacing: {

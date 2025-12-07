@@ -57,10 +57,10 @@ const TrustPilotReviews: React.FC = () => {
               <h3 className="font-jakarta font-bold text-[16px] md:text-[8px] lg:text-[14px] leading-tight mb-2">
                 {review.title}
               </h3>
-              <p className="font-inter text-[16px] md:text-[6px] lg:text-[12px] text-[#27272A] leading-relaxed flex-grow">
+              <p className="font-inter text-[14px] md:text-[6px] lg:text-[10px] xl:text-[12px] text-[#27272A] leading-[1.4] md:leading-relaxed flex-grow line-clamp-4 md:line-clamp-none">
                 {review.text}
               </p>
-              <div className="text-[11px] md:text-[7px] text-[#7c7c7c] font-inter mt-3">
+              <div className="text-[11px] md:text-[8px] lg:text-[10px] xl:text-[12px] text-[#7c7c7c] font-inter mt-3 whitespace-nowrap overflow-hidden text-ellipsis">
                 <span className="font-semibold">{review.reviewer}</span>,{" "}
                 {review.date}
               </div>

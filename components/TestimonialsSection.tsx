@@ -12,32 +12,32 @@ const testimonials: Testimonial[] = [
   {
     name: "Johan Eriksson",
     earnings: "750 000 kr på 45 dagar",
-    image: "/images/home-hero-image.png",
+    image: "/images/home/testimonial/johan.jpg",
   },
   {
     name: "Emma Andersson",
     earnings: "500 000 kr på 30 dagar",
-    image: "/images/home-hero-image.png",
+    image: "/images/home/testimonial/blondie.jpg",
   },
   {
     name: "Sofia Karlsson",
     earnings: "450 000 kr på 35 dagar",
-    image: "/images/home-hero-image.png",
+    image: "/images/home/testimonial/brunette.jpg",
   },
   {
     name: "Niklas Åsén",
     earnings: "700 000 kr på 60 dagar",
-    image: "/images/home-hero-image.png",
+    image: "/images/home/testimonial/niklas.jpg",
   },
   {
     name: "Sebastian Blomgren",
     earnings: "200 000 kr på 14 dagar",
-    image: "/images/home-hero-image.png",
+    image: "/images/home/testimonial/sebastian.jpg",
   },
   {
     name: "Alex Rodriguez",
     earnings: "Omsatt över 1 200 000 kr",
-    image: "/images/home-hero-image.png",
+    image: "/images/home/testimonial/alex.jpg",
   },
 ]
 
@@ -68,29 +68,6 @@ export default function TestimonialsSection() {
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-              <div className="absolute bottom-4 left-4 text-white z-10">
-                <h3 className="font-jakarta font-bold text-[18px] md:text-[20px] mb-1">
-                  {testimonials[0].name}
-                </h3>
-                <p className="font-inter text-[12px] md:text-[14px] opacity-90">
-                  {testimonials[0].earnings}
-                </p>
-              </div>
-              <div className="absolute bottom-4 right-4 bg-white rounded-full p-2 w-8 h-8 flex items-center justify-center z-10">
-                <svg
-                  width="10"
-                  height="12"
-                  viewBox="0 0 10 12"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M9.5 6L0.5 11.1962L0.5 0.803848L9.5 6Z"
-                    fill="#151E3A"
-                  />
-                </svg>
-              </div>
             </div>
             {/* Emma */}
             <div className="relative rounded-[20px] overflow-hidden w-full h-[280px] md:h-[260px] lg:h-[332px] group cursor-pointer">
@@ -100,30 +77,8 @@ export default function TestimonialsSection() {
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-              <div className="absolute bottom-4 left-4 text-white z-10">
-                <h3 className="font-jakarta font-bold text-[18px] md:text-[20px] mb-1">
-                  {testimonials[1].name}
-                </h3>
-                <p className="font-inter text-[12px] md:text-[14px] opacity-90">
-                  {testimonials[1].earnings}
-                </p>
-              </div>
-              <div className="absolute bottom-4 right-4 bg-white rounded-full p-2 w-8 h-8 flex items-center justify-center z-10">
-                <svg
-                  width="10"
-                  height="12"
-                  viewBox="0 0 10 12"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M9.5 6L0.5 11.1962L0.5 0.803848L9.5 6Z"
-                    fill="#151E3A"
-                  />
-                </svg>
-              </div>
             </div>
+
             {/* Sofia */}
             <div className="relative rounded-[20px] overflow-hidden w-full h-[280px] md:h-[260px] lg:h-[332px] group cursor-pointer">
               <Image
@@ -132,29 +87,6 @@ export default function TestimonialsSection() {
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-              <div className="absolute bottom-4 left-4 text-white z-10">
-                <h3 className="font-jakarta font-bold text-[18px] md:text-[20px] mb-1">
-                  {testimonials[2].name}
-                </h3>
-                <p className="font-inter text-[12px] md:text-[14px] opacity-90">
-                  {testimonials[2].earnings}
-                </p>
-              </div>
-              <div className="absolute bottom-4 right-4 bg-white rounded-full p-2 w-8 h-8 flex items-center justify-center z-10">
-                <svg
-                  width="10"
-                  height="12"
-                  viewBox="0 0 10 12"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M9.5 6L0.5 11.1962L0.5 0.803848L9.5 6Z"
-                    fill="#151E3A"
-                  />
-                </svg>
-              </div>
             </div>
           </div>
           {/* Second Row - 2 main columns with nested grids */}
@@ -171,29 +103,6 @@ export default function TestimonialsSection() {
                     fill
                     className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                  <div className="absolute bottom-4 left-4 text-white z-10">
-                    <h3 className="font-jakarta font-bold text-[18px] md:text-[20px] mb-1">
-                      {testimonials[3].name}
-                    </h3>
-                    <p className="font-inter text-[12px] md:text-[14px] opacity-90">
-                      {testimonials[3].earnings}
-                    </p>
-                  </div>
-                  <div className="absolute bottom-4 right-4 bg-white rounded-full p-2 w-8 h-8 flex items-center justify-center z-10">
-                    <svg
-                      width="10"
-                      height="12"
-                      viewBox="0 0 10 12"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9.5 6L0.5 11.1962L0.5 0.803848L9.5 6Z"
-                        fill="#151E3A"
-                      />
-                    </svg>
-                  </div>
                 </div>
                 {/* Sebastian */}
                 <div className="relative rounded-[20px] overflow-hidden w-full h-[180px] lg:h-[210px] group cursor-pointer">
@@ -203,35 +112,12 @@ export default function TestimonialsSection() {
                     fill
                     className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                  <div className="absolute bottom-4 left-4 text-white z-10">
-                    <h3 className="font-jakarta font-bold text-[18px] md:text-[20px] mb-1">
-                      {testimonials[4].name}
-                    </h3>
-                    <p className="font-inter text-[12px] md:text-[14px] opacity-90">
-                      {testimonials[4].earnings}
-                    </p>
-                  </div>
-                  <div className="absolute bottom-4 right-4 bg-white rounded-full p-2 w-8 h-8 flex items-center justify-center z-10">
-                    <svg
-                      width="10"
-                      height="12"
-                      viewBox="0 0 10 12"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9.5 6L0.5 11.1962L0.5 0.803848L9.5 6Z"
-                        fill="#151E3A"
-                      />
-                    </svg>
-                  </div>
                 </div>
               </div>
               {/* Row 2: Laptop image */}
               <div className="relative rounded-[20px] overflow-hidden w-full h-[280px] lg:h-[347px]">
                 <Image
-                  src="/images/home-hero-image.png"
+                  src="/images/home/testimonial/laptop-shopify.jpg"
                   alt="Dashboard"
                   fill
                   className="object-cover"
@@ -248,29 +134,6 @@ export default function TestimonialsSection() {
                   fill
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                <div className="absolute bottom-4 left-4 text-white z-10">
-                  <h3 className="font-jakarta font-bold text-[18px] md:text-[20px] mb-1">
-                    {testimonials[5].name}
-                  </h3>
-                  <p className="font-inter text-[12px] md:text-[14px] opacity-90">
-                    {testimonials[5].earnings}
-                  </p>
-                </div>
-                <div className="absolute bottom-4 right-4 bg-white rounded-full p-2 w-8 h-8 flex items-center justify-center z-10">
-                  <svg
-                    width="10"
-                    height="12"
-                    viewBox="0 0 10 12"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M9.5 6L0.5 11.1962L0.5 0.803848L9.5 6Z"
-                      fill="#151E3A"
-                    />
-                  </svg>
-                </div>
               </div>
               {/* Row 2: Trustpilot Section */}
               <div className="bg-[#F8F9FA] rounded-[20px] px-4 pt-5 md:px-5 md:py-6 lg:py-10 flex flex-col justify-between h-[225px] lg:h-[279px]">

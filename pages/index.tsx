@@ -14,8 +14,9 @@ import UltimatePlanFeatures from "@/components/parts/UltimatePlanFeatures"
 import StartYourJourney from "@/components/parts/StartYourJourney"
 import TrustPilotReviews from "@/components/parts/TrustPilotReviews"
 import TitlePill from "@/components/parts/TitlePill"
-import { useDisclosure } from "@chakra-ui/react"
 import { useModal } from "@/components/ModalContext"
+import Link from "next/link"
+import { ArrowRight, ArrowRightIcon } from "lucide-react"
 
 export default function Home() {
   const router = useRouter()
@@ -40,7 +41,7 @@ export default function Home() {
             <h1 className="text-white text-center text-[18px] leading-[1.3] sm:text-[20px] sm:leading-[1.4] md:text-[24px] md:leading-[1.5] max-w-[90%] sm:max-w-[600px] font-bold font-jakarta mb-3 md:mb-4">
               Över 300 miljoner kronor i intäkter på plattformen
             </h1>
-            <p className="mb-4 md:mb-6 max-w-[90%] sm:max-w-xl mx-auto text-center text-[11px] sm:text-[13px] md:text-[14px] lg:text-[16px] text-white font-inter leading-relaxed">
+            <p className="mb-4 md:mb-6 max-w-[95%] sm:max-w-[85%] md:max-w-xl mx-auto text-center text-[12px] sm:text-[14px] md:text-[15px] lg:text-[16px] text-white font-inter leading-[1.6] sm:leading-relaxed px-2 sm:px-0">
               Vår tjänst hjälper dig att ta kontroll över din framtid. Få
               personligt stöd från experter som vet vad som krävs för att
               lyckas.
@@ -78,18 +79,18 @@ export default function Home() {
                   className="w-7 h-7 object-contain"
                 />
                 <h3 className="text-sm md:text-md lg:text-xl font-jakarta font-semibold text-[#151E3A]">
-                  Färdig Dropshipping Butik
+                  Hemliga Strategier
                 </h3>
               </div>
 
               <div className="space-y-4">
                 <h3 className="text-sm md:text-xl lg:text-2xl font-inter font-semibold text-[#151E3A]">
-                  Behåll vinsten och utveckla din butik
+                  Privat coachning
                 </h3>
                 <p className="text-sm md:text-base text-[#434C69] leading-relaxed">
-                  Beställ din e-handelswebbplats med 30 vinnande produkter,
-                  kurs, video annonser och TikTok krediter så är du igång inom
-                  24 timmar.
+                  Du kommer få träffa en framgångsrik e-handelsmiljonär, och få
+                  vägledning för att bygga, skala och växa ditt dropshipping
+                  företag.
                 </p>
               </div>
             </div>
@@ -260,6 +261,17 @@ export default function Home() {
       </section>
 
       <MainFAQ faqData={HomePageFaqData} />
+      <div className="w-full flex justify-center mb-4">
+        <Link
+          href="/faq"
+          className="rounded-lg border border-[#908888] bg-white px-8 py-3 font-jakarta font-semibold text-sm md:text-base text-black inline-flex items-center gap-2"
+        >
+          Se alla vanliga frågor{" "}
+          <span>
+            <ArrowRightIcon size={14} />
+          </span>
+        </Link>
+      </div>
     </Layout>
   )
 }

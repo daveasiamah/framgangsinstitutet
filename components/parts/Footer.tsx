@@ -108,7 +108,7 @@ export default function Footer({}: Props) {
                     href="/blog"
                     className="font-inter text-[12px] sm:text-[14px] md:text-base"
                   >
-                    Blogg
+                    Blog
                   </Link>
                 </li>
                 <li>
@@ -145,7 +145,7 @@ export default function Footer({}: Props) {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/blog">blog</Link>
+                  <Link href="/blog">Blog</Link>
                 </li>
                 <li>
                   <Link
