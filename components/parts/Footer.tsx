@@ -104,7 +104,7 @@ export default function Footer({}: Props) {
                   <Link href="/ebocker">E-böcker</Link>
                 </li>
                 <li>
-                  <Link href="/blog">Blogg</Link>
+                  <Link href="/blog">blog</Link>
                 </li>
                 <li>
                   <Link href="/utbildningar">Utbildningar</Link>

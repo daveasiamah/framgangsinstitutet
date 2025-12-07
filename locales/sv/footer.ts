@@ -18,7 +18,7 @@ export const footerData: FooterData = {
   },
   resources: {
     title: "Resurser",
-    linkOne: "Blogg",
+    linkOne: "blog",
     linkTwo: "Press",
     linkThree: "",
   },
