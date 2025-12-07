@@ -2,7 +2,7 @@ import { AffiliateData } from "../types/affiliate"
 
 export const affiliateData: AffiliateData = {
   metaData: {
-    title: "Affiliates"
+    title: "Affiliates",
   },
 
   affiliateBlackTitle: "Affiliate",
@@ -32,29 +32,29 @@ export const affiliateData: AffiliateData = {
       imageUrl: "/icons/affiliate/1-secure.png",
       title: "Säkrade Transaktioner",
       subtitle:
-        "Vi samarbetar med företag som erbjuder finansiella tjänster online med säkra och krypterade transaktioner."
+        "Vi samarbetar med företag som erbjuder finansiella tjänster online med säkra och krypterade transaktioner.",
     },
     {
       id: 2,
       imageUrl: "/icons/affiliate/2-quality.png",
       title: "Kvalitet Före Kvantitet",
       subtitle:
-        "Checkified har flera års erfarenhet av affiliatepartnerskap. Vi är här för att hjälpa dig att komma igång med din e-handel på nätet."
+        "Checkified har flera års erfarenhet av affiliatepartnerskap. Vi är här för att hjälpa dig att komma igång med din e-handel på nätet.",
     },
     {
       id: 3,
       imageUrl: "/icons/affiliate/3-scale.png",
       title: "Verktyg i Skala",
       subtitle:
-        "Vi underlättar en uppsättning verktyg för din dagliga utveckling. Du kan använda kunskaper för att öka din försäljning."
-    }
+        "Vi underlättar en uppsättning verktyg för din dagliga utveckling. Du kan använda kunskaper för att öka din försäljning.",
+    },
   ],
 
   guideLabel: "Guider & Hjälp",
   guideBlackTitle: "Hjälp Att",
   guideBlueTitle: "Komma Igång",
   guideSubtitle:
-    "Här går vi snabbt och smidigt igenom de steg du måste genomföra för att hämta annonser eller textlänkar till din blogg eller hemsida.",
+    "Här går vi snabbt och smidigt igenom de steg du måste genomföra för att hämta annonser eller textlänkar till din blog eller hemsida.",
   guideData: {
     firstTitle: "Registrera dig affiliate",
     firstSubtitle:
@@ -63,13 +63,13 @@ export const affiliateData: AffiliateData = {
 
     secondTitle: "Kanaler",
     secondSubtitleOne:
-      "I samband med att du registrerade ett konto angav du också en kanal, det vill säga adressen till din hemsida eller blogg.",
+      "I samband med att du registrerade ett konto angav du också en kanal, det vill säga adressen till din hemsida eller blog.",
     secondSubtitleTwo:
       "På dina kanaler kan du lägga upp annonser eller textlänkar till våra annonsörer. Vill du lägga till fler kanaler gör du det då, när du är inloggad under Ditt namn -> Kanaler.",
 
     thirdTitle: "Välj annonsör",
     thirdSubtitle:
-      "Då du har registrerat den kanal (webbsida eller blogg) där du vill lägga upp reklam är det dags att välja en annonsör. Det gör du i programkatalogen som du kommer åt i menyn under Program -> Program katalog. Klicka på den annons du är intresserad av så kommer du till annonsörens programsida. Exempelvis ELON, CoolStuff eller Checkified.",
+      "Då du har registrerat den kanal (webbsida eller blog) där du vill lägga upp reklam är det dags att välja en annonsör. Det gör du i programkatalogen som du kommer åt i menyn under Program -> Program katalog. Klicka på den annons du är intresserad av så kommer du till annonsörens programsida. Exempelvis ELON, CoolStuff eller Checkified.",
 
     fourthTitle: "Hämta banners",
     fourthSubtitle:
@@ -77,48 +77,48 @@ export const affiliateData: AffiliateData = {
 
     fifthTitle: "Skapa en textlänk",
     fifthSubtitleOne:
-      "För att skapa en textlänk till din blogg eller hemsida klickar du på fliken &quot;Skapa länk&quot; på annonsörens programsida. Tänk på att du måste ha en kanal som är godkänd för att kunna skapa en textlänk (punkt 4).",
+      "För att skapa en textlänk till din blog eller hemsida klickar du på fliken &quot;Skapa länk&quot; på annonsörens programsida. Tänk på att du måste ha en kanal som är godkänd för att kunna skapa en textlänk (punkt 4).",
     fifthSubtitleTwo:
-      "Du kommer därefter till vår länkgenerator och det är länken/koden i det grå fältet du använder för att länka till annonsören från din hemsida eller blogg. Välj vilken kanal som din länk ska vara kopplad till, rutan Direktlänk fylls bara i om du vill länka till en speciell sida eller produkt hos annonsören (ange då URL:en/webbadressen till den sidan här).",
+      "Du kommer därefter till vår länkgenerator och det är länken/koden i det grå fältet du använder för att länka till annonsören från din hemsida eller blog. Välj vilken kanal som din länk ska vara kopplad till, rutan Direktlänk fylls bara i om du vill länka till en speciell sida eller produkt hos annonsören (ange då URL:en/webbadressen till den sidan här).",
 
     sixthTitle: "Ansök till en annonsör",
     sixthSubtitleOne:
-      "För att hämta annonser/banners till din webbplats/blogg klickar du på fliken &quot;Banners&quot; på annonsörens program sida som du når via programkatalogen. Tänk på att du måste ha en kanal som är godkänd för att kunna hämta annonskoden (punkt 4).",
+      "För att hämta annonser/banners till din webbplats/blog klickar du på fliken &quot;Banners&quot; på annonsörens program sida som du når via programkatalogen. Tänk på att du måste ha en kanal som är godkänd för att kunna hämta annonskoden (punkt 4).",
     sixthSubtitleTwo:
-      "De annonser som finns tillgängliga listas nu. Klicka på Hämta annonskod för att visa den kod du ska lägga till på din webbplats eller blogg. Du behöver inte fylla i några fält utan det fungerar att kopiera koden i det grå fältet i rutan som kommer upp direkt. Klistra in koden där du vill visa annonsen, i ett blogginlägg eller på en webbsida till exempel.",
+      "De annonser som finns tillgängliga listas nu. Klicka på Hämta annonskod för att visa den kod du ska lägga till på din webbplats eller blog. Du behöver inte fylla i några fält utan det fungerar att kopiera koden i det grå fältet i rutan som kommer upp direkt. Klistra in koden där du vill visa annonsen, i ett blogginlägg eller på en webbsida till exempel.",
 
     seventhTitle: "Bra tips",
     seventhList: [
       {
         id: 1,
-        text: "Guide - Tjäna pengar på din blogg"
+        text: "Guide - Tjäna pengar på din blog",
       },
       {
         id: 2,
-        text: "Affiliatenätverk – vad är det för något? (TkJ.se)"
+        text: "Affiliatenätverk – vad är det för något? (TkJ.se)",
       },
       {
         id: 3,
-        text: "Så tjänar du mer pengar som affiliate (TkJ.se)"
+        text: "Så tjänar du mer pengar som affiliate (TkJ.se)",
       },
       {
         id: 4,
-        text: "Tips och erfarenheter från en heltidsaffiliate"
+        text: "Tips och erfarenheter från en heltidsaffiliate",
       },
       {
         id: 5,
-        text: "Guide för dig som använder WordPress"
+        text: "Guide för dig som använder WordPress",
       },
       {
         id: 6,
-        text: "Guide för dig som bloggar via Nouw.com"
-      }
-    ]
+        text: "Guide för dig som bloggar via Nouw.com",
+      },
+    ],
   },
 
   getStartedBlackTitle: "Starta nu med",
   getStartedBlueTitle: "Checkified Affiliate",
   getStartedSubtitle:
     "Gå med i vårt partnerprogram idag och börja tjäna en passiv inkomst genom att marknadsföra våra tjänster.",
-  getStartedButton: "Kontakta oss"
+  getStartedButton: "Kontakta oss",
 }

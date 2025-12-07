@@ -8,7 +8,7 @@
   </url>
 
   <url>
-    <loc>https://checkified.se/blogg/</loc>
+    <loc>https://checkified.se/blog/</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
@@ -20,7 +20,7 @@
   </url>
 
   <url>
-    <loc>https://checkified.se/om-oss/</loc>
+    <loc>https://checkified.se/about/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

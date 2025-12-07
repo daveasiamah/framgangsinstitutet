@@ -145,12 +145,7 @@ export default function Footer({}: Props) {
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/cookie-policy"
-                    className="font-inter text-[12px] sm:text-[14px] md:text-base"
-                  >
-                    Cookiepolicy
-                  </Link>
+                  <Link href="/blog">blog</Link>
                 </li>
                 <li>
                   <Link

@@ -1,24 +1,24 @@
-import React from "react";
-import { useRouter } from "next/router";
+import React from "react"
+import { useRouter } from "next/router"
 
-import Layout from "@/components/Layout";
-import Title from "@/components/parts/Title";
+import Layout from "@/components/Layout"
+import Title from "@/components/parts/Title"
 
-import BlurCircle from "@/components/graphic/BlurCircle";
-import LineGraphic from "@/components/graphic/LineGraphic";
-import ShieldBadge from "@/components/graphic/ShieldBadge";
-import UserBadge from "@/components/graphic/UserBadge";
-import ScrollReveal from "@/components/transition/ScrollReveal";
+import BlurCircle from "@/components/graphic/BlurCircle"
+import LineGraphic from "@/components/graphic/LineGraphic"
+import ShieldBadge from "@/components/graphic/ShieldBadge"
+import UserBadge from "@/components/graphic/UserBadge"
+import ScrollReveal from "@/components/transition/ScrollReveal"
 
-import en from "@/locales/en";
-import sv from "@/locales/sv";
+import en from "@/locales/en"
+import sv from "@/locales/sv"
 
-type Props = {};
+type Props = {}
 
 export default function TOS({}: Props) {
-  const router = useRouter();
-  const { locale } = router;
-  const t = locale === "en" ? en : sv;
+  const router = useRouter()
+  const { locale } = router
+  const t = locale === "en" ? en : sv
 
   return (
     <Layout headTitle={"Användarvillkor"}>
@@ -42,142 +42,244 @@ export default function TOS({}: Props) {
 
       <section className="relative flex flex-col lg:flex-row gap-10 justify-between mb-12 lg:mb-16">
         <div className="section__content container flex flex-col space-y-[28px]">
-          {/* INLEDNING */}
           <span className="block text-xl font-bold leading-[32px]">
             INLEDNING
           </span>
           <p>
-            Dessa allmänna villkor ("Villkoren") är en central del av det avtal
-            ("Avtalet") som har ingåtts mellan Checkified ("Leverantören") och den
-            fysiska eller juridiska person ("Kunden") som har beställt och betalat
-            för Leverantörens tjänster. Genomgående i Villkoren benämns Leverantören
-            och Kunden gemensamt som "Parterna" och var för sig som en "Part". Villkoren
-            beskriver Parternas respektive rättigheter och skyldigheter i samband med
-            Leverantörens tillhandahållande av digitala tjänster till Kunden. Parterna
-            är medvetna om att eventuella särskilda villkor kan avtalas skriftligen
-            och uttryckligen mellan dem, och dessa särskilda villkor kommer i sådana
-            fall att ha företräde framför de allmänna Villkoren. Avtalet anses ha trätt
-            i kraft när Kunden erhåller tillgång till det digitala kursinnehållet, vilket
-            innebär att tjänsten har börjat levereras i enlighet med Distansavtalslagen.
+            Dessa villkor ("Villkoren") är en del av avtalet ("Avtalet") mellan
+            a) PowerChap AB ("Leverantören"), organisationsnummer 559327-5968,
+            och b) kunden som köper Leverantörens tjänster ("Kunden").
+            Tillsammans kallas Leverantören och Kunden för "Parterna", och var
+            för sig "Part". Avtal som uttryckligen avviker från dessa Villkor
+            gäller före Villkoren, om inte sammanhanget tydligt anger något
+            annat. Avtalet träder i kraft när Kunden får tillgång till det
+            digitala kursinnehållet, vilket markerar att tjänsten anses
+            levererad.
           </p>
 
-          {/* Erhållna Tjänster */}
           <span className="block text-xl font-bold leading-[32px]">
-           ERHÅLLNA TJÄNSTER
+            ERHÅLLNA TJÄNSTER
           </span>
           <p>
-            Leverantören åtar sig att leverera de överenskomna tjänsterna ("Tjänsterna")
-            till Kunden i enlighet med Avtalet. Tjänsterna inkluderar:
+            Leverantören tillhandahåller tjänster ("Tjänsterna") till en
+            användare hos Kunden enligt Avtalet. Tjänsterna omfattar:
           </p>
-          <ul className="list-disc pl-8">
-            <li>
-              <strong>1. Digitalt Kursinnehåll:</strong> Kursen består av ett omfattande
-              utbildningsprogram, levererat genom en molnbaserad plattform (SaaS).
-              Kunden får tillgång till kursinnehållet efter att Avtalet trätt i kraft och
-              betalningen har fullgjorts. Kursen täcker ämnesområden som:
-              <ul className="list-inside list-disc">
-                <li>Grunderna i företagsstart</li>
-                <li>Mentala strategier och entreprenörsmindset</li>
-                <li>Produktval och marknadsanalys</li>
-                <li>Skapandet av en webbshop</li>
-                <li>Marknadsföring genom Facebook-annonser och analys av kampanjresultat</li>
-                <li>Hantering av kundtjänst och logistik</li>
-                <li>Skalningsstrategier för affärs- och marknadsföringsutveckling</li>
-              </ul>
-            </li>
-            <li>
-              <strong>2. Digitalt Mentorskap:</strong> Leverantören erbjuder mentorskap via
-              gruppträning och handledning inom de ämnesområden som anges ovan. Gruppmentorskapet
-              genomförs genom digitala videomöten, och Leverantörens representanter leder dessa
-              sessioner. Kunden har rätt att delta i mentorskapet enligt det upplägg Leverantören bestämmer.
-            </li>
-            <li>
-              <strong>3. Digitalt Community:</strong> Leverantören erbjuder en digital plattform,
-              till exempel genom Discord, där Kunden kan interagera med andra kursdeltagare och
-              Leverantörens representanter. Leverantören förbehåller sig rätten att vid behov ändra
-              teknisk lösning eller format för communityn för att säkerställa tjänstens funktionalitet.
-            </li>
-          </ul>
+          <ol className="list-decimal pl-8 space-y-2">
+            <li>Digitalt kursinnehåll</li>
+            <li>Digitalt mentorskap</li>
+            <li>Digitalt community</li>
+          </ol>
+          <p>
+            Kursinnehållet levereras via en molnbaserad tjänst (SAAS-lösning)
+            och anses levererat när det blir tillgängligt på den webbadress
+            Leverantören anger. Kursen omfattar: introduktion till
+            företagsstart, mental förberedelse, produktval, byggande av
+            webbshop, testning med annonsering och analys, fulfillment,
+            annonseringsskalning och verksamhetstillväxt. Mentorskapet erbjuds
+            som gruppträning online i samma områden som kursinnehållet, ledd av
+            representanter från Leverantören. Tiden och teknisk lösning för
+            träffarna bestäms av Leverantören. Rätten att delta gäller 12
+            månader från Avtalets start. Communityn består av virtuella rum med
+            begränsad åtkomst. Inom dessa hålls diskussioner mellan medlemmar
+            och mentorer. Plattformen kan förändras över tid.
+          </p>
 
-          {/* Kunddata */}
-          <span className="block text-xl font-semibold leading-[32px]">
+          <span className="block text-xl font-bold leading-[32px]">
             KUNDDATA
           </span>
           <p>
-            Kunden samtycker till att Leverantören får använda anonymiserad data som genereras genom
-            Kundens deltagande i kursen och communityn för marknadsföringssyften och för att förbättra
-            Tjänsterna. Kunden kan skriftligen begära att viss data exkluderas från marknadsföringssyften,
-            förutsatt att sådan begäran inte strider mot tillämpliga lagar.
+            Kunden ger Leverantören rätt att använda kunddata för
+            marknadsföring, förutsatt att informationen inte är känslig eller
+            affärshemlig. Kunden kan skriftligen begära att viss data inte
+            används för marknadsföring, och Leverantören ska då upphöra med
+            sådan användning. Informationen om kunder och deras resultat får
+            fortfarande användas.
           </p>
 
-          {/* Tillhandahållande av Tjänster */}
-          <span className="block text-xl font-semibold leading-[32px]">
+          <span className="block text-xl font-bold leading-[32px]">
             TILLHANDAHÅLLANDE AV TJÄNSTER
           </span>
           <p>
-            Leverantören påbörjar leveransen av Tjänsterna först efter att Kunden har fullgjort betalningen
-            eller den första delbetalningen, om detta är överenskommet. Betalning kan ske via tredjepartsleverantörer
-            som Stripe eller Revolut, och Kunden accepterar att de regler och villkor som gäller för dessa tjänster
-            också är bindande för Kunden.
+            Tjänsterna levereras när Kunden betalat hela eller del av
+            ersättningen, alternativt när betalningsplan via tredjepart som
+            Klarna signerats. Genom att acceptera Villkoren får Kunden tillgång
+            till kursmaterial, inspelningar och färdiga mallar. Datum för
+            avtalsgodkännande räknas som leveransdatum.
           </p>
 
-          {/* Avbrott i Tjänsterna */}
-          <span className="block text-xl font-semibold leading-[32px]">
+          <span className="block text-xl font-bold leading-[32px]">
             AVBROTT I TJÄNSTERNA
           </span>
           <p>
-            Leverantören förbehåller sig rätten att vid behov temporärt avbryta eller begränsa åtkomsten
-            till Tjänsterna för underhåll, säkerhetsåtgärder eller uppdateringar. Vid sådana tillfällen
-            utgår ingen ersättning eller kompensation till Kunden, men Leverantören strävar efter att
-            minimera störningar och i möjligaste mån förvarna Kunden om planerade avbrott.
+            Leverantören kan stänga av tjänsterna tillfälligt för underhåll
+            eller säkerhet. Kunden har ingen rätt till ersättning vid avbrott på
+            grund av tekniska problem eller nätverksstörningar. Vid avtalsbrott
+            eller olagliga handlingar kan Leverantören stänga av Kunden utan
+            kompensation.
           </p>
 
-          {/* Underleverantörer */}
-          <span className="block text-xl font-semibold leading-[32px]">
+          <span className="block text-xl font-bold leading-[32px]">
             UNDERLEVERANTÖRER
           </span>
           <p>
-            För att uppfylla sina åtaganden enligt Avtalet kan Leverantören anlita underleverantörer.
-            Leverantören ansvarar för underleverantörernas arbete som om det vore Leverantörens eget
-            och förbinder sig att säkerställa att dessa underleverantörer följer gällande krav och standarder.
+            Leverantören kan använda underleverantörer men ansvarar fortsatt
+            fullt ut för åtagandena enligt Avtalet.
           </p>
 
-          {/* Ersättning och Betalning */}
-          <span className="block text-xl font-semibold leading-[32px]">
+          <span className="block text-xl font-bold leading-[32px]">
             ERSÄTTNING OCH BETALNING
           </span>
           <p>
-            Kunden ska erlägga en ersättning om totalt femton tusen (15 000) SEK, inklusive moms, för
-            de Tjänster som anges i Avtalet. Betalning sker enligt Leverantörens anvisningar, oftast via
-            tredjepartsbetalningslösningar, vars villkor även gäller för Kunden. Vid frågor eller problem
-            med betalning genom en tredjepartsleverantör hänvisas Kunden till aktuell leverantör.
+            Kunden betalar ersättningen vid Avtalets ingående.
+            Tredjepartsbetalningar kan ske via Klarna enligt deras villkor.
+            Eventuella avgifter eller räntor utöver avtalet kan tillkomma.
+            Faktura kan utfärdas med 10 dagars betalningstid om
+            tredjepartslösning ej används.
           </p>
 
-          {/* Immateriella Rättigheter */}
-          <span className="block text-xl font-semibold leading-[32px]">
+          <span className="block text-xl font-bold leading-[32px]">
             IMMATERIELLA RÄTTIGHETER
           </span>
           <p>
-            Alla immateriella rättigheter relaterade till Tjänsterna, inklusive men inte begränsat till
-            kursmaterial, design, logotyper och annat innehåll, tillhör Leverantören eller dess licensgivare.
-            Kunden beviljas en icke-exklusiv, icke-överlåtbar licens att använda kursmaterialet för internt bruk
-            under avtalets löptid. Det är förbjudet att sprida, kopiera eller dela materialet utanför denna licens.
+            Alla immateriella rättigheter till Tjänsterna tillhör Leverantören
+            eller dess licensgivare. Kunden får en icke-exklusiv, evig,
+            icke-överlåtbar licens att använda materialet för intern användning.
+            Data som skapas av Kunden i communityn ägs av Leverantören och kan
+            användas fritt.
           </p>
 
-          {/* Ansvarsbegränsning */}
-          <span className="block text-xl font-semibold leading-[32px]">
-            ANSVARSBEGRÄNSNING OCH ÅNGERRÄTT
+          <span className="block text-xl font-bold leading-[32px]">
+            SEKRETESS
           </span>
           <p>
-           Leverantörens ansvar är begränsat till den summa som Kunden har betalat för Tjänsterna.
-           Leverantören ansvarar inte för indirekta skador, dataförluster, inkomstbortfall eller andra
-           följdskador. Eftersom tjänsten levereras digitalt och anses påbörjad när Kunden får åtkomst
-           till innehållet, gäller ingen ångerrätt i enlighet med Distansavtalslagen.
+            Parterna ska inte avslöja Konfidentiell Information, som inkluderar
+            men inte är begränsad till marknadsföring, försäljningsstrategier,
+            produkter och kundinformation. Information i communityn från Kunden
+            betraktas inte som konfidentiell.
           </p>
 
-         
+          <span className="block text-xl font-bold leading-[32px]">
+            KUNDTJÄNST
+          </span>
+          <p>
+            All kontakt sker via info@checkified.se. Direktkontakt med
+            representanter kan ej garanteras.
+          </p>
+
+          <span className="block text-xl font-bold leading-[32px]">
+            SPARRING
+          </span>
+          <p>
+            Sparringsamtal kan spelas in och användas internt och för
+            marknadsföring.
+          </p>
+
+          <span className="block text-xl font-bold leading-[32px]">
+            ÅNGERRÄTT
+          </span>
+          <p>
+            Kunden kan säga upp avtalet och få återbetalning om mindre än 20 %
+            av kursen tagits del av och 14 dagar inte passerat. Ångern meddelas
+            via officiell blankett.
+          </p>
+
+          <span className="block text-xl font-bold leading-[32px]">
+            GARANTI
+          </span>
+          <p>
+            Efter 12 månader kan Kunden begära återbetalning om villkoren i
+            garantin uppfyllts men omsättningen understiger 100 000 SEK. Krav:
+            fullföljd kurs, deltagande i mentorskap, annonsering av minst 15
+            produkter med angiven budget.
+          </p>
+
+          <span className="block text-xl font-bold leading-[32px]">
+            FÖRSENAD BETALNING
+          </span>
+          <p>
+            Vid försenad betalning kan påminnelseavgift, ränta och inkasso
+            tillkomma. Leverantören kan temporärt pausa tjänsterna vid utebliven
+            betalning.
+          </p>
+
+          <span className="block text-xl font-bold leading-[32px]">
+            SKADESTÅND OCH VITE
+          </span>
+          <p>
+            Kunden ansvarar för obehörig åtkomst via sina inloggningsuppgifter
+            och ersätter skador enligt Avtalet.
+          </p>
+
+          <span className="block text-xl font-bold leading-[32px]">
+            BEFRIELSEGRUNDER
+          </span>
+          <p>
+            Force majeure undantar ansvar vid händelser utanför partens
+            kontroll, såsom pandemi eller naturkatastrofer.
+          </p>
+
+          <span className="block text-xl font-bold leading-[32px]">
+            ANSVARSBEGRÄNSNING
+          </span>
+          <p>
+            Leverantören ansvarar inte för indirekta skador. Totalt ansvar
+            begränsas till ersättningens storlek.
+          </p>
+
+          <span className="block text-xl font-bold leading-[32px]">
+            AVTALETS GILTIGHET
+          </span>
+          <p>
+            Avtalet gäller tills vidare från avtalsdagen. Uppsägning tidigast 12
+            månader efter avtalet med en månads uppsägningstid. Ingen
+            återbetalning vid uppsägning.
+          </p>
+
+          <span className="block text-xl font-bold leading-[32px]">
+            KOMMUNIKATION
+          </span>
+          <p>
+            Communityn är öppet för diskussioner, inte privata meddelanden.
+            Direktkontakt sker via leverantörens officiella kontaktvägar.
+          </p>
+
+          <span className="block text-xl font-bold leading-[32px]">
+            HELA AVTALET
+          </span>
+          <p>
+            Avtalet och bilagor utgör hela regleringen. Tidigare åtaganden
+            ersätts. Godkännande ger tillgång till digitalt material inklusive
+            kursvideor och mallar.
+          </p>
+
+          <span className="block text-xl font-bold leading-[32px]">
+            OGILTIGHET AV BESTÄMMELSE
+          </span>
+          <p>
+            Om en bestämmelse blir ogiltig, omförhandlas avtalet för att uppnå
+            likvärdigt resultat.
+          </p>
+
+          <span className="block text-xl font-bold leading-[32px]">
+            ANVÄNDARÅTAGANDE
+          </span>
+          <p>
+            Användare som företräder Kunden ansvarar personligen för att följa
+            sekretess och Avtalets övriga delar.
+          </p>
+
+          <span className="block text-xl font-bold leading-[32px]">
+            TOLKNING OCH TILLÄMPNING
+          </span>
+
+          <p>Avtalet styrs av svensk lag.</p>
+
+          <span className="block text-xl font-bold leading-[32px]">
+            TVISTELÖSNING
+          </span>
+          <p>Tvister löses av svensk domstol.</p>
         </div>
       </section>
     </Layout>
-  );
+  )
 }

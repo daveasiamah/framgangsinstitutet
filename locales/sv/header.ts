@@ -7,7 +7,7 @@ export const headerData: HeaderData = {
     {
       id: 1,
       imageUrl: "/icons/header/folder-2.svg",
-      title: "Blogg",
+      title: "blog",
       desc: "Bloggar om online företag",
       link: "/blogg",
     },
