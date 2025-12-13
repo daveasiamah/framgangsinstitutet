@@ -47,14 +47,13 @@ export default function TOS({}: Props) {
           </span>
           <p>
             Dessa villkor ("Villkoren") är en del av avtalet ("Avtalet") mellan
-            a) PowerChap AB ("Leverantören"), organisationsnummer 559327-5968,
-            och b) kunden som köper Leverantörens tjänster ("Kunden").
-            Tillsammans kallas Leverantören och Kunden för "Parterna", och var
-            för sig "Part". Avtal som uttryckligen avviker från dessa Villkor
-            gäller före Villkoren, om inte sammanhanget tydligt anger något
-            annat. Avtalet träder i kraft när Kunden får tillgång till det
-            digitala kursinnehållet, vilket markerar att tjänsten anses
-            levererad.
+            a) Checkified ("Leverantören"), och b) kunden som köper
+            Leverantörens tjänster ("Kunden"). Tillsammans kallas Leverantören
+            och Kunden för "Parterna", och var för sig "Part". Avtal som
+            uttryckligen avviker från dessa Villkor gäller före Villkoren, om
+            inte sammanhanget tydligt anger något annat. Avtalet träder i kraft
+            när Kunden får tillgång till det digitala kursinnehållet, vilket
+            markerar att tjänsten anses levererad.
           </p>
 
           <span className="block text-xl font-bold leading-[32px]">

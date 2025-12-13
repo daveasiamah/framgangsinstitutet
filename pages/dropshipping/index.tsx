@@ -1,12 +1,47 @@
 import React from "react"
+import Layout from "@/components/Layout"
+import WelcomeSection from "@/components/WelcomeSection"
 import Image from "next/image"
+import { useModal } from "@/components/ModalContext"
 
-export default function WelcomeSection() {
+export default function Dropshipping() {
+  const { openContractForm } = useModal()
+
   return (
-    <section className="bg-white py-2 md:py-2 px-4 mb-[35px]">
+    <Layout headTitle="Dropshipping - Checkified" isFullWidth={true}>
+      <section className="relative bg-white py-12 px-4 bg-[url('/images/hero-mesh.svg')] bg-no-repeat bg-cover bg-center">
+        <div className="max-w-7xl mx-auto">
+          {/* Title */}
+          <h1 className="text-[#151E3A] text-[32px] md:text-[48px] lg:text-[56px] font-bold font-jakarta text-center mb-6 leading-tight max-w-[960px] mx-auto">
+            Allt du behöver lära dig för lyckas med Dropshipping 2026
+          </h1>
+
+          {/* Description */}
+          <p className="text-[#434C69] text-[12px] md:text-[14px] lg:text-[14px] font-inter font-medium text-center mb-8 leading-relaxed max-w-[733px] mx-auto">
+            Vi har lång erfarenhet av att driva dropshipping framgångsrikt, och
+            det finns ett tydligt mönster för de butiker som presterar, och de
+            som inte gör det. Med hjälp av dessa insikter har vi skapat vår
+            onlinekurs om hur du driver dropshipping framgångsrikt 2026. Vi går
+            djupt in på detaljerna av hur du lyckas med dropshipping.
+          </p>
+
+          {/* Video/Image Section */}
+          <div className="relative max-w-[960px] mx-auto">
+            <Image
+              src="/images/home/graphics/checkified-hero.svg"
+              alt="Dropshipping Hero"
+              width={960}
+              height={540}
+              className="object-cover w-full h-auto"
+            />
+          </div>
+        </div>
+      </section>
+
+ <section className="bg-white py-2 md:py-2 px-4 mb-[35px]">
       <div className="max-w-7xl mx-auto">
         {/* Main Title */}
-        <h2 className="text-[#151E3A] text-[20px] leading-[24px] sm:text-[32px] sm:leading-[36px] md:text-[40px] md:leading-[44px] font-bold font-jakarta text-center mb-[24px] md:mb-8">
+        <h2 className="text-[#151E3A] text-[20px] leading-[35px] sm:text-[32px] sm:leading-[38px] md:text-[40px] md:leading-[48px] font-bold font-jakarta text-center mb-[24px] md:mb-8">
           Välkommen till Sveriges ledande
           <br />
           e-handelsutbildning
@@ -16,7 +51,7 @@ export default function WelcomeSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-start">
             {/* Text Content */}
             <div className="order-2 lg:order-1">
-              <h3 className="text-[#151E3A] text-[18px] sm:text-[22px] md:text-[40px] font-semibold font-geist mb-4 sm:mb-6 leading-[16px] sm:leading-[19px] md:leading-[35px]">
+              <h3 className="text-[#151E3A] text-[18px] sm:text-[22px] md:text-[40px] font-semibold font-geist mb-4 sm:mb-6 leading-[35px]">
                 Lär dig av e-handelsexpert
               </h3>
               <div className="space-y-4 font-inter font-normal text-[12px] sm:text-sm text-[#434C69] md:text-[16px] leading-relaxed">
@@ -67,7 +102,7 @@ export default function WelcomeSection() {
             </div>
             {/* Text Content */}
             <div className="order-2">
-              <h3 className="text-[#151E3A] text-[18px] sm:text-[22px] md:text-[40px] font-semibold font-geist mb-4 sm:mb-6 leading-[16px] sm:leading-[19px] md:leading-[35px]">
+              <h3 className="text-[#151E3A] text-[18px] sm:text-[22px] md:text-[40px] font-semibold font-geist mb-4 sm:mb-6 leading-[35px]">
                 Omge dig med drivna
                 <br />
                 entreprenörer och mentorer.
@@ -110,7 +145,7 @@ export default function WelcomeSection() {
             </div>
             {/* Text Content */}
             <div className="order-2 md:order-1">
-              <h3 className="text-[#151E3A] text-[18px] sm:text-[22px] md:text-[40px] font-semibold font-geist mb-4 sm:mb-6 leading-[16px] sm:leading-[19px] md:leading-[35px]">
+              <h3 className="text-[#151E3A] text-[18px] sm:text-[22px] md:text-[40px] font-semibold font-geist mb-4 sm:mb-6 leading-[35px]">
                 Låt inte din framgång vara
                 <br />
                 en chansning
@@ -142,5 +177,7 @@ export default function WelcomeSection() {
         </div>
       </div>
     </section>
+
+    </Layout>
   )
 }

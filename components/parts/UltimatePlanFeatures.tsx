@@ -4,13 +4,29 @@ import { CheckCircle2 } from "lucide-react"
 import { useModal } from "../ModalContext"
 
 const features = [
-  { text: "Omedelbar tillgång", highlight: "till Checkified" },
-  { text: "Världsledande", highlight: "programvara för onlinekurser" },
-  { text: "45+ e-handelsavsnitt", highlight: "inom olika moduler" },
-  { text: "Privat community med över", highlight: "1000+ medlemmar" },
-  { text: "25 000+ förredigerade videor", highlight: "och klipp" },
-  { text: "Färdigbyggda webbplatsfunnels", highlight: "och mallar" },
-  { text: "Inbyggda 2025", highlight: "AI-instruktörer" },
+  { text: "Omedelbar åtkomst", highlight: "till Checkified", boldFirst: true },
+  {
+    text: "Världsledande",
+    highlight: "programvara för onlinekurser",
+    boldSecond: true,
+  },
+  { text: "45+ avsnitt", highlight: "inom olika moduler", boldFirst: true },
+  {
+    text: "Privat community med över",
+    highlight: "1000+ medlemmar",
+    boldSecond: true,
+  },
+  {
+    text: "25 000+ förredigerade videor",
+    highlight: "och klipp",
+    boldFirst: true,
+  },
+  {
+    text: "Färdigbyggda webbplatsfunnels",
+    highlight: "och mallar",
+    boldFirst: true,
+  },
+  { text: "Inbyggda 2025", highlight: "AI-instruktörer", boldSecond: true },
 ]
 
 function UltimatePlanFeatures() {
@@ -33,7 +49,7 @@ function UltimatePlanFeatures() {
               height={28}
               className="sm:w-[35px] sm:h-[35px]"
             />
-            <h2 className="text-lg sm:text-2xl md:text-3xl font-jakarta font-bold text-[#1C46B0] leading-tight">
+            <h2 className="text-lg sm:text-2xl md:text-2xl font-jakarta font-bold text-[#1C46B0] leading-tight">
               Dropshipping Mentorskap
             </h2>
           </div>
@@ -127,10 +143,28 @@ function UltimatePlanFeatures() {
               >
                 <CheckCircle2 className="w-5 h-5 sm:w-6 sm:h-6 text-[#225AEA] flex-shrink-0 mt-0.5" />
                 <p className="text-[#225AEA] text-sm sm:text-base font-inter leading-relaxed">
-                  {f.text}{" "}
-                  <span className="font-bold font-inter text-[#225AEA]">
-                    {f.highlight}
-                  </span>
+                  {f.boldFirst ? (
+                    <>
+                      <span className="font-bold font-inter text-[#225AEA]">
+                        {f.text}
+                      </span>{" "}
+                      {f.highlight}
+                    </>
+                  ) : f.boldSecond ? (
+                    <>
+                      {f.text}{" "}
+                      <span className="font-bold font-inter text-[#225AEA]">
+                        {f.highlight}
+                      </span>
+                    </>
+                  ) : (
+                    <>
+                      {f.text}{" "}
+                      <span className="font-bold font-inter text-[#225AEA]">
+                        {f.highlight}
+                      </span>
+                    </>
+                  )}
                 </p>
               </li>
             ))}

@@ -47,7 +47,7 @@ const TrustPilotReviews: React.FC = () => {
             >
               <div className="flex mb-2">
                 <Image
-                  src="/icons/trustpilot-review-top.svg"
+                  src="/images/home/trustpilot-top.svg"
                   alt="stars"
                   width={302}
                   height={26}
