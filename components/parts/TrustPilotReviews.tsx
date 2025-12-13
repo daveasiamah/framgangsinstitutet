@@ -68,7 +68,7 @@ const TrustPilotReviews: React.FC = () => {
           ))}
         </div>
       </div>
-      <div className="mt-4 sm:mt-6 text-center text-[#27272A] text-[12px] xs:text-[13px] sm:text-[14px] font-inter px-2">
+      <div className="text-center text-[#27272A] mt-2 text-[12px] md:text-[14px] max-w-[270px] md:max-w-none font-inter px-2">
         Har fått betyget{" "}
         <span className="font-semibold font-inter">4.5 / 5</span> baserat på 127
         omdömen. Visar våra 5-stjärniga omdömen.
@@ -76,9 +76,9 @@ const TrustPilotReviews: React.FC = () => {
       <Image
         src="/images/trustpilot-badge-small.svg"
         alt="Trustpilot badge"
-        width={140}
-        height={45}
-        className="object-contain w-[120px] xs:w-[140px] sm:w-[180px] h-[38px] xs:h-[45px] sm:h-[58px] mt-2"
+        width={120}
+        height={16}
+        className="object-contain w-[120px] xs:w-[140px] sm:w-[180px] h-[16px] sm:mt-2"
       />
     </section>
   )

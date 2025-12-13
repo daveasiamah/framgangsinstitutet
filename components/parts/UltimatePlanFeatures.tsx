@@ -90,7 +90,7 @@ function UltimatePlanFeatures() {
         </div>
 
         {/* Feature bar */}
-        <div className="bg-primary/90 border border-white rounded-full px-2 sm:px-4 md:px-6 py-3 sm:py-4 mb-4">
+        <div className="border border-white rounded-full px-2 sm:px-4 md:px-6 py-3 sm:py-4 mb-4 shadow-lg shadow-[#3c6ce4c8]">
           <div className="flex items-center border-1 border-white justify-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 text-white font-inter overflow-hidden">
             <div className="flex items-center gap-1 sm:gap-1.5 md:gap-2 flex-shrink-0">
               <Image
@@ -142,7 +142,7 @@ function UltimatePlanFeatures() {
                 className="flex items-start gap-2 sm:gap-3 text-[#225AEA]"
               >
                 <CheckCircle2 className="w-5 h-5 sm:w-6 sm:h-6 text-[#225AEA] flex-shrink-0 mt-0.5" />
-                <p className="text-[#225AEA] text-sm sm:text-base font-inter leading-relaxed">
+                <p className="text-[#225AEA] text-xs sm:text-base font-inter leading-relaxed">
                   {f.boldFirst ? (
                     <>
                       <span className="font-bold font-inter text-[#225AEA]">

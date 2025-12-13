@@ -21,7 +21,7 @@ export default function HeroSection({
 }: Props) {
   const { openContractForm } = useModal()
   return (
-    <section className="relative bg-white py-12 px-4 bg-[url('/images/hero-mesh.svg')] bg-no-repeat bg-cover bg-center">
+    <section className="relative bg-white py-8 px-4 bg-[url('/images/hero-mesh.svg')] bg-no-repeat bg-cover bg-center">
       <div className="max-w-7xl mx-auto">
         {/* Trustpilot */}
         {showTrustpilot && (
@@ -31,23 +31,23 @@ export default function HeroSection({
               alt="Trustpilot"
               width={255}
               height={33}
-              className="object-contain"
+              className="object-contain h-[33px] w-[255px]"
             />
           </div>
         )}
 
         {/* Title */}
-        <h1 className="text-[#151E3A] text-[32px] md:text-[48px] lg:text-[56px] font-bold font-jakarta text-center mb-6 leading-[36px] md:leading-[52px] lg:leading-[60px] max-w-[700px] mx-auto">
+        <h1 className="text-[#151E3A] text-[32px] md:text-[48px] lg:text-[56px] font-bold font-jakarta text-center mb-6 leading-[32px] md:leading-[44px] lg:leading-[52px] max-w-[700px] md:max-w-[550px] lg:max-w-[700px] mx-auto">
           {title}
         </h1>
 
         {/* Description */}
-        <p className="text-[#434C69] text-[11px] md:text-[14px] lg:text-[14px] font-inter font-medium text-center mb-8 leading-relaxed max-w-[733px] mx-auto">
+        <p className="text-[#434C69] text-[11px] md:text-[14px] lg:text-[14px] font-inter font-medium text-center mb-4 leading-relaxed max-w-[733px] mx-auto">
           {description}
         </p>
 
         {/* CTA Button */}
-        <div className="flex justify-center items-center mb-12">
+        <div className="flex justify-center items-center mb-4">
           <button
             onClick={() => openContractForm()}
             className="px-6 py-3 bg-[#225AEA] hover:bg-[#1a4aca] text-white font-semibold rounded-[7px] transition-colors duration-200 font-jakarta text-sm inline-flex items-center gap-2"

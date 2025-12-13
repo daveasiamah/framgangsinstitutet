@@ -42,9 +42,8 @@ const testimonials: Testimonial[] = [
 ]
 
 export default function TestimonialsSection() {
-  const { openContractForm } = useModal()
   return (
-    <section className="bg-white py-10 md:py-12 px-4">
+    <section className="bg-white px-4 mb-7 md:mb-12">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">

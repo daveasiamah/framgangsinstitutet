@@ -59,18 +59,18 @@ export default function Home() {
       <TrustPilotReviews />
 
       {/* Feature Cards Section */}
-      <section className="flex flex-col w-full max-w-7xl mx-auto items-center gap-3 mt-10 md:mt-20 mb-20">
-        <TitlePill text="Färdig e-handelsbutik" />
-        <h2 className="font-jakarta font-semibold text-[16px] md:text-[24px] lg:text-[40px] leading-[48px] mb-5">
+      <section className="flex flex-col w-full max-w-7xl mx-auto items-center gap-3 mt-6 mb-20">
+        <TitlePill text="Alla tillgängliga funktioner" className="mt-[36px]" />
+        <h2 className="font-jakarta font-semibold text-[18px] text-center text-black md:text-[24px] lg:text-[40px] max-w-[241px] md:max-w-none leading-[22px] md:leading-[50px] mb-1">
           Allt du behöver för att börja sälja och skala upp
         </h2>
 
         {/* Cards List */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[36px]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[14px] md:gap-[20px]">
           {/* Card 1 */}
-          <div className="flex flex-col p-[10px] border-1 rounded-[16px] bg-[#F5F9FF] space-y-6">
-            <div className="flex flex-col p-7 border-1 rounded-[16px] bg-[#FFFFFF] border-[#908888] space-y-6">
-              <div className="flex items-center gap-3">
+          <div className="flex flex-col p-[10px] rounded-[16px] bg-[#F5F9FF] space-y-6">
+            <div className="flex flex-col p-7 border-[0.5px] border-[#908888] rounded-[16px] bg-[#FFFFFF] py-6">
+              <div className="flex items-center gap-1">
                 <Image
                   src="/images/home/graphics/hbook-icon.svg"
                   alt="library icon"
@@ -78,16 +78,16 @@ export default function Home() {
                   height={28}
                   className="w-7 h-7 object-contain"
                 />
-                <h3 className="text-sm md:text-md lg:text-xl font-jakarta font-semibold text-[#151E3A]">
+                <h3 className="text-sm md:text-xl lg:text-xl font-jakarta font-bold md:font-semibold text-[#151E3A]">
                   Hemliga Strategier
                 </h3>
               </div>
 
-              <div className="space-y-4">
-                <h3 className="text-sm md:text-xl lg:text-2xl font-inter font-semibold text-[#151E3A]">
+              <div className="pt-2 md:pt-4">
+                <h3 className="text-sm md:text-[26px] font-inter font-semibold text-[#151E3A]">
                   Privat coachning
                 </h3>
-                <p className="text-sm md:text-base text-[#434C69] leading-relaxed">
+                <p className="text-xs md:text-base text-[#434C69] pt-1 leading-relaxed">
                   Du kommer få träffa en framgångsrik e-handelsmiljonär, och få
                   vägledning för att bygga, skala och växa ditt dropshipping
                   företag.
@@ -97,8 +97,8 @@ export default function Home() {
           </div>
           {/* Card 2 */}
           <div className="flex flex-col p-[10px] border-1 rounded-[16px] bg-[#F5F9FF] space-y-6">
-            <div className="flex flex-col p-7 border-1 rounded-[16px] bg-[#FFFFFF] border-[#908888] space-y-6">
-              <div className="flex items-center gap-3">
+            <div className="flex flex-col p-7 border-[0.5px] border-[#908888] rounded-[16px] bg-[#FFFFFF] py-6">
+              <div className="flex items-center gap-1">
                 <Image
                   src="/images/home/graphics/hpencil-icon.svg"
                   alt="library icon"
@@ -106,16 +106,16 @@ export default function Home() {
                   height={28}
                   className="w-7 h-7 object-contain"
                 />
-                <h3 className="text-sm md:text-md lg:text-xl font-jakarta font-semibold text-[#151E3A]">
+                <h3 className="text-sm md:text-xl lg:text-xl font-jakarta font-bold md:font-semibold text-[#151E3A]">
                   Dropshipping Kurs
                 </h3>
               </div>
 
-              <div className="space-y-4">
-                <h3 className="text-sm md:text-xl lg:text-2xl font-inter font-semibold text-[#151E3A]">
+              <div className="pt-2 md:pt-4">
+                <h3 className="text-sm md:text-[26px] font-inter font-semibold text-[#151E3A]">
                   Exklusiv E-handelskurs
                 </h3>
-                <p className="text-sm md:text-base text-[#434C69] leading-relaxed">
+                <p className="text-xs md:text-base text-[#434C69] pt-1 leading-relaxed">
                   Du kommer få tillgång till ett avancerad kurs med över 45+
                   avsnitt som täcker alla områden inom e-handel och
                   dropshipping.
@@ -126,8 +126,8 @@ export default function Home() {
 
           {/* Card 3 */}
           <div className="flex flex-col p-[10px] border-1 rounded-[16px] bg-[#F5F9FF] space-y-6">
-            <div className="flex flex-col p-7 border-1 rounded-[16px] bg-[#FFFFFF] border-[#908888] space-y-6">
-              <div className="flex items-center gap-3">
+            <div className="flex flex-col p-7 border-[0.5px] border-[#908888] rounded-[16px] bg-[#FFFFFF] py-6">
+              <div className="flex items-center gap-1">
                 <Image
                   src="/images/home/graphics/hpeople-icon.svg"
                   alt="library icon"
@@ -135,16 +135,16 @@ export default function Home() {
                   height={28}
                   className="w-7 h-7 object-contain"
                 />
-                <h3 className="text-sm md:text-md lg:text-xl font-jakarta font-semibold text-[#151E3A]">
+                <h3 className="text-sm md:text-xl lg:text-xl font-jakarta font-bold md:font-semibold text-[#151E3A]">
                   Gemenskaper
                 </h3>
               </div>
 
-              <div className="space-y-4">
-                <h3 className="text-sm md:text-xl lg:text-2xl font-inter font-semibold text-[#151E3A]">
+              <div className="pt-2 md:pt-4">
+                <h3 className="text-sm md:text-[26px] font-inter font-semibold text-[#151E3A]">
                   Tillgång till interaktiv community
                 </h3>
-                <p className="text-sm md:text-base text-[#434C69] leading-relaxed">
+                <p className="text-xs md:text-base text-[#434C69] pt-1 leading-relaxed">
                   Få tillgång till vår blomstrande community med över 2000
                   medlemmar. Använd tillgångarna i kursen för att öka
                   engagemanget
@@ -154,8 +154,8 @@ export default function Home() {
           </div>
           {/* Card 4 */}
           <div className="flex flex-col p-[10px] border-1 rounded-[16px] bg-[#F5F9FF] space-y-6">
-            <div className="flex flex-col p-7 border-1 rounded-[16px] bg-[#FFFFFF] border-[#908888] space-y-6">
-              <div className="flex items-center gap-3">
+            <div className="flex flex-col p-7 border-[0.5px] border-[#908888] rounded-[16px] bg-[#FFFFFF] py-6">
+              <div className="flex items-center gap-1">
                 <Image
                   src="/images/home/graphics/hmedia-icon.svg"
                   alt="library icon"
@@ -163,16 +163,16 @@ export default function Home() {
                   height={28}
                   className="w-7 h-7 object-contain"
                 />
-                <h3 className="text-sm md:text-md lg:text-xl font-jakarta font-semibold text-[#151E3A]">
+                <h3 className="text-sm md:text-xl lg:text-xl font-jakarta font-bold md:font-semibold text-[#151E3A]">
                   Högkonverterande Annonser
                 </h3>
               </div>
 
-              <div className="space-y-4">
-                <h3 className="text-sm md:text-xl lg:text-2xl font-inter font-semibold text-[#151E3A]">
+              <div className="pt-2 md:pt-4">
+                <h3 className="text-sm md:text-[26px] font-inter font-semibold text-[#151E3A]">
                   Annonsmaterial för varje sociala medier
                 </h3>
-                <p className="text-sm md:text-base text-[#434C69] leading-relaxed">
+                <p className="text-xs md:text-base text-[#434C69] pt-1 leading-relaxed">
                   Öka tillväxten i din butik med våra beprövade
                   tillväxtstrategier som driver trafik och ökar dina intäkter.
                 </p>
@@ -181,8 +181,8 @@ export default function Home() {
           </div>
           {/* Card 5 */}
           <div className="flex flex-col p-[10px] border-1 rounded-[16px] bg-[#F5F9FF] space-y-6">
-            <div className="flex flex-col p-7 border-1 rounded-[16px] bg-[#FFFFFF] border-[#908888] space-y-6">
-              <div className="flex items-center gap-3">
+            <div className="flex flex-col p-7 border-[0.5px] border-[#908888] rounded-[16px] bg-[#FFFFFF] py-6">
+              <div className="flex items-center gap-1">
                 <Image
                   src="/images/home/graphics/hnews-icon.svg"
                   alt="library icon"
@@ -190,16 +190,16 @@ export default function Home() {
                   height={28}
                   className="w-7 h-7 object-contain"
                 />
-                <h3 className="text-sm md:text-md lg:text-xl font-jakarta font-semibold text-[#151E3A]">
+                <h3 className="text-sm md:text-xl lg:text-xl font-jakarta font-bold md:font-semibold text-[#151E3A]">
                   Exklusiv E-handelskurs
                 </h3>
               </div>
 
-              <div className="space-y-4">
-                <h3 className="text-sm md:text-xl lg:text-2xl font-inter font-semibold text-[#151E3A]">
+              <div className="pt-2 md:pt-4">
+                <h3 className="text-sm md:text-[26px] font-inter font-semibold text-[#151E3A]">
                   Tillgång till privata lektioner av experter
                 </h3>
-                <p className="text-sm md:text-base text-[#434C69] leading-relaxed">
+                <p className="text-xs md:text-base text-[#434C69] pt-1 leading-relaxed">
                   Checkified Mentorskap™️ är det enda stället som erbjuder
                   utbildning i världsklass med praktiskt vägledning till ett
                   unikt e-handelsystem.
@@ -209,8 +209,8 @@ export default function Home() {
           </div>
           {/* Card 6 */}
           <div className="flex flex-col p-[10px] border-1 rounded-[16px] bg-[#F5F9FF] space-y-6">
-            <div className="flex flex-col p-7 border-1 rounded-[16px] bg-[#FFFFFF] border-[#908888] space-y-6">
-              <div className="flex items-center gap-3">
+            <div className="flex flex-col p-7 border-[0.5px] border-[#908888] rounded-[16px] bg-[#FFFFFF] py-6">
+              <div className="flex items-center gap-1">
                 <Image
                   src="/images/home/graphics/hstar-icon.svg"
                   alt="library icon"
@@ -218,16 +218,16 @@ export default function Home() {
                   height={28}
                   className="w-7 h-7 object-contain"
                 />
-                <h3 className="text-sm md:text-md lg:text-xl font-jakarta font-semibold text-[#151E3A]">
+                <h3 className="text-sm md:text-xl lg:text-xl font-jakarta font-bold md:font-semibold text-[#151E3A]">
                   AI Verktyg
                 </h3>
               </div>
 
-              <div className="space-y-4">
-                <h3 className="text-sm md:text-xl lg:text-2xl font-inter font-semibold text-[#151E3A]">
+              <div className="pt-2 md:pt-4">
+                <h3 className="text-sm md:text-[26px] font-inter font-semibold text-[#151E3A]">
                   Inbyggda AI verktyg för e-handel
                 </h3>
-                <p className="text-sm md:text-base text-[#434C69] leading-relaxed">
+                <p className="text-xs md:text-base text-[#434C69] pt-1 leading-relaxed">
                   Vi ger dig alla de senaste verktygen för att din online
                   verksamhet ska växa med hjälp av AI. Dessa hemliga verktyg
                   behöver du.
@@ -239,7 +239,7 @@ export default function Home() {
       </section>
 
       {/* Plan Section */}
-      <section className="flex flex-col justify-center items-center py-1 mb-16">
+      <section className="flex flex-col justify-center items-center py-1 mb-8">
         <Image
           src="/images/ultimate-plan-banner.svg"
           alt="ultimate plan"
@@ -256,7 +256,7 @@ export default function Home() {
           plus ett pris som passar alla som är redo att vara ambitiösa.
         </p>
         <UltimatePlanFeatures />
-        <TitlePill text="Totalt värde: 155 000 kr" />
+        <TitlePill text="Totalt värde: 155 000 kr" className="mt-2"/>
         <StartYourJourney />
       </section>
 

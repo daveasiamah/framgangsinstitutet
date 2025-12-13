@@ -29,10 +29,10 @@ function Accordion({ data }: Props) {
         <button
           onClick={() => toggle(index)}
           key={data.id}
-          className="accordion-wrapper text-left border-2 border-[#E5E5E5] bg-white py-4 px-6 rounded-2xl cursor-pointer focus:border-primary transition-all w-full"
+          className="accordion-wrapper text-left border-2 border-[#E5E5E5] bg-white py-3 px-4 rounded-2xl cursor-pointer focus:border-primary transition-all w-full"
         >
           <div className="cursor-pointer py-2 flex justify-between items-center">
-            <h2 className="text-neutral-900 font-inter font-semibold text-md">
+            <h2 className="text-neutral-900 font-inter font-semibold text-[12px] md:text-base leading-tight max-w-[90%]">
               {data.question}
             </h2>
             <span

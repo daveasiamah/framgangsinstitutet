@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useRef } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { useRouter } from "next/router"
@@ -34,6 +34,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
 
   const isSlugPage = !!query.slug
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const closeTimerRef = useRef<NodeJS.Timeout | null>(null)
 
   // CTA modal
   const {
@@ -112,24 +113,23 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
           <Link href="/om-oss">Om oss</Link>
 
           {/* Mega Menu - Custom Implementation */}
-          <Box position="relative">
+          <Box 
+            position="relative" 
+            onMouseLeave={() => {
+              closeTimerRef.current = setTimeout(() => {
+                setIsMenuOpen(false)
+              }, 100)
+            }}
+            onMouseEnter={() => {
+              if (closeTimerRef.current) {
+                clearTimeout(closeTimerRef.current)
+              }
+            }}
+          >
             <Button
               variant="ghost"
               onMouseEnter={() => setIsMenuOpen(true)}
               onFocus={() => setIsMenuOpen(true)}
-              onBlur={(e) => {
-                // Delay to allow focus to move to menu items
-                const currentTarget = e.currentTarget
-                setTimeout(() => {
-                  if (
-                    !currentTarget?.parentElement
-                      ?.querySelector('[role="menu"]')
-                      ?.contains(document.activeElement)
-                  ) {
-                    setIsMenuOpen(false)
-                  }
-                }, 150)
-              }}
             >
               Utbildning
               <MdOutlineKeyboardArrowDown
@@ -154,15 +154,11 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
                 bg="white"
                 width={["90vw", "500px", "650px"]}
                 zIndex={50}
-                onMouseEnter={() => setIsMenuOpen(true)}
-                onMouseLeave={() => setIsMenuOpen(false)}
-                onFocus={() => setIsMenuOpen(true)}
-                onBlur={(e) => {
-                  setTimeout(() => {
-                    if (!e.currentTarget.contains(document.activeElement)) {
-                      setIsMenuOpen(false)
-                    }
-                  }, 150)
+                onMouseEnter={() => {
+                  if (closeTimerRef.current) {
+                    clearTimeout(closeTimerRef.current)
+                  }
+                  setIsMenuOpen(true)
                 }}
               >
                 <Stack gap={4}>

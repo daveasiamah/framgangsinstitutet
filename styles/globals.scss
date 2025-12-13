@@ -88,9 +88,14 @@ textarea::placeholder {
 
   .plusminus {
     position: relative;
-    width: 18px;
-    height: 18px;
+    width: 14px;
+    height: 14px;
     cursor: pointer;
+    
+    @media (min-width: 768px) {
+      width: 18px;
+      height: 18px;
+    }
 
     &.active {
       &:before {
@@ -111,8 +116,13 @@ textarea::placeholder {
       top: 50%;
       left: 0;
       transition: 0.35s;
-      width: 14px;
-      height: 2px;
+      width: 11px;
+      height: 1.5px;
+      
+      @media (min-width: 768px) {
+        width: 14px;
+        height: 2px;
+      }
     }
 
     &:before {
