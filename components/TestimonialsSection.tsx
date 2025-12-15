@@ -43,11 +43,11 @@ const testimonials: Testimonial[] = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="bg-white px-4 mb-7 md:mb-12">
+    <section className="bg-white px-4 mb-0 md:mb-10">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-[#151E3A] text-[32px] md:text-[40px] lg:text-[48px] font-bold font-jakarta mb-4 leading-[36px] md:leading-[44px] lg:leading-[52px]">
+        <div className="text-center mb-[8px] md:mb-[14px]">
+          <h2 className="text-[#151E3A] text-[32px] md:text-[40px] lg:text-[48px] font-bold font-jakarta mb-2 mt-[24px] md:mt-[38px] lg:mt-[50px] leading-[36px] md:leading-[44px] lg:leading-[52px]">
             Förändra ditt liv med Checkified
           </h2>
           <p className="text-[#434C69] text-[14px] md:text-[16px] font-inter max-w-[700px] mx-auto">
@@ -56,9 +56,19 @@ export default function TestimonialsSection() {
           </p>
         </div>
         {/* Masonry Grid Layout - Max 1276x930 with 20px gaps */}
-        <div className="max-w-[1276px] mx-auto space-y-5">
-          {/* First Row - 3 columns: Johan (2 cols), Emma, Sofia */}
-          <div className="grid grid-cols-1 md:grid-cols-[46.2%_26.2%_26.2%] lg:grid-cols-[590px_324px_324px] gap-5">
+        <div className="max-w-[1276px] mx-auto">
+          {/* Mobile - Full width testimonial image */}
+          <div className="md:hidden relative rounded-[20px] mt-2 mb-5 overflow-hidden w-full h-[320px] sm:h-[320px]">
+            <Image
+              src="/images/home/testimonials-mobile.svg"
+              alt="Testimonials"
+              fill
+              className="object-cover"
+            />
+          </div>
+
+          {/* First Row - 3 columns: Johan (2 cols), Emma, Sofia - Hidden on Mobile */}
+          <div className="hidden md:grid grid-cols-1 md:grid-cols-[40%_28%_28%] lg:grid-cols-[590px_324px_324px] gap-4 mb-4">
             {/* Johan - spans 2 visual columns on desktop */}
             <div className="relative rounded-[20px] overflow-hidden w-full h-[280px] md:h-[260px] lg:h-[332px] group cursor-pointer">
               <Image

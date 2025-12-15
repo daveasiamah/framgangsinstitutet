@@ -43,6 +43,7 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
       const res = await registerOfContract(data)
       if (res.success) {
         reset()
+        onClose()
         router.push("/thank-you")
       }
       if (res.error) {

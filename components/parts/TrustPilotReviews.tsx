@@ -45,13 +45,13 @@ const TrustPilotReviews: React.FC = () => {
               key={idx}
               className="bg-[#F8F9FA] p-3 md:p-4 flex flex-col w-full shadow-sm"
             >
-              <div className="flex mb-2">
+              <div className="flex mb-2 justify-start self-start">
                 <Image
                   src="/images/home/trustpilot-top.svg"
                   alt="stars"
                   width={302}
                   height={26}
-                  className="object-contain w-full max-w-[302px] md:max-w-[150px] h-auto"
+                  className="object-contain w-full max-w-[302px] md:max-w-[150px] h-[20px] md:h-[13px]"
                 />
               </div>
               <h3 className="font-jakarta font-bold text-[16px] md:text-[8px] lg:text-[14px] leading-tight mb-2">

@@ -15,6 +15,10 @@ export default function Footer({}: Props) {
   const t = locale === "en" ? en : sv
   const currentYear = new Date().getFullYear()
 
+  const handleRegistration = () => {
+    console.log("Registration: 123")
+  }
+
   return (
     <footer className="bg-[#225AEA] text-white min-h-[445px] flex-col justify-center items-center bg-[url('/images/home/footer-vector-mesh.svg')] bg-cover sm:bg-cover bg-no-repeat bg-center mt-2 lg:mt-10">
       <div className="container flex flex-col justify-center mx-auto pt-8 sm:pt-10 md:pt-12 px-4 sm:px-6 md:px-8 lg:px-10">
@@ -38,7 +42,7 @@ export default function Footer({}: Props) {
                 placeholder="Skriv in din e-post"
                 className="bg-[#fff] border border-[#434C69] rounded-[8px] flex-1 sm:w-[2/3] py-3 sm:py-[14px] px-4 sm:px-[26px] text-[#434C69] text-[12px] sm:text-[14px] md:text-[16px] font-semibold leading-[18px] sm:leading-[22px] md:leading-[32px]"
               />
-              <button className="bg-[#072F94] text-white text-[12px] sm:text-[12px] items-center justify-center text-center flex md:text-[16px] font-semibold leading-[18px] sm:leading-[22px] md:leading-[32px] rounded-[6px] sm:w-[1/3] py-3 sm:py-[14px] px-4 sm:px-[26px] whitespace-nowrap">
+              <button onClick={handleRegistration} className="bg-[#072F94] text-white text-[12px] sm:text-[12px] items-center justify-center text-center flex md:text-[16px] font-semibold leading-[18px] sm:leading-[22px] md:leading-[32px] rounded-[6px] sm:w-[1/3] py-3 sm:py-[14px] px-4 sm:px-[26px] whitespace-nowrap">
                 Registrera dig
               </button>
             </div>
@@ -55,8 +59,6 @@ export default function Footer({}: Props) {
                 <li>
                   <Link
                     href="/om-oss"
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="font-inter text-[12px] sm:text-[14px] md:text-base"
                   >
                     Om oss

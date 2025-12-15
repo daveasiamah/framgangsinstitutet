@@ -12,7 +12,7 @@ const products = [
   },
   {
     id: 2,
-    image: "/images/mentorship/mentorship-products/facebook-ads.svg",
+    image: "/images/mentorship/mentorship-products/facebook-ads1.svg",
     title: "Annonsering På Facebook Ads",
     description:
       "Du får en komplett lektion och vägledning hur du ska sätta upp kampanjer och annonser via Meta Ads.",
@@ -50,7 +50,7 @@ function MentorshipProducts() {
   return (
     <>
       <h2 className="text-[#000000] max-w-[272px] md:max-w-full font-jakarta text-center text-[20px] md:text-[24px] lg:text-[36px] font-bold mt-10 mb-4 md:mb-6">
-        6 bonusar När Du Går Med Dropshiping Mentorskap:
+        6 Bonusar När Du Går Med Dropshiping Mentorskap:
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[27px]">
         {products.map((product) => (
@@ -64,11 +64,11 @@ function MentorshipProducts() {
                 height={170}
                 src={product.image}
                 alt={product.title}
-                className="mb-4 transition-transform duration-500 ease-out group-hover:scale-110"
+                className="mb-4"
               />
             </div>
             <div className="max-w-[350px] md:max-w-[400px]">
-              <h3 className="font-jakarta text-sm md:text-base text-[#000000] font-semibold mb-2 transition-colors duration-300 group-hover:text-[#235AE9]">
+              <h3 className="font-jakarta text-sm md:text-base text-[#000000] font-semibold mb-2">
                 {product.title}
               </h3>
               <p className="font-inter text-xs md:text-sm text-[#235AE9]">

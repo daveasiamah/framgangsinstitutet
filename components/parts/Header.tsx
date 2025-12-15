@@ -113,8 +113,8 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
           <Link href="/om-oss">Om oss</Link>
 
           {/* Mega Menu - Custom Implementation */}
-          <Box 
-            position="relative" 
+          <Box
+            position="relative"
             onMouseLeave={() => {
               closeTimerRef.current = setTimeout(() => {
                 setIsMenuOpen(false)
