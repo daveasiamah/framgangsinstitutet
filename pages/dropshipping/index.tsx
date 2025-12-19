@@ -38,8 +38,13 @@ export default function Dropshipping() {
         </div>
       </section>
 
-      <section className="bg-white py-2 md:py-2 px-4 mb-[35px]">
-        <div className="max-w-7xl mx-auto">
+      <section className="max-w-7xl mx-auto bg-white py-2 md:py-2 px-4 mb-[35px]">
+        <div className="flex flex-col items-center justify-center">
+          <div className="flex self-center items-center justify-center bg-[#F5F9FF] rounded-full w-fit mx-auto m-[10px] md:m-[30px]">
+            <p className="py-3 px-9 text-[#225AEA] font-geist font-semibold">
+              Dropshipping
+            </p>
+          </div>
           {/* Main Title */}
           <h2 className="text-[#151E3A] text-[20px] leading-[35px] sm:text-[32px] sm:leading-[38px] md:text-[40px] md:leading-[48px] font-bold font-jakarta text-center mb-[24px] md:mb-8">
             Allt du behöver kunna för att <br />
@@ -50,29 +55,38 @@ export default function Dropshipping() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-start">
               {/* Text Content */}
               <div className="order-2 lg:order-1">
-                <h3 className="text-[#151E3A] text-[18px] sm:text-[22px] md:text-[40px] font-semibold font-geist mb-4 sm:mb-6 leading-[35px]">
-                  Lär dig av e-handelsexpert
+                <h3 className="text-[#151E3A] text-[18px] sm:text-[22px] md:text-[40px] font-semibold font-geist mb-4 sm:mb-6 leading-[20px] md:leading-[40px]">
+                  Utbildningen som hjälper dig ta kontroll över ditt liv
                 </h3>
-                <div className="space-y-4 font-inter font-normal text-[12px] sm:text-sm text-[#434C69] md:text-[16px] leading-relaxed">
-                  <p className="font-inter font-normal text-[12px] sm:text-sm text-[#434C69]">
-                    Ingen är bäst på allt, men våra är oslagbara på det som
-                    räknas. Dominic är en av dem, e-handelsexpert och grundare
-                    av Checkified, i detta privata nätverket möter du honom
-                    direkt, där han lär ut exakt det han själv är bäst i landet
-                    på.
-                  </p>
-                  <p className="font-inter font-normal text-[12px] sm:text-sm text-[#434C69]">
-                    Genom Dominics erfarenhet får du helheten; e-handel,
-                    entreprenörskap, marknadsföring, mindset, försäljning och
-                    allt som krävs för att bygga något som faktiskt håller.
-                  </p>
-                  <p className="font-inter font-normal text-[12px] sm:text-sm text-[#434C69]">
-                    Han har bevisat resultat och en bakgrund som talar för sig
-                    själv. Målet är enkelt: ge dig de skarpaste
-                    förutsättningarna att lyckas inom e-handel och
-                    entreprenörskap, utan genvägar.
-                  </p>
-                </div>
+                <ul className="space-y-1 font-inter font-normal text-[14px] tracking-[0%] text-[#434C69]">
+                  <li className="list-disc list-inside">Starta ditt företag</li>
+                  <li className="list-disc list-inside">
+                    Bygga en optimerad e-handelshemsida
+                  </li>
+                  <li className="list-disc list-inside">
+                    Välja bästa leverantören
+                  </li>
+                  <li className="list-disc list-inside">
+                    Identifiera vinnande dropshipping-produkter
+                  </li>
+                  <li className="list-disc list-inside">
+                    Bygga ditt eget varumärke
+                  </li>
+                  <li className="list-disc list-inside">
+                    Driva dropshipping via Shopify
+                  </li>
+                  <li className="list-disc list-inside">
+                    Arbeta datadrivet med Meta-ads
+                  </li>
+                  <li className="list-disc list-inside">
+                    Hantera testkampanjer effektivt
+                  </li>
+                  <li className="list-disc list-inside">Sköta kundservice</li>
+                  <li className="list-disc list-inside">Skala upp företaget</li>
+                  <li className="list-disc list-inside">
+                    Skapa engagerande content
+                  </li>
+                </ul>
               </div>
               {/* Image */}
               <div className="order-1 lg:order-2">
@@ -134,7 +148,7 @@ export default function Dropshipping() {
           <div className="bg-[#F3F6FE] rounded-[20px] p-6 sm:p-8 md:p-12 mt-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-start">
               {/* Image */}
-              <div className="order-2">
+              <div className="order-1 lg:order-2">
                 <div className="relative w-full aspect-[4/3] rounded-[40px] overflow-hidden">
                   <Image
                     src="/images/chansning.jpg"
@@ -145,7 +159,7 @@ export default function Dropshipping() {
                 </div>
               </div>
               {/* Text Content */}
-              <div className="order-2 md:order-1">
+              <div className="order-2 lg:order-1">
                 <h3 className="text-[#151E3A] text-[18px] sm:text-[22px] md:text-[40px] font-semibold font-geist mb-4 sm:mb-6 leading-[35px]">
                   Låt inte din framgång vara
                   <br />

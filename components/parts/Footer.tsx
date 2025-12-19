@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { useRouter } from "next/router"
@@ -15,8 +15,44 @@ export default function Footer({}: Props) {
   const t = locale === "en" ? en : sv
   const currentYear = new Date().getFullYear()
 
-  const handleRegistration = () => {
-    console.log("Registration: 123")
+  const [email, setEmail] = useState("")
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [message, setMessage] = useState("")
+
+  const handleRegistration = async () => {
+    if (!email || !email.includes("@")) {
+      setMessage("Ange en giltig e-postadress")
+      return
+    }
+
+    setIsSubmitting(true)
+    setMessage("")
+
+    try {
+      const response = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      })
+
+      const data = await response.json()
+
+      if (response.ok) {
+        setMessage("Tack för din registrering!")
+        setEmail("")
+      } else {
+        setMessage(data.error || "Något gick fel. Försök igen.")
+      }
+    } catch (error) {
+      setMessage("Något gick fel. Försök igen.")
+      console.error("Newsletter submission error:", error)
+    } finally {
+      setIsSubmitting(false)
+      // Clear message after 5 seconds
+      setTimeout(() => setMessage(""), 5000)
+    }
   }
 
   return (
@@ -36,14 +72,31 @@ export default function Footer({}: Props) {
               Registrera dig på vårt nyhetsbrev för att inte missa event,
               uppdateringar och e-handelsinspiration.
             </p>
+            {message && (
+              <p
+                className={`text-[12px] sm:text-[14px] mb-2 ${
+                  message.includes("Tack") ? "text-green-300" : "text-red-300"
+                }`}
+              >
+                {message}
+              </p>
+            )}
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-1 w-full sm:h-[48px]">
               <input
                 type="email"
                 placeholder="Skriv in din e-post"
-                className="bg-[#fff] border border-[#434C69] rounded-[8px] flex-1 sm:w-[2/3] py-3 sm:py-[14px] px-4 sm:px-[26px] text-[#434C69] text-[12px] sm:text-[14px] md:text-[16px] font-semibold leading-[18px] sm:leading-[22px] md:leading-[32px]"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                onKeyDown={(e) => e.key === "Enter" && handleRegistration()}
+                disabled={isSubmitting}
+                className="bg-[#fff] border border-[#434C69] rounded-[8px] flex-1 sm:w-[2/3] py-3 sm:py-[14px] px-4 sm:px-[26px] text-[#434C69] text-[12px] sm:text-[14px] md:text-[16px] font-semibold leading-[18px] sm:leading-[22px] md:leading-[32px] disabled:opacity-50"
               />
-              <button onClick={handleRegistration} className="bg-[#072F94] text-white text-[12px] sm:text-[12px] items-center justify-center text-center flex md:text-[16px] font-semibold leading-[18px] sm:leading-[22px] md:leading-[32px] rounded-[6px] sm:w-[1/3] py-3 sm:py-[14px] px-4 sm:px-[26px] whitespace-nowrap">
-                Registrera dig
+              <button
+                onClick={handleRegistration}
+                disabled={isSubmitting}
+                className="bg-[#072F94] text-white text-[12px] sm:text-[12px] items-center justify-center text-center flex md:text-[16px] font-semibold leading-[18px] sm:leading-[22px] md:leading-[32px] rounded-[6px] sm:w-[1/3] py-3 sm:py-[14px] px-4 sm:px-[26px] whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {isSubmitting ? "Skickar..." : "Registrera dig"}
               </button>
             </div>
           </div>

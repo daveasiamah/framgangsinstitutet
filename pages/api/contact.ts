@@ -56,6 +56,7 @@ export default async function handler(
             PHONE: phone || "",
           },
           updateEnabled: true,
+          listIds: [18],
         }),
       }
     )
