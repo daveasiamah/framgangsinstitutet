@@ -19,7 +19,7 @@ export default function Dropshipping() {
           </h1>
 
           {/* Description */}
-          <p className="text-[#434C69] text-[12px] md:text-[18px] font-inter font-medium text-center mb-8 leading-relaxed max-w-[733px] mx-auto">
+          <p className="text-[#434C69] text-[16px] font-inter font-medium text-center mb-8 leading-relaxed max-w-[733px] mx-auto">
             Vi har lång erfarenhet av att driva dropshipping framgångsrikt, och
             det finns ett tydligt mönster för de butiker som presterar, och de
             som inte gör det. Med hjälp av dessa insikter har vi skapat vår

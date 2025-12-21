@@ -29,20 +29,20 @@ export default function HeroSection({
             <Image
               src="/icons/trustpilot-badge.svg"
               alt="Trustpilot"
-              width={255}
+              width={200}
               height={33}
-              className="object-contain h-[33px] w-[255px]"
+              className="object-contain h-[33px] w-[200px] md:h-[40px] md:w-[240px] lg:h-[50px] lg:w-[300px]"
             />
           </div>
         )}
 
         {/* Title */}
-        <h1 className="text-[#151E3A] text-[32px] md:text-[48px] lg:text-[56px] font-bold font-jakarta text-center mb-6 leading-[32px] md:leading-[44px] lg:leading-[52px] max-w-[700px] md:max-w-[550px] lg:max-w-[700px] mx-auto">
+        <h1 className="text-[#151E3A] text-[30px] md:text-[48px] lg:text-[56px] font-bold font-jakarta text-center mb-6 leading-[32px] md:leading-[44px] lg:leading-[52px] max-w-[700px] md:max-w-[550px] lg:max-w-[700px] mx-auto">
           {title}
         </h1>
 
         {/* Description */}
-        <p className="text-[#434C69] text-[11px] md:text-[14px] lg:text-[14px] font-inter font-medium text-center mb-4 leading-relaxed max-w-[733px] mx-auto">
+        <p className="text-[#434C69] text-[16px] font-inter font-medium text-center mb-4 leading-relaxed max-w-[733px] mx-auto">
           {description}
         </p>
 

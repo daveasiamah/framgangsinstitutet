@@ -47,7 +47,7 @@ export default function TestimonialsSection() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-[8px] md:mb-[14px]">
-          <h2 className="text-[#151E3A] text-[32px] md:text-[40px] lg:text-[48px] font-bold font-jakarta mb-2 mt-[24px] md:mt-[38px] lg:mt-[50px] leading-[36px] md:leading-[44px] lg:leading-[52px]">
+          <h2 className="text-[#151E3A] text-[28px] md:text-[40px] lg:text-[48px] font-bold font-jakarta mb-2 mt-[24px] md:mt-[38px] lg:mt-[50px] leading-[36px] md:leading-[44px] lg:leading-[52px]">
             Förändra ditt liv med Checkified
           </h2>
           <p className="text-[#434C69] text-[14px] md:text-[16px] font-inter max-w-[700px] mx-auto">

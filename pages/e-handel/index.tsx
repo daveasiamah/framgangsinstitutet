@@ -19,7 +19,7 @@ export default function EHandel() {
           </h1>
 
           {/* Description */}
-          <p className="text-[#434C69] text-[12px] md:text-[18px] font-inter font-medium text-center mb-8 leading-relaxed max-w-[733px] mx-auto">
+          <p className="text-[#434C69] text-[16px] font-inter font-medium text-center mb-8 leading-relaxed max-w-[733px] mx-auto">
             Att driva en e-handel i dagens samhälle är betydligt mer utmanande
             än vad det först kan verka. Det räcker inte att bara sätta upp en
             snygg butik och hoppas på det bästa, att bygga en framgångsrik

@@ -426,7 +426,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
                   transition="all 0.2s"
                 >
                   <Link
-                    href="/blogg"
+                    href="/blog"
                     onClick={() => setOpenSidebar(false)}
                     style={{ color: "inherit", textDecoration: "none" }}
                   >

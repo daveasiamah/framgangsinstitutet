@@ -63,7 +63,7 @@ const MentorshipHero = ({ onCtaClick }: MentorshipHeroProps) => {
             Snabbspår till onlineinkomst med bara din telefon & AI
           </h1>
           <p
-            className="w-full font-inter font-normal text-gray-500 text-[10px] md:text-[18px] text-center
+            className="w-full font-inter font-normal text-gray-500 text-[16px] text-center
          leading-relaxed mb-4 md:max-w-[844px] mx-auto"
           >
             Alla framgångsrika e-handelsresor börjar med ett första steg. Hos
