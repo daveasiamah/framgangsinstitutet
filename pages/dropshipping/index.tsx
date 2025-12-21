@@ -3,6 +3,10 @@ import Layout from "@/components/Layout"
 import WelcomeSection from "@/components/WelcomeSection"
 import Image from "next/image"
 import { useModal } from "@/components/ModalContext"
+import MentorshipButton from "@/components/parts/Mentorship_Button"
+import { ArrowRightIcon } from "lucide-react"
+import Accordion from "@/components/parts/Accordion_Home"
+import { HomePageFaqData } from "@/data/data"
 
 export default function Dropshipping() {
   const { openContractForm } = useModal()
@@ -51,14 +55,15 @@ export default function Dropshipping() {
             lyckas med Dropshipping 2026
           </h2>
           {/* First Section - Lär dig av e-handelsexpert */}
-          <div className="bg-[#F3F6FE] rounded-[20px] p-6 sm:p-8 md:p-12 mb-8">
+          <div className="bg-[#F3F6FE] rounded-[20px] pt-[20px] px-[10px] pb-[32px] md:pt-[47px] md:px-[67px] lg:pt-[60px] lg:px-[58px] lg:pb-[60px] mb-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-start">
               {/* Text Content */}
               <div className="order-2 lg:order-1">
-                <h3 className="text-[#151E3A] text-[18px] sm:text-[22px] md:text-[40px] font-semibold font-geist mb-4 sm:mb-6 leading-[20px] md:leading-[40px]">
-                  Utbildningen som hjälper dig ta kontroll över ditt liv
+                <h3 className="text-[#151E3A] text-[22px] md:text-[39px] font-semibold font-geist mb-4 sm:mb-6 leading-[28px] md:leading-[40px]">
+                  Utbildningen som hjälper dig <br className="sm:hidden" />
+                  ta kontroll över ditt liv
                 </h3>
-                <ul className="space-y-1 font-inter font-normal text-[14px] tracking-[0%] text-[#434C69]">
+                <ul className="space-y-0.5 font-inter font-normal text-[14px] tracking-[0%] text-[#434C69]">
                   <li className="list-disc list-inside">Starta ditt företag</li>
                   <li className="list-disc list-inside">
                     Bygga en optimerad e-handelshemsida
@@ -102,7 +107,7 @@ export default function Dropshipping() {
             </div>
           </div>
           {/* Second Section - Omge dig med drivna entreprenörer */}
-          <div className="bg-[#F3F6FE] rounded-[20px] p-6 sm:p-8 md:p-12">
+          <div className="bg-[#F3F6FE] rounded-[20px] pt-[20px] px-[10px] pb-[32px] md:pt-[47px] md:px-[67px] lg:pt-[60px] lg:px-[58px] lg:pb-[60px]">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-start">
               {/* Image */}
               <div className="order-1">
@@ -117,35 +122,37 @@ export default function Dropshipping() {
               </div>
               {/* Text Content */}
               <div className="order-2">
-                <h3 className="text-[#151E3A] text-[18px] sm:text-[22px] md:text-[40px] font-semibold font-geist mb-4 sm:mb-6 leading-[35px]">
-                  Omge dig med drivna
-                  <br />
-                  entreprenörer och mentorer.
+                <h3 className="text-[#151E3A] text-[18px] sm:text-[22px] md:text-[39px] font-semibold font-geist mb-4 sm:mb-6 leading-[35px]">
+                  Dropshipping kursen som har <br />
+                  hjälpt dra över 350 miljoner
                 </h3>
                 <div className="space-y-4 text-[#434C69] font-inter text-[12px] sm:text-sm md:text-[16px] leading-relaxed">
                   <p className="font-inter font-normal text-[12px] sm:text-sm text-[#434C69]">
-                    Människorna du omger dig med formar din nivå. Så fråga dig
-                    själv: hur snabbt skulle du växa om din omgivning redan
-                    bestod av människor som lyckats?
+                    Våra studenter har tillsammans genererat över 300 miljoner
+                    kronor genom dropshipping. Det är ett kvitto på att det går
+                    att lyckas, om man gör jobbet.
                   </p>
                   <p className="font-inter font-normal text-[12px] sm:text-sm text-[#434C69]">
-                    Checkified har blivit navet för svensk e-handel och digitalt
-                    entreprenörskap, en plats där allt ifrån nybörjare till
-                    entreprenörer med miljonomsättning samlas för att växa.
+                    Här ser du ett urval av de studenter som idag driver sina
+                    verksamheter lönsamt. Genom kursen har de lärt sig att
+                    identifiera produkter som faktiskt säljer, bygga datadrivna
+                    processer och skapa egna varumärken som står ut.
                   </p>
                   <p className="font-inter font-normal text-[12px] sm:text-sm text-[#434C69]">
-                    Här skapas kontakter som spelar roll, relationer som driver
-                    dig framåt och möjligheter för dig som anpassar.
+                    Flera av dem kör dropshipping på heltid och styr både
+                    inkomst och arbetstid själva tack vare de strategier de lärt
+                    sig i vår videokurs.
                   </p>
                   <p className="font-inter font-normal text-[12px] sm:text-sm text-[#434C69]">
-                    Bygger du något digitalt? Då är Checkified där du hör hemma.
+                    Deras resultat visar en sak tydligt: dropshipping i Sverige
+                    funkar, med rätt kunskap och rätt verktyg.
                   </p>
                 </div>
               </div>
             </div>
           </div>
           {/* Third Section - Omge dig med drivna entreprenörer */}
-          <div className="bg-[#F3F6FE] rounded-[20px] p-6 sm:p-8 md:p-12 mt-8">
+          <div className="bg-[#F3F6FE] rounded-[20px] pt-[20px] px-[10px] pb-[32px] md:pt-[47px] md:px-[67px] lg:pt-[60px] lg:px-[58px] lg:pb-[60px] mt-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-start">
               {/* Image */}
               <div className="order-1 lg:order-2">
@@ -160,36 +167,76 @@ export default function Dropshipping() {
               </div>
               {/* Text Content */}
               <div className="order-2 lg:order-1">
-                <h3 className="text-[#151E3A] text-[18px] sm:text-[22px] md:text-[40px] font-semibold font-geist mb-4 sm:mb-6 leading-[35px]">
-                  Låt inte din framgång vara
+                <h3 className="text-[#151E3A] text-[18px] sm:text-[22px] md:text-[39px] font-semibold font-geist mb-4 sm:mb-6 leading-[35px]">
+                  En dropshipping utbildning
                   <br />
-                  en chansning
+                  plus ett stöttande community
                 </h3>
                 <div className="space-y-4 text-[#434C69] font-inter text-[12px] sm:text-sm md:text-[16px] leading-relaxed">
                   <p className="font-inter font-normal text-[12px] sm:text-sm text-[#434C69]">
-                    Under de senaste åren har vi hjälpt tusentals svenskar
-                    starta tiotusentals butiker. Med över hundratusen besvarade
-                    frågor är det inte konstigt att våra medlemmar tillsammans
-                    omsatt hundratals miljoner kronor.
+                    Vår dropshipping utbildning ger dig verktygen för att starta
+                    och växa en lönsam verksamhet. Men kärnan i Checkified är
+                    communityt.
                   </p>
                   <p className="font-inter font-normal text-[12px] sm:text-sm text-[#434C69]">
-                    Vi samlade lärdomarna från misstag, tester och framgångar
-                    och skapade Checkified Mentorskap, ett beprövat system för
-                    e-handelsframgång.
+                    Dropshipping är ofta en ensam resa, du är din egen chef och
+                    sitter utan kollegor. Checkified skapades för att bryta den
+                    isoleringen och ge entreprenörer en plats att lära av
+                    varandra.
                   </p>
                   <p className="font-inter font-normal text-[12px] sm:text-sm text-[#434C69]">
-                    Metoderna är färdiga och testade; det som saknas är din tid
-                    och ditt engagemang. Om du är beredd att jobba hårt har vi
-                    verktygen som tar dig dit.
-                  </p>
-                  <p className="font-inter font-normal text-[12px] sm:text-sm text-[#434C69]">
-                    Det blir inte lätt, men vi har gjort vägen tydligare.
-                    Förvänta dig utmaning, men också resultat om du är redo att
-                    ge allt.
+                    När vi såg hur många nybörjare som sökte sig till oss, lade
+                    vi till utbildningen. Idag erbjuder vi både en kurs som
+                    hjälper dig starta och skala din butik, och ett nätverk där
+                    du kan dela erfarenheter och få råd från likasinnade.
                   </p>
                 </div>
               </div>
             </div>
+          </div>
+
+          {/* Call to Action section */}
+          <div className="flex flex-col bg-[#225AEA] w-full p-3 md:p-[28px] rounded-[20px] items-center justify-center mt-10 max-w-[1000px] mx-auto">
+            <div className="flex flex-col items-center justify-center align-middle bg-[#ffffff] w-full rounded-[20px] p-[12px] md:p-[38px] lg:p-[88px]">
+              <h3 className="text-[#151E3A] text-[20px] md:text-[24px] font-bold font-jakarta text-center leading-[28px] md:leading-[30px]">
+                En investering i dig själv
+              </h3>
+              <p className="font-inter text-[10px] md:text-[14px] text-[#434C69] mt-2 md:mt-4 leading-relaxed max-w-[280px] md:max-w-[484px] text-center">
+                Vår dropshipping kurs är en investering i dig själv som ditt
+                framtida jag kommer att tacka dig för. Kolla på vår gratis intro
+                guide där Dominic förklarar hur dropshipping hjälpte honom
+                förändra sitt liv och hur det kan göra detsamma för dig, precis
+                som det har gjort för våra andra studenter.
+              </p>
+              <button
+                type="button"
+                onClick={() => openContractForm()}
+                className="px-3 py-2 md:px-4 md:py-3 bg-[#225AEA] text-white hover:bg-[#1e52d1] active:bg-[#1a47b8] rounded-[7px] shadow-inner transition-all duration-200 ease-in-out transform flex items-center justify-center gap-1 mt-4"
+              >
+                <span className="font-jakarta text-xs md:text-sm font-bold">
+                  Ansök till Mentorskap
+                </span>
+                <ArrowRightIcon
+                  size={14}
+                  className="md:w-4 md:h-4"
+                  color="white"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col items-center justify-center">
+          <div className="flex items-center rounded-lg bg-[#f3f6fe] h-[26px] justify-center align-middle px-3 shadow-inner max-w-[178px] mb-4 mt-8">
+            <p className="font-inter text-xs font-medium text-[#235AE9]">
+              FAQs
+            </p>
+          </div>
+          <h1 className="font-semibold font-jakarta text-[24px] md:text-[48px] mb-6 md:mb-10 lg:mb-10 text-center">
+            Vanliga Frågor
+          </h1>
+          <div className="w-full bg-[#F5F9FF] rounded-[20px] max-w-7xl py-4 px-4 md:px-6 mb-16">
+            <Accordion data={HomePageFaqData} />
           </div>
         </div>
       </section>

@@ -12,7 +12,7 @@ const products = [
   },
   {
     id: 2,
-    image: "/images/mentorship/mentorship-products/facebook-ads1.svg",
+    image: "/images/mentorship/mentorship-products/facebook1.svg",
     title: "Annonsering På Facebook Ads",
     description:
       "Du får en komplett lektion och vägledning hur du ska sätta upp kampanjer och annonser via Meta Ads.",
