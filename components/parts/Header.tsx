@@ -93,7 +93,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
         <Link href="/">
           <Flex align="center">
             <Image
-              src="/checkified_logo.svg"
+              src="/images/checkified-logo-main.svg"
               alt="checkified"
               width={187}
               height={64}
