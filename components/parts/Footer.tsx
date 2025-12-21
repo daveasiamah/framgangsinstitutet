@@ -127,7 +127,7 @@ export default function Footer({}: Props) {
                 </li>
                 <li>
                   <Link
-                    href="/ehandel"
+                    href="/e-handel"
                     className="font-inter text-[12px] sm:text-[14px] md:text-base"
                   >
                     E-handel
@@ -200,8 +200,14 @@ export default function Footer({}: Props) {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/blog">Blog</Link>
+                  <Link
+                    href="/cookie-policy"
+                    className="font-inter text-[12px] sm:text-[14px] md:text-base"
+                  >
+                    Cookie policy
+                  </Link>
                 </li>
+
                 <li>
                   <Link
                     href="/vsl"

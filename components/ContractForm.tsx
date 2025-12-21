@@ -73,15 +73,15 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
         >
           ×
         </button>
-        <div className="w-full flex flex-col items-center">
+        <div className="w-full flex flex-col items-center mt-8">
           <Image
-            src="/images/checkified-new-logo-dark.svg"
+            src="/images/checkified-logo-main.svg"
             alt="logo"
             width={235}
             height={64}
-            className="object-cover h-[64px] w-[235px] mb-6"
+            className="object-cover h-[64px] w-[235px]"
           />
-          <h1 className="font-jakarta font-extrabold text-center max-w-[480px] text-[22px] md:text-[32px] text-[#151e3a] mb-8 leading-[35px] tracking-[0]">
+          <h1 className="font-jakarta font-extrabold text-center max-w-[480px] text-[22px] md:text-[32px] text-[#151e3a] my-4 md:mb-8 md:mt-[42px] leading-[35px] tracking-[0]">
             Se vår kostnadsfria
             <br className="hidden md:block" /> introduktionsguide!
           </h1>

@@ -14,7 +14,7 @@ export default function EHandel() {
       <section className="relative bg-white py-12 px-4 bg-[url('/images/hero-mesh.svg')] bg-no-repeat bg-cover bg-center">
         <div className="max-w-7xl mx-auto">
           {/* Title */}
-          <h1 className="text-[#151E3A] text-[22px] md:text-[42px] lg:text-[56px] font-bold font-jakarta text-center mb-6 leading-tight md:max-w-[700px] lg:max-w-[960px] mx-auto">
+          <h1 className="text-[#151E3A] text-[20px] md:text-[42px] lg:text-[56px] font-bold font-jakarta text-center mb-6 leading-tight md:max-w-[700px] lg:max-w-[960px] mx-auto">
             Lär dig driva e-handel lönsamt 2026: Online utbildning på distans
           </h1>
 
@@ -80,42 +80,45 @@ export default function EHandel() {
                 <h3 className="text-[#151E3A] text-[22px] md:text-[39px] font-semibold font-geist mb-4 sm:mb-6 leading-[26px] md:leading-[40px] text-center md:text-left">
                   Vad ingår i online utbildningen?
                 </h3>
-                <p className="font-inter text-xs md:text-sm text-[#27272A]">
-                  <span className="font-inter text-[#27272A] text-[12px] md:text-[14px] font-bold">
-                    Introduktion till e-handel:{" "}
-                  </span>
-                  Få grepp om grunderna och hela processen, från idé till
-                  lansering av din butik.
-                </p>
-                <p className="font-inter text-xs md:text-sm text-[#27272A]">
-                  <span className="font-inter text-[#27272A] text-[12px] md:text-[14px] font-bold">
-                    Produktforskning och nischval:{" "}
-                  </span>
-                  Lär dig analysera marknaden, identifiera trender och välja
-                  produkter med hög efterfrågan och försäljningspotential.
-                </p>
-                <p className="font-inter text-xs md:text-sm text-[#27272A]">
-                  <span className="font-inter text-[#27272A] text-[12px] md:text-[14px] font-bold">
-                    Bygg din webbshop:{" "}
-                  </span>
-                  Steg-för-steg-guide för att skapa en snygg, professionell och
-                  användarvänlig butik på Shopify, designad för att locka och
-                  konvertera kunder.
-                </p>
-                <p className="font-inter text-xs md:text-sm text-[#27272A]">
-                  <span className="font-inter text-[#27272A] text-[12px] md:text-[14px] font-bold">
-                    Marknadsföring och trafik:{" "}
-                  </span>
-                  Lär dig dra nytta av Facebook Ads, Google Ads och samarbeten
-                  med influencers för att nå rätt målgrupp och öka trafiken.
-                </p>
-                <p className="font-inter text-xs md:text-sm text-[#27272A]">
-                  <span className="font-inter text-[#27272A] text-[12px] md:text-[14px] font-bold">
-                    Analys och optimering:{" "}
-                  </span>
-                  Använd verktyg som Google Analytics för att spåra resultat,
-                  analysera data och optimera din butik för maximal försäljning.
-                </p>
+                <div className="space-y-4 text-[#434C69] font-inter text-[12px] sm:text-sm md:text-[16px] leading-relaxed mb-6">
+                  <p className="font-inter text-xs md:text-sm text-[#27272A]">
+                    <span className="font-inter text-[#27272A] text-[12px] md:text-[14px] font-bold">
+                      Introduktion till e-handel:{" "}
+                    </span>
+                    Få grepp om grunderna och hela processen, från idé till
+                    lansering av din butik.
+                  </p>
+                  <p className="font-inter text-xs md:text-sm text-[#27272A]">
+                    <span className="font-inter text-[#27272A] text-[12px] md:text-[14px] font-bold">
+                      Produktforskning och nischval:{" "}
+                    </span>
+                    Lär dig analysera marknaden, identifiera trender och välja
+                    produkter med hög efterfrågan och försäljningspotential.
+                  </p>
+                  <p className="font-inter text-xs md:text-sm text-[#27272A]">
+                    <span className="font-inter text-[#27272A] text-[12px] md:text-[14px] font-bold">
+                      Bygg din webbshop:{" "}
+                    </span>
+                    Steg-för-steg-guide för att skapa en snygg, professionell
+                    och användarvänlig butik på Shopify, designad för att locka
+                    och konvertera kunder.
+                  </p>
+                  <p className="font-inter text-xs md:text-sm text-[#27272A]">
+                    <span className="font-inter text-[#27272A] text-[12px] md:text-[14px] font-bold">
+                      Marknadsföring och trafik:{" "}
+                    </span>
+                    Lär dig dra nytta av Facebook Ads, Google Ads och samarbeten
+                    med influencers för att nå rätt målgrupp och öka trafiken.
+                  </p>
+                  <p className="font-inter text-xs md:text-sm text-[#27272A]">
+                    <span className="font-inter text-[#27272A] text-[12px] md:text-[14px] font-bold">
+                      Analys och optimering:{" "}
+                    </span>
+                    Använd verktyg som Google Analytics för att spåra resultat,
+                    analysera data och optimera din butik för maximal
+                    försäljning.
+                  </p>
+                </div>
               </div>
               {/* Image */}
               <div className="order-1 lg:order-2">
@@ -205,7 +208,6 @@ export default function EHandel() {
                     Våra coacher svarar på frågor, delar insikter och guidar dig
                     genom e-handelsvärlden.
                   </p>
-                  <br />
                   <p className="font-inter text-xs md:text-sm text-[#27272A]">
                     <span className="font-inter text-[#27272A] text-[12px] md:text-[14px] font-bold">
                       Nätverk av studenter:{" "}
@@ -214,7 +216,6 @@ export default function EHandel() {
                     varandra. Dela tips, framgångar och utmaningar, du är aldrig
                     ensam.
                   </p>
-                  <br />
                   <p className="font-inter text-xs md:text-sm text-[#27272A]">
                     <span className="font-inter text-[#27272A] text-[12px] md:text-[14px] font-bold">
                       Live-sessioner och workshops:{" "}
@@ -222,8 +223,6 @@ export default function EHandel() {
                     Få svar direkt från experter och fördjupa dina kunskaper med
                     praktiska råd och specifika verktyg.
                   </p>
-                  <br />
-
                   <p className="font-inter font-normal text-[12px] sm:text-sm text-[#434C69]">
                     Vårt community är mer än support, det är en källa till
                     inspiration, nya perspektiv och relationer som tar din
@@ -235,14 +234,14 @@ export default function EHandel() {
           </div>
 
           {/* Call to Action section */}
-          <div className="flex flex-col bg-[#225AEA] w-full p-3 md:p-[28px] rounded-[20px] items-center justify-center mt-10 max-w-[1000px] mx-auto">
+          <div className="flex flex-col bg-[#225AEA] bg-[url(/images/mentorship/mentorship-products/bg-mesh.svg)] w-full p-3 md:p-[28px] rounded-[20px] items-center justify-center mt-10 max-w-[1000px] mx-auto">
             <div className="flex flex-col items-center justify-center align-middle bg-[#ffffff] w-full rounded-[20px] p-[12px] md:p-[38px] lg:p-[88px]">
-              <h3 className="text-[#151E3A] text-[20px] md:text-[24px] font-bold font-jakarta text-center leading-[28px] md:leading-[30px]">
+              <h3 className="text-[#151E3A] text-[20px] md:text-[32px] font-bold font-jakarta text-center leading-[28px] md:leading-[30px]">
                 Din bästa investering:
                 <br />
                 Utbildning i e-handel
               </h3>
-              <p className="font-inter text-[10px] md:text-[14px] text-[#434C69] mt-2 md:mt-4 leading-relaxed max-w-[280px] md:max-w-[484px] text-center">
+              <p className="font-inter text-[10px] md:text-[14px] text-[#434C69] mt-2 md:mt-4 leading-relaxed max-w-[280px] md:max-w-[725px] text-center">
                 Att investera i en e-handelsutbildning är att investera i din
                 egen framtid. Med rätt utbildning får du de verktyg och den
                 kunskap du behöver för att bygga en verksamhet som inte bara är

@@ -103,7 +103,7 @@ export default function KontaktaOss() {
               <h1 className="text-[#151E3A] text-[32px] md:text-[48px] font-bold font-jakarta mb-4">
                 Support förfrågan
               </h1>
-              <h2 className="text-[#434C69] text-[16px] md:text-[20px] font-inter font-normal">
+              <h2 className="text-[#434C69] text-[14px] md:text-[20px] font-inter font-normal">
                 Fyll i formuläret nedan för att få hjälp med ditt ärende.
               </h2>
             </div>

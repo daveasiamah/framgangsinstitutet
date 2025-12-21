@@ -222,7 +222,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
           </Box>
 
           <Link href="/mentorskap">Mentorskap</Link>
-          <Link href="/blogg">Blogg</Link>
+          <Link href="/blogg">Blog</Link>
         </Flex>
 
         {/* DESKTOP CTA BUTTON */}
@@ -331,6 +331,25 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
                   transition="all 0.2s"
                 >
                   <Link
+                    href="/"
+                    onClick={() => setOpenSidebar(false)}
+                    style={{ color: "inherit", textDecoration: "none" }}
+                  >
+                    Hem
+                  </Link>
+                </Box>
+                <Box
+                  px={4}
+                  py={2}
+                  borderRadius="md"
+                  width="100%"
+                  _hover={{
+                    bg: "#225AEA",
+                    color: "white",
+                  }}
+                  transition="all 0.2s"
+                >
+                  <Link
                     href="/om-oss"
                     onClick={() => setOpenSidebar(false)}
                     style={{ color: "inherit", textDecoration: "none" }}
@@ -411,7 +430,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
                     onClick={() => setOpenSidebar(false)}
                     style={{ color: "inherit", textDecoration: "none" }}
                   >
-                    Blogg
+                    Blog
                   </Link>
                 </Box>
               </Stack>
