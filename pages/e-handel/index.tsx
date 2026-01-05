@@ -11,15 +11,15 @@ export default function EHandel() {
 
   return (
     <Layout headTitle="Dropshipping - Checkified" isFullWidth={true}>
-      <section className="relative bg-white py-12 px-4 bg-[url('/images/hero-mesh.svg')] bg-no-repeat bg-cover bg-center">
+      <section className="relative bg-white pt-8 px-4 bg-[url('/images/hero-mesh.svg')] bg-no-repeat bg-cover bg-center">
         <div className="max-w-7xl mx-auto">
           {/* Title */}
-          <h1 className="text-[#151E3A] text-[20px] md:text-[42px] lg:text-[56px] font-bold font-jakarta text-center mb-6 leading-tight md:max-w-[700px] lg:max-w-[960px] mx-auto">
+          <h1 className="text-[#151E3A] text-[22px] md:text-[42px] lg:text-[56px] font-bold font-jakarta text-center mb-6 leading-[24px] md:leading-[44px] lg:leading-[56px] max-w-[400px] md:max-w-[707px] lg:max-w-[936px] mx-auto">
             Lär dig driva e-handel lönsamt 2026: Online utbildning på distans
           </h1>
 
           {/* Description */}
-          <p className="text-[#434C69] text-[16px] font-inter font-medium text-center mb-8 leading-relaxed max-w-[733px] mx-auto">
+          <p className="text-[#434C69] text-[15px] md:text-[16px] font-inter font-medium text-center mb-8 leading-relaxed max-w-[733px] mx-auto">
             Att driva en e-handel i dagens samhälle är betydligt mer utmanande
             än vad det först kan verka. Det räcker inte att bara sätta upp en
             snygg butik och hoppas på det bästa, att bygga en framgångsrik
@@ -68,7 +68,7 @@ export default function EHandel() {
             </p>
           </div>
           {/* Main Title */}
-          <h2 className="text-[#151E3A] text-[20px] leading-[35px] sm:text-[32px] sm:leading-[38px] md:text-[40px] md:leading-[48px] font-bold font-jakarta text-center mb-[24px] md:mb-8">
+          <h2 className="text-[#151E3A] text-[20px] leading-[22px] md:text-[40px] md:leading-[42px] font-bold font-jakarta text-center mb-[24px] md:mb-8">
             Allt du behöver lära dig för att <br />
             lyckas med e-handel 2026
           </h2>
@@ -241,7 +241,7 @@ export default function EHandel() {
                 <br />
                 Utbildning i e-handel
               </h3>
-              <p className="font-inter text-[10px] md:text-[14px] text-[#434C69] mt-2 md:mt-4 leading-relaxed max-w-[280px] md:max-w-[725px] text-center">
+              <p className="font-inter text-[10px] md:text-[14px] text-[#434C69] mt-2 md:mt-4 leading-relaxed max-w-[390px] md:max-w-[725px] text-center">
                 Att investera i en e-handelsutbildning är att investera i din
                 egen framtid. Med rätt utbildning får du de verktyg och den
                 kunskap du behöver för att bygga en verksamhet som inte bara är

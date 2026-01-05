@@ -58,30 +58,21 @@ export default function Footer({}: Props) {
   return (
     <footer className="bg-[#225AEA] text-white min-h-[445px] flex-col justify-center items-center bg-[url('/images/home/footer-vector-mesh.svg')] bg-cover sm:bg-cover bg-no-repeat bg-center mt-2 lg:mt-10">
       <div className="container flex flex-col justify-center mx-auto pt-8 sm:pt-10 md:pt-12 px-4 sm:px-6 md:px-8 lg:px-10">
-        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-6 sm:gap-8 md:gap-10">
+        <div className="flex flex-col lg:flex-row justify-between items-start gap-8 w-full">
           {/* Logo Section */}
           <div className="w-full lg:w-1/3 flex flex-col items-start text-left">
-            <Image
+            <img
               src="/images/home/graphics/new-checkified-logo.svg"
               alt="checkified"
-              width={212}
-              height={61}
-              className="h-[40px] sm:h-[48px] w-auto object-left object-contain mb-3 sm:mb-4"
+              width={190}
+              height={55}
+              className="h-[55px] sm:h-[55px] w-auto object-left object-contain"
             />
-            <p className="text-[12px] sm:text-[14px] md:max-w-[585px] md:text-[16px] font-inter font-semibold leading-[18px] sm:leading-[22px] md:leading-[32px] mb-4 sm:mb-6">
+            <p className="font-inter font-medium text-[12px] md:text-[15px] md:max-w-[585px] lg:max-w-[399px] leading-[18px] mb-3">
               Registrera dig på vårt nyhetsbrev för att inte missa event,
               uppdateringar och e-handelsinspiration.
             </p>
-            {message && (
-              <p
-                className={`text-[12px] sm:text-[14px] mb-2 ${
-                  message.includes("Tack") ? "text-green-300" : "text-red-300"
-                }`}
-              >
-                {message}
-              </p>
-            )}
-            <div className="flex flex-col sm:flex-row gap-2 sm:gap-1 w-full sm:h-[48px]">
+            <div className="flex flex-col sm:flex-row gap-2 w-full md:max-w-[380px]">
               <input
                 type="email"
                 placeholder="Skriv in din e-post"
@@ -89,12 +80,12 @@ export default function Footer({}: Props) {
                 onChange={(e) => setEmail(e.target.value)}
                 onKeyDown={(e) => e.key === "Enter" && handleRegistration()}
                 disabled={isSubmitting}
-                className="bg-[#fff] border border-[#434C69] rounded-[8px] flex-1 sm:w-[2/3] py-3 sm:py-[14px] px-4 sm:px-[26px] text-[#434C69] text-[12px] sm:text-[14px] md:text-[16px] font-semibold leading-[18px] sm:leading-[22px] md:leading-[32px] disabled:opacity-50"
+                className="bg-[#fff] border border-[#434C69] rounded-[8px] flex-1 sm:w-[2/3] py-2 px-4 text-[#434C69] text-[12px] disabled:opacity-50"
               />
               <button
                 onClick={handleRegistration}
                 disabled={isSubmitting}
-                className="bg-[#072F94] text-white text-[12px] sm:text-[12px] items-center justify-center text-center flex md:text-[16px] font-semibold leading-[18px] sm:leading-[22px] md:leading-[32px] rounded-[6px] sm:w-[1/3] py-3 sm:py-[14px] px-4 sm:px-[26px] whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed"
+                className="bg-[#072F94] text-white text-[12px] items-center justify-center text-center flex font-semibold leading-[18px] rounded-[6px] sm:w-[1/3] py-3 px-[19px] whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? "Skickar..." : "Registrera dig"}
               </button>
@@ -102,17 +93,17 @@ export default function Footer({}: Props) {
           </div>
 
           {/* Links Section */}
-          <div className="w-full lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10">
+          <div className="w-full lg:w-2/3 grid grid-cols-3">
             {/* Produkter */}
             <div>
-              <h5 className="font-bold font-jakarta text-base sm:text-lg md:text-xl mb-3 sm:mb-4">
+              <h5 className="font-bold font-jakarta text-base sm:text-lg md:text-[22px] leading-[32px] mb-3 sm:mb-4">
                 Företaget
               </h5>
               <ul className="space-y-2 flex flex-col gap-2 sm:gap-3">
                 <li>
                   <Link
                     href="/om-oss"
-                    className="font-inter text-[12px] sm:text-[14px] md:text-base"
+                    className="font-inter font-medium text-[12px] sm:text-[14px] md:text-base"
                   >
                     Om oss
                   </Link>
@@ -120,7 +111,7 @@ export default function Footer({}: Props) {
                 <li>
                   <Link
                     href="/dropshipping"
-                    className="font-inter text-[12px] sm:text-[14px] md:text-base"
+                    className="font-inter font-medium text-[12px] sm:text-[14px] md:text-base"
                   >
                     Dropshipping
                   </Link>
@@ -128,7 +119,7 @@ export default function Footer({}: Props) {
                 <li>
                   <Link
                     href="/e-handel"
-                    className="font-inter text-[12px] sm:text-[14px] md:text-base"
+                    className="font-inter font-medium text-[12px] sm:text-[14px] md:text-base"
                   >
                     E-handel
                   </Link>
@@ -136,7 +127,7 @@ export default function Footer({}: Props) {
                 <li>
                   <Link
                     href="/kontakta-oss"
-                    className="font-inter text-[12px] sm:text-[14px] md:text-base"
+                    className="font-inter font-medium text-[12px] sm:text-[14px] md:text-base"
                   >
                     Kontakta oss
                   </Link>
@@ -146,14 +137,14 @@ export default function Footer({}: Props) {
 
             {/* Företag */}
             <div>
-              <h5 className="font-bold font-jakarta text-base sm:text-lg mb-3 sm:mb-4">
+              <h5 className="font-bold font-jakarta text-base sm:text-lg md:text-[22px] leading-[32px] mb-3 sm:mb-4">
                 Snabblänkar
               </h5>
               <ul className="space-y-2 flex flex-col gap-2 sm:gap-3">
                 <li>
                   <Link
                     href="/mentorskap"
-                    className="font-inter text-[12px] sm:text-[14px] md:text-base"
+                    className="font-inter font-medium text-[12px] sm:text-[14px] md:text-base"
                   >
                     Mentorskap
                   </Link>
@@ -161,7 +152,7 @@ export default function Footer({}: Props) {
                 <li>
                   <Link
                     href="/blog"
-                    className="font-inter text-[12px] sm:text-[14px] md:text-base"
+                    className="font-inter font-medium text-[12px] sm:text-[14px] md:text-base"
                   >
                     Blog
                   </Link>
@@ -169,7 +160,7 @@ export default function Footer({}: Props) {
                 <li>
                   <Link
                     href="/intervjuer"
-                    className="font-inter text-[12px] sm:text-[14px] md:text-base"
+                    className="font-inter font-medium text-[12px] sm:text-[14px] md:text-base"
                   >
                     Intervjuer
                   </Link>
@@ -177,7 +168,7 @@ export default function Footer({}: Props) {
                 <li>
                   <Link
                     href="/faq"
-                    className="font-inter text-[12px] sm:text-[14px] md:text-base"
+                    className="font-inter font-medium text-[12px] sm:text-[14px] md:text-base"
                   >
                     FAQ
                   </Link>
@@ -187,14 +178,14 @@ export default function Footer({}: Props) {
 
             {/* Resurser */}
             <div>
-              <h5 className="font-bold font-jakarta text-base sm:text-lg mb-3 sm:mb-4">
+              <h5 className="font-bold font-jakarta text-base sm:text-lg md:text-[22px] leading-[32px] mb-3 sm:mb-4">
                 Resurser
               </h5>
               <ul className="space-y-2 flex flex-col gap-2 sm:gap-3">
                 <li>
                   <Link
                     href="/terms-of-service"
-                    className="font-inter text-[12px] sm:text-[14px] md:text-base"
+                    className="font-inter font-medium text-[12px] sm:text-[14px] md:text-base"
                   >
                     Allmänna villkor
                   </Link>
@@ -202,7 +193,7 @@ export default function Footer({}: Props) {
                 <li>
                   <Link
                     href="/cookie-policy"
-                    className="font-inter text-[12px] sm:text-[14px] md:text-base"
+                    className="font-inter font-medium text-[12px] sm:text-[14px] md:text-base"
                   >
                     Cookie policy
                   </Link>
@@ -211,7 +202,7 @@ export default function Footer({}: Props) {
                 <li>
                   <Link
                     href="/vsl"
-                    className="font-inter text-[12px] sm:text-[14px] md:text-base"
+                    className="font-inter font-medium text-[12px] sm:text-[14px] md:text-base"
                   >
                     Introguide
                   </Link>
@@ -248,9 +239,9 @@ export default function Footer({}: Props) {
 
           {/* Links Section */}
           <Image
-            src="/images/home/graphics/shopify-partner1.png"
+            src="/images/home/graphics/shopify-partner.png"
             alt="Shopify Partner"
-            width={166}
+            width={146}
             height={27}
             className="md:order-3 order-3 w-[120px] sm:w-[140px] md:w-[166px] h-auto"
           />

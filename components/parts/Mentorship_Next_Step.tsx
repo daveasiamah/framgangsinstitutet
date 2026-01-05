@@ -23,7 +23,7 @@ const MentorshipNextStep = ({ onCtaClick }: MentorshipNextStepProps) => {
 
       {/* CTA Button */}
       <MentorshipButton
-        className="mx-0 mt-7 !text-[9px] lg:!text-[12px]"
+        className="mx-0 mt-7 !text-[10px] md:!text-[12px]"
         text="Gå Med i Mentorskap Idag"
         size="small"
         onClick={onCtaClick}

@@ -1,5 +1,4 @@
 import React from "react"
-import Image from "next/image"
 import MentorshipButton from "./Mentorship_Button"
 
 const products = [
@@ -12,14 +11,14 @@ const products = [
   },
   {
     id: 2,
-    image: "/images/mentorship/mentorship-products/facebook1.svg",
+    image: "/images/mentorship/mentorship-products/facebook-ads.png",
     title: "Annonsering På Facebook Ads",
     description:
       "Du får en komplett lektion och vägledning hur du ska sätta upp kampanjer och annonser via Meta Ads.",
   },
   {
     id: 3,
-    image: "/images/mentorship/mentorship-products/dropshipping-product.svg",
+    image: "/images/mentorship/mentorship-products/dropshipping-produkt.png",
     title: "Vinnande Dropshipping Produkt",
     description:
       "Vi kommer rekommendera en vinnande produkt som har sålts för miljonbelopp.",
@@ -40,7 +39,7 @@ const products = [
   },
   {
     id: 6,
-    image: "/images/mentorship/mentorship-products/support.png",
+    image: "/images/mentorship/mentorship-products/mentorship-support.png",
     title: "Varje Dag Support",
     description:
       "Aktiv och ständig support för att hjälpa dig växa din e-handel till en nivå som kan förändra ditt liv och mer.",
@@ -49,29 +48,29 @@ const products = [
 function MentorshipProducts() {
   return (
     <>
-      <h2 className="text-[#000000] max-w-[272px] md:max-w-full font-jakarta text-center text-[20px] md:text-[24px] lg:text-[36px] font-bold mt-10 mb-4 md:mb-6">
+      <h2 className="text-[#000000] max-w-[272px] md:max-w-full font-jakarta text-center leading-[18px] text-[20px] md:text-[24px] lg:text-[36px] font-bold mt-4 mb-4 md:mb-6">
         6 Bonusar När Du Går Med Dropshiping Mentorskap:
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[27px]">
+      <div className="w-full grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-[27px]">
         {products.map((product) => (
           <div
             key={product.id}
-            className="group flex flex-col items-center text-center bg-[#F5F9FF] rounded-[24px] px-[20px] py-[12px] shadow-sm transition-all duration-300 ease-out hover:shadow-md hover:-translate-y-1 hover:scale-[1.01] cursor-pointer"
+            className="flex flex-col items-center text-center bg-[#F5F9FF] rounded-[24px] px-[20px] py-[12px] md:px-[27px] md:pt-[24px] md:pb-[27px] lg:pt-[13px] lg:pb-[20px] lg:px-[20px] shadow-sm"
           >
-            <div className="overflow-hidden rounded-[16px] mb-4 w-full">
-              <Image
+            <div className="overflow-hidden rounded-[16px] w-full">
+              <img
                 width={502}
                 height={170}
                 src={product.image}
                 alt={product.title}
-                className="mb-4"
+                className="w-full h-full object-cover"
               />
             </div>
-            <div className="max-w-[350px] md:max-w-[400px]">
-              <h3 className="font-jakarta text-sm md:text-base text-[#000000] font-semibold mb-2">
+            <div className="max-w-[350px] md:max-w-[533px] lg:max-w-full">
+              <h3 className="font-jakarta text-sm md:text-[24px] lg:text-[14px] text-[#000000] font-semibold leading-[38px] md:leading-[48px] lg:leading-[32px]  text-center">
                 {product.title}
               </h3>
-              <p className="font-inter text-xs md:text-sm text-[#235AE9]">
+              <p className="font-inter text-xs md:text-[18px] lg:text-xs font-medium leading-[12px] md:leading-[18px] text-[#235AE9]">
                 {product.description}
               </p>
             </div>
@@ -79,10 +78,7 @@ function MentorshipProducts() {
         ))}
       </div>
       <div className="flex flext-col items-center self-center mt-2 mb-10 justify-center w-full">
-        <MentorshipButton
-          text="Ansök till Mentorskap →"
-          style={{ fontSize: "12px", color: "red" }}
-        />
+        <MentorshipButton text="Ansök till Mentorskap →" />
       </div>
     </>
   )

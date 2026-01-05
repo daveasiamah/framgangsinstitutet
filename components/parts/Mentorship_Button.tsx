@@ -1,3 +1,4 @@
+import { ArrowRightIcon } from "lucide-react"
 import Link from "next/link"
 
 type ButtonSize = "small" | "medium" | "large"
@@ -10,6 +11,7 @@ interface ReusableButtonProps
   variant?: ButtonVariant
   size?: ButtonSize
   className?: string
+  arrow?: boolean
 }
 
 const MentorshipButton = ({
@@ -17,8 +19,9 @@ const MentorshipButton = ({
   disabled = false,
   variant = "primary",
   size = "medium",
-  className = "mt-5",
+  className,
   onClick,
+  arrow = false,
   ...rest
 }: ReusableButtonProps) => {
   // Size configurations
@@ -67,7 +70,6 @@ const MentorshipButton = ({
         ${className}
     `.trim()
 
-  if (onClick) {
     return (
       <button
         type="button"
@@ -77,22 +79,9 @@ const MentorshipButton = ({
         onClick={onClick}
         {...rest}
       >
-        {text}
+        {text} {arrow && <ArrowRightIcon className="w-4 h-4 ml-1" />}
       </button>
     )
   }
-
-  return (
-    <Link
-      href="https://checkout.revolut.com/payment-link/d3eb03dc-e14d-4695-a085-a01903b02e54"
-      target="_blank"
-      rel="noopener noreferrer"
-      className={combinedClasses}
-      style={boxShadowStyle}
-    >
-      {text}
-    </Link>
-  )
-}
 
 export default MentorshipButton

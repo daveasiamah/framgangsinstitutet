@@ -11,15 +11,15 @@ export default function Dropshipping() {
 
   return (
     <Layout headTitle="Dropshipping - Checkified" isFullWidth={true}>
-      <section className="relative bg-white py-12 px-4 bg-[url('/images/hero-mesh.svg')] bg-no-repeat bg-cover bg-center">
+      <section className="relative bg-white pt-8 px-4 bg-[url('/images/hero-mesh.svg')] bg-no-repeat bg-cover bg-center">
         <div className="max-w-7xl mx-auto">
           {/* Title */}
-          <h1 className="text-[#151E3A] text-[22px] md:text-[42px] lg:text-[56px] font-bold font-jakarta text-center mb-6 leading-tight md:max-w-[700px] lg:max-w-[960px] mx-auto">
-            Allt du behöver lära dig för lyckas med Dropshipping 2026
+          <h1 className="text-[#151E3A] text-[22px] md:text-[42px] lg:text-[56px] font-bold font-jakarta text-center mb-6 leading-[28px] md:leading-[44px] lg:leading-[56px] max-w-[400px] md:max-w-[707px] lg:max-w-[936px] mx-auto">
+            Allt du behöver lära dig för att lyckas med Dropshipping 2026
           </h1>
 
           {/* Description */}
-          <p className="text-[#434C69] text-[16px] font-inter font-medium text-center mb-8 leading-relaxed max-w-[733px] mx-auto">
+          <p className="text-[#434C69] text-[15px] md:text-[16px] font-inter font-medium text-center mb-8 leading-relaxed max-w-[733px] mx-auto">
             Vi har lång erfarenhet av att driva dropshipping framgångsrikt, och
             det finns ett tydligt mönster för de butiker som presterar, och de
             som inte gör det. Med hjälp av dessa insikter har vi skapat vår
@@ -66,7 +66,7 @@ export default function Dropshipping() {
             </p>
           </div>
           {/* Main Title */}
-          <h2 className="text-[#151E3A] text-[20px] leading-[35px] sm:text-[32px] sm:leading-[38px] md:text-[40px] md:leading-[48px] font-bold font-jakarta text-center mb-[24px] md:mb-8">
+          <h2 className="text-[#151E3A] text-[20px] leading-[22px] md:text-[40px] md:leading-[42px] font-bold font-jakarta text-center mb-[24px] md:mb-8">
             Allt du behöver kunna för att <br />
             lyckas med Dropshipping 2026
           </h2>
@@ -75,11 +75,11 @@ export default function Dropshipping() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-start">
               {/* Text Content */}
               <div className="order-2 lg:order-1">
-                <h3 className="text-[#151E3A] text-[22px] md:text-[39px] font-semibold font-geist mb-4 sm:mb-6 leading-[26px] md:leading-[40px] text-center md:text-left">
+                <h3 className="text-[#151E3A] text-[22px] md:text-[39px] font-semibold font-geist mb-4 sm:mb-6 leading-[22px] md:leading-[40px] text-center md:text-left">
                   Utbildningen som hjälper dig <br className="sm:hidden" />
                   ta kontroll över ditt liv
                 </h3>
-                <ul className="space-y-0.5 font-inter font-normal text-[13px] md:text-[14px] tracking-[0%] text-[#434C69]">
+                <ul className="space-y-0.5 font-inter font-normal text-[13px] md:text-[14px] tracking-[0%] text-[#434C69] pl-[18px]">
                   <li className="list-disc list-inside">Starta ditt företag</li>
                   <li className="list-disc list-inside">
                     Bygga en optimerad e-handelshemsida
@@ -138,7 +138,7 @@ export default function Dropshipping() {
               </div>
               {/* Text Content */}
               <div className="order-2">
-                <h3 className="text-[#151E3A] text-[22px] md:text-[39px] font-semibold font-geist mb-4 sm:mb-6 leading-[26px] md:leading-[40px] text-center md:text-left">
+                <h3 className="text-[#151E3A] text-[22px] md:text-[39px] font-semibold font-geist mb-4 sm:mb-6 leading-[22px] md:leading-[40px] text-center md:text-left">
                   Dropshipping kursen som har <br />
                   hjälpt dra över 350 miljoner
                 </h3>
@@ -183,7 +183,7 @@ export default function Dropshipping() {
               </div>
               {/* Text Content */}
               <div className="order-2 lg:order-1">
-                <h3 className="text-[#151E3A] text-[22px] md:text-[39px] font-semibold font-geist mb-4 sm:mb-6 leading-[26px] md:leading-[40px] text-center md:text-left">
+                <h3 className="text-[#151E3A] text-[22px] md:text-[39px] font-semibold font-geist mb-4 sm:mb-6 leading-[22px] md:leading-[40px] text-center md:text-left">
                   En dropshipping utbildning
                   <br />
                   plus ett stöttande community

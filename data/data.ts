@@ -1,27 +1,26 @@
-
 export const HomePageFaqData = [
-    {
-      id: 1,
-      question: "Får jag behålla 100% av vinsten?",
-      answer: "Ja, du behåller 100% av vinsten.",
-    },
-    {
-      id: 2,
-      question: "Hur får jag betalt?",
-      answer:
-        "Vi erbjuder en **100% garantin utan frågor**. Du kan testa det och om det inte fungerar för dig, fattar du pengarna tillbaka.",
-    },
-    {
-      id: 3,
-      question: "Måste jag betala extra för kurserna?",
-      answer:
-        "Nej! Vi erbjuder en **100% garantin utan frågor**. Du kan testa det och om det inte fungerar för dig, fattar du pengarna tillbaka.",
-    },
-    {
-      id: 4,
-      question: "Hur kan jag säga upp mitt abonnemang?",
-      answer:
-        "Du kan avboka din abonnemang genom att klicka på knappen nedan. Du kan avboka din abonnemang genom att klicka på knappen nedan.",
-    },
-  ]
-  
+  {
+    id: 1,
+    question: "Vem är detta mentorskap till för?",
+    answer:
+      "För dig som vill bli en riktig entreprenör och bygga långsiktiga varumärken inom dropshipping. Du får en privat mentor/lärare som guidar dig personligen. Inte för hobbyfolk eller de som hoppar av när det blir jobbigt.",
+  },
+  {
+    id: 2,
+    question: "Hur vet jag att detta kommer att fungera för mig?",
+    answer:
+      "Du får en beprövad strategi, personlig vägledning och vinnande produktrekommendationer. Fungerar det inte, är det för att du inte följer processen. Systemet funkar, frågan är om du gör det.",
+  },
+  {
+    id: 3,
+    question: "Kan jag göra detta från var som helst i världen?",
+    answer:
+      "Ja. Mentorskapet är 100 % online. Plats spelar ingen roll, utförande gör.",
+  },
+  {
+    id: 4,
+    question: "Vad ingår i mitt mentorskapsprogram?",
+    answer:
+      "Privat mentor, vinnande produktrekommendation, steg-för-steg-strategi, kontinuerlig feedback på butik och bygga annonser samt system för att bygga ett långsiktigt och skalbart varumärke.",
+  },
+]

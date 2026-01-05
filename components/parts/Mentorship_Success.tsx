@@ -45,7 +45,7 @@ const SuccessStoriesGrid = ({
   ],
 }: SuccessStoriesGridProps) => {
   return (
-    <div className="relative w-full  max-w-[1045px] mx-auto mt-10">
+    <div className="relative w-full mx-auto max-w-[858px]">
       {/* Background Image Container */}
       <div className="w-full h-full">
         <Image
@@ -58,30 +58,30 @@ const SuccessStoriesGrid = ({
       </div>
 
       {/* Content Grid */}
-      <div className="relative w-full px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+      <div className="relative w-full pt-[24px] mb-[40px]">
         <div className="max-w-7xl mx-auto">
           {/* Grid: 1 column on mobile, 2 columns on tablet, 4 columns on desktop */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-[30px] lg:gap-[38px]">
             {stories.map((story, index) => (
               <div key={index} className="w-full">
                 <div className="overflow-hidden h-full">
                   {/* Story Image */}
-                  <div className="w-full h-48 sm:h-52 lg:h-64 overflow-hidden">
+                  <div className="w-full overflow-hidden mb-[12px]">
                     <Image
                       className="w-full h-full object-contain"
                       alt="Success Story"
                       src={story.image}
-                      width={400}
-                      height={300}
+                      width={396}
+                      height={198}
                     />
                   </div>
 
                   {/* Story Content */}
-                  <div className="relative p-4 sm:p-5 lg:p-6">
-                    <h3 className="font-bold text-[#151e3a] text-sm sm:text-base lg:text-sm leading-tight mb-3 font-jakarta">
+                  <div className="relative gap-1 flex flex-col">
+                    <h3 className="font-bold text-[#151e3a] text-sm leading-tight font-jakarta">
                       {story.title}
                     </h3>
-                    <p className="font-medium text-[#151e3a] text-xs sm:text-sm lg:text-xs leading-relaxed font-inter">
+                    <p className="font-medium text-[#151e3a] text-xs font-inter">
                       {story.description}
                     </p>
                   </div>

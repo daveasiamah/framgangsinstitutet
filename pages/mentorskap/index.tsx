@@ -32,7 +32,13 @@ const MentorshipPage = () => {
         <MentorshipHero onCtaClick={openModal} />
         <MentorshipHeroSub />
         <MentorshipMail />
-        <MentorshipButton size="small" onClick={openModal} />
+
+        <MentorshipButton
+          text="Starta din resa idag"
+          arrow={false}
+          onClick={openModal}
+          className="w-full"
+        />
         <MentorshipSubEhandler />
         <MentorshipProducts />
         <section className="w-full flex flex-col items-center justify-center h-full">
@@ -53,7 +59,7 @@ const MentorshipPage = () => {
         </section>
 
         <MentorshipCard onCtaClick={openModal} />
-        <div className="flex items-center rounded-lg bg-[#f3f6fe] min-h-[26px] justify-center align-middle self-center px-2 py-1.5 sm:py-2 inset-2 shadow-inner max-w-[185px] md:max-w-[208px] mb-4 mt-5">
+        <div className="flex items-center rounded-lg bg-[#f3f6fe] min-h-[26px] justify-center align-middle self-center px-2 py-1.5 sm:py-2 inset-2 shadow-inner max-w-[185px] md:max-w-[208px] mb-[25px] mt-5">
           <p className="font-inter font-semibold text-[14px] text-[#235AE9] text-center leading-tight px-1">
             Totalt värde: 155 000 kr
           </p>

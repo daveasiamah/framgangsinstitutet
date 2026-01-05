@@ -26,8 +26,8 @@ export default function HeroSection({
         {/* Trustpilot */}
         {showTrustpilot && (
           <div className="flex justify-center mb-4">
-            <Image
-              src="/icons/trustpilot-badge.svg"
+            <img
+              src="/images/home/trustpilot-home.png"
               alt="Trustpilot"
               width={200}
               height={33}

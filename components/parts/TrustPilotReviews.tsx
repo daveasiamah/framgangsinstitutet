@@ -46,12 +46,10 @@ const TrustPilotReviews: React.FC = () => {
               className="bg-[#F8F9FA] p-3 md:p-4 flex flex-col w-full shadow-sm"
             >
               <div className="flex mb-2 justify-start self-start">
-                <Image
+                <img
                   src="/images/home/trustpilot-top.svg"
                   alt="stars"
-                  width={302}
-                  height={26}
-                  className="object-contain w-full max-w-[302px] md:max-w-[150px] h-[20px] md:h-[13px]"
+                  className="object-contain w-full max-w-[180px] md:max-w-[150px] h-[20px] md:h-[13px]"
                 />
               </div>
               <h3 className="font-jakarta font-bold text-[16px] md:text-[8px] lg:text-[14px] leading-tight mb-2">
@@ -73,12 +71,12 @@ const TrustPilotReviews: React.FC = () => {
         <span className="font-semibold font-inter">4.5 / 5</span> baserat på 127
         omdömen. Visar våra 5-stjärniga omdömen.
       </div>
-      <Image
-        src="/images/trustpilot-badge-small.svg"
+      <img
+        src="/images/home/trustpilot-home.svg"
         alt="Trustpilot badge"
         width={120}
-        height={16}
-        className="object-contain w-[120px] xs:w-[140px] sm:w-[180px] h-[16px] sm:mt-2"
+        height={26}
+        className="object-contain w-[120px] xs:w-[140px] sm:w-[180px] h-[26px] sm:mt-2"
       />
     </section>
   )

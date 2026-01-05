@@ -5,9 +5,6 @@ import { useRouter } from "next/router"
 import ContractForm from "../ContractForm"
 import { motion, AnimatePresence } from "framer-motion"
 
-import en from "@/locales/en"
-import sv from "@/locales/sv"
-
 import {
   Box,
   Flex,
@@ -29,8 +26,7 @@ type Props = {
 
 export default function Header({ openSidebar, setOpenSidebar }: Props) {
   const router = useRouter()
-  const { pathname, query, locale } = router
-  const t = locale === "en" ? en : sv
+  const { pathname, query } = router
 
   const isSlugPage = !!query.slug
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -92,12 +88,12 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
         {/* Logo */}
         <Link href="/">
           <Flex align="center">
-            <Image
-              src="/images/checkified-logo-main.svg"
+            <img
+              src="/images/home/logo-main.png"
               alt="checkified"
               width={187}
               height={64}
-              priority
+              className="object-cover w-[120px] md:w-[180px] lg:w-[187px] h-auto"
             />
           </Flex>
         </Link>
@@ -222,7 +218,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
           </Box>
 
           <Link href="/mentorskap">Mentorskap</Link>
-          <Link href="/blogg">Blog</Link>
+          <Link href="/blog">Blog</Link>
         </Flex>
 
         {/* DESKTOP CTA BUTTON */}

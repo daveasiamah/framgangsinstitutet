@@ -2,12 +2,12 @@ import Image from "next/image"
 
 const MentorshipMailer = () => {
   return (
-    <div className="relative max-w-[700px] px-4 mb-9 mt-10 font-inter">
+    <div className="relative max-w-full md:max-w-[689px] lg:max-w-[800px] md:px-[55px] mb-[18px] mt-[26px] font-inter">
       <div className="relative w-full bg-white rounded-[25px] border-[0.2px] border-solid border-[#9b9b9b40] shadow-[0px_0.5px_15px_0.5px_#9b9b9b40] pb-8 sm:pb-10 lg:pb-12">
         <div className="w-full relative">
           {/* Email icon */}
           <div className="relative">
-            <Image
+            <img
               className="absolute w-[40px] h-[40px] sm:w-[45px] sm:h-[45px] lg:w-[51px] lg:h-[51px] -top-5 right-4 sm:right-6 lg:right-4 z-10"
               alt="Email Icon"
               src={"/images/mentorship/emailUp.png"}

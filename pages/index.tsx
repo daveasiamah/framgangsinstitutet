@@ -71,7 +71,7 @@ export default function Home() {
           <div className="flex flex-col p-[10px] rounded-[16px] bg-[#F5F9FF] space-y-6">
             <div className="flex flex-col p-7 border-[0.5px] border-[#908888] rounded-[16px] bg-[#FFFFFF] py-6">
               <div className="flex items-center gap-1">
-                <Image
+                <img
                   src="/images/home/graphics/hbook-icon.svg"
                   alt="library icon"
                   width={28}
@@ -99,7 +99,7 @@ export default function Home() {
           <div className="flex flex-col p-[10px] border-1 rounded-[16px] bg-[#F5F9FF] space-y-6">
             <div className="flex flex-col p-7 border-[0.5px] border-[#908888] rounded-[16px] bg-[#FFFFFF] py-6">
               <div className="flex items-center gap-1">
-                <Image
+                <img
                   src="/images/home/graphics/hpencil-icon.svg"
                   alt="library icon"
                   width={28}
@@ -128,7 +128,7 @@ export default function Home() {
           <div className="flex flex-col p-[10px] border-1 rounded-[16px] bg-[#F5F9FF] space-y-6">
             <div className="flex flex-col p-7 border-[0.5px] border-[#908888] rounded-[16px] bg-[#FFFFFF] py-6">
               <div className="flex items-center gap-1">
-                <Image
+                <img
                   src="/images/home/graphics/hpeople-icon.svg"
                   alt="library icon"
                   width={28}
@@ -156,7 +156,7 @@ export default function Home() {
           <div className="flex flex-col p-[10px] border-1 rounded-[16px] bg-[#F5F9FF] space-y-6">
             <div className="flex flex-col p-7 border-[0.5px] border-[#908888] rounded-[16px] bg-[#FFFFFF] py-6">
               <div className="flex items-center gap-1">
-                <Image
+                <img
                   src="/images/home/graphics/hmedia-icon.svg"
                   alt="library icon"
                   width={28}
@@ -183,7 +183,7 @@ export default function Home() {
           <div className="flex flex-col p-[10px] border-1 rounded-[16px] bg-[#F5F9FF] space-y-6">
             <div className="flex flex-col p-7 border-[0.5px] border-[#908888] rounded-[16px] bg-[#FFFFFF] py-6">
               <div className="flex items-center gap-1">
-                <Image
+                <img
                   src="/images/home/graphics/hnews-icon.svg"
                   alt="library icon"
                   width={28}
@@ -211,7 +211,7 @@ export default function Home() {
           <div className="flex flex-col p-[10px] border-1 rounded-[16px] bg-[#F5F9FF] space-y-6">
             <div className="flex flex-col p-7 border-[0.5px] border-[#908888] rounded-[16px] bg-[#FFFFFF] py-6">
               <div className="flex items-center gap-1">
-                <Image
+                <img
                   src="/images/home/graphics/hstar-icon.svg"
                   alt="library icon"
                   width={28}
@@ -240,7 +240,7 @@ export default function Home() {
 
       {/* Plan Section */}
       <section className="flex flex-col justify-center items-center py-1 mb-8">
-        <Image
+        <img
           src="/images/ultimate-plan-banner.svg"
           alt="ultimate plan"
           width={768}
@@ -256,7 +256,7 @@ export default function Home() {
           plus ett pris som passar alla som är redo att vara ambitiösa.
         </p>
         <UltimatePlanFeatures />
-        <TitlePill text="Totalt värde: 155 000 kr" className="mt-2"/>
+        <TitlePill text="Totalt värde: 155 000 kr" className="mt-2" />
         <StartYourJourney />
       </section>
 

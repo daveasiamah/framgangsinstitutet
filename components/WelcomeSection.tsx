@@ -6,7 +6,7 @@ export default function WelcomeSection() {
     <section className="bg-white px-4 mb-[20px]">
       <div className="max-w-7xl mx-auto">
         {/* Main Title */}
-        <h2 className="text-[#151E3A] text-[21px] mb-6 leading-[24px] sm:text-[32px] sm:leading-[36px] md:text-[40px] md:leading-[44px] font-bold font-jakarta text-center">
+        <h2 className="text-[#151E3A] text-[21px] mb-6 mt-6 leading-[24px] sm:text-[32px] sm:leading-[36px] md:text-[40px] md:leading-[44px] font-bold font-jakarta text-center">
           Välkommen till Sveriges ledande
           <br />
           e-handelsutbildning
@@ -16,7 +16,7 @@ export default function WelcomeSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-start">
             {/* Text Content */}
             <div className="order-2 lg:order-1">
-              <h3 className="text-[#151E3A] text-[22px] sm:text-[22px] md:text-[40px] font-bold font-geist mb-4 sm:mb-6 leading-[16px] sm:leading-[19px] md:leading-[35px]">
+              <h3 className="text-[#151E3A] text-[22px] sm:text-[22px] md:text-[40px] font-semibold font-geist mb-4 sm:mb-6 leading-[16px] sm:leading-[19px] md:leading-[35px]">
                 Lär dig av e-handelsexpert
               </h3>
               <div className="space-y-4 font-inter font-normal text-[12px] sm:text-sm text-[#434C69] md:text-[16px] leading-relaxed">
@@ -41,10 +41,9 @@ export default function WelcomeSection() {
             {/* Image */}
             <div className="order-1 lg:order-2">
               <div className="relative w-full aspect-[4/3] rounded-[40px] overflow-hidden">
-                <Image
+                <img
                   src="/images/ehandel-expert.jpg"
                   alt="E-handelsexpert team"
-                  fill
                   className="object-cover"
                 />
               </div>
@@ -110,7 +109,7 @@ export default function WelcomeSection() {
             </div>
             {/* Text Content */}
             <div className="order-2 md:order-1">
-              <h3 className="text-[#151E3A] text-[21px] sm:text-[21px] md:text-[40px] font-bold font-geist mb-4 sm:mb-6 leading-[16px] sm:leading-[19px] md:leading-[35px]">
+              <h3 className="text-[#151E3A] text-[21px] sm:text-[21px] md:text-[40px] font-semibold font-geist mb-4 sm:mb-6 leading-[16px] sm:leading-[19px] md:leading-[35px]">
                 Låt inte din framgång vara
                 <br />
                 en chansning

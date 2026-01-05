@@ -1,29 +1,31 @@
 import React from "react"
 import Image from "next/image"
 import Link from "next/link"
+import MentorshipButton from "./Mentorship_Button"
+import { ArrowRightIcon } from "lucide-react"
 
 const MentorshipStaticImage = ({ onCtaClick }: { onCtaClick?: () => void }) => {
   return (
-    <div className="w-full max-w-[1258px] mx-auto px-4 sm:px-6 lg:px-4 mt-6 sm:mt-8 lg:mt-10 mb-6 sm:mb-8 lg:mb-10">
-      <div className="relative w-full max-w-[1170px] mx-auto min-h-[280px] sm:min-h-[300px] lg:h-[314px] bg-[url(/images/mentorship/next-success.svg)] bg-cover bg-center sm:bg-[100%_100%] rounded-2xl sm:rounded-3xl flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-6 py-6 sm:py-8">
+    <div className="w-full max-w-[1258px] mx-auto">
+      <div className="relative w-full max-w-[1170px] mx-auto min-h-[280px] sm:min-h-[300px] lg:h-[314px] bg-[url(/images/mentorship/next-success.svg)] bg-cover bg-center rounded-2xl sm:rounded-3xl flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-6 py-6 sm:py-8">
         {/* Icon placeholder */}
-        <div className="w-6 h-7 sm:w-8 sm:h-9 mb-3 sm:mb-4 text-white">
-          <Image
+        <div className="w-full h-full flex justify-center">
+          <img
             src={"/images/mentorship/question-icon.svg"}
             alt="Payout Icon"
-            width={32}
-            height={36}
-            className="w-full h-full"
+            width={33}
+            height={32}
+            className="w-[33px] h-[32px] object-contain"
           />
         </div>
 
         {/* Main heading */}
-        <h2 className="max-w-[320px] sm:max-w-[412px] font-bold text-white text-base sm:text-lg md:text-xl lg:text-2xl leading-tight mb-4 sm:mb-6 font-jakarta">
+        <h2 className="max-w-[278px] md:max-w-[338px] font-bold text-white text-[20px] md:text-[24px] font-jakarta leading-[48px]">
           Redo att bli nästa framgång?
         </h2>
 
         {/* Subtext */}
-        <p className="max-w-[280px] sm:max-w-[450px] md:max-w-[590px] font-medium text-white text-xs sm:text-sm md:text-base leading-relaxed mb-6 sm:mb-8 font-inter">
+        <p className="max-w-[304px] md:max-w-[590px] font-medium text-white text-xs md:text-base leading-[25px] mb-[14px] md:mb-[33px] font-inter">
           Vår mentorskapstjänst hjälper dig att ta kontroll över din framtid. Få
           <br className="hidden sm:block" />
           <span className="sm:hidden"> </span>
@@ -33,10 +35,12 @@ const MentorshipStaticImage = ({ onCtaClick }: { onCtaClick?: () => void }) => {
         {/* CTA Button */}
         <button
           onClick={onCtaClick}
-          rel="noopener noreferrer"
-          className="bg-white text-[#151e3a] hover:cursor-pointer font-semibold text-xs sm:text-sm px-4 sm:px-6 py-2 sm:py-3 rounded-md sm:rounded-lg hover:bg-gray-100 transition-colors duration-200 font-jakarta min-w-[120px] sm:min-w-auto"
+          className="flex justify-center items-center bg-white text-gray-600 px-[24px] py-2 rounded-xl font-semibold text-sm font-jakarta"
         >
-          Börja Din Resa Här {""} {">"}
+          <p className="font-inter font-semibold text-[#151E3A] text-[10px]">
+            Starta din resa idag
+          </p>{" "}
+          <ArrowRightIcon className="w-3 h-3 ml-1" />
         </button>
       </div>
     </div>
