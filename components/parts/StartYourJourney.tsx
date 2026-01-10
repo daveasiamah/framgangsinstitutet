@@ -1,12 +1,13 @@
 import React, { use } from "react"
 import Image from "next/image"
 import { useModal } from "../ModalContext"
+import { ArrowRightIcon } from "lucide-react"
 
-function StartYourJourney() {
+function StartYourJourney({ onCtaClick }: { onCtaClick: () => void }) {
   const { openContractForm } = useModal()
 
   return (
-    <section className="w-[calc(100%-20px)] max-w-7xl mx-auto bg-[#225AEA] bg-[url(/images/mentorship/mentorship-products/bg-mesh.svg)] bg-cover rounded-[16px] sm:rounded-[32px] px-4 sm:px-6 py-6 sm:py-8 md:py-10 mt-8 sm:mt-10">
+    <section className="w-[calc(100%-12px)] max-w-7xl mx-auto bg-[#225AEA] bg-[url(/images/mentorship/mentorship-products/bg-mesh.svg)] bg-cover rounded-[16px] sm:rounded-[32px] px-4 sm:px-6 py-6 sm:py-8 md:py-10 mt-8 sm:mt-10">
       <div className="flex flex-col items-center justify-center">
         <div className="flex flex-col items-center w-full px-2 sm:px-4">
           {/* Main heading */}
@@ -21,10 +22,10 @@ function StartYourJourney() {
             Har du verkligen råd att vänta?
           </p>
 
-          <div className="border border-white rounded-full px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 mb-4 sm:mb-5">
+          <div className="border border-white rounded-full px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4">
             <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 text-white font-inter">
               <div className="flex items-center gap-1 sm:gap-1.5 md:gap-2 flex-shrink-0">
-                <Image
+                <img
                   src="/icons/bolt.svg"
                   width={12}
                   height={13.3}
@@ -37,7 +38,7 @@ function StartYourJourney() {
               </div>
 
               <div className="flex items-center gap-1 sm:gap-1.5 md:gap-2 flex-shrink-0">
-                <Image
+                <img
                   src="/icons/handshake.svg"
                   width={12}
                   height={13.3}
@@ -50,7 +51,7 @@ function StartYourJourney() {
               </div>
 
               <div className="flex items-center gap-1 sm:gap-1.5 md:gap-2 flex-shrink-0">
-                <Image
+                <img
                   src="/icons/hand.svg"
                   width={12}
                   height={13.3}
@@ -65,14 +66,14 @@ function StartYourJourney() {
           </div>
         </div>
 
-        <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-3 md:gap-4 mt-3 sm:mt-4">
+        <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-3 md:gap-4 mt-[8.6px] md:mt-[22px]">
           <p className="text-white text-[10px] sm:text-[12px] md:text-[14px] whitespace-nowrap">
             Strålande
           </p>
-          <Image
+          <img
             src="/images/mentorship/mentorship-products/trust-pilot-stars.svg"
             className="w-[100px] sm:w-[124px] h-[18px] sm:h-[20px] md:h-[24px] flex-shrink-0"
-            alt="svg"
+            alt="trustpilot-stars"
             width={124}
             height={24}
           />
@@ -82,10 +83,13 @@ function StartYourJourney() {
         </div>
         {/* CTA Button */}
         <button
-          onClick={() => openContractForm()}
-          className="bg-white text-[#000000] font-semibold text-[10px] sm:text-[12px] md:text-sm mt-4 sm:mt-5 px-[12px] py-[8px] sm:px-[20px] sm:py-[10px] md:px-[28px] md:py-[12px] rounded-[8px] hover:bg-gray-100 transition-colors duration-200 font-jakarta whitespace-nowrap"
+          onClick={onCtaClick}
+          className="flex justify-center items-center bg-white text-gray-600 px-[24px] py-2 rounded-xl font-semibold text-sm font-jakarta mt-[16px] md:mt-[28px]"
         >
-          Starta din resa nu →
+          <p className="font-inter font-semibold text-[#151E3A] text-[10px]">
+            Starta din resa idag
+          </p>{" "}
+          <ArrowRightIcon className="w-3 h-3 ml-1" />
         </button>
       </div>
     </section>

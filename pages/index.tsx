@@ -59,7 +59,7 @@ export default function Home() {
       <TrustPilotReviews />
 
       {/* Feature Cards Section */}
-      <section className="flex flex-col w-full max-w-7xl mx-auto items-center gap-3 mt-6 mb-20">
+      <section className="flex flex-col w-full max-w-7xl mx-auto items-center gap-3 mt-[15px] md:mt-[24px] mb-[30px]">
         <TitlePill text="Alla tillgängliga funktioner" className="mt-[36px]" />
         <h2 className="font-jakarta font-semibold text-[18px] text-center text-black md:text-[24px] lg:text-[40px] max-w-[241px] md:max-w-none leading-[22px] md:leading-[50px] mb-1">
           Allt du behöver för att börja sälja och skala upp
@@ -241,11 +241,10 @@ export default function Home() {
       {/* Plan Section */}
       <section className="flex flex-col justify-center items-center py-1 mb-8">
         <img
-          src="/images/ultimate-plan-banner.svg"
-          alt="ultimate plan"
-          width={768}
-          height={690}
-          className="object-contain w-[360px] h-[268px] md:w-[768px] md:h-[690px]"
+          src="/images/mentorship/mentorship-packages.png"
+          width={700}
+          height={470}
+          alt="mentorship packages"
         />
 
         <h3 className="text-[22px] md:text-[48px] font-jakarta font-semibold text-[#151E3A] mt-6 mb-4">
@@ -257,7 +256,7 @@ export default function Home() {
         </p>
         <UltimatePlanFeatures />
         <TitlePill text="Totalt värde: 155 000 kr" className="mt-2" />
-        <StartYourJourney />
+        <StartYourJourney onCtaClick={() => openContractForm()} />
       </section>
 
       <MainFAQ faqData={HomePageFaqData} />

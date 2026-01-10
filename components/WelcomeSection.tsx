@@ -13,7 +13,7 @@ export default function WelcomeSection() {
         </h2>
         {/* First Section - Lär dig av e-handelsexpert */}
         <div className="bg-[#F3F6FE] rounded-[20px] p-6 sm:p-8 md:p-12 mb-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 items-start">
             {/* Text Content */}
             <div className="order-2 lg:order-1">
               <h3 className="text-[#151E3A] text-[22px] sm:text-[22px] md:text-[40px] font-semibold font-geist mb-4 sm:mb-6 leading-[16px] sm:leading-[19px] md:leading-[35px]">
@@ -44,7 +44,7 @@ export default function WelcomeSection() {
                 <img
                   src="/images/ehandel-expert.jpg"
                   alt="E-handelsexpert team"
-                  className="object-cover"
+                  className="object-cover w-[325px] h-[216px] md:w-[570px] md:h-[380px]"
                 />
               </div>
             </div>
@@ -52,7 +52,7 @@ export default function WelcomeSection() {
         </div>
         {/* Second Section - Omge dig med drivna entreprenörer */}
         <div className="bg-[#F3F6FE] rounded-[20px] p-6 sm:p-8 md:p-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-1 items-start">
             {/* Image */}
             <div className="order-1">
               <div className="relative w-full aspect-[4/3] rounded-[40px] overflow-hidden">
@@ -95,7 +95,7 @@ export default function WelcomeSection() {
         </div>
         {/* Third Section - Omge dig med drivna entreprenörer */}
         <div className="bg-[#F3F6FE] rounded-[20px] p-6 sm:p-8 md:p-12 mt-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-1 items-start">
             {/* Image */}
             <div className="order-2">
               <div className="relative w-full aspect-[4/3] rounded-[40px] overflow-hidden">

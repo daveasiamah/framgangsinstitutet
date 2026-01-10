@@ -50,9 +50,10 @@ const MentorWhyThisWorksSection = () => {
   return (
     <div className="w-full max-w-5xl mx-auto px-4 py-2 mt-1 mb-1">
       {/* Header */}
-      <div className="flex flex-col items-center font-jakarta my-[30px] md:mt-[50px]">
+      <div className="flex flex-col items-center font-jakarta mt-[30px] mb-5">
         <h2 className="text-xl md:text-2xl max-w-[280px] font-jakarta font-bold text-gray-900 mb-2 leading-[30px]">
-          Varför fungerar detta...<br/> (när inget annat har)
+          Varför fungerar detta...
+          <br /> (när inget annat har)
         </h2>
       </div>
       {/* <p className="text-gray-600 font-jakarta text-lg md:text-2xl font-bold leading-[30px]"></p> */}

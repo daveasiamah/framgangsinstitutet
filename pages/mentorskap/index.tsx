@@ -42,8 +42,8 @@ const MentorshipPage = () => {
         <MentorshipSubEhandler />
         <MentorshipProducts />
         <section className="w-full flex flex-col items-center justify-center h-full">
-          <Image
-            src="/images/mentorship/mentorship-packages.svg"
+          <img
+            src="/images/mentorship/mentorship-packages.png"
             width={700}
             height={470}
             alt="mentorship packages"

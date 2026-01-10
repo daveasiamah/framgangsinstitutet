@@ -13,7 +13,7 @@ const MentorshipSubEhandler = () => {
           </div>
 
           {/* Main headline */}
-          <h2 className="max-w-[386px] md:max-w-[608px] text-xl md:text-2xl font-jakarta text-center md:text-start font-extrabold">
+          <h2 className="max-w-[276px] md:max-w-[608px] text-xl md:text-2xl font-jakarta text-start font-extrabold mx-auto md:mx-0 leading-[23px] md:leading-[31px]">
             <span className="text-black font-jakarta font-extrabold">
               Det är som att ha
             </span>{" "}
@@ -26,7 +26,7 @@ const MentorshipSubEhandler = () => {
           </h2>
           <p className="py-1 leading-[32px] text-[16px]"></p>
           {/* Description */}
-          <div className="w-full max-w-[772px] font-inter">
+          <div className="max-w-[278px] md:max-w-[642px] font-inter mx-auto md:mx-0">
             <p className="font-medium font-jakarta text-[#434C69] text-[12px] md:text-base tracking-[0] leading-normal">
               Till skillnad från ditt typiska "coachingprogram", community eller
               föråldrad kurs...
@@ -42,7 +42,7 @@ const MentorshipSubEhandler = () => {
       </div>
       <div className="w-full flex justify-center md:justify-start">
         <MentorshipButton
-          className="mt-7 text-sm"
+          className="text-sm mt-2 md:mt-3"
           text="Ansök Här"
           size="small"
           arrow={true}

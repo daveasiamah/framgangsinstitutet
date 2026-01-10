@@ -6,13 +6,19 @@ const MentorshipMailer = () => {
       <div className="relative w-full bg-white rounded-[25px] border-[0.2px] border-solid border-[#9b9b9b40] shadow-[0px_0.5px_15px_0.5px_#9b9b9b40] pb-8 sm:pb-10 lg:pb-12">
         <div className="w-full relative">
           {/* Email icon */}
-          <div className="relative">
+          <div
+            className="absolute w-[51px] h-[51px] -top-6 right-4 sm:right-6 lg:right-4 z-10 bg-[#225AEA] rounded-[16px] p-[9px] flex items-center justify-center"
+            style={{
+              boxShadow: `
+                inset 11px 1px 19.4px 0px rgba(255, 255, 255, 0.3), 
+                inset -4px 0px 5.8px 0px rgba(255, 255, 255, 0.25)
+              `,
+            }}
+          >
             <img
-              className="absolute w-[40px] h-[40px] sm:w-[45px] sm:h-[45px] lg:w-[51px] lg:h-[51px] -top-5 right-4 sm:right-6 lg:right-4 z-10"
+              className="w-full h-full object-contain"
               alt="Email Icon"
-              src={"/images/mentorship/emailUp.png"}
-              width={51}
-              height={51}
+              src={"/icons/mentorship/mentorship-email.png"}
             />
           </div>
 

@@ -4,49 +4,42 @@ import { useModal } from "./ModalContext"
 
 type Testimonial = {
   name: string
-  earnings: string
   image: string
 }
 
 const testimonials: Testimonial[] = [
   {
-    name: "Johan Eriksson",
-    earnings: "750 000 kr på 45 dagar",
-    image: "/images/home/testimonial/johan.jpg",
+    name: "johan",
+    image: "/images/home/testimonial/johan.png",
   },
   {
-    name: "Emma Andersson",
-    earnings: "500 000 kr på 30 dagar",
-    image: "/images/home/testimonial/blondie.jpg",
+    name: "josephine",
+    image: "/images/home/testimonial/josephine.png",
   },
   {
-    name: "Sofia Karlsson",
-    earnings: "450 000 kr på 35 dagar",
-    image: "/images/home/testimonial/brunette.jpg",
+    name: "sebastian",
+    image: "/images/home/testimonial/sebastian.png",
   },
   {
-    name: "Niklas Åsén",
-    earnings: "700 000 kr på 60 dagar",
-    image: "/images/home/testimonial/niklas.jpg",
+    name: "alex",
+    image: "/images/home/testimonial/alex.png",
   },
   {
-    name: "Sebastian Blomgren",
-    earnings: "200 000 kr på 14 dagar",
-    image: "/images/home/testimonial/sebastian.jpg",
+    name: "niklas",
+    image: "/images/home/testimonial/niklas.png",
   },
   {
-    name: "Alex Rodriguez",
-    earnings: "Omsatt över 1 200 000 kr",
-    image: "/images/home/testimonial/alex.jpg",
+    name: "Laptop",
+    image: "/images/home/testimonial/laptop.png",
   },
 ]
 
 export default function TestimonialsSection() {
   return (
-    <section className="bg-white px-4 mb-0 md:mb-10">
+    <section className="bg-white px-0 md:px-4 mb-0 md:mb-10">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-[8px] md:mb-[14px]">
+        <div className="text-center mb-[8px] md:mb-[14px] px-4 md:px-0">
           <h2 className="text-[#151E3A] text-[28px] md:text-[40px] lg:text-[48px] font-bold font-jakarta mb-2 mt-[24px] md:mt-[38px] lg:mt-[50px] leading-[36px] md:leading-[44px] lg:leading-[52px]">
             Förändra ditt liv med Checkified
           </h2>
@@ -56,67 +49,72 @@ export default function TestimonialsSection() {
           </p>
         </div>
         {/* Masonry Grid Layout - Max 1276x930 with 20px gaps */}
-        <div className="max-w-[1276px] mx-auto">
+        <div className="max-w-[1276px] mx-auto px-0 md:px-0">
           {/* First Row - 3 columns: Johan (2 cols), Emma, Sofia */}
-          <div className="grid grid-cols-2 md:grid-cols-[40%_28%_28%] lg:grid-cols-[590px_324px_324px] gap-3 md:gap-4 mb-3 md:mb-4">
+          <div className="grid grid-cols-1 md:grid-cols-[40%_28%_28%] lg:grid-cols-[590px_324px_324px] gap-[7px] px-4 md:gap-4 mb-[7px] md:mb-4">
             {/* Johan - spans 2 columns on all screens */}
-            <div className="col-span-2 md:col-span-1 relative rounded-[20px] overflow-hidden w-full h-[240px] md:h-[260px] lg:h-[332px] group cursor-pointer">
+            <div className="relative rounded-[20px] overflow-hidden w-full h-full md:h-[260px] lg:h-[332px]">
               <Image
                 src={testimonials[0].image}
                 alt={testimonials[0].name}
-                fill
-                className="object-cover"
+                width={360}
+                height={200}
+                className="object-cover w-full h-full"
               />
             </div>
             {/* Emma */}
-            <div className="relative rounded-[20px] overflow-hidden w-full h-[180px] md:h-[260px] lg:h-[332px] group cursor-pointer">
+            <div className="relative rounded-[20px] overflow-hidden w-full h-full md:h-[260px] lg:h-[332px]">
               <Image
                 src={testimonials[1].image}
                 alt={testimonials[1].name}
-                fill
-                className="object-cover"
+                width={360}
+                height={200}
+                className="object-cover w-full h-full"
               />
             </div>
 
             {/* Sofia */}
-            <div className="relative rounded-[20px] overflow-hidden w-full h-[180px] md:h-[260px] lg:h-[332px] group cursor-pointer">
+            <div className="relative rounded-[20px] overflow-hidden w-full h-full md:h-[260px] lg:h-[332px]">
               <Image
                 src={testimonials[2].image}
                 alt={testimonials[2].name}
-                fill
-                className="object-cover"
+                width={360}
+                height={200}
+                className="object-cover w-full h-full"
               />
             </div>
           </div>
           {/* Second Row - 2 main columns with nested grids */}
-          <div className="grid grid-cols-1 md:grid-cols-[60%_38.4%] lg:grid-cols-[766px_490px] gap-3 md:gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-[60%_38.4%] lg:grid-cols-[766px_490px] gap-[7px] md:gap-5 px-4">
             {/* Left Column - 766px wide, 2 rows */}
-            <div className="space-y-3 md:space-y-5">
+            <div className="space-y-[7px] md:space-y-5">
               {/* Row 1: Niklas and Sebastian side by side */}
-              <div className="grid grid-cols-2 gap-3 md:gap-5">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-[7px] md:gap-5">
                 {/* Niklas */}
-                <div className="relative rounded-[20px] overflow-hidden w-full h-[140px] md:h-[180px] lg:h-[210px] group cursor-pointer">
+                <div className="relative rounded-[20px] overflow-hidden w-full h-full md:h-[180px] lg:h-[210px]">
                   <Image
                     src={testimonials[3].image}
                     alt={testimonials[3].name}
-                    fill
-                    className="object-cover"
+                    width={360}
+                    height={200}
+                    className="object-cover w-full h-full"
                   />
                 </div>
                 {/* Sebastian */}
-                <div className="relative rounded-[20px] overflow-hidden w-full h-[140px] md:h-[180px] lg:h-[210px] group cursor-pointer">
+                <div className="relative rounded-[20px] overflow-hidden w-full h-full md:h-[180px] lg:h-[210px]">
                   <Image
                     src={testimonials[4].image}
                     alt={testimonials[4].name}
-                    fill
-                    className="object-cover"
+                    width={360}
+                    height={200}
+                    className="object-cover w-full h-full"
                   />
                 </div>
               </div>
               {/* Row 2: Laptop image */}
               <div className="relative rounded-[20px] overflow-hidden w-full h-[220px] md:h-[280px] lg:h-[347px]">
                 <Image
-                  src="/images/home/testimonial/laptop-shopify.jpg"
+                  src="/images/home/testimonial/laptop.png"
                   alt="Dashboard"
                   fill
                   className="object-cover"
@@ -124,9 +122,9 @@ export default function TestimonialsSection() {
               </div>
             </div>
             {/* Right Column - 490px wide, 2 rows */}
-            <div className="space-y-3 md:space-y-5">
+            <div className="space-y-[7px] md:space-y-5">
               {/* Row 1: Alex Rodriguez */}
-              <div className="relative rounded-[20px] overflow-hidden w-full h-[200px] md:h-[225px] lg:h-[278px] group cursor-pointer">
+              <div className="relative rounded-[20px] overflow-hidden w-full h-[170px] md:h-[225px] lg:h-[278px]">
                 <Image
                   src={testimonials[5].image}
                   alt={testimonials[5].name}

@@ -77,7 +77,7 @@ export default function EHandel() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-start">
               {/* Text Content */}
               <div className="order-2 lg:order-1">
-                <h3 className="text-[#151E3A] text-[22px] md:text-[39px] font-semibold font-geist mb-4 sm:mb-6 leading-[26px] md:leading-[40px] text-center md:text-left">
+                <h3 className="text-[#151E3A] text-[22px] md:text-[39px] font-semibold font-geist mb-4 sm:mb-6 leading-[26px] md:leading-[40px]">
                   Vad ingår i online utbildningen?
                 </h3>
                 <div className="space-y-4 text-[#434C69] font-inter text-[12px] sm:text-sm md:text-[16px] leading-relaxed mb-6">
@@ -149,7 +149,7 @@ export default function EHandel() {
               </div>
               {/* Text Content */}
               <div className="order-2">
-                <h3 className="text-[#151E3A] text-[22px] md:text-[39px] font-semibold font-geist mb-4 sm:mb-6 leading-[26px] md:leading-[40px] text-center md:text-left">
+                <h3 className="text-[#151E3A] text-[22px] md:text-[39px] font-semibold font-geist mb-4 sm:mb-6 leading-[26px] md:leading-[40px]">
                   Vi har tillsammans genererat över 300 miljoner kronor
                 </h3>
                 <div className="space-y-4 text-[#434C69] font-inter text-[12px] sm:text-sm md:text-[16px] leading-relaxed">
@@ -191,7 +191,7 @@ export default function EHandel() {
               </div>
               {/* Text Content */}
               <div className="order-2 lg:order-1">
-                <h3 className="text-[#151E3A] text-[22px] md:text-[39px] font-semibold font-geist mb-4 sm:mb-6 leading-[26px] md:leading-[40px] text-center md:text-left">
+                <h3 className="text-[#151E3A] text-[22px] md:text-[39px] font-semibold font-geist mb-4 sm:mb-6 leading-[26px] md:leading-[40px]">
                   En e-handel onlineutbildning med ett stöttande community
                 </h3>
                 <div className="space-y-4 text-[#434C69] font-inter text-[12px] sm:text-sm md:text-[16px] leading-relaxed">

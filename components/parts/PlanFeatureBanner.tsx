@@ -8,7 +8,7 @@ function PlanFeatureBanner() {
       <div className="relative w-full max-w-[1170px] mx-auto min-h-[240px] sm:min-h-[260px] md:h-[366px] flex flex-col items-center justify-center">
         {/* Icon placeholder */}
         <div className="w-[120px] sm:w-[156px] h-[28px] sm:h-[36px] mb-2 sm:mb-3 text-white">
-          <Image
+          <img
             src={
               "/images/mentorship/mentorship-products/checkified-logo-white.svg"
             }

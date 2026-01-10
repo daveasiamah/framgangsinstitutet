@@ -6,6 +6,7 @@ interface MentorshipPayoutProps {
 }
 
 import MentorshipButton from "./Mentorship_Button"
+import { ArrowRightIcon } from "lucide-react"
 
 const MentorshipPayout = ({ onCtaClick }: MentorshipPayoutProps) => {
   return (
@@ -13,7 +14,7 @@ const MentorshipPayout = ({ onCtaClick }: MentorshipPayoutProps) => {
       <div className="relative w-full max-w-[1170px] mx-auto min-h-[240px] sm:min-h-[260px] md:h-[366px] flex flex-col items-center justify-center">
         {/* Icon placeholder */}
         <div className="w-[120px] sm:w-[156px] h-[28px] sm:h-[36px] mb-2 sm:mb-3 text-white">
-          <Image
+          <img
             src={
               "/images/mentorship/mentorship-products/checkified-logo-white.svg"
             }
@@ -97,13 +98,15 @@ const MentorshipPayout = ({ onCtaClick }: MentorshipPayoutProps) => {
           </p>
         </div>
         {/* CTA Button */}
-        <MentorshipButton
-          text="Starta din resa nu →"
-          size="small"
-          variant="outline"
-          className="bg-white text-[#4E7BEE] font-semibold text-xs sm:text-sm mt-3 sm:mt-4 px-5 sm:px-6 py-2 rounded-lg hover:bg-gray-100 transition-colors duration-200 font-jakarta whitespace-nowrap"
+        <button
           onClick={onCtaClick}
-        />
+          className="flex justify-center items-center bg-white text-gray-600 px-[24px] py-2 rounded-lg font-semibold text-sm font-jakarta mt-[16px] md:mt-[28px]"
+        >
+          <p className="font-inter font-semibold text-[#151E3A] text-[10px]">
+            Starta din resa idag
+          </p>{" "}
+          <ArrowRightIcon className="w-3 h-3 ml-1" />
+        </button>
       </div>
     </div>
   )
