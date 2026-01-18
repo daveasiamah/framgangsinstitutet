@@ -26,7 +26,7 @@ export default function Home() {
 
   return (
     <Layout headTitle={t.homeData.metaData.title} isFullWidth={true}>
-      {/* <HeroSection /> */}
+      <HeroSection />
       <TestimonialsSection />
       <WelcomeSection />
       {/* CTA Section 1 */}

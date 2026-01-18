@@ -12,31 +12,31 @@ interface SuccessStoriesGridProps {
 }
 
 const SuccessStoriesGrid = ({
-  backgroundImage = "/images/mentorship/success-big.png",
+  backgroundImage = "/images/mentorship/result1.jpg",
   stories = [
     {
-      image: "/images/mentorship/success-2.png",
+      image: "/images/mentorship/result2.jpg",
       title:
         "Nybörjare gick från ingen kunskap om dropshipping till över 164 000+ på en dag",
       description:
         "Casper visste inget om dropshipping men lärde sig snabbt med hjälp av programmet. På bara en dag tjänade han över 164 000 kr.",
     },
     {
-      image: "/images/mentorship/success-3.png",
+      image: "/images/mentorship/result3.jpg",
       title:
         "Från att jobba på ICA till att göra 2,8 miljoner kronor med dropshipping e-handel",
       description:
         "Caroline gick från heltid på ICA till en dropshipping-verksamhet som nu omsätter miljoner. Mentorskapet gav henne verktygen för att lyckas.",
     },
     {
-      image: "/images/mentorship/success-4.png",
+      image: "/images/mentorship/result4.jpg",
       title:
         "Ingen erfarenhet och jobba på Postnord till att generera över 100k på två månader",
       description:
         "Nils gick från att jobba på Postnord till att tjäna över 100 000 kr på två månader, tack vare mentorskapets stöd och vägledning.",
     },
     {
-      image: "/images/mentorship/success-5.png",
+      image: "/images/mentorship/result5.jpg",
       title:
         "Fattig student lyckades skala till 97 000 kr  med Dropshipping Mentorskap",
       description:
@@ -48,8 +48,8 @@ const SuccessStoriesGrid = ({
     <div className="relative w-full mx-auto max-w-[858px]">
       {/* Background Image Container */}
       <div className="w-full h-full">
-        <Image
-          className="w-full h-full object-cover"
+        <img
+          className="w-full h-full object-cover rounded-[25px]"
           alt="Background"
           src={backgroundImage}
           width={1920}
@@ -67,8 +67,8 @@ const SuccessStoriesGrid = ({
                 <div className="overflow-hidden h-full">
                   {/* Story Image */}
                   <div className="w-full overflow-hidden mb-[12px]">
-                    <Image
-                      className="w-full h-full object-contain"
+                    <img
+                      className="w-full h-full object-contain rounded-[25px]"
                       alt="Success Story"
                       src={story.image}
                       width={396}

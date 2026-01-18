@@ -1,4 +1,4 @@
-import { CheckCircle2 } from "lucide-react"
+import { ArrowRight, CheckCircle2 } from "lucide-react"
 
 const MentorshipCard = ({ onCtaClick }: { onCtaClick?: () => void }) => {
   const features = [
@@ -42,7 +42,7 @@ const MentorshipCard = ({ onCtaClick }: { onCtaClick?: () => void }) => {
         {/* Header */}
         <div className="flex items-center justify-center gap-2 sm:gap-3 mb-6 sm:mb-10">
           <img
-            src="/icons/checkified-icon-blue.svg"
+            src="/icons/checkified-icon-blue.png"
             alt="checkified icon"
             width={28}
             height={28}
@@ -65,7 +65,7 @@ const MentorshipCard = ({ onCtaClick }: { onCtaClick?: () => void }) => {
           onClick={onCtaClick}
           className="w-full bg-primary hover:bg-primary-deep text-white text-sm sm:text-md py-2.5 sm:py-2 md:py-2.5 rounded-xl mb-4 sm:mb-6 font-medium"
         >
-          Ansök till Mentorskap →
+          Ansök till Mentorskap <ArrowRight size={16} className="inline-block ml-2" />
         </button>
 
         {/* Rating */}

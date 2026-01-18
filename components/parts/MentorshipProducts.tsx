@@ -1,5 +1,6 @@
 import React from "react"
 import MentorshipButton from "./Mentorship_Button"
+import { ArrowRight } from "lucide-react"
 
 const products = [
   {
@@ -45,10 +46,10 @@ const products = [
       "Aktiv och ständig support för att hjälpa dig växa din e-handel till en nivå som kan förändra ditt liv och mer.",
   },
 ]
-function MentorshipProducts() {
+function MentorshipProducts({ openModal }: { openModal: () => void }) {
   return (
     <>
-      <h2 className="text-[#000000] max-w-[272px] md:max-w-full font-jakarta text-center leading-[18px] text-[20px] md:text-[24px] lg:text-[36px] font-bold mt-4 mb-4 md:mb-6">
+      <h2 className="text-[#000000] max-w-[272px] md:max-w-full font-jakarta text-center leading-[18px] text-[20px] md:text-[24px] lg:text-[36px] font-bold mt-8 mb-4 md:mb-6">
         6 Bonusar När Du Går Med Dropshiping Mentorskap:
       </h2>
       <div className="w-full grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-[27px]">
@@ -77,8 +78,21 @@ function MentorshipProducts() {
           </div>
         ))}
       </div>
-      <div className="flex flext-col items-center self-center mt-2 mb-10 justify-center w-full">
-        <MentorshipButton text="Ansök till Mentorskap →" />
+      <div className="flex flex-col items-center self-center mt-6 mb-10 justify-center w-full">
+        <button
+          type="button"
+          onClick={openModal}
+          className="bg-[#225AEA] text-white hover:bg-[#1e52d1] active:bg-[#1a47b8] font-bold text-center font-jakarta tracking-[0] leading-none rounded-[7px] shadow-inner flex items-center justify-center gap-2 w-[184px] sm:w-[200px] md:w-[220px] lg:w-[240px] h-[39px] sm:h-[42px] md:h-[45px] lg:h-[48px] text-xs sm:text-sm md:text-[14px] px-6 py-3"
+          style={{
+            boxShadow: `
+              inset 11px 1px 19.4px 0px rgba(255, 255, 255, 0.3), 
+              inset -4px 0px 5.8px 0px rgba(255, 255, 255, 0.25)
+            `,
+          }}
+        >
+          Ansök till Mentorskap
+          <ArrowRight size={20} strokeWidth={2.5} />
+        </button>
       </div>
     </>
   )

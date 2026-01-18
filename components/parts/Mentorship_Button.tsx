@@ -70,18 +70,18 @@ const MentorshipButton = ({
         ${className}
     `.trim()
 
-    return (
-      <button
-        type="button"
-        className={combinedClasses}
-        style={boxShadowStyle}
-        disabled={disabled}
-        onClick={onClick}
-        {...rest}
-      >
-        {text} {arrow && <ArrowRightIcon className="w-4 h-4 ml-1" />}
-      </button>
-    )
-  }
+  return (
+    <button
+      type="button"
+      className={combinedClasses}
+      style={boxShadowStyle}
+      disabled={disabled}
+      onClick={onClick}
+      {...rest}
+    >
+      {text} {arrow && <ArrowRightIcon className="w-5 h-5 ml-2" />}
+    </button>
+  )
+}
 
 export default MentorshipButton

@@ -40,7 +40,7 @@ const MentorshipPage = () => {
           className="w-full"
         />
         <MentorshipSubEhandler />
-        <MentorshipProducts />
+        <MentorshipProducts openModal={openModal} />
         <section className="w-full flex flex-col items-center justify-center h-full">
           <img
             src="/images/mentorship/mentorship-packages.png"
