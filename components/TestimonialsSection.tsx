@@ -134,7 +134,7 @@ export default function TestimonialsSection() {
           {/* Masonry Grid Layout - Max 1276x930 with 20px gaps */}
           <div className="max-w-[7xl] mx-auto px-0 md:px-0">
             {/* First Row - 3 columns: Johan, Blondie, Brunette */}
-            <div className="grid grid-cols-1 md:grid-cols-[1fr_0.6fr_0.6fr] gap-[7px] px-4 md:gap-[10px] lg:gap-4 mb-[7px]">
+            <div className="grid grid-cols-1 md:grid-cols-[1fr_0.6fr_0.6fr] gap-[7px] px-4 md:gap-5 mb-[7px] md:mb-5">
               {/* Johan */}
               <div className="relative overflow-hidden rounded-[25px] w-full h-full md:h-[170px] lg:h-[332px]">
                 <img
@@ -168,11 +168,11 @@ export default function TestimonialsSection() {
               </div>
             </div>
             {/* Second Row - 2 main columns with nested grids */}
-            <div className="grid grid-cols-1 md:grid-cols-[1.6fr_1fr] gap-[7px] md:gap-[10px] lg:gap-5 px-4">
+            <div className="grid grid-cols-1 md:grid-cols-[1.6fr_1fr] gap-[7px] md:gap-5 px-4">
               {/* Left Column - 766px wide, 2 rows */}
-              <div className="space-y-[7px] md:space-y-[10px] lg:space-y-5">
+              <div className="space-y-[7px] md:space-y-5">
                 {/* Row 1: Niklas and Sebastian side by side */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-[7px] md:gap-[10px] lg:gap-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-[7px] md:gap-5">
                   {/* Niklas */}
                   <div className="relative overflow-hidden rounded-[25px] w-full h-full md:h-[130px] lg:h-[210px]">
                     <img

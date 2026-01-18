@@ -87,7 +87,7 @@ const TrustPilotReviews: React.FC = () => {
         omdömen. Visar våra 5-stjärniga omdömen.
       </div>
       <img
-        src="/images/home/trustpilot-home.svg"
+        src="/images/home/hero-trustpilot.png"
         alt="Trustpilot badge"
         width={120}
         height={26}
