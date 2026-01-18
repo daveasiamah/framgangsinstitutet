@@ -32,7 +32,7 @@ const MentorshipCard = ({ onCtaClick }: { onCtaClick?: () => void }) => {
       highlight: "och mallar",
       boldFirst: true,
     },
-    { text: "Inbyggda 2025", highlight: "AI-instruktörer", boldSecond: true },
+    { text: "Inbyggda 2026", highlight: "AI-instruktörer", boldSecond: true },
   ]
 
   return (
@@ -43,7 +43,7 @@ const MentorshipCard = ({ onCtaClick }: { onCtaClick?: () => void }) => {
         <div className="flex items-center justify-center gap-2 sm:gap-3 mb-6 sm:mb-10">
           <img
             src="/icons/checkified-icon-blue.svg"
-            alt=""
+            alt="checkified icon"
             width={28}
             height={28}
             className="sm:w-[35px] sm:h-[35px]"

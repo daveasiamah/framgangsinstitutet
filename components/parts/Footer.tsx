@@ -62,7 +62,7 @@ export default function Footer({}: Props) {
           {/* Logo Section */}
           <div className="w-full lg:w-1/3 flex flex-col items-start text-left">
             <img
-              src="/images/home/graphics/new-checkified-logo.svg"
+              src="/images/home/checkified-logo-white.png"
               alt="checkified"
               width={190}
               height={55}

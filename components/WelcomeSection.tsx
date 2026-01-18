@@ -13,9 +13,9 @@ export default function WelcomeSection() {
         </h2>
         {/* First Section - Lär dig av e-handelsexpert */}
         <div className="bg-[#F3F6FE] rounded-[20px] p-6 sm:p-8 md:p-12 mb-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-[26px] items-start">
             {/* Text Content */}
-            <div className="order-2 lg:order-1">
+            <div className="order-2 lg:order-1 lg:pt-[10px]">
               <h3 className="text-[#151E3A] text-[22px] sm:text-[22px] md:text-[40px] font-semibold font-geist mb-4 sm:mb-6 leading-[16px] sm:leading-[19px] md:leading-[35px]">
                 Lär dig av e-handelsexpert
               </h3>
@@ -40,32 +40,31 @@ export default function WelcomeSection() {
             </div>
             {/* Image */}
             <div className="order-1 lg:order-2">
-              <div className="relative w-full aspect-[4/3] rounded-[40px] overflow-hidden">
+              <div className="relative w-full rounded-[40px] overflow-hidden">
                 <img
-                  src="/images/ehandel-expert.jpg"
+                  src="/images/home/welcome1.jpg"
                   alt="E-handelsexpert team"
-                  className="object-cover w-[325px] h-[216px] md:w-[570px] md:h-[380px]"
+                  className="object-cover w-full h-full"
                 />
               </div>
             </div>
           </div>
         </div>
         {/* Second Section - Omge dig med drivna entreprenörer */}
-        <div className="bg-[#F3F6FE] rounded-[20px] p-6 sm:p-8 md:p-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-1 items-start">
+        <div className="bg-[#F3F6FE] rounded-[20px] p-6 sm:p-8 md:p-12 mb-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-[26px] items-start">
             {/* Image */}
             <div className="order-1">
-              <div className="relative w-full aspect-[4/3] rounded-[40px] overflow-hidden">
-                <Image
-                  src="/images/mentorer.jpg"
+              <div className="relative w-full rounded-[40px] overflow-hidden">
+                <img
+                  src="/images/home/welcome2.jpg"
                   alt="Entreprenörer och mentorer"
-                  fill
-                  className="object-cover"
+                  className="object-cover w-full h-full"
                 />
               </div>
             </div>
             {/* Text Content */}
-            <div className="order-2">
+            <div className="order-2 lg:pt-[10px]">
               <h3 className="text-[#151E3A] text-[21px] sm:text-[22px] md:text-[40px] font-semibold font-geist mb-4 sm:mb-6 leading-[18px] sm:leading-[19px] md:leading-[35px]">
                 Omge dig med drivna
                 <br />
@@ -95,20 +94,19 @@ export default function WelcomeSection() {
         </div>
         {/* Third Section - Omge dig med drivna entreprenörer */}
         <div className="bg-[#F3F6FE] rounded-[20px] p-6 sm:p-8 md:p-12 mt-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-1 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-[26px] items-start">
             {/* Image */}
-            <div className="order-2">
-              <div className="relative w-full aspect-[4/3] rounded-[40px] overflow-hidden">
-                <Image
-                  src="/images/chansning.jpg"
+            <div className="order-1 md:order-1">
+              <div className="relative w-full rounded-[40px] overflow-hidden">
+                <img
+                  src="/images/home/welcome3.jpg"
                   alt="Entreprenörer och mentorer"
-                  fill
-                  className="object-cover"
+                  className="object-cover w-full h-full"
                 />
               </div>
             </div>
             {/* Text Content */}
-            <div className="order-2 md:order-1">
+            <div className="order-2 md:order-1 lg:pt-[10px]">
               <h3 className="text-[#151E3A] text-[21px] sm:text-[21px] md:text-[40px] font-semibold font-geist mb-4 sm:mb-6 leading-[16px] sm:leading-[19px] md:leading-[35px]">
                 Låt inte din framgång vara
                 <br />

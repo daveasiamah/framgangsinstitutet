@@ -218,7 +218,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
           </Box>
 
           <Link href="/mentorskap">Mentorskap</Link>
-          <Link href="/blog">Blog</Link>
+          <Link href="/blog">Blogg</Link>
         </Flex>
 
         {/* DESKTOP CTA BUTTON */}
@@ -429,6 +429,27 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
                     Blog
                   </Link>
                 </Box>
+
+                <Button
+                  mt="40px"
+                  width="100%"
+                  bg="#225AEA"
+                  color="white"
+                  borderRadius="8px"
+                  px={6}
+                  py={3}
+                  fontWeight="semibold"
+                  fontSize="sm"
+                  _hover={{
+                    bg: "#1a4ab8",
+                  }}
+                  onClick={() => {
+                    setOpenSidebar(false)
+                    openModal()
+                  }}
+                >
+                  {getButtonTitle(pathname)}
+                </Button>
               </Stack>
             </motion.div>
           </>

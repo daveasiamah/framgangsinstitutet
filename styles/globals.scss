@@ -230,6 +230,14 @@ textarea::placeholder {
     @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
   }
 
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
   .affiliate-get-started div:nth-child(2n) {
     @apply lg:relative lg:top-[80px];
   }

@@ -26,7 +26,7 @@ export default function Home() {
 
   return (
     <Layout headTitle={t.homeData.metaData.title} isFullWidth={true}>
-      <HeroSection />
+      {/* <HeroSection /> */}
       <TestimonialsSection />
       <WelcomeSection />
       {/* CTA Section 1 */}
@@ -39,7 +39,7 @@ export default function Home() {
           />
           <div className="text-center flex flex-col items-center w-full">
             <h1 className="text-white text-center text-[18px] leading-[1.3] sm:text-[20px] sm:leading-[1.4] md:text-[24px] md:leading-[1.5] max-w-[90%] sm:max-w-[600px] font-bold font-jakarta mb-3 md:mb-4">
-              Över 300 miljoner kronor i intäkter på plattformen
+              Över 300 miljoner kronor i intäkter på plattforme
             </h1>
             <p className="mb-4 md:mb-6 max-w-[95%] sm:max-w-[85%] md:max-w-xl mx-auto text-center text-[12px] sm:text-[14px] md:text-[15px] lg:text-[16px] text-white font-inter leading-[1.6] sm:leading-relaxed px-2 sm:px-0">
               Vår tjänst hjälper dig att ta kontroll över din framtid. Få
@@ -50,7 +50,7 @@ export default function Home() {
               onClick={() => openContractForm()}
               className="py-2 px-4 md:py-2.5 md:px-5 flex items-center justify-center rounded-[8px] font-semibold font-inters text-[11px] md:text-[12px] btn-white text-[#15133A] hover:bg-gray-100 transition-colors"
             >
-              Starta din resa idag →
+              Starta din resa idag <ArrowRight size={14} className="ml-2" />
             </button>
           </div>
         </div>
@@ -59,180 +59,92 @@ export default function Home() {
       <TrustPilotReviews />
 
       {/* Feature Cards Section */}
-      <section className="flex flex-col w-full max-w-7xl mx-auto items-center gap-3 mt-[15px] md:mt-[24px] mb-[30px]">
-        <TitlePill text="Alla tillgängliga funktioner" className="mt-[36px]" />
-        <h2 className="font-jakarta font-semibold text-[18px] text-center text-black md:text-[24px] lg:text-[40px] max-w-[241px] md:max-w-none leading-[22px] md:leading-[50px] mb-1">
-          Allt du behöver för att börja sälja och skala upp
+      <section className="flex flex-col w-full max-w-[1440px] mx-auto items-center gap-3 mt-[15px] md:mt-[53px] lg:mt-[77px] mb-[30px]">
+        <h2 className="font-jakarta font-semibold text-[18px] text-center text-black md:text-[40px] max-w-[241px] md:max-w-[472px] lg:max-w-[478px] leading-[22px] md:leading-[36px] mb-1">
+          Är du redo att ta kontroll över ditt liv?
         </h2>
+        <p className="font-inter text-center text-[12px] md:text-[14px] text-[#434C69] md:max-w-[640px] lg:max-w-[570px] leading-[20px] px-4">
+          Varje framgång började med ett första steg - en ansökan. Är det din
+          tur nu?
+        </p>
 
         {/* Cards List */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[14px] md:gap-[20px]">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-[11px] md:gap-[27px] lg:gap-[29px] pt-[22px] md:pt-[42px] w-full px-4 md:px-0">
           {/* Card 1 */}
-          <div className="flex flex-col p-[10px] rounded-[16px] bg-[#F5F9FF] space-y-6">
-            <div className="flex flex-col p-7 border-[0.5px] border-[#908888] rounded-[16px] bg-[#FFFFFF] py-6">
-              <div className="flex items-center gap-1">
-                <img
-                  src="/images/home/graphics/hbook-icon.svg"
-                  alt="library icon"
-                  width={28}
-                  height={28}
-                  className="w-7 h-7 object-contain"
-                />
-                <h3 className="text-sm md:text-xl lg:text-xl font-jakarta font-bold md:font-semibold text-[#151E3A]">
-                  Hemliga Strategier
-                </h3>
-              </div>
-
-              <div className="pt-2 md:pt-4">
-                <h3 className="text-sm md:text-[26px] font-inter font-semibold text-[#151E3A]">
-                  Privat coachning
-                </h3>
-                <p className="text-xs md:text-base text-[#434C69] pt-1 leading-relaxed">
-                  Du kommer få träffa en framgångsrik e-handelsmiljonär, och få
-                  vägledning för att bygga, skala och växa ditt dropshipping
-                  företag.
-                </p>
-              </div>
+          <div className="flex flex-col py-[24px] px-[18px] rounded-[25px] bg-[#F8F9FA]">
+            <div className="flex items-center">
+              <img
+                src="/images/home/testimonial/user-comments/comment1.png"
+                alt="comment1"
+                width={383}
+                height={234}
+                className="w-full h-full object-contain"
+              />
             </div>
           </div>
-          {/* Card 2 */}
-          <div className="flex flex-col p-[10px] border-1 rounded-[16px] bg-[#F5F9FF] space-y-6">
-            <div className="flex flex-col p-7 border-[0.5px] border-[#908888] rounded-[16px] bg-[#FFFFFF] py-6">
-              <div className="flex items-center gap-1">
-                <img
-                  src="/images/home/graphics/hpencil-icon.svg"
-                  alt="library icon"
-                  width={28}
-                  height={28}
-                  className="w-7 h-7 object-contain"
-                />
-                <h3 className="text-sm md:text-xl lg:text-xl font-jakarta font-bold md:font-semibold text-[#151E3A]">
-                  Dropshipping Kurs
-                </h3>
-              </div>
 
-              <div className="pt-2 md:pt-4">
-                <h3 className="text-sm md:text-[26px] font-inter font-semibold text-[#151E3A]">
-                  Exklusiv E-handelskurs
-                </h3>
-                <p className="text-xs md:text-base text-[#434C69] pt-1 leading-relaxed">
-                  Du kommer få tillgång till ett avancerad kurs med över 45+
-                  avsnitt som täcker alla områden inom e-handel och
-                  dropshipping.
-                </p>
-              </div>
+          {/* Card 2 */}
+          <div className="flex flex-col py-[24px] px-[18px] rounded-[25px] bg-[#F8F9FA]">
+            <div className="flex items-center">
+              <img
+                src="/images/home/testimonial/user-comments/comment2.png"
+                alt="comment2"
+                width={383}
+                height={234}
+                className="w-full h-full object-contain"
+              />
             </div>
           </div>
 
           {/* Card 3 */}
-          <div className="flex flex-col p-[10px] border-1 rounded-[16px] bg-[#F5F9FF] space-y-6">
-            <div className="flex flex-col p-7 border-[0.5px] border-[#908888] rounded-[16px] bg-[#FFFFFF] py-6">
-              <div className="flex items-center gap-1">
-                <img
-                  src="/images/home/graphics/hpeople-icon.svg"
-                  alt="library icon"
-                  width={28}
-                  height={28}
-                  className="w-7 h-7 object-contain"
-                />
-                <h3 className="text-sm md:text-xl lg:text-xl font-jakarta font-bold md:font-semibold text-[#151E3A]">
-                  Gemenskaper
-                </h3>
-              </div>
-
-              <div className="pt-2 md:pt-4">
-                <h3 className="text-sm md:text-[26px] font-inter font-semibold text-[#151E3A]">
-                  Tillgång till interaktiv community
-                </h3>
-                <p className="text-xs md:text-base text-[#434C69] pt-1 leading-relaxed">
-                  Få tillgång till vår blomstrande community med över 2000
-                  medlemmar. Använd tillgångarna i kursen för att öka
-                  engagemanget
-                </p>
-              </div>
+          <div className="flex flex-col py-[24px] px-[18px] rounded-[25px] bg-[#F8F9FA]">
+            <div className="flex items-center">
+              <img
+                src="/images/home/testimonial/user-comments/comment3.png"
+                alt="comment3"
+                width={383}
+                height={234}
+                className="w-full h-full object-contain"
+              />
             </div>
           </div>
+
           {/* Card 4 */}
-          <div className="flex flex-col p-[10px] border-1 rounded-[16px] bg-[#F5F9FF] space-y-6">
-            <div className="flex flex-col p-7 border-[0.5px] border-[#908888] rounded-[16px] bg-[#FFFFFF] py-6">
-              <div className="flex items-center gap-1">
-                <img
-                  src="/images/home/graphics/hmedia-icon.svg"
-                  alt="library icon"
-                  width={28}
-                  height={28}
-                  className="w-7 h-7 object-contain"
-                />
-                <h3 className="text-sm md:text-xl lg:text-xl font-jakarta font-bold md:font-semibold text-[#151E3A]">
-                  Högkonverterande Annonser
-                </h3>
-              </div>
-
-              <div className="pt-2 md:pt-4">
-                <h3 className="text-sm md:text-[26px] font-inter font-semibold text-[#151E3A]">
-                  Annonsmaterial för varje sociala medier
-                </h3>
-                <p className="text-xs md:text-base text-[#434C69] pt-1 leading-relaxed">
-                  Öka tillväxten i din butik med våra beprövade
-                  tillväxtstrategier som driver trafik och ökar dina intäkter.
-                </p>
-              </div>
+          <div className="flex flex-col py-[24px] px-[18px] rounded-[25px] bg-[#F8F9FA]">
+            <div className="flex items-center">
+              <img
+                src="/images/home/testimonial/user-comments/comment4.png"
+                alt="comment4"
+                width={383}
+                height={234}
+                className="w-full h-full object-contain"
+              />
             </div>
           </div>
+
           {/* Card 5 */}
-          <div className="flex flex-col p-[10px] border-1 rounded-[16px] bg-[#F5F9FF] space-y-6">
-            <div className="flex flex-col p-7 border-[0.5px] border-[#908888] rounded-[16px] bg-[#FFFFFF] py-6">
-              <div className="flex items-center gap-1">
-                <img
-                  src="/images/home/graphics/hnews-icon.svg"
-                  alt="library icon"
-                  width={28}
-                  height={28}
-                  className="w-7 h-7 object-contain"
-                />
-                <h3 className="text-sm md:text-xl lg:text-xl font-jakarta font-bold md:font-semibold text-[#151E3A]">
-                  Exklusiv E-handelskurs
-                </h3>
-              </div>
-
-              <div className="pt-2 md:pt-4">
-                <h3 className="text-sm md:text-[26px] font-inter font-semibold text-[#151E3A]">
-                  Tillgång till privata lektioner av experter
-                </h3>
-                <p className="text-xs md:text-base text-[#434C69] pt-1 leading-relaxed">
-                  Checkified Mentorskap™️ är det enda stället som erbjuder
-                  utbildning i världsklass med praktiskt vägledning till ett
-                  unikt e-handelsystem.
-                </p>
-              </div>
+          <div className="flex flex-col py-[24px] px-[18px] rounded-[25px] bg-[#F8F9FA]">
+            <div className="flex items-center">
+              <img
+                src="/images/home/testimonial/user-comments/comment5.png"
+                alt="comment5"
+                width={383}
+                height={234}
+                className="w-full h-full object-contain"
+              />
             </div>
           </div>
-          {/* Card 6 */}
-          <div className="flex flex-col p-[10px] border-1 rounded-[16px] bg-[#F5F9FF] space-y-6">
-            <div className="flex flex-col p-7 border-[0.5px] border-[#908888] rounded-[16px] bg-[#FFFFFF] py-6">
-              <div className="flex items-center gap-1">
-                <img
-                  src="/images/home/graphics/hstar-icon.svg"
-                  alt="library icon"
-                  width={28}
-                  height={28}
-                  className="w-7 h-7 object-contain"
-                />
-                <h3 className="text-sm md:text-xl lg:text-xl font-jakarta font-bold md:font-semibold text-[#151E3A]">
-                  AI Verktyg
-                </h3>
-              </div>
 
-              <div className="pt-2 md:pt-4">
-                <h3 className="text-sm md:text-[26px] font-inter font-semibold text-[#151E3A]">
-                  Inbyggda AI verktyg för e-handel
-                </h3>
-                <p className="text-xs md:text-base text-[#434C69] pt-1 leading-relaxed">
-                  Vi ger dig alla de senaste verktygen för att din online
-                  verksamhet ska växa med hjälp av AI. Dessa hemliga verktyg
-                  behöver du.
-                </p>
-              </div>
+          {/* Card 6 */}
+          <div className="flex flex-col py-[24px] px-[18px] rounded-[25px] bg-[#F8F9FA]">
+            <div className="flex items-center">
+              <img
+                src="/images/home/testimonial/user-comments/comment6.png"
+                alt="comment6"
+                width={383}
+                height={234}
+                className="w-full h-full object-contain"
+              />
             </div>
           </div>
         </div>

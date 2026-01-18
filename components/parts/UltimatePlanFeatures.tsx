@@ -26,7 +26,7 @@ const features = [
     highlight: "och mallar",
     boldFirst: true,
   },
-  { text: "Inbyggda 2025", highlight: "AI-instruktörer", boldSecond: true },
+  { text: "Inbyggda 2026", highlight: "AI-instruktörer", boldSecond: true },
 ]
 
 function UltimatePlanFeatures() {
@@ -42,9 +42,9 @@ function UltimatePlanFeatures() {
         <div className="flex flex-col items-center justify-between rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 mb-4 bg-white">
           {/* Header */}
           <div className="flex items-center justify-center gap-2 sm:gap-3 mb-6 sm:mb-10">
-            <Image
-              src="/icons/checkified-icon-blue.svg"
-              alt=""
+            <img
+              src="/icons/checkified-icon-blue.png"
+              alt="checkified icon"
               width={28}
               height={28}
               className="sm:w-[35px] sm:h-[35px]"
@@ -75,7 +75,7 @@ function UltimatePlanFeatures() {
               Strålande
             </span>
             <div className="flex gap-1">
-              <Image
+              <img
                 src="/icons/trustpilot-stars.svg"
                 width={80}
                 height={14}

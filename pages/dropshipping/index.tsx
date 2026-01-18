@@ -47,8 +47,8 @@ export default function Dropshipping() {
 
           {/* Video/Image Section */}
           <div className="relative max-w-[360px]  md:max-w-[480px] lg:max-w-[860px] mx-auto">
-            <Image
-              src="/images/home/graphics/checkified-hero.svg"
+            <img
+              src="/images/home/graphics/checkified-hero.png"
               alt="Dropshipping Hero"
               width={960}
               height={540}
@@ -75,7 +75,7 @@ export default function Dropshipping() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-start">
               {/* Text Content */}
               <div className="order-2 lg:order-1">
-                <h3 className="text-[#151E3A] text-[22px] md:text-[39px] font-semibold font-geist mb-4 sm:mb-6 leading-[22px] md:leading-[40px] text-center md:text-left">
+                <h3 className="text-[#151E3A] text-[22px] md:text-[39px] font-semibold font-geist mb-4 sm:mb-6 leading-[22px] md:leading-[40px] text-left md:text-left">
                   Utbildningen som hjälper dig <br className="sm:hidden" />
                   ta kontroll över ditt liv
                 </h3>
@@ -138,7 +138,7 @@ export default function Dropshipping() {
               </div>
               {/* Text Content */}
               <div className="order-2">
-                <h3 className="text-[#151E3A] text-[22px] md:text-[39px] font-semibold font-geist mb-4 sm:mb-6 leading-[22px] md:leading-[40px] text-center md:text-left">
+                <h3 className="text-[#151E3A] text-[22px] md:text-[39px] font-semibold font-geist mb-4 sm:mb-6 leading-[22px] md:leading-[40px] text-left md:text-left">
                   Dropshipping kursen som har <br />
                   hjälpt dra över 350 miljoner
                 </h3>
@@ -183,7 +183,7 @@ export default function Dropshipping() {
               </div>
               {/* Text Content */}
               <div className="order-2 lg:order-1">
-                <h3 className="text-[#151E3A] text-[22px] md:text-[39px] font-semibold font-geist mb-4 sm:mb-6 leading-[22px] md:leading-[40px] text-center md:text-left">
+                <h3 className="text-[#151E3A] text-[22px] md:text-[39px] font-semibold font-geist mb-4 sm:mb-6 leading-[22px] md:leading-[40px] text-left md:text-left">
                   En dropshipping utbildning
                   <br />
                   plus ett stöttande community

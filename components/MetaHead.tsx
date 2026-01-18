@@ -9,14 +9,14 @@ type Props = {
 export default function MetaHead({ title, path }: Props) {
   return (
     <Head>
-      <title>{`${title} - Checkified - Sveriges största e-handelsutbildning som fokuserar på resultat!`}</title>
+      <title>{`${title} - Sveriges största e-handelsutbildning som fokuserar på resultat!`}</title>
       <meta
         name="description"
         content={`Skapa mer frihet i vardagen genom att bygga ditt eget e-handelsföretag. Följ över 1000 svenskar som redan tagit steget och upptäck hur det känns att jobba digitalt på riktigt. Gör det smarta valet, utbilda dig genom framtidens skola och börja få resultat medan du lär dig. Se guide.${title}`}
       />
       <meta
         property="og:title"
-        content={`${title} - Checkified - Sveriges största e-handelsutbildning som fokuserar på resultat!`}
+        content={`${title} - Sveriges största e-handelsutbildning som fokuserar på resultat!`}
       />
       <meta
         property="og:description"

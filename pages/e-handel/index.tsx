@@ -49,8 +49,8 @@ export default function EHandel() {
 
           {/* Video/Image Section */}
           <div className="relative max-w-[360px]  md:max-w-[480px] lg:max-w-[860px] mx-auto">
-            <Image
-              src="/images/home/graphics/checkified-hero.svg"
+            <img
+              src="/images/home/graphics/checkified-hero.png"
               alt="Dropshipping Hero"
               width={960}
               height={540}

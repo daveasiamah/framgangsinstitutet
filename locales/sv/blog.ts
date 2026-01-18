@@ -2,10 +2,10 @@ import { BlogData } from "../types/blog"
 
 export const blogData: BlogData = {
   metaData: {
-    title: "Blog",
+    title: "Blogg",
   },
 
-  blogTitle: "Blog",
+  blogTitle: "Blogg",
   blogSubtitle: "Lär dig allt du behöver veta om dropshipping.",
   blogNav: {
     home: "Hem",

@@ -27,11 +27,11 @@ export default function HeroSection({
         {showTrustpilot && (
           <div className="flex justify-center mb-4">
             <img
-              src="/images/home/trustpilot-home.png"
+              src="/images/home/hero-trustpilot.png"
               alt="Trustpilot"
-              width={200}
+              width={255}
               height={33}
-              className="object-contain h-[33px] w-[200px] md:h-[40px] md:w-[240px] lg:h-[50px] lg:w-[300px]"
+              className="object-contain h-[33px] w-[255px]"
             />
           </div>
         )}
