@@ -7,7 +7,6 @@ interface MentorshipHeroProps {
   onCtaClick?: () => void
 }
 
-import MentorshipButton from "./Mentorship_Button"
 import { ArrowRightIcon } from "lucide-react"
 
 const MentorshipHero = ({ onCtaClick }: MentorshipHeroProps) => {
@@ -28,7 +27,7 @@ const MentorshipHero = ({ onCtaClick }: MentorshipHeroProps) => {
               i.getElementsByTagName("head")[0].appendChild(s);
           };}
           vsl(l+'loader.min.js',function(){if(!vli){var vlc=v[c][vl];vli=new vlc();}vli.loadScript(l+'player.min.js',function(){var vec=v[d][ve];t=new vec();t.run(a);});});
-      })(window, document, 'Vidalytics', 'vidalytics_embed_QrsjsMAYL8q2HZuP', 'https://preview.vidalytics.com/vid/bBDswucyILsvdYDQ/');
+      })(window, document, 'Vidalytics', 'vidalytics_embed_QrsjsMAYL8q2HZuP', 'https://fast.vidalytics.com/vid/bBDswucyILsvdYDQ/');
     `
     if (vidalyticsRef.current) {
       vidalyticsRef.current.appendChild(script)
@@ -41,8 +40,6 @@ const MentorshipHero = ({ onCtaClick }: MentorshipHeroProps) => {
         <img
           src="/icons/mentorship/checkified-icon-top.png"
           className="w-[33px] h-[33px] md:w-[42px] md:h-[42px]"
-          // width={}
-          // height={70}
           alt="store-icon"
         />
       </ScrollReveal>
