@@ -39,7 +39,7 @@ export default function Home() {
           />
           <div className="text-center flex flex-col items-center w-full">
             <h1 className="text-white text-center text-[18px] leading-[1.3] sm:text-[20px] sm:leading-[1.4] md:text-[24px] md:leading-[1.5] max-w-[90%] sm:max-w-[600px] font-bold font-jakarta mb-3 md:mb-4">
-              Över 300 miljoner kronor i intäkter på plattforme
+              Över 300 miljoner kronor i intäkter på plattformen
             </h1>
             <p className="mb-4 md:mb-6 max-w-[95%] sm:max-w-[85%] md:max-w-xl mx-auto text-center text-[12px] sm:text-[14px] md:text-[15px] lg:text-[16px] text-white font-inter leading-[1.6] sm:leading-relaxed px-2 sm:px-0">
               Vår tjänst hjälper dig att ta kontroll över din framtid. Få
@@ -59,7 +59,7 @@ export default function Home() {
       <TrustPilotReviews />
 
       {/* Feature Cards Section */}
-      <section className="flex flex-col w-full max-w-[1440px] mx-auto items-center gap-3 mt-[15px] md:mt-[53px] lg:mt-[77px] mb-[30px]">
+      <section className="flex flex-col w-full max-w-[1440px] mx-auto items-center gap-3 mt-[36px] md:mt-[53px] lg:mt-[77px] lg:mb-[42px] mb-[30px]">
         <h2 className="font-jakarta font-semibold text-[18px] text-center text-black md:text-[40px] max-w-[241px] md:max-w-[472px] lg:max-w-[478px] leading-[22px] md:leading-[36px] mb-1">
           Är du redo att ta kontroll över ditt liv?
         </h2>

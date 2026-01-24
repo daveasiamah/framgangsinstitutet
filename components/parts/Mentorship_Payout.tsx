@@ -10,7 +10,7 @@ import { ArrowRightIcon } from "lucide-react"
 
 const MentorshipPayout = ({ onCtaClick }: MentorshipPayoutProps) => {
   return (
-    <div className="w-full max-w-[1258px] bg-[#225AEA] bg-[url(/images/mentorship/mentorship-products/bg-mesh.svg)] bg-cover rounded-[20px] sm:rounded-[32px] mx-auto px-2 sm:px-4 py-4 sm:py-4 mt-10 mb-4">
+    <div className="w-full max-w-[1258px] bg-[#225AEA] bg-[url(/images/mentorship/mentorship-products/bg-mesh.svg)] bg-cover rounded-[20px] sm:rounded-[32px] mx-auto px-2 sm:px-4 py-4 sm:py-4 mt-8 mb-4">
       <div className="relative w-full max-w-[1170px] mx-auto min-h-[240px] sm:min-h-[260px] md:h-[366px] flex flex-col items-center justify-center">
         {/* Icon placeholder */}
         <div className="w-[120px] sm:w-[156px] h-[28px] sm:h-[36px] mb-2 sm:mb-3 text-white">

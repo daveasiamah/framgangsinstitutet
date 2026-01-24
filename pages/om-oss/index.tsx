@@ -1,324 +1,140 @@
-import React from "react"
-import Image from "next/image"
-import { Swiper, SwiperSlide } from "swiper/react"
-import { Autoplay, Navigation } from "swiper"
 import { useRouter } from "next/router"
-
 import Layout from "@/components/Layout"
-import Title from "@/components/parts/Title"
-import ButtonArrow from "@/components/parts/ButtonArrow"
-import HistoryCard from "@/components/parts/HistoryCard"
-
-// Import Swiper styles
-import "swiper/css"
-import "swiper/css/navigation"
-
-import Smile from "@/components/graphic/Smile"
-import BlueHat from "@/components/graphic/BlueHat"
-import OrangeHat from "@/components/graphic/OrangeHat"
-import BlurCircle from "@/components/graphic/BlurCircle"
-import LineGraphic from "@/components/graphic/LineGraphic"
-import CacingOne from "@/components/graphic/CacingOne"
-import FadeLogo from "@/components/graphic/FadeLogo"
-
-import ScrollReveal from "@/components/transition/ScrollReveal"
-import TiltParallax from "@/components/transition/TiltParallax"
-
 import en from "@/locales/en"
 import sv from "@/locales/sv"
+import { HiQuestionMarkCircle } from "react-icons/hi"
+import HeroSection from "@/components/HeroSection"
+import { useModal } from "@/components/ModalContext"
+import { ArrowRight, ArrowRightIcon } from "lucide-react"
 
-type Props = {}
-
-export default function About({}: Props) {
+export default function About() {
   const router = useRouter()
   const { locale } = router
   const t = locale === "en" ? en : sv
+  const { openContractForm } = useModal()
 
   return (
-    <Layout isFullWidth headTitle={t.aboutData.metaData.title}>
-      <section className="container mx-auto relative py-10 lg:py-12 mb-12 lg:mb-32">
-        <Smile
-          positionClassName="top-[1%] left-[1rem] lg:left-[12%]"
-          sizeClassName="w-[70px] h-[70px] lg:w-[80px] lg:h-[80px]"
-        />
-        <BlueHat
-          positionClassName="bottom-[-1rem] lg:bottom-[-25%] right-[1rem] lg:right-[50%]"
-          sizeClassName="w-[70px] h-[70px] lg:w-[100px] lg:h-[100px]"
-        />
-        <OrangeHat positionClassName="top-[2rem] right-[1rem] lg:right-[14rem]" />
+    <Layout headTitle={t.homeData.metaData.title} isFullWidth={true}>
+      <section className="relative bg-white py-8 px-4 bg-[url('/images/hero-mesh.svg')] pt-8 bg-no-repeat bg-cover bg-center">
+        <div className="max-w-7xl mx-auto">
+          {/* Title */}
+          <h1 className="text-[#151E3A] text-[30px] md:text-[48px] lg:text-[56px] font-bold font-jakarta text-center mb-6 leading-[32px] md:leading-[44px] lg:leading-[52px] max-w-[700px] md:max-w-[550px] lg:max-w-[700px] mx-auto">
+            Checkified Revolution
+          </h1>
 
-        <BlurCircle positionClassName="left-[-12rem] top-20" size="lg" />
-        <LineGraphic
-          positionClassname="right-[-14rem] 2xl:right-[-12rem] top-[-30px]"
-          className="svg-primary"
-        />
-        <CacingOne
-          positionClassName="left-[-16rem] 2xl:left-[-12rem] rotate-[-40deg] top-[4rem]"
-          sizeClassName="w-[24rem] h-[24rem]"
-          className="z-[-1]"
-        />
-
-        <ScrollReveal>
-          <Title
-            blackText={t.aboutData.aboutBlackTitle}
-            blueText={t.aboutData.aboutBlueTitle}
-            isBlock
-            className="mx-auto text-center"
-          />
-          <p className="text-subtitle text-center max-w-xl mx-auto">
-            {t.aboutData.aboutSubtitle}
+          {/* Description */}
+          <p className="text-[#434C69] text-[16px] font-inter font-medium text-center mb-4 leading-relaxed max-w-[733px] md:max-w-[690px] mx-auto">
+            Checkified grundades av e-handelsentreprenör och grundaren Dominic,
+            för att hjälpa dig att komma igång med dropshipping och e-handel.
+            Det som började som en lösning på hans egna utmaningar inom e-handel
+            utvecklades så småningom till Checkified.
           </p>
-        </ScrollReveal>
-      </section>
 
-      <section className="container mx-auto">
-        <div className="our-culture-container xl:flex xl:items-center xl:min-h-[450px] bg-primary rounded-[2rem] py-10 lg:py-12 text-white relative mb-12 isolate">
-          <LineGraphic
-            positionClassname="right-[-13rem] lg:right-[-10rem] top-[-6rem]"
-            className="svg-white"
-          />
-
-          <div className="w-full lg:w-3/5 bg-white/10 p-8 lg:p-12 rounded-tl-3xl rounded-bl-3xl backdrop-blur-xl lg:mr-auto mt-40 lg:mt-0">
-            <ScrollReveal>
-              <h2 className="text-[30px] lg:text-[40px] mb-4 font-bold">
-                {t.aboutData.aimTitle}
-              </h2>
-
-              <p className="mb-6">{t.aboutData.aimSubtitleOne}</p>
-              <p>{t.aboutData.aimSubtitleTwo}</p>
-            </ScrollReveal>
-          </div>
-
-          <div className="absolute w-full h-[300px] lg:w-[550px] lg:h-[550px] -top-10 -right-2 lg:-top-14 2xl:-top-20 lg:-right-10 z-[-1]">
-            <Image
-              src="/images/about/coffee-men.png"
-              alt="stats"
-              fill
-              className="absolute object-contain"
-            />
-          </div>
-        </div>
-      </section>
-
-      <section className="container mx-auto">
-        <div className="py-10 lg:py-12">
-          <div className="bg-base-200 p-8 lg:p-12 rounded-[3rem]">
-            <ScrollReveal>
-              <Title
-                blackText={t.aboutData.teamBlackTitle}
-                blueText={t.aboutData.teamBlueTitle}
-                className="text-left"
-              />
-              <p className="mb-6 text-subtitle">
-                {t.aboutData.teamSubtitleOne}
-              </p>
-              <p className="text-subtitle">{t.aboutData.teamSubtitleTwo}</p>
-              <ButtonArrow href="/signup" className="mt-8 lg:mt-10">
-                {t.aboutData.teamButton}
-              </ButtonArrow>
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-base-100 container mx-auto  relative isolate py-10 lg:py-24 lg:mb-16">
-        <div className="bg-base-200 px-8 py-10 lg:py-24 rounded-[3rem] lg:px-28 grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-20">
-          {t.aboutData.statsData.map((data) => (
-            <div
-              key={data.id}
-              className="bg-primary grid justify-center items-center text-center rounded-3xl px-6 py-10"
+          {/* CTA Button */}
+          <div className="flex justify-center items-center mb-4">
+            <button
+              onClick={() => openContractForm()}
+              className="py-3 w-[299px] bg-[#225AEA] hover:bg-[#1a4aca] text-white font-semibold rounded-[7px] font-jakarta text-sm flex items-center justify-center gap-2"
             >
-              <ScrollReveal>
-                <div className="bg-white/20 p-3 rounded-full">
-                  <Image
-                    src={data.imageUrl}
-                    width={110}
-                    height={110}
-                    alt={data.subtitle}
-                    className="bg-white p-4 rounded-full"
-                  />
-                </div>
-                <h2 className="text-4xl font-bold text-white mt-4 mb-3">
-                  {data.title}
-                </h2>
-                <p className="text-white text-lg">{data.subtitle}</p>
-              </ScrollReveal>
-            </div>
-          ))}
-        </div>
-      </section>
+              Börja Nu <ArrowRight size={16} />
+            </button>
+          </div>
 
-      <section className="container mx-auto">
-        <div className="lg:pb-12 mb-10">
-          <TiltParallax>
-            <Image
-              src="/images/about/vr-men.png"
-              alt="virtual reality"
-              height={420}
-              width={420}
-              className="object-contain mx-auto"
+          {/* Video/Image Section */}
+          <div className="relative flex flex-col items-center max-w-[360px] md:max-w-[480px] lg:max-w-[860px] mx-auto">
+            <img
+              src="/images/home/graphics/checkified-hero.png"
+              alt="Checkified Hero"
+              width={960}
+              height={540}
+              className="object-cover w-auto md:w-full h-auto"
             />
-          </TiltParallax>
-
-          <ScrollReveal>
-            <Title
-              blackText={t.aboutData.missionBlackTitle}
-              blueText={t.aboutData.missionBlueTitle}
-              isBlock
-              className="mx-auto text-center"
-            />
-            <p className="text-subtitle text-center max-w-xl mx-auto">
-              {t.aboutData.missionSUbtitle}
+            <p className="w-full text-center text-[#434C69] text-[8px] md:text-[12px] font-inter font-medium -mt-4 md:-mt-2 lg:-mt-8 border relative z-2">
+              Betrodd av över{" "}
+              <span className="font-inter font-bold leading-[22px] text-[#225AEA]">
+                2000+
+              </span>{" "}
+              studenter för att börja deras e-handelsresa och öka intäkterna
             </p>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      <section className="container mx-auto">
-        <div className="relative overflow-hidden bg-base-200 p-8 lg:py-12 text-center mb-12 lg:mb-16 rounded-[3rem]">
-          <LineGraphic
-            positionClassname="left-[-9rem] lg:left-[-4rem] top-[-2rem]"
-            className="svg-primary"
-          />
-
-          <ScrollReveal>
-            <Image
-              src="/icons/home/infrastructure-icon.png"
-              width={100}
-              height={100}
-              alt="infractructure icon"
-              className="mx-auto"
-            />
-            <Title
-              blackText={t.aboutData.historyBlackTitle}
-              blueText={t.aboutData.historyBlueTitle}
-              isBlock
-              className="mx-auto text-center"
-            />
-            <p className="text-subtitle text-center max-w-xl mx-auto mb-10">
-              {t.aboutData.historySubtitle}
-            </p>
-          </ScrollReveal>
-
-          <div className="h-[600px] lg:h-[500px] relative">
-            <Swiper
-              slidesPerView={1}
-              centeredSlides={true}
-              centeredSlidesBounds={true}
-              spaceBetween={20}
-              loop={true}
-              modules={[Autoplay, Navigation]}
-              breakpoints={{
-                1024: {
-                  slidesPerView: 2.5,
-                  spaceBetween: 120
-                }
-              }}
-              navigation={{
-                nextEl: ".nav-right",
-                prevEl: ".nav-left"
-              }}
-              // autoplay={{
-              //   delay: 2500,
-              //   disableOnInteraction: false
-              // }}
-              style={{ height: "100%" }}
-            >
-              {t.aboutData.ourHistoryData.map((data) => (
-                <SwiperSlide key={data.id}>
-                  {({ isActive }) => (
-                    <HistoryCard data={data} isActive={isActive} />
-                  )}
-                </SwiperSlide>
-              ))}
-
-              <button className="hidden md:block absolute z-[1] left-1/4 top-1/2 transform -translate-y-1/2 nav-left">
-                <Image
-                  src="/icons/about/arrow-left.png"
-                  width={30}
-                  height={30}
-                  alt="arrow left"
-                />
-              </button>
-              <button className="hidden md:block absolute z-[1] right-1/4 top-1/2 transform -translate-y-1/2 nav-right">
-                <Image
-                  src="/icons/about/arrow-right.png"
-                  width={30}
-                  height={30}
-                  alt="arrow left"
-                />
-              </button>
-            </Swiper>
           </div>
         </div>
       </section>
 
-      {/* <section className="relative isolate py-10 lg:p-12 lg:mb-16">
-        <BlurCircle positionClassName="right-[-12rem] top-[10rem]" size="lg" />
+      <section className="max-w-[1280px] mx-auto mb-8 px-4">
+        
+      </section>
 
-        <ScrollReveal>
-          <Title
-            blackText="Meet Our"
-            blueText="Team"
-            isBlock
-            className="mx-auto text-center"
-          />
-        </ScrollReveal>
-
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 justify-center items-center">
-          {ourTeamData.map((data) => (
-            <TiltParallax
-              key={data.id}
-              className="bg-white px-8 py-10 rounded-[2rem] sosmed-card-shadow"
-            >
-              <div className="relative bg-primary rounded-full h-[100px] w-[100px] mx-auto">
-                <Image
-                  src={data.imageUrl}
-                  width={120}
-                  height={120}
-                  alt="avatar"
-                  className="absolute top-6 left-0"
+      {/* Second Section - Omge dig med drivna entreprenörer */}
+      <div className="max-w-[1280px] mx-auto mb-8 px-4">
+        <div className="bg-[#F3F6FE] rounded-[20px] p-6 sm:p-8 md:p-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-[26px] items-start">
+            {/* Image */}
+            <div className="order-1">
+              <div className="relative w-full rounded-[40px] overflow-hidden">
+                <img
+                  src="/images/home/welcome2.jpg"
+                  alt="Entreprenörer och mentorer"
+                  className="object-cover w-full h-full"
                 />
               </div>
-              <ScrollReveal>
-                <h2 className="mt-10 mb-1 text-center font-bold text-lg">
-                  {data.name}
-                </h2>
-                <p className="text-primary text-sm text-center">
-                  {data.position}
+            </div>
+            {/* Text Content */}
+            <div className="order-2 lg:pt-[10px]">
+              <h3 className="text-[#151E3A] text-[21px] sm:text-[22px] md:text-[40px] font-semibold font-geist mb-4 sm:mb-6 leading-[18px] sm:leading-[19px] md:leading-[35px]">
+                Omge dig med drivna
+                <br />
+                entreprenörer och mentorer.
+              </h3>
+              <div className="space-y-4 text-[#434C69] font-inter text-[12px] sm:text-sm md:text-[16px] leading-relaxed">
+                <p className="font-inter font-normal text-[12px] sm:text-sm text-[#434C69]">
+                  Människorna du omger dig med formar din nivå. Så fråga dig
+                  själv: hur snabbt skulle du växa om din omgivning redan bestod
+                  av människor som lyckats?
                 </p>
-              </ScrollReveal>
-            </TiltParallax>
-          ))}
+                <p className="font-inter font-normal text-[12px] sm:text-sm text-[#434C69]">
+                  Checkified har blivit navet för svensk e-handel och digitalt
+                  entreprenörskap, en plats där allt ifrån nybörjare till
+                  entreprenörer med miljonomsättning samlas för att växa.
+                </p>
+                <p className="font-inter font-normal text-[12px] sm:text-sm text-[#434C69]">
+                  Här skapas kontakter som spelar roll, relationer som driver
+                  dig framåt och möjligheter för dig som anpassar.
+                </p>
+                <p className="font-inter font-normal text-[12px] sm:text-sm text-[#434C69]">
+                  Bygger du något digitalt? Då är Checkified där du hör hemma.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </section> */}
+      </div>
 
-      <section className="container mx-auto">
-        <div className="relative isolate bg-primary text-white p-8 lg:p-12 mb-16 lg:mb-20 rounded-2xl lg:rounded-[3rem] text-center lg:text-left">
-          <BlurCircle
-            positionClassName="left-[-12rem] bottom-[-3rem]"
-            size="lg"
+
+
+      {/* CTA Section 1 */}
+      <section className="mb-8 text-white w-[calc(100%-20px)] md:w-full max-w-[1358px] mx-auto px-4 md:px-2">
+        <div className="relative left-0 right-0 flex flex-col items-center justify-center bg-[#2E56F5] rounded-[16px] md:rounded-[20px] px-4 md:px-4 lg:px-6 py-6 md:py-8 lg:py-10 back-background">
+          <HiQuestionMarkCircle
+            className="mx-auto text-white mb-3 md:mb-4"
+            size={38}
+            aria-label="help"
           />
-
-          <LineGraphic
-            positionClassname="right-[-12rem] lg:right-[-8rem] 2xl:right-[-10rem] bottom-[-4rem]"
-            className="svg-white"
-          />
-          <FadeLogo
-            positionClassName="left-[-2rem] bottom-[-2rem]"
-            svgClassname="svg-white-opacity"
-            sizeClassName="w-[20rem] h-[20rem]"
-            className="z-[-1]"
-          />
-
-          <ScrollReveal>
-            <Title blackText={t.aboutData.partTitle} />
-            <p>{t.aboutData.partSubtitle}</p>
-
-            <ButtonArrow href="/signup" isReverse className="mt-10">
-              {t.aboutData.partButton}
-            </ButtonArrow>
-          </ScrollReveal>
+          <div className="text-center flex flex-col items-center w-full">
+            <h1 className="text-white text-center text-[18px] leading-[1.3] sm:text-[20px] sm:leading-[1.4] md:text-[24px] md:leading-[1.5] max-w-[90%] sm:max-w-[600px] font-bold font-jakarta mb-3 md:mb-4">
+              Över 300 miljoner kronor i intäkter på plattforme
+            </h1>
+            <p className="mb-4 md:mb-6 max-w-[95%] sm:max-w-[85%] md:max-w-xl mx-auto text-center text-[12px] sm:text-[14px] md:text-[15px] lg:text-[16px] text-white font-inter leading-[1.6] sm:leading-relaxed px-2 sm:px-0">
+              Vår tjänst hjälper dig att ta kontroll över din framtid. Få
+              personligt stöd från experter som vet vad som krävs för att
+              lyckas.
+            </p>
+            <button
+              onClick={() => openContractForm()}
+              className="py-2 px-4 md:py-2.5 md:px-5 flex items-center justify-center rounded-[8px] font-semibold font-inters text-[11px] md:text-[12px] btn-white text-[#15133A] hover:bg-gray-100 transition-colors"
+            >
+              Starta din resa idag <ArrowRight size={14} className="ml-2" />
+            </button>
+          </div>
         </div>
       </section>
     </Layout>

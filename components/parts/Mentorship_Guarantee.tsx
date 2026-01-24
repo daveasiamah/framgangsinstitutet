@@ -1,7 +1,7 @@
 import Image from "next/image"
 export const MentorshipGuarantee = () => {
   return (
-    <div className="w-full mt-14 mb-4 rounded-[20px] bg-[#FFFAF5] max-w-7xl py-[22px] lg:py-[28px] px-[22px] lg:px-[28px]">
+    <div className="w-full mt-6 mb-4 rounded-[20px] bg-[#FFFAF5] max-w-7xl py-[22px] lg:py-[28px] px-[22px] lg:px-[28px]">
       <div className="flex flex-col gap-2 md:gap-4 items-start align-top">
         <div className="flex gap-2 w-full">
           <Image

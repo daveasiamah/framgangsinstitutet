@@ -118,11 +118,11 @@ export default function TestimonialsSection() {
               </h3>
               <div className="flex items-center gap-3 pb-1">
                 <img
-                  src="/images/home/trustpilot-home.png"
+                  src="/images/home/trustpilot-bottom-small.png"
                   alt="Trustpilot"
                   width={255}
                   height={33}
-                  className="object-contain w-[180px]"
+                  className="object-contain w-[139px] h-[29px]"
                 />
               </div>
             </div>

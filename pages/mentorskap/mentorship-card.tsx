@@ -65,7 +65,8 @@ const MentorshipCard = ({ onCtaClick }: { onCtaClick?: () => void }) => {
           onClick={onCtaClick}
           className="w-full bg-primary hover:bg-primary-deep text-white text-sm sm:text-md py-2.5 sm:py-2 md:py-2.5 rounded-xl mb-4 sm:mb-6 font-medium"
         >
-          Ansök till Mentorskap <ArrowRight size={16} className="inline-block ml-2" />
+          Ansök till Mentorskap{" "}
+          <ArrowRight size={16} className="inline-block ml-2" />
         </button>
 
         {/* Rating */}
@@ -102,7 +103,7 @@ const MentorshipCard = ({ onCtaClick }: { onCtaClick?: () => void }) => {
               width={12}
               height={13.3}
               alt="bolt"
-              className="sm:w-[14px] sm:h-[15.5px] md:w-[16.5px] md:h-[18.33px] flex-shrink-0"
+              className="w-[14px] h-[15.5px] md:w-[16.5px] md:h-[18.33px] flex-shrink-0"
             />
             <span className="font-jakarta text-[10px] sm:text-[10px] md:text-xs lg:text-sm text-white whitespace-nowrap">
               Få omedelbar åtkomst
