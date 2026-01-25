@@ -60,7 +60,7 @@ export default function Home() {
 
       {/* Feature Cards Section */}
       <section className="flex flex-col w-full max-w-[1440px] mx-auto items-center gap-3 mt-[36px] md:mt-[53px] lg:mt-[77px] lg:mb-[42px] mb-[30px]">
-        <h2 className="font-jakarta font-semibold text-[18px] text-center text-black md:text-[40px] max-w-[241px] md:max-w-[472px] lg:max-w-[478px] leading-[22px] md:leading-[36px] mb-1">
+        <h2 className="font-jakarta font-semibold text-[22px] text-center text-black md:text-[40px] max-w-[241px] md:max-w-[472px] lg:max-w-[478px] leading-[22px] md:leading-[36px] mb-1">
           Är du redo att ta kontroll över ditt liv?
         </h2>
         <p className="font-inter text-center text-[12px] md:text-[14px] text-[#434C69] md:max-w-[640px] lg:max-w-[570px] leading-[20px] px-4">
@@ -69,7 +69,7 @@ export default function Home() {
         </p>
 
         {/* Cards List */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-[11px] md:gap-[27px] lg:gap-[29px] pt-[22px] md:pt-[42px] w-full px-4 md:px-0">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-[11px] md:gap-[27px] lg:gap-[29px] pt-[10px] md:pt-[38px] w-full px-4 md:px-0">
           {/* Card 1 */}
           <div className="flex flex-col py-[24px] px-[18px] rounded-[25px] bg-[#F8F9FA]">
             <div className="flex items-center">
@@ -159,7 +159,7 @@ export default function Home() {
           alt="mentorship packages"
         />
 
-        <h3 className="text-[22px] md:text-[48px] font-jakarta font-semibold text-[#151E3A] mt-6 mb-4">
+        <h3 className="text-[22px] md:text-[48px] font-jakarta font-semibold text-[#151E3A] mt-2 mb-4">
           En ultimat plan
         </h3>
         <p className="text-center text-sm md:text-lg text-[#434C69] max-w-[600px] px-4">

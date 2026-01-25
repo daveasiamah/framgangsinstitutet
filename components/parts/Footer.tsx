@@ -154,7 +154,7 @@ export default function Footer({}: Props) {
                     href="/blog"
                     className="font-inter font-medium text-[12px] sm:text-[14px] md:text-base"
                   >
-                    Blog
+                    Blogg
                   </Link>
                 </li>
                 <li>

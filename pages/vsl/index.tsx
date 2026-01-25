@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import Layout from "@/components/Layout"
 import { ArrowRight, ArrowRightIcon } from "lucide-react"
 import { useModal } from "@/components/ModalContext"
@@ -8,29 +8,6 @@ import TrustPilotReviews from "@/components/parts/TrustPilotReviews"
 
 function VSL() {
   const { openContractForm } = useModal()
-  const vidalyticsRef = React.useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const existing = document.getElementById("vidalytics-embed-script")
-    if (existing) existing.remove()
-    const script = document.createElement("script")
-    script.id = "vidalytics-embed-script"
-    script.type = "text/javascript"
-    script.innerHTML = `
-      (function (v, i, d, a, l, y, t, c, s) {
-          y='_'+d.toLowerCase();c=d+'L';if(!v[d]){v[d]={};}if(!v[c]){v[c]={};}if(!v[y]){v[y]={};}var vl='Loader',vli=v[y][vl],vsl=v[c][vl + 'Script'],vlf=v[c][vl + 'Loaded'],ve='Embed';
-          if (!vsl){vsl=function(u,cb){
-              if(t){cb();return;}s=i.createElement("script");s.type="text/javascript";s.async=1;s.src=u;
-              if(s.readyState){s.onreadystatechange=function(){if(s.readyState==="loaded"||s.readyState=="complete"){s.onreadystatechange=null;vlf=1;cb();}};}else{s.onload=function(){vlf=1;cb();};}
-              i.getElementsByTagName("head")[0].appendChild(s);
-          };}
-          vsl(l+'loader.min.js',function(){if(!vli){var vlc=v[c][vl];vli=new vlc();}vli.loadScript(l+'player.min.js',function(){var vec=v[d][ve];t=new vec();t.run(a);});});
-      })(window, document, 'Vidalytics', 'vidalytics_embed_QrsjsMAYL8q2HZuP', 'https://fast.vidalytics.com/vid/bBDswucyILsvdYDQ/');
-    `
-    if (vidalyticsRef.current) {
-      vidalyticsRef.current.appendChild(script)
-    }
-  }, [vidalyticsRef])
 
   return (
     <Layout headTitle="VSL - Video Sales Letter" isFullWidth={true}>
@@ -71,7 +48,7 @@ function VSL() {
           <div className="relative max-w-[960px] mt-[21px] mx-auto">
             <div className="relative rounded-[20px] overflow-hidden shadow-md">
               <div
-                id="vidalytics_embed_hD5t_9agLrJZI1UT"
+                id="vidalytics_embed_IHhXMFlDYTPRnTcQ"
                 style={{
                   width: "100%",
                   position: "relative",
@@ -89,20 +66,32 @@ function VSL() {
     y='_'+d.toLowerCase();c=d+'L';if(!v[d]){v[d]={};}if(!v[c]){v[c]={};}if(!v[y]){v[y]={};}var vl='Loader',vli=v[y][vl],vsl=v[c][vl + 'Script'],vlf=v[c][vl + 'Loaded'],ve='Embed';
     if (!vsl){vsl=function(u,cb){
         if(t){cb();return;}s=i.createElement("script");s.type="text/javascript";s.async=1;s.src=u;
-        if(s.readyState){s.onreadystatechange=function(){if(s.readyState==="loaded"||s.readyState=="complete"){s.onreadystatechange=null;vlf=1;cb();}};}else{s.onload=function(){vlf=1;cb();};}\
+        if(s.readyState){s.onreadystatechange=function(){if(s.readyState==="loaded"||s.readyState=="complete"){s.onreadystatechange=null;vlf=1;cb();}};}else{s.onload=function(){vlf=1;cb();};}
         i.getElementsByTagName("head")[0].appendChild(s);
     };}
-    vsl(l+'loader.min.js',function(){if(!vli){var vlc=v[c][vl];vli=new vlc();}vli.loadScript(l+'player.min.js',function(){
-        var vec=v[d][ve];t=new vec();
-        t.run(a);
-    });});
-})(window, document, 'Vidalytics', 'vidalytics_embed_hD5t_9agLrJZI1UT', 'https://preview.vidalytics.com/vid/hD5t_9agLrJZI1UT');
+    vsl(l+'loader.min.js',function(){if(!vli){var vlc=v[c][vl];vli=new vlc();}vli.loadScript(l+'player.min.js',function(){var vec=v[d][ve];t=new vec();t.run(a);});});
+})(window, document, 'Vidalytics', 'vidalytics_embed_IHhXMFlDYTPRnTcQ', 'https://fast.vidalytics.com/embeds/P54EXqAT/IHhXMFlDYTPRnTcQ/');
+
               `,
             }}
           />
         </div>
-        {/* Put the cod */}
-        <div className="flex justify-center mt-12">
+        {/* Typeform Embed */}
+        <div
+          data-tf-live="01KFTQXD3D2JN1J1D775SYGA4S"
+          data-tf-opacity="100"
+          data-tf-hide-headers
+          data-tf-hide-footer
+          data-tf-medium="snippet"
+          className="mt-10 mb-4 w-full max-w-[960px] mx-auto"
+          style={{ minHeight: "500px", height: "100%" }}
+        ></div>
+        <Script
+          src="//embed.typeform.com/next/embed.js"
+          strategy="afterInteractive"
+        />
+
+        <div className="flex justify-center">
           <button
             type="button"
             onClick={() => openContractForm()}
@@ -114,6 +103,7 @@ function VSL() {
             <ArrowRightIcon className="w-[14px] h-[14px]" color="white" />
           </button>
         </div>
+
         <TestimonialsSection />
         <TrustPilotReviews />
         <div className="flex justify-center mt-8">

@@ -10,7 +10,7 @@ export default function EHandel() {
   const { openContractForm } = useModal()
 
   return (
-    <Layout headTitle="Dropshipping - Checkified" isFullWidth={true}>
+    <Layout headTitle="E-handel - Checkified" isFullWidth={true}>
       <section className="relative bg-white pt-8 px-4 bg-[url('/images/hero-mesh.svg')] bg-no-repeat bg-cover bg-center">
         <div className="max-w-7xl mx-auto">
           {/* Title */}
@@ -51,7 +51,7 @@ export default function EHandel() {
           <div className="relative max-w-[360px]  md:max-w-[480px] lg:max-w-[860px] mx-auto">
             <img
               src="/images/home/graphics/checkified-hero.png"
-              alt="Dropshipping Hero"
+              alt="E-handel Hero"
               width={960}
               height={540}
               className="object-cover w-auto md:w-full h-auto"
@@ -64,7 +64,7 @@ export default function EHandel() {
         <div className="flex flex-col items-center justify-center">
           <div className="flex self-center items-center justify-center bg-[#F5F9FF] rounded-full w-fit mx-auto m-[10px] md:m-[30px]">
             <p className="py-2 px-5 md:py-3 md:px-9 text-[#225AEA] text-[12px] md:text-[16px] font-geist font-semibold">
-              Dropshipping
+              E-Handel
             </p>
           </div>
           {/* Main Title */}

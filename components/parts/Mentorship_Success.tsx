@@ -78,7 +78,7 @@ const SuccessStoriesGrid = ({
 
                   {/* Story Content */}
                   <div className="relative gap-1 flex flex-col">
-                    <h3 className="font-bold text-[#151e3a] text-sm leading-tight font-jakarta">
+                    <h3 className="font-extrabold text-[#151e3a] text-sm leading-tight font-jakarta">
                       {story.title}
                     </h3>
                     <p className="font-medium text-[#151e3a] text-xs font-inter">

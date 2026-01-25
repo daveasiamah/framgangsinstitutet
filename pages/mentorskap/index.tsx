@@ -48,7 +48,7 @@ const MentorshipPage = () => {
             height={470}
             alt="mentorship packages"
           />
-          <h2 className="text-[#000000] max-w-[303px] md:max-w-[604px] font-jakarta text-center text-[22px] md:text-[48px] font-semibold mt-10 mb-4 md:mb-2">
+          <h2 className="text-[#000000] max-w-[303px] md:max-w-[604px] font-jakarta text-center text-[22px] md:text-[48px] font-semibold mt-4 mb-4 md:mb-2">
             Dropshipping Mentorskap
           </h2>
           <p className="font-inter text-center max-w=[272px] md:max-w-[640px]  text-md md:text-lg text-[#000000]">

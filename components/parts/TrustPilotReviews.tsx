@@ -91,7 +91,7 @@ const TrustPilotReviews: React.FC = () => {
         alt="Trustpilot badge"
         width={120}
         height={26}
-        className="object-contain w-[120px] xs:w-[140px] sm:w-[180px] h-[26px] sm:mt-2"
+        className="object-contain w-[140px] xs:w-[140px] sm:w-[180px] h-[26px] sm:mt-2"
       />
     </section>
   )

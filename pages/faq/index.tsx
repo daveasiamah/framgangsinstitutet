@@ -64,19 +64,19 @@ const FAQPage: React.FC<FAQPageProps> = ({ faqs }) => {
         />
       </Head>
       {/* Full width on mobile, container centered on md and above */}
-      <div className="w-full md:container md:mx-auto md:px-4 py-10">
-        <section className="mx-auto max-w-7xl px-4">
+      <div className="w-full md:container md:mx-auto md:px-4 py-8">
+        <section className="mx-auto max-w-7xl px-0 md:px-4">
           <div className="relative py-10">
             <ScrollReveal>
-              <h1 className="text-center font-jakarta text-[1.3rem] md:text-[3rem] lg:text-[3.5rem] md:leading-[40px] leading-[22px] font-[700] mb-10 mt-2">
+              <h1 className="text-center font-jakarta text-[1.3rem] md:text-[3rem] lg:text-[3.5rem] md:leading-[40px] leading-[22px] font-[700] mb-6 mt-2 px-4 md:px-0">
                 Vanliga frågor och svar
               </h1>
-              <h2 className="text-center leading-2 text-base font-inter font-medium md:text-[22px] text-[#707BA0] mb-9">
+              <h2 className="text-center leading-2 text-[14px] font-inter font-medium md:text-[22px] text-[#707BA0] mb-9 px-4 md:px-0">
                 {finalOutput}
               </h2>
             </ScrollReveal>
 
-            <div className="w-full bg-[#F5F9FF] rounded-[20px] py-4 px-3 md:px-3 mb-16">
+            <div className="w-full bg-[#F5F9FF] rounded-none md:rounded-[20px] py-4 px-2 md:px-3 mb-16">
               <Accordion>
                 {faqs.map((item) => (
                   <AccordionItem key={item.id} title={item.question}>
@@ -85,7 +85,7 @@ const FAQPage: React.FC<FAQPageProps> = ({ faqs }) => {
                 ))}
               </Accordion>
             </div>
-            <div className="flex justify-between items-center border border-gray px-[18px] py-[12px] rounded-[20px] mt-14">
+            <div className="flex justify-between items-center border border-gray px-[18px] py-[12px] rounded-[20px] mt-14 mx-4 md:mx-0">
               <p className="font-inter font-medium text-[11px] md:text-sm">
                 Har vi missat något?
               </p>

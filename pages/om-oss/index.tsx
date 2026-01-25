@@ -49,7 +49,7 @@ export default function About() {
               height={540}
               className="object-cover w-auto md:w-full h-auto"
             />
-            <p className="w-full text-center text-[#434C69] text-[8px] md:text-[12px] font-inter font-medium -mt-4 md:-mt-2 lg:-mt-8 border relative z-2">
+            <p className="w-full text-center text-[#434C69] text-[8px] md:text-[12px] font-inter font-medium relative z-2 whitespace-nowrap">
               Betrodd av över{" "}
               <span className="font-inter font-bold leading-[22px] text-[#225AEA]">
                 2000+
@@ -60,12 +60,151 @@ export default function About() {
         </div>
       </section>
 
-      <section className="max-w-[1280px] mx-auto mb-8 px-4">
-        
+      {/* Timeline Section */}
+      <section className="max-w-[1280px] mx-auto mb-8 mt-[25px] md:mt-[42px] px-4">
+        <div className="flex flex-col mx-auto text-center mb-[17px]">
+          <h2 className="text-[#151E3A] text-[18px] md:text-[38px] font-bold font-geist leading-[36px] md:leading-[32px]">
+            Vår resa hittills
+          </h2>
+          <p className="text-[#434C69] mt-[8px] md:mt-4 text-[10px] md:text-[12px] lg:text-[16px] font-inter font-normal leading-relaxed max-w-[231px] md:max-w-[510px] mx-auto ">
+            Från en idé till Sveriges största utbildningssplatform på marknaden.
+          </p>
+        </div>
+        <div className="flex flex-col gap-4 w-full">
+          {/* Top row - 3 cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="flex flex-col items-center">
+              <img
+                src="/icons/checkified-icon.svg"
+                alt="Founded"
+                width={34}
+                height={34}
+                className="mb-1"
+              />
+              <h3 className="text-[#151E3A] text-[16px] md:text-[22px] font-semibold font-geist mb-2">
+                Grundad
+              </h3>
+              <p className="text-[#434C69] text-[10px] lg:text-[14px] font-inter font-normal leading-relaxed max-w-[300px] md:max-w-[300px] text-center">
+                En idé föddes, Checkified grundades.
+              </p>
+            </div>
+            <div className="flex flex-col items-center">
+              <img
+                src="/icons/brush.svg"
+                alt="Founded"
+                width={34}
+                height={34}
+                className="mb-1"
+              />
+              <h3 className="text-[#151E3A] text-[16px] md:text-[22px] font-semibold font-geist mb-2">
+                Utbildningsdesign
+              </h3>
+              <p className="text-[#434C69] text-[10px] lg:text-[14px] font-inter font-normal leading-relaxed max-w-[300px] md:max-w-[300px] text-center">
+                Designteamet började utveckla varumärkesidentiteten och
+                användargränssnittet.
+              </p>
+            </div>
+            <div className="flex flex-col items-center">
+              <img
+                src="/icons/3dcube.svg"
+                alt="Founded"
+                width={34}
+                height={34}
+                className="mb-1"
+              />
+              <h3 className="text-[#151E3A] text-[16px] md:text-[22px] font-semibold font-geist mb-2">
+                Nutid
+              </h3>
+              <p className="text-[#434C69] text-[10px] lg:text-[14px] font-inter font-normal leading-relaxed max-w-[300px] md:max-w-[300px] text-center">
+                Checkified är live och hjälper människor över hela världen att
+                förvandla sina dropshipping drömmar till lönsamma verkligheter.
+              </p>
+            </div>
+          </div>
+
+          {/* Middle - Timeline */}
+          <div className="w-full mx-auto flex justify-center items-center">
+            <img
+              src="/images/home/timeline-desktop.png"
+              className="w-full max-w-[590px] h-auto md:max-w-[646px] lg:max-w-[1108px]"
+            />
+          </div>
+
+          {/* Bottom row - 2 cards */}
+          <div className="flex flex-col md:flex-row gap-4 justify-around items-center md:items-stretch">
+            <div className="flex flex-col items-center w-full md:flex-1 md:max-w-[300px]">
+              <img
+                src="/icons/test.svg"
+                alt="Founded"
+                width={34}
+                height={34}
+                className="mb-1"
+              />
+              <h3 className="text-[#151E3A] text-[16px] md:text-[22px] font-semibold font-geist mb-2">
+                Grundad
+              </h3>
+              <p className="text-[#434C69] text-[10px] lg:text-[14px] font-inter font-normal leading-relaxed max-w-[300px] md:max-w-[300px] text-center">
+                Konceptet med minsta möjliga livskraftiga produkter (MVP)
+                skapades för att validera den ursprungliga idén för marknaden.
+              </p>
+            </div>
+            <div className="flex flex-col items-center w-full md:flex-1 md:max-w-[300px]">
+              <img
+                src="/icons/ranking.svg"
+                alt="Founded"
+                width={34}
+                height={34}
+                className="mb-1"
+              />
+              <h3 className="text-[#151E3A] text-[16px] md:text-[22px] font-semibold font-geist mb-2">
+                Kommer till liv
+              </h3>
+              <p className="text-[#434C69] text-[10px] lg:text-[14px] font-inter font-normal leading-relaxed max-w-[300px] md:max-w-[276px] text-center">
+                Checkified är i full utvecklingsfas med nya verktyg och
+                funktioner som släpps regelbundet.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
 
-      {/* Second Section - Omge dig med drivna entreprenörer */}
-      <div className="max-w-[1280px] mx-auto mb-8 px-4">
+      <section className="max-w-[1280px] mx-auto mt-[36px] md:mt-[68px] mb-[35px] md:mb-[97px] px-4">
+        <div className="flex flex-col mx-auto text-center mb-[17px]">
+          <h2 className="text-[#000000] text-[18px] md:text-[38px] font-semibold font-geist leading-[36px] md:leading-[32px]">
+            Vår grundare
+          </h2>
+          <p className="text-[#434C69] mt-[8px] md:mt-4 text-[10px] md:text-[12px] lg:text-[16px] font-inter font-normal leading-relaxed max-w-[276px] md:max-w-[890px] mx-auto ">
+            Möt grundaren bakom Checkified, som är dedikerad till att hjälpa dig
+            att nå framgång inom dropshipping.
+          </p>
+        </div>
+        {/* Profile container */}
+        <div className="flex flex-col gap-6 w-full mx-auto rounded-3xl max-w-[768px] px-[54px] py-[35px] shadow-[0_1px_4px_0_#225AEA]">
+          <div className="w-full flex flex-col">
+            <img
+              src="/images/om-oss/dominic.jpg"
+              alt="Dominic - Grundare av Checkified"
+              width={64}
+              height={64}
+              className="object-cover w-[64px] h-[64px] rounded-full self-start"
+            />
+            <h3 className="w-full text-[#434C69] text-[16px] md:text-[18px] leading-snug font-geist font-semibold">
+              Dominic | VD & Grundare
+            </h3>
+            <p className="text-[#434C69] mt-[8px] md:mt-1 text-[10px] md:text-[12px] lg:text-[14px] font-inter font-normal leading-snug max-w-[284px] md:max-w-[647px] ">
+              Dominic, en åttasiffrig dropshippare och entreprenör, VD för
+              Checkified.
+            </p>
+            <p className="text-[#434C69] text-[10px] mt-[14px] md:text-[12px] lg:text-[14px] font-inter font-normal leading-snug max-w-[284px] md:max-w-[647px]">
+              Som din instruktör i Checkified delar Dominic med sig av sin
+              expertis för att hjälpa dig att lyckas.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Second Section */}
+      <div className="max-w-[1280px] mx-auto mt-[36px] md:mt-[68px] mb-[28px] md:mb-[33px] lg:mb-[56px] px-4">
         <div className="bg-[#F3F6FE] rounded-[20px] p-6 sm:p-8 md:p-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-[26px] items-start">
             {/* Image */}
@@ -81,27 +220,32 @@ export default function About() {
             {/* Text Content */}
             <div className="order-2 lg:pt-[10px]">
               <h3 className="text-[#151E3A] text-[21px] sm:text-[22px] md:text-[40px] font-semibold font-geist mb-4 sm:mb-6 leading-[18px] sm:leading-[19px] md:leading-[35px]">
-                Omge dig med drivna
-                <br />
-                entreprenörer och mentorer.
+                En arbetsplats där varje dag räknas
               </h3>
               <div className="space-y-4 text-[#434C69] font-inter text-[12px] sm:text-sm md:text-[16px] leading-relaxed">
                 <p className="font-inter font-normal text-[12px] sm:text-sm text-[#434C69]">
-                  Människorna du omger dig med formar din nivå. Så fråga dig
-                  själv: hur snabbt skulle du växa om din omgivning redan bestod
-                  av människor som lyckats?
+                  På Checkified händer det alltid något nytt. Vår vardag är
+                  fylld av energi, idéer och människor som vill framåt, och det
+                  är just den dynamiken som gör vår miljö så inspirerande.
                 </p>
                 <p className="font-inter font-normal text-[12px] sm:text-sm text-[#434C69]">
-                  Checkified har blivit navet för svensk e-handel och digitalt
-                  entreprenörskap, en plats där allt ifrån nybörjare till
-                  entreprenörer med miljonomsättning samlas för att växa.
+                  En dag djupdyker vi i strategier för att bygga framgångsrika
+                  e-handelsvarumärken, nästa får vi besök av en entreprenör som
+                  redan gjort resan. Ibland kliver tidigare elever in för att
+                  dela sina framgångar, ett tydligt bevis på att hårt arbete
+                  lönar sig.
                 </p>
                 <p className="font-inter font-normal text-[12px] sm:text-sm text-[#434C69]">
-                  Här skapas kontakter som spelar roll, relationer som driver
-                  dig framåt och möjligheter för dig som anpassar.
+                  Även när det är en lugn dag är det aldrig stillastående. Någon
+                  har hittat en ny trend, någon annan har testat en strategi som
+                  fungerar oväntat bra. Hos oss finns alltid något att lära, och
+                  alltid någon som vill växa.
                 </p>
                 <p className="font-inter font-normal text-[12px] sm:text-sm text-[#434C69]">
-                  Bygger du något digitalt? Då är Checkified där du hör hemma.
+                  På Checkified utvecklas vi tillsammans, steg för steg. Här
+                  formas framtidens entreprenörer, och varje dag tar vi ett nytt
+                  kliv mot att bli ännu bättre, både som människor och som
+                  skapare.
                 </p>
               </div>
             </div>
@@ -109,30 +253,126 @@ export default function About() {
         </div>
       </div>
 
+      <section className="w-full flex flex-col bg-[#2E56F5] mx-auto pt-[28px] md:pt-[34px] lg:pt-[53px] pb-[47px] md:pb-[40px] lg:pb-[53px] px-4 md:px-2 mb-8 md:mb-12">
+        <div className="max-w-[1280px] mx-auto w-full">
+          <div className="flex flex-col items-center justify-center px-4 md:px-4 lg:px-0">
+            <h2 className="font-geist font-semibold text-center text-white text-[26px] md:text-[40px] leading-[40px]">
+              Varför välja Checkified?
+            </h2>
+            <p className="font-inter text-[14px] md:text-[16px] text-white text-center leading-[18px] md:max-w-[684px] lg:max-w-[969px] mt-4 mb-12">
+              Vår AI-drivna utbildning hjälper dig att fatta bättre beslut
+              snabbare: från produktval och marknadsanalys till optimering av
+              annonser och skalning. Istället för att fastna i trial-and-error
+              får du tydliga processer, datadrivna insikter och personlig
+              vägledning baserad på vad som faktiskt fungerar.
+            </p>
+          </div>
+          <div className="max-w-[236px] md:max-w-[533px] lg:max-w-[1280px] items-center justify-center mx-auto w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+            <div className="flex flex-col items-start">
+              <img
+                src="/icons/fan.svg"
+                alt="Fan icon"
+                width={80}
+                height={80}
+                className="w-20 h-20 object-cover"
+              />
+              <h3 className="font-geist font-semibold text-white text-[24px] leading-[34px]">
+                Erfarenhet
+              </h3>
+              <p className="font-inter text-[14px] md:text-[16px] text-white text-start max-w-[262px]">
+                Med över 9 år inom e-handel förstår vi onlineföretagens
+                smärtpunkter intimt.
+              </p>
+            </div>
+            <div className="flex flex-col items-start">
+              <img
+                src="/icons/spiral.svg"
+                alt="Fan icon"
+                width={80}
+                height={80}
+                className="w-20 h-20 object-cover"
+              />
+              <h3 className="font-geist font-semibold text-white text-[24px] leading-[34px]">
+                Expertis
+              </h3>
+              <p className="font-inter text-[14px] md:text-[16px] text-white text-start max-w-[262px]">
+                Vi är specialiserade på att lära ut den komplexa
+                e-handelsvärlden av dropshipping.
+              </p>
+            </div>
+            <div className="flex flex-col items-start">
+              <img
+                src="/icons/stacks.svg"
+                alt="Fan icon"
+                width={80}
+                height={80}
+                className="w-20 h-20 object-cover"
+              />
+              <h3 className="font-geist font-semibold text-white text-[24px] leading-[34px]">
+                Community
+              </h3>
+              <p className="font-inter text-[14px] md:text-[16px] text-white text-start max-w-[262px]">
+                På Checkified tror vi på styrka i antal. Vi bygger en gemenskap
+                av handlare för att kollektivt öka lärdom och kunskap inom
+                e-handel.
+              </p>
+            </div>
+            <div className="flex flex-col items-start">
+              <img
+                src="/icons/arrows.svg"
+                alt="Fan icon"
+                width={80}
+                height={80}
+                className="w-20 h-20 object-cover"
+              />
+              <h3 className="font-geist font-semibold text-white text-[24px] leading-[34px]">
+                Innovation
+              </h3>
+              <p className="font-inter text-[14px] md:text-[16px] text-white text-start max-w-[262px]">
+                Med hjälp av den senaste tekniken automatiserar och
+                effektiviserar vi utbildningsprocesser för maximal effektivitet.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <section className="max-w-[1280px] mx-auto mb-4 px-4 md:px-0">
+        <div className="flex flex-col mx-auto text-center items-center mb-[17px]">
+          <h2 className="text-[#151E3A] text-[18px] md:text-[36px] lg:text-[60px] font-bold font-geist leading-[36px] md:leading-[32px]">
+            Kom igång & maximera dina intäkter
+          </h2>
+          <p className="text-[#434C69] md:mt-2 lg:mt-6 text-[12px] md:text-base lg:text-[16px] font-inter font-normal leading-relaxed max-w-[309px] md:max-w-[365px] lg:max-w-[679px] mx-auto ">
+            Med Checkified kan du komma igång och öka din försäljning med hjälp
+            av Checkified AI.
+          </p>
+          <img
+            src="/images/om-oss/graph-metrics.png"
+            alt="Get started graphic"
+            width={521}
+            height={423}
+            className="object-cover w-full md:w-[521px] h-[381px] md:h-[423px]"
+          />
+        </div>
+      </section>
 
       {/* CTA Section 1 */}
-      <section className="mb-8 text-white w-[calc(100%-20px)] md:w-full max-w-[1358px] mx-auto px-4 md:px-2">
+      <section className="mb-8 text-white w-[calc(100%-20px)] md:w-full max-w-[1358px] mx-auto md:px-2">
         <div className="relative left-0 right-0 flex flex-col items-center justify-center bg-[#2E56F5] rounded-[16px] md:rounded-[20px] px-4 md:px-4 lg:px-6 py-6 md:py-8 lg:py-10 back-background">
-          <HiQuestionMarkCircle
-            className="mx-auto text-white mb-3 md:mb-4"
-            size={38}
-            aria-label="help"
-          />
           <div className="text-center flex flex-col items-center w-full">
-            <h1 className="text-white text-center text-[18px] leading-[1.3] sm:text-[20px] sm:leading-[1.4] md:text-[24px] md:leading-[1.5] max-w-[90%] sm:max-w-[600px] font-bold font-jakarta mb-3 md:mb-4">
-              Över 300 miljoner kronor i intäkter på plattforme
+            <h1 className="text-white text-center text-[14px] md:text-[32px] leading-[1.3] max-w-[90%] sm:max-w-[600px] font-bold font-jakarta mb-3 md:mb-4">
+              Vill du bli en del av Checkified team?
             </h1>
-            <p className="mb-4 md:mb-6 max-w-[95%] sm:max-w-[85%] md:max-w-xl mx-auto text-center text-[12px] sm:text-[14px] md:text-[15px] lg:text-[16px] text-white font-inter leading-[1.6] sm:leading-relaxed px-2 sm:px-0">
-              Vår tjänst hjälper dig att ta kontroll över din framtid. Få
-              personligt stöd från experter som vet vad som krävs för att
-              lyckas.
+            <p className="font-inter text-[8px] md:text-[14px] max-w-[233px] md:max-w-[413px] mb-[14px] md:mb-[26px]">
+              Skicka in din ansökan för den roll du tycker passar dig bäst. Vi
+              rekryterar löpande, fyll i dina uppgifter, så kanske just du blir
+              en del av vårt team!
             </p>
             <button
               onClick={() => openContractForm()}
               className="py-2 px-4 md:py-2.5 md:px-5 flex items-center justify-center rounded-[8px] font-semibold font-inters text-[11px] md:text-[12px] btn-white text-[#15133A] hover:bg-gray-100 transition-colors"
             >
-              Starta din resa idag <ArrowRight size={14} className="ml-2" />
+              Ansök här <ArrowRight size={14} className="ml-2" />
             </button>
           </div>
         </div>

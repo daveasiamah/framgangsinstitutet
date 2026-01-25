@@ -426,12 +426,12 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
                     onClick={() => setOpenSidebar(false)}
                     style={{ color: "inherit", textDecoration: "none" }}
                   >
-                    Blog
+                    Blogg
                   </Link>
                 </Box>
 
                 <Button
-                  mt="40px"
+                  mt="4px"
                   width="100%"
                   bg="#225AEA"
                   color="white"

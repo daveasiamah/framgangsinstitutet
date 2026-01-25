@@ -78,11 +78,11 @@ function MentorshipProducts({ openModal }: { openModal: () => void }) {
           </div>
         ))}
       </div>
-      <div className="flex flex-col items-center self-center mt-6 mb-10 justify-center w-full">
+      <div className="flex items-center justify-center mt-6 mb-10 w-full">
         <button
           type="button"
           onClick={openModal}
-          className="bg-[#225AEA] text-white hover:bg-[#1e52d1] active:bg-[#1a47b8] font-bold text-center font-jakarta tracking-[0] leading-none rounded-[7px] shadow-inner flex items-center justify-center gap-2 w-[184px] sm:w-[200px] md:w-[220px] lg:w-[240px] h-[39px] sm:h-[42px] md:h-[45px] lg:h-[48px] text-xs sm:text-sm md:text-[14px] px-6 py-3"
+          className="bg-[#225AEA] text-white hover:bg-[#1e52d1] active:bg-[#1a47b8] font-bold font-jakarta rounded-[7px] flex items-center justify-center gap-2 px-6 py-3 text-xs sm:text-sm md:text-[14px] transition-colors duration-200"
           style={{
             boxShadow: `
               inset 11px 1px 19.4px 0px rgba(255, 255, 255, 0.3), 
@@ -90,8 +90,8 @@ function MentorshipProducts({ openModal }: { openModal: () => void }) {
             `,
           }}
         >
-          Ansök till Mentorskap
-          <ArrowRight size={20} strokeWidth={2.5} />
+          <span className="whitespace-nowrap font-jakarta font-bold">Ansök till Mentorskap</span>
+          <ArrowRight size={16} strokeWidth={2.5} className="flex-shrink-0" />
         </button>
       </div>
     </>
