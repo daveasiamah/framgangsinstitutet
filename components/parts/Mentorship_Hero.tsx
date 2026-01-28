@@ -1,7 +1,5 @@
-import Image from "next/image"
 import ScrollReveal from "../transition/ScrollReveal"
-import { useEffect, useRef } from "react"
-import Link from "next/link"
+import Script from "next/script"
 
 interface MentorshipHeroProps {
   onCtaClick?: () => void
@@ -10,30 +8,6 @@ interface MentorshipHeroProps {
 import { ArrowRightIcon } from "lucide-react"
 
 const MentorshipHero = ({ onCtaClick }: MentorshipHeroProps) => {
-  const vidalyticsRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const existing = document.getElementById("vidalytics-embed-script")
-    if (existing) existing.remove()
-    const script = document.createElement("script")
-    script.id = "vidalytics-embed-script"
-    script.type = "text/javascript"
-    script.innerHTML = `
-      (function (v, i, d, a, l, y, t, c, s) {
-          y='_'+d.toLowerCase();c=d+'L';if(!v[d]){v[d]={};}if(!v[c]){v[c]={};}if(!v[y]){v[y]={};}var vl='Loader',vli=v[y][vl],vsl=v[c][vl + 'Script'],vlf=v[c][vl + 'Loaded'],ve='Embed';
-          if (!vsl){vsl=function(u,cb){
-              if(t){cb();return;}s=i.createElement("script");s.type="text/javascript";s.async=1;s.src=u;
-              if(s.readyState){s.onreadystatechange=function(){if(s.readyState==="loaded"||s.readyState=="complete"){s.onreadystatechange=null;vlf=1;cb();}};}else{s.onload=function(){vlf=1;cb();};}
-              i.getElementsByTagName("head")[0].appendChild(s);
-          };}
-          vsl(l+'loader.min.js',function(){if(!vli){var vlc=v[c][vl];vli=new vlc();}vli.loadScript(l+'player.min.js',function(){var vec=v[d][ve];t=new vec();t.run(a);});});
-      })(window, document, 'Vidalytics', 'vidalytics_embed_QrsjsMAYL8q2HZuP', 'https://fast.vidalytics.com/vid/bBDswucyILsvdYDQ/');
-    `
-    if (vidalyticsRef.current) {
-      vidalyticsRef.current.appendChild(script)
-    }
-  }, [vidalyticsRef])
-
   return (
     <div className="mx-auto w-full max-w-4xl flex flex-col items-center h-auto">
       <ScrollReveal className="flex justify-center mt-6">
@@ -89,12 +63,9 @@ const MentorshipHero = ({ onCtaClick }: MentorshipHeroProps) => {
         }}
         className="w-full h-auto mt-3"
       >
-        <div
-          ref={vidalyticsRef}
-          style={{ borderRadius: 16, overflow: "hidden" }}
-        >
+        <div style={{ borderRadius: 16, overflow: "hidden" }}>
           <div
-            id="vidalytics_embed_QrsjsMAYL8q2HZuP"
+            id="vidalytics_embed_v2nHxLmYJfygDlPm"
             style={{
               width: "100%",
               position: "relative",
@@ -102,6 +73,23 @@ const MentorshipHero = ({ onCtaClick }: MentorshipHeroProps) => {
             }}
           ></div>
         </div>
+        <Script
+          id="vidalytics-embed-script-mentorship"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+(function (v, i, d, a, l, y, t, c, s) {
+    y='_'+d.toLowerCase();c=d+'L';if(!v[d]){v[d]={};}if(!v[c]){v[c]={};}if(!v[y]){v[y]={};}var vl='Loader',vli=v[y][vl],vsl=v[c][vl + 'Script'],vlf=v[c][vl + 'Loaded'],ve='Embed';
+    if (!vsl){vsl=function(u,cb){
+        if(t){cb();return;}s=i.createElement("script");s.type="text/javascript";s.async=1;s.src=u;
+        if(s.readyState){s.onreadystatechange=function(){if(s.readyState==="loaded"||s.readyState=="complete"){s.onreadystatechange=null;vlf=1;cb();}};}else{s.onload=function(){vlf=1;cb();};}
+        i.getElementsByTagName("head")[0].appendChild(s);
+    };}
+    vsl(l+'loader.min.js',function(){if(!vli){var vlc=v[c][vl];vli=new vlc();}vli.loadScript(l+'player.min.js',function(){var vec=v[d][ve];t=new vec();t.run(a);});});
+})(window, document, 'Vidalytics', 'vidalytics_embed_v2nHxLmYJfygDlPm', 'https://fast.vidalytics.com/embeds/P54EXqAT/v2nHxLmYJfygDlPm/');
+            `,
+          }}
+        />
       </div>
     </div>
   )

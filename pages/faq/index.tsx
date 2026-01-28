@@ -55,7 +55,7 @@ const FAQPage: React.FC<FAQPageProps> = ({ faqs }) => {
   }
 
   return (
-    <Layout headTitle="FAQ">
+    <Layout headTitle="FAQ" isFullWidth={true}>
       <Head>
         <title>FAQ</title>
         <meta
@@ -68,7 +68,7 @@ const FAQPage: React.FC<FAQPageProps> = ({ faqs }) => {
         <section className="mx-auto max-w-7xl px-0 md:px-4">
           <div className="relative py-10">
             <ScrollReveal>
-              <h1 className="text-center font-jakarta text-[1.3rem] md:text-[3rem] lg:text-[3.5rem] md:leading-[40px] leading-[22px] font-[700] mb-6 mt-2 px-4 md:px-0">
+              <h1 className="text-center font-jakarta text-[24px] md:text-[3rem] lg:text-[3.5rem] md:leading-[40px] leading-[22px] font-[700] mb-6 mt-2 px-4 md:px-0">
                 Vanliga frågor och svar
               </h1>
               <h2 className="text-center leading-2 text-[14px] font-inter font-medium md:text-[22px] text-[#707BA0] mb-9 px-4 md:px-0">
@@ -86,14 +86,14 @@ const FAQPage: React.FC<FAQPageProps> = ({ faqs }) => {
               </Accordion>
             </div>
             <div className="flex justify-between items-center border border-gray px-[18px] py-[12px] rounded-[20px] mt-14 mx-4 md:mx-0">
-              <p className="font-inter font-medium text-[11px] md:text-sm">
+              <p className="font-inter font-medium text-[14px] md:text-sm">
                 Har vi missat något?
               </p>
               <div
                 onClick={() => router.push("/contact-us")}
                 className="rounded-[12px] border border-gray text-center py-2 px-3 hover:cursor-pointer"
               >
-                <p className="font-inter font-medium text-[10px] md:text-xs">
+                <p className="font-inter font-medium text-[11px] md:text-xs">
                   Ta kontakt med oss
                 </p>
               </div>

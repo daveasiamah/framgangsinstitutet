@@ -39,9 +39,8 @@ function VSL() {
 
           {/* Title */}
           <h1 className="text-[#151E3A] text-[17px] md:text-[30px] lg:text-[40px] font-bold font-jakarta text-center mb-6 leading-[28px] md:leading-[38px] lg:leading-[46px] max-w-[343px] md:max-w-[681px] lg:max-w-[933px] mx-auto">
-            Lär dig steg för steg hur du bygger ett hållbart e-handelsföretag
-            från grunden till 100k i månaden i vinst, helt utan tidigare
-            erfarenhet.
+            Så bygger vanliga svenskar lönsam e-handel på 22 dagar - med ett
+            system bakom över 300 miljoner kr i omsättning
           </h1>
 
           {/* Video/Image Section */}

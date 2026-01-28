@@ -158,8 +158,7 @@ export default function Home() {
           height={470}
           alt="mentorship packages"
         />
-
-        <h3 className="text-[22px] md:text-[48px] font-jakarta font-semibold text-[#151E3A] mt-2 mb-4">
+        <h3 className="text-[24px] md:text-[48px] font-jakarta font-semibold text-[#151E3A] mt-2 mb-4">
           En ultimat plan
         </h3>
         <p className="text-center text-sm md:text-lg text-[#434C69] max-w-[600px] px-4">

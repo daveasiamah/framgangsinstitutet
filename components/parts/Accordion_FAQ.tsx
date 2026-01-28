@@ -88,7 +88,7 @@ export const AccordionItem = ({
         onClick={toggle}
         className="cursor-pointer py-2 flex justify-between items-center"
       >
-        <h2 className="text-neutral-900 font-inter font-semibold text-xs md:text-base leading-5">
+        <h2 className="text-neutral-900 font-inter font-semibold text-sm md:text-base leading-5">
           {title}
         </h2>
         <span

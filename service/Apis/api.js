@@ -1,29 +1,12 @@
 import axios from "axios"
-import { v4 as uuidv4 } from "uuid"
 
 // Used in: ContractForm.tsx, ConsultationForm.tsx
 export const registerOfContract = async ({ name, email }) => {
-  const ext_id = uuidv4()
   try {
-    const attributes = {
-      FIRSTNAME: name,
-      EXT_ID: ext_id
-    }
-    const response = await axios.post(
-      `${process.env.SEND_IN_BLUE_BASE_URL}/v3/contacts`,
-      {
-        email,
-        attributes,
-        updateEnabled: true,
-      },
-      {
-        headers: {
-          accept: "application/json",
-          "api-key": process.env.SEND_IN_BLUE_API_KEY,
-          "content-type": "application/json",
-        },
-      }
-    )
+    const response = await axios.post("/api/register-contract", {
+      name,
+      email,
+    })
     return { success: true, data: response.data }
   } catch (error) {
     console.error(
