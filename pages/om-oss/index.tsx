@@ -63,7 +63,7 @@ export default function About() {
       {/* Timeline Section */}
       <section className="max-w-[1280px] mx-auto mb-8 mt-[25px] md:mt-[42px] px-4">
         <div className="flex flex-col mx-auto text-center mb-[17px]">
-          <h2 className="text-[#151E3A] text-[18px] md:text-[38px] font-bold font-geist leading-[36px] md:leading-[32px]">
+          <h2 className="text-[#151E3A] text-[24px] md:text-[38px] font-bold font-geist leading-[36px] md:leading-[32px]">
             Vår resa hittills
           </h2>
           <p className="text-[#434C69] mt-[8px] md:mt-4 text-[10px] md:text-[12px] lg:text-[16px] font-inter font-normal leading-relaxed max-w-[231px] md:max-w-[510px] mx-auto ">

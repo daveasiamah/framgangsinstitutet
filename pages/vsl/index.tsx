@@ -78,12 +78,7 @@ function VSL() {
         {/* Typeform Embed */}
         <div
           data-tf-live="01KFTQXD3D2JN1J1D775SYGA4S"
-          data-tf-opacity="100"
-          data-tf-hide-headers
-          data-tf-hide-footer
-          data-tf-medium="snippet"
           className="mt-10 mb-4 w-full max-w-[960px] mx-auto"
-          style={{ minHeight: "500px", height: "100%" }}
         ></div>
         <Script
           src="//embed.typeform.com/next/embed.js"

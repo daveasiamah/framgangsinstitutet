@@ -121,8 +121,8 @@ export default function TestimonialsSection() {
                   src="/images/home/trustpilot-bottom-small.png"
                   alt="Trustpilot"
                   width={255}
-                  height={33}
-                  className="object-contain w-[139px] h-[29px]"
+                  height={44}
+                  className="object-contain w-[200px] md:w-[200px] lg:w-[255px]"
                 />
               </div>
             </div>
@@ -227,8 +227,8 @@ export default function TestimonialsSection() {
                       src="/images/home/trustpilot-bottom-small.png"
                       alt="Trustpilot"
                       width={255}
-                      height={33}
-                      className="object-contain w-[180px] md:w-[140px] lg:w-[255px]"
+                      height={44}
+                      className="object-contain w-[180px] md:w-[200px] lg:w-[255px]"
                     />
                   </div>
                 </div>
