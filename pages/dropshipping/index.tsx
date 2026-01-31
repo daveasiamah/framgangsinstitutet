@@ -214,7 +214,7 @@ export default function Dropshipping() {
           {/* Call to Action section */}
           <div className="flex flex-col bg-[#225AEA] bg-[url(/images/mentorship/mentorship-products/bg-mesh.svg)] w-full p-3 md:p-[28px] rounded-[20px] items-center justify-center mt-10 max-w-[1000px] mx-auto">
             <div className="flex flex-col items-center justify-center align-middle bg-[#ffffff] w-full rounded-[20px] p-[12px] md:p-[38px] lg:p-[88px]">
-              <h3 className="text-[#151E3A] text-[20px] md:text-[24px] font-bold font-jakarta text-center leading-[28px] md:leading-[30px]">
+              <h3 className="text-[#151E3A] text-[20px] md:text-[28px] lg:text-[36px] font-bold font-jakarta text-center leading-[28px] md:leading-[30px]">
                 En investering i dig själv
               </h3>
               <p className="font-inter text-[10px] md:text-[14px] text-[#434C69] mt-2 md:mt-4 leading-relaxed max-w-[280px] md:max-w-[484px] text-center">

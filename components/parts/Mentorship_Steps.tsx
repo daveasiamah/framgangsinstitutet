@@ -54,7 +54,7 @@ const MentorshipSteps = () => {
               <p
                 className={
                   isLast
-                    ? "absolute left-4 right-4 bottom-[20px] font-inter font-semibold text-[#151e3a] text-lg leading-[25px]"
+                    ? "absolute left-4 right-4 bottom-[20px] lg:bottom-[60px] font-inter font-semibold text-[#151e3a] text-lg leading-[25px]"
                     : "absolute bottom-[20px] left-4 right-4 font-inter max-w-[327px] font-semibold text-[#151e3a] text-lg leading-[25px]"
                 }
               >
