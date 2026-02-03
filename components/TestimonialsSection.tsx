@@ -79,7 +79,6 @@ export default function TestimonialsSection() {
 
   const activeTestimonials = isTablet ? testimonialsAlternate : testimonials
 
-  console.log({ activeTestimonials })
   return (
     <section className="bg-white w-full mx-auto px-0 md:px-4 mb-0 md:mb-10">
       <div className="max-w-[1440px] w-full mx-auto">

@@ -9,7 +9,7 @@ export const headerData: HeaderData = {
       imageUrl: "/icons/header/folder-2.svg",
       title: "blog",
       desc: "Bloggar om online företag",
-      link: "/blogg",
+      link: "/blog",
     },
     {
       id: 2,

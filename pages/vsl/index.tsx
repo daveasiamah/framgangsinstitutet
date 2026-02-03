@@ -10,57 +10,68 @@ function VSL() {
   const { openContractForm } = useModal()
 
   return (
-    <Layout headTitle="VSL - Video Sales Letter" isFullWidth={true}>
-      <section className="relative bg-white py-8 px-4 pt-[36px] md:pt-[28px] flex flex-col items-center">
-        <div className="max-w-7xl mx-auto">
-          {/* Trustpilot */}
-          <div className="flex flex-wrap justify-center items-center gap-2 md:gap-4 mb-4 max-w-[833px] mx-auto px-4">
-            <p className="text-[#434C69] text-[12px] md:text-[14px] font-inter font-medium text-center">
-              Våra kunder säger Utmärkt
-            </p>
-            <img
-              src="/images/home/trustpilot-5stars.png"
-              alt="Trustpilot"
-              width={127}
-              height={24}
-              className="object-contain h-[20px] w-[105px] md:h-[16px] md:w-[84px]"
-            />
-            <p className="text-[#434C69] text-[12px] md:text-[14px] font-inter font-medium text-center">
-              4.5 av 5 baserat på flera omdömen
-            </p>
-            <img
-              src="/icons/home/trustpilot-with-star.png"
-              alt="Trustpilot with star"
-              width={170}
-              height={24}
-              className="object-contain h-[20px] w-[80px] md:h-[16px] md:w-[64px]"
-            />
-          </div>
-
-          {/* Title */}
-          <h1 className="text-[#151E3A] text-[17px] md:text-[30px] lg:text-[40px] font-bold font-jakarta text-center mb-6 leading-[28px] md:leading-[38px] lg:leading-[46px] max-w-[343px] md:max-w-[681px] lg:max-w-[933px] mx-auto">
-            Så bygger vanliga svenskar lönsam e-handel på 22 dagar - med ett
-            system bakom över 300 miljoner kr i omsättning
-          </h1>
-
-          {/* Video/Image Section */}
-          <div className="relative max-w-[960px] mt-[21px] mx-auto">
-            <div className="relative rounded-[20px] overflow-hidden shadow-md">
-              <div
-                id="vidalytics_embed_IHhXMFlDYTPRnTcQ"
-                style={{
-                  width: "100%",
-                  position: "relative",
-                  paddingTop: "56.25%",
-                }}
-              ></div>
+    <Layout headTitle="VSL" isFullWidth={true}>
+      {/* Hero Section */}
+      <section className="relative w-full py-8 px-4 pt-[36px] md:pt-[28px] flex flex-col items-center bg-gradient-to-b from-[#225AEA] to-[#FFFFFF]">
+        <div className="max-w-7xl mx-auto rounded-3xl w-full">
+          <div className="rounded-t-3xl bg-white px-[57px] pt-[116px] pb-8">
+            <div className="flex justify-center gap-[10px] md:gap-[20px] items-center">
+              <p className="font-jakarta text-xs md:text-sm lg:text-xl font-medium">
+                Utmärkt
+              </p>
+              <img
+                src="/images/home/trustpilot-5stars.png"
+                alt="Trustpilot"
+                width={127}
+                height={24}
+                className="object-contain h-[44px] w-[105px] md:h-[24px] md:w-[124px]"
+              />
+              <img
+                src="/icons/home/trustpilot-with-star.png"
+                alt="Trustpilot with star"
+                width={170}
+                height={24}
+                className="object-contain h-[24px] w-[100px] md:h-[28px] md:w-[100px]"
+              />
             </div>
-          </div>
-          <Script
-            id="vidalytics-embed-script-vsl"
-            strategy="afterInteractive"
-            dangerouslySetInnerHTML={{
-              __html: `
+            {/* Title */}
+            <h1 className="text-[#151E3A] text-[17px] md:text-[30px] lg:text-[40px] font-bold font-jakarta text-center mb-6 leading-[28px] md:leading-[38px] lg:leading-[46px] max-w-[343px] md:max-w-[681px] lg:max-w-[933px] mx-auto">
+              Så bygger vanliga svenskar lönsam e-handel på{" "}
+              <span className="font-jakarta font-bold text-[#225AEA]">
+                22 dagar
+              </span>{" "}
+              - med ett system bakom{" "}
+              <span className="font-jakarta font-bold text-[#225AEA]">
+                över 300
+              </span>{" "}
+              miljoner kr i omsättning
+            </h1>
+
+            <p className="text-center text-[#434C69] text-sm md:text-[20px] font-inter font-medium max-w-[843px] mx-auto mb-6 px-2">
+              Checkified Mentorskap är en av Sveriges främsta
+              e-handelsutbildningar och visar steg för steg hur du kan starta
+              och växa en lönsam webbutik vid sidan av jobb eller studier, även
+              om du saknar tidigare erfarenhet.
+            </p>
+
+            {/* Video/Image Section */}
+            <div className="relative max-w-[960px] mt-[21px] mx-auto">
+              <div className="relative rounded-[20px] overflow-hidden shadow-md">
+                <div
+                  id="vidalytics_embed_IHhXMFlDYTPRnTcQ"
+                  style={{
+                    width: "100%",
+                    position: "relative",
+                    paddingTop: "56.25%",
+                  }}
+                ></div>
+              </div>
+            </div>
+            <Script
+              id="vidalytics-embed-script-vsl"
+              strategy="afterInteractive"
+              dangerouslySetInnerHTML={{
+                __html: `
 (function (v, i, d, a, l, y, t, c, s) {
     y='_'+d.toLowerCase();c=d+'L';if(!v[d]){v[d]={};}if(!v[c]){v[c]={};}if(!v[y]){v[y]={};}var vl='Loader',vli=v[y][vl],vsl=v[c][vl + 'Script'],vlf=v[c][vl + 'Loaded'],ve='Embed';
     if (!vsl){vsl=function(u,cb){
@@ -72,10 +83,24 @@ function VSL() {
 })(window, document, 'Vidalytics', 'vidalytics_embed_IHhXMFlDYTPRnTcQ', 'https://fast.vidalytics.com/embeds/P54EXqAT/IHhXMFlDYTPRnTcQ/');
 
               `,
-            }}
-          />
+              }}
+            />
+          </div>
         </div>
+      </section>
+
+      {/* Content Section */}
+      <section className="relative bg-white w-full py-8 px-4 flex flex-col items-center">
         {/* Typeform Embed */}
+        <h2 className="font-jakarta font-bold text-base text-center max-w-[290px] md:text-[32px] md:max-w-[522px] lg:text-[42px] lg:max-w-[961px] mb-4">
+          Ansök nedan till Checkified <br className="hidden md:block" />
+          <br className="hidden md:block" />
+          Mentorskap nu
+        </h2>
+        <p className="font-inter font-medium text-center text-[20px] max-w-[317px] md:max-w-[651px] lg:max-w-[843px] mx-auto mb-4 leading-[22px] mt-4">
+          Lär dig vår beprövade metod som har hjälpt tusentals svenskar att
+          skapa mer frihet och kontroll i vardagen.
+        </p>
         <div
           data-tf-live="01KFTQXD3D2JN1J1D775SYGA4S"
           className="mt-10 mb-4 w-full max-w-[960px] mx-auto"
@@ -98,7 +123,7 @@ function VSL() {
           </button>
         </div>
 
-        <TestimonialsSection />
+        {/* <TestimonialsSection />
         <TrustPilotReviews />
         <div className="flex justify-center mt-8">
           <button
@@ -111,7 +136,7 @@ function VSL() {
             </span>
             <ArrowRightIcon className="w-[14px] h-[14px]" color="white" />
           </button>
-        </div>
+        </div> */}
       </section>
     </Layout>
   )

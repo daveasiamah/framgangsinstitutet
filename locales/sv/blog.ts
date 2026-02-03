@@ -5,7 +5,7 @@ export const blogData: BlogData = {
     title: "Blogg",
   },
 
-  blogTitle: "Blogg",
+  blogTitle: "Blog",
   blogSubtitle: "Lär dig allt du behöver veta om dropshipping.",
   blogNav: {
     home: "Hem",

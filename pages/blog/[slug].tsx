@@ -31,7 +31,7 @@ type BlogPost = {
 
 export default function Blog({ blogPost, locale }: Props) {
   const t = locale === "en" ? en : sv
-
+  console.log("Rendering blog post:", blogPost)
   return (
     <Layout headTitle={`${t.blogData.blogTitle} - ${blogPost.title}`}>
       {/* Blog Details */}
@@ -51,7 +51,7 @@ export default function Blog({ blogPost, locale }: Props) {
             </li>
             <li className="mr-2">
               <Link
-                href={`../../${locale}/blogg`}
+                href={`../../${locale}/blog`}
                 className="text-gray-900 hover:text-gray-700"
               >{`${t.blogData.blogTitle}`}</Link>
             </li>
@@ -67,7 +67,7 @@ export default function Blog({ blogPost, locale }: Props) {
         </nav>
 
         <ScrollReveal>
-          <h1 className="font-jakarta font-bold text-[26px] lg:text-[40px] leading-[2rem] lg:leading-[3rem] mb-8">
+          <h1 className="font-geist font-bold text-[26px] lg:text-[40px] leading-[2rem] lg:leading-[3rem] mb-8">
             {blogPost.title}
           </h1>
           <div
@@ -76,13 +76,15 @@ export default function Blog({ blogPost, locale }: Props) {
           >
             {blogPost.authorProfile && (
               <div className="flex items-center justify-center gap-4">
-                <Image
-                  src={blogPost.authorProfile}
-                  alt="Author"
-                  width={64}
-                  height={64}
-                  className="w-16 h-16 rounded-full"
-                />
+                <div className="rounded-full border overflow-hidden w-16 h-16 flex-shrink-0">
+                  <Image
+                    src={blogPost.authorProfile}
+                    alt="Author"
+                    width={64}
+                    height={64}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
                 <div>
                   <p className="text-black font-inter text-sm flex items-center">
                     {blogPost.author}
@@ -99,7 +101,10 @@ export default function Blog({ blogPost, locale }: Props) {
           </div>
         </ScrollReveal>
         {blogPost.blogContent && (
-          <div className="prose" style={{ maxWidth: "100%" }}>
+          <div
+            className="prose prose-headings:font-geist prose-p:font-geist prose-li:font-geist prose-strong:font-geist prose-a:font-geist max-w-none"
+            style={{ maxWidth: "100%" }}
+          >
             <ContentfulRichText content={[blogPost.blogContent]} />
           </div>
         )}
@@ -109,7 +114,6 @@ export default function Blog({ blogPost, locale }: Props) {
 }
 
 export const getServerSideProps = async ({ params, req, locale }: any) => {
-  console.log({ req })
   try {
     const { slug } = params
     const blogPost: BlogPost = await fetchBlogPostBySlug(slug as string, locale)
@@ -117,6 +121,7 @@ export const getServerSideProps = async ({ params, req, locale }: any) => {
     if (!blogPost) {
       return { notFound: true }
     }
+    console.log("Fetched blog post:", blogPost)
     return {
       props: {
         blogPost,

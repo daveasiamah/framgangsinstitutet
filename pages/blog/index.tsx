@@ -75,19 +75,19 @@ export default function Blogg() {
         console.error("Error fetching blog posts:", error)
       }
     }
-    fetchPosts().then((r) => r)
+    fetchPosts().then((r) => console.log("Fetched blog posts", r))
   }, [locale])
 
   return (
     <Layout headTitle={t.blogData.metaData.title}>
       <section className="relative py-8 lg:py-16">
-        <BlurCircle positionClassName="left-[-12rem] top-[2rem]" size="lg" />
+        {/* <BlurCircle positionClassName="left-[-12rem] top-[2rem]" size="lg" />
         <LineGraphic
           positionClassname="right-[-14rem] 2xl:right-[-12rem] top-[-30px]"
           className="svg-primary"
         />
         <ShieldBadge positionClassName="left-[1rem] top-[1rem] lg:top-[6rem] lg:left-[8rem]" />
-        <UserBadge positionClassName="right-[1rem] top-[1rem] lg:top-[4rem] lg:right-[16rem]" />
+        <UserBadge positionClassName="right-[1rem] top-[1rem] lg:top-[4rem] lg:right-[16rem]" /> */}
 
         <ScrollReveal>
           <Title
@@ -121,7 +121,6 @@ export default function Blogg() {
                 <div className="w-full h-[200px] relative rounded-lg overflow-hidden mb-6 shadow-lg">
                   <Image
                     src={data.imageUrl}
-                    layout="responsive"
                     width={600} // Adjust as needed
                     height={400} // Adjust as needed
                     alt="blog"
@@ -141,14 +140,14 @@ export default function Blogg() {
           ))}
         </div>
         <div className="flex justify-center mt-10">
-          <Link className="btn btn-primary btn-shadow" href="/blogg/general">
+          <Link className="btn btn-primary btn-shadow" href="/blog/general">
             {t.blogData.blogNav.viewMore}
           </Link>
         </div>
       </section>
 
       <section className="relative isolate bg-primary text-white p-8 lg:py-14 lg:px-16 mb-16 lg:mb-20 rounded-[3rem]">
-        <LineGraphic
+        {/* <LineGraphic
           positionClassname="right-[-12rem] bottom-[-6rem] lg:right-[-8rem] 2xl:right-[-10rem] lg:bottom-[-4rem]"
           className="svg-white"
         />
@@ -157,7 +156,7 @@ export default function Blogg() {
           svgClassname="svg-white-opacity"
           sizeClassName="w-[20rem] h-[20rem]"
           className="z-[-1]"
-        />
+        /> */}
         <ScrollReveal>
           <Title
             blackText={t.blogData.keepYourselfTitle}

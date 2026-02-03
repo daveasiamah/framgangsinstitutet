@@ -15,6 +15,7 @@ export async function fetchBlogPosts(locale: string = "sv", nolimit = false) {
         "fields.title,fields.description,fields.slug,fields.featuredImage",
         "fields.author",
         "fields.authorProfile",
+        "fields.avatar",
         "sys.createdAt",
       ],
       order: ["-sys.createdAt"],
@@ -59,6 +60,7 @@ function formatBlogPostEntries(entries: any) {
     author: entry.fields.author || "",
     authorProfile:
       `https:${entry.fields.authorProfile?.fields?.file?.url}` || "",
+    avatar: `https:${entry.fields.avatar?.fields?.file?.url}` || "",
   }))
 }
 
