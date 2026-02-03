@@ -1,22 +1,30 @@
 import React from "react"
 import Layout from "@/components/Layout"
-import { ArrowRight, ArrowRightIcon } from "lucide-react"
+import { ArrowRightIcon } from "lucide-react"
 import { useModal } from "@/components/ModalContext"
 import Script from "next/script"
-import TestimonialsSection from "@/components/TestimonialsSection"
-import TrustPilotReviews from "@/components/parts/TrustPilotReviews"
+import Footer from "@/components/parts/Footer"
 
 function VSL() {
   const { openContractForm } = useModal()
 
   return (
-    <Layout headTitle="VSL" isFullWidth={true}>
+    <div className="bg-white w-full min-h-screen">
       {/* Hero Section */}
-      <section className="relative w-full py-8 px-4 pt-[36px] md:pt-[28px] flex flex-col items-center bg-gradient-to-b from-[#225AEA] to-[#FFFFFF]">
+      <section className="relative w-full py-8 px-4 pt-[36px] md:pt-[108px] flex flex-col items-center bg-gradient-to-b from-[#225AEA] to-[#FFFFFF]">
         <div className="max-w-7xl mx-auto rounded-3xl w-full">
-          <div className="rounded-t-3xl bg-white px-[57px] pt-[116px] pb-8">
-            <div className="flex justify-center gap-[10px] md:gap-[20px] items-center">
-              <p className="font-jakarta text-xs md:text-sm lg:text-xl font-medium">
+          <div className="rounded-t-3xl bg-white px-4 md:px-[57px] pt-[28px] pb-8">
+            <div className="flex justify-center items-center mb-3 md:mb-6">
+              <img
+                src="/images/home/logo-main.png"
+                alt="Checkified Logo"
+                width={200}
+                height={50}
+                className="object-contain h-[60px] w-auto md:h-[85px]"
+              />
+            </div>
+            <div className="flex justify-center gap-[10px] md:gap-[20px] items-center mb-3 md:mb-6">
+              <p className="font-jakarta text-[#000000] text-xs md:text-sm lg:text-xl font-medium">
                 Utmärkt
               </p>
               <img
@@ -35,7 +43,7 @@ function VSL() {
               />
             </div>
             {/* Title */}
-            <h1 className="text-[#151E3A] text-[17px] md:text-[30px] lg:text-[40px] font-bold font-jakarta text-center mb-6 leading-[28px] md:leading-[38px] lg:leading-[46px] max-w-[343px] md:max-w-[681px] lg:max-w-[933px] mx-auto">
+            <h1 className="mt-3 md:mt-6 text-[20px] md:text-[30px] lg:text-[40px] font-bold font-jakarta text-center mb-6 leading-[28px] md:leading-[38px] lg:leading-[46px] max-w-[343px] md:max-w-[681px] lg:max-w-[933px] mx-auto">
               Så bygger vanliga svenskar lönsam e-handel på{" "}
               <span className="font-jakarta font-bold text-[#225AEA]">
                 22 dagar
@@ -47,7 +55,7 @@ function VSL() {
               miljoner kr i omsättning
             </h1>
 
-            <p className="text-center text-[#434C69] text-sm md:text-[20px] font-inter font-medium max-w-[843px] mx-auto mb-6 px-2">
+            <p className="text-center text-[#000000] text-sm md:text-[20px] font-inter font-regular md:font-medium max-w-[843px] mx-auto mb-6 px-2 leading-[21px] md:leading-[30px]">
               Checkified Mentorskap är en av Sveriges främsta
               e-handelsutbildningar och visar steg för steg hur du kan starta
               och växa en lönsam webbutik vid sidan av jobb eller studier, även
@@ -55,7 +63,7 @@ function VSL() {
             </p>
 
             {/* Video/Image Section */}
-            <div className="relative max-w-[960px] mt-[21px] mx-auto">
+            <div className="relative w-full md:max-w-[960px] mt-[21px] mx-auto">
               <div className="relative rounded-[20px] overflow-hidden shadow-md">
                 <div
                   id="vidalytics_embed_IHhXMFlDYTPRnTcQ"
@@ -90,14 +98,13 @@ function VSL() {
       </section>
 
       {/* Content Section */}
-      <section className="relative bg-white w-full py-8 px-4 flex flex-col items-center">
+      <section className="relative bg-white w-full py-2 md:py-3 px-4 flex flex-col items-center">
         {/* Typeform Embed */}
-        <h2 className="font-jakarta font-bold text-base text-center max-w-[290px] md:text-[32px] md:max-w-[522px] lg:text-[42px] lg:max-w-[961px] mb-4">
-          Ansök nedan till Checkified <br className="hidden md:block" />
-          <br className="hidden md:block" />
-          Mentorskap nu
+        <h2 className="font-jakarta font-bold text-[22px] leading-[24px] text-[#000000] text-center max-w-[343px] md:text-[32px] md:max-w-[522px] md:leading-[40px] lg:text-[42px] lg:max-w-[961px] mb-4">
+          Ansök nedan till <br />
+          Checkified Mentorskap nu
         </h2>
-        <p className="font-inter font-medium text-center text-[20px] max-w-[317px] md:max-w-[651px] lg:max-w-[843px] mx-auto mb-4 leading-[22px] mt-4">
+        <p className="font-inter font-regular text-center text-[#000000] text-[16px] max-w-[317px] md:max-w-[651px] lg:max-w-[843px] mx-auto mb-4 leading-[22px]">
           Lär dig vår beprövade metod som har hjälpt tusentals svenskar att
           skapa mer frihet och kontroll i vardagen.
         </p>
@@ -110,7 +117,7 @@ function VSL() {
           strategy="afterInteractive"
         />
 
-        <div className="flex justify-center">
+        {/* <div className="flex justify-center">
           <button
             type="button"
             onClick={() => openContractForm()}
@@ -121,7 +128,7 @@ function VSL() {
             </span>
             <ArrowRightIcon className="w-[14px] h-[14px]" color="white" />
           </button>
-        </div>
+        </div> */}
 
         {/* <TestimonialsSection />
         <TrustPilotReviews />
@@ -138,7 +145,8 @@ function VSL() {
           </button>
         </div> */}
       </section>
-    </Layout>
+      <Footer/>
+    </div>
   )
 }
 
