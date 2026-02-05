@@ -124,7 +124,7 @@ export default function EHandel() {
               <div className="order-1 lg:order-2">
                 <div className="relative w-full aspect-[4/3] rounded-[40px] overflow-hidden">
                   <Image
-                    src="/images/ehandel-expert.jpg"
+                    src="/images/home/welcome1.jpg"
                     alt="E-handelsexpert team"
                     fill
                     className="object-cover"
@@ -140,7 +140,7 @@ export default function EHandel() {
               <div className="order-1">
                 <div className="relative w-full aspect-[4/3] rounded-[40px] overflow-hidden">
                   <Image
-                    src="/images/mentorer.jpg"
+                    src="/images/home/welcome2.jpg"
                     alt="Entreprenörer och mentorer"
                     fill
                     className="object-cover"
@@ -182,7 +182,7 @@ export default function EHandel() {
               <div className="order-1 lg:order-2">
                 <div className="relative w-full aspect-[4/3] rounded-[40px] overflow-hidden">
                   <Image
-                    src="/images/chansning.jpg"
+                    src="/images/home/welcome3.jpg"
                     alt="Entreprenörer och mentorer"
                     fill
                     className="object-cover"

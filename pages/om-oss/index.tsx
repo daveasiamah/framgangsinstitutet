@@ -2,8 +2,6 @@ import { useRouter } from "next/router"
 import Layout from "@/components/Layout"
 import en from "@/locales/en"
 import sv from "@/locales/sv"
-import { HiQuestionMarkCircle } from "react-icons/hi"
-import HeroSection from "@/components/HeroSection"
 import { useModal } from "@/components/ModalContext"
 import { ArrowRight, ArrowRightIcon } from "lucide-react"
 
