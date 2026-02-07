@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from "next";
-import NextAuth from "next-auth";
-import GoogleProvider from "next-auth/providers/google";
+import type { NextApiRequest, NextApiResponse } from "next"
+import NextAuth from "next-auth"
+import GoogleProvider from "next-auth/providers/google"
 // import FacebookProvider from "next-auth/providers/facebook";
 
 export default async function auth(req: NextApiRequest, res: NextApiResponse) {
@@ -8,22 +8,14 @@ export default async function auth(req: NextApiRequest, res: NextApiResponse) {
   return await NextAuth(req, res, {
     providers: [
       GoogleProvider({
-        clientId:"REDACTED_GOOGLE_CLIENT_ID",
-        clientSecret: "REDACTED_GOOGLE_CLIENT_SECRET"
+        clientId: process.env.GOOGLE_CLIENT_ID || "",
+        clientSecret: process.env.GOOGLE_CLIENT_SECRET || "",
       }),
       // FacebookProvider({
-      //   clientId:"3565744143741409",
-      //   clientSecret: "780bd3a1e691242c19c4060db39b98e2",
-      // }),      
+      //   clientId: process.env.FACEBOOK_CLIENT_ID || "",
+      //   clientSecret: process.env.FACEBOOK_CLIENT_SECRET || "",
+      // }),
     ],
-    secret: process.env.JWT_SECRET
-  });
-  
+    secret: process.env.JWT_SECRET,
+  })
 }
-
-// providers:[
-//     GoogleProvider({
-//         clientId:"REDACTED_GOOGLE_CLIENT_ID",
-//         clientSecret:"REDACTED_GOOGLE_CLIENT_SECRET"
-//     })
-// ]

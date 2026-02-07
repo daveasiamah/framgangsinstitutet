@@ -32,6 +32,7 @@
     "eslint-config-next": "^13.5.6",
     "framer-motion": "^10.8.4",
     "hamburger-react": "^2.5.0",
+    "isomorphic-dompurify": "^2.35.0",
     "lucide-react": "^0.525.0",
     "next": "^13.5.6",
     "next-auth": "^4.24.5",
@@ -52,7 +53,8 @@
     "typescript": "4.9.5",
     "usehooks-ts": "^3.0.2",
     "uuid": "^11.0.3",
-    "yup": "^1.0.2"
+    "yup": "^1.0.2",
+    "zod": "^3.25.76"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.9",
