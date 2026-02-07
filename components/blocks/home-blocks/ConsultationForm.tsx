@@ -25,7 +25,10 @@ export function ConsultationForm() {
   const schema = yup.object().shape({
     name: yup.string().required("Namn er påkrævet"),
     email: yup.string().email("Ogiltig email").required("Email er påkrævet"),
-    phone: yup.string().required("Telefonnummer er påkrævet"),
+    phone: yup
+      .string()
+      .matches(/^(\+46|0)[0-9]{6,9}$/, "Ogiltigt telefonnummer")
+      .required("Telefonnummer er påkrævet"),
     selectedCourse: yup
       .string()
       .required("Vilken utbildning är du intresserad av?"),

@@ -48,33 +48,32 @@ const MentorWhyThisWorksSection = () => {
   ]
 
   return (
-    <div className="w-full max-w-5xl mx-auto px-4 py-2 md:py-16 mt-1 mb-1">
+    <div className="w-full max-w-5xl mx-auto px-4 py-2 mt-1 mb-1">
       {/* Header */}
-      <div className="text-center mb-12 font-jakarta">
-        <h2 className="text-xl md:text-2xl font-jakarta font-bold text-gray-900 mb-2">
+      <div className="flex flex-col items-center font-jakarta mt-[30px] mb-5">
+        <h2 className="text-xl md:text-2xl max-w-[280px] font-jakarta font-bold text-gray-900 mb-2 leading-[30px]">
           Varför fungerar detta...
+          <br /> (när inget annat har)
         </h2>
-        <p className="text-gray-600 font-jakarta text-lg md:text-2xl font-bold">
-          (när inget annat har)
-        </p>
       </div>
+      {/* <p className="text-gray-600 font-jakarta text-lg md:text-2xl font-bold leading-[30px]"></p> */}
 
       {/* Feature Cards Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-2 lg:gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-2 md:gap-2 lg:gap-8">
         {features.map((feature, index) => (
           <div
             key={index}
-            className={`bg-tranparent rounded-3xl p-6 md:p-6 border border-gray`}
+            className={`bg-tranparent rounded-3xl pt-[37px] pb-[20px] px-[26px] border border-gray`}
           >
             {/* Icon */}
             <div
-              className={`w-16 h-16 rounded-full flex items-center justify-center mb-6`}
+              className={`w-[33.33px] h-[33.33px] rounded-full flex justify-start mb-[16px]`}
             >
               {feature.icon}
             </div>
 
             {/* Content */}
-            <div className="space-y-4">
+            <div className="flex flex-col gap-1">
               <h3 className="text-base lg:text-[18px] font-bold text-gray-900 font-jakarta">
                 {feature.title}
               </h3>

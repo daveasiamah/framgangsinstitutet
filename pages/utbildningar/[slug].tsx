@@ -1,5 +1,3 @@
-// pages/utbildningar/[slug].tsx
-
 import { fetchCourseBySlug } from "@/utils/contentful"
 import { Course } from "@/components/blocks/courses-blocks/types"
 import Image from "next/image"

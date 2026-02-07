@@ -1,3 +1,4 @@
+import { ArrowRightIcon } from "lucide-react"
 import Link from "next/link"
 
 type ButtonSize = "small" | "medium" | "large"
@@ -10,14 +11,18 @@ interface ReusableButtonProps
   variant?: ButtonVariant
   size?: ButtonSize
   className?: string
+  arrow?: boolean
 }
 
 const MentorshipButton = ({
-  text = "Börja Din Resa Idag",
+  text = "Starta din resa idag",
   disabled = false,
   variant = "primary",
   size = "medium",
-  className = "mt-5",
+  className,
+  onClick,
+  arrow = false,
+  ...rest
 }: ReusableButtonProps) => {
   // Size configurations
   const sizeClasses: Record<ButtonSize, string> = {
@@ -51,7 +56,7 @@ const MentorshipButton = ({
       : {}
 
   const baseClasses =
-    "font-semibold text-center font-jakarta tracking-[0] leading-none whitespace-nowrap rounded-[7px] shadow-inner transition-all duration-200 ease-in-out transform flex items-center justify-center"
+    "font-bold text-center font-jakarta tracking-[0] leading-none whitespace-nowrap rounded-[7px] shadow-inner transition-all duration-200 ease-in-out transform flex items-center justify-center"
 
   const disabledClasses = disabled
     ? "opacity-50 cursor-not-allowed hover:scale-100 active:scale-100"
@@ -66,15 +71,16 @@ const MentorshipButton = ({
     `.trim()
 
   return (
-    <Link
-      href="https://checkout.revolut.com/payment-link/d3eb03dc-e14d-4695-a085-a01903b02e54"
-      target="_blank"
-      rel="noopener noreferrer"
+    <button
+      type="button"
       className={combinedClasses}
       style={boxShadowStyle}
+      disabled={disabled}
+      onClick={onClick}
+      {...rest}
     >
-      {text}
-    </Link>
+      {text} {arrow && <ArrowRightIcon className="w-5 h-5 ml-2" />}
+    </button>
   )
 }
 

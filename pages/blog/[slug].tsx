@@ -10,6 +10,7 @@ import Image from "next/image"
 
 import en from "@/locales/en"
 import sv from "@/locales/sv"
+import Link from "next/link"
 
 type Props = {
   blogPost: BlogPost
@@ -30,7 +31,7 @@ type BlogPost = {
 
 export default function Blog({ blogPost, locale }: Props) {
   const t = locale === "en" ? en : sv
-
+  console.log("Rendering blog post:", blogPost)
   return (
     <Layout headTitle={`${t.blogData.blogTitle} - ${blogPost.title}`}>
       {/* Blog Details */}
@@ -38,10 +39,10 @@ export default function Blog({ blogPost, locale }: Props) {
         <nav className="text-sm" aria-label="Breadcrumb">
           <ol className="flex">
             <li className="mr-2">
-              <a
+              <Link
                 href={`../../${locale}/`}
-                className="text-gray-400 hover:text-gray-700"
-              >{`${t.blogData.blogNav.home}`}</a>
+                className="text-gray-900 hover:text-gray-700"
+              >{`${t.blogData.blogNav.home}`}</Link>
             </li>
             <li className="mr-2">
               <span aria-hidden="true" className="text-gray-400">
@@ -49,10 +50,10 @@ export default function Blog({ blogPost, locale }: Props) {
               </span>
             </li>
             <li className="mr-2">
-              <a
+              <Link
                 href={`../../${locale}/blog`}
-                className="text-gray-400 hover:text-gray-700"
-              >{`${t.blogData.blogTitle}`}</a>
+                className="text-gray-900 hover:text-gray-700"
+              >{`${t.blogData.blogTitle}`}</Link>
             </li>
             <li className="mr-2">
               <span aria-hidden="true" className="text-gray-400">
@@ -64,43 +65,46 @@ export default function Blog({ blogPost, locale }: Props) {
             </li>
           </ol>
         </nav>
-        {/* <a className="mt-auto flex items-center gap-2 my-3" href="/blog">
-              <HiArrowLeft size={15} />
-              {`${t.blogData.blogTitle}`}
-        </a> */}
+
         <ScrollReveal>
-          <Title blackText={blogPost.title} className="text-left">
-            <div
-              className="grid md:grid-cols-2 sm:grid-cols-1"
-              style={{ width: "max-content" }}
-            >
-              {blogPost.authorProfile && (
-                <div className="flex items-center">
+          <h1 className="font-geist font-bold text-[26px] lg:text-[40px] leading-[2rem] lg:leading-[3rem] mb-8">
+            {blogPost.title}
+          </h1>
+          <div
+            className="grid md:grid-cols-2 sm:grid-cols-1 mt-4"
+            style={{ width: "max-content" }}
+          >
+            {blogPost.authorProfile && (
+              <div className="flex items-center justify-center gap-4">
+                <div className="rounded-full border overflow-hidden w-16 h-16 flex-shrink-0">
                   <Image
                     src={blogPost.authorProfile}
                     alt="Author"
-                    width={15}
-                    height={15}
-                    className="w-10 h-10 rounded-full"
+                    width={64}
+                    height={64}
+                    className="w-full h-full object-cover"
                   />
-                  <div>
-                    <p className="text-subtitle text-sm mt-auto flex items-center">
-                      {blogPost.author}
-                    </p>
-                  </div>
                 </div>
-              )}
-              <div style={{ marginTop: "10px" }}>
-                <p className="text-subtitle text-sm mt-auto flex items-center gap-2 ml-2">
-                  <HiOutlineClock size={20} />
-                  {blogPost.date}
-                </p>
+                <div>
+                  <p className="text-black font-inter text-sm flex items-center">
+                    {blogPost.author}
+                  </p>
+                </div>
               </div>
+            )}
+            <div className="flex items-center justify-center gap-4">
+              <p className="text-black text-sm font-inter flex items-center gap-2 ml-2">
+                <HiOutlineClock size={20} />
+                {blogPost.date}
+              </p>
             </div>
-          </Title>
+          </div>
         </ScrollReveal>
         {blogPost.blogContent && (
-          <div className="prose" style={{ maxWidth: "100%" }}>
+          <div
+            className="prose prose-headings:font-geist prose-p:font-geist prose-li:font-geist prose-strong:font-geist prose-a:font-geist max-w-none"
+            style={{ maxWidth: "100%" }}
+          >
             <ContentfulRichText content={[blogPost.blogContent]} />
           </div>
         )}
@@ -110,7 +114,6 @@ export default function Blog({ blogPost, locale }: Props) {
 }
 
 export const getServerSideProps = async ({ params, req, locale }: any) => {
-  console.log({ req })
   try {
     const { slug } = params
     const blogPost: BlogPost = await fetchBlogPostBySlug(slug as string, locale)
@@ -118,6 +121,7 @@ export const getServerSideProps = async ({ params, req, locale }: any) => {
     if (!blogPost) {
       return { notFound: true }
     }
+    console.log("Fetched blog post:", blogPost)
     return {
       props: {
         blogPost,

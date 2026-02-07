@@ -1,7 +1,11 @@
 import React from "react"
 import MentorshipButton from "./Mentorship_Button"
 
-const MentorshipNextStep = () => {
+interface MentorshipNextStepProps {
+  onCtaClick?: () => void
+}
+
+const MentorshipNextStep = ({ onCtaClick }: MentorshipNextStepProps) => {
   return (
     <div className="relative w-full max-w-[1217px] mx-auto  py-8 md:py-12">
       {/* Main Headline */}
@@ -19,9 +23,10 @@ const MentorshipNextStep = () => {
 
       {/* CTA Button */}
       <MentorshipButton
-        className="mx-0 mt-7 !text-[9px] lg:!text-[12px]"
+        className="mx-0 mt-7 !text-[10px] md:!text-[12px]"
         text="Gå Med i Mentorskap Idag"
         size="small"
+        onClick={onCtaClick}
       />
     </div>
   )

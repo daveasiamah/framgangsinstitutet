@@ -2,7 +2,7 @@ import { BlogData } from "../types/blog"
 
 export const blogData: BlogData = {
   metaData: {
-    title: "Blog",
+    title: "Blogg",
   },
 
   blogTitle: "Blog",

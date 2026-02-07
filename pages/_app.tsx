@@ -2,20 +2,16 @@
 import "@/styles/globals.scss"
 import "@/styles/annonser.css"
 
-import { useSession, SessionProvider } from "next-auth/react"
+import { ChakraProvider, defaultSystem } from "@chakra-ui/react"
 
 import type { AppProps } from "next/app"
 import Script from "next/script"
-import { useRouter } from "next/router"
+import { ModalProvider, useModal } from "@/components/ModalContext"
+import ContractForm from "@/components/ContractForm"
 
-export default function App({
-  Component,
-  pageProps: { session, ...pageProps },
-}: AppProps) {
-  const router = useRouter()
+function AppContent({ Component, pageProps }: AppProps) {
+  const { isContractFormOpen, closeContractForm } = useModal()
 
-  // Conditionally apply CSS for specific pages
-  // router.pathname === "/annonser" ? require("@/styles/annonser.css") : require("@/styles/globals.scss");
 
   return (
     <>
@@ -138,9 +134,18 @@ export default function App({
           style={{ display: "none", visibility: "hidden" }}
         ></iframe>
       </noscript>
-      <SessionProvider session={pageProps.session}>
-        <Component {...pageProps} />
-      </SessionProvider>
+      <Component {...pageProps} />
+      {isContractFormOpen && <ContractForm onClose={closeContractForm} />}
     </>
+  )
+}
+
+export default function App(props: AppProps) {
+  return (
+    <ChakraProvider value={defaultSystem}>
+        <ModalProvider>
+          <AppContent {...props} />
+        </ModalProvider>
+    </ChakraProvider>
   )
 }

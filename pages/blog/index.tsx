@@ -42,7 +42,7 @@ type BlogPost = {
   slug: string
 }
 
-export default function Blog() {
+export default function Blogg() {
   const router = useRouter()
   const { locale } = router
   const t = locale === "en" ? en : sv
@@ -75,24 +75,19 @@ export default function Blog() {
         console.error("Error fetching blog posts:", error)
       }
     }
-    fetchPosts().then((r) => r)
+    fetchPosts().then((r) => console.log("Fetched blog posts", r))
   }, [locale])
 
   return (
     <Layout headTitle={t.blogData.metaData.title}>
       <section className="relative py-8 lg:py-16">
-        <BlurCircle positionClassName="left-[-12rem] top-[2rem]" size="lg" />
+        {/* <BlurCircle positionClassName="left-[-12rem] top-[2rem]" size="lg" />
         <LineGraphic
           positionClassname="right-[-14rem] 2xl:right-[-12rem] top-[-30px]"
           className="svg-primary"
         />
         <ShieldBadge positionClassName="left-[1rem] top-[1rem] lg:top-[6rem] lg:left-[8rem]" />
-        <UserBadge positionClassName="right-[1rem] top-[1rem] lg:top-[4rem] lg:right-[16rem]" />
-        {/* <CacingOne
-              positionClassName="left-[-12rem] 2xl:left-[-8rem] rotate-[-40deg] top-[2rem]"
-              sizeClassName="w-[24rem] h-[24rem]"
-              className="z-[-1]"
-          /> */}
+        <UserBadge positionClassName="right-[1rem] top-[1rem] lg:top-[4rem] lg:right-[16rem]" /> */}
 
         <ScrollReveal>
           <Title
@@ -126,18 +121,17 @@ export default function Blog() {
                 <div className="w-full h-[200px] relative rounded-lg overflow-hidden mb-6 shadow-lg">
                   <Image
                     src={data.imageUrl}
-                    layout="responsive"
                     width={600} // Adjust as needed
                     height={400} // Adjust as needed
                     alt="blog"
                     className="absolute object-cover"
                   />
                 </div>
-                <h1 className="font-bold text-xl mb-2 hover:text-primary hover:underline transition-all duration-200">
+                <h1 className="font-bold font-inter text-xl mb-2 hover:text-primary hover:underline transition-all duration-200">
                   {data.title}
                 </h1>
-                <p className="text-subtitle mb-3">{data.subtitle}</p>
-                <p className="text-subtitle text-sm mt-auto flex items-center gap-2">
+                <p className="text-black font-inter mb-3">{data.subtitle}</p>
+                <p className="text-black font-inter text-sm mt-auto flex items-center gap-2">
                   <HiOutlineClock size={20} />
                   {data.date}
                 </p>
@@ -153,7 +147,7 @@ export default function Blog() {
       </section>
 
       <section className="relative isolate bg-primary text-white p-8 lg:py-14 lg:px-16 mb-16 lg:mb-20 rounded-[3rem]">
-        <LineGraphic
+        {/* <LineGraphic
           positionClassname="right-[-12rem] bottom-[-6rem] lg:right-[-8rem] 2xl:right-[-10rem] lg:bottom-[-4rem]"
           className="svg-white"
         />
@@ -162,7 +156,7 @@ export default function Blog() {
           svgClassname="svg-white-opacity"
           sizeClassName="w-[20rem] h-[20rem]"
           className="z-[-1]"
-        />
+        /> */}
         <ScrollReveal>
           <Title
             blackText={t.blogData.keepYourselfTitle}

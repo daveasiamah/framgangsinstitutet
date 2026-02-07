@@ -55,12 +55,14 @@ const Butiker = () => {
       <PricingDiscountBlock />
       <HowItWorksBlock />
       <PricingCTAButtonBlock openModal={openModal} />
-      <section className="flex flex-col md:py-1 md:px-6 items-center">
-        <h1 className="font-bold text-[22px] md:text-[32px] max-w-[260px] md:max-w-full leading-loose text-center md:text-left mb-4">
-          Så Här Ser En Butik Vi Gjort Till Kund
-        </h1>
-        <EstoreShowCaseVideo />
-        <CreateEStoreBlock openModal={openModal} />
+      <section className="max-w-7xl mx-auto px-4 md:px-6">
+        <div className="flex flex-col md:py-1 items-center font-inter">
+          <h1 className="font-bold text-[22px] md:text-[32px] max-w-[260px] md:max-w-full leading-loose text-center mb-4">
+            Så Här Ser En Butik Vi Gjort Till Kund
+          </h1>
+          <EstoreShowCaseVideo />
+          <CreateEStoreBlock openModal={openModal} />
+        </div>
       </section>
       <ReviewsBlock />
       <PrivateCoachingBlock />
@@ -69,13 +71,7 @@ const Butiker = () => {
           href="https://checkout.revolut.com/pay/598dfb4a-51fc-43c5-970d-2bd4646c9309"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#fff] bg-[#225AEA] text-[14px] w-50 py-2 flex items-center justify-center font-jakarta font-bold w-[194px] h-[36px] rounded-[7px] shadow-inner button-shadow"
-          style={{
-            boxShadow: `
-        inset 11px 1px 19.4px 0px rgba(255, 255, 255, 0.3), 
-        inset -4px 0px 5.8px 0px rgba(255, 255, 255, 0.25)`,
-            borderRadius: "7px",
-          }}
+          className="text-white bg-[#225AEA] hover:bg-[#1a4aca] text-sm px-6 py-2 flex items-center justify-center font-jakarta font-semibold rounded-[7px] transition-colors duration-200"
         >
           Få privat coachning
         </a>

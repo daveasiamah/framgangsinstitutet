@@ -1,7 +1,7 @@
 import { HeaderData } from "../types/header"
 
 export const headerData: HeaderData = {
-  trainingCourses: "utbildningar",
+  trainingCourses: "Om oss",
   resources: "Resurser",
   megaMenuData: [
     {

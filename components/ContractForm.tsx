@@ -5,17 +5,16 @@ import { SubmitHandler, useForm } from "react-hook-form"
 import * as yup from "yup"
 import { yupResolver } from "@hookform/resolvers/yup"
 import { registerOfContract } from "../service/Apis/api"
+import Link from "next/link"
 
 type FormValues = {
   name: string
   email: string
-  phone: string
 }
 
 const defaultValues: FormValues = {
   name: "",
   email: "",
-  phone: "",
 }
 
 export default function ContactForm({ onClose }: { onClose: () => void }) {
@@ -23,15 +22,8 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
   const router = useRouter()
 
   const schema = yup.object().shape({
-    name: yup.string().required("Namn er påkrævet"),
+    name: yup.string().required("Förnamn er påkrævet"),
     email: yup.string().email("Ogiltig email").required("Email er påkrævet"),
-    phone: yup
-      .string()
-      .required("Telefonnummer er påkrævet")
-      .matches(
-        /^\d{9,12}$/,
-        "Ange ett giltigt telefonnummer (minst 9 siffror)"
-      ),
   })
 
   const {
@@ -51,6 +43,7 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
       const res = await registerOfContract(data)
       if (res.success) {
         reset()
+        onClose()
         router.push("/thank-you")
       }
       if (res.error) {
@@ -62,77 +55,66 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
   }
   const onSubmit: SubmitHandler<FormValues> = (data) => sendData(data)
 
-  const inputWrapperClass =
-    "relative border border-[#AFBAD2] rounded-lg bg-white flex items-center"
-
-  const inputClass =
-    "input w-full pl-10 pr-4 py-4 focus:outline-0 bg-white border-[#AFBAD2] text-base"
-
+  // Modal overlay and card styling to match screenshot
   return (
-    <div
-      className="relative bg-white py-4 lg:py-10 px-6 w-full max-w-[360px] md:max-w-[390px] box-content rounded-lg"
-      onClick={(e) => e.stopPropagation()}
-    >
-      <Image
-        src="/icons/close.svg"
-        alt="close"
-        width={20}
-        height={20}
-        className="absolute top-4 right-4 cursor-pointer"
-        onClick={() => {
-          setAPIErrors(null)
-          onClose()
-        }}
-      />
-      <div className="w-full">
-        <div className="flex-col justify-center items-center">
-          <div className="flex flex-row align-middle gap-2 justify-center items-center">
-            <Image
-              src="/logo.svg"
-              alt="logo"
-              width="40"
-              height="40"
-              className="object-cover"
-            />
-            <h1 className="font-poppins font-bold text-[20px] text-[#151e3a">
-              Checkified
-            </h1>
-          </div>
-
-          <div className="flex items-center text-center justify-center gap-2 text-lg lg:text-xl h-12 mt-4">
-            <h1 className="font-jakarta font-bold max-w-[342px] text-[18px] text-[#151e3a]">
-              Se vår kostnadsfria introduktionsguide!
-            </h1>
-          </div>
-          <p className="text-[#000000] text-[14px] text-center mt-4">
-            Lär dig hur Dominic nådde sin framgång och hur du kan göra samma
-            resa. Få insikt och metoder för att gå från noll till att kunna
-            försörja dig på e-handel.
-          </p>
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 backdrop-blur-sm">
+      <div
+        className="relative bg-white p-5 md:p-9 lg:p-[54px] w-full max-w-[360px] md:max-w-[640px] box-content rounded-2xl shadow-xl"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <button
+          type="button"
+          className="absolute top-6 right-6 md:top-8 md:right-8 text-gray-400 hover:text-gray-600 text-3xl md:text-4xl"
+          onClick={() => {
+            setAPIErrors(null)
+            onClose()
+          }}
+          aria-label="Stäng"
+        >
+          ×
+        </button>
+        <div className="w-full flex flex-col items-center mt-8">
+          <Image
+            src="/images/checkified-logo-main.svg"
+            alt="logo"
+            width={235}
+            height={64}
+            className="object-cover h-[64px] w-[235px]"
+          />
+          <h1 className="font-jakarta font-extrabold text-center max-w-[480px] text-[22px] md:text-[32px] text-[#151e3a] my-4 md:mb-8 md:mt-[42px] leading-[28px] tracking-[0]">
+            Se vår kostnadsfria
+            <br className="hidden md:block" /> introduktionsguide!
+          </h1>
         </div>
         <form
           onSubmit={handleSubmit(onSubmit)}
           action=""
-          className="flex flex-col items-center gap-4 mt-4"
+          className="flex flex-col gap-5"
         >
           {/* Error Alert */}
-          <div className="text-red-500 text-xs">
-            {APIErrors && APIErrors.message}
-          </div>
+          {APIErrors && (
+            <div className="text-red-500 text-xs mb-2 text-center">
+              {APIErrors.message}
+            </div>
+          )}
           {/* First Name */}
-          <div className="form-control w-full">
-            <div className={inputWrapperClass}>
-              <Image
-                src="/new-home/user.svg"
-                alt="user"
-                width={24}
-                height={24}
-                className="absolute left-3"
-              />
+          <div className="w-full">
+            <label className="block text-[#4F4F4F] font-inter font-medium mb-1 text-base">
+              Förnamn
+            </label>
+            <div className="relative">
+              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
+                <Image
+                  src="/icons/user-square.svg"
+                  alt="user"
+                  width={24}
+                  height={24}
+                />
+              </span>
               <input
                 type="text"
-                placeholder="Namn"
-                className={inputClass}
+                placeholder="Ange ditt förnamn"
+                className="w-full pl-11 pr-4 py-3 rounded-lg bg-[#F6F6F6] border border-[#AAA1A1] text-base font-inter text-[#4F4F4F] placeholder-[#A0A0A0] focus:outline-none focus:ring-2 focus:ring-[#3E6FED]"
                 {...register("name")}
               />
             </div>
@@ -141,19 +123,23 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
             )}
           </div>
           {/* Email */}
-          <div className="form-control w-full">
-            <div className={inputWrapperClass}>
-              <Image
-                src="/new-home/message.svg"
-                alt="email"
-                width={24}
-                height={24}
-                className="absolute left-3"
-              />
+          <div className="w-full">
+            <label className="block text-[#4F4F4F] font-inter font-medium mb-1 text-base">
+              E-postadress
+            </label>
+            <div className="relative">
+              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
+                <Image
+                  src="/icons/post-message.svg"
+                  alt="email"
+                  width={24}
+                  height={24}
+                />
+              </span>
               <input
                 type="email"
-                placeholder="E-Post"
-                className={inputClass}
+                placeholder="Din e-postadress"
+                className="w-full pl-11 pr-4 py-3 rounded-lg bg-[#F6F6F6] border border-[#AAA1A1] text-base font-inter text-[#4F4F4F] placeholder-[#A0A0A0] focus:outline-none focus:ring-2 focus:ring-[#3E6FED]"
                 {...register("email")}
               />
             </div>
@@ -163,36 +149,30 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
               </p>
             )}
           </div>
-
-          <div className="form-control w-full">
-            <div className={inputWrapperClass}>
-              <Image
-                src="/new-home/phone.svg"
-                alt="phone"
-                width={24}
-                height={24}
-                className="absolute left-3"
-              />
-              <input
-                type="text"
-                placeholder="Telefonnummer"
-                className={inputClass}
-                {...register("phone")}
-              />
-            </div>
-            {errors.phone && (
-              <p className="text-red-500 text-xs pt-1">
-                {errors.phone.message}
-              </p>
-            )}
+          <div className="font-inter flex flex-col gap-1 mt-2 mb-2">
+            <p className="text-sm text-[#4F4F4F]">
+              Vill du lyckas inom e-handel på under 30 minuter?
+            </p>
+            <p className="text-sm text-[#4F4F4F]">
+              Genom att kolla på våra kostnadsfria introguide så godkänner jag
+              Checkified{" "}
+              <Link
+                href="/gdpr"
+                className="underline"
+                style={{ color: "#4F545A" }}
+              >
+                GDPR Policy
+              </Link>
+              .
+            </p>
           </div>
-
           <button
             type="submit"
             disabled={!isDirty || !isValid}
-            className="font-inter w-full text-xs md:text-base btn btn-primary mt-4"
+            className="font-inter font-semibold flex items-center justify-center cursor-pointer w-full md:w-auto md:self-end px-8 py-3 rounded-lg text-white text-base md:text-lg mt-2 shadow-sm transition-colors
+              bg-[#225AEA] hover:bg-[#3E6FED] disabled:bg-[#AEBEE3]"
           >
-            Se kostnadsfria guide
+            Se gratis introguide!
           </button>
         </form>
       </div>

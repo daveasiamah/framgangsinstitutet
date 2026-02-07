@@ -2,17 +2,23 @@ import Image from "next/image"
 
 const MentorshipMailer = () => {
   return (
-    <div className="relative w-full max-w-[689px] px-4 sm:px-6 lg:px-8 mb-9 mt-10 mx-auto">
+    <div className="relative max-w-full md:max-w-[689px] lg:max-w-[800px] md:px-[55px] mb-[18px] mt-[26px] font-inter">
       <div className="relative w-full bg-white rounded-[25px] border-[0.2px] border-solid border-[#9b9b9b40] shadow-[0px_0.5px_15px_0.5px_#9b9b9b40] pb-8 sm:pb-10 lg:pb-12">
-        <div className="w-full relative font-inter">
+        <div className="w-full relative">
           {/* Email icon */}
-          <div className="relative">
-            <Image
-              className="absolute w-[40px] h-[40px] sm:w-[45px] sm:h-[45px] lg:w-[51px] lg:h-[51px] -top-5 right-4 sm:right-6 lg:right-4 z-10"
+          <div
+            className="absolute w-[51px] h-[51px] -top-6 right-4 sm:right-6 lg:right-4 z-10 bg-[#225AEA] rounded-[16px] p-[9px] flex items-center justify-center"
+            style={{
+              boxShadow: `
+                inset 11px 1px 19.4px 0px rgba(255, 255, 255, 0.3), 
+                inset -4px 0px 5.8px 0px rgba(255, 255, 255, 0.25)
+              `,
+            }}
+          >
+            <img
+              className="w-full h-full object-contain"
               alt="Email Icon"
-              src={"/images/mentorship/emailUp.png"}
-              width={51}
-              height={51}
+              src={"/icons/mentorship/mentorship-email.png"}
             />
           </div>
 
@@ -22,7 +28,7 @@ const MentorshipMailer = () => {
               {/* From field */}
               <div>
                 <span className="font-medium text-[#434c69]">Från:</span>
-                <span className="font-semibold text-[#151e3a]">
+                <span className="font-semibold text-[#151E3A]">
                   {" "}
                   Checkified Huvudkontor
                 </span>
@@ -31,7 +37,7 @@ const MentorshipMailer = () => {
               {/* Location field */}
               <div>
                 <span className="font-medium text-[#434c69]">Plats:</span>
-                <span className="font-semibold text-[#151e3a]">
+                <span className="font-semibold text-[#151E3A]">
                   {" "}
                   Stockholm, Sverige
                 </span>
@@ -40,14 +46,14 @@ const MentorshipMailer = () => {
               {/* Subject field */}
               <div className="mb-4 sm:mb-6">
                 <span className="font-medium text-[#434c69]">Ämne:</span>
-                <span className="font-semibold text-[#151e3a]">
+                <span className="font-semibold text-[#151E3A]">
                   {" "}
-                  Att bryta "Ekorrhjulet" 2025...
+                  Att bryta "Ekorrhjulet" 2026...
                 </span>
               </div>
 
               {/* Email body */}
-              <div className="space-y-3 sm:space-y-4 text-[#434c69] font-medium">
+              <div className="space-y-3 sm:space-y-4 text-[#434c69] font-inter">
                 <p>
                   Hej, jag heter Dominic och jag är grundaren av
                   Checkified.se... Jag kunde inte vara mer glad över att ge dig
@@ -62,7 +68,7 @@ const MentorshipMailer = () => {
 
                 <p>
                   Under tiden försökte jag tjäna pengar med dropshipping.{" "}
-                  <span className="font-extrabold text-[#151e3a]">
+                  <span className="font-extrabold font-inter text-[#151E3A]">
                     Jag gjorde allt som gurus sa till mig.
                   </span>{" "}
                   ...Sälja i Sverige. Jaga trendiga produkter. Spendera en
@@ -70,11 +76,11 @@ const MentorshipMailer = () => {
                 </p>
 
                 <p>
-                  <span className="font-extrabold text-[#151e3a]">
+                  <span className="font-extrabold font-inter text-[#151E3A]">
                     Ändå var det bara att göra min situation värre
                   </span>{" "}
                   ... Jag slösade alla mina besparingar 3 gånger.{" "}
-                  <span className="font-extrabold text-[#151e3a]">
+                  <span className="font-extrabold font-inter text-[#151E3A]">
                     Det kändes som att jag slog huvudet i en vägg.
                   </span>
                 </p>
@@ -87,7 +93,7 @@ const MentorshipMailer = () => {
 
                 <p>
                   Och nu, bara 25 år gammal...{" "}
-                  <span className="font-extrabold text-[#151e3a]">
+                  <span className="font-extrabold font-inter text-[#151E3A]">
                     är jag mångmiljonär.
                   </span>
                 </p>
@@ -106,7 +112,7 @@ const MentorshipMailer = () => {
                 </div>
 
                 <p>
-                  <span className="font-extrabold text-[#151e3a]">
+                  <span className="font-extrabold font-inter text-[#151E3A]">
                     Och jag säger INGET av detta för att skryta.
                   </span>
                 </p>
@@ -126,7 +132,7 @@ const MentorshipMailer = () => {
                   Men efter att ha lagt blod, svett och tårar i spelet i nästan
                   ett decennium... vet jag exakt hur jag ska vända ditt liv.
                   ...Och få all den tid, pengar och frihet du någonsin velat ha,{" "}
-                  <span className="font-extrabold text-[#151e3a]">
+                  <span className="font-extrabold font-inter text-[#151E3A]">
                     oavsett bakgrund eller erfarenhet
                   </span>
                   .
