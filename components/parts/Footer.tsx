@@ -90,6 +90,17 @@ export default function Footer({}: Props) {
                 {isSubmitting ? "Skickar..." : "Registrera dig"}
               </button>
             </div>
+            {message && (
+              <div
+                className={`mt-3 p-3 rounded-lg text-sm font-medium transition-all duration-300 ${
+                  message.includes("Tack")
+                    ? "bg-green-500 text-white"
+                    : "bg-red-500 text-white"
+                }`}
+              >
+                {message}
+              </div>
+            )}
           </div>
 
           {/* Links Section */}

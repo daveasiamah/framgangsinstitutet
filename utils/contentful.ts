@@ -45,23 +45,34 @@ export async function fetchBlogPostBySlug(slug: string, locale: string) {
 }
 
 function formatBlogPostEntries(entries: any) {
-  return entries.map((entry: any) => ({
-    id: entry.sys.id,
-    title: entry.fields.title,
-    subtitle: entry.fields.description,
-    imageUrl: `https:${entry.fields.featuredImage?.fields?.file?.url}`,
-    date: new Date(entry.sys.createdAt).toLocaleDateString("en-US", {
+  return entries.map((entry: any) => {
+    const date = new Date(entry.sys.createdAt).toLocaleDateString("sv-SE", {
       month: "long",
       day: "numeric",
       year: "numeric",
-    }),
-    slug: entry.fields.slug,
-    blogContent: entry.fields.blogContent || null,
-    author: entry.fields.author || "",
-    authorProfile:
-      `https:${entry.fields.authorProfile?.fields?.file?.url}` || "",
-    avatar: `https:${entry.fields.avatar?.fields?.file?.url}` || "",
-  }))
+    })
+    // Capitalize the month name (e.g., "15 januari 2026" -> "15 Januari 2026")
+    const capitalizedDate = date.replace(
+      /(\d+\s)(\w)(\w+)/,
+      (match, day, firstLetter, rest) => {
+        return day + firstLetter.toUpperCase() + rest
+      },
+    )
+
+    return {
+      id: entry.sys.id,
+      title: entry.fields.title,
+      subtitle: entry.fields.description,
+      imageUrl: `https:${entry.fields.featuredImage?.fields?.file?.url}`,
+      date: capitalizedDate,
+      slug: entry.fields.slug,
+      blogContent: entry.fields.blogContent || null,
+      author: entry.fields.author || "",
+      authorProfile:
+        `https:${entry.fields.authorProfile?.fields?.file?.url}` || "",
+      avatar: `https:${entry.fields.avatar?.fields?.file?.url}` || "",
+    }
+  })
 }
 
 export async function fetchCourseBySlug(slug: string) {
