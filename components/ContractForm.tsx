@@ -44,7 +44,7 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
       if (res.success) {
         reset()
         onClose()
-        router.push("/thank-you")
+        router.push("/vsl") // Redirect to VSL page on success
       }
       if (res.error) {
         setAPIErrors(res.error)
