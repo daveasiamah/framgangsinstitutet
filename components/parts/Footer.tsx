@@ -217,8 +217,12 @@ export default function Footer({}: Props) {
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 sm:gap-6 pb-6 sm:pb-8 md:pb-10 text-center md:text-left">
           {/* Copyright Section */}
-          <p className="text-[10px] sm:text-[10px] md:text-sm text-center md:order-1 order-1">
+          {/* <p className="text-[10px] sm:text-[10px] md:text-sm text-center md:order-1 order-1">
             Copyright © {currentYear} Checkified. All rights reserved.
+          </p> */}
+          <p className="text-[10px] sm:text-[10px] md:text-sm text-center md:order-1 order-1">
+            Upphovsrätt © {currentYear} Checkified. Alla rättigheter
+            förbehållna.
           </p>
 
           {/* Social Media Icons */}
