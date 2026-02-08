@@ -30,7 +30,7 @@ const FadeLogo = dynamic(() => import("@/components/graphic/FadeLogo"), {
 })
 const ScrollReveal = dynamic(
   () => import("@/components/transition/ScrollReveal"),
-  { ssr: false }
+  { ssr: false },
 )
 
 type BlogPost = {
@@ -51,7 +51,7 @@ export default function Blogg() {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const cacheKey = `blogPosts-${locale}`
+      const cacheKey = `blogPosts-${locale}-v2` // Updated cache key to force refresh
       const cacheTimestampKey = `${cacheKey}-timestamp`
       const cacheTTL = 3600 * 1000 // Cache for 1 hour
 
