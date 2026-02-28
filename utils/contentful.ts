@@ -172,7 +172,6 @@ export async function fetchEbookBySlug(slug: string) {
     }
 
     const formattedEntries = entries.items.map((entry: any) => {
-      // Extract the "value" from the nested structure in shortDescription
       const description = entry.fields.description || null
 
       return {
