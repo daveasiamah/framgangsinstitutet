@@ -62,11 +62,11 @@ export default function Footer({}: Props) {
           {/* Logo Section */}
           <div className="w-full lg:w-1/3 flex flex-col items-start text-left">
             <img
-              src="/images/home/framgångsinstitutet-logo-white.png"
-              alt="framgångsinstitutet"
-              width={190}
+              src="/images/home/logo-base.png"
+              alt="Framgångsintitutet"
+              width={200}
               height={55}
-              className="h-[55px] sm:h-[55px] w-auto object-left object-contain"
+              className="h-[55px] sm:h-[55px] w-[200px] object-left object-contain"
             />
             <p className="font-inter font-medium text-[12px] md:text-[15px] md:max-w-[585px] lg:max-w-[399px] leading-[18px] mb-3">
               Registrera dig på vårt nyhetsbrev för att inte missa event,
@@ -229,10 +229,10 @@ export default function Footer({}: Props) {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 sm:gap-6 pb-6 sm:pb-8 md:pb-10 text-center md:text-left">
           {/* Copyright Section */}
           {/* <p className="text-[10px] sm:text-[10px] md:text-sm text-center md:order-1 order-1">
-            Copyright © {currentYear} framgångsinstitutet. All rights reserved.
+            Copyright © {currentYear} Framgångsintitutet. All rights reserved.
           </p> */}
           <p className="text-[10px] sm:text-[10px] md:text-sm text-center md:order-1 order-1">
-            Upphovsrätt © {currentYear} framgångsinstitutet. Alla rättigheter
+            Upphovsrätt © {currentYear} Framgångsintitutet. Alla rättigheter
             förbehållna.
           </p>
 
@@ -254,8 +254,8 @@ export default function Footer({}: Props) {
 
           {/* Links Section */}
           <Image
-            src="/images/home/logo-base.png"
-            alt="framgångsinstitutet logo"
+            src="/images/home/graphics/shopify-partner.png"
+            alt="Shopify Partner"
             width={146}
             height={27}
             className="md:order-3 order-3 w-[120px] sm:w-[140px] md:w-[166px] h-auto"

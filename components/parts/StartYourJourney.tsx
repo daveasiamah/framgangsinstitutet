@@ -84,12 +84,12 @@ function StartYourJourney({ onCtaClick }: { onCtaClick: () => void }) {
         {/* CTA Button */}
         <button
           onClick={onCtaClick}
-          className="flex justify-center items-center bg-white text-gray-600 px-[24px] py-2 rounded-xl font-semibold text-sm font-jakarta mt-[16px] md:mt-[28px]"
+          className="flex justify-center items-center bg-white text-gray-600 px-[24px] w-40 py-4 rounded-xl font-semibold text-sm font-jakarta mt-[16px] md:mt-[28px]"
         >
-          <p className="font-inter font-semibold text-[#151E3A] text-[10px]">
-            Starta din resa idag
+          <p className="font-inter font-semibold text-[#151E3A] text-[14px] md:text-[16px]">
+            Börja nu
           </p>{" "}
-          <ArrowRightIcon className="w-3 h-3 ml-1" />
+          <ArrowRightIcon className="w-4 h-4 ml-1" size={34} />
         </button>
       </div>
     </section>

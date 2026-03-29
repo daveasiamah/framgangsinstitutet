@@ -53,13 +53,13 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
     switch (path) {
       case "/":
       case "/thank-you":
-        return "Ansök till Mentorskap"
+        return "Bli medlem"
       case "/butiker":
         return "Få din butik"
       case "/annonser":
         return "Få dina annonser"
       default:
-        return "Ansök till Mentorskap"
+        return "Bli medlem"
     }
   }
 
