@@ -10,7 +10,7 @@ export default function EHandel() {
   const { openContractForm } = useModal()
 
   return (
-    <Layout headTitle="E-handel - Checkified" isFullWidth={true}>
+    <Layout headTitle="E-handel - framgångsinstitutet" isFullWidth={true}>
       <section className="relative bg-white pt-8 px-4 bg-[url('/images/hero-mesh.svg')] bg-no-repeat bg-cover bg-center">
         <div className="max-w-7xl mx-auto">
           {/* Title */}
@@ -50,7 +50,7 @@ export default function EHandel() {
           {/* Video/Image Section */}
           <div className="relative max-w-[360px]  md:max-w-[480px] lg:max-w-[860px] mx-auto">
             <img
-              src="/images/home/graphics/checkified-hero.png"
+              src="/images/home/graphics/framgångsinstitutet-hero.png"
               alt="E-handel Hero"
               width={960}
               height={540}

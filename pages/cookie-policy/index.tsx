@@ -1,24 +1,24 @@
-import React from "react";
-import { useRouter } from "next/router";
+import React from "react"
+import { useRouter } from "next/router"
 
-import Layout from "@/components/Layout";
-import Title from "@/components/parts/Title";
+import Layout from "@/components/Layout"
+import Title from "@/components/parts/Title"
 
-import BlurCircle from "@/components/graphic/BlurCircle";
-import LineGraphic from "@/components/graphic/LineGraphic";
-import ShieldBadge from "@/components/graphic/ShieldBadge";
-import UserBadge from "@/components/graphic/UserBadge";
-import ScrollReveal from "@/components/transition/ScrollReveal";
+import BlurCircle from "@/components/graphic/BlurCircle"
+import LineGraphic from "@/components/graphic/LineGraphic"
+import ShieldBadge from "@/components/graphic/ShieldBadge"
+import UserBadge from "@/components/graphic/UserBadge"
+import ScrollReveal from "@/components/transition/ScrollReveal"
 
-import en from "@/locales/en";
-import sv from "@/locales/sv";
+import en from "@/locales/en"
+import sv from "@/locales/sv"
 
-type Props = {};
+type Props = {}
 
 export default function CookiePolicy({}: Props) {
-  const router = useRouter();
-  const { locale } = router;
-  const t = locale === "en" ? en : sv;
+  const router = useRouter()
+  const { locale } = router
+  const t = locale === "en" ? en : sv
 
   return (
     <Layout headTitle={"Cookiepolicy"}>
@@ -128,11 +128,12 @@ export default function CookiePolicy({}: Props) {
             </span>
             <p>
               Om du har frågor eller funderingar om vår cookiepolicy eller vår
-              användning av cookies kan du kontakta oss på info@checkified.se.
+              användning av cookies kan du kontakta oss på
+              info@framgångsinstitutet.se.
             </p>
           </div>
         </div>
       </section>
     </Layout>
-  );
+  )
 }

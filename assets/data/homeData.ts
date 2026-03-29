@@ -1,24 +1,24 @@
 export const platformData: { id: number; imageUrl: string }[] = [
   {
     id: 1,
-    imageUrl: "/icons/home/platform-google.png"
+    imageUrl: "/icons/home/platform-google.png",
   },
   {
     id: 2,
-    imageUrl: "/icons/home/platform-shopify.png"
+    imageUrl: "/icons/home/platform-shopify.png",
   },
   {
     id: 3,
-    imageUrl: "/icons/home/platform-tiktok.png"
+    imageUrl: "/icons/home/platform-tiktok.png",
   },
   {
     id: 4,
-    imageUrl: "/icons/home/platform-openai.png"
+    imageUrl: "/icons/home/platform-openai.png",
   },
   {
     id: 5,
-    imageUrl: "/icons/home/platform-meta.png"
-  }
+    imageUrl: "/icons/home/platform-meta.png",
+  },
 ]
 
 export const featureData: {
@@ -31,20 +31,20 @@ export const featureData: {
     id: 1,
     imageUrl: "/icons/home/feature-unlimited-access.png",
     title: "Unlimited Access",
-    desc: "With priority support, we have significant influence over all students."
+    desc: "With priority support, we have significant influence over all students.",
   },
   {
     id: 2,
     imageUrl: "/icons/home/feature-create-content.png",
     title: "Create Content ",
-    desc: "We demonstrate everything you need to know to get started with dropshipping."
+    desc: "We demonstrate everything you need to know to get started with dropshipping.",
   },
   {
     id: 3,
     imageUrl: "/icons/home/feature-selling-service.png",
     title: "Selling Services",
-    desc: "We use cutting-edge selling methods to provide you with a unique e-commerce experience."
-  }
+    desc: "We use cutting-edge selling methods to provide you with a unique e-commerce experience.",
+  },
 ]
 
 export const expertiseData: {
@@ -62,22 +62,22 @@ export const expertiseData: {
     titleBlack: "Introduction",
     titleBlue: "Ground",
     subtitle:
-      "Checkified creates the ideal environment for your e-commerce journey. This formula will serve as the basis for your online business.",
+      "framgångsinstitutet creates the ideal environment for your e-commerce journey. This formula will serve as the basis for your online business.",
     lists: [
       {
         id: 1,
-        name: "Welcome"
+        name: "Welcome",
       },
       {
         id: 2,
-        name: "Mindset"
+        name: "Mindset",
       },
       {
         id: 3,
-        name: "Business"
-      }
+        name: "Business",
+      },
     ],
-    isImageLeft: true
+    isImageLeft: true,
   },
   {
     id: 2,
@@ -89,18 +89,18 @@ export const expertiseData: {
     lists: [
       {
         id: 1,
-        name: "Marketing Strategy"
+        name: "Marketing Strategy",
       },
       {
         id: 2,
-        name: "Creating Ads"
+        name: "Creating Ads",
       },
       {
         id: 3,
-        name: "Tiktok Ads"
-      }
+        name: "Tiktok Ads",
+      },
     ],
-    isImageLeft: false
+    isImageLeft: false,
   },
   {
     id: 3,
@@ -112,81 +112,81 @@ export const expertiseData: {
     lists: [
       {
         id: 1,
-        name: "Fulfillment"
+        name: "Fulfillment",
       },
       {
         id: 2,
-        name: "White labeling"
+        name: "White labeling",
       },
       {
         id: 3,
-        name: "Conversion rate"
-      }
+        name: "Conversion rate",
+      },
     ],
-    isImageLeft: true
-  }
+    isImageLeft: true,
+  },
 ]
 
 export const medsosData: { id: number; imageUrl: string }[] = [
   {
     id: 1,
-    imageUrl: "/icons/home/1-sosmed-shopify.png"
+    imageUrl: "/icons/home/1-sosmed-shopify.png",
   },
   {
     id: 2,
-    imageUrl: "/icons/home/2-sosmed-google.png"
+    imageUrl: "/icons/home/2-sosmed-google.png",
   },
   {
     id: 3,
-    imageUrl: "/icons/home/3-vegas.png"
+    imageUrl: "/icons/home/3-vegas.png",
   },
   {
     id: 4,
-    imageUrl: "/icons/home/4-google-analitycs.png"
+    imageUrl: "/icons/home/4-google-analitycs.png",
   },
   {
     id: 5,
-    imageUrl: "/icons/home/5-instagram.png"
+    imageUrl: "/icons/home/5-instagram.png",
   },
   {
     id: 6,
-    imageUrl: "/icons/home/6-tiktok.png"
+    imageUrl: "/icons/home/6-tiktok.png",
   },
   {
     id: 7,
-    imageUrl: "/icons/home/7-meta.png"
+    imageUrl: "/icons/home/7-meta.png",
   },
   {
     id: 8,
-    imageUrl: "/icons/home/8-youtube.png"
-  }
+    imageUrl: "/icons/home/8-youtube.png",
+  },
 ]
 
 export const universityData: { id: number; name: string }[] = [
   {
     id: 1,
-    name: "The basics of dropshipping and how to works."
+    name: "The basics of dropshipping and how to works.",
   },
   {
     id: 2,
-    name: "How to identify profitable products and niche markets"
+    name: "How to identify profitable products and niche markets",
   },
   {
     id: 3,
-    name: "How to find reliable suppliers and negotiate with them"
+    name: "How to find reliable suppliers and negotiate with them",
   },
   {
     id: 4,
-    name: "How to set up your online store and optimize it for sales"
+    name: "How to set up your online store and optimize it for sales",
   },
   {
     id: 5,
-    name: "How to market your products using social media"
+    name: "How to market your products using social media",
   },
   {
     id: 6,
-    name: "How to manage your orders, inventory,and customer service"
-  }
+    name: "How to manage your orders, inventory,and customer service",
+  },
 ]
 
 export const benefitData: {
@@ -200,22 +200,22 @@ export const benefitData: {
     imageUrl: "/icons/home/1-superior-service.png",
     title: "Superior Service",
     subtitle:
-      "We place high value on our customers by providing investment assistance through their inquiries."
+      "We place high value on our customers by providing investment assistance through their inquiries.",
   },
   {
     id: 2,
     imageUrl: "/icons/home/2-find-products.png",
     title: "Find Products To Sell",
     subtitle:
-      "Acquire knowledge and develop marketing strategies to establish a successful online store."
+      "Acquire knowledge and develop marketing strategies to establish a successful online store.",
   },
   {
     id: 3,
     imageUrl: "/icons/home/3-all-in-one.png",
     title: "All in one Place",
     subtitle:
-      "Our digital platform provides e-commerce expertise to assist you in breaking free from the contemporary rat race."
-  }
+      "Our digital platform provides e-commerce expertise to assist you in breaking free from the contemporary rat race.",
+  },
 ]
 
 export const testimonyData: {
@@ -229,40 +229,40 @@ export const testimonyData: {
     id: 1,
     imageUrl: "/images/home/testimonial/5465.jpg",
     name: "Elias Bergqvist",
-    job: "Checkified Student",
+    job: "framgångsinstitutet Student",
     message:
-      "Easy to follow, you will learn while meeting other like-minded people. Checkified is the future and this is how learning should be!"
+      "Easy to follow, you will learn while meeting other like-minded people. framgångsinstitutet is the future and this is how learning should be!",
   },
   {
     id: 2,
     imageUrl: "/images/home/testimonial/487-1.jpg",
     name: "Simon Gustafsson",
-    job: "Checkified Student",
+    job: "framgångsinstitutet Student",
     message:
-      "Great platform. Thanks to Checkified's tools I have learned about e-commerce and increased my mindset."
+      "Great platform. Thanks to framgångsinstitutet's tools I have learned about e-commerce and increased my mindset.",
   },
   {
     id: 3,
     imageUrl: "/images/home/testimonial/564-1.jpg",
     name: "Linnea Östling",
-    job: "Checkified Student",
+    job: "framgångsinstitutet Student",
     message:
-      "Absolutely the best decision I've made in starting my own online business. You can hardly believe it when you get several sales."
+      "Absolutely the best decision I've made in starting my own online business. You can hardly believe it when you get several sales.",
   },
   {
     id: 4,
     imageUrl: "/images/home/testimonial/4564-1.jpg",
     name: "Linnea Östling",
-    job: "Checkified Student",
+    job: "framgångsinstitutet Student",
     message:
-      "Absolutely the best decision I've made in starting my own online business. You can hardly believe it when you get several sales."    
+      "Absolutely the best decision I've made in starting my own online business. You can hardly believe it when you get several sales.",
   },
   {
     id: 5,
     imageUrl: "/images/home/testimonial/4653-1.jpg",
     name: "Linnea Östling",
-    job: "Checkified Student",
+    job: "framgångsinstitutet Student",
     message:
-      "Absolutely the best decision I've made in starting my own online business. You can hardly believe it when you get several sales."
-  }
+      "Absolutely the best decision I've made in starting my own online business. You can hardly believe it when you get several sales.",
+  },
 ]

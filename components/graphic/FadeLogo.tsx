@@ -12,7 +12,7 @@ export default function FadeLogo({
   sizeClassName,
   positionClassName,
   svgClassname,
-  className
+  className,
 }: Props) {
   return (
     <div
@@ -24,7 +24,7 @@ export default function FadeLogo({
     >
       <Image
         src="/logo.svg"
-        alt="checkified logo"
+        alt="framgångsinstitutet logo"
         fill
         className="object-contain"
       />

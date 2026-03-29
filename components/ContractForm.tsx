@@ -75,7 +75,7 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
         </button>
         <div className="w-full flex flex-col items-center mt-8">
           <Image
-            src="/images/checkified-logo-main.svg"
+            src="/images/framgångsinstitutet-logo-main.svg"
             alt="logo"
             width={235}
             height={64}
@@ -155,7 +155,7 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
             </p>
             <p className="text-sm text-[#4F4F4F]">
               Genom att kolla på våra kostnadsfria introguide så godkänner jag
-              Checkified{" "}
+              framgångsinstitutet{" "}
               <Link
                 href="/gdpr"
                 className="underline"

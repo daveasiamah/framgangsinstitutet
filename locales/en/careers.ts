@@ -2,18 +2,18 @@ import { CareersData } from "../types/careers"
 
 export const careersData: CareersData = {
   metaData: {
-    title: "Careers"
+    title: "Careers",
   },
 
   careersBlackTitle: "Paradigm of",
   careersBlueTitle: "E-commerce",
   careersSubtitle:
-    "At Checkified, we are fervent about leveraging technology to revolutionize education and empower individuals across the globe. Join our team and contribute to the creation of the future of online learning.",
+    "At framgångsinstitutet, we are fervent about leveraging technology to revolutionize education and empower individuals across the globe. Join our team and contribute to the creation of the future of online learning.",
 
   whyBlackTitle: "Why",
-  whyBlueTitle: "Checkified?",
+  whyBlueTitle: "framgångsinstitutet?",
   whySubtitleOne:
-    "Checkified facilitates global access to e-learning, enabling thousands of entrepreneurs to establish and expand their enterprises. We continuously seek talented individuals to join our team.",
+    "framgångsinstitutet facilitates global access to e-learning, enabling thousands of entrepreneurs to establish and expand their enterprises. We continuously seek talented individuals to join our team.",
   whySubtitleTwo:
     "Check out the current job openings below to determine you possess the necessary qualifications.",
 
@@ -24,20 +24,20 @@ export const careersData: CareersData = {
       id: 1,
       title: "Customer Support Representative",
       button: "Apply Now",
-      link: "https://form.jotform.com/231002261373340"
+      link: "https://form.jotform.com/231002261373340",
     },
     {
       id: 2,
       title: "Supplier Relations Manager",
       button: "Apply Now",
-      link: "https://form.jotform.com/231002261373340"
+      link: "https://form.jotform.com/231002261373340",
     },
     {
       id: 3,
       title: "Marketing Coordinator",
       button: "Apply Now",
-      link: "https://form.jotform.com/231002261373340"
-    }
+      link: "https://form.jotform.com/231002261373340",
+    },
   ],
 
   embraceBlackTitle: "Embrace Challenges.",
@@ -49,7 +49,7 @@ export const careersData: CareersData = {
 
   cultureTitle: "Our Culture",
   cultureSubtitleOne:
-    "Checkified provides an innovative work that encourages the confluence of ingenious concepts, advanced technology, and world-class knowledge.",
+    "framgångsinstitutet provides an innovative work that encourages the confluence of ingenious concepts, advanced technology, and world-class knowledge.",
   cultureSubtitleTwo:
-    "We are resolute in our conviction that persistence, ethical standards, and intelligent technology can collectively transform"
+    "We are resolute in our conviction that persistence, ethical standards, and intelligent technology can collectively transform",
 }

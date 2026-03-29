@@ -1,24 +1,24 @@
-import React from "react";
-import { useRouter } from "next/router";
+import React from "react"
+import { useRouter } from "next/router"
 
-import Layout from "@/components/Layout";
-import Title from "@/components/parts/Title";
+import Layout from "@/components/Layout"
+import Title from "@/components/parts/Title"
 
-import BlurCircle from "@/components/graphic/BlurCircle";
-import LineGraphic from "@/components/graphic/LineGraphic";
-import ShieldBadge from "@/components/graphic/ShieldBadge";
-import UserBadge from "@/components/graphic/UserBadge";
-import ScrollReveal from "@/components/transition/ScrollReveal";
+import BlurCircle from "@/components/graphic/BlurCircle"
+import LineGraphic from "@/components/graphic/LineGraphic"
+import ShieldBadge from "@/components/graphic/ShieldBadge"
+import UserBadge from "@/components/graphic/UserBadge"
+import ScrollReveal from "@/components/transition/ScrollReveal"
 
-import en from "@/locales/en";
-import sv from "@/locales/sv";
+import en from "@/locales/en"
+import sv from "@/locales/sv"
 
-type Props = {};
+type Props = {}
 
 export default function PrivacyPolicy({}: Props) {
-  const router = useRouter();
-  const { locale } = router;
-  const t = locale === "en" ? en : sv;
+  const router = useRouter()
+  const { locale } = router
+  const t = locale === "en" ? en : sv
 
   return (
     <Layout headTitle={"Integritetspolicy"}>
@@ -44,10 +44,10 @@ export default function PrivacyPolicy({}: Props) {
       <section className="relative flex flex-col lg:flex-row gap-10 justify-between mb-12 lg:mb-16">
         <div className="section__content container flex flex-col space-y-[28px]">
           <p>
-            Checkified värnar om din integritet och vi vill vara öppna med hur
-            vi behandlar dina personuppgifter. Denna integritetspolicy beskriver
-            hur vi samlar in, använder, delar och skyddar dina personuppgifter
-            när du använder våra tjänster
+            framgångsinstitutet värnar om din integritet och vi vill vara öppna
+            med hur vi behandlar dina personuppgifter. Denna integritetspolicy
+            beskriver hur vi samlar in, använder, delar och skyddar dina
+            personuppgifter när du använder våra tjänster
           </p>
           <span className="block text-xl font-semibold leading-[32px]">
             Vilka personuppgifter samlar vi in?
@@ -157,5 +157,5 @@ export default function PrivacyPolicy({}: Props) {
         </div>
       </section>
     </Layout>
-  );
+  )
 }

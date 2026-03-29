@@ -14,7 +14,7 @@ export function CTABannerBlock() {
         <div className="text-center">
           <div className="px-2">
             <h1 className="text-white text-center text-[20px] leading-[48px] md:text-[24px] font-bold font-jakarta mb-2 mt-4">
-              Gå med Checkified Mentorskap idag!
+              Gå med framgångsinstitutet Mentorskap idag!
             </h1>
             <p className="mb-4 max-w-3xl mx-auto text-center lg:text-[16px] text-[12px] font-inter">
               Kom ihåg: Du är några klick från att leva livet som du vill... Har

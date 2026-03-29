@@ -12,16 +12,16 @@ const replacementFunction = (match: string): JSX.Element => {
 export const stringToJsx = (text: string) => {
   let findText
 
-  if (text.includes("info@checkified.se")) {
-    findText = "info@checkified.se"
+  if (text.includes("info@framgångsinstitutet.se")) {
+    findText = "info@framgångsinstitutet.se"
   }
-  if (text.includes("billing@checkified.se")) {
-    findText = "billing@checkified.se"
+  if (text.includes("billing@framgångsinstitutet.se")) {
+    findText = "billing@framgångsinstitutet.se"
   }
-  if (text.includes("info@checkified.io")) {
-    findText = "info@checkified.io"
-  } else if (text.includes("billing@checkified.io")) {
-    findText = "billing@checkified.io"
+  if (text.includes("info@framgångsinstitutet.io")) {
+    findText = "info@framgångsinstitutet.io"
+  } else if (text.includes("billing@framgångsinstitutet.io")) {
+    findText = "billing@framgångsinstitutet.io"
   }
 
   return reactStringReplace(text, findText, replacementFunction)

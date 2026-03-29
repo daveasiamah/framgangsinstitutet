@@ -14,10 +14,10 @@ export const blogData: BlogData = {
   },
 
   companyLabel: "Företag",
-  companyTitle: "Vad är Checkified?",
+  companyTitle: "Vad är framgångsinstitutet?",
   companySubtitle:
-    "Checkified är en modern digital plattform som har skapats av e-handlare för e-handlare, med målet att underlätta för entreprenörer att etablera och expandera sina företag. Våra verktyg har hjälpt otaliga elever att anta avancerade strategier för att förbättra sina företag.",
-  companyBottomCard: "Checkified University",
+    "framgångsinstitutet är en modern digital plattform som har skapats av e-handlare för e-handlare, med målet att underlätta för entreprenörer att etablera och expandera sina företag. Våra verktyg har hjälpt otaliga elever att anta avancerade strategier för att förbättra sina företag.",
+  companyBottomCard: "framgångsinstitutet University",
 
   articleBlackTitle: "Våra Senaste",
   articleBlueTitle: "Artiklar",

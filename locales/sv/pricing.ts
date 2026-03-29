@@ -137,7 +137,7 @@ export const pricingData: PricingData = {
 
   outstandingTitle: "Enastående Kapitaltillväxt",
   outstandingSubtitleFirst:
-    "Checkified förespråkar ett entreprenörskap som fungerar på lika villkor och som omfattar både sociala och ekonomiska dimensioner, vilket leder till konstruktiva relationer mellan våra studenter.",
+    "framgångsinstitutet förespråkar ett entreprenörskap som fungerar på lika villkor och som omfattar både sociala och ekonomiska dimensioner, vilket leder till konstruktiva relationer mellan våra studenter.",
   outstandingSubtitleSecond:
     "Våra insatser främjar mångfald i ägarmodeller inom näringslivet.",
 
@@ -150,15 +150,15 @@ export const pricingData: PricingData = {
       message:
         "Dropshipping har förändrat mitt liv. Fick lära mig mycket och slutat mitt 9-5. Rekommenderat detta till mina vänner.",
       name: "Kajsa Wahlgren",
-      position: "Checkified Student",
+      position: "framgångsinstitutet Student",
     },
     {
       id: 2,
       imageUrl: "/images/impact/2-andreas.png",
       message:
-        "Jag kan dock med säkerhet säga att Checkified slår dem alla. Bästa lösningen för att komma igång med Dropshipping.",
+        "Jag kan dock med säkerhet säga att framgångsinstitutet slår dem alla. Bästa lösningen för att komma igång med Dropshipping.",
       name: "Andreas Bowall",
-      position: "Checkified Student",
+      position: "framgångsinstitutet Student",
     },
     {
       id: 3,
@@ -166,7 +166,7 @@ export const pricingData: PricingData = {
       message:
         "Skapade min shopify butik, sålde första månaden för 35 tusen i vinstmarginal, utan att skala. Bästa investeringen.",
       name: "Felix Aadland",
-      position: "Checkified Student",
+      position: "framgångsinstitutet Student",
     },
     {
       id: 4,
@@ -174,7 +174,7 @@ export const pricingData: PricingData = {
       message:
         "Riktigt bra innehåll, med kunniga mentorer. Modulerna är enkla att följa, med notifikationer för att hålla dig motiverad.",
       name: "Simon Vimmerson",
-      position: "Checkified Student",
+      position: "framgångsinstitutet Student",
     },
     {
       id: 5,
@@ -182,15 +182,15 @@ export const pricingData: PricingData = {
       message:
         "Älskar affärsmodellen med dropshipping, så jag köpte kursen och var det bästa jag gjort. Krävs lite startkapital, perfekt för nyböjare.",
       name: "Felicia Benjaminson",
-      position: "Checkified Student",
+      position: "framgångsinstitutet Student",
     },
     {
       id: 6,
       imageUrl: "/images/impact/6-lucas.png",
       message:
-        "Plattformen är grym. Tog mig tre butiker innan jag hittade en vinnande produkt. Rekommenderar Checkified!",
+        "Plattformen är grym. Tog mig tre butiker innan jag hittade en vinnande produkt. Rekommenderar framgångsinstitutet!",
       name: "Lukas Boström",
-      position: "Checkified Student",
+      position: "framgångsinstitutet Student",
     },
   ],
 
@@ -285,14 +285,14 @@ export const pricingData: PricingData = {
   reviews: {
     title: "Recensioner",
     items: [
-      "Efter att ha testat flera onlineföretag som Amazon FBA, SMMA, och affiliate marketing, insåg jag att de mest bara var ute efter att ta mina pengar utan att ge något verkligt värde tillbaka. När jag stötte på checkified-butiker bestämde jag mig för att ge dropshipping en chans, och jag är så glad att jag gjorde det. Inom en enda dag hade jag en fullständig butik redo att köra, och tack vare TikTok-annonser har jag redan återhämtat min investering. Jag rekommenderar starkt detta till alla nybörjare!",
+      "Efter att ha testat flera onlineföretag som Amazon FBA, SMMA, och affiliate marketing, insåg jag att de mest bara var ute efter att ta mina pengar utan att ge något verkligt värde tillbaka. När jag stötte på framgångsinstitutet-butiker bestämde jag mig för att ge dropshipping en chans, och jag är så glad att jag gjorde det. Inom en enda dag hade jag en fullständig butik redo att köra, och tack vare TikTok-annonser har jag redan återhämtat min investering. Jag rekommenderar starkt detta till alla nybörjare!",
       "Som ny inom dropshipping blev jag positivt överraskad av den snabba och enkla installationen av min butik. Nu kan jag fokusera på marknadsföring och ser fram emot min resa med dropshipping.",
-      "Checkified ebutiker överträffade mina förväntningar med en modern design och unika produkter. Jag rekommenderar att välja deras färdig byggda e-handelsbutiker.",
-      "Trots min initiala skepsis över det låga priset blev jag positivt överraskad av kvaliteten på butiken och produkterna. Checkified ebutiker erbjuder enastående värde för nybörjare som mig och jag är mycket nöjd med mitt köp.",
-      "Jag är imponerad av den höga kvaliteten på min butik och de tillhörande produkterna till ett sådant överkomligt pris. Tack vare Checkified kan jag spara massor av tid och pengar.",
-      "Jag hade ingen erfarenhet av dropshipping men beslutade ändå att prova det här och blev glatt överraskad av den professionella butiken och de högkvalitativa produkterna. Bonus boken var ovärderlig och jag skulle definitivt rekommendera Checkified-butiker till alla. ",
-      "Jag beställde min butik och blev förvånad över att få den levererad redan nästa dag. Tack vare Checkified kan jag nu generera betydande intäkter varje dag. Tack så mycket!",
-      "Jag blev positivt överraskad av den höga kvaliteten på min butik och produkterna. Trots min initiala skepsis är jag nu en nöjd kund och ser fram emot att göra fler affärer med Checkified butiker.",
+      "framgångsinstitutet ebutiker överträffade mina förväntningar med en modern design och unika produkter. Jag rekommenderar att välja deras färdig byggda e-handelsbutiker.",
+      "Trots min initiala skepsis över det låga priset blev jag positivt överraskad av kvaliteten på butiken och produkterna. framgångsinstitutet ebutiker erbjuder enastående värde för nybörjare som mig och jag är mycket nöjd med mitt köp.",
+      "Jag är imponerad av den höga kvaliteten på min butik och de tillhörande produkterna till ett sådant överkomligt pris. Tack vare framgångsinstitutet kan jag spara massor av tid och pengar.",
+      "Jag hade ingen erfarenhet av dropshipping men beslutade ändå att prova det här och blev glatt överraskad av den professionella butiken och de högkvalitativa produkterna. Bonus boken var ovärderlig och jag skulle definitivt rekommendera framgångsinstitutet-butiker till alla. ",
+      "Jag beställde min butik och blev förvånad över att få den levererad redan nästa dag. Tack vare framgångsinstitutet kan jag nu generera betydande intäkter varje dag. Tack så mycket!",
+      "Jag blev positivt överraskad av den höga kvaliteten på min butik och produkterna. Trots min initiala skepsis är jag nu en nöjd kund och ser fram emot att göra fler affärer med framgångsinstitutet butiker.",
     ],
   },
   topReview: {

@@ -47,7 +47,7 @@ export default function TOS({}: Props) {
           </span>
           <p>
             Dessa villkor ("Villkoren") är en del av avtalet ("Avtalet") mellan
-            a) Checkified ("Leverantören"), och b) kunden som köper
+            a) framgångsinstitutet ("Leverantören"), och b) kunden som köper
             Leverantörens tjänster ("Kunden"). Tillsammans kallas Leverantören
             och Kunden för "Parterna", och var för sig "Part". Avtal som
             uttryckligen avviker från dessa Villkor gäller före Villkoren, om
@@ -161,7 +161,7 @@ export default function TOS({}: Props) {
             KUNDTJÄNST
           </span>
           <p>
-            All kontakt sker via info@checkified.se. Direktkontakt med
+            All kontakt sker via info@framgångsinstitutet.se. Direktkontakt med
             representanter kan ej garanteras.
           </p>
 

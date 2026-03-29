@@ -2,76 +2,76 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://checkified.se/</loc>
+    <loc>https://framgångsinstitutet.se/</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://checkified.se/blog/</loc>
+    <loc>https://framgångsinstitutet.se/blog/</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://checkified.se/mentorskap/</loc>
+    <loc>https://framgångsinstitutet.se/mentorskap/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://checkified.se/about/</loc>
+    <loc>https://framgångsinstitutet.se/about/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://checkified.se/contact-us/</loc>
+    <loc>https://framgångsinstitutet.se/contact-us/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
-    <loc>https://checkified.se/dropshipping/</loc>
+    <loc>https://framgångsinstitutet.se/dropshipping/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.4</priority>
   </url>
 
  <url>
-    <loc>https://checkified.se/e-handel/</loc>
+    <loc>https://framgångsinstitutet.se/e-handel/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.4</priority>
   </url>
 
  <url>
-    <loc>https://checkified.se/vsl/</loc>
+    <loc>https://framgångsinstitutet.se/vsl/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
 
  <url>
-    <loc>https://checkified.se/faq/</loc>
+    <loc>https://framgångsinstitutet.se/faq/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
 
  <url>
-    <loc>https://checkified.se/terms-of-service/</loc>
+    <loc>https://framgångsinstitutet.se/terms-of-service/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
  <url>
-    <loc>https://checkified.se/cookie-policy/</loc>
+    <loc>https://framgångsinstitutet.se/cookie-policy/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
  <url>
-    <loc>https://checkified.se/privacy-policy/</loc>
+    <loc>https://framgångsinstitutet.se/privacy-policy/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
  <url>
-    <loc>https://checkified.se/tack/</loc>
+    <loc>https://framgångsinstitutet.se/tack/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

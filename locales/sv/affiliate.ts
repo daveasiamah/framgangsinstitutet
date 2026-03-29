@@ -11,18 +11,18 @@ export const affiliateData: AffiliateData = {
     "Berika livet genom att förmedla världens främsta utbildningsupplevelse.",
 
   joinBlackTitle: "Anslut Dig Till ",
-  joinBlueTitle: "Checkified Affiliate",
+  joinBlueTitle: "framgångsinstitutet Affiliate",
   joinSubtitle:
-    "Checkified erbjuder ett brett utbud av mycket uppskattade kurser om dropshipping som instrueras av branschexperter. Genom att stödja Checkifieds tjänster kan du hjälpa din publik att förvärva de färdigheter som är nödvändiga för att påbörja och utvidga ett framgångsrikt e-handelsföretag.",
+    "framgångsinstitutet erbjuder ett brett utbud av mycket uppskattade kurser om dropshipping som instrueras av branschexperter. Genom att stödja Checkifieds tjänster kan du hjälpa din publik att förvärva de färdigheter som är nödvändiga för att påbörja och utvidga ett framgångsrikt e-handelsföretag.",
   joinButton: "Registrera dig",
 
-  benefitTitle: "Fördelar med att Främja Checkified:",
+  benefitTitle: "Fördelar med att Främja framgångsinstitutet:",
   benefitSubtitleFirst:
-    "Checkified har ett omfattande urval av kurser i dropshipping som vänder sig till både nybörjare och avancerade elever. Våra kurser leds av skickliga instruktörer och innehåller praktiska projekt och praktiska tillämpningar.",
+    "framgångsinstitutet har ett omfattande urval av kurser i dropshipping som vänder sig till både nybörjare och avancerade elever. Våra kurser leds av skickliga instruktörer och innehåller praktiska projekt och praktiska tillämpningar.",
   benefitSubtitleSecond:
-    "Som affiliate kan du tjäna en provision på varje försäljning som du hänvisar till Checkified. Våra provisionssatser är konkurrenskraftiga och vi ger bonusar till affiliates som uppvisar exemplariska prestationer.",
+    "Som affiliate kan du tjäna en provision på varje försäljning som du hänvisar till framgångsinstitutet. Våra provisionssatser är konkurrenskraftiga och vi ger bonusar till affiliates som uppvisar exemplariska prestationer.",
   benefitSubtitleThird:
-    "Checkified är ett högt ansett varumärke som är känt för att leverera överlägsen kvalitet. Som ett resultat av detta kan våra kurser skryta med höga konverteringssiffror, vilket direkt leder till högre provisioner för dig.",
+    "framgångsinstitutet är ett högt ansett varumärke som är känt för att leverera överlägsen kvalitet. Som ett resultat av detta kan våra kurser skryta med höga konverteringssiffror, vilket direkt leder till högre provisioner för dig.",
 
   whyJoinBlackTitle: "Varför Gå Med i Vårt",
   whyJoinBlueTitle: "Affiliate Program?",
@@ -39,7 +39,7 @@ export const affiliateData: AffiliateData = {
       imageUrl: "/icons/affiliate/2-quality.png",
       title: "Kvalitet Före Kvantitet",
       subtitle:
-        "Checkified har flera års erfarenhet av affiliatepartnerskap. Vi är här för att hjälpa dig att komma igång med din e-handel på nätet.",
+        "framgångsinstitutet har flera års erfarenhet av affiliatepartnerskap. Vi är här för att hjälpa dig att komma igång med din e-handel på nätet.",
     },
     {
       id: 3,
@@ -69,7 +69,7 @@ export const affiliateData: AffiliateData = {
 
     thirdTitle: "Välj annonsör",
     thirdSubtitle:
-      "Då du har registrerat den kanal (webbsida eller blog) där du vill lägga upp reklam är det dags att välja en annonsör. Det gör du i programkatalogen som du kommer åt i menyn under Program -> Program katalog. Klicka på den annons du är intresserad av så kommer du till annonsörens programsida. Exempelvis ELON, CoolStuff eller Checkified.",
+      "Då du har registrerat den kanal (webbsida eller blog) där du vill lägga upp reklam är det dags att välja en annonsör. Det gör du i programkatalogen som du kommer åt i menyn under Program -> Program katalog. Klicka på den annons du är intresserad av så kommer du till annonsörens programsida. Exempelvis ELON, CoolStuff eller framgångsinstitutet.",
 
     fourthTitle: "Hämta banners",
     fourthSubtitle:
@@ -117,7 +117,7 @@ export const affiliateData: AffiliateData = {
   },
 
   getStartedBlackTitle: "Starta nu med",
-  getStartedBlueTitle: "Checkified Affiliate",
+  getStartedBlueTitle: "framgångsinstitutet Affiliate",
   getStartedSubtitle:
     "Gå med i vårt partnerprogram idag och börja tjäna en passiv inkomst genom att marknadsföra våra tjänster.",
   getStartedButton: "Kontakta oss",

@@ -14,7 +14,7 @@ type Props = {
 }
 
 export default function HeroSection({
-  title = "Ta kontroll över ditt liv med Checkified",
+  title = "Ta kontroll över ditt liv med framgångsinstitutet",
   description = "Få mer frihet i vardagen genom att starta ditt eget e-handelsföretag. Följ över 1000 svenskar som redan upptäckt friheten med digitalt arbete. Ta det smarta steget, utbilda dig via framtidens skola och börja se resultat samtidigt som du lär dig.",
   buttonText = "Se intro guide här",
   showTrustpilot = true,

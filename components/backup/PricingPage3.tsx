@@ -63,7 +63,7 @@ export default function Pricing({}: Props) {
                   >
                     <FaCheckCircle className="text-white" size={20} /> {list}
                   </li>
-                )
+                ),
               )}
             </ul>
           </ScrollReveal>
@@ -195,9 +195,10 @@ export default function Pricing({}: Props) {
               Outstanding Capital Growth
             </h2>
             <p className="mb-6">
-              Checkified advocates for entrepreneurship that operates on a level
-              playing field, encompassing both social and economic dimensions,
-              resulting in constructive relationships among our students.
+              framgångsinstitutet advocates for entrepreneurship that operates
+              on a level playing field, encompassing both social and economic
+              dimensions, resulting in constructive relationships among our
+              students.
             </p>
             <p>
               Our efforts foster diversity in ownership models within the
@@ -236,11 +237,11 @@ export default function Pricing({}: Props) {
             className="testimony-swiper"
             navigation={{
               nextEl: ".nav-right",
-              prevEl: ".nav-left"
+              prevEl: ".nav-left",
             }}
             autoplay={{
               delay: 2500,
-              disableOnInteraction: false
+              disableOnInteraction: false,
             }}
           >
             {studentsTestimonyData.map((data) => (

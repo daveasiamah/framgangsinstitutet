@@ -4,7 +4,7 @@ const MentorshipCard = ({ onCtaClick }: { onCtaClick?: () => void }) => {
   const features = [
     {
       text: "Omedelbar tillgång",
-      highlight: "till Checkified",
+      highlight: "till framgångsinstitutet",
       boldFirst: true,
     },
     {
@@ -43,7 +43,7 @@ const MentorshipCard = ({ onCtaClick }: { onCtaClick?: () => void }) => {
         <div className="flex items-center justify-center gap-2 sm:gap-3 mb-6 sm:mb-10">
           <img
             src="/icons/checkified-icon-blue.png"
-            alt="checkified icon"
+            alt="framgångsinstitutet icon"
             width={28}
             height={28}
             className="sm:w-[35px] sm:h-[35px]"

@@ -5,7 +5,7 @@ export function EasyWayToBuy() {
     <div className="flex flex-col items-center gap-6 mt-14">
       <div className="flex flex-col items-center">
         <h1 className="font-jakarta font-extrabold text-center text-[22px] md:text-5xl">
-          Checkified — ett enkelt sätt att köpa böcker.
+          framgångsinstitutet — ett enkelt sätt att köpa böcker.
         </h1>
         <div className="flex justify-center max-w-[768px] w-full text-center items-center mt-10 p-4 mx-auto">
           <p className="font-inter text-center text-[#707BA0] text-base">
@@ -22,7 +22,7 @@ export function EasyWayToBuy() {
             image: "ebook1.png",
             title: "E-bok med plusmeny",
             description:
-              "Stryk under och sätt bokmärken, anteckna i och utanför boken, tagga upp, kategorisera, planera och strukturera. Checkified är en digital studieplattform som ger.",
+              "Stryk under och sätt bokmärken, anteckna i och utanför boken, tagga upp, kategorisera, planera och strukturera. framgångsinstitutet är en digital studieplattform som ger.",
           },
           {
             image: "ebook2.png",

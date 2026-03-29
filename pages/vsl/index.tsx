@@ -17,7 +17,7 @@ function VSL() {
             <div className="flex justify-center items-center mb-3 md:mb-6">
               <img
                 src="/images/home/logo-main.png"
-                alt="Checkified Logo"
+                alt="framgångsinstitutet Logo"
                 width={200}
                 height={50}
                 className="object-contain h-[60px] w-auto md:h-[85px]"
@@ -56,7 +56,7 @@ function VSL() {
             </h1>
 
             <p className="text-center text-[#000000] text-sm md:text-[20px] font-inter font-regular md:font-medium max-w-[843px] mx-auto mb-6 px-2 leading-[21px] md:leading-[30px]">
-              Checkified Mentorskap är en av Sveriges främsta
+              framgångsinstitutet Mentorskap är en av Sveriges främsta
               e-handelsutbildningar och visar steg för steg hur du kan starta
               och växa en lönsam webbutik vid sidan av jobb eller studier, även
               om du saknar tidigare erfarenhet.
@@ -102,7 +102,7 @@ function VSL() {
         {/* Typeform Embed */}
         <h2 className="font-jakarta font-bold text-[22px] leading-[24px] text-[#000000] text-center max-w-[343px] md:text-[32px] md:max-w-[522px] md:leading-[40px] lg:text-[42px] lg:max-w-[961px] mb-4">
           Ansök nedan till <br />
-          Checkified Mentorskap nu
+          framgångsinstitutet Mentorskap nu
         </h2>
         <p className="font-inter font-regular text-center text-[#000000] text-[16px] max-w-[317px] md:max-w-[651px] lg:max-w-[843px] mx-auto mb-4 leading-[22px]">
           Lär dig vår beprövade metod som har hjälpt tusentals svenskar att
@@ -145,7 +145,7 @@ function VSL() {
           </button>
         </div> */}
       </section>
-      <Footer/>
+      <Footer />
     </div>
   )
 }

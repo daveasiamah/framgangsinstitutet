@@ -276,7 +276,7 @@ const Annonser = () => {
               <img src="/img/review2.svg" alt="Testimonial" />
               <h3>Joel G.</h3>
               <p>
-                `Att använda Checkified Ads är en game changer för min ehandel.
+                `Att använda framgångsinstitutet Ads är en game changer för min ehandel.
                 Jag märkte direkt förbättring i engagemang och <br />{" "}
                 konverteringar. `
               </p>
@@ -286,7 +286,7 @@ const Annonser = () => {
               <h3>Mikael W.</h3>
               <p>
                 `Jag har provat själv med annonsering och content, med mindre
-                lycka. Efter <br /> Checkified så har försäljningssifrorna{" "}
+                lycka. Efter <br /> framgångsinstitutet så har försäljningssifrorna{" "}
                 <br /> stigit stadigt.`
               </p>
             </div>
@@ -379,10 +379,10 @@ const Annonser = () => {
         <div className="footer-logo_ann container_ann">
           <div className="footer-logo-content_ann">
             <img src="/img/logo.png" alt="Logo" />
-            <span>Checkified</span>
+            <span>framgångsinstitutet</span>
           </div>
           <p>
-            *Du samtycker till att vi `Checkified` inte har gjort några
+            *Du samtycker till att vi `framgångsinstitutet` inte har gjort några
             implikationer, garantier, löften, förslag, prognoser,
             representationer eller garantier överhuvudtaget till dig om framtida
             försäljning eller resultat, eller att du kommer att tjäna några
@@ -411,22 +411,22 @@ const Annonser = () => {
             VI PÅSTÅR INTE ATT DU KOMMER ATT GÄRNA INKOMSTER PÅ DIN WEBBPLATS.
             VI ÄR INTE EN AFFÄRSMÖJLIGHET, VI ÄR EN WEBBPLATSENS DESIGNBYRÅ.
             <br /> <br />
-            Checkified är en deltagare i Shopify Affiliate Program, ett
+            framgångsinstitutet är en deltagare i Shopify Affiliate Program, ett
             affiliate-annonseringsprogram som är utformat för att tillhandahålla
             ett sätt för webbplatser att tjäna reklamavgifter genom att
             annonsera och länka till Shopify.com. Som affiliate tjänar
-            Checkified provision på kvalificerade köp som görs via länkar på
+            framgångsinstitutet provision på kvalificerade köp som görs via länkar på
             denna webbplats och tjänster som levereras till våra kunder. De
             intjänade provisionerna hjälper till att stödja driften av denna
             webbplats och tillhandahålla värdefullt innehåll till våra läsare.
-            Checkified rekommenderar endast produkter och tjänster som vi
+            framgångsinstitutet rekommenderar endast produkter och tjänster som vi
             personligen har använt och tror på kvaliteten på. 
             <br /> <br />
             Den här webbplatsen är inte en del av Facebooks webbplats eller
             Facebook Inc. Dessutom är denna webbplats INTE godkänd av Facebook
             på något sätt. Facebook är ett varumärke som tillhör FACEBOOK, Inc.
             <br /> <br />
-            Checkified
+            framgångsinstitutet
           </p>
         </div>
       </div>

@@ -7,7 +7,7 @@ type ResponseData = {
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<ResponseData>
+  res: NextApiResponse<ResponseData>,
 ) {
   if (req.method !== "POST") {
     return res.status(405).json({
@@ -58,7 +58,7 @@ export default async function handler(
           updateEnabled: true,
           listIds: [18],
         }),
-      }
+      },
     )
 
     if (!contactResponse.ok) {
@@ -84,8 +84,8 @@ export default async function handler(
           },
           to: [
             {
-              email: "contact@checkified.se",
-              name: "Checkified Support",
+              email: "contact@framgångsinstitutet.se",
+              name: "framgångsinstitutet Support",
             },
           ],
           replyTo: {
@@ -102,7 +102,7 @@ export default async function handler(
             <p>${message.replace(/\n/g, "<br>")}</p>
           `,
         }),
-      }
+      },
     )
 
     if (!emailResponse.ok) {

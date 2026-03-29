@@ -1,9 +1,9 @@
-import { SignUpData } from "../types/home";
+import { SignUpData } from "../types/home"
 
 export const signUpData: SignUpData = {
   pageTitle: "Registrera",
   title: "Välkommen till",
-  free: "Checkified",
+  free: "framgångsinstitutet",
   trial: "",
   email: "Mejladress",
   phoneNumber: "Telefon",
@@ -16,6 +16,6 @@ export const signUpData: SignUpData = {
   bySign: "Genom att registrera dig accepterar du vårt",
   privacy: "Integritetspolicy",
   terms: "Användarvillkor",
-  and:"och",
+  and: "och",
   passwarning: "Lösenord måste vara minst 6 tecken",
-};
+}

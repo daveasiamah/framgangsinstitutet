@@ -62,8 +62,8 @@ export default function Footer({}: Props) {
           {/* Logo Section */}
           <div className="w-full lg:w-1/3 flex flex-col items-start text-left">
             <img
-              src="/images/home/checkified-logo-white.png"
-              alt="checkified"
+              src="/images/home/framgångsinstitutet-logo-white.png"
+              alt="framgångsinstitutet"
               width={190}
               height={55}
               className="h-[55px] sm:h-[55px] w-auto object-left object-contain"
@@ -229,10 +229,10 @@ export default function Footer({}: Props) {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 sm:gap-6 pb-6 sm:pb-8 md:pb-10 text-center md:text-left">
           {/* Copyright Section */}
           {/* <p className="text-[10px] sm:text-[10px] md:text-sm text-center md:order-1 order-1">
-            Copyright © {currentYear} Checkified. All rights reserved.
+            Copyright © {currentYear} framgångsinstitutet. All rights reserved.
           </p> */}
           <p className="text-[10px] sm:text-[10px] md:text-sm text-center md:order-1 order-1">
-            Upphovsrätt © {currentYear} Checkified. Alla rättigheter
+            Upphovsrätt © {currentYear} framgångsinstitutet. Alla rättigheter
             förbehållna.
           </p>
 
@@ -254,8 +254,8 @@ export default function Footer({}: Props) {
 
           {/* Links Section */}
           <Image
-            src="/images/home/graphics/shopify-partner.png"
-            alt="Shopify Partner"
+            src="/images/home/logo-base.png"
+            alt="framgångsinstitutet logo"
             width={146}
             height={27}
             className="md:order-3 order-3 w-[120px] sm:w-[140px] md:w-[166px] h-auto"

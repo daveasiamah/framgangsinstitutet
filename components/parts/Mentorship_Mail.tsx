@@ -30,7 +30,7 @@ const MentorshipMailer = () => {
                 <span className="font-medium text-[#434c69]">Från:</span>
                 <span className="font-semibold text-[#151E3A]">
                   {" "}
-                  Checkified Huvudkontor
+                  framgångsinstitutet Huvudkontor
                 </span>
               </div>
 
@@ -56,8 +56,8 @@ const MentorshipMailer = () => {
               <div className="space-y-3 sm:space-y-4 text-[#434c69] font-inter">
                 <p>
                   Hej, jag heter Dominic och jag är grundaren av
-                  Checkified.se... Jag kunde inte vara mer glad över att ge dig
-                  denna nya möjlighet som vi har arbetat med.
+                  framgångsinstitutet.se... Jag kunde inte vara mer glad över
+                  att ge dig denna nya möjlighet som vi har arbetat med.
                 </p>
 
                 <p>

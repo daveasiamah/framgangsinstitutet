@@ -110,9 +110,9 @@ export default function ContactUs({}: Props) {
                 <p className="text-subtitle mb-6">{data.action}</p>
                 <Link
                   href={`mailto:${
-                    data.subtitle.includes("info@checkified.se")
-                      ? "info@checkified.se"
-                      : "billing@checkified.se"
+                    data.subtitle.includes("info@framgångsinstitutet.se")
+                      ? "info@framgångsinstitutet.se"
+                      : "billing@framgångsinstitutet.se"
                   }`}
                   className="btn btn-link p-0 text-primary hover:text-primary/80 mt-auto self-start normal-case"
                 >

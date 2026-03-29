@@ -23,8 +23,9 @@ export default function WelcomeSection() {
                 <p className="font-inter font-normal text-[12px] sm:text-sm text-[#434C69]">
                   Ingen är bäst på allt, men våra är oslagbara på det som
                   räknas. Dominic är en av dem, e-handelsexpert och grundare av
-                  Checkified, i detta privata nätverket möter du honom direkt,
-                  där han lär ut exakt det han själv är bäst i landet på.
+                  framgångsinstitutet, i detta privata nätverket möter du honom
+                  direkt, där han lär ut exakt det han själv är bäst i landet
+                  på.
                 </p>
                 <p className="font-inter font-normal text-[12px] sm:text-sm text-[#434C69]">
                   Genom Dominics erfarenhet får du helheten; e-handel,
@@ -77,16 +78,17 @@ export default function WelcomeSection() {
                   av människor som lyckats?
                 </p>
                 <p className="font-inter font-normal text-[12px] sm:text-sm text-[#434C69]">
-                  Checkified har blivit navet för svensk e-handel och digitalt
-                  entreprenörskap, en plats där allt ifrån nybörjare till
-                  entreprenörer med miljonomsättning samlas för att växa.
+                  framgångsinstitutet har blivit navet för svensk e-handel och
+                  digitalt entreprenörskap, en plats där allt ifrån nybörjare
+                  till entreprenörer med miljonomsättning samlas för att växa.
                 </p>
                 <p className="font-inter font-normal text-[12px] sm:text-sm text-[#434C69]">
                   Här skapas kontakter som spelar roll, relationer som driver
                   dig framåt och möjligheter för dig som anpassar.
                 </p>
                 <p className="font-inter font-normal text-[12px] sm:text-sm text-[#434C69]">
-                  Bygger du något digitalt? Då är Checkified där du hör hemma.
+                  Bygger du något digitalt? Då är framgångsinstitutet där du hör
+                  hemma.
                 </p>
               </div>
             </div>
@@ -121,8 +123,8 @@ export default function WelcomeSection() {
                 </p>
                 <p className="font-inter font-normal text-[12px] sm:text-sm text-[#434C69]">
                   Vi samlade lärdomarna från misstag, tester och framgångar och
-                  skapade Checkified Mentorskap, ett beprövat system för
-                  e-handelsframgång.
+                  skapade framgångsinstitutet Mentorskap, ett beprövat system
+                  för e-handelsframgång.
                 </p>
                 <p className="font-inter font-normal text-[12px] sm:text-sm text-[#434C69]">
                   Metoderna är färdiga och testade; det som saknas är din tid

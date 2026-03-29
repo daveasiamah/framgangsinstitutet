@@ -4,11 +4,11 @@ export default function CoursesOverview() {
   return (
     <section className="flex flex-col items-center justify-center md:px-2 mt-14 bg-gray-50 text-center">
       <h1 className="text-[1.2rem] md:text-[1.4rem] lg:text-3xl font-extrabold font-jakarta text-[#151e3a] mb-6">
-        Lär dig digital marknadsföring och e-handel hos Checkified
+        Lär dig digital marknadsföring och e-handel hos framgångsinstitutet
       </h1>
 
       <p className="text-sm md:text-base text-gray-700 text-[#151E3A] leading-relaxed mb-8 max-w-5xl">
-        Sedan 2022 har Checkified varit en ledande aktör inom
+        Sedan 2022 har framgångsinstitutet varit en ledande aktör inom
         onlineutbildningar. Med innovativa kurser, trygg och flexibel inlärning
         och en engagerande utbildningsplattform hjälper vi dig att utveckla din
         kompetens och nå dina karriärmål. Här hittar du ett brett utbud av
@@ -28,7 +28,7 @@ export default function CoursesOverview() {
 
       {/* Call to Action */}
       <p className="text-md md:text-lg text-gray-700 text-[#151E3A] leading-relaxed mb-6 max-w-5xl">
-        Handla kurser online hos Checkified
+        Handla kurser online hos framgångsinstitutet
       </p>
     </section>
   )

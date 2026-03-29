@@ -12,7 +12,7 @@ export default function HalfCircle({
   sizeClassName,
   positionClassName,
   svgClassname,
-  className
+  className,
 }: Props) {
   return (
     <div
@@ -22,7 +22,7 @@ export default function HalfCircle({
     >
       <Image
         src="/graphics/half-circle.svg"
-        alt="checkified logo"
+        alt="framgångsinstitutet logo"
         fill
         className="object-contain"
       />

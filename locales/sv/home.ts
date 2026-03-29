@@ -2,7 +2,7 @@ import { HomeData } from "../types/home"
 
 export const homeData: HomeData = {
   metaData: {
-    title: "Checkified",
+    title: "framgångsinstitutet",
   },
 
   /*=============================================
@@ -31,7 +31,7 @@ export const homeData: HomeData = {
   platformBlackTitle: "Investera i din",
   platformBlueTitle: "framtid",
   // platformSubtitle:
-  //   "Checkified använder automatiserade processer för att underlätta sömlöst lärande. Vi gör det möjligt för enskilda personer att enkelt etablera sina egna företag.",
+  //   "framgångsinstitutet använder automatiserade processer för att underlätta sömlöst lärande. Vi gör det möjligt för enskilda personer att enkelt etablera sina egna företag.",
   featureData: [
     {
       id: 1,
@@ -58,8 +58,8 @@ export const homeData: HomeData = {
   videoTrainingData: [
     {
       id: 1,
-      imageUrl: "/images/home/0-checkified.png",
-      title: "Checkified",
+      imageUrl: "/images/home/0-framgångsinstitutet.png",
+      title: "framgångsinstitutet",
       bluetitle: "Kursplan",
       subtitle:
         "Vi har byggt upp vår program för att skapa inkomst för flera entreprenörer med rättslig säljarbas och kundrelationer. Lär dig strategierna som ska sätta grunden för din e-handel.",
@@ -137,7 +137,7 @@ export const homeData: HomeData = {
       titleBlack: "Introduktion",
       titleBlue: "Grunden",
       subtitle:
-        "Checkified skapar en idealisk miljö för din e-handelsresa. Den här formeln kommer att fungera som grund för din online",
+        "framgångsinstitutet skapar en idealisk miljö för din e-handelsresa. Den här formeln kommer att fungera som grund för din online",
       subtitletwo: "e-handel.",
       lists: [
         {
@@ -209,12 +209,12 @@ export const homeData: HomeData = {
   =============================================*/
 
   medsosTitle: "Vad lär du dig i",
-  medsosBlueTitle: " Checkified?",
+  medsosBlueTitle: " framgångsinstitutet?",
 
   startSellingBlackTittle: "Börja Sälja i En",
   startSellingBlueTittle: "Snabbväxande Bransch",
   startSellingSubtitle:
-    "Letar du efter ett sätt att starta ditt eget e-handelsföretag utan att behöva ha ett lager eller hantera leverans? Dropshipping kan vara den perfekta lösningen för dig. Använd Checkified’s verktyg för att förenkla din e-handelsresa samtidigt som du ökar dina chanser till framgång.",
+    "Letar du efter ett sätt att starta ditt eget e-handelsföretag utan att behöva ha ett lager eller hantera leverans? Dropshipping kan vara den perfekta lösningen för dig. Använd framgångsinstitutet’s verktyg för att förenkla din e-handelsresa samtidigt som du ökar dina chanser till framgång.",
   startSellingList: [
     {
       id: 1,
@@ -234,11 +234,11 @@ export const homeData: HomeData = {
   /*=====  End of Start Selling  ======*/
 
   /*=============================================
-  =            Checkified University Section            =
+  =            framgångsinstitutet University Section            =
   =============================================*/
 
   checkifiedUnivTitle: "Är du redo att förändra ditt liv?",
-  checkifiedUnivListTDesc: `Allt du behöver göra är att hitta din första framgångsrika produkt.Vi på Checkified finns här för att guida dig på vägen!`,
+  checkifiedUnivListTDesc: `Allt du behöver göra är att hitta din första framgångsrika produkt.Vi på framgångsinstitutet finns här för att guida dig på vägen!`,
   checkifiedUnivList: [
     {
       id: 1,
@@ -263,7 +263,7 @@ export const homeData: HomeData = {
   ],
   checkifiedUnivButton: "Gå med gratis",
 
-  /*=====  End of Checkified University Section  ======*/
+  /*=====  End of framgångsinstitutet University Section  ======*/
 
   featuresExploreBlackTitle: "Utforska Framtidens",
   featuresExploreBlueTitle: "Dropshipping Utbildning",
@@ -393,7 +393,7 @@ export const homeData: HomeData = {
     {
       icon: "/images/home/shopify.png",
       text: "Testa Shopify i 3 Månader För 10kr/mån",
-      link: "https://shopify.pxf.io/checkified",
+      link: "https://shopify.pxf.io/framgångsinstitutet",
     },
     {
       icon: "/images/home/youtube.png",
@@ -406,7 +406,7 @@ export const homeData: HomeData = {
   =============================================*/
 
   benefitBlackTitle: "Fördelar med",
-  benefitBlueTitle: "Checkified",
+  benefitBlueTitle: "framgångsinstitutet",
   benefitData: [
     {
       id: 1,
@@ -444,15 +444,15 @@ export const homeData: HomeData = {
       id: 1,
       imageUrl: "/images/home/testimonial/5465.jpg",
       name: "Elias Bergqvist",
-      job: "Checkified Studerande",
+      job: "framgångsinstitutet Studerande",
       message:
-        "Enkelt att följa sin utveckling, man lär sig samtidigt som träffar andra liksinnade personer. Checkified är framtiden och det är såhär inlärning ska vara!",
+        "Enkelt att följa sin utveckling, man lär sig samtidigt som träffar andra liksinnade personer. framgångsinstitutet är framtiden och det är såhär inlärning ska vara!",
     },
     {
       id: 2,
       imageUrl: "/images/home/testimonial/487-1.jpg",
       name: "Simon Gustafsson",
-      job: "Checkified Studerande",
+      job: "framgångsinstitutet Studerande",
       message:
         "Grym plattform. Tack vare av Checkifieds funktioner har jag lärt mig om e-handel och dels ökat min mindset om vad man ska tänka på.",
     },
@@ -460,7 +460,7 @@ export const homeData: HomeData = {
       id: 3,
       imageUrl: "/images/home/testimonial/564-1.jpg",
       name: "Linnea Östling",
-      job: "Checkified Studerande",
+      job: "framgångsinstitutet Studerande",
       message:
         "Absolut det bästa beslut jag tagit ang starta min egna online business. Man tror knappt att det är sant när man får flera försäljningar.",
     },
@@ -468,7 +468,7 @@ export const homeData: HomeData = {
       id: 4,
       imageUrl: "/images/home/testimonial/4564-1.jpg",
       name: "Linnea Östling",
-      job: "Checkified Student",
+      job: "framgångsinstitutet Student",
       message:
         "Absolutely the best decision I've made in starting my own online business. You can hardly believe it when you get several sales.",
     },
@@ -476,7 +476,7 @@ export const homeData: HomeData = {
       id: 5,
       imageUrl: "/images/home/testimonial/4653-1.jpg",
       name: "Linnea Östling",
-      job: "Checkified Student",
+      job: "framgångsinstitutet Student",
       message:
         "Absolutely the best decision I've made in starting my own online business. You can hardly believe it when you get several sales.",
     },

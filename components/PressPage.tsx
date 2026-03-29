@@ -16,20 +16,20 @@ import CacingOne from "@/components/graphic/CacingOne"
 const aboutImageData: { id: number; imageUrl: string }[] = [
   {
     id: 1,
-    imageUrl: "/images/press/image-1.png"
+    imageUrl: "/images/press/image-1.png",
   },
   {
     id: 2,
-    imageUrl: "/images/press/image-2.png"
+    imageUrl: "/images/press/image-2.png",
   },
   {
     id: 3,
-    imageUrl: "/images/press/image-3.png"
+    imageUrl: "/images/press/image-3.png",
   },
   {
     id: 4,
-    imageUrl: "/images/press/image-4.png"
-  }
+    imageUrl: "/images/press/image-4.png",
+  },
 ]
 
 type Props = {}
@@ -53,7 +53,7 @@ export default function Press({}: Props) {
 
         <Title blackText="Press" className="mx-auto text-center" />
         <p className="text-subtitle text-center max-w-xl mx-auto">
-          News, announcements, and insights about Checkified.
+          News, announcements, and insights about framgångsinstitutet.
         </p>
       </section>
 
@@ -61,14 +61,15 @@ export default function Press({}: Props) {
         <div className="p-8 shadow-xl bg-white rounded-2xl text-center">
           <h2 className="text-2xl font-bold mb-4">Contact</h2>
           <div className="flex items-center gap-2 text-subtitle justify-center">
-            <MdMail className="text-primary" size={24} /> info@checkified.io
+            <MdMail className="text-primary" size={24} />{" "}
+            info@framgångsinstitutet.io
           </div>
         </div>
         <div className="p-8 shadow-xl bg-white rounded-2xl text-center">
           <h2 className="text-2xl font-bold mb-4">News</h2>
           <div className="flex items-center gap-2 text-subtitle justify-center">
             <MdDescription className="text-primary" size={24} />{" "}
-            press@checkified.io
+            press@framgångsinstitutet.io
           </div>
         </div>
         <div className="p-8 shadow-xl bg-white rounded-2xl text-center">
@@ -95,8 +96,8 @@ export default function Press({}: Props) {
           </h2>
 
           <p className="mb-6">
-            Checkified takes great pleasure in unveiling its latest offering: a
-            course on dropshipping targeted at entrepreneurs.
+            framgångsinstitutet takes great pleasure in unveiling its latest
+            offering: a course on dropshipping targeted at entrepreneurs.
           </p>
           <p>
             The curriculum aims to equip entrepreneurs with the necessary
@@ -136,7 +137,7 @@ export default function Press({}: Props) {
               <div className="bg-primary text-white p-2 rounded-full btn-shadow">
                 <FaBook size={14} />
               </div>
-              Checkified University
+              framgångsinstitutet University
             </div>
           </div>
           <div className="absolute top-0 right-4 p-3 bg-secondary rounded-xl text-white rotate-[25deg]">
@@ -146,14 +147,14 @@ export default function Press({}: Props) {
         <div className="w-full lg:w-3/5">
           <Title
             blackText="Skills You Will Acquire"
-            blueText=" Through Checkified"
+            blueText=" Through framgångsinstitutet"
             className="text-left leading-[3rem]"
           />
 
           <p className="mb-6 text-subtitle">
-            Checkified offers an all-encompassing course that equips learners
-            with the knowledge and skills required to start and operate a
-            profitable dropshipping venture.
+            framgångsinstitutet offers an all-encompassing course that equips
+            learners with the knowledge and skills required to start and operate
+            a profitable dropshipping venture.
           </p>
           <p className="text-subtitle">
             Remarkable overview of dropshipping, covering its pros and cons,
@@ -165,18 +166,18 @@ export default function Press({}: Props) {
       <section className="py-12 lg:py-16">
         <Title
           blackText="About"
-          blueText="Checkified"
+          blueText="framgångsinstitutet"
           className="mx-auto text-center"
         />
         <p className="text-subtitle text-center max-w-xl mx-auto">
-          Take a tour of how the Checkified team works. Learn more about
-          Checkified, visit our{" "}
+          Take a tour of how the framgångsinstitutet team works. Learn more
+          about framgångsinstitutet, visit our{" "}
           <Link href="/about" className="text-primary font-bold">
             About page
           </Link>
           .
         </p>
-        <div className="press-about-checkified grid grid-cols-1 lg:grid-cols-2 gap-20 mt-16">
+        <div className="press-about-framgångsinstitutet grid grid-cols-1 lg:grid-cols-2 gap-20 mt-16">
           {aboutImageData.map((data) => (
             <div
               key={data.id}
@@ -200,11 +201,11 @@ export default function Press({}: Props) {
           className="mx-auto text-center"
         />
         <p className="text-subtitle text-center max-w-3xl mx-auto">
-          Download the authorized Checkified trademark that is suitable for both
-          light and blue backgrounds. Our logo constitutes a fundamental
-          component of our brand, and we request that you employ it uniformly
-          and refrain from altering its orientation, hue, or any visual
-          enhancements.
+          Download the authorized framgångsinstitutet trademark that is suitable
+          for both light and blue backgrounds. Our logo constitutes a
+          fundamental component of our brand, and we request that you employ it
+          uniformly and refrain from altering its orientation, hue, or any
+          visual enhancements.
         </p>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 h-[72rem] lg:h-[800px] my-16">
@@ -213,14 +214,14 @@ export default function Press({}: Props) {
               <Image
                 className="svg-primary"
                 src="/logo.svg"
-                alt="checkified"
+                alt="framgångsinstitutet"
                 height={160}
                 width={160}
               />
               <Image
                 className="svg-primary-opacity absolute -bottom-10 -left-10 bg-opacity-10"
                 src="/logo.svg"
-                alt="checkified"
+                alt="framgångsinstitutet"
                 height={230}
                 width={230}
               />
@@ -239,7 +240,7 @@ export default function Press({}: Props) {
                 <Image
                   className="svg-white absolute-center"
                   src="/logo.svg"
-                  alt="checkified"
+                  alt="framgångsinstitutet"
                   height={100}
                   width={100}
                 />
@@ -247,7 +248,7 @@ export default function Press({}: Props) {
               <Image
                 className="svg-white-opacity absolute -bottom-10 -left-10 bg-opacity-10"
                 src="/logo.svg"
-                alt="checkified"
+                alt="framgångsinstitutet"
                 height={230}
                 width={230}
               />
@@ -272,9 +273,9 @@ export default function Press({}: Props) {
           />
 
           <p className="mb-6 text-subtitle">
-            Checkified offers an all-encompassing course that equips learners
-            with the knowledge and skills required to start and operate a
-            profitable dropshipping venture.
+            framgångsinstitutet offers an all-encompassing course that equips
+            learners with the knowledge and skills required to start and operate
+            a profitable dropshipping venture.
           </p>
           <p className="text-subtitle">
             Remarkable overview of dropshipping, covering its pros and cons,

@@ -57,7 +57,7 @@ const CourseDetailPage = ({ course }: { course: Course[] }) => {
         <div className="w-full lg:w-auto lg:min-w-[386px] mt-12 lg:mt-0 lg:pl-6 order-2">
           <div className="flex flex-col items-center lg:sticky lg:top-[600px]">
             <h2 className="font-jakarta text-lg font-bold mb-4 text-center">
-              Checkified Erbjudanden
+              framgångsinstitutet Erbjudanden
             </h2>
             <div className="max-w-full md:max-w-[386px] rounded-[30px] border-2 border-[#DCE2F8] p-[20px] md:p-[28px]">
               <div className="flex flex-col px-4 md:px-8 py-4 rounded-[25px] bg-[#225aea] mb-4">
@@ -66,7 +66,7 @@ const CourseDetailPage = ({ course }: { course: Course[] }) => {
                     src="/icons/courses/side-bar-logo.svg"
                     width={48}
                     height={49}
-                    alt="checkified-logo"
+                    alt="framgångsinstitutet-logo"
                   />
                   <div className="flex flex-col gap-2 max-h-[61px] text-white">
                     <h4 className="font-jakarta font-bold text-sm">
@@ -79,7 +79,7 @@ const CourseDetailPage = ({ course }: { course: Course[] }) => {
                   </div>
                 </div>
                 <Link
-                  href="https://checkified.se/utbildningar/"
+                  href="https://framgångsinstitutet.se/utbildningar/"
                   className="w-full text-center py-3 bg-white text-[#151e3a] font-semibold rounded-[10px]"
                 >
                   <p className="text-xs">Utforska Utbildningar</p>
@@ -103,7 +103,7 @@ const CourseDetailPage = ({ course }: { course: Course[] }) => {
                   </div>
                 </div>
                 <Link
-                  href="https://shopify.pxf.io/checkified"
+                  href="https://shopify.pxf.io/framgångsinstitutet"
                   className="w-full text-center py-3 bg-white text-[#151e3a] font-semibold rounded-[10px]"
                 >
                   <p className="text-xs">Få Erbjudande</p>

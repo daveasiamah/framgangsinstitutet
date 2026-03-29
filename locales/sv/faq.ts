@@ -9,7 +9,7 @@ export const faqData: { id: number; question: string; answer: string }[] = [
     id: 2,
     question: "Jag har ingen erfarenhet, är det ändå något för mig?",
     answer:
-      "Om du inte har någon tidigare erfarenhet av dropshipping eller e-handel så är Checkified rätt ställe för dig. Vår utbildning är utformad för att hjälpa både nybörjare och de med viss erfarenhet att lyckas. Med vårt steg-för-steg system, vår gemenskap och vår support kommer du att lära dig allt du behöver för att komma igång och skala din verksamhet.",
+      "Om du inte har någon tidigare erfarenhet av dropshipping eller e-handel så är framgångsinstitutet rätt ställe för dig. Vår utbildning är utformad för att hjälpa både nybörjare och de med viss erfarenhet att lyckas. Med vårt steg-för-steg system, vår gemenskap och vår support kommer du att lära dig allt du behöver för att komma igång och skala din verksamhet.",
   },
   {
     id: 3,
@@ -25,30 +25,30 @@ export const faqData: { id: number; question: string; answer: string }[] = [
   },
   {
     id: 5,
-    question: "Hur kan Checkified säkerställa resultat?",
+    question: "Hur kan framgångsinstitutet säkerställa resultat?",
     answer:
       "Vi är övertygade om vårt program och garanterar resultat, så länge du gör din del. Vi har flera studenter som når minst 100 000 SEK i omsättning inom 12 månader, efter vår dropshipping utbildning.",
   },
   {
     id: 6,
-    question: "Varför grundade jag Checkified?",
+    question: "Varför grundade jag framgångsinstitutet?",
     answer:
-      "Jag grundade Checkified för att förenkla och effektivisera lärandet av dropshipping. Jag upptäckte att många andra utbildningar saknade den nödvändiga supporten och strukturen för långsiktig framgång, så vi valde att förändra det.",
+      "Jag grundade framgångsinstitutet för att förenkla och effektivisera lärandet av dropshipping. Jag upptäckte att många andra utbildningar saknade den nödvändiga supporten och strukturen för långsiktig framgång, så vi valde att förändra det.",
   },
   {
     id: 7,
     question: "Är allt kostnadsfritt?",
     answer:
-      "Checkified är helt gratis och erbjuder en kostnadsfri kurs inom dropshipping. Utöver det finns tjänster som Checkified E-butiker, Checkified Ads, Platinum-kursen och Checkified Mentorskap. För att överleva som organisation samarbetar Checkified med flera partners",
+      "framgångsinstitutet är helt gratis och erbjuder en kostnadsfri kurs inom dropshipping. Utöver det finns tjänster som framgångsinstitutet E-butiker, framgångsinstitutet Ads, Platinum-kursen och framgångsinstitutet Mentorskap. För att överleva som organisation samarbetar framgångsinstitutet med flera partners",
   },
 ]
 
 export const faqPageData: { id: number; question: string; answer: string }[] = [
   {
     id: 1,
-    question: "Vad är Checkified?",
-    answer: `Checkified.se är ett ledande digitalt universitet inom e-handel och dropshipping, utformat för att stödja både blivande och etablerade entreprenörer i att bygga, lansera och skala framgångsrika onlinebutiker. 
-    \nMed Checkified.se kan du:\n
+    question: "Vad är framgångsinstitutet?",
+    answer: `framgångsinstitutet.se är ett ledande digitalt universitet inom e-handel och dropshipping, utformat för att stödja både blivande och etablerade entreprenörer i att bygga, lansera och skala framgångsrika onlinebutiker. 
+    \nMed framgångsinstitutet.se kan du:\n
     - Hitta vinnande produkter: Få tillgång till en kuraterad lista över lönsamma produkter.
     - Utföra produktforskning: Hitta trendande produkter med hög försäljningspotential.
     - Lansera färdiga butiker: Få en professionellt designad butik redo att sälja.
@@ -59,7 +59,7 @@ export const faqPageData: { id: number; question: string; answer: string }[] = [
     id: 2,
     question: "Finns det en gratis provperiod?",
     answer:
-      "Absolut, du kan skapa ett konto med Checkified gratis. Vi erbjuder en 7-dagars testperiod som du kan avbryta när som helst.",
+      "Absolut, du kan skapa ett konto med framgångsinstitutet gratis. Vi erbjuder en 7-dagars testperiod som du kan avbryta när som helst.",
   },
   {
     id: 3,
@@ -70,7 +70,7 @@ export const faqPageData: { id: number; question: string; answer: string }[] = [
   {
     id: 4,
     question: "Vilka betalningsmetoder accepterar du?",
-    answer: `Checkified accepterar följande betalningsmetoder genom säker betalningshantering:\n
+    answer: `framgångsinstitutet accepterar följande betalningsmetoder genom säker betalningshantering:\n
     - Visa
     - Mastercard
     - American Express
@@ -90,7 +90,7 @@ export const faqPageData: { id: number; question: string; answer: string }[] = [
   {
     id: 6,
     question: "Vad är Checkifieds prissättning?",
-    answer: `Checkified erbjuder en 7-dagars gratis provperiod. Därefter:\n
+    answer: `framgångsinstitutet erbjuder en 7-dagars gratis provperiod. Därefter:\n
     - 299 kr/månad
     - 2790 kr/år\n
     **Övriga tjänster:**\n

@@ -166,7 +166,7 @@ requiredEnvVars.forEach((envVar) => {
 Visit your site and check headers using browser DevTools or:
 
 ```bash
-curl -I https://checkified.se
+curl -I https://framgångsinstitutet.se
 ```
 
 Or use: https://securityheaders.com/
@@ -177,7 +177,7 @@ Try sending invalid data to the API:
 
 ```bash
 # Should return 400 with validation errors
-curl -X POST https://checkified.se/api/newsletter \
+curl -X POST https://framgångsinstitutet.se/api/newsletter \
   -H "Content-Type: application/json" \
   -d '{"email": "invalid"}'
 ```

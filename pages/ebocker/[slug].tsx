@@ -70,7 +70,7 @@ const EbookDetailPage = ({ ebook }: { ebook: Ebook[] }) => {
                     src="/icons/courses/side-bar-logo.svg"
                     width={48}
                     height={49}
-                    alt="checkified-logo"
+                    alt="framgångsinstitutet-logo"
                   />
                   <div className="flex flex-col gap-2 max-h-[61px] text-white">
                     <h4 className="font-jakarta font-bold text-sm">
@@ -83,7 +83,7 @@ const EbookDetailPage = ({ ebook }: { ebook: Ebook[] }) => {
                   </div>
                 </div>
                 <a
-                  href="https://checkified.se/utbildningar"
+                  href="https://framgångsinstitutet.se/utbildningar"
                   className="w-full text-center py-3 bg-white text-[#151e3a] font-semibold rounded-[10px]"
                 >
                   <p className="text-xs">Utforska Utbildningar</p>
@@ -107,7 +107,7 @@ const EbookDetailPage = ({ ebook }: { ebook: Ebook[] }) => {
                   </div>
                 </div>
                 <a
-                  href="https://shopify.pxf.io/checkified"
+                  href="https://shopify.pxf.io/framgångsinstitutet"
                   className="w-full text-center py-3 bg-white text-[#151e3a] font-semibold rounded-[10px]"
                 >
                   <p className="text-xs">Få Erbjudande</p>

@@ -17,15 +17,15 @@ export default function About() {
         <div className="max-w-7xl mx-auto">
           {/* Title */}
           <h1 className="text-[#151E3A] text-[30px] md:text-[48px] lg:text-[56px] font-bold font-jakarta text-center mb-6 leading-[32px] md:leading-[44px] lg:leading-[52px] max-w-[700px] md:max-w-[550px] lg:max-w-[700px] mx-auto">
-            Checkified Revolution
+            framgångsinstitutet Revolution
           </h1>
 
           {/* Description */}
           <p className="text-[#434C69] text-[16px] font-inter font-medium text-center mb-4 leading-relaxed max-w-[733px] md:max-w-[690px] mx-auto">
-            Checkified grundades av e-handelsentreprenör och grundaren Dominic,
-            för att hjälpa dig att komma igång med dropshipping och e-handel.
-            Det som började som en lösning på hans egna utmaningar inom e-handel
-            utvecklades så småningom till Checkified.
+            framgångsinstitutet grundades av e-handelsentreprenör och grundaren
+            Dominic, för att hjälpa dig att komma igång med dropshipping och
+            e-handel. Det som började som en lösning på hans egna utmaningar
+            inom e-handel utvecklades så småningom till framgångsinstitutet.
           </p>
 
           {/* CTA Button */}
@@ -41,8 +41,8 @@ export default function About() {
           {/* Video/Image Section */}
           <div className="relative flex flex-col items-center max-w-[360px] md:max-w-[480px] lg:max-w-[860px] mx-auto">
             <img
-              src="/images/home/graphics/checkified-hero.png"
-              alt="Checkified Hero"
+              src="/images/home/graphics/framgångsinstitutet-hero.png"
+              alt="framgångsinstitutet Hero"
               width={960}
               height={540}
               className="object-cover w-auto md:w-full h-auto"
@@ -73,7 +73,7 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="flex flex-col items-center">
               <img
-                src="/icons/checkified-icon.svg"
+                src="/icons/framgångsinstitutet-icon.svg"
                 alt="Founded"
                 width={34}
                 height={34}
@@ -83,7 +83,7 @@ export default function About() {
                 Grundad
               </h3>
               <p className="text-[#434C69] text-[10px] lg:text-[14px] font-inter font-normal leading-relaxed max-w-[300px] md:max-w-[300px] text-center">
-                En idé föddes, Checkified grundades.
+                En idé föddes, framgångsinstitutet grundades.
               </p>
             </div>
             <div className="flex flex-col items-center">
@@ -114,8 +114,9 @@ export default function About() {
                 Nutid
               </h3>
               <p className="text-[#434C69] text-[10px] lg:text-[14px] font-inter font-normal leading-relaxed max-w-[300px] md:max-w-[300px] text-center">
-                Checkified är live och hjälper människor över hela världen att
-                förvandla sina dropshipping drömmar till lönsamma verkligheter.
+                framgångsinstitutet är live och hjälper människor över hela
+                världen att förvandla sina dropshipping drömmar till lönsamma
+                verkligheter.
               </p>
             </div>
           </div>
@@ -158,7 +159,7 @@ export default function About() {
                 Kommer till liv
               </h3>
               <p className="text-[#434C69] text-[10px] lg:text-[14px] font-inter font-normal leading-relaxed max-w-[300px] md:max-w-[276px] text-center">
-                Checkified är i full utvecklingsfas med nya verktyg och
+                framgångsinstitutet är i full utvecklingsfas med nya verktyg och
                 funktioner som släpps regelbundet.
               </p>
             </div>
@@ -172,8 +173,8 @@ export default function About() {
             Vår grundare
           </h2>
           <p className="text-[#434C69] mt-[8px] md:mt-4 text-[10px] md:text-[12px] lg:text-[16px] font-inter font-normal leading-relaxed max-w-[276px] md:max-w-[890px] mx-auto ">
-            Möt grundaren bakom Checkified, som är dedikerad till att hjälpa dig
-            att nå framgång inom dropshipping.
+            Möt grundaren bakom framgångsinstitutet, som är dedikerad till att
+            hjälpa dig att nå framgång inom dropshipping.
           </p>
         </div>
         {/* Profile container */}
@@ -181,7 +182,7 @@ export default function About() {
           <div className="w-full flex flex-col">
             <img
               src="/images/om-oss/dominic.jpg"
-              alt="Dominic - Grundare av Checkified"
+              alt="Dominic - Grundare av framgångsinstitutet"
               width={64}
               height={64}
               className="object-cover w-[64px] h-[64px] rounded-full self-start"
@@ -191,11 +192,11 @@ export default function About() {
             </h3>
             <p className="text-[#434C69] mt-[8px] md:mt-1 text-[10px] md:text-[12px] lg:text-[14px] font-inter font-normal leading-snug max-w-[284px] md:max-w-[647px] ">
               Dominic, en åttasiffrig dropshippare och entreprenör, VD för
-              Checkified.
+              framgångsinstitutet.
             </p>
             <p className="text-[#434C69] text-[10px] mt-[14px] md:text-[12px] lg:text-[14px] font-inter font-normal leading-snug max-w-[284px] md:max-w-[647px]">
-              Som din instruktör i Checkified delar Dominic med sig av sin
-              expertis för att hjälpa dig att lyckas.
+              Som din instruktör i framgångsinstitutet delar Dominic med sig av
+              sin expertis för att hjälpa dig att lyckas.
             </p>
           </div>
         </div>
@@ -222,9 +223,10 @@ export default function About() {
               </h3>
               <div className="space-y-4 text-[#434C69] font-inter text-[12px] sm:text-sm md:text-[16px] leading-relaxed">
                 <p className="font-inter font-normal text-[12px] sm:text-sm text-[#434C69]">
-                  På Checkified händer det alltid något nytt. Vår vardag är
-                  fylld av energi, idéer och människor som vill framåt, och det
-                  är just den dynamiken som gör vår miljö så inspirerande.
+                  På framgångsinstitutet händer det alltid något nytt. Vår
+                  vardag är fylld av energi, idéer och människor som vill
+                  framåt, och det är just den dynamiken som gör vår miljö så
+                  inspirerande.
                 </p>
                 <p className="font-inter font-normal text-[12px] sm:text-sm text-[#434C69]">
                   En dag djupdyker vi i strategier för att bygga framgångsrika
@@ -240,10 +242,10 @@ export default function About() {
                   alltid någon som vill växa.
                 </p>
                 <p className="font-inter font-normal text-[12px] sm:text-sm text-[#434C69]">
-                  På Checkified utvecklas vi tillsammans, steg för steg. Här
-                  formas framtidens entreprenörer, och varje dag tar vi ett nytt
-                  kliv mot att bli ännu bättre, både som människor och som
-                  skapare.
+                  På framgångsinstitutet utvecklas vi tillsammans, steg för
+                  steg. Här formas framtidens entreprenörer, och varje dag tar
+                  vi ett nytt kliv mot att bli ännu bättre, både som människor
+                  och som skapare.
                 </p>
               </div>
             </div>
@@ -255,7 +257,7 @@ export default function About() {
         <div className="max-w-[1280px] mx-auto w-full">
           <div className="flex flex-col items-center justify-center px-4 md:px-4 lg:px-0">
             <h2 className="font-geist font-semibold text-center text-white text-[26px] md:text-[40px] leading-[40px]">
-              Varför välja Checkified?
+              Varför välja framgångsinstitutet?
             </h2>
             <p className="font-inter text-[14px] md:text-[16px] text-white text-center leading-[18px] md:max-w-[684px] lg:max-w-[969px] mt-4 mb-12">
               Vår AI-drivna utbildning hjälper dig att fatta bättre beslut
@@ -310,9 +312,9 @@ export default function About() {
                 Community
               </h3>
               <p className="font-inter text-[14px] md:text-[16px] text-white text-start max-w-[262px]">
-                På Checkified tror vi på styrka i antal. Vi bygger en gemenskap
-                av handlare för att kollektivt öka lärdom och kunskap inom
-                e-handel.
+                På framgångsinstitutet tror vi på styrka i antal. Vi bygger en
+                gemenskap av handlare för att kollektivt öka lärdom och kunskap
+                inom e-handel.
               </p>
             </div>
             <div className="flex flex-col items-start">
@@ -341,8 +343,8 @@ export default function About() {
             Kom igång & maximera dina intäkter
           </h2>
           <p className="text-[#434C69] md:mt-2 lg:mt-6 text-[12px] md:text-base lg:text-[16px] font-inter font-normal leading-relaxed max-w-[309px] md:max-w-[365px] lg:max-w-[679px] mx-auto ">
-            Med Checkified kan du komma igång och öka din försäljning med hjälp
-            av Checkified AI.
+            Med framgångsinstitutet kan du komma igång och öka din försäljning
+            med hjälp av framgångsinstitutet AI.
           </p>
           <img
             src="/images/om-oss/graph-metrics.png"
@@ -359,7 +361,7 @@ export default function About() {
         <div className="relative left-0 right-0 flex flex-col items-center justify-center bg-[#2E56F5] rounded-[16px] md:rounded-[20px] px-4 md:px-4 lg:px-6 py-6 md:py-8 lg:py-10 back-background">
           <div className="text-center flex flex-col items-center w-full">
             <h1 className="text-white text-center text-[14px] md:text-[32px] leading-[1.3] max-w-[90%] sm:max-w-[600px] font-bold font-jakarta mb-3 md:mb-4">
-              Vill du bli en del av Checkified team?
+              Vill du bli en del av framgångsinstitutet team?
             </h1>
             <p className="font-inter text-[8px] md:text-[14px] max-w-[233px] md:max-w-[413px] mb-[14px] md:mb-[26px]">
               Skicka in din ansökan för den roll du tycker passar dig bäst. Vi

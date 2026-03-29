@@ -1,4 +1,4 @@
-import { FooterData } from "../types/footer";
+import { FooterData } from "../types/footer"
 
 export const footerData: FooterData = {
   footerTitle: " Unleash Your Potential",
@@ -6,7 +6,7 @@ export const footerData: FooterData = {
     " Built by e-merchants for e-merchants with the mission to help entrepreneurs start and grow successful businesses.",
   product: {
     title: "Product",
-    linkOne: "Checkified Ads",
+    linkOne: "framgångsinstitutet Ads",
     linkTwo: "Affiliates",
     linkThree: "",
   },
@@ -25,4 +25,4 @@ export const footerData: FooterData = {
   terms: "Terms",
   privacy: "Privacy",
   cookie: "Cookie",
-};
+}

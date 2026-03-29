@@ -12,7 +12,7 @@ const MentorshipHero = ({ onCtaClick }: MentorshipHeroProps) => {
     <div className="mx-auto w-full max-w-4xl flex flex-col items-center h-auto">
       <ScrollReveal className="flex justify-center mt-6">
         <img
-          src="/icons/mentorship/checkified-icon-top.png"
+          src="/icons/mentorship/framgångsinstitutet-icon-top.png"
           className="w-[33px] h-[33px] md:w-[42px] md:h-[42px]"
           alt="store-icon"
         />
@@ -39,8 +39,8 @@ const MentorshipHero = ({ onCtaClick }: MentorshipHeroProps) => {
          leading:[15px] md:leading-[20px] mb-[7px] md:mb-[14px] lg:mb-[20px] md:max-w-[521px] lg:max-w-[843px] mx-auto"
           >
             Alla framgångsrika e-handelsresor börjar med ett första steg. Hos
-            Checkified får du mentorskap inom e-handel som hjälper dig att
-            starta, växa och ta din e-handelsverksamhet till nästa nivå.
+            framgångsinstitutet får du mentorskap inom e-handel som hjälper dig
+            att starta, växa och ta din e-handelsverksamhet till nästa nivå.
           </p>
         </div>
       </div>

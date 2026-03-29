@@ -63,7 +63,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
     }
   }
 
-  const excludedPaths = ["/annonser", "checkified.se/", "/butiker"]
+  const excludedPaths = ["/annonser", "framgångsinstitutet.se/", "/butiker"]
 
   return (
     <Box
@@ -90,7 +90,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
           <Flex align="center">
             <img
               src="/images/home/logo-main.png"
-              alt="checkified"
+              alt="framgångsinstitutet"
               width={187}
               height={64}
               className="object-cover w-[120px] md:w-[180px] lg:w-[187px] h-auto"

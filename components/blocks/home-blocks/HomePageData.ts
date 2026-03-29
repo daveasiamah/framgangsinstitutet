@@ -24,7 +24,8 @@ interface CTA {
 export const homePageFaqs: FAQ[] = [
   {
     id: 0,
-    question: "Behöver jag ha en egen dator för att studera på Checkified?",
+    question:
+      "Behöver jag ha en egen dator för att studera på framgångsinstitutet?",
     answer:
       "För att kunna delta på utbildningen behöver du tillgång till en dator och det är därför viktigt att du har införskaffat en dator när utbildningen väl startar. Du kan inte genomföra utbildningen med en mobiltelefon.",
   },
@@ -50,7 +51,7 @@ export const homePageFaqs: FAQ[] = [
     id: 4,
     question: "Vad innebär det att studera en onlineutbildning?",
     answer:
-      "En onlineutbildning hos Checkified passar dig som önskar lite extra frihet och flexibilitet under din studietid. Alla onlineutbildningar består av digitalt innehåll i form av förinspelade lektioner och/eller digitalt studiematerial som studenter kan ta del av när och vart som helst. Utbildningarna är generellt sett kortare än traditionella yrkeshögskoleutbildningar och kan läsas på hel eller halvfart – perfekt för dig som vill kombinera studier med arbete eller annat kul!",
+      "En onlineutbildning hos framgångsinstitutet passar dig som önskar lite extra frihet och flexibilitet under din studietid. Alla onlineutbildningar består av digitalt innehåll i form av förinspelade lektioner och/eller digitalt studiematerial som studenter kan ta del av när och vart som helst. Utbildningarna är generellt sett kortare än traditionella yrkeshögskoleutbildningar och kan läsas på hel eller halvfart – perfekt för dig som vill kombinera studier med arbete eller annat kul!",
   },
   {
     id: 5,

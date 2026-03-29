@@ -85,7 +85,7 @@ export default function TestimonialsSection() {
         {/* Header */}
         <div className="text-center mb-[8px] md:mb-[14px] px-4 md:px-0">
           <h2 className="text-[#151E3A] text-[28px] md:text-[40px] lg:text-[48px] font-bold font-jakarta mb-2 mt-[24px] md:mt-[38px] lg:mt-[50px] leading-[36px] md:leading-[44px] lg:leading-[52px]">
-            Förändra ditt liv med Checkified
+            Förändra ditt liv med framgångsinstitutet
           </h2>
           <p className="text-[#434C69] text-[16px] font-inter max-w-[700px] mx-auto">
             Alla som lyckats började med ett första steg, ett klick, en ansökan.

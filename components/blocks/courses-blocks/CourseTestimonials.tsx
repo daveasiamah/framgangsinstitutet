@@ -9,8 +9,9 @@ const CourseTestimonials = () => (
       {/* Testimonial 1 */}
       <div className="flex flex-col max-w-[365px] mx-auto">
         <p className="text-[#707ba0] text-[12px] md:text-base leading-relaxed mb-4">
-          “Kan varmt rekommendera Marknadsföring Meta ad hos Checkified! Det är
-          en utbildning alla borde gå oavsett om man är chef eller inte.“
+          “Kan varmt rekommendera Marknadsföring Meta ad hos
+          framgångsinstitutet! Det är en utbildning alla borde gå oavsett om man
+          är chef eller inte.“
         </p>
         <p className="text-[#225aea] text-sm font-semibold uppercase">
           Alexandra - Marknadsföring Meta Ads

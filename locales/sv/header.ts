@@ -15,7 +15,7 @@ export const headerData: HeaderData = {
       id: 2,
       imageUrl: "/icons/header/clipboard.svg",
       title: "Om oss",
-      desc: "Lär känna oss i Checkified",
+      desc: "Lär känna oss i framgångsinstitutet",
       link: "/about",
     },
     {
@@ -28,7 +28,7 @@ export const headerData: HeaderData = {
     {
       id: 4,
       imageUrl: "/icons/header/briefcase.svg",
-      title: "Checkified Ads",
+      title: "framgångsinstitutet Ads",
       desc: "Få marknadsföring videos",
       link: "/annonser",
     },
@@ -50,7 +50,7 @@ export const headerData: HeaderData = {
       id: 7,
       imageUrl: "/icons/header/award.svg",
       title: "Affiliates",
-      desc: "Bli en Checkified Affiliate",
+      desc: "Bli en framgångsinstitutet Affiliate",
       link: "/affiliate",
     },
     {

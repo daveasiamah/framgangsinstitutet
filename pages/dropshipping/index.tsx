@@ -10,7 +10,7 @@ export default function Dropshipping() {
   const { openContractForm } = useModal()
 
   return (
-    <Layout headTitle="Dropshipping - Checkified" isFullWidth={true}>
+    <Layout headTitle="Dropshipping - framgångsinstitutet" isFullWidth={true}>
       <section className="relative bg-white pt-8 px-4 bg-[url('/images/hero-mesh.svg')] bg-no-repeat bg-cover bg-center">
         <div className="max-w-7xl mx-auto">
           {/* Title */}
@@ -48,7 +48,7 @@ export default function Dropshipping() {
           {/* Video/Image Section */}
           <div className="relative max-w-[360px]  md:max-w-[480px] lg:max-w-[860px] mx-auto">
             <img
-              src="/images/home/graphics/checkified-hero.png"
+              src="/images/home/graphics/framgångsinstitutet-hero.png"
               alt="Dropshipping Hero"
               width={960}
               height={540}
@@ -191,14 +191,14 @@ export default function Dropshipping() {
                 <div className="space-y-4 text-[#434C69] font-inter text-[12px] sm:text-sm md:text-[16px] leading-relaxed">
                   <p className="font-inter font-normal text-[12px] sm:text-sm text-[#434C69]">
                     Vår dropshipping utbildning ger dig verktygen för att starta
-                    och växa en lönsam verksamhet. Men kärnan i Checkified är
-                    communityt.
+                    och växa en lönsam verksamhet. Men kärnan i
+                    framgångsinstitutet är communityt.
                   </p>
                   <p className="font-inter font-normal text-[12px] sm:text-sm text-[#434C69]">
                     Dropshipping är ofta en ensam resa, du är din egen chef och
-                    sitter utan kollegor. Checkified skapades för att bryta den
-                    isoleringen och ge entreprenörer en plats att lära av
-                    varandra.
+                    sitter utan kollegor. framgångsinstitutet skapades för att
+                    bryta den isoleringen och ge entreprenörer en plats att lära
+                    av varandra.
                   </p>
                   <p className="font-inter font-normal text-[12px] sm:text-sm text-[#434C69]">
                     När vi såg hur många nybörjare som sökte sig till oss, lade

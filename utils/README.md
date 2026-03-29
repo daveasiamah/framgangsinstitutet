@@ -1,6 +1,6 @@
 # Security Utilities
 
-This directory contains security utilities for the Checkified UI application.
+This directory contains security utilities for the framgångsinstitutet UI application.
 
 ## Files
 

@@ -101,7 +101,7 @@ export default function ThankYou() {
           HÄR ÄR VAD DU FÅR...
         </h2>
         <h2 className="font-inter font-bold text-center text-[16px] md:text-[32px] lg:text-[45px] mt-8 text-white">
-          Vad finns i Checkified Mentorskap?
+          Vad finns i framgångsinstitutet Mentorskap?
         </h2>
 
         <div className="md:max-w-[800px] mt-[38px] px-4">
@@ -188,7 +188,7 @@ export default function ThankYou() {
       <section className="flex flex-col md:container bg-[#EDF5FE] py-10 justify-center items-center">
         <div className="flex flex-col container text-center items-center">
           <h2 className="font-jakarta font-bold text-[20px] md:text-[3rem] text-center">
-            Checkified förändrar liv...
+            framgångsinstitutet förändrar liv...
           </h2>
           <p className="font-inter font-medium text-xs md:text-base text-center text-[#242323] mb-3 max-w-[622px]">
             Vi har hjälp över 1000+ studenter att förändra deras liv med våra

@@ -11,7 +11,7 @@ const reviews = [
   },
   {
     title: "Kan inte beskriva hur bra",
-    text: "Kan inte beskriva med ord hur bra service och tjänster Checkified erbjuder. Köpt mentorskap och fick resultat och support varje dag. Rekommenderar.",
+    text: "Kan inte beskriva med ord hur bra service och tjänster framgångsinstitutet erbjuder. Köpt mentorskap och fick resultat och support varje dag. Rekommenderar.",
     reviewer: "Joel",
     date: "11 November",
   },
@@ -28,8 +28,8 @@ const reviews = [
     date: "13 Oktober",
   },
   {
-    title: "Checkified förändrar liv",
-    text: "Jag rekommenderar starkt Checkified Dropshipping Mentorskap, man får träffa en kunnig e-handelsexpert och får resultat väldigt snabbt och effektivt.",
+    title: "framgångsinstitutet förändrar liv",
+    text: "Jag rekommenderar starkt framgångsinstitutet Dropshipping Mentorskap, man får träffa en kunnig e-handelsexpert och får resultat väldigt snabbt och effektivt.",
     reviewer: "Karl Bogren",
     date: "3 November",
   },

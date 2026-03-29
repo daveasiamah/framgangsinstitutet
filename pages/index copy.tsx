@@ -24,7 +24,7 @@ export function CTABannerBlock() {
         <div className="text-center">
           <div className="px-2">
             <h1 className="text-white text-center text-[20px] leading-[48px] md:text-[24px] font-bold font-jakarta mb-2 mt-4">
-              Gå med Checkified Mentorskap idag!
+              Gå med framgångsinstitutet Mentorskap idag!
             </h1>
             <p className="mb-4 max-w-3xl mx-auto text-center lg:text-[16px] text-[12px] font-inter">
               Kom ihåg: Du är några klick från att leva livet som du vill... Har
@@ -684,9 +684,9 @@ export default function Home() {
                     Tillgång till privata lektioner av experter
                   </h3>
                   <p className="text-sm md:text-base text-[#434C69] leading-relaxed">
-                    Checkified Mentorskap™️ är det enda stället som erbjuder
-                    utbildning i världsklass med praktiskt vägledning till ett
-                    unikt e-handelsystem.
+                    framgångsinstitutet Mentorskap™️ är det enda stället som
+                    erbjuder utbildning i världsklass med praktiskt vägledning
+                    till ett unikt e-handelsystem.
                   </p>
                 </div>
               </div>
@@ -731,7 +731,7 @@ export default function Home() {
             className="object-contain w-[360px] h-[268px] md:w-[1024px] md:h-[568px]"
           />
           <Image
-            src="/images/home/graphics/home_pics/checkified-logo.png"
+            src="/images/home/graphics/home_pics/framgångsinstitutet-logo.png"
             alt="logo"
             width={92}
             height={92}

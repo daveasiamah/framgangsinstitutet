@@ -15,9 +15,9 @@ const MentorshipPayout = ({ onCtaClick }: MentorshipPayoutProps) => {
         <div className="w-[120px] sm:w-[156px] h-[28px] sm:h-[36px] mb-2 sm:mb-3 text-white">
           <Image
             src={
-              "/images/mentorship/mentorship-products/checkified-logo-white.svg"
+              "/images/mentorship/mentorship-products/framgångsinstitutet-logo-white.svg"
             }
-            alt="checkified Icon"
+            alt="framgångsinstitutet Icon"
             width={156}
             height={36}
             unoptimized

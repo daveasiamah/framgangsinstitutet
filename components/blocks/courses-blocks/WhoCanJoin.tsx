@@ -21,9 +21,9 @@ export default function WhoCanJoin() {
             Våra utbildningar passar kreatörer, företagare och anställda som
             vill utvecklas online – utan att fastna i tekniken.
             <br /> <br />
-            Checkified Academy lanserades 2022 och drivs av Dominic, digital
-            entreprenör som brinner för att hjälpa företagare, anställda och
-            kreatörer jobba smart digitalt!
+            framgångsinstitutet Academy lanserades 2022 och drivs av Dominic,
+            digital entreprenör som brinner för att hjälpa företagare, anställda
+            och kreatörer jobba smart digitalt!
             <br />
             <br /> Våra utbildningar används framgångsrikt av både soloprenörer
             och anställda inom ett 50-tal olika branscher. 

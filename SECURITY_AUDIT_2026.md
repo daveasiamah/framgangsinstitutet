@@ -1,14 +1,14 @@
 # 🔒 COMPREHENSIVE SECURITY AUDIT REPORT
 
 **Date:** February 5, 2026  
-**Project:** Checkified UI (Next.js Application)  
+**Project:** framgångsinstitutet UI (Next.js Application)  
 **Overall Status:** 🟡 **MODERATE RISK** - Action Required
 
 ---
 
 ## 📊 EXECUTIVE SUMMARY
 
-This security audit examined the Checkified UI codebase for API key exposure, authentication vulnerabilities, and general security best practices. The application demonstrates **good security practices** in most areas, with proper environment variable usage and `.gitignore` configuration. However, several areas require attention.
+This security audit examined the framgångsinstitutet UI codebase for API key exposure, authentication vulnerabilities, and general security best practices. The application demonstrates **good security practices** in most areas, with proper environment variable usage and `.gitignore` configuration. However, several areas require attention.
 
 ### Key Findings:
 
@@ -148,9 +148,9 @@ API base URLs are exposed in `next.config.js` and available client-side:
 
 ```javascript
 env: {
-  API_BASE: "https://api.checkified.se/",
-  FILE_BASE: "https://api.checkified.se/public/uploads/",
-  NEXTAUTH_URL: "https://checkified.se",
+  API_BASE: "https://api.framgångsinstitutet.se/",
+  FILE_BASE: "https://api.framgångsinstitutet.se/public/uploads/",
+  NEXTAUTH_URL: "https://framgångsinstitutet.se",
 }
 ```
 
@@ -425,7 +425,7 @@ export function useUser() {
 
 ## ✅ CONCLUSION
 
-The Checkified UI codebase demonstrates **strong API key management** with proper environment variable usage and Git security. However, the **authentication token storage mechanism** using localStorage presents the most significant security concern and should be addressed as the top priority.
+The framgångsinstitutet UI codebase demonstrates **strong API key management** with proper environment variable usage and Git security. However, the **authentication token storage mechanism** using localStorage presents the most significant security concern and should be addressed as the top priority.
 
 **Overall Assessment:** The application is **production-ready from an API key security perspective**, but would benefit from the authentication security improvements outlined above.
 

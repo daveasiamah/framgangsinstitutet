@@ -8,7 +8,7 @@ const MentorshipSubEhandler = () => {
           {/* Header text */}
           <div className="w-full max-w-[200px] lg:mx-0 text-center md:text-start mb-2 mx-auto">
             <p className="font-semibold text-[#9B9B9B] font-inter text-xs sm:text-sm tracking-[0] leading-[23px]">
-              Med Checkified Mentorskap™
+              Med framgångsinstitutet Mentorskap™
             </p>
           </div>
 
@@ -33,9 +33,9 @@ const MentorshipSubEhandler = () => {
             </p>
             <p className="py-1 leading-[16px] text-[16px]"></p>
             <p className="font-medium font-jakarta text-[#434C69]  text-[12px] md:text-base tracking-[0] leading-normal">
-              Checkified Mentorskap™ är det enda stället som erbjuder utbildning
-              i världsklass med praktiskt stöd och vägledning till ett
-              användarvänligt e-handelsystem.
+              framgångsinstitutet Mentorskap™ är det enda stället som erbjuder
+              utbildning i världsklass med praktiskt stöd och vägledning till
+              ett användarvänligt e-handelsystem.
             </p>
           </div>
         </div>
