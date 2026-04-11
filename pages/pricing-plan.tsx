@@ -1,11 +1,11 @@
 import { useState } from "react"
 
-import BlankLayout from "@/components/BlankLayout"
+import Layout from "@/components/Layout"
+import { MainFAQPricing } from "@/components/parts/MainFAQPricing"
 
 type Plan = {
   name: string
   subtitle: string
-  price?: string
   features: string[]
   cta: string
   highlight?: boolean
@@ -26,7 +26,6 @@ const annualPlans: Plan[] = [
   {
     name: "År",
     subtitle: "9988 kr/år",
-    price: "9988 kr/år",
     features: [
       "Skapa din egen framgång",
       "Workbooks för faktisk inlärning",
@@ -71,7 +70,6 @@ const monthlyPlans: Plan[] = [
   {
     name: "Månad",
     subtitle: "899 kr/mån",
-    price: "899 kr/mån",
     features: [
       "Skapa din egen framgång",
       "Workbooks för faktisk inlärning",
@@ -119,39 +117,74 @@ const testimonials = [
   },
 ]
 
-const faqs = [
-  "Behöver jag ha en egen dator för att studera?",
-  "Får jag ett diplom efter att ha genomfört en kurs?",
-  "Vilket språk bedrivs onlineutbildningarna på?",
-  "Kan jag läsa flera kurser samtidigt?",
-  "Vad innebär det att studera en onlineutbildning?",
-  "Inom vilka branscher har ni utbildningar inom?",
+const pricingFaqData = [
+  {
+    id: 1,
+    question: "Behöver jag ha en egen dator för att studera?",
+    answer:
+      "Ja, du behöver en dator, surfplatta eller mobil med internetuppkoppling för att ta del av utbildningen.",
+  },
+  {
+    id: 2,
+    question: "Får jag ett diplom efter att ha genomfört en kurs?",
+    answer:
+      "Ja, flera av våra kurser innehåller diplom eller kursintyg när du har slutfört samtliga moment.",
+  },
+  {
+    id: 3,
+    question: "Vilket språk bedrivs onlineutbildningarna på?",
+    answer:
+      "Majoriteten av utbildningarna är på svenska, men vissa delar och resurser kan vara på engelska.",
+  },
+  {
+    id: 4,
+    question: "Kan jag läsa flera kurser samtidigt?",
+    answer:
+      "Ja, med aktiv prenumeration kan du läsa flera kurser parallellt i din egen takt.",
+  },
+  {
+    id: 5,
+    question: "Vad innebär det att studera en onlineutbildning?",
+    answer:
+      "Du studerar digitalt när det passar dig, med tillgång till materialet dygnet runt från valfri plats.",
+  },
+  {
+    id: 6,
+    question: "Inom vilka branscher har ni utbildningar inom?",
+    answer:
+      "Vi erbjuder utbildningar inom bland annat entreprenorskap, personlig utveckling, marknadsforing och e-handel.",
+  },
 ]
 
-const Butiker = () => {
+export default function PricingPlanPage() {
   const [isAnnual, setIsAnnual] = useState(true)
-  const [activeFaq, setActiveFaq] = useState<number | null>(0)
 
   const plans = isAnnual ? annualPlans : monthlyPlans
 
   return (
-    <BlankLayout headTitle="Välj prenumeration">
-      <main className="bg-[#f3f4f6] text-[#121212]">
-        <section className="mx-auto w-full max-w-[1160px] px-4 pb-20 pt-10 sm:px-6 lg:px-8 lg:pt-14">
-          <div className="mx-auto mb-10 flex max-w-xl flex-col items-center text-center">
-            <div className="mb-4 h-12 w-12 rounded-xl border border-[#d7dbe4] bg-white shadow-sm" />
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
+    <Layout headTitle="Välj prenumeration" isFullWidth>
+      <main className="bg-white font-inter text-[#121212]">
+        <section className="mx-auto w-full max-w-[1240px] px-4 pb-24 pt-12 sm:px-6 lg:px-8 lg:pt-16">
+          <div className="mx-auto mb-12 flex max-w-xl flex-col items-center text-center">
+            <img
+              src="/icons/university-icon.png"
+              alt="University icon"
+              className="mb-4 h-[70px] w-[70px]"
+            />
+            <h1 className="font-jakarta text-4xl font-bold tracking-tight sm:text-5xl">
               Välj prenumeration
             </h1>
             <p className="mt-2 text-sm text-[#6d7684]">
               Alla priser är inklusive moms
             </p>
 
-            <div className="mt-6 inline-flex rounded-full border border-[#2b5de7] bg-white p-1">
+            <div className="mt-6 inline-flex items-center gap-3">
               <button
                 type="button"
-                className={`rounded-full px-5 py-2 text-sm font-semibold transition ${
-                  isAnnual ? "bg-[#2b5de7] text-white" : "text-[#2b5de7]"
+                className={`rounded-full border px-6 py-2.5 text-sm font-jakarta font-semibold transition ${
+                  isAnnual
+                    ? "border-[#2b5de7] bg-[#2b5de7] text-white"
+                    : "border-[#2b5de7] bg-white text-[#2b5de7]"
                 }`}
                 onClick={() => setIsAnnual(true)}
               >
@@ -159,8 +192,10 @@ const Butiker = () => {
               </button>
               <button
                 type="button"
-                className={`rounded-full px-5 py-2 text-sm font-semibold transition ${
-                  isAnnual ? "text-[#2b5de7]" : "bg-[#2b5de7] text-white"
+                className={`rounded-full border px-6 py-2.5 text-sm font-jakarta font-semibold transition ${
+                  isAnnual
+                    ? "border-[#2b5de7] bg-white text-[#2b5de7]"
+                    : "border-[#2b5de7] bg-[#2b5de7] text-white"
                 }`}
                 onClick={() => setIsAnnual(false)}
               >
@@ -169,44 +204,61 @@ const Butiker = () => {
             </div>
           </div>
 
-          <div className="grid gap-6 lg:grid-cols-3">
-            {plans.map((plan) => (
+          <div className="grid gap-8 lg:grid-cols-3">
+            {plans.map((plan, index) => (
               <article
                 key={`${plan.name}-${plan.subtitle}`}
-                className={`overflow-hidden rounded-3xl border shadow-sm ${
+                className={`mx-auto w-full max-w-[360px] min-h-[560px] overflow-hidden rounded-3xl border shadow-sm md:min-h-[620px] md:max-w-[593px] lg:min-h-[620px] lg:max-w-[396px] ${
                   plan.highlight
                     ? "border-[#2b5de7] bg-white"
                     : "border-[#eceef3] bg-[#f9fafb]"
                 }`}
               >
                 <div
-                  className={`px-6 py-5 text-center ${
+                  className={`px-8 py-7 text-center ${
                     plan.highlight
                       ? "bg-[#2b5de7] text-white"
                       : "bg-transparent text-[#171717]"
                   }`}
                 >
-                  <h2 className="text-3xl font-bold">{plan.name}</h2>
-                  <p className="mt-1 text-lg">{plan.subtitle}</p>
+                  <h2
+                    className={`font-inter text-[20px] font-bold leading-tight ${
+                      plan.highlight ? "text-white" : "text-[#171717]"
+                    }`}
+                  >
+                    {plan.name}
+                  </h2>
+                  <p
+                    className={`font-inter text-[20px] font-medium leading-tight ${
+                      plan.highlight ? "text-white" : "text-[#151E3A]"
+                    }`}
+                  >
+                    {plan.subtitle}
+                  </p>
                 </div>
-                <div className="space-y-4 px-6 py-5">
+                <div className="space-y-6 px-8 py-7">
                   <ul className="space-y-0.5">
                     {plan.features.map((feature) => (
                       <li
                         key={feature}
-                        className="border-b border-[#d5dceb] py-2 text-sm text-[#24324a]"
+                        className="border-b border-[#d5dceb] py-3 text-sm text-[#24324a] last:border-b-0"
                       >
                         {feature}
                       </li>
                     ))}
                   </ul>
-                  <div className="pt-4 text-center">
+                  <div className="text-center">
                     <button
                       type="button"
-                      className="rounded-full bg-[#2b5de7] px-8 py-2.5 text-sm font-semibold text-white transition hover:bg-[#1e49bf]"
+                      className="rounded-full bg-[#2b5de7] px-10 py-3 text-sm font-poppins font-medium text-white transition hover:bg-[#1e49bf]"
                     >
                       {plan.cta}
                     </button>
+                    {index === 0 && (
+                      <p className="mt-3 text-sm text-[#5e6a81]">
+                        Kom igång kostnadsfritt
+                      </p>
+                    )}
                   </div>
                 </div>
               </article>
@@ -216,21 +268,27 @@ const Butiker = () => {
 
         <section className="bg-[#2b5de7] px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-[1160px]">
-            <h3 className="text-center text-4xl font-bold text-white sm:text-5xl">
+            <h3 className="font-jakarta text-center text-2xl font-bold text-white sm:text-4xl">
               Så säger våra medlemmar
             </h3>
-            <div className="mt-10 grid gap-5 md:grid-cols-3">
+            <div className="mt-10 grid gap-10 lg:grid-cols-3">
               {testimonials.map((item) => (
                 <article
                   key={item.author}
-                  className="rounded-3xl border border-[#dbe5ff] bg-white px-6 py-6"
+                  className="mx-auto w-full max-w-[420px] rounded-3xl border border-[#dbe5ff] bg-white px-6 py-6 lg:max-w-none"
                 >
-                  <p className="text-[#2b5de7]">★★★★★</p>
-                  <h4 className="mt-3 text-xl font-bold text-[#1c2440]">
+                  <div className="flex items-center">
+                    <img
+                      src="/images/home/pricing-testimonial-stars.png"
+                      alt="testimonial stars"
+                      className="h-auto w-[120px] object-contain sm:w-[150px] md:w-[160px] lg:w-10/12"
+                    />
+                  </div>
+                  <h4 className="font-inter mt-3 text-xl font-bold text-[#1c2440]">
                     {item.title}
                   </h4>
                   <p className="mt-3 text-sm text-[#4a556d]">{item.text}</p>
-                  <p className="mt-6 text-sm font-semibold text-[#1c2440]">
+                  <p className="mt-6 text-sm italic font-semibold text-[#1c2440]">
                     {item.author}
                   </p>
                 </article>
@@ -239,43 +297,10 @@ const Butiker = () => {
           </div>
         </section>
 
-        <section className="mx-auto w-full max-w-[1160px] px-4 py-16 sm:px-6 lg:px-8">
-          <h3 className="text-center text-4xl font-bold text-[#101828] sm:text-5xl">
-            Frågor och svar
-          </h3>
-          <div className="mx-auto mt-8 max-w-4xl space-y-3">
-            {faqs.map((question, index) => {
-              const isOpen = activeFaq === index
-
-              return (
-                <article
-                  key={question}
-                  className="overflow-hidden rounded-2xl border border-[#e3e8f3] bg-white"
-                >
-                  <button
-                    type="button"
-                    className="flex w-full items-center justify-between px-5 py-4 text-left text-sm font-medium text-[#1d2841]"
-                    onClick={() => setActiveFaq(isOpen ? null : index)}
-                  >
-                    <span>{question}</span>
-                    <span className="ml-4 text-xl text-[#6f7b8f]">
-                      {isOpen ? "−" : "+"}
-                    </span>
-                  </button>
-                  {isOpen && (
-                    <div className="border-t border-[#e9edf5] px-5 py-4 text-sm text-[#53617c]">
-                      Du får full tillgång direkt efter aktivering av ditt
-                      medlemskap.
-                    </div>
-                  )}
-                </article>
-              )
-            })}
-          </div>
+        <section className="mx-auto w-full max-w-[1160px] px-4 py-8 sm:px-6 lg:px-8">
+          <MainFAQPricing faqData={pricingFaqData} />
         </section>
       </main>
-    </BlankLayout>
+    </Layout>
   )
 }
-
-export default Butiker

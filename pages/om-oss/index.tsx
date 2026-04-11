@@ -17,7 +17,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto">
           {/* Title */}
           <h1 className="text-[#151E3A] text-[30px] md:text-[48px] lg:text-[56px] font-bold font-jakarta text-center mb-6 leading-[32px] md:leading-[44px] lg:leading-[52px] max-w-[700px] md:max-w-[550px] lg:max-w-[700px] mx-auto">
-            framgångsinstitutet Revolution
+            Framgångsinstitutet Revolution
           </h1>
 
           {/* Description */}

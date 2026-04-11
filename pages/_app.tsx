@@ -12,7 +12,6 @@ import ContractForm from "@/components/ContractForm"
 function AppContent({ Component, pageProps }: AppProps) {
   const { isContractFormOpen, closeContractForm } = useModal()
 
-
   return (
     <>
       {/* Add the Hotjar tracking code */}
@@ -71,10 +70,10 @@ function AppContent({ Component, pageProps }: AppProps) {
         }}
       />
 
-      <script
+      {/* <script
         src="//code.tidio.co/b3qsg0t7uu4nseq9piuuayi3u5gx3bi6.js"
         async
-      ></script>
+      ></script> */}
 
       {/* <!-- TikTok Pixel Code Start --> */}
       <Script id="tiktok-pixel" strategy="afterInteractive">
@@ -143,9 +142,9 @@ function AppContent({ Component, pageProps }: AppProps) {
 export default function App(props: AppProps) {
   return (
     <ChakraProvider value={defaultSystem}>
-        <ModalProvider>
-          <AppContent {...props} />
-        </ModalProvider>
+      <ModalProvider>
+        <AppContent {...props} />
+      </ModalProvider>
     </ChakraProvider>
   )
 }

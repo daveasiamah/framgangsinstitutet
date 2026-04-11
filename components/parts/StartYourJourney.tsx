@@ -78,7 +78,7 @@ function StartYourJourney({ onCtaClick }: { onCtaClick: () => void }) {
             height={24}
           />
           <p className="text-white text-[10px] sm:text-[12px] md:text-[14px] whitespace-nowrap">
-            4.8 av 5.0
+            4.8 av 5.0  
           </p>
         </div>
         {/* CTA Button */}

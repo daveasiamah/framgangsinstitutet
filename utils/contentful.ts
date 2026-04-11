@@ -6,11 +6,23 @@ const client = createClient({
   accessToken: `${process.env.CONTENTFUL_ACCESS_TOKEN}`,
 })
 
+function normalizeLocale(locale?: string | string[]) {
+  if (Array.isArray(locale)) {
+    return normalizeLocale(locale[0])
+  }
+
+  if (!locale || locale === "undefined" || locale === "null") {
+    return "sv"
+  }
+
+  return locale
+}
+
 export async function fetchBlogPosts(locale: string = "sv", nolimit = false) {
   try {
     const entries = await client.getEntries({
       content_type: "checkifiedBlogPost",
-      locale,
+      locale: normalizeLocale(locale),
       select: [
         "fields.title,fields.description,fields.slug,fields.featuredImage",
         "fields.author",
@@ -22,6 +34,7 @@ export async function fetchBlogPosts(locale: string = "sv", nolimit = false) {
       ...(nolimit ? {} : { limit: 6 }),
     })
     if (entries.items) return formatBlogPostEntries(entries.items)
+    console.log("Fetched blog posts:", entries.items)
   } catch (error) {
     console.error("Error fetching blog posts:", error)
   }
@@ -34,7 +47,7 @@ export async function fetchBlogPostBySlug(slug: string, locale: string) {
     const entry = await client.getEntries({
       content_type: "checkifiedBlogPost",
       "fields.slug": slug,
-      locale: locale,
+      locale: normalizeLocale(locale),
       limit: 1,
     })
     if (entry.items.length) return formatBlogPostEntries(entry.items)[0]
@@ -229,7 +242,6 @@ export async function getFAQs() {
       lastUpdated: entry.fields.lastUpdated,
       position: entry.fields.position,
     }))
-
     return formattedEntries
   } catch (error) {
     console.log("Error fetching FAQs:", error)
