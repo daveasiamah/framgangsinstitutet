@@ -5,6 +5,8 @@ import { useRouter } from "next/router"
 import ScrollReveal from "@/components/transition/ScrollReveal"
 import { Accordion, AccordionItem } from "@/components/parts/Accordion_FAQ"
 import { getFAQs } from "@/utils/contentful"
+import { faqData as enFaqData } from "@/locales/en/faq"
+import { faqPageData as svFaqPageData } from "@/locales/sv/faq"
 
 import { Document } from "@contentful/rich-text-types"
 import { format } from "date-fns"
@@ -14,7 +16,7 @@ import RichTextRenderer from "@/utils/RichTextRenderer"
 interface FAQ {
   id: string
   question: string
-  answer: Document
+  answer: Document | string
   lastUpdated: string
 }
 
@@ -80,7 +82,13 @@ const FAQPage: React.FC<FAQPageProps> = ({ faqs }) => {
               <Accordion>
                 {faqs.map((item) => (
                   <AccordionItem key={item.id} title={item.question}>
-                    <RichTextRenderer richText={item.answer} />
+                    {typeof item.answer === "string" ? (
+                      <p className="whitespace-pre-line text-[#1f2a44]">
+                        {item.answer}
+                      </p>
+                    ) : (
+                      <RichTextRenderer richText={item.answer} />
+                    )}
                   </AccordionItem>
                 ))}
               </Accordion>
@@ -105,11 +113,28 @@ const FAQPage: React.FC<FAQPageProps> = ({ faqs }) => {
   )
 }
 
-export async function getStaticProps() {
+export async function getStaticProps(context: { locale?: string }) {
   try {
-    const allFAQs = (await getFAQs()) || []
+    const locale = context.locale || "sv"
+    const allFAQs = (await getFAQs(locale)) || []
+
+    if (allFAQs.length > 0) {
+      return {
+        props: { faqs: allFAQs },
+        revalidate: 120,
+      }
+    }
+
+    const localFallback = locale === "en" ? enFaqData : svFaqPageData
+    const fallbackFaqs = localFallback.map((item) => ({
+      id: String(item.id),
+      question: item.question,
+      answer: item.answer,
+      lastUpdated: new Date().toISOString(),
+    }))
+
     return {
-      props: { faqs: allFAQs },
+      props: { faqs: fallbackFaqs },
       revalidate: 120,
     }
   } catch (error) {

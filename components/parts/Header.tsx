@@ -12,12 +12,10 @@ import {
   IconButton,
   Stack,
   useDisclosure,
-  Text,
-  Image as ChakraImage,
   Heading,
 } from "@chakra-ui/react"
 
-import { MdOutlineKeyboardArrowDown, MdMenu, MdClose } from "react-icons/md"
+import { MdMenu, MdClose } from "react-icons/md"
 
 type Props = {
   openSidebar: boolean
@@ -29,8 +27,6 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
   const { pathname, query } = router
 
   const isSlugPage = !!query.slug
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const closeTimerRef = useRef<NodeJS.Timeout | null>(null)
 
   // CTA modal
   const {
@@ -106,119 +102,10 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
           fontWeight={600}
           fontFamily={"poppins"}
         >
+          <Link href="/utbildningar">Utbildningar</Link>
           <Link href="/om-oss">Om oss</Link>
-
-          {/* Mega Menu - Custom Implementation */}
-          <Box
-            position="relative"
-            onMouseLeave={() => {
-              closeTimerRef.current = setTimeout(() => {
-                setIsMenuOpen(false)
-              }, 100)
-            }}
-            onMouseEnter={() => {
-              if (closeTimerRef.current) {
-                clearTimeout(closeTimerRef.current)
-              }
-            }}
-          >
-            <Button
-              variant="ghost"
-              onMouseEnter={() => setIsMenuOpen(true)}
-              onFocus={() => setIsMenuOpen(true)}
-            >
-              Utbildning
-              <MdOutlineKeyboardArrowDown
-                style={{
-                  marginLeft: "4px",
-                  transform: isMenuOpen ? "rotate(180deg)" : "rotate(0deg)",
-                  transition: "transform 0.3s ease-in-out",
-                }}
-              />
-            </Button>
-            {isMenuOpen && (
-              <Box
-                role="menu"
-                position="absolute"
-                left="50%"
-                transform="translateX(-50%)"
-                top="100%"
-                mt={2}
-                p={6}
-                borderRadius="20px"
-                boxShadow="xl"
-                bg="white"
-                width={["90vw", "500px", "650px"]}
-                zIndex={50}
-                onMouseEnter={() => {
-                  if (closeTimerRef.current) {
-                    clearTimeout(closeTimerRef.current)
-                  }
-                  setIsMenuOpen(true)
-                }}
-              >
-                <Stack gap={4}>
-                  <Link
-                    href="/dropshipping"
-                    style={{ display: "block", width: "100%" }}
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    <Flex
-                      p={2}
-                      gap={4}
-                      _hover={{ bg: "gray.50" }}
-                      borderRadius="lg"
-                      border="1px solid"
-                      borderColor="gray.200"
-                    >
-                      <ChakraImage
-                        src="/images/home/graphics/teacher.svg"
-                        alt="Dropshipping"
-                        boxSize="30px"
-                      />
-                      <Box>
-                        <Text fontWeight="semibold">Dropshipping</Text>
-                        <Text fontSize="sm" color="gray.500">
-                          Allt du behöver lära dig för lyckas med Dropshipping
-                          2026
-                        </Text>
-                      </Box>
-                    </Flex>
-                  </Link>
-
-                  <Link
-                    href="/e-handel"
-                    style={{ display: "block", width: "100%" }}
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    <Flex
-                      p={2}
-                      gap={4}
-                      _hover={{ bg: "gray.50" }}
-                      borderRadius="lg"
-                      border="1px solid"
-                      borderColor="gray.200"
-                    >
-                      <ChakraImage
-                        src="/images/home/graphics/note-2.svg"
-                        alt="E-handel"
-                        boxSize="30px"
-                      />
-                      <Box>
-                        <Text fontWeight="semibold">E-handel</Text>
-                        <Text fontSize="sm" color="gray.500">
-                          Lär dig driva e-handel lönsamt 2026
-                        </Text>
-                      </Box>
-                    </Flex>
-                  </Link>
-                </Stack>
-              </Box>
-            )}
-          </Box>
-
-          <Link href="/mentorskap">Mentorskap</Link>
-          <Link href="/blog">Blogg</Link>
+          <Link href="/kontakta-oss">Kontakta oss</Link>
+          <Link href="/fragor-och-svar">Frågor och svar</Link>
         </Flex>
 
         {/* DESKTOP CTA BUTTON */}
@@ -327,11 +214,11 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
                   transition="all 0.2s"
                 >
                   <Link
-                    href="/"
+                    href="/utbildningar"
                     onClick={() => setOpenSidebar(false)}
                     style={{ color: "inherit", textDecoration: "none" }}
                   >
-                    Hem
+                    Utbildningar
                   </Link>
                 </Box>
                 <Box
@@ -365,11 +252,11 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
                   transition="all 0.2s"
                 >
                   <Link
-                    href="/dropshipping"
+                    href="/kontakta-oss"
                     onClick={() => setOpenSidebar(false)}
                     style={{ color: "inherit", textDecoration: "none" }}
                   >
-                    Dropshipping
+                    Kontakta oss
                   </Link>
                 </Box>
                 <Box
@@ -384,49 +271,11 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
                   transition="all 0.2s"
                 >
                   <Link
-                    href="/e-handel"
+                    href="/fragor-och-svar"
                     onClick={() => setOpenSidebar(false)}
                     style={{ color: "inherit", textDecoration: "none" }}
                   >
-                    E-handel
-                  </Link>
-                </Box>
-                <Box
-                  px={4}
-                  py={2}
-                  borderRadius="md"
-                  width="100%"
-                  _hover={{
-                    bg: "#225AEA",
-                    color: "white",
-                  }}
-                  transition="all 0.2s"
-                >
-                  <Link
-                    href="/mentorskap"
-                    onClick={() => setOpenSidebar(false)}
-                    style={{ color: "inherit", textDecoration: "none" }}
-                  >
-                    Mentorskap
-                  </Link>
-                </Box>
-                <Box
-                  px={4}
-                  py={2}
-                  borderRadius="md"
-                  width="100%"
-                  _hover={{
-                    bg: "#225AEA",
-                    color: "white",
-                  }}
-                  transition="all 0.2s"
-                >
-                  <Link
-                    href="/blog"
-                    onClick={() => setOpenSidebar(false)}
-                    style={{ color: "inherit", textDecoration: "none" }}
-                  >
-                    Blogg
+                    Frågor och svar
                   </Link>
                 </Box>
 

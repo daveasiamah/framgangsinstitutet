@@ -174,9 +174,7 @@ export default function PricingPlanPage() {
             <h1 className="font-jakarta text-4xl font-bold tracking-tight sm:text-5xl">
               Välj prenumeration
             </h1>
-            <p className="mt-2 text-sm text-[#6d7684]">
-              Alla priser är inklusive moms
-            </p>
+            <p className="mt-2 text-sm">Alla priser är inklusive moms</p>
 
             <div className="mt-6 inline-flex items-center gap-3">
               <button
@@ -223,7 +221,7 @@ export default function PricingPlanPage() {
                 >
                   <h2
                     className={`font-inter text-[20px] font-bold leading-tight ${
-                      plan.highlight ? "text-white" : "text-[#171717]"
+                      plan.highlight ? "text-white" : "text-[#000000]"
                     }`}
                   >
                     {plan.name}
@@ -236,7 +234,7 @@ export default function PricingPlanPage() {
                     {plan.subtitle}
                   </p>
                 </div>
-                <div className="space-y-6 px-8 py-7">
+                <div className="space-y-6 px-8 pb-6">
                   <ul className="space-y-0.5">
                     {plan.features.map((feature) => (
                       <li
@@ -250,12 +248,12 @@ export default function PricingPlanPage() {
                   <div className="text-center">
                     <button
                       type="button"
-                      className="rounded-full bg-[#2b5de7] px-10 py-3 text-sm font-poppins font-medium text-white transition hover:bg-[#1e49bf]"
+                      className="rounded-full bg-[#2b5de7] px-10 py-2 text-sm font-poppins font-medium text-white transition hover:bg-[#1e49bf]"
                     >
                       {plan.cta}
                     </button>
                     {index === 0 && (
-                      <p className="mt-3 text-sm text-[#5e6a81]">
+                      <p className="mt-3 text-sm text-[#000000]">
                         Kom igång kostnadsfritt
                       </p>
                     )}

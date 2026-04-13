@@ -1,10 +1,29 @@
 import { createClient } from "contentful"
 import { Document } from "@contentful/rich-text-types"
 
-const client = createClient({
-  space: `${process.env.CONTENTFUL_SPACE_ID}`,
-  accessToken: `${process.env.CONTENTFUL_ACCESS_TOKEN}`,
-})
+const contentfulSpaceId =
+  process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID ||
+  process.env.CONTENTFUL_SPACE_ID ||
+  ""
+
+const contentfulAccessToken =
+  process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN ||
+  process.env.CONTENTFUL_ACCESS_TOKEN ||
+  ""
+
+const client =
+  contentfulSpaceId && contentfulAccessToken
+    ? createClient({
+        space: contentfulSpaceId,
+        accessToken: contentfulAccessToken,
+      })
+    : ({
+        getEntries: async () => {
+          throw new Error(
+            "Missing Contentful credentials. Set CONTENTFUL_* for server or NEXT_PUBLIC_CONTENTFUL_* for browser usage.",
+          )
+        },
+      } as any)
 
 function normalizeLocale(locale?: string | string[]) {
   if (Array.isArray(locale)) {
@@ -141,6 +160,7 @@ export async function getCourses() {
     const entries = await client.getEntries({
       content_type: "courses",
     })
+    console.log("Fetched courses:", entries.items)
     const formattedEntries = entries.items.map((entry: any) => {
       // Extract the "value" from the nested structure in shortDescription
       const shortDescriptionContent = entry.fields.shortDescription?.content
@@ -229,22 +249,51 @@ export async function getEbooks() {
   }
 }
 
-export async function getFAQs() {
-  try {
-    const entries = await client.getEntries({
+export async function getFAQs(locale: string = "sv") {
+  const normalizedLocale = normalizeLocale(locale)
+
+  const queryAttempts = [
+    {
       content_type: "faq",
-      order: ["fields.position"], // Orders by the "position" field in ascending order
-    })
-    const formattedEntries = entries.items.map((entry) => ({
-      id: entry.sys.id,
-      question: entry.fields.question,
-      answer: entry.fields.answer as Document,
-      lastUpdated: entry.fields.lastUpdated,
-      position: entry.fields.position,
-    }))
-    return formattedEntries
-  } catch (error) {
-    console.log("Error fetching FAQs:", error)
-    return []
+      locale: normalizedLocale,
+      order: ["fields.position"],
+    },
+    {
+      content_type: "faq",
+      locale: normalizedLocale,
+    },
+    {
+      content_type: "faq",
+      order: ["fields.position"],
+    },
+    {
+      content_type: "faq",
+    },
+  ]
+
+  for (const query of queryAttempts) {
+    try {
+      const entries = await client.getEntries(query)
+
+      if (!entries.items || entries.items.length === 0) {
+        continue
+      }
+
+      const formattedEntries = entries.items
+        .map((entry: any) => ({
+          id: entry.sys.id,
+          question: entry.fields?.question || "",
+          answer: (entry.fields?.answer || null) as Document,
+          lastUpdated: entry.fields?.lastUpdated || entry.sys.updatedAt,
+          position: entry.fields?.position ?? Number.MAX_SAFE_INTEGER,
+        }))
+        .sort((a: any, b: any) => Number(a.position) - Number(b.position))
+
+      return formattedEntries
+    } catch (error) {
+      console.log("Error fetching FAQs with query:", query, error)
+    }
   }
+
+  return []
 }

@@ -113,10 +113,14 @@ export default function Blog({ blogPost, locale }: Props) {
   )
 }
 
-export const getServerSideProps = async ({ params, req, locale }: any) => {
+export const getServerSideProps = async ({ params, locale }: any) => {
   try {
     const { slug } = params
-    const blogPost: BlogPost = await fetchBlogPostBySlug(slug as string, locale)
+    const resolvedLocale = locale ?? "sv"
+    const blogPost: BlogPost = await fetchBlogPostBySlug(
+      slug as string,
+      resolvedLocale,
+    )
 
     if (!blogPost) {
       return { notFound: true }
@@ -125,7 +129,7 @@ export const getServerSideProps = async ({ params, req, locale }: any) => {
     return {
       props: {
         blogPost,
-        locale,
+        locale: resolvedLocale,
       },
     }
   } catch (error) {

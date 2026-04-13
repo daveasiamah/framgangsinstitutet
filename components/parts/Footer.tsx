@@ -63,7 +63,7 @@ export default function Footer({}: Props) {
           <div className="w-full lg:w-1/3 flex flex-col items-start text-left">
             <img
               src="/images/home/logo-base.png"
-              alt="Framgångsintitutet"
+              alt="Framgångsinstitutet"
               width={200}
               height={55}
               className="h-[55px] sm:h-[55px] w-[200px] object-left object-contain"
@@ -226,18 +226,15 @@ export default function Footer({}: Props) {
         <hr className="my-6 sm:my-8 md:my-10 stroke-slate-400" />
 
         {/* Bottom Section */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 sm:gap-6 pb-6 sm:pb-8 md:pb-10 text-center md:text-left">
+        <div className="grid gap-4 pb-6 sm:gap-6 sm:pb-8 md:grid md:grid-cols-3 md:items-start md:pb-10 md:text-left">
           {/* Copyright Section */}
-          {/* <p className="text-[10px] sm:text-[10px] md:text-sm text-center md:order-1 order-1">
-            Copyright © {currentYear} Framgångsintitutet. All rights reserved.
-          </p> */}
-          <p className="text-[10px] sm:text-[10px] md:text-sm text-center md:order-1 order-1">
-            Upphovsrätt © {currentYear} Framgångsintitutet. Alla rättigheter
+          <p className="order-1 text-center text-[10px] sm:text-[10px] md:text-left md:text-sm">
+            Upphovsrätt © {currentYear} Framgångsinstitutet. Alla rättigheter
             förbehållna.
           </p>
 
           {/* Social Media Icons */}
-          <div className="flex gap-3 sm:gap-4 justify-center md:order-2 order-2">
+          <div className="order-2 flex justify-center gap-3 sm:gap-4 md:justify-center">
             {socialMedia(18).map((data) => (
               <Link
                 key={data.id}
@@ -251,15 +248,6 @@ export default function Footer({}: Props) {
               </Link>
             ))}
           </div>
-
-          {/* Links Section */}
-          <Image
-            src="/images/home/graphics/shopify-partner.png"
-            alt="Shopify Partner"
-            width={146}
-            height={27}
-            className="md:order-3 order-3 w-[120px] sm:w-[140px] md:w-[166px] h-auto"
-          />
         </div>
       </div>
     </footer>
