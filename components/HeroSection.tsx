@@ -2,67 +2,82 @@ import React from "react"
 import { ArrowRight } from "lucide-react"
 import { useModal } from "./ModalContext"
 
+const BULLETS = [
+  "Flexibel utbildning i din ficka",
+  "Över 500 utbildningsavsnitt",
+  "Kunskap som går att använda direkt",
+  "Lär dig av Sveriges främsta experter",
+  "Nya kurser lanseras löpande",
+]
+
 type Props = {
   title?: string
-  description?: string
   buttonText?: string
   imageSrc?: string
   showTrustpilot?: boolean
 }
 
 export default function HeroSection({
-  title = "Utforska alla våra kurser",
-  description = "Våra premium kurser är skapade och sammanställda av branschledande experter, vilket säkerställer att du får innehåll och support av högsta kvalitet.",
-  buttonText = "Börja Nu",
-  imageSrc = "/images/home/hero-image.jpg",
+  buttonText = "Bli medlem",
+  imageSrc = "/images/home/home-banner.jpg",
   showTrustpilot = true,
 }: Props) {
   const { openContractForm } = useModal()
+
   return (
-    <section className="relative bg-white py-8 px-4 bg-[url('/images/hero-mesh.svg')] bg-no-repeat bg-cover bg-center">
-      <div className="max-w-7xl mx-auto">
-        {/* Trustpilot */}
-        {showTrustpilot && (
-          <div className="flex justify-center mb-4">
-            <img
-              src="/images/home/hero-trustpilot.png"
-              alt="Trustpilot"
-              width={255}
-              height={33}
-              className="object-contain h-[33px] w-[255px]"
-            />
+    <section className="relative bg-white py-10 md:py-14">
+      <div className="max-w-[1050px] mx-auto px-5 md:px-8 lg:px-12">
+        <div className="flex flex-col gap-10 lg:gap-0 lg:flex-row lg:items-center lg:justify-between">
+          {/* ── Left column ── */}
+          <div className="flex flex-col items-start lg:max-w-[560px]">
+            {/* Title */}
+            <h1 className="text-[#151E3A] text-[30px] md:text-[36px] lg:text-[40px] font-bold font-jakarta text-left mb-6 leading-[1.15]">
+              Studera på distans. <br className="hidden sm:block" />
+              Var du vill, när du vill.
+            </h1>
+
+            {/* Bullet list */}
+            <ul className="list-disc pl-8 md:pl-9 mb-8 space-y-1">
+              {BULLETS.map((item) => (
+                <li
+                  key={item}
+                  className="font-inter text-[#151E3A] text-[14px] md:text-[16px] font-medium leading-[1.2] marker:text-[1.2em]"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+
+            {/* CTA + Trustpilot */}
+            <div className="flex gap-4 items-center justify-center">
+              <button
+                onClick={() => openContractForm()}
+                className="px-6 py-3 bg-[#225AEA] hover:bg-[#1a4aca] text-white font-semibold rounded-[7px] transition-colors duration-200 font-jakarta text-sm inline-flex items-center gap-2"
+              >
+                {buttonText} <ArrowRight size={16} />
+              </button>
+
+              {showTrustpilot && (
+                <img
+                  src="/images/home/hero-trustpilot.png"
+                  alt="Trustpilot"
+                  width={225}
+                  height={29}
+                  className="object-contain"
+                  style={{ width: 225, height: 29 }}
+                />
+              )}
+            </div>
           </div>
-        )}
 
-        {/* Title */}
-        <h1 className="text-[#151E3A] text-[30px] md:text-[48px] lg:text-[56px] font-bold font-jakarta text-center mb-6 leading-[32px] md:leading-[44px] lg:leading-[52px] max-w-[700px] md:max-w-[550px] lg:max-w-[700px] mx-auto">
-          {title}
-        </h1>
-
-        {/* Description */}
-        <p className="text-[#434C69] text-[16px] font-inter font-medium text-center mb-4 leading-relaxed max-w-[733px] mx-auto">
-          {description}
-        </p>
-
-        {/* CTA Button */}
-        <div className="flex justify-center items-center mb-4">
-          <button
-            onClick={() => openContractForm()}
-            className="px-6 py-3 md:w-64 justify-center bg-[#225AEA] hover:bg-[#1a4aca] text-white font-semibold rounded-[7px] transition-colors duration-200 font-jakarta text-sm inline-flex items-center gap-2"
-          >
-            {buttonText} <ArrowRight size={16} />
-          </button>
-        </div>
-
-        {/* Hero Image Section */}
-        <div className="relative max-w-[960px] mx-auto">
-          <div className="relative rounded-[20px] overflow-hidden shadow-xl">
+          {/* ── Right column ── */}
+          <div className="relative lg:flex lg:items-end lg:justify-end">
             <img
               src={imageSrc}
               alt="Hero image"
-              width={960}
-              height={540}
-              className="w-full h-auto object-cover"
+              width={368}
+              height={461}
+              className="w-[368px] h-[461px] object-cover"
             />
           </div>
         </div>

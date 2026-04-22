@@ -3,184 +3,511 @@ import Layout from "@/components/Layout"
 import en from "@/locales/en"
 import sv from "@/locales/sv"
 import Image from "next/image"
-
-import { HiQuestionMarkCircle } from "react-icons/hi"
+import {
+  AlmegaIcon,
+  StarIcon,
+  UserIcon,
+  BadgeIcon,
+} from "@/components/blocks/home-blocks/HomePageSvgs"
 import { MainFAQ } from "@/components/parts/MainFAQ"
 import { HomePageFaqData } from "@/data/data"
-import WelcomeSection from "@/components/WelcomeSection"
-import TestimonialsSection from "@/components/TestimonialsSection"
 import HeroSection from "@/components/HeroSection"
-import UltimatePlanFeatures from "@/components/parts/UltimatePlanFeatures"
-import StartYourJourney from "@/components/parts/StartYourJourney"
 import TrustPilotReviews from "@/components/parts/TrustPilotReviews"
-import TitlePill from "@/components/parts/TitlePill"
-import { useModal } from "@/components/ModalContext"
 import Link from "next/link"
-import { ArrowRight, ArrowRightIcon } from "lucide-react"
+import { ArrowRightIcon } from "lucide-react"
+import Title from "@/components/blocks/home-blocks/Title"
+import HomePageCourseCard from "@/components/blocks/home-blocks/HomePageCourseCard"
+import { courses } from "./course-card-data"
+import { CTABannerBlock } from "@/components/parts/CTABanner"
 
 export default function Home() {
   const router = useRouter()
   const { locale } = router
   const t = locale === "en" ? en : sv
-  const { openContractForm } = useModal()
 
   return (
     <Layout headTitle={t.homeData.metaData.title} isFullWidth={true}>
-      <HeroSection />
-      <TestimonialsSection />
-      <WelcomeSection />
-      {/* CTA Section 1 */}
-      <section className="mb-8 text-white w-[calc(100%-20px)] md:w-full max-w-[1358px] mx-auto px-4 md:px-2">
-        <div className="relative left-0 right-0 flex flex-col items-center justify-center bg-[#2E56F5] rounded-[16px] md:rounded-[20px] px-4 md:px-4 lg:px-6 py-6 md:py-8 lg:py-10 back-background">
-          <HiQuestionMarkCircle
-            className="mx-auto text-white mb-3 md:mb-4"
-            size={38}
-            aria-label="help"
-          />
-          <div className="text-center flex flex-col items-center w-full">
-            <h1 className="text-white text-center text-[18px] leading-[1.3] sm:text-[20px] sm:leading-[1.4] md:text-[24px] md:leading-[1.5] max-w-[90%] sm:max-w-[600px] font-bold font-jakarta mb-3 md:mb-4">
-              Över 300 miljoner kronor i intäkter på plattformen
-            </h1>
-            <p className="mb-4 md:mb-6 max-w-[95%] sm:max-w-[85%] md:max-w-xl mx-auto text-center text-[12px] sm:text-[14px] md:text-[15px] lg:text-[16px] text-white font-inter leading-[1.6] sm:leading-relaxed px-2 sm:px-0">
-              Vår tjänst hjälper dig att ta kontroll över din framtid. Få
-              personligt stöd från experter som vet vad som krävs för att
+      <div className="px-[18px] md:px-[38px]">
+        <HeroSection />
+        {/* Feature Stats section */}
+        <section className="bg-[#F8F8F8] rounded-[45px] max-w-[1336px] mx-auto px-5 md:px-10 py-5 md:py-14 md:mt-1 mb-5 md:mb-10">
+          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-6 md:gap-6 justify-between items-center">
+            <div className="flex flex-col items-center text-center gap-3">
+              <div className="flex justify-center items-center rounded-full bg-[#3E6FED] w-12 h-12 md:w-16 md:h-16">
+                <UserIcon className="w-4 h-4 md:w-6 md:h-6" />
+              </div>
+              <h4 className="font-jakarta text-black text-xs md:text-[20px] md:font-extrabold">
+                7500+ deltagare
+              </h4>
+            </div>
+
+            <div className="flex flex-col items-center text-center gap-3">
+              <div className="flex justify-center items-center rounded-full bg-[#3E6FED] w-12 h-12 md:w-16 md:h-16">
+                <StarIcon className="w-4 h-4 md:w-6 md:h-6" />
+              </div>
+              <h4 className="font-jakarta text-black text-xs md:text-[20px] md:font-extrabold">
+                2500+ recensioner
+              </h4>
+            </div>
+
+            <div className="flex flex-col items-center text-center gap-3">
+              <div className="flex justify-center items-center rounded-full bg-[#3E6FED] w-12 h-12 md:w-16 md:h-16">
+                <BadgeIcon className="w-3 h-4 md:w-5 md:h-6" />
+              </div>
+              <h4 className="font-jakarta text-black text-xs md:text-[20px] md:font-extrabold">
+                Sveriges ledande experter
+              </h4>
+            </div>
+
+            <div className="flex flex-col items-center text-center gap-3">
+              <div className="flex justify-center items-center rounded-full bg-[#3E6FED] w-12 h-12 md:w-16 md:h-16">
+                <AlmegaIcon className="w-5 h-4 md:w-7 md:h-6" />
+              </div>
+              <h4 className="font-jakarta text-black text-xs md:text-[20px] md:font-extrabold">
+                ALMEGA-auktoriserade
+              </h4>
+            </div>
+          </div>
+        </section>
+
+        <div className="flex flex-col w-full text-start items-start max-w-[1336px] mx-auto mb-10">
+          <h3 className="font-jakarta font-bold text-[22px] md:text-[40px] text-black mt-4 text-left">
+            Vi har utbildningen för dig.
+          </h3>
+          <p className="font-inter text-[12px] md:text-[14px] text-black mt-2 mb-6 md:mb-10 max-w-[640px] mx-0 leading-[20px] text-left">
+            Hos oss får du värdefulla kunskaper som leder till jobb genom
+            expertledda yrkesutbildningar. Med våra skräddarsydda läroplaner och
+            användarvänliga plattform blir det tillgängligt, bekvämt och
+            effektfullt för dig att studera på distans.
+          </p>
+        </div>
+
+        {/* Course Expert Section */}
+        <section className="relative flex flex-col gap-8 md:py-32 bg-[#2E56F5] rounded-[16px] px-4 py-6 md:rounded-[40px] md:px-8 lg:mx-auto lg:w-full lg:max-w-[1336px] lg:flex-row lg:items-center lg:gap-12 lg:px-[60px]">
+          <div className="flex w-full flex-col items-start text-left lg:flex-1">
+            <h2 className="text-white text-[18px] leading-[1.3] sm:text-[20px] sm:leading-[1.4] md:text-[40px] md:leading-[1.5] max-w-[442px] font-bold font-jakarta mb-3 md:mb-4">
+              Yrkesutbildningar skapade av experter.
+            </h2>
+            <p className="mb-4 md:mb-6 md:max-w-[709px] text-[12px] sm:text-[14px] md:text-[15px] lg:text-[16px] text-white font-inter font-medium leading-[1.6] sm:leading-relaxed">
+              Våra yrkesutbildningar är framtagna av Sveriges mest framstående
+              ämnesexperter som har omfattande kunskap och praktisk erfarenhet
+              inom sina respektive områden. Du kommer att att lära av de bästa
+              och få kompetenser som är efterfrågade på arbetsmarknaden.
+            </p>
+          </div>
+
+          <div className="flex w-full flex-col lg:max-w-[368px]">
+            <div className="border-t-2 border-t-white py-2">
+              <p className="font-jakarta font-bold text-white text-[20px]">
+                IT
+              </p>
+            </div>
+            <div className="border-t-2 border-t-white py-2">
+              <p className="font-jakarta font-bold text-white text-[20px]">
+                Ekonomi
+              </p>
+            </div>
+            <div className="border-t-2 border-t-white py-2">
+              <p className="font-jakarta font-bold text-white text-[20px]">
+                Fastighet
+              </p>
+            </div>
+            <div className="border-t-2 border-t-white py-2">
+              <p className="font-jakarta font-bold text-white text-[20px]">
+                Försäljning
+              </p>
+            </div>
+            <div className="border-t-2 border-t-white py-2">
+              <p className="font-jakarta font-bold text-white text-[20px]">
+                Entreprenörskap
+              </p>
+            </div>
+            <div className="border-t-2 border-t-white py-2">
+              <p className="font-jakarta font-bold text-white text-[20px]">
+                Kommunikation
+              </p>
+            </div>
+            <div className="border-t-2 border-t-white py-2">
+              <p className="font-jakarta font-bold text-white text-[20px]">
+                Pedagogik
+              </p>
+            </div>
+            <div className="border-t-2 border-t-white py-2"></div>
+          </div>
+        </section>
+
+        {/* Course Cards Section  */}
+        <section className="w-full max-w-[1336px] mx-auto px-4 md:px-0 mb-8 md:mb-[30px] mt-[30px]">
+          <div className="flex flex-col items-center justify-items-center w-full max-w-[1336px] mx-auto mb-10">
+            <h3 className="max-w-[490px] font-jakarta font-extrabold text-center text-[22px] md:text-[40px] leading-[1.0] text-black mt-4">
+              Gör som över 10.000 framgångsrika svenskar
+            </h3>
+            <p className="font-inter font-medium text-center text-[12px] md:text-base text-black mt-2 mb-6 md:mb-10 md:max-w-[480px] lg:max-w-[700px] mx-auto leading-[20px]">
+              Lär dig av Sveriges främsta experter och ta del av kunskap som har
+              hjälpt tusentals personer nå sina mål. Oavsett om du vill bli mer
+              effektiv, hantera stress eller stärka ditt ledarskap, får du
+              insikter och strategier direkt från landets skarpaste hjärnor.
+              Börja din resa mot framgång nu!
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {courses.map((course) => (
+              <HomePageCourseCard
+                key={course.id}
+                title={course.title}
+                description={course.description}
+                credential="Diplom & certifikat"
+                format="Distans"
+                href="/utbildningar"
+              />
+            ))}
+          </div>
+        </section>
+
+        {/* CTA Section 1 */}
+        <section className="mb-8 w-full max-w-[1336px] mx-auto px-4 md:px-0">
+          <div className="flex flex-col lg:flex-row justify-between gap-8 mb-8">
+            <div className="flex flex-col items-start w-full max-w-[1400px] rounded-[32px] bg-[#F8F8F8] px-6 py-8 md:px-10 lg:px-12 lg:py-10">
+              <h3 className="font-jakarta font-extrabold md:text-[28px] text-black mb-2">
+                Omfattande läroplaner
+              </h3>
+              <p className="font-inter text-[12px] md:text-[14px] text-[#151515] md:max-w-[640px] lg:max-w-[570px] leading-[20px] mb-6">
+                Vi har grundligt utformat våra läroplaner för att täcka alla
+                viktiga delar av varje ämne. Från grundläggande koncept till
+                avancerade tekniker. Våra utbildningar ger en holistisk
+                inlärningsupplevelse som utrustar dig med de färdigheter du
+                behöver för att få det jobb du önskar.
+              </p>
+            </div>
+            <div className="flex flex-col items-start w-full max-w-[1400px] rounded-[32px] bg-[#F8F8F8] px-6 py-8 md:px-10 lg:px-12 lg:py-10">
+              <h3 className="font-jakarta font-extrabold md:text-[28px] text-black mb-2">
+                Flexibla studier
+              </h3>
+              <p className="font-inter text-[12px] md:text-[14px] text-[#151515] md:max-w-[640px] lg:max-w-[570px] leading-[20px] mb-6">
+                I vår plattform har du flexibiliteten att lära dig i din egen
+                takt och sätta ditt eget schema. Oavsett om du arbetar heltid
+                eller om du är en person med en hektisk livsstil kan du studera
+                på distans när som helst, var som helst. Du skapar dina egna
+                rutiner.
+              </p>
+            </div>
+          </div>
+
+          {/* Practical Learning Section */}
+          <div className="flex flex-col bg-[#2E56F5] rounded-[16px] md:rounded-[40px] px-[26px] py-[40px] lg:px-[50px] lg:py-[50px]">
+            <div className="w-full text-left flex flex-col items-start md:grid md:grid-cols-[75px,1fr] md:gap-x-4 md:items-center lg:flex lg:flex-col lg:items-start">
+              <img
+                src="/icons/main-icon-light.png"
+                alt="Main Icon"
+                className="h-[75px] w-[75px] mb-4 md:mb-0 lg:mb-4"
+              />
+
+              <div>
+                <h1 className="text-white text-[18px] leading-[1.3] sm:text-[20px] sm:leading-[1.4] md:text-[24px] md:leading-[1.5] max-w-[90%] sm:max-w-[600px] font-bold font-jakarta mb-3 md:mb-3 lg:mb-4">
+                  Praktiskt lärande
+                </h1>
+                <p className="mb-4 md:mb-0 lg:mb-6 md:max-w-[699px] text-[12px] sm:text-[14px] md:text-[15px] lg:text-[16px] text-white font-inter font-medium leading-[1.6] sm:leading-relaxed">
+                  Vi tror på kraften i praktisk applicering i dina studier. Våra
+                  utbildningar innehåller case och övningar hämtade från
+                  arbetslivet vilket gör att du kan tillämpa dina nyvunna
+                  kunskaper direkt i din yrkesroll.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Study Material Section */}
+        <section className="flex flex-col items-center gap-3 w-full mb-8">
+          <div className="flex flex-col items-start mt-8 w-full max-w-[1400px] rounded-[32px] bg-[#F8F8F8] px-6 py-8 md:px-10 lg:px-12 lg:py-10">
+            <Title blackText="Detta " blueText="får du." />
+            <h3 className="font-jakarta font-extrabold md:text-[28px]">
+              Tillgång studiematerial.
+            </h3>
+            <p className="font-inter text-[12px] md:text-[14px] text-[#151515] md:max-w-[640px] lg:max-w-[570px] leading-[20px] mb-6">
+              Du kan återbesöka innehållet även efter att du har slutfört din
+              utbildning när du behöver repetition.
+            </p>
+            <h3 className="font-jakarta font-extrabold md:text-[28px]">
+              Obegränsad support.{" "}
+            </h3>
+            <p className="font-inter text-[12px] md:text-[14px] text-[#151515] md:max-w-[640px] lg:max-w-[570px] leading-[20px] mb-6">
+              Studera på distans behöver inte betyda att du studerar helt ensam.
+              Vi hjälper dig under hela din studietid. Oavsett om du har
+              tekniska frågor eller behöver vägledning angående
+              utbildningsmaterialet så finns vi här för att hjälpa dig att
               lyckas.
             </p>
+            <h3 className="font-jakarta font-extrabold md:text-[28px]">
+              14 dagar ångerrätt.
+            </h3>
+            <p className="font-inter text-[12px] md:text-[14px] text-[#151515] md:max-w-[640px] lg:max-w-[570px] leading-[20px] mb-6">
+              Skulle du inte vara nöjd med en utbildning du köpt betalar vi
+              tillbaka alla pengar till dig inom 14 dagar efter köptillfället
+              förutsatt att du inte slutfört utbildningen.
+            </p>
+          </div>
+          {/* Distance Learning Section */}
+          <div className="flex flex-col items-start mt-8 w-full max-w-[1400px] px-6 py-8 md:px-10 lg:px-12 lg:py-10">
+            <Title blackText="Så här fungerar " blueText="dina studier." />
+            <h3 className="font-jakarta font-extrabold md:text-[28px]">
+              Studera på distans
+            </h3>
+            <p className="font-inter text-[12px] md:text-[14px] text-[#151515] md:max-w-[640px] lg:max-w-[570px] leading-[20px] mb-6">
+              Våra utbildningar är utformade för att hålla dig engagerad under
+              hela studietiden. Lärplattformen är självvaliderande och du kommer
+              möta interaktiva frågor, quiz och övningar för att stärka din
+              förståelse.
+            </p>
+            <h3 className="font-jakarta font-extrabold md:text-[28px]">
+              Få tillgång till digitalt innehåll
+            </h3>
+            <p className="font-inter text-[12px] md:text-[14px] text-[#151515] md:max-w-[640px] lg:max-w-[570px] leading-[20px] mb-6">
+              När du startar ditt lärande får du tillgång till förinspelade
+              videoföreläsningar, text- och bilddokument, instuderingsfrågor och
+              övningar ledda av våra experter.
+            </p>
+            <h3 className="font-jakarta font-extrabold md:text-[28px]">
+              Erhåll diplom och certifikat
+            </h3>
+            <p className="font-inter text-[12px] md:text-[14px] text-[#151515] md:max-w-[640px] lg:max-w-[570px] leading-[20px] mb-6">
+              När du är färdig med den teoretiska delen av din utbildning får du
+              ditt diplom. Önskar du ett certifikat väntar antingen praktik
+              eller tentamensarbete. Båda dokumenten är digitala, visar upp dina
+              nyvunna färdigheter och förbättrar din professionella profil.
+              Detta öppnar dörrar till nya möjligheter i din karriär.
+            </p>
+          </div>
+          <div className="w-full flex flex-col justify-center mb-8">
+            <Title blackText="Recensioner" />
+            <TrustPilotReviews />
+          </div>
+        </section>
+        {/* Feature Cards Section
+        <section className="flex flex-col w-full max-w-[1440px] mx-auto items-center gap-3 mt-[36px] md:mt-[53px] lg:mt-[77px] lg:mb-[42px] mb-[30px]">
+          <h2 className="font-jakarta font-semibold text-[22px] text-center text-black md:text-[40px] max-w-[241px] md:max-w-[472px] lg:max-w-[478px] leading-[22px] md:leading-[36px] mb-1">
+            Är du redo att ta kontroll över ditt liv?
+          </h2>
+          <p className="font-inter text-center text-[12px] md:text-[14px] text-[#434C69] md:max-w-[640px] lg:max-w-[570px] leading-[20px] px-4">
+            Varje framgång började med ett första steg - en ansökan. Är det din
+            tur nu?
+          </p>
+        </section> */}
+
+        {/* Brands Section */}
+        <section className="flex flex-col justify-center items-center py-1 mb-8">
+          <h1 className="font-jakarta font-extrabold text-lg text-center md:text-3xl lg:text-left">
+            Företag vi hjälpt med kompetensutveckling
+            <br className="lg:hidden" /> av personalen
+          </h1>
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 justify-center items-center gap-[18px] md:gap-[36px] mt-6">
+            <div className="flex justify-center items-center w-[160.34px] md:w-[284px] h-[94.28px] md:h-[167px] lg:h-[160px] bg-[#F8F8F8]">
+              <Image
+                src="/icons/tele2.png"
+                alt="Tele2"
+                width={220}
+                height={110}
+                className="h-auto w-[78%] max-w-[155px] object-contain"
+              />
+            </div>
+            <div className="flex justify-center items-center w-[160.34px] md:w-[284px] h-[94.28px] md:h-[167px] lg:h-[160px] bg-[#F8F8F8]">
+              <Image
+                src="/icons/sveriges-radio.png"
+                alt="Sveriges Radio"
+                width={234}
+                height={36}
+                className="h-auto w-[78%] max-w-[162px] object-contain"
+              />
+            </div>
+            <div className="flex justify-center items-center w-[160.34px] md:w-[284px] h-[94.28px] md:h-[167px] lg:h-[160px] bg-[#F8F8F8]">
+              <Image
+                src="/icons/securitas.png"
+                alt="Securitas"
+                width={162}
+                height={110}
+                className="h-auto w-[78%] max-w-[162px] object-contain"
+              />
+            </div>
+            <div className="flex justify-center items-center w-[160.34px] md:w-[284px] h-[94.28px] md:h-[167px] lg:h-[160px] bg-[#F8F8F8]">
+              <Image
+                src="/icons/astrazeneca.png"
+                alt="AstraZeneca"
+                width={233}
+                height={56}
+                className="h-auto w-[78%] max-w-[233px] object-contain"
+              />
+            </div>
+            <div className="flex justify-center items-center w-[160.34px] md:w-[284px] h-[94.28px] md:h-[167px] lg:h-[160px] bg-[#F8F8F8]">
+              <Image
+                src="/icons/arbetsformedlingen.png"
+                alt="Arbetsförmedlingen"
+                width={236}
+                height={29}
+                className="h-auto w-[78%] max-w-[236px] object-contain"
+              />
+            </div>
+            <div className="flex justify-center items-center w-[160.34px] md:w-[284px] h-[94.28px] md:h-[167px] lg:h-[160px] bg-[#F8F8F8]">
+              <Image
+                src="/icons/ericsson.png"
+                alt="Ericsson"
+                width={230}
+                height={110}
+                className="h-auto w-[78%] max-w-[230px] object-contain"
+              />
+            </div>
+            <div className="flex justify-center items-center w-[160.34px] md:w-[284px] h-[94.28px] md:h-[167px] lg:h-[160px] bg-[#F8F8F8]">
+              <Image
+                src="/icons/stockholmsstad.png"
+                alt="Stockholms Stad"
+                width={202}
+                height={69}
+                className="h-auto w-[78%] max-w-[202px] object-contain"
+              />
+            </div>
+            <div className="flex justify-center items-center w-[160.34px] md:w-[284px] h-[94.28px] md:h-[167px] lg:h-[160px] bg-[#F8F8F8]">
+              <Image
+                src="/icons/almi.png"
+                alt="Almi"
+                width={160}
+                height={57}
+                className="h-auto w-[78%] max-w-[160px] object-contain"
+              />
+            </div>
+          </div>
+          <div className="mt-8 w-full max-w-[1240px] rounded-[32px] bg-[#F8F8F8] px-6 py-8 md:px-10 lg:px-12 lg:py-10">
+            <div className="grid grid-cols-1 gap-8 lg:grid-cols-[260px,1fr] lg:gap-12">
+              <div className="flex flex-col items-center justify-center gap-4 text-center lg:items-start lg:text-left">
+                <h3 className="font-jakarta text-[22px] font-extrabold text-[#151E3A]">
+                  Betala tryggt med
+                </h3>
+                <Image
+                  src="/icons/klarna.png"
+                  alt="Klarna"
+                  width={180}
+                  height={120}
+                  className="h-auto w-[180px] object-contain md:w-[193px]"
+                />
+              </div>
+
+              <div className="flex flex-col items-center justify-center gap-4 text-center lg:items-start lg:pl-12 lg:text-left">
+                <h3 className="font-jakarta text-[22px] font-extrabold text-[#151E3A]">
+                  Vi erbjuder följande betalningssätt:
+                </h3>
+                <div className="flex flex-col">
+                  <ul className="mx-auto grid w-fit grid-cols-1 gap-y-0 list-disc list-inside text-left text-base font-inter font-medium text-[#151E3A] lg:mx-0 lg:grid-cols-2 lg:gap-x-28 lg:list-outside lg:pl-5">
+                    <li>Få först. Betala sedan.</li>
+                    <li>Betalningstid minst 14 dagar.</li>
+                    <li>14 dagars ångerrätt</li>
+                    <li>Dela upp betalningen per månad.</li>
+                    <li>Betala direkt med BankID.</li>
+                    <li>Betala med kort.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="w-full max-w-[1258px] bg-[#225AEA] bg-[url(/images/mentorship/mentorship-products/bg-mesh.svg)] bg-cover rounded-[20px] sm:rounded-[32px] mx-auto px-2 sm:px-4 py-4 sm:py-4 mt-4 mb-4">
+          <div className="relative w-full max-w-[1170px] mx-auto min-h-[240px] sm:min-h-[260px] md:h-[366px] flex flex-col items-center justify-center">
+            {/* Icon placeholder */}
+            <div className="flex flex-col items-center px-2">
+              {/* Main heading */}
+              <h3 className="max-w-[455px] font-semibold text-white text-sm md:text-[32px] leading-7 mb-3 sm:mb-4 font-jakarta text-center">
+                Börja studera på distans idag.
+              </h3>
+
+              {/* Subtext */}
+              <p className="max-w-[346px] text-center font-regular text-white text-[10px] sm:text-xs md:text-sm leading-relaxed mb-3 sm:mb-4 font-inter px-1">
+                Utforska vårt utbildningsutbud och ta första steget mot din
+                personliga utveckling.
+              </p>
+
+              <div className="border-0.5 border-white shadow-sm shadow-slate-50 drop-shadow-sm rounded-full px-2 sm:px-4 md:px-6 py-3 sm:py-4 mb-4">
+                <div className="flex items-center border-1 border-white justify-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 text-white font-inter overflow-hidden">
+                  <div className="flex items-center gap-1 sm:gap-1.5 md:gap-2 flex-shrink-0">
+                    <Image
+                      src="/icons/bolt.svg"
+                      width={12}
+                      height={13.3}
+                      alt="bolt"
+                      className="sm:w-[14px] sm:h-[15.5px] md:w-[16.5px] md:h-[18.33px] flex-shrink-0"
+                    />
+                    <span className="font-jakarta text-[9px] sm:text-[10px] md:text-xs lg:text-sm text-white whitespace-nowrap">
+                      Få omedelbar åtkomst
+                    </span>
+                  </div>
+
+                  <div className="flex items-center gap-1 sm:gap-1.5 md:gap-2 flex-shrink-0">
+                    <Image
+                      src="/icons/handshake.svg"
+                      width={12}
+                      height={13.3}
+                      alt="handshake"
+                      className="sm:w-[14px] sm:h-[15.5px] md:w-[16.5px] md:h-[18.33px] flex-shrink-0"
+                    />
+                    <span className="font-jakarta text-[9px] sm:text-[10px] md:text-xs lg:text-sm text-white whitespace-nowrap">
+                      24/7 support
+                    </span>
+                  </div>
+
+                  <div className="flex items-center gap-1 sm:gap-1.5 md:gap-2 flex-shrink-0">
+                    <Image
+                      src="/icons/hand.svg"
+                      width={12}
+                      height={13.3}
+                      alt="hand"
+                      className="sm:w-[14px] sm:h-[15.5px] md:w-[16.5px] md:h-[18.33px] flex-shrink-0"
+                    />
+                    <span className="font-jakarta text-[9px] sm:text-[10px] md:text-xs lg:text-sm text-white whitespace-nowrap">
+                      Livstids tillgång
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-3 md:gap-4 mt-2 sm:mt-3">
+              <p className="text-white text-[9px] sm:text-[10px] md:text-[14px] whitespace-nowrap">
+                Strålande
+              </p>
+              <Image
+                src="/images/mentorship/mentorship-products/trust-pilot-stars.svg"
+                className="w-[100px] sm:w-[124px] h-[18px] sm:h-[20px] md:h-[24px] flex-shrink-0"
+                alt="svg"
+                width={124}
+                height={24}
+              />
+              <p className="text-white text-[9px] sm:text-[10px] md:text-[14px] whitespace-nowrap">
+                4.8 av 5.0
+              </p>
+            </div>
+            {/* CTA Button */}
             <button
-              onClick={() => openContractForm()}
-              className="py-2 px-4 md:py-2.5 md:px-5 flex items-center justify-center rounded-[8px] font-semibold font-inters text-[11px] md:text-[12px] btn-white text-[#15133A] hover:bg-gray-100 transition-colors"
+              //  onClick={onCtaClick}
+              className="flex justify-center items-center bg-white text-gray-600 px-[24px] py-2 rounded-lg font-semibold text-sm font-jakarta mt-[16px] md:mt-[28px]"
             >
-              Starta din resa idag <ArrowRight size={14} className="ml-2" />
+              <p className="font-inter font-semibold text-[#151E3A] text-[14px]">
+                Bli medlem
+              </p>{" "}
+              <ArrowRightIcon className="w-3 h-3 ml-1" />
             </button>
           </div>
+        </section>
+
+        <MainFAQ faqData={HomePageFaqData} />
+        <div className="w-full flex justify-center mb-4">
+          <Link
+            href="/faq"
+            className="rounded-lg border border-[#908888] bg-white px-8 py-3 font-jakarta font-semibold text-sm md:text-base text-black inline-flex items-center gap-2"
+          >
+            Se alla vanliga frågor{" "}
+            <span>
+              <ArrowRightIcon size={14} />
+            </span>
+          </Link>
         </div>
-      </section>
-
-      <TrustPilotReviews />
-
-      {/* Feature Cards Section */}
-      <section className="flex flex-col w-full max-w-[1440px] mx-auto items-center gap-3 mt-[36px] md:mt-[53px] lg:mt-[77px] lg:mb-[42px] mb-[30px]">
-        <h2 className="font-jakarta font-semibold text-[22px] text-center text-black md:text-[40px] max-w-[241px] md:max-w-[472px] lg:max-w-[478px] leading-[22px] md:leading-[36px] mb-1">
-          Är du redo att ta kontroll över ditt liv?
-        </h2>
-        <p className="font-inter text-center text-[12px] md:text-[14px] text-[#434C69] md:max-w-[640px] lg:max-w-[570px] leading-[20px] px-4">
-          Varje framgång började med ett första steg - en ansökan. Är det din
-          tur nu?
-        </p>
-
-        {/* Cards List */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-[11px] md:gap-[27px] lg:gap-[29px] pt-[10px] md:pt-[38px] w-full px-4 md:px-0">
-          {/* Card 1 */}
-          <div className="flex flex-col py-[24px] px-[18px] rounded-[25px] bg-[#F8F9FA]">
-            <div className="flex items-center">
-              <img
-                src="/images/home/testimonial/user-comments/comment1.png"
-                alt="comment1"
-                width={383}
-                height={234}
-                className="w-full h-full object-contain"
-              />
-            </div>
-          </div>
-
-          {/* Card 2 */}
-          <div className="flex flex-col py-[24px] px-[18px] rounded-[25px] bg-[#F8F9FA]">
-            <div className="flex items-center">
-              <img
-                src="/images/home/testimonial/user-comments/comment2.png"
-                alt="comment2"
-                width={383}
-                height={234}
-                className="w-full h-full object-contain"
-              />
-            </div>
-          </div>
-
-          {/* Card 3 */}
-          <div className="flex flex-col py-[24px] px-[18px] rounded-[25px] bg-[#F8F9FA]">
-            <div className="flex items-center">
-              <img
-                src="/images/home/testimonial/user-comments/comment3.png"
-                alt="comment3"
-                width={383}
-                height={234}
-                className="w-full h-full object-contain"
-              />
-            </div>
-          </div>
-
-          {/* Card 4 */}
-          <div className="flex flex-col py-[24px] px-[18px] rounded-[25px] bg-[#F8F9FA]">
-            <div className="flex items-center">
-              <img
-                src="/images/home/testimonial/user-comments/comment4.png"
-                alt="comment4"
-                width={383}
-                height={234}
-                className="w-full h-full object-contain"
-              />
-            </div>
-          </div>
-
-          {/* Card 5 */}
-          <div className="flex flex-col py-[24px] px-[18px] rounded-[25px] bg-[#F8F9FA]">
-            <div className="flex items-center">
-              <img
-                src="/images/home/testimonial/user-comments/comment5.png"
-                alt="comment5"
-                width={383}
-                height={234}
-                className="w-full h-full object-contain"
-              />
-            </div>
-          </div>
-
-          {/* Card 6 */}
-          <div className="flex flex-col py-[24px] px-[18px] rounded-[25px] bg-[#F8F9FA]">
-            <div className="flex items-center">
-              <img
-                src="/images/home/testimonial/user-comments/comment6.png"
-                alt="comment6"
-                width={383}
-                height={234}
-                className="w-full h-full object-contain"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Plan Section */}
-      <section className="flex flex-col justify-center items-center py-1 mb-8">
-        <img
-          src="/images/mentorship/mentorship-packages.png"
-          width={700}
-          height={470}
-          alt="mentorship packages"
-        />
-        <h3 className="text-[24px] md:text-[48px] font-jakarta font-semibold text-[#151E3A] mt-2 mb-4">
-          En ultimat plan
-        </h3>
-        <p className="text-center text-sm md:text-lg text-[#434C69] max-w-[600px] px-4">
-          En plan med så mycket värde att den verkar för bra för att vara sann,
-          plus ett pris som passar alla som är redo att vara ambitiösa.
-        </p>
-        <UltimatePlanFeatures />
-        <TitlePill text="Totalt värde: 155 000 kr" className="mt-2" />
-        <StartYourJourney onCtaClick={() => openContractForm()} />
-      </section>
-
-      <MainFAQ faqData={HomePageFaqData} />
-      <div className="w-full flex justify-center mb-4">
-        <Link
-          href="/faq"
-          className="rounded-lg border border-[#908888] bg-white px-8 py-3 font-jakarta font-semibold text-sm md:text-base text-black inline-flex items-center gap-2"
-        >
-          Se alla vanliga frågor{" "}
-          <span>
-            <ArrowRightIcon size={14} />
-          </span>
-        </Link>
       </div>
     </Layout>
   )
