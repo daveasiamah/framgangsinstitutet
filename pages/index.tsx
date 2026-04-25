@@ -484,15 +484,17 @@ export default function Home() {
               </p>
             </div>
             {/* CTA Button */}
-            <button
-              //  onClick={onCtaClick}
+            <a
+              href="https://buy.stripe.com/bJe4gyclScFaeDX0KI6wE01"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex justify-center items-center bg-white text-gray-600 px-[24px] py-2 rounded-lg font-semibold text-sm font-jakarta mt-[16px] md:mt-[28px]"
             >
               <p className="font-inter font-semibold text-[#151E3A] text-[14px]">
                 Bli medlem
               </p>{" "}
               <ArrowRightIcon className="w-3 h-3 ml-1" />
-            </button>
+            </a>
           </div>
         </section>
 

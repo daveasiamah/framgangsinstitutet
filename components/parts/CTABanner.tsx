@@ -64,7 +64,11 @@ export function CTABannerBlock() {
 
           <button
             onClick={() =>
-              window.open("https://buy.stripe.com/3cscO09iSdoBgVOeUZ")
+              window.open(
+                "https://buy.stripe.com/bJe4gyclScFaeDX0KI6wE01",
+                "_blank",
+                "noopener,noreferrer",
+              )
             }
             className="h-[28px] md:h-[38px] max-w-[275px] rounded-[5px] w-5/6 md:w-[150px] text-[10px] md:text-[14px] btn-white mb-5 lg:mt-10 mt-5 font-normal text-[#15133A]"
           >

@@ -23,7 +23,7 @@ function AppContent({ Component, pageProps }: AppProps) {
       ></Script>
       <Script
         strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=G-FF7H6JCNB6`}
+        src={`https://www.googletagmanager.com/gtag/js?id=G-T9V9474454`}
       />
       <Script
         id="gtag-init"
@@ -33,9 +33,27 @@ function AppContent({ Component, pageProps }: AppProps) {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-FF7H6JCNB6', {
+            gtag('config', 'G-T9V9474454', {
               page_path: window.location.pathname,
             });
+          `,
+        }}
+      />
+      <Script
+        id="meta-pixel"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '1245929254370382');
+            fbq('track', 'PageView');
           `,
         }}
       />
@@ -69,11 +87,6 @@ function AppContent({ Component, pageProps }: AppProps) {
           `,
         }}
       />
-
-      {/* <script
-        src="//code.tidio.co/b3qsg0t7uu4nseq9piuuayi3u5gx3bi6.js"
-        async
-      ></script> */}
 
       {/* <!-- TikTok Pixel Code Start --> */}
       <Script id="tiktok-pixel" strategy="afterInteractive">
@@ -132,6 +145,15 @@ function AppContent({ Component, pageProps }: AppProps) {
           width="0"
           style={{ display: "none", visibility: "hidden" }}
         ></iframe>
+      </noscript>
+      <noscript>
+        <img
+          height="1"
+          width="1"
+          style={{ display: "none" }}
+          src="https://www.facebook.com/tr?id=1245929254370382&ev=PageView&noscript=1"
+          alt=""
+        />
       </noscript>
       <Component {...pageProps} />
       {isContractFormOpen && <ContractForm onClose={closeContractForm} />}

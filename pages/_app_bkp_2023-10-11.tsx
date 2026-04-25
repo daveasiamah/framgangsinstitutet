@@ -1,4 +1,4 @@
-import "@/styles/globals.scss";
+import "@/styles/globals.scss"
 // import ReactDOM from 'react-dom'
 // import { library } from '@fortawesome/fontawesome-svg-core'
 // import { fas } from '@fortawesome/free-solid-svg-icons'
@@ -9,15 +9,15 @@ import "@/styles/globals.scss";
 
 // library.add(fas)
 
-import type { AppProps } from "next/app";
-import Script from "next/script";
+import type { AppProps } from "next/app"
+import Script from "next/script"
 
 export default function App({ Component, pageProps }: AppProps) {
-  return(
+  return (
     <>
-<Script
+      <Script
         strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=G-FF7H6JCNB6`}
+        src={`https://www.googletagmanager.com/gtag/js?id=G-T9V9474454`}
       />
       <Script
         id="gtag-init"
@@ -27,15 +27,15 @@ export default function App({ Component, pageProps }: AppProps) {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-FF7H6JCNB6', {
+            gtag('config', 'G-T9V9474454', {
               page_path: window.location.pathname,
             });
           `,
         }}
       />
-       {/* Add the Hotjar tracking code */}
-       <Script
-       id="gtag-init1"
+      {/* Add the Hotjar tracking code */}
+      <Script
+        id="gtag-init1"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
@@ -53,7 +53,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
       {/* Add the Google Tag Manager (GTM) code here */}
       <Script
-      id="gtag-init2"
+        id="gtag-init2"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
@@ -65,9 +65,8 @@ export default function App({ Component, pageProps }: AppProps) {
           `,
         }}
       />
-    
 
-    <Component {...pageProps} />
+      <Component {...pageProps} />
     </>
-    );
+  )
 }
