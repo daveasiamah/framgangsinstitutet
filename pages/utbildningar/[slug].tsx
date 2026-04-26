@@ -1,127 +1,293 @@
 import { fetchCourseBySlug } from "@/utils/contentful"
 import { Course } from "@/components/blocks/courses-blocks/types"
 import Image from "next/image"
-import ScrollReveal from "@/components/transition/ScrollReveal"
-import Breadcrumbs from "@/components/blocks/courses-blocks/CourseBreadcrumbs"
 import Layout from "@/components/Layout"
 import RichTextRenderer from "@/utils/RichTextRenderer"
-import Link from "next/link"
 
-const CourseDetailPage = ({ course }: { course: Course[] }) => {
-  if (!course) {
-    return <div>Course not found</div>
+type CoursePageProps = {
+  course: Course[] | null
+}
+
+type SidebarCardProps = {
+  totalTime: string
+  priceExVat: number | null
+  priceIncVat: number | null
+  price: string | number | undefined
+  purchaseLink: string | undefined
+}
+
+const SidebarCard = ({
+  totalTime,
+  priceExVat,
+  priceIncVat,
+  price,
+  purchaseLink,
+}: SidebarCardProps) => (
+  <div className="rounded-[20px] border border-[#626C8E]/50 bg-white p-6 shadow-[0_4px_24px_rgba(0,0,0,0.08)] md:p-8 lg:min-h-[423px]">
+    <h2 className="font-jakarta text-[22px] font-extrabold leading-[1.05] text-[#1D2750] md:text-[28px]">
+      Kursöversikt
+    </h2>
+
+    <div className="mt-6 space-y-5">
+      <div>
+        <p className="font-jakarta text-[11px] font-bold uppercase tracking-[0.08em] text-[#2F5CE9]">
+          VART
+        </p>
+        <p className="mt-1 font-inter text-[16px] font-medium text-[#1E1E1E]">
+          Distans
+        </p>
+      </div>
+
+      <div>
+        <p className="font-jakarta text-[11px] font-bold uppercase tracking-[0.08em] text-[#2F5CE9]">
+          OMFATTNING
+        </p>
+        <p className="mt-1 font-inter text-[16px] font-medium text-[#1E1E1E]">
+          {totalTime}
+        </p>
+      </div>
+
+      <div>
+        <p className="font-jakarta text-[11px] font-bold uppercase tracking-[0.08em] text-[#2F5CE9]">
+          AVGIFT
+        </p>
+        <p className="mt-1 font-inter text-[16px] font-medium text-[#1E1E1E]">
+          {priceExVat ? `${priceExVat} kr` : `${price} kr`}
+          {priceIncVat && (
+            <span className="ml-2 text-[13px] text-[#8D8D8D]">
+              ({priceIncVat} kr inkl. moms)
+            </span>
+          )}
+        </p>
+      </div>
+    </div>
+
+    <a
+      href={purchaseLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="mt-7 inline-flex h-[52px] w-full items-center justify-center rounded-[14px] bg-[#2F5CE9] px-4 font-jakarta text-[14px] font-bold uppercase tracking-[0.04em] text-white transition-opacity hover:opacity-90"
+    >
+      Lägg i varukorgen
+    </a>
+
+    <p className="mt-4 text-center font-inter text-[12px] leading-[1.5] text-[#6B7280]">
+      Frågor? Kontakta{" "}
+      <a
+        href="mailto:info@framgangsinstitutet.se"
+        className="underline underline-offset-4"
+      >
+        info@framgangsinstitutet.se
+      </a>
+      .{" "}
+      <a href="/terms-of-service" className="underline underline-offset-4">
+        Se villkor.
+      </a>
+    </p>
+  </div>
+)
+
+const CourseDetailPage = ({ course }: CoursePageProps) => {
+  if (!course || course.length === 0) {
+    return (
+      <Layout headTitle="Utbildningar">
+        <section className="mx-auto w-full max-w-[1280px] px-4 py-16 md:px-8">
+          <h1 className="font-jakarta text-[28px] font-bold text-[#151E3A] md:text-[36px]">
+            Kursen kunde inte hittas
+          </h1>
+          <p className="mt-3 font-inter text-[15px] text-[#2F2F2F]">
+            Vi kunde inte ladda den valda kursen just nu.
+          </p>
+        </section>
+      </Layout>
+    )
   }
 
-  const { title, price, purchaseLink, longDescription, imageUrl } = course[0]
+  const {
+    title,
+    shortDescription,
+    longDescription,
+    imageUrl,
+    price,
+    purchaseLink,
+    videoInfo,
+  } = course[0]
+
+  const totalTime = videoInfo?.totalTime
+    ? `${videoInfo.totalTime} timmar`
+    : "7 dagar - 5 veckor"
+  const numericPrice = Number(String(price || "").replace(/[^\d]/g, ""))
+  const priceExVat =
+    Number.isFinite(numericPrice) && numericPrice > 0 ? numericPrice : null
+  const priceIncVat = priceExVat ? Math.round(priceExVat * 1.25) : null
 
   return (
-    <Layout headTitle={`Utbilningar - ${title}`}>
-      <section className="flex flex-col lg:flex-row py-10 mb-16">
-        {/* Left Column */}
-        <div className="w-full lg:flex-1 lg:min-w-0 px-1 md:px-1 order-1">
-          <Breadcrumbs courseTitle={title} />
-          <ScrollReveal>
-            <div className="flex flex-col pl-4">
-              <h1 className="font-jakarta text-left font-bold text-[32px] md:text-[48px] text-wrap leading-[40px] md:leading-[55px]">
-                {title}
-              </h1>
-              <div className="flex flex-col items-center">
-                <Image
-                  alt="course image"
-                  src={imageUrl}
-                  width={680}
-                  height={360}
-                  style={{ objectFit: "contain" }}
-                  className="rounded-[20px] mt-[24px] md:mt-[48px] mb-6 md:mb-9"
-                />
-                <button
-                  onClick={() => window.open(purchaseLink)}
-                  className="w-full max-w-[318px] py-3 md:py-2 bg-[#225AEA] text-white font-semibold rounded-xl"
-                >
-                  <p className="uppercase">{price} SEK</p>
-                </button>
-              </div>
-            </div>
-          </ScrollReveal>
-          {longDescription && (
-            <div
-              className="prose font-inter mt-6 md:mt-8 pl-4"
-              style={{ maxWidth: "100%" }}
-            >
-              <RichTextRenderer richText={longDescription} />
-            </div>
-          )}
+    <Layout headTitle={`Utbildningar - ${title}`}>
+      <section className="w-full pb-12 md:pb-16">
+        <div className="mx-auto w-full max-w-[1280px] px-4 pt-8 md:px-8 md:pt-10">
+          <header className="mx-auto max-w-[860px] text-center">
+            <h1 className="font-jakarta text-[36px] font-bold leading-[1.08] text-[#151E3A] md:text-[52px]">
+              {title}
+            </h1>
+            <p className="mx-auto mt-3 max-w-[760px] font-inter text-[14px] leading-[1.45] text-[#2F2F2F] md:text-[16px]">
+              {shortDescription ||
+                "Få förståelse för juridiken som styr företagens verksamhet."}
+            </p>
+          </header>
         </div>
 
-        {/* Right Column (Sidebar) */}
-        <div className="w-full lg:w-auto lg:min-w-[386px] mt-12 lg:mt-0 lg:pl-6 order-2">
-          <div className="flex flex-col items-center lg:sticky lg:top-[600px]">
-            <h2 className="font-jakarta text-lg font-bold mb-4 text-center">
-              framgångsinstitutet Erbjudanden
-            </h2>
-            <div className="max-w-full md:max-w-[386px] rounded-[30px] border-2 border-[#DCE2F8] p-[20px] md:p-[28px]">
-              <div className="flex flex-col px-4 md:px-8 py-4 rounded-[25px] bg-[#225aea] mb-4">
-                <div className="flex gap-4 mb-4">
-                  <Image
-                    src="/icons/courses/side-bar-logo.svg"
-                    width={48}
-                    height={49}
-                    alt="framgångsinstitutet-logo"
-                  />
-                  <div className="flex flex-col gap-2 max-h-[61px] text-white">
-                    <h4 className="font-jakarta font-bold text-sm">
-                      Din Framtid Börjar Här
-                    </h4>
-                    <p className="font-jakarta font-semibold text-xs">
-                      Utforska över 30+ utbildningar inom Tech, Finans och
-                      Kommunikation
-                    </p>
-                  </div>
-                </div>
-                <Link
-                  href="https://framgångsinstitutet.se/utbildningar/"
-                  className="w-full text-center py-3 bg-white text-[#151e3a] font-semibold rounded-[10px]"
-                >
-                  <p className="text-xs">Utforska Utbildningar</p>
-                </Link>
-              </div>
-              <div className="flex flex-col px-4 md:px-8 py-4 rounded-[25px] bg-[#95BF47] mb-4">
-                <div className="flex gap-4 mb-4">
-                  <Image
-                    src="/icons/courses/sidebar-shopify-icon.svg"
-                    width={48}
-                    height={53}
-                    alt="shopify-logo"
-                  />
-                  <div className="flex flex-col gap-2 max-h-[61px] text-white">
-                    <h4 className="font-jakarta font-bold text-sm">
-                      Shopify Erbjudande
-                    </h4>
-                    <p className="font-jakarta font-semibold text-xs">
-                      Börja och sälja med Shopify 10kr/mån i 3 månader
-                    </p>
-                  </div>
-                </div>
-                <Link
-                  href="https://shopify.pxf.io/framgångsinstitutet"
-                  className="w-full text-center py-3 bg-white text-[#151e3a] font-semibold rounded-[10px]"
-                >
-                  <p className="text-xs">Få Erbjudande</p>
-                </Link>
-              </div>
-            </div>
+        {/* Sidebar — mobile/tablet only: appears after title+subtitle */}
+        <div className="mx-auto mt-6 w-full max-w-[1280px] px-4 md:px-8 lg:hidden">
+          <SidebarCard
+            totalTime={totalTime}
+            priceExVat={priceExVat}
+            priceIncVat={priceIncVat}
+            price={price}
+            purchaseLink={purchaseLink}
+          />
+        </div>
+
+        <div className="mt-6 w-full bg-[#225AEA]">
+          <div className="mx-auto w-full max-w-[1280px] px-4 md:px-8">
+            <nav className="flex items-center gap-6 overflow-x-auto py-3 text-white md:gap-10">
+              <a
+                href="#oversikt"
+                className="shrink-0 font-jakarta text-[11px] font-semibold uppercase tracking-[0.05em]"
+              >
+                Översikt
+              </a>
+              <a
+                href="#kursinnehall"
+                className="shrink-0 font-jakarta text-[11px] font-semibold uppercase tracking-[0.05em]"
+              >
+                Kursinnehåll
+              </a>
+              <a
+                href="#genomforande"
+                className="shrink-0 font-jakarta text-[11px] font-semibold uppercase tracking-[0.05em]"
+              >
+                Genomförande
+              </a>
+            </nav>
           </div>
+        </div>
+
+        <div className="mx-auto grid w-full max-w-[1280px] grid-cols-1 gap-8 px-4 pt-6 md:px-8 md:pt-8 lg:grid-cols-[minmax(0,1fr),456px] lg:gap-10">
+          {/* Sidebar — desktop only: right column, sticky */}
+          <aside className="hidden lg:block lg:order-2">
+            <div className="lg:sticky lg:top-[110px]">
+              <SidebarCard
+                totalTime={totalTime}
+                priceExVat={priceExVat}
+                priceIncVat={priceIncVat}
+                price={price}
+                purchaseLink={purchaseLink}
+              />
+            </div>
+          </aside>
+          <article className="lg:order-1">
+            <section id="oversikt">
+              <h2 className="font-jakarta text-[34px] font-bold leading-[1.08] text-[#151E3A] md:text-[44px]">
+                Översikt
+              </h2>
+              <p className="mt-3 font-inter text-[14px] leading-[1.55] text-[#252525] md:text-[15px]">
+                {shortDescription ||
+                  "Den här kursen ger dig en tydlig grund och praktiska insikter för att arbeta professionellt inom området."}
+              </p>
+
+              <div className="relative mt-5 h-[260px] w-full overflow-hidden rounded-[8px] md:h-[340px]">
+                <Image
+                  alt={title}
+                  src={imageUrl}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 720px"
+                  className="object-cover"
+                />
+              </div>
+            </section>
+
+            <section id="kursinnehall" className="mt-7 md:mt-8">
+              <h3 className="font-jakarta text-[30px] font-bold leading-[1.08] text-[#151E3A] md:text-[38px]">
+                Om kursen {title}
+              </h3>
+              <p className="mt-3 font-inter text-[14px] leading-[1.55] text-[#252525] md:text-[15px]">
+                {shortDescription ||
+                  "Kursen är utformad för dig som vill utveckla praktiska färdigheter och relevant kompetens för arbetsmarknaden."}
+              </p>
+
+              {longDescription && (
+                <div className="mt-5 rounded-[8px] bg-white">
+                  <RichTextRenderer richText={longDescription} />
+                </div>
+              )}
+            </section>
+
+            <section id="genomforande" className="mt-7 md:mt-8">
+              <h3 className="font-jakarta text-[30px] font-bold leading-[1.08] text-[#151E3A] md:text-[38px]">
+                Genomförande
+              </h3>
+
+              <div className="mt-4 space-y-4 font-inter text-[14px] leading-[1.55] text-[#252525] md:text-[15px]">
+                <div>
+                  <p className="font-semibold text-[#151E3A]">Omfattning:</p>
+                  <p>
+                    Kursen omfattar självstudier online i din egen takt och
+                    inkluderar lektioner som du kan se om när du vill.
+                  </p>
+                </div>
+
+                <div>
+                  <p className="font-semibold text-[#151E3A]">Metodik:</p>
+                  <p>
+                    Du får tillgång till digitalt material, inspelade lektioner
+                    och praktiska moment som stärker din förståelse.
+                  </p>
+                </div>
+
+                <div>
+                  <p className="font-semibold text-[#151E3A]">Avgift:</p>
+                  <p>
+                    {price} SEK. Kursavgiften inkluderar kursmaterial och
+                    tillgång till plattformen.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section className="mt-8 w-full rounded-[32px] bg-[#F8F8F8] px-6 py-8 md:px-10 lg:px-12 lg:py-10">
+              <h3 className="font-jakarta font-extrabold md:text-[28px]">
+                Utbildningens{" "}
+                <span className="text-[#2F5CE9] font-jakarta">expert.</span>
+              </h3>
+              <ul className="mt-4 space-y-2 list-disc font-inter text-[12px] md:text-[14px] text-[#151515] leading-[20px]">
+                <li>
+                  Över 9 års erfarenhet av kommunikation, reklam och
+                  marknadsföring.
+                </li>
+                <li>
+                  Föreläsare på Folkuniversitetet och IHM Business school.
+                </li>
+                <li>Författare till boken i den här utbildningen.</li>
+                <li>Drivit egen byrå sedan 2019.</li>
+              </ul>
+            </section>
+          </article>
         </div>
       </section>
     </Layout>
   )
 }
 
-// Get a single course by slug
 export const getServerSideProps = async ({ params }: any) => {
   const { slug } = params as { slug: string }
+
   try {
-    const course = await fetchCourseBySlug(slug) // Fetch course data by slug
+    const course = await fetchCourseBySlug(slug)
+
+    if (!course || course.length === 0) {
+      return { notFound: true }
+    }
+
     return {
       props: {
         course,
@@ -129,7 +295,7 @@ export const getServerSideProps = async ({ params }: any) => {
     }
   } catch (error) {
     return {
-      notFound: true, // If course not found, return a 404 page
+      notFound: true,
     }
   }
 }

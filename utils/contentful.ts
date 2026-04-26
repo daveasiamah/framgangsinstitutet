@@ -155,37 +155,80 @@ export async function fetchCourseBySlug(slug: string) {
   }
 }
 
+function formatCourseEntries(entries: any[]) {
+  return entries.map((entry: any) => {
+    const shortDescriptionContent = entry.fields.shortDescription?.content
+    const shortDescription =
+      shortDescriptionContent?.[0]?.content?.[0]?.value || ""
+
+    return {
+      id: entry.sys.id,
+      title: entry.fields.title,
+      shortDescription: shortDescription,
+      longDescription: entry.fields.longDescription,
+      imageUrl: `https:${entry.fields.imageUrl?.fields?.file?.url}`,
+      price: entry.fields.price,
+      slug: entry.fields.slug,
+      tags: entry.fields.tags || null,
+      purchaseLink: entry.fields.purchaseLink,
+      videoInfo: entry.fields.videoInfo.videoInfo || {
+        count: 0,
+        totalTime: 0,
+        level: "",
+        icons: { count: "", time: "", level: "" },
+      },
+    }
+  })
+}
+
+export async function getCoursesPaginated(options?: {
+  skip?: number
+  limit?: number
+  locale?: string
+}) {
+  const { skip = 0, limit = 6, locale = "sv" } = options || {}
+
+  try {
+    console.info("[contentful:getCoursesPaginated] request", {
+      skip,
+      limit,
+      locale: normalizeLocale(locale),
+    })
+
+    const entries = await client.getEntries({
+      content_type: "courses",
+      locale: normalizeLocale(locale),
+      skip,
+      limit,
+    })
+
+    console.info("[contentful:getCoursesPaginated] response", {
+      returned: entries.items?.length || 0,
+      total: entries.total || 0,
+      skip,
+      limit,
+    })
+
+    return {
+      courses: formatCourseEntries(entries.items),
+      total: entries.total || 0,
+    }
+  } catch (error) {
+    console.log("Error fetching paginated courses:", error)
+    return {
+      courses: [],
+      total: 0,
+    }
+  }
+}
+
 export async function getCourses() {
   try {
     const entries = await client.getEntries({
       content_type: "courses",
     })
     console.log("Fetched courses:", entries.items)
-    const formattedEntries = entries.items.map((entry: any) => {
-      // Extract the "value" from the nested structure in shortDescription
-      const shortDescriptionContent = entry.fields.shortDescription?.content
-      const shortDescription =
-        shortDescriptionContent?.[0]?.content?.[0]?.value || ""
-
-      return {
-        id: entry.sys.id,
-        title: entry.fields.title,
-        shortDescription: shortDescription,
-        longDescription: entry.fields.longDescription,
-        imageUrl: `https:${entry.fields.imageUrl?.fields?.file?.url}`,
-        price: entry.fields.price,
-        slug: entry.fields.slug,
-        tags: entry.fields.tags || null,
-        purchaseLink: entry.fields.purchaseLink,
-        videoInfo: entry.fields.videoInfo.videoInfo || {
-          count: 0,
-          totalTime: 0,
-          level: "",
-          icons: { count: "", time: "", level: "" },
-        },
-      }
-    })
-    return formattedEntries
+    return formatCourseEntries(entries.items)
   } catch (error) {
     console.log("Error fetching courses:", error)
     return []

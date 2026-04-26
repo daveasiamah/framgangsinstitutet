@@ -25,7 +25,7 @@ export default function HomePageCourseCard({
     <article className="w-full md:h-[424px] rounded-t-[18px] overflow-hidden flex flex-col">
       {/* Blue header */}
       <div className="relative h-[171px] shrink-0 bg-[#2F5CE9] border border-[#2dc2ed] rounded-t-[18px]">
-        <h3 className="font-jakarta font-bold text-white text-[22px] md:text-[26px] leading-[1.08] px-5 md:px-6 pt-10 md:pt-12 truncate">
+        <h3 className="font-jakarta font-bold text-white text-[22px] md:text-[26px] leading-[1.08] px-5 md:px-6 pt-10 md:pt-12 text-center truncate">
           {title}
         </h3>
 

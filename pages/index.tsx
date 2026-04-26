@@ -248,6 +248,7 @@ export default function Home() {
               förutsatt att du inte slutfört utbildningen.
             </p>
           </div>
+          
           {/* Distance Learning Section */}
           <div className="flex flex-col items-start mt-8 w-full max-w-[1400px] px-6 py-8 md:px-10 lg:px-12 lg:py-10">
             <Title blackText="Så här fungerar " blueText="dina studier." />
