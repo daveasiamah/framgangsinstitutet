@@ -66,7 +66,7 @@ export default function HomePageCourseCard({
 
         <Link
           href={href}
-          className="inline-flex items-center gap-2 mt-auto pt-[40px] font-jakarta font-bold text-[#1E1E1E] text-[14px] tracking-[0.02em] uppercase"
+          className="inline-flex items-center gap-2 mt-auto pt-[40px] font-jakarta font-bold text-[#1E1E1E] text-[14px] tracking-[0.02em] uppercase transition-colors hover:text-[#225AEA]"
         >
           LÄS MER
           <span

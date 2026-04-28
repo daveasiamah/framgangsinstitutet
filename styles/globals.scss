@@ -6,6 +6,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Force Inter font on all rich text content, overriding any inline styles from Contentful */
+.rich-text-content,
+.rich-text-content * {
+  font-family: "Inter", sans-serif !important;
+}
+
 @font-face {
   font-family: "MontserratRegular"; /*Can be any text*/
   src:

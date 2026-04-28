@@ -147,7 +147,7 @@ const CourseDetailPage = ({ course }: CoursePageProps) => {
           />
         </div>
 
-        <div className="mt-6 w-full bg-[#225AEA]">
+        <div className="mt-6 w-full bg-[#225AEA] lg:mt-10">
           <div className="mx-auto w-full max-w-[1280px] px-4 md:px-8">
             <nav className="flex items-center gap-6 overflow-x-auto py-3 text-white md:gap-10">
               <a
@@ -187,13 +187,13 @@ const CourseDetailPage = ({ course }: CoursePageProps) => {
           </aside>
           <article className="lg:order-1">
             <section id="oversikt">
-              <h2 className="font-jakarta text-[34px] font-bold leading-[1.08] text-[#151E3A] md:text-[44px]">
+              {/* <h2 className="font-jakarta text-[34px] font-bold leading-[1.08] text-[#151E3A] md:text-[44px]">
                 Översikt
               </h2>
               <p className="mt-3 font-inter text-[14px] leading-[1.55] text-[#252525] md:text-[15px]">
                 {shortDescription ||
                   "Den här kursen ger dig en tydlig grund och praktiska insikter för att arbeta professionellt inom området."}
-              </p>
+              </p> */}
 
               <div className="relative mt-5 h-[260px] w-full overflow-hidden rounded-[8px] md:h-[340px]">
                 <Image
@@ -222,7 +222,7 @@ const CourseDetailPage = ({ course }: CoursePageProps) => {
               )}
             </section>
 
-            <section id="genomforande" className="mt-7 md:mt-8">
+            {/* <section id="genomforande" className="mt-7 md:mt-8">
               <h3 className="font-jakarta text-[30px] font-bold leading-[1.08] text-[#151E3A] md:text-[38px]">
                 Genomförande
               </h3>
@@ -252,7 +252,7 @@ const CourseDetailPage = ({ course }: CoursePageProps) => {
                   </p>
                 </div>
               </div>
-            </section>
+            </section> */}
 
             <section className="mt-8 w-full rounded-[32px] bg-[#F8F8F8] px-6 py-8 md:px-10 lg:px-12 lg:py-10">
               <h3 className="font-jakarta font-extrabold md:text-[28px]">

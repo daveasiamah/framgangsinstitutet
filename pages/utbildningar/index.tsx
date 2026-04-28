@@ -140,7 +140,9 @@ export default function Courses({
                 ) : (
                   <>
                     LADDA IN FLER
-                    <ArrowRightIcon className="h-4 w-4" />
+                    <span className="flex items-center justify-center text-2xl">
+                      &gt;
+                    </span>
                   </>
                 )}
               </button>

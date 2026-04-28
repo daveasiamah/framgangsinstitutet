@@ -56,7 +56,7 @@ const RichTextRenderer: React.FC<RichTextRendererProps> = ({ richText }) => {
   }
 
   return (
-    <div className="font-inter [&>*]:font-inter [&_*]:font-inter">
+    <div className="rich-text-content font-inter [&>*]:font-inter [&_*]:font-inter">
       {documentToReactComponents(richText, options)}
     </div>
   )

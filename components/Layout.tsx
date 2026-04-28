@@ -7,15 +7,27 @@ import MetaHead from "./MetaHead"
 
 type Props = {
   headTitle: string
+  headDescription?: string
+  useExactHeadTitle?: boolean
   isFullWidth?: boolean
   children: ReactNode
 }
 
-export default function Layout({ headTitle, isFullWidth, children }: Props) {
+export default function Layout({
+  headTitle,
+  headDescription,
+  useExactHeadTitle,
+  isFullWidth,
+  children,
+}: Props) {
   const [openSidebar, setOpenSidebar] = useState(false)
   return (
     <>
-      <MetaHead title={headTitle} />
+      <MetaHead
+        title={headTitle}
+        description={headDescription}
+        exactTitle={useExactHeadTitle}
+      />
       <div
         data-theme="light"
         className="flex flex-col min-h-screen overflow-hidden relative"

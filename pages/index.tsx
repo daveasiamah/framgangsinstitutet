@@ -24,9 +24,18 @@ export default function Home() {
   const router = useRouter()
   const { locale } = router
   const t = locale === "en" ? en : sv
+  const homeMetaTitle =
+    "Studera på distans via Framgångsinstitutet - När du vill. Var du vill."
+  const homeMetaDescription =
+    "Studera på distans via Framgångsinstitutet. Onlinekurser för personlig utveckling med tydliga inriktningar på yrken med behov av arbetskraft. Lär dig hantera stress, bli mer effektiv och stärka din digitala utveckling. Gör det smarta valet, utbilda dig genom framtidens skola och börja få resultat medan du lär dig."
 
   return (
-    <Layout headTitle={t.homeData.metaData.title} isFullWidth={true}>
+    <Layout
+      headTitle={homeMetaTitle}
+      headDescription={homeMetaDescription}
+      useExactHeadTitle={true}
+      isFullWidth={true}
+    >
       <div className="px-[18px] md:px-[38px]">
         <HeroSection />
         {/* Feature Stats section */}
@@ -248,7 +257,7 @@ export default function Home() {
               förutsatt att du inte slutfört utbildningen.
             </p>
           </div>
-          
+
           {/* Distance Learning Section */}
           <div className="flex flex-col items-start mt-8 w-full max-w-[1400px] px-6 py-8 md:px-10 lg:px-12 lg:py-10">
             <Title blackText="Så här fungerar " blueText="dina studier." />
