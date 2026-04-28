@@ -25,7 +25,7 @@ const client =
         },
       } as any)
 
-function normalizeLocale(locale?: string | string[]) {
+function normalizeLocale(locale?: string | string[]): string {
   if (Array.isArray(locale)) {
     return normalizeLocale(locale[0])
   }

@@ -1,6 +1,7 @@
 import { fetchCourseBySlug } from "@/utils/contentful"
 import { Course } from "@/components/blocks/courses-blocks/types"
 import Image from "next/image"
+import Link from "next/link"
 import Layout from "@/components/Layout"
 import RichTextRenderer from "@/utils/RichTextRenderer"
 
@@ -80,9 +81,9 @@ const SidebarCard = ({
         info@framgangsinstitutet.se
       </a>
       .{" "}
-      <a href="/terms-of-service" className="underline underline-offset-4">
+      <Link href="/terms-of-service" className="underline underline-offset-4">
         Se villkor.
-      </a>
+      </Link>
     </p>
   </div>
 )
