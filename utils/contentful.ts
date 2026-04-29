@@ -140,7 +140,7 @@ export async function fetchCourseBySlug(slug: string) {
         slug: entry.fields.slug,
         purchaseLink: entry.fields.purchaseLink,
         tags: entry.fields.tags || null,
-        videoInfo: entry.fields.videoInfo.videoInfo || {
+        videoInfo: entry.fields.videoInfo?.videoInfo || {
           count: 0,
           totalTime: 0,
           level: "",
@@ -171,7 +171,7 @@ function formatCourseEntries(entries: any[]) {
       slug: entry.fields.slug,
       tags: entry.fields.tags || null,
       purchaseLink: entry.fields.purchaseLink,
-      videoInfo: entry.fields.videoInfo.videoInfo || {
+      videoInfo: entry.fields.videoInfo?.videoInfo || {
         count: 0,
         totalTime: 0,
         level: "",
@@ -224,6 +224,16 @@ export async function getCoursesPaginated(options?: {
 
 export async function getCourses() {
   try {
+    if (typeof window !== "undefined") {
+      const response = await fetch("/api/courses?skip=0&limit=1000")
+      if (!response.ok) {
+        throw new Error("Failed to fetch courses from API")
+      }
+
+      const data = await response.json()
+      return Array.isArray(data?.courses) ? data.courses : []
+    }
+
     const entries = await client.getEntries({
       content_type: "courses",
     })
