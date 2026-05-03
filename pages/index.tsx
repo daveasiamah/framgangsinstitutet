@@ -18,7 +18,6 @@ import { ArrowRightIcon } from "lucide-react"
 import Title from "@/components/blocks/home-blocks/Title"
 import HomePageCourseCard from "@/components/blocks/home-blocks/HomePageCourseCard"
 import { courses } from "@/data/course-card-data"
-import { CTABannerBlock } from "@/components/parts/CTABanner"
 
 export default function Home() {
   const router = useRouter()
