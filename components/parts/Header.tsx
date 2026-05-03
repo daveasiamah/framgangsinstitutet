@@ -1,6 +1,4 @@
-import React, { useEffect, useState, useRef } from "react"
 import Link from "next/link"
-import Image from "next/image"
 import { useRouter } from "next/router"
 import ContractForm from "../ContractForm"
 import { motion, AnimatePresence } from "framer-motion"
@@ -35,16 +33,6 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
     onClose: closeModal,
   } = useDisclosure()
 
-  const setDefaultLangToSV = () => {
-    router.push(router.pathname, router.asPath, { locale: "sv" })
-  }
-
-  useEffect(() => {
-    if (pathname === "/") {
-      setDefaultLangToSV()
-    }
-  }, [pathname])
-
   const getButtonTitle = (path: string) => {
     switch (path) {
       case "/":
@@ -58,8 +46,6 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
         return "Bli medlem"
     }
   }
-
-  const excludedPaths = ["/annonser", "framgångsinstitutet.se/", "/butiker"]
 
   return (
     <Box
@@ -103,6 +89,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
           fontFamily={"poppins"}
         >
           <Link href="/utbildningar">Utbildningar</Link>
+          <Link href="/prisplaner">Prisplaner</Link>
           <Link href="/om-oss">Om oss</Link>
           <Link href="/kontakta-oss">Kontakta oss</Link>
           <Link href="/fragor-och-svar">Frågor och svar</Link>
@@ -219,6 +206,25 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
                     style={{ color: "inherit", textDecoration: "none" }}
                   >
                     Utbildningar
+                  </Link>
+                </Box>
+                <Box
+                  px={4}
+                  py={2}
+                  borderRadius="md"
+                  width="100%"
+                  _hover={{
+                    bg: "#225AEA",
+                    color: "white",
+                  }}
+                  transition="all 0.2s"
+                >
+                  <Link
+                    href="/prisplaner"
+                    onClick={() => setOpenSidebar(false)}
+                    style={{ color: "inherit", textDecoration: "none" }}
+                  >
+                    Prisplaner
                   </Link>
                 </Box>
                 <Box

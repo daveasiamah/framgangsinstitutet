@@ -27,7 +27,8 @@ export default function MetaHead({
       <meta property="og:description" content={resolvedDescription} />
       <meta property="og:image" content="/logo.png" />
       <meta property="og:type" content="website" />
-      <link rel="icon" href="/favicon.ico" />
+      <link rel="icon" type="image/png" href="/favicon.png" />
+      <link rel="shortcut icon" href="/favicon.png" />
     </Head>
   )
 }

@@ -146,10 +146,6 @@ const requiredEnvVars = [
   "SEND_IN_BLUE_API_KEY",
   "CONTENTFUL_SPACE_ID",
   "CONTENTFUL_ACCESS_TOKEN",
-  "GOOGLE_CLIENT_ID",
-  "GOOGLE_CLIENT_SECRET",
-  "JWT_SECRET",
-  "NEXTAUTH_SECRET",
 ]
 
 requiredEnvVars.forEach((envVar) => {

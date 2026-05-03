@@ -1,48 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
+
   <sitemap>
     <loc>https://framgångsinstitutet.se/sitemap-pages.xml</loc>
   </sitemap>
 
   <sitemap>
-    <loc>https://framgångsinstitutet.se/sitemap-about.xml</loc>
+    <loc>https://framgångsinstitutet.se/sitemap-utbildningar.xml</loc>
   </sitemap>
 
   <sitemap>
-    <loc>https://framgångsinstitutet.se/sitemap-blog.xml</loc>
+    <loc>https://framgångsinstitutet.se/sitemap-om-oss.xml</loc>
   </sitemap>
 
   <sitemap>
-    <loc>https://framgångsinstitutet.se/sitemap-mentorskap.xml</loc>
+    <loc>https://framgångsinstitutet.se/sitemap-fragor-och-svar.xml</loc>
   </sitemap>
 
   <sitemap>
-    <loc>https://framgångsinstitutet.se/sitemap-contact-us.xml</loc>
+    <loc>https://framgångsinstitutet.se/sitemap-kontakta-oss.xml</loc>
   </sitemap>
 
   <sitemap>
-    <loc>https://framgångsinstitutet.se/sitemap-dropshipping.xml</loc>
-  </sitemap>
-
-  <sitemap>
-    <loc>https://framgångsinstitutet.se/sitemap-e-handel.xml</loc>
-  </sitemap>
-
-  <sitemap>
-    <loc>https://framgångsinstitutet.se/sitemap-faq.xml</loc>
+    <loc>https://framgångsinstitutet.se/sitemap-allmanna-villkor.xml</loc>
   </sitemap>
 
   <sitemap>
     <loc>https://framgångsinstitutet.se/sitemap-cookie-policy.xml</loc>
-  </sitemap>
-
-  <sitemap>
-   <loc>https://framgångsinstitutet.se/sitemap-terms-of-service.xml</loc>
-  </sitemap>
-
-  <sitemap>
-   <loc>https://framgångsinstitutet.se/sitemap-privacy-policy.xml</loc>
   </sitemap>
 
 </sitemapindex>
