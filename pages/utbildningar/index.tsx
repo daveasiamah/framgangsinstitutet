@@ -23,6 +23,22 @@ type Props = {
   locale?: string
 }
 
+function CourseCardSkeleton() {
+  return (
+    <article className="w-full overflow-hidden rounded-t-[18px]">
+      <div className="h-[171px] animate-pulse rounded-t-[18px] bg-[#DDE7FF]" />
+      <div className="space-y-3 bg-[#F8F8F8] p-4">
+        <div className="h-6 w-[72%] animate-pulse rounded bg-[#E4E9F3]" />
+        <div className="h-4 w-[48%] animate-pulse rounded bg-[#E4E9F3]" />
+        <div className="h-4 w-[38%] animate-pulse rounded bg-[#E4E9F3]" />
+        <div className="h-4 w-full animate-pulse rounded bg-[#E4E9F3]" />
+        <div className="h-4 w-[88%] animate-pulse rounded bg-[#E4E9F3]" />
+        <div className="h-5 w-[30%] animate-pulse rounded bg-[#E4E9F3]" />
+      </div>
+    </article>
+  )
+}
+
 export default function Courses({
   initialCourses = [],
   totalCourses = 0,
@@ -122,6 +138,11 @@ export default function Courses({
                 href={`/utbildningar/${course.slug}`}
               />
             ))}
+
+            {isLoadingMore &&
+              Array.from({ length: 3 }).map((_, index) => (
+                <CourseCardSkeleton key={`course-skeleton-${index}`} />
+              ))}
           </div>
 
           {hasMore && (

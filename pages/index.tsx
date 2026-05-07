@@ -27,6 +27,7 @@ export default function Home() {
     "Studera på distans via Framgångsinstitutet - När du vill. Var du vill."
   const homeMetaDescription =
     "Studera på distans via Framgångsinstitutet. Onlinekurser för personlig utveckling med tydliga inriktningar på yrken med behov av arbetskraft. Lär dig hantera stress, bli mer effektiv och stärka din digitala utveckling. Gör det smarta valet, utbilda dig genom framtidens skola och börja få resultat medan du lär dig."
+  const homeFaqItems = HomePageFaqData.slice(0, 6)
 
   return (
     <Layout
@@ -507,7 +508,7 @@ export default function Home() {
           </div>
         </section>
 
-        <MainFAQ faqData={HomePageFaqData} />
+        <MainFAQ faqData={homeFaqItems} />
         <div className="w-full flex justify-center mb-4">
           <Link
             href="/faq"

@@ -46,75 +46,38 @@ export const faqData: { id: number; question: string; answer: string }[] = [
 export const faqPageData: { id: number; question: string; answer: string }[] = [
   {
     id: 1,
-    question: "Vad är framgångsinstitutet?",
-    answer: `framgångsinstitutet.se är ett ledande digitalt universitet inom e-handel och dropshipping, utformat för att stödja både blivande och etablerade entreprenörer i att bygga, lansera och skala framgångsrika onlinebutiker. 
-    \nMed framgångsinstitutet.se kan du:\n
-    - Hitta vinnande produkter: Få tillgång till en kuraterad lista över lönsamma produkter.
-    - Utföra produktforskning: Hitta trendande produkter med hög försäljningspotential.
-    - Lansera färdiga butiker: Få en professionellt designad butik redo att sälja.
-    - Få färdiga annonser: Använd högkonverterande annonsmallar direkt.
-    - Arbeta med mentorer: Få personlig vägledning från erfarna dropshipping-experter.`,
+    question: "Behöver jag ha en egen dator för att studera på Checkified?",
+    answer:
+      "För att kunna delta på utbildningen behöver du tillgång till en dator och det är därför viktigt att du har införskaffat en dator när utbildningen väl startar. Du kan inte genomföra utbildningen med en mobiltelefon.",
   },
   {
     id: 2,
-    question: "Finns det en gratis provperiod?",
+    question: "Får jag ett diplom kursbevis efter att ha genomfört en kurs?",
     answer:
-      "Absolut, du kan skapa ett konto med framgångsinstitutet gratis. Vi erbjuder en 7-dagars testperiod som du kan avbryta när som helst.",
+      "Efter genomgången kurs får du ett kursbevis med ditt betyg som visar vilken kompetens du har erhållit. Du kan sedan ta med detta på ditt CV, vilket gör dig mer attraktiv för potentiella arbetsgivare och för ditt nästa jobb.",
   },
   {
     id: 3,
-    question: "Kan jag avbryta när som helst?",
+    question: "Vilket språk bedrivs onlineutbildningarna på?",
     answer:
-      "Ja, du kan säga upp din prenumeration när som helst. Om du säger upp din prenumeration kommer den att upphöra vid slutet av den aktuella perioden utan ytterligare avgifter.",
+      "Alla våra onlineutbildningar genomförs på svenska. Det krävs alltså att du har goda kunskaper och förståelse för det svenska språket för att genomföra utbildningen.",
   },
   {
     id: 4,
-    question: "Vilka betalningsmetoder accepterar du?",
-    answer: `framgångsinstitutet accepterar följande betalningsmetoder genom säker betalningshantering:\n
-    - Visa
-    - Mastercard
-    - American Express
-    - Discover
-    - Diner’s Club
-    - JCB
-    - Kina UnionPay\n
-    **PayPal-betalningar accepteras inte för närvarande.**`,
+    question: "Kan jag läsa flera kurser samtidigt?",
+    answer:
+      "Du kan absolut läsa flera kurser samtidigt. Ibland kan det dock vara svårt att kombinera flera kurser med arbete, så se över hur mycket tid du har att lägga för att du ska få bästa resultat.",
   },
   {
     id: 5,
-    question: "Vad är dropshipping?",
-    answer: `Dropshipping är en affärsmodell som gör att du kan sälja produkter utan att behöva köpa och fylla på lagret i förväg. \n
-    När du får en försäljning i din butik, ger du en leverantör orderinformationen och betalar för produkten och fraktkostnaden. Leverantören skickar därefter beställningen direkt till din kund. \n
-    På så sätt behöver du inte köpa in lager i förväg och det sänker tröskeln för att testa många produkter och hitta vinnare.`,
+    question: "Vad innebär det att studera en onlineutbildning?",
+    answer:
+      "En onlineutbildning hos Checkified passar dig som önskar lite extra frihet och flexibilitet under din studietid. Alla onlineutbildningar består av digitalt innehåll i form av förinspelade lektioner och/eller digitalt studiematerial som studenter kan ta del av när och vart som helst. Utbildningarna är generellt sett kortare än traditionella yrkeshögskoleutbildningar och kan läsas på hel eller halvfart - perfekt för dig som vill kombinera studier med arbete eller annat kul!",
   },
   {
     id: 6,
-    question: "Vad är Checkifieds prissättning?",
-    answer: `framgångsinstitutet erbjuder en 7-dagars gratis provperiod. Därefter:\n
-    - 299 kr/månad
-    - 2790 kr/år\n
-    **Övriga tjänster:**\n
-    - Dropshipping Färdig Butik: 999 SEK
-    - Dropshipping Färdiga Annonser: 299 SEK
-    - Dropshipping Mentorskap: 15,000 SEK`,
-  },
-  {
-    id: 7,
-    question:
-      "Måste jag ha ett Shopify-konto innan jag kan använda webbplatserna?",
-    answer: `Nej! Våra Shopify Dropshipping-butiker kommer som helt nya butiker som du får en 3-dagars gratis provperiod med. Efter det tar Shopify $1 för en månad, och därefter $39/månad.\n
-    Shopify erbjuder 30 dagars test innan du behöver betala fullt pris.`,
-  },
-  {
-    id: 8,
-    question: "Vem är detta mentorskap till för?",
-    answer:
-      "Vårt mentorskap är för människor som vill leva ett liv där de inte är kedjade vid ett skrivbord eller ett jobb hela dagen för att producera inkomst för sig själva.",
-  },
-  {
-    id: 9,
-    question: "Hur vet jag att det här kommer att fungera för mig?",
-    answer: `Vi kan inte garantera något, men vi erbjuder en **100% garantin utan frågor**. Du kan testa det och om det inte fungerar för dig, får du pengarna tillbaka.`,
+    question: "Inom vilka branscher har ni utbildningar inom?",
+    answer: "IT, samhällsbyggnad, UX-design, kommunikation och e-handel.",
   },
 ]
 

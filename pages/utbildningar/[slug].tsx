@@ -4,6 +4,8 @@ import Image from "next/image"
 import Link from "next/link"
 import Layout from "@/components/Layout"
 import RichTextRenderer from "@/utils/RichTextRenderer"
+import Skeleton from "react-loading-skeleton"
+import { useState } from "react"
 
 type CoursePageProps = {
   course: Course[] | null
@@ -89,6 +91,8 @@ const SidebarCard = ({
 )
 
 const CourseDetailPage = ({ course }: CoursePageProps) => {
+  const [isCourseImageLoaded, setIsCourseImageLoaded] = useState(false)
+
   if (!course || course.length === 0) {
     return (
       <Layout headTitle="Utbildningar">
@@ -188,21 +192,19 @@ const CourseDetailPage = ({ course }: CoursePageProps) => {
           </aside>
           <article className="lg:order-1">
             <section id="oversikt">
-              {/* <h2 className="font-jakarta text-[34px] font-bold leading-[1.08] text-[#151E3A] md:text-[44px]">
-                Översikt
-              </h2>
-              <p className="mt-3 font-inter text-[14px] leading-[1.55] text-[#252525] md:text-[15px]">
-                {shortDescription ||
-                  "Den här kursen ger dig en tydlig grund och praktiska insikter för att arbeta professionellt inom området."}
-              </p> */}
-
               <div className="relative mt-5 h-[260px] w-full overflow-hidden rounded-[8px] md:h-[340px]">
+                {!isCourseImageLoaded && (
+                  <Skeleton className="absolute inset-0 h-full w-full" />
+                )}
                 <Image
                   alt={title}
                   src={imageUrl}
                   fill
                   sizes="(max-width: 768px) 100vw, 720px"
-                  className="object-cover"
+                  className={`object-cover transition-opacity duration-300 ${
+                    isCourseImageLoaded ? "opacity-100" : "opacity-0"
+                  }`}
+                  onLoadingComplete={() => setIsCourseImageLoaded(true)}
                 />
               </div>
             </section>
@@ -223,39 +225,10 @@ const CourseDetailPage = ({ course }: CoursePageProps) => {
               )}
             </section>
 
-            {/* <section id="genomforande" className="mt-7 md:mt-8">
-              <h3 className="font-jakarta text-[30px] font-bold leading-[1.08] text-[#151E3A] md:text-[38px]">
-                Genomförande
-              </h3>
-
-              <div className="mt-4 space-y-4 font-inter text-[14px] leading-[1.55] text-[#252525] md:text-[15px]">
-                <div>
-                  <p className="font-semibold text-[#151E3A]">Omfattning:</p>
-                  <p>
-                    Kursen omfattar självstudier online i din egen takt och
-                    inkluderar lektioner som du kan se om när du vill.
-                  </p>
-                </div>
-
-                <div>
-                  <p className="font-semibold text-[#151E3A]">Metodik:</p>
-                  <p>
-                    Du får tillgång till digitalt material, inspelade lektioner
-                    och praktiska moment som stärker din förståelse.
-                  </p>
-                </div>
-
-                <div>
-                  <p className="font-semibold text-[#151E3A]">Avgift:</p>
-                  <p>
-                    {price} SEK. Kursavgiften inkluderar kursmaterial och
-                    tillgång till plattformen.
-                  </p>
-                </div>
-              </div>
-            </section> */}
-
-            <section className="mt-8 w-full rounded-[32px] bg-[#F8F8F8] px-6 py-8 md:px-10 lg:px-12 lg:py-10">
+            <section
+              id="genomforande"
+              className="mt-8 w-full rounded-[32px] bg-[#F8F8F8] px-6 py-8 md:px-10 lg:px-12 lg:py-10"
+            >
               <h3 className="font-jakarta font-extrabold md:text-[28px]">
                 Utbildningens{" "}
                 <span className="text-[#2F5CE9] font-jakarta">expert.</span>
