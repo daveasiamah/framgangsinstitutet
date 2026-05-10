@@ -5,13 +5,6 @@ export const headerData: HeaderData = {
   resources: "Resurser",
   megaMenuData: [
     {
-      id: 1,
-      imageUrl: "/public/icons/header/notification-bing.svg",
-      title: "Blog",
-      desc: "News about framgångsinstitutet",
-      link: "/blog",
-    },
-    {
       id: 2,
       imageUrl: "/public/icons/header/clipboard.svg",
       title: "Affiliates",

@@ -2,7 +2,6 @@ import { homeData } from "./home"
 import { aboutData } from "./about"
 import { universityData } from "./university"
 import { affiliateData } from "./affiliate"
-import { blogData } from "./blog"
 import { careersData } from "./careers"
 import { contactdata } from "./contact"
 import { impactData } from "./impact"
@@ -28,7 +27,6 @@ export default {
   aboutData,
   universityData,
   affiliateData,
-  blogData,
   careersData,
   contactdata,
   libraryData,
