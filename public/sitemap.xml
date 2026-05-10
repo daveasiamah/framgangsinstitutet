@@ -6,27 +6,7 @@
   </sitemap>
 
   <sitemap>
-    <loc>https://framgångsinstitutet.se/sitemap-utbildningar.xml</loc>
-  </sitemap>
-
-  <sitemap>
-    <loc>https://framgångsinstitutet.se/sitemap-om-oss.xml</loc>
-  </sitemap>
-
-  <sitemap>
-    <loc>https://framgångsinstitutet.se/sitemap-fragor-och-svar.xml</loc>
-  </sitemap>
-
-  <sitemap>
-    <loc>https://framgångsinstitutet.se/sitemap-kontakta-oss.xml</loc>
-  </sitemap>
-
-  <sitemap>
-    <loc>https://framgångsinstitutet.se/sitemap-allmanna-villkor.xml</loc>
-  </sitemap>
-
-  <sitemap>
-    <loc>https://framgångsinstitutet.se/sitemap-cookie-policy.xml</loc>
+    <loc>https://framgångsinstitutet.se/sitemap-blog.xml</loc>
   </sitemap>
 
 </sitemapindex>

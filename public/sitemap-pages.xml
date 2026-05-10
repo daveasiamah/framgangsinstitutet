@@ -8,72 +8,45 @@
   </url>
 
   <url>
-    <loc>https://framgångsinstitutet.se/blog/</loc>
+    <loc>https://framgångsinstitutet.se/utbildningar/</loc>
     <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://framgångsinstitutet.se/prisplaner/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://framgångsinstitutet.se/om-oss/</loc>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://framgångsinstitutet.se/mentorskap/</loc>
+    <loc>https://framgångsinstitutet.se/kontakta-oss/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://framgångsinstitutet.se/about/</loc>
+    <loc>https://framgångsinstitutet.se/fragor-och-svar/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://framgångsinstitutet.se/contact-us/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.3</priority>
-  </url>
-
-  <url>
-    <loc>https://framgångsinstitutet.se/dropshipping/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.4</priority>
-  </url>
-
- <url>
-    <loc>https://framgångsinstitutet.se/e-handel/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.4</priority>
-  </url>
-
- <url>
-    <loc>https://framgångsinstitutet.se/vsl/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-
- <url>
-    <loc>https://framgångsinstitutet.se/faq/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-
- <url>
     <loc>https://framgångsinstitutet.se/terms-of-service/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
+    <priority>0.5</priority>
   </url>
- <url>
+
+  <url>
     <loc>https://framgångsinstitutet.se/cookie-policy/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
- <url>
-    <loc>https://framgångsinstitutet.se/privacy-policy/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
- <url>
-    <loc>https://framgångsinstitutet.se/tack/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
+    <priority>0.5</priority>
   </url>
 
 </urlset>

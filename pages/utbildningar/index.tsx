@@ -2,11 +2,11 @@ import Layout from "@/components/Layout"
 import HomePageCourseCard from "@/components/blocks/home-blocks/HomePageCourseCard"
 import TrustPilotReviews from "@/components/parts/TrustPilotReviews"
 import { MainFAQ } from "@/components/parts/MainFAQ"
-import { HomePageFaqData } from "@/data/data"
-import { getCoursesPaginated } from "@/utils/contentful"
+import { getCoursesPaginated, getFAQs } from "@/utils/contentful"
 import Link from "next/link"
 import { ArrowRightIcon, Loader2 } from "lucide-react"
 import { useState } from "react"
+import { Document } from "@contentful/rich-text-types"
 
 const PAGE_SIZE = 6
 
@@ -21,6 +21,11 @@ type Props = {
   initialCourses?: CourseListItem[]
   totalCourses?: number
   locale?: string
+  faqs?: {
+    id: string | number
+    question: string
+    answer: string | Document
+  }[]
 }
 
 function CourseCardSkeleton() {
@@ -43,6 +48,7 @@ export default function Courses({
   initialCourses = [],
   totalCourses = 0,
   locale = "sv",
+  faqs = [],
 }: Props) {
   const [courseItems, setCourseItems] = useState<CourseListItem[]>(
     Array.isArray(initialCourses) ? initialCourses : [],
@@ -231,7 +237,7 @@ export default function Courses({
         </div>
 
         <div className="mx-auto w-full max-w-[1336px] px-4 pb-12 md:px-8 md:pb-16 lg:px-10">
-          <MainFAQ faqData={HomePageFaqData} />
+          <MainFAQ faqData={faqs} />
         </div>
       </section>
     </Layout>
@@ -246,6 +252,7 @@ export const getServerSideProps = async ({ locale }: { locale?: string }) => {
     limit: PAGE_SIZE,
     locale: resolvedLocale,
   })
+  const faqs = await getFAQs(resolvedLocale)
 
   const initialCourses: CourseListItem[] = (courses || []).map(
     (course: any) => ({
@@ -261,6 +268,7 @@ export const getServerSideProps = async ({ locale }: { locale?: string }) => {
       initialCourses,
       totalCourses: total || 0,
       locale: resolvedLocale,
+      faqs,
     },
   }
 }

@@ -61,15 +61,17 @@ export default function Footer({}: Props) {
         <div className="flex flex-col lg:flex-row justify-between items-start gap-8 w-full">
           {/* Logo Section */}
           <div className="w-full lg:w-1/3 flex flex-col items-start text-left">
-            <Image
-              src="/images/home/logo-base.png"
-              alt="Framgångsinstitutet"
-              width={418}
-              height={48}
-              sizes="(max-width: 767px) 236px, 283px"
-              quality={100}
-              className="h-auto w-[236px] md:w-[283px] max-w-full object-left object-contain mb-[10px]"
-            />
+            <Link href="/" aria-label="Framgångsinstitutet startsida">
+              <Image
+                src="/images/home/logo-base.png"
+                alt="Framgångsinstitutet"
+                width={418}
+                height={48}
+                sizes="(max-width: 767px) 236px, 283px"
+                quality={100}
+                className="h-auto w-[236px] md:w-[283px] max-w-full object-left object-contain mb-[10px]"
+              />
+            </Link>
             <p className="font-inter font-medium text-[12px] md:text-[15px] md:max-w-[585px] lg:max-w-[399px] leading-[18px] mb-3">
               Registrera dig på vårt nyhetsbrev för att inte missa event,
               uppdateringar och e-handelsinspiration.
@@ -203,14 +205,14 @@ export default function Footer({}: Props) {
         <hr className="my-6 sm:my-8 md:my-10 stroke-slate-400" />
 
         {/* Bottom Section */}
-        <div className="grid gap-4 pb-6 sm:gap-6 sm:pb-8 md:grid md:grid-cols-3 md:items-start md:pb-10 md:text-left">
+        <div className="grid gap-4 pb-6 sm:gap-6 sm:pb-8 md:pb-10 lg:grid-cols-3 lg:items-start lg:text-left">
           {/* Copyright Section */}
-          <p className="order-1 text-center text-[10px] sm:text-[10px] md:text-left md:text-sm">
+          <p className="order-2 text-center text-[10px] sm:text-[10px] md:text-sm lg:order-1 lg:text-left">
             Copyright © {currentYear} Framgångsinstitutet. All rights reserved.
           </p>
 
           {/* Social Media Icons */}
-          <div className="order-2 flex justify-center gap-3 sm:gap-4 md:justify-center">
+          <div className="order-1 flex justify-center gap-3 sm:gap-4 lg:order-2 lg:justify-center">
             {socialMedia(18).map((data) => (
               <Link
                 key={data.id}

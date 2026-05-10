@@ -11,7 +11,6 @@ import {
   BadgeIcon,
 } from "@/components/blocks/home-blocks/HomePageSvgs"
 import { MainFAQ } from "@/components/parts/MainFAQ"
-import { HomePageFaqData } from "@/data/data"
 import HeroSection from "@/components/HeroSection"
 import TrustPilotReviews from "@/components/parts/TrustPilotReviews"
 import Link from "next/link"
@@ -19,14 +18,21 @@ import { ArrowRightIcon } from "lucide-react"
 import Title from "@/components/blocks/home-blocks/Title"
 import HomePageCourseCard from "@/components/blocks/home-blocks/HomePageCourseCard"
 import { courses } from "@/data/course-card-data"
+import { getFAQs } from "@/utils/contentful"
+import { Document } from "@contentful/rich-text-types"
 
 type Course = (typeof courses)[number]
 
 type HomeProps = {
   randomCourses: Course[]
+  faqs: {
+    id: string | number
+    question: string
+    answer: string | Document
+  }[]
 }
 
-export default function Home({ randomCourses }: HomeProps) {
+export default function Home({ randomCourses, faqs }: HomeProps) {
   const router = useRouter()
   const { locale } = router
   const t = locale === "en" ? en : sv
@@ -34,7 +40,7 @@ export default function Home({ randomCourses }: HomeProps) {
     "Studera på distans via Framgångsinstitutet - När du vill. Var du vill."
   const homeMetaDescription =
     "Studera på distans via Framgångsinstitutet. Onlinekurser för personlig utveckling med tydliga inriktningar på yrken med behov av arbetskraft. Lär dig hantera stress, bli mer effektiv och stärka din digitala utveckling. Gör det smarta valet, utbilda dig genom framtidens skola och börja få resultat medan du lär dig."
-  const homeFaqItems = HomePageFaqData.slice(0, 6)
+  const homeFaqItems = faqs.slice(0, 6)
 
   return (
     <Layout
@@ -575,6 +581,7 @@ export default function Home({ randomCourses }: HomeProps) {
 
 export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
   const shuffledCourses = [...courses]
+  const faqs = await getFAQs("sv")
 
   for (let i = shuffledCourses.length - 1; i > 0; i -= 1) {
     const randomIndex = Math.floor(Math.random() * (i + 1))
@@ -587,6 +594,7 @@ export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
   return {
     props: {
       randomCourses: shuffledCourses.slice(0, 6),
+      faqs,
     },
   }
 }

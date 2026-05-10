@@ -1,10 +1,12 @@
 import React, { useRef, useState } from "react"
+import { Document } from "@contentful/rich-text-types"
+import RichTextRenderer from "@/utils/RichTextRenderer"
 
 type Props = {
   data: {
-    id: number
+    id: number | string
     question: string
-    answer: string
+    answer: string | Document
   }[]
 }
 
@@ -52,7 +54,11 @@ function AccordionPricing({ data }: Props) {
                 : "accordion-content"
             }`}
           >
-            {item.answer}
+            {typeof item.answer === "string" ? (
+              item.answer
+            ) : (
+              <RichTextRenderer richText={item.answer} />
+            )}
           </div>
         </button>
       ))}

@@ -37,76 +37,6 @@ function normalizeLocale(locale?: string | string[]): string {
   return locale
 }
 
-export async function fetchBlogPosts(locale: string = "sv", nolimit = false) {
-  try {
-    const entries = await client.getEntries({
-      content_type: "checkifiedBlogPost",
-      locale: normalizeLocale(locale),
-      select: [
-        "fields.title,fields.description,fields.slug,fields.featuredImage",
-        "fields.author",
-        "fields.authorProfile",
-        "fields.avatar",
-        "sys.createdAt",
-      ],
-      order: ["-sys.createdAt"],
-      ...(nolimit ? {} : { limit: 6 }),
-    })
-    if (entries.items) return formatBlogPostEntries(entries.items)
-    console.log("Fetched blog posts:", entries.items)
-  } catch (error) {
-    console.error("Error fetching blog posts:", error)
-  }
-
-  return []
-}
-
-export async function fetchBlogPostBySlug(slug: string, locale: string) {
-  try {
-    const entry = await client.getEntries({
-      content_type: "checkifiedBlogPost",
-      "fields.slug": slug,
-      locale: normalizeLocale(locale),
-      limit: 1,
-    })
-    if (entry.items.length) return formatBlogPostEntries(entry.items)[0]
-  } catch (error) {
-    console.error("Error fetching blog post by slug:", error)
-  }
-  return null
-}
-
-function formatBlogPostEntries(entries: any) {
-  return entries.map((entry: any) => {
-    const date = new Date(entry.sys.createdAt).toLocaleDateString("sv-SE", {
-      month: "long",
-      day: "numeric",
-      year: "numeric",
-    })
-    // Capitalize the month name (e.g., "15 januari 2026" -> "15 Januari 2026")
-    const capitalizedDate = date.replace(
-      /(\d+\s)(\w)(\w+)/,
-      (match, day, firstLetter, rest) => {
-        return day + firstLetter.toUpperCase() + rest
-      },
-    )
-
-    return {
-      id: entry.sys.id,
-      title: entry.fields.title,
-      subtitle: entry.fields.description,
-      imageUrl: `https:${entry.fields.featuredImage?.fields?.file?.url}`,
-      date: capitalizedDate,
-      slug: entry.fields.slug,
-      blogContent: entry.fields.blogContent || null,
-      author: entry.fields.author || "",
-      authorProfile:
-        `https:${entry.fields.authorProfile?.fields?.file?.url}` || "",
-      avatar: `https:${entry.fields.avatar?.fields?.file?.url}` || "",
-    }
-  })
-}
-
 export async function fetchCourseBySlug(slug: string) {
   try {
     const entries = await client.getEntries({
@@ -245,84 +175,28 @@ export async function getCourses() {
   }
 }
 
-export async function fetchEbookBySlug(slug: string) {
-  try {
-    const entries = await client.getEntries({
-      content_type: "ebooks",
-      "fields.slug": slug,
-      limit: 1, // Fetch only the single course with the matching slug
-    })
-
-    if (entries.items.length === 0) {
-      return null // Return null if no course matches the slug
-    }
-
-    const formattedEntries = entries.items.map((entry: any) => {
-      const description = entry.fields.description || null
-
-      return {
-        id: entry.sys.id,
-        title: entry.fields.title,
-        description: description,
-        imageUrl: `https:${entry.fields.imageUrl?.fields?.file?.url}`,
-        price: entry.fields.price,
-        slug: entry.fields.slug,
-        purchaseLink: entry.fields.purchaseLink,
-      }
-    })
-    return formattedEntries
-  } catch (error) {
-    console.error("Error fetching course by slug:", error)
-    return null
-  }
-}
-
-export async function getEbooks() {
-  try {
-    const entries = await client.getEntries({
-      content_type: "ebooks",
-    })
-    const formattedEntries = entries.items.map((entry: any) => {
-      // Extract the "value" from the nested structure in shortDescription
-
-      return {
-        id: entry.sys.id,
-        title: entry.fields.title,
-        description: entry.fields.description,
-        imageUrl: `https:${entry.fields.imageUrl?.fields?.file?.url}`,
-        price: entry.fields.price,
-        slug: entry.fields.slug,
-        purchaseLink: entry.fields.purchaseLink,
-      }
-    })
-    return formattedEntries
-  } catch (error) {
-    console.log("Error fetching ebooks:", error)
-    return []
-  }
-}
-
 export async function getFAQs(locale: string = "sv") {
   const normalizedLocale = normalizeLocale(locale)
 
-  const queryAttempts = [
+  const faqContentTypes = ["faqFramgngsinstitutet", "faq"]
+  const queryAttempts = faqContentTypes.flatMap((contentType) => [
     {
-      content_type: "faq",
+      content_type: contentType,
       locale: normalizedLocale,
       order: ["fields.position"],
     },
     {
-      content_type: "faq",
+      content_type: contentType,
       locale: normalizedLocale,
     },
     {
-      content_type: "faq",
+      content_type: contentType,
       order: ["fields.position"],
     },
     {
-      content_type: "faq",
+      content_type: contentType,
     },
-  ]
+  ])
 
   for (const query of queryAttempts) {
     try {

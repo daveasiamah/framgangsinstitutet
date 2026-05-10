@@ -1,9 +1,10 @@
+import { Document } from "@contentful/rich-text-types"
 import Accordion from "./Accordion_Home"
 interface MainAccordionProps {
   faqData: {
-    id: number
+    id: number | string
     question: string
-    answer: string
+    answer: string | Document
   }[]
 }
 

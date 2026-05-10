@@ -1,8 +1,9 @@
-import { useState } from "react"
 import Link from "next/link"
+import { Document } from "@contentful/rich-text-types"
 
 import Layout from "@/components/Layout"
 import { MainFAQPricing } from "@/components/parts/MainFAQPricing"
+import { getFAQs } from "@/utils/contentful"
 
 type Plan = {
   name: string
@@ -13,17 +14,6 @@ type Plan = {
 }
 
 const annualPlans: Plan[] = [
-  {
-    name: "Prova på",
-    subtitle: "Utvalda kurser",
-    features: [
-      "Kostnadsfritt smakprov",
-      "Sveriges främsta experter",
-      "Access dygnet runt, året runt",
-      "Utveckla dig själv redan idag",
-    ],
-    cta: "Bli medlem",
-  },
   {
     name: "År",
     subtitle: "9988 kr/år",
@@ -38,50 +28,6 @@ const annualPlans: Plan[] = [
       "Obegränsad tillgång",
       "Personlig utveckling on demand",
       "Spara 50% varje månad",
-    ],
-    cta: "Starta nu",
-    highlight: true,
-  },
-  {
-    name: "Företagspaket",
-    subtitle: "Hör av dig",
-    features: [
-      "Allt som ingår i prenumerationen",
-      "Skräddarsytt efter dina behov",
-      "Anpassat antal licenser",
-      "Års- eller månadsfakturering",
-      "SCORM-kompatibelt",
-    ],
-    cta: "Kontakta oss",
-  },
-]
-
-const monthlyPlans: Plan[] = [
-  {
-    name: "Prova på",
-    subtitle: "Utvalda kurser",
-    features: [
-      "Kostnadsfritt smakprov",
-      "Sveriges främsta experter",
-      "Access dygnet runt, året runt",
-      "Utveckla dig själv redan idag",
-    ],
-    cta: "Bli medlem",
-  },
-  {
-    name: "Månad",
-    subtitle: "899 kr/mån",
-    features: [
-      "Skapa din egen framgång",
-      "Workbooks för faktisk inlärning",
-      "Bonustips på mail varje månad",
-      "Nya unika onlinekurser löpande",
-      "Tillgång dygnet runt, året runt",
-      "Certifikat till varje kurs",
-      "Sveriges främsta experter",
-      "Obegränsad tillgång",
-      "Personlig utveckling on demand",
-      "Ingen bindningstid",
     ],
     cta: "Starta nu",
     highlight: true,
@@ -118,104 +64,49 @@ const testimonials = [
   },
 ]
 
-const pricingFaqData = [
-  {
-    id: 1,
-    question: "Behöver jag ha en egen dator för att studera?",
-    answer:
-      "Ja, du behöver en dator, surfplatta eller mobil med internetuppkoppling för att ta del av utbildningen.",
-  },
-  {
-    id: 2,
-    question: "Får jag ett diplom efter att ha genomfört en kurs?",
-    answer:
-      "Ja, flera av våra kurser innehåller diplom eller kursintyg när du har slutfört samtliga moment.",
-  },
-  {
-    id: 3,
-    question: "Vilket språk bedrivs onlineutbildningarna på?",
-    answer:
-      "Majoriteten av utbildningarna är på svenska, men vissa delar och resurser kan vara på engelska.",
-  },
-  {
-    id: 4,
-    question: "Kan jag läsa flera kurser samtidigt?",
-    answer:
-      "Ja, med aktiv prenumeration kan du läsa flera kurser parallellt i din egen takt.",
-  },
-  {
-    id: 5,
-    question: "Vad innebär det att studera en onlineutbildning?",
-    answer:
-      "Du studerar digitalt när det passar dig, med tillgång till materialet dygnet runt från valfri plats.",
-  },
-  {
-    id: 6,
-    question: "Inom vilka branscher har ni utbildningar inom?",
-    answer:
-      "Vi erbjuder utbildningar inom bland annat entreprenorskap, personlig utveckling, marknadsforing och e-handel.",
-  },
-]
+type PricingPageProps = {
+  faqs: {
+    id: string | number
+    question: string
+    answer: string | Document
+  }[]
+}
 
-export default function Prisplaner() {
-  const [isAnnual, setIsAnnual] = useState(true)
+export default function Prisplaner({ faqs }: PricingPageProps) {
   const stripeLink = "https://buy.stripe.com/bJe4gyclScFaeDX0KI6wE01"
 
-  const plans = isAnnual ? annualPlans : monthlyPlans
+  const plans = annualPlans
 
   return (
     <Layout headTitle="Välj prenumeration" isFullWidth>
       <main className="bg-white font-inter text-[#121212]">
         <section className="mx-auto w-full max-w-[1240px] px-4 pb-24 pt-12 sm:px-6 lg:px-8 lg:pt-16">
-          <div className="mx-auto mb-12 flex max-w-xl flex-col items-center text-center">
+          <div className="mx-auto mb-8 flex max-w-xl flex-col items-center text-center">
             <img
-              src="/icons/university-icon.png"
+              src="/icons/university.png"
               alt="University icon"
-              className="mb-4 h-[70px] w-[70px]"
+              className="mb-4 h-[56px] w-[56px]"
             />
             <h1 className="font-jakarta text-4xl font-bold tracking-tight sm:text-5xl">
               Välj prenumeration
             </h1>
-            <p className="mt-2 text-sm">Alla priser är inklusive moms</p>
-
-            <div className="mt-6 inline-flex items-center gap-3">
-              <button
-                type="button"
-                className={`rounded-full border px-6 py-2.5 text-sm font-jakarta font-semibold transition ${
-                  isAnnual
-                    ? "border-[#2b5de7] bg-[#2b5de7] text-white"
-                    : "border-[#2b5de7] bg-white text-[#2b5de7]"
-                }`}
-                onClick={() => setIsAnnual(true)}
-              >
-                Årsprenumeration
-              </button>
-              <button
-                type="button"
-                className={`rounded-full border px-6 py-2.5 text-sm font-jakarta font-semibold transition ${
-                  isAnnual
-                    ? "border-[#2b5de7] bg-white text-[#2b5de7]"
-                    : "border-[#2b5de7] bg-[#2b5de7] text-white"
-                }`}
-                onClick={() => setIsAnnual(false)}
-              >
-                Månadsprenumeration
-              </button>
-            </div>
+            <p className="mt-2 text-lg font-inter font-bold">
+              Alla priser är inklusive moms
+            </p>
           </div>
 
-          <div className="grid gap-8 lg:grid-cols-3">
-            {plans.map((plan, index) => (
+          <div className="mx-auto grid w-full max-w-[816px] gap-8 lg:h-[620px] lg:grid-cols-2 lg:gap-8">
+            {plans.map((plan) => (
               <article
                 key={`${plan.name}-${plan.subtitle}`}
-                className={`mx-auto w-full max-w-[360px] min-h-[560px] overflow-hidden rounded-3xl border shadow-sm md:min-h-[620px] md:max-w-[593px] lg:min-h-[620px] lg:max-w-[396px] ${
+                className={`mx-auto flex h-full w-full max-w-[360px] flex-col overflow-hidden rounded-3xl border shadow-sm md:max-w-[593px] lg:max-w-[392px] ${
                   plan.highlight
                     ? "border-[#2b5de7] bg-white"
                     : "border-[#eceef3] bg-[#f9fafb]"
                 }`}
               >
                 <div
-                  className={`px-8 py-7 text-center ${
+                  className={`px-8 py-5 lg:py-4 text-center ${
                     plan.highlight
                       ? "bg-[#2b5de7] text-white"
                       : "bg-transparent text-[#171717]"
@@ -230,24 +121,24 @@ export default function Prisplaner() {
                   </h2>
                   <p
                     className={`font-inter text-[20px] font-medium leading-tight ${
-                      plan.highlight ? "text-white" : "text-[#151E3A]"
+                      plan.highlight ? "text-white" : "text-[#000000]"
                     }`}
                   >
                     {plan.subtitle}
                   </p>
                 </div>
-                <div className="space-y-6 px-8 pb-6">
+                <div className="flex h-full flex-col px-8 pb-6 pt-4 lg:pt-3">
                   <ul className="space-y-0.5">
                     {plan.features.map((feature) => (
                       <li
                         key={feature}
-                        className="border-b border-[#d5dceb] py-3 text-sm text-[#24324a] last:border-b-0"
+                        className="border-b border-[#d5dceb] py-2.5 lg:py-2 text-sm leading-[1.35] text-[#000000] last:border-b-0"
                       >
                         {feature}
                       </li>
                     ))}
                   </ul>
-                  <div className="text-center">
+                  <div className="mt-auto pt-4 text-center">
                     {plan.cta === "Kontakta oss" ? (
                       <Link
                         href="/kontakta-oss"
@@ -264,11 +155,6 @@ export default function Prisplaner() {
                       >
                         {plan.cta}
                       </a>
-                    )}
-                    {index === 0 && (
-                      <p className="mt-3 text-sm text-[#000000]">
-                        Kom igång kostnadsfritt
-                      </p>
                     )}
                   </div>
                 </div>
@@ -309,9 +195,19 @@ export default function Prisplaner() {
         </section>
 
         <section className="mx-auto w-full max-w-[1160px] px-4 py-8 sm:px-6 lg:px-8">
-          <MainFAQPricing faqData={pricingFaqData} />
+          <MainFAQPricing faqData={faqs} />
         </section>
       </main>
     </Layout>
   )
+}
+
+export async function getServerSideProps() {
+  const faqs = await getFAQs("sv")
+
+  return {
+    props: {
+      faqs,
+    },
+  }
 }
