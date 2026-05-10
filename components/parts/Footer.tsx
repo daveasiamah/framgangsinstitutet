@@ -61,12 +61,14 @@ export default function Footer({}: Props) {
         <div className="flex flex-col lg:flex-row justify-between items-start gap-8 w-full">
           {/* Logo Section */}
           <div className="w-full lg:w-1/3 flex flex-col items-start text-left">
-            <img
+            <Image
               src="/images/home/logo-base.png"
               alt="Framgångsinstitutet"
-              width={200}
-              height={55}
-              className="h-[55px] sm:h-[55px] w-[200px] object-left object-contain"
+              width={418}
+              height={48}
+              sizes="(max-width: 767px) 236px, 283px"
+              quality={100}
+              className="h-auto w-[236px] md:w-[283px] max-w-full object-left object-contain mb-[10px]"
             />
             <p className="font-inter font-medium text-[12px] md:text-[15px] md:max-w-[585px] lg:max-w-[399px] leading-[18px] mb-3">
               Registrera dig på vårt nyhetsbrev för att inte missa event,

@@ -60,7 +60,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
               alt="framgångsinstitutet"
               width={187}
               height={64}
-              className="object-cover w-[240px] md:w-[180px] lg:w-[187px] h-auto"
+              className="object-cover w-[232px] md:w-[180px] lg:w-[187px] h-auto"
             />
           </Flex>
         </Link>

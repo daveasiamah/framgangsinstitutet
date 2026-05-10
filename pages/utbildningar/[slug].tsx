@@ -130,11 +130,17 @@ const CourseDetailPage = ({ course }: CoursePageProps) => {
     <Layout headTitle={`Utbildningar - ${title}`}>
       <section className="w-full pb-12 md:pb-16">
         <div className="mx-auto w-full max-w-[1280px] px-4 pt-8 md:px-8 md:pt-10">
-          <header className="mx-auto max-w-[860px] text-center">
-            <h1 className="font-jakarta text-[36px] font-bold leading-[1.08] text-[#151E3A] md:text-[52px]">
+          <header className="mx-auto max-w-[980px] px-1 text-center sm:px-0">
+            <h1
+              className="mx-auto max-w-[18ch] font-jakarta text-[28px] font-bold leading-[1.12] text-[#151E3A] sm:text-[34px] md:text-[42px] lg:text-[48px] xl:text-[52px] break-words"
+              style={{ textWrap: "balance" }}
+            >
               {title}
             </h1>
-            <p className="mx-auto mt-3 max-w-[760px] font-inter text-[14px] leading-[1.45] text-[#2F2F2F] md:text-[16px]">
+            <p
+              className="mx-auto mt-3 max-w-[62ch] font-inter text-[14px] leading-[1.6] text-[#2F2F2F] sm:text-[15px] md:text-[16px] lg:text-[17px]"
+              style={{ textWrap: "balance" }}
+            >
               {shortDescription ||
                 "Få förståelse för juridiken som styr företagens verksamhet."}
             </p>
@@ -210,10 +216,10 @@ const CourseDetailPage = ({ course }: CoursePageProps) => {
             </section>
 
             <section id="kursinnehall" className="mt-7 md:mt-8">
-              <h3 className="font-jakarta text-[30px] font-bold leading-[1.08] text-[#151E3A] md:text-[38px]">
+              <h3 className="font-jakarta text-[24px] font-bold leading-[1.15] text-[#151E3A] sm:text-[28px] md:text-[34px] lg:text-[38px] break-words">
                 Om kursen {title}
               </h3>
-              <p className="mt-3 font-inter text-[14px] leading-[1.55] text-[#252525] md:text-[15px]">
+              <p className="mt-3 max-w-[900px] font-inter text-[14px] leading-[1.65] text-[#252525] sm:text-[15px] md:text-[16px]">
                 {shortDescription ||
                   "Kursen är utformad för dig som vill utveckla praktiska färdigheter och relevant kompetens för arbetsmarknaden."}
               </p>

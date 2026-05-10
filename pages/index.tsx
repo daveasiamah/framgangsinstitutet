@@ -1,4 +1,5 @@
 import { useRouter } from "next/router"
+import { GetServerSideProps } from "next"
 import Layout from "@/components/Layout"
 import en from "@/locales/en"
 import sv from "@/locales/sv"
@@ -19,7 +20,13 @@ import Title from "@/components/blocks/home-blocks/Title"
 import HomePageCourseCard from "@/components/blocks/home-blocks/HomePageCourseCard"
 import { courses } from "@/data/course-card-data"
 
-export default function Home() {
+type Course = (typeof courses)[number]
+
+type HomeProps = {
+  randomCourses: Course[]
+}
+
+export default function Home({ randomCourses }: HomeProps) {
   const router = useRouter()
   const { locale } = router
   const t = locale === "en" ? en : sv
@@ -165,7 +172,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {courses.map((course) => (
+            {randomCourses.map((course) => (
               <HomePageCourseCard
                 key={course.id}
                 title={course.title}
@@ -564,4 +571,22 @@ export default function Home() {
       </div>
     </Layout>
   )
+}
+
+export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
+  const shuffledCourses = [...courses]
+
+  for (let i = shuffledCourses.length - 1; i > 0; i -= 1) {
+    const randomIndex = Math.floor(Math.random() * (i + 1))
+    ;[shuffledCourses[i], shuffledCourses[randomIndex]] = [
+      shuffledCourses[randomIndex],
+      shuffledCourses[i],
+    ]
+  }
+
+  return {
+    props: {
+      randomCourses: shuffledCourses.slice(0, 6),
+    },
+  }
 }
