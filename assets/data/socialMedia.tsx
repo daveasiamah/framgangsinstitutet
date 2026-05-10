@@ -1,12 +1,5 @@
 import React from "react"
-import {
-  FaDiscord,
-  FaFacebook,
-  FaInstagram,
-  FaTiktok,
-  FaTwitter,
-  FaYoutube,
-} from "react-icons/fa"
+import { FaFacebook, FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa"
 
 export const socialMedia = (
   size: number,
@@ -18,33 +11,23 @@ export const socialMedia = (
   return [
     {
       id: 1,
-      url: "https://facebook.com/framgångsinstitutet.se",
+      url: "https://www.facebook.com/profile.php?id=61588567389983",
       logo: <FaFacebook size={size} />,
     },
     {
       id: 2,
-      url: "https://instagram.com/framgångsinstitutet",
+      url: "https://instagram.com/framgangsinstitutet",
       logo: <FaInstagram size={size} />,
     },
-    // {
-    //   id: 3,
-    //   url: "https://twitter.com/framgångsinstitutet",
-    //   logo: <FaTwitter size={size} />
-    // },
     {
       id: 3,
-      url: "https://youtube.com/checkifiedse",
+      url: "https://www.youtube.com/@framgangsinstitutet",
       logo: <FaYoutube size={size} />,
     },
     {
       id: 4,
-      url: "https://tiktok.com/@framgångsinstitutet",
+      url: "https://tiktok.com/@framgangsinstitutet",
       logo: <FaTiktok size={size} />,
-    },
-    {
-      id: 5,
-      url: "https://discord.com/invite/Zxt7qhbgVX",
-      logo: <FaDiscord size={size} />,
     },
   ]
 }

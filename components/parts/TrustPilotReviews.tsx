@@ -92,7 +92,7 @@ const ReviewCard = ({ review }: { review: Review }) => (
         alt="stars"
         width={180}
         height={10}
-        className="object-contain w-[120px] md:w-[99px] h-auto"
+        className="object-contain w-[158px] md:w-[62px] lg:w-[99px] h-auto"
       />
       {review.verified && (
         <div className="flex gap-[9px] md:gap-[4px] items-center">
@@ -112,7 +112,7 @@ const ReviewCard = ({ review }: { review: Review }) => (
     <h3 className="font-jakarta font-bold text-[16px] md:text-[14px] leading-tight mb-2">
       {review.title}
     </h3>
-    <p className="font-inter text-[14px] md:text-[12px] text-[#27272A] leading-[1.4] md:leading-relaxed flex-grow line-clamp-5 md:line-clamp-none">
+    <p className="font-inter text-[14px] md:text-[12px] lg:text-[10px] text-[#27272A] leading-[1.4] md:leading-relaxed flex-grow line-clamp-5 md:line-clamp-none">
       {review.text}
     </p>
     <div className="text-[14px] md:text-[12px] text-[#7c7c7c] font-inter mt-3 whitespace-nowrap overflow-hidden text-ellipsis">

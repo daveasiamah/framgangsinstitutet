@@ -51,9 +51,10 @@ export default function HeroSection({
                 href="https://buy.stripe.com/bJe4gyclScFaeDX0KI6wE01"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full max-w-[280px] justify-center lg:w-auto lg:max-w-none px-6 py-3 bg-[#225AEA] hover:bg-[#1a4aca] text-white font-semibold rounded-[7px] transition-colors duration-200 font-jakarta text-sm inline-flex items-center gap-2"
+                className="w-full max-w-[180px] justify-center lg:w-auto lg:max-w-none px-6 py-3 bg-[#225AEA] hover:bg-[#1a4aca] text-white font-semibold rounded-[7px] transition-colors duration-200 font-jakarta text-sm inline-flex items-center gap-2"
               >
-                {buttonText} <ArrowRight size={16} />
+                Bli medlem
+                <ArrowRight size={16} />
               </a>
 
               {showTrustpilot && (
@@ -75,7 +76,7 @@ export default function HeroSection({
               alt="Hero image"
               width={368}
               height={461}
-              className="mx-auto w-full max-w-[368px] h-auto object-cover rounded-[12px] lg:mx-0 lg:w-[368px] lg:h-[461px]"
+              className="mx-auto w-full lg:max-w-[368px] h-auto object-cover lg:mx-0 lg:w-[368px] lg:h-[461px]"
             />
           </div>
         </div>

@@ -105,12 +105,28 @@ export default function Footer({}: Props) {
 
           {/* Links Section */}
           <div className="w-full lg:w-2/3 grid grid-cols-3">
-            {/* Produkter */}
+            {/* Resurser */}
             <div>
               <h5 className="font-bold font-jakarta text-base sm:text-lg md:text-[22px] leading-[32px] mb-3 sm:mb-4">
-                Företaget
+                Resurser
               </h5>
               <ul className="space-y-2 flex flex-col gap-2 sm:gap-3">
+                <li>
+                  <Link
+                    href="/utbildningar"
+                    className="font-inter font-medium text-[12px] sm:text-[14px] md:text-base"
+                  >
+                    Utbildning
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/prisplaner"
+                    className="font-inter font-medium text-[12px] sm:text-[14px] md:text-base"
+                  >
+                    Prisplaner
+                  </Link>
+                </li>
                 <li>
                   <Link
                     href="/om-oss"
@@ -119,22 +135,15 @@ export default function Footer({}: Props) {
                     Om oss
                   </Link>
                 </li>
-                <li>
-                  <Link
-                    href="/dropshipping"
-                    className="font-inter font-medium text-[12px] sm:text-[14px] md:text-base"
-                  >
-                    Dropshipping
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/e-handel"
-                    className="font-inter font-medium text-[12px] sm:text-[14px] md:text-base"
-                  >
-                    E-handel
-                  </Link>
-                </li>
+              </ul>
+            </div>
+
+            {/* Företag */}
+            <div>
+              <h5 className="font-bold font-jakarta text-base sm:text-lg md:text-[22px] leading-[32px] mb-3 sm:mb-4">
+                Företag
+              </h5>
+              <ul className="space-y-2 flex flex-col gap-2 sm:gap-3">
                 <li>
                   <Link
                     href="/kontakta-oss"
@@ -143,56 +152,6 @@ export default function Footer({}: Props) {
                     Kontakta oss
                   </Link>
                 </li>
-              </ul>
-            </div>
-
-            {/* Företag */}
-            <div>
-              <h5 className="font-bold font-jakarta text-base sm:text-lg md:text-[22px] leading-[32px] mb-3 sm:mb-4">
-                Snabblänkar
-              </h5>
-              <ul className="space-y-2 flex flex-col gap-2 sm:gap-3">
-                <li>
-                  <Link
-                    href="/mentorskap"
-                    className="font-inter font-medium text-[12px] sm:text-[14px] md:text-base"
-                  >
-                    Mentorskap
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/blog"
-                    className="font-inter font-medium text-[12px] sm:text-[14px] md:text-base"
-                  >
-                    Blogg
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/intervjuer"
-                    className="font-inter font-medium text-[12px] sm:text-[14px] md:text-base"
-                  >
-                    Intervjuer
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/faq"
-                    className="font-inter font-medium text-[12px] sm:text-[14px] md:text-base"
-                  >
-                    FAQ
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            {/* Resurser */}
-            <div>
-              <h5 className="font-bold font-jakarta text-base sm:text-lg md:text-[22px] leading-[32px] mb-3 sm:mb-4">
-                Resurser
-              </h5>
-              <ul className="space-y-2 flex flex-col gap-2 sm:gap-3">
                 <li>
                   <Link
                     href="/terms-of-service"
@@ -206,16 +165,32 @@ export default function Footer({}: Props) {
                     href="/cookie-policy"
                     className="font-inter font-medium text-[12px] sm:text-[14px] md:text-base"
                   >
-                    Cookie policy
+                    Cookiepolicy
                   </Link>
                 </li>
+              </ul>
+            </div>
 
+            {/* Kontakt */}
+            <div>
+              <h5 className="font-bold font-jakarta text-base sm:text-lg md:text-[22px] leading-[32px] mb-3 sm:mb-4">
+                Kontakt
+              </h5>
+              <ul className="space-y-2 flex flex-col gap-2 sm:gap-3">
                 <li>
-                  <Link
-                    href="/vsl"
+                  <a
+                    href="mailto:info@framgangsinstitutet.se"
                     className="font-inter font-medium text-[12px] sm:text-[14px] md:text-base"
                   >
-                    Introguide
+                    E-post: info@framgangsinstitutet.se
+                  </a>
+                </li>
+                <li>
+                  <Link
+                    href="/kontakta-oss"
+                    className="font-inter font-medium text-[12px] sm:text-[14px] md:text-base"
+                  >
+                    Hitta till oss
                   </Link>
                 </li>
               </ul>
@@ -229,8 +204,7 @@ export default function Footer({}: Props) {
         <div className="grid gap-4 pb-6 sm:gap-6 sm:pb-8 md:grid md:grid-cols-3 md:items-start md:pb-10 md:text-left">
           {/* Copyright Section */}
           <p className="order-1 text-center text-[10px] sm:text-[10px] md:text-left md:text-sm">
-            Upphovsrätt © {currentYear} Framgångsinstitutet. Alla rättigheter
-            förbehållna.
+            Copyright © {currentYear} Framgångsinstitutet. All rights reserved.
           </p>
 
           {/* Social Media Icons */}

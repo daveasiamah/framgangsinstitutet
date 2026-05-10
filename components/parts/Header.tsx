@@ -1,17 +1,8 @@
 import Link from "next/link"
 import { useRouter } from "next/router"
-import ContractForm from "../ContractForm"
 import { motion, AnimatePresence } from "framer-motion"
 
-import {
-  Box,
-  Flex,
-  Button,
-  IconButton,
-  Stack,
-  useDisclosure,
-  Heading,
-} from "@chakra-ui/react"
+import { Box, Flex, Button, IconButton, Stack, Heading } from "@chakra-ui/react"
 
 import { MdMenu, MdClose } from "react-icons/md"
 
@@ -23,15 +14,9 @@ type Props = {
 export default function Header({ openSidebar, setOpenSidebar }: Props) {
   const router = useRouter()
   const { pathname, query } = router
+  const stripeLink = "https://buy.stripe.com/bJe4gyclScFaeDX0KI6wE01"
 
   const isSlugPage = !!query.slug
-
-  // CTA modal
-  const {
-    open: isModalOpen,
-    onOpen: openModal,
-    onClose: closeModal,
-  } = useDisclosure()
 
   const getButtonTitle = (path: string) => {
     switch (path) {
@@ -101,6 +86,10 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
           pathname !== "/utbildningar" &&
           pathname !== "/ebocker" ? (
             <Button
+              as="a"
+              href={stripeLink}
+              target="_blank"
+              rel="noopener noreferrer"
               color="white"
               bg="#225AEA"
               px={4}
@@ -112,7 +101,6 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
               _hover={{
                 bg: "#1a4aca",
               }}
-              onClick={openModal}
             >
               {getButtonTitle(pathname)}
             </Button>
@@ -286,6 +274,10 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
                 </Box>
 
                 <Button
+                  as="a"
+                  href={stripeLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   mt="4px"
                   width="100%"
                   bg="#225AEA"
@@ -300,7 +292,6 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
                   }}
                   onClick={() => {
                     setOpenSidebar(false)
-                    openModal()
                   }}
                 >
                   {getButtonTitle(pathname)}
@@ -310,26 +301,6 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
           </>
         )}
       </AnimatePresence>
-
-      {/* CONTRACT FORM MODAL */}
-      {isModalOpen && (
-        <Box
-          position="fixed"
-          top="0"
-          left="0"
-          right="0"
-          bottom="0"
-          bg="blackAlpha.300"
-          backdropFilter="blur(4px)"
-          display="flex"
-          justifyContent="center"
-          alignItems="center"
-          zIndex={100}
-          onClick={closeModal}
-        >
-          <ContractForm onClose={closeModal} />
-        </Box>
-      )}
     </Box>
   )
 }

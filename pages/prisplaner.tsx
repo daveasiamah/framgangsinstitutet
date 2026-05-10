@@ -1,4 +1,5 @@
 import { useState } from "react"
+import Link from "next/link"
 
 import Layout from "@/components/Layout"
 import { MainFAQPricing } from "@/components/parts/MainFAQPricing"
@@ -158,6 +159,7 @@ const pricingFaqData = [
 
 export default function Prisplaner() {
   const [isAnnual, setIsAnnual] = useState(true)
+  const stripeLink = "https://buy.stripe.com/bJe4gyclScFaeDX0KI6wE01"
 
   const plans = isAnnual ? annualPlans : monthlyPlans
 
@@ -246,12 +248,23 @@ export default function Prisplaner() {
                     ))}
                   </ul>
                   <div className="text-center">
-                    <button
-                      type="button"
-                      className="rounded-full bg-[#2b5de7] px-10 py-2 text-sm font-poppins font-medium text-white transition hover:bg-[#1e49bf]"
-                    >
-                      {plan.cta}
-                    </button>
+                    {plan.cta === "Kontakta oss" ? (
+                      <Link
+                        href="/kontakta-oss"
+                        className="inline-block rounded-full bg-[#2b5de7] px-10 py-2 text-sm font-poppins font-medium text-white transition hover:bg-[#1e49bf]"
+                      >
+                        {plan.cta}
+                      </Link>
+                    ) : (
+                      <a
+                        href={stripeLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block rounded-full bg-[#2b5de7] px-10 py-2 text-sm font-poppins font-medium text-white transition hover:bg-[#1e49bf]"
+                      >
+                        {plan.cta}
+                      </a>
+                    )}
                     {index === 0 && (
                       <p className="mt-3 text-sm text-[#000000]">
                         Kom igång kostnadsfritt

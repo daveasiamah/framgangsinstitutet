@@ -39,51 +39,51 @@ export default function Home() {
       <div className="px-[18px] md:px-[38px]">
         <HeroSection />
         {/* Feature Stats section */}
-        <section className="bg-[#F8F8F8] rounded-[45px] max-w-[1336px] mx-auto px-5 md:px-10 py-5 md:py-14 md:mt-1 mb-5 md:mb-10">
-          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-6 md:gap-6 justify-between items-center">
+        <section className="bg-gradient-to-b from-[#F9FBFF] to-[#E5F2FF] rounded-[40px] max-w-[1336px] mx-auto px-5 md:px-[36px] py-5 md:py-14 mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-2 justify-between items-center">
             <div className="flex flex-col items-center text-center gap-3">
-              <div className="flex justify-center items-center rounded-full bg-[#3E6FED] w-12 h-12 md:w-16 md:h-16">
+              <div className="flex justify-center items-center rounded-full bg-gradient-to-b from-[#6CB0FA] to-[#225AEA] w-12 h-12 md:w-16 md:h-16">
                 <UserIcon className="w-4 h-4 md:w-6 md:h-6" />
               </div>
-              <h4 className="font-jakarta text-black text-xs md:text-[20px] md:font-extrabold">
-                7500+ deltagare
+              <h4 className="font-jakarta font-extrabold text-lg md:text-[25px]">
+                10,000 + deltagare
               </h4>
             </div>
 
             <div className="flex flex-col items-center text-center gap-3">
-              <div className="flex justify-center items-center rounded-full bg-[#3E6FED] w-12 h-12 md:w-16 md:h-16">
+              <div className="flex justify-center items-center rounded-full bg-gradient-to-b from-[#6CB0FA] to-[#225AEA] w-12 h-12 md:w-16 md:h-16">
                 <StarIcon className="w-4 h-4 md:w-6 md:h-6" />
               </div>
-              <h4 className="font-jakarta text-black text-xs md:text-[20px] md:font-extrabold">
-                2500+ recensioner
+              <h4 className="font-jakarta font-extrabold text-lg md:text-[25px]">
+                3000+ recensioner
               </h4>
             </div>
 
             <div className="flex flex-col items-center text-center gap-3">
-              <div className="flex justify-center items-center rounded-full bg-[#3E6FED] w-12 h-12 md:w-16 md:h-16">
+              <div className="flex justify-center items-center rounded-full bg-gradient-to-b from-[#6CB0FA] to-[#225AEA] w-12 h-12 md:w-16 md:h-16">
                 <BadgeIcon className="w-3 h-4 md:w-5 md:h-6" />
               </div>
-              <h4 className="font-jakarta text-black text-xs md:text-[20px] md:font-extrabold">
+              <h4 className="font-jakarta font-extrabold text-lg md:text-[24px]">
                 Sveriges ledande experter
               </h4>
             </div>
 
             <div className="flex flex-col items-center text-center gap-3">
-              <div className="flex justify-center items-center rounded-full bg-[#3E6FED] w-12 h-12 md:w-16 md:h-16">
+              <div className="flex justify-center items-center rounded-full bg-gradient-to-b from-[#6CB0FA] to-[#225AEA] w-12 h-12 md:w-16 md:h-16">
                 <AlmegaIcon className="w-5 h-4 md:w-7 md:h-6" />
               </div>
-              <h4 className="font-jakarta text-black text-xs md:text-[20px] md:font-extrabold">
+              <h4 className="font-jakarta font-extrabold text-lg md:text-[25px]">
                 ALMEGA-auktoriserade
               </h4>
             </div>
           </div>
         </section>
 
-        <div className="flex flex-col w-full text-start items-start max-w-[1336px] mx-auto mb-10">
+        <div className="flex flex-col w-full items-center lg:items-start lg:pl-[50px] max-w-[1336px] mx-auto mb-4">
           <h3 className="font-jakarta font-bold text-[22px] md:text-[40px] text-black mt-4 text-left">
             Vi har utbildningen för dig.
           </h3>
-          <p className="font-inter text-[12px] md:text-[14px] text-black mt-2 mb-6 md:mb-10 max-w-[640px] mx-0 leading-[20px] text-left">
+          <p className="font-inter font-medium text-center lg:text-start text-[14px] md:text-base text-black mt-2 mb-4 md:mb-6 max-w-[347px] md:max-w-[650px] lg:max-w-[809px] mx-0 leading-[20px]">
             Hos oss får du värdefulla kunskaper som leder till jobb genom
             expertledda yrkesutbildningar. Med våra skräddarsydda läroplaner och
             användarvänliga plattform blir det tillgängligt, bekvämt och
@@ -92,12 +92,12 @@ export default function Home() {
         </div>
 
         {/* Course Expert Section */}
-        <section className="relative flex flex-col gap-8 md:py-32 bg-[#2E56F5] rounded-[16px] px-4 py-6 md:rounded-[40px] md:px-8 lg:mx-auto lg:w-full lg:max-w-[1336px] lg:flex-row lg:items-center lg:gap-12 lg:px-[60px]">
+        <section className="relative flex flex-col gap-8 md:py-[50px] md:px-[64px] lg:px-[60px] lg:py-[130px] bg-gradient-to-b from-[#6CB0FA] to-[#225AEA] px-4 py-6 rounded-[40px] lg:mx-auto lg:w-full lg:max-w-[1336px] lg:flex-row lg:items-center lg:gap-12">
           <div className="flex w-full flex-col items-start text-left lg:flex-1">
-            <h2 className="text-white text-[18px] leading-[1.3] sm:text-[20px] sm:leading-[1.4] md:text-[40px] md:leading-[1.5] max-w-[442px] font-bold font-jakarta mb-3 md:mb-4">
+            <h2 className="text-white leading-none text-[22px] md:text-[40px] max-w-[247px] md:max-w-[442px] font-bold font-jakarta mb-3 md:mb-4">
               Yrkesutbildningar skapade av experter.
             </h2>
-            <p className="mb-4 md:mb-6 md:max-w-[709px] text-[12px] sm:text-[14px] md:text-[15px] lg:text-[16px] text-white font-inter font-medium leading-[1.6] sm:leading-relaxed">
+            <p className="mb-4 md:mb-6 md:max-w-[709px] text-[14px] md:text-[16px] text-white font-inter font-medium leading-[1.6] sm:leading-relaxed">
               Våra yrkesutbildningar är framtagna av Sveriges mest framstående
               ämnesexperter som har omfattande kunskap och praktisk erfarenhet
               inom sina respektive områden. Du kommer att att lära av de bästa
@@ -146,17 +146,21 @@ export default function Home() {
         </section>
 
         {/* Course Cards Section  */}
-        <section className="w-full max-w-[1336px] mx-auto px-4 md:px-0 mb-8 md:mb-[30px] mt-[30px]">
-          <div className="flex flex-col items-center justify-items-center w-full max-w-[1336px] mx-auto mb-10">
-            <h3 className="max-w-[490px] font-jakarta font-extrabold text-center text-[22px] md:text-[40px] leading-[1.0] text-black mt-4">
+        <section className="w-full max-w-[1336px] mx-auto px-4 md:px-0 mb-8 md:mb-[50px] mt-[30px]">
+          <div className="flex flex-col items-center justify-items-center w-full max-w-[1336px] mx-auto">
+            <h3 className="max-w-[324px] md:max-w-[490px] font-jakarta font-extrabold text-center text-[22px] md:text-[32px] lg:text-[40px] leading-[1.0] text-black mt-4">
               Gör som över 10.000 framgångsrika svenskar
             </h3>
-            <p className="font-inter font-medium text-center text-[12px] md:text-base text-black mt-2 mb-6 md:mb-10 md:max-w-[480px] lg:max-w-[700px] mx-auto leading-[20px]">
+            <p className="font-inter font-medium text-center text-base text-black mt-4 mb-6 md:mb-10 max-w-[349px] md:max-w-[637px] lg:max-w-[700px] mx-auto leading-[20px]">
               Lär dig av Sveriges främsta experter och ta del av kunskap som har
-              hjälpt tusentals personer nå sina mål. Oavsett om du vill bli mer
-              effektiv, hantera stress eller stärka ditt ledarskap, får du
-              insikter och strategier direkt från landets skarpaste hjärnor.
-              Börja din resa mot framgång nu!
+              hjälpt tusentals personer nå sina mål.{" "}
+              <br className="block md:hidden" />{" "}
+              <br className="block md:hidden" />
+              Oavsett om du vill bli mer effektiv, hantera stress eller stärka
+              ditt ledarskap, får du insikter och strategier direkt från landets
+              skarpaste hjärnor.
+              <br className="block md:hidden" />
+              <br className="block md:hidden" /> Börja din resa mot framgång nu!
             </p>
           </div>
 
@@ -175,36 +179,46 @@ export default function Home() {
         </section>
 
         {/* CTA Section 1 */}
-        <section className="mb-8 w-full max-w-[1336px] mx-auto px-4 md:px-0">
+        <section className="mb-8 mt-10 w-full max-w-[1336px] mx-auto px-4 md:px-0">
           <div className="flex flex-col lg:flex-row justify-between gap-8 mb-8">
-            <div className="flex flex-col items-start w-full max-w-[1400px] rounded-[32px] bg-[#F8F8F8] px-6 py-8 md:px-10 lg:px-12 lg:py-10">
-              <h3 className="font-jakarta font-extrabold md:text-[28px] text-black mb-2">
+            <div className="flex flex-col items-start w-full max-w-[1400px] rounded-[32px] bg-gradient-to-b from-[#F9FBFF] to-[#E5F2FF] px-6 pt-8 pb-0 md:px-10 lg:px-12 lg:pt-10">
+              <h3 className="font-jakarta font-extrabold text-[22px] md:text-[28px] text-black mb-2">
                 Omfattande läroplaner
               </h3>
-              <p className="font-inter text-[12px] md:text-[14px] text-[#151515] md:max-w-[640px] lg:max-w-[570px] leading-[20px] mb-6">
+              <p className="font-inter font-medium text-[12px] md:text-[16px] text-[#151515] md:max-w-[640px] lg:max-w-[570px] leading-[20px] mb-6">
                 Vi har grundligt utformat våra läroplaner för att täcka alla
                 viktiga delar av varje ämne. Från grundläggande koncept till
                 avancerade tekniker. Våra utbildningar ger en holistisk
                 inlärningsupplevelse som utrustar dig med de färdigheter du
                 behöver för att få det jobb du önskar.
               </p>
+              <img
+                src="/images/home/laroplaner.png"
+                alt="Omfattande läroplaner"
+                className="w-full h-auto mt-8"
+              />
             </div>
-            <div className="flex flex-col items-start w-full max-w-[1400px] rounded-[32px] bg-[#F8F8F8] px-6 py-8 md:px-10 lg:px-12 lg:py-10">
-              <h3 className="font-jakarta font-extrabold md:text-[28px] text-black mb-2">
+            <div className="flex flex-col items-start w-full max-w-[1400px] rounded-[32px] bg-gradient-to-b from-[#F9FBFF] to-[#E5F2FF] px-6 pt-8 pb-0 md:px-10 lg:px-12 lg:pt-10">
+              <h3 className="font-jakarta font-extrabold text-[22px] md:text-[28px] text-black mb-2">
                 Flexibla studier
               </h3>
-              <p className="font-inter text-[12px] md:text-[14px] text-[#151515] md:max-w-[640px] lg:max-w-[570px] leading-[20px] mb-6">
+              <p className="font-inter font-medium text-[12px] md:text-[16px] text-[#151515] md:max-w-[640px] lg:max-w-[570px] leading-[20px] mb-6">
                 I vår plattform har du flexibiliteten att lära dig i din egen
                 takt och sätta ditt eget schema. Oavsett om du arbetar heltid
                 eller om du är en person med en hektisk livsstil kan du studera
                 på distans när som helst, var som helst. Du skapar dina egna
                 rutiner.
               </p>
+              <img
+                src="/images/home/studier.png"
+                alt="Flexibla studier"
+                className="w-full h-auto mt-8"
+              />
             </div>
           </div>
 
           {/* Practical Learning Section */}
-          <div className="flex flex-col bg-[#2E56F5] rounded-[16px] md:rounded-[40px] px-[26px] py-[40px] lg:px-[50px] lg:py-[50px]">
+          <div className="flex flex-col bg-gradient-to-tr from-[#6CB0FA] to-[#225AEA] rounded-[40px] md:rounded-[40px] px-[26px] py-[40px] lg:px-[50px] lg:py-[50px]">
             <div className="w-full text-left flex flex-col items-start md:grid md:grid-cols-[75px,1fr] md:gap-x-4 md:items-center lg:flex lg:flex-col lg:items-start">
               <img
                 src="/icons/main-icon-light.png"
@@ -216,7 +230,7 @@ export default function Home() {
                 <h1 className="text-white text-[18px] leading-[1.3] sm:text-[20px] sm:leading-[1.4] md:text-[24px] md:leading-[1.5] max-w-[90%] sm:max-w-[600px] font-bold font-jakarta mb-3 md:mb-3 lg:mb-4">
                   Praktiskt lärande
                 </h1>
-                <p className="mb-4 md:mb-0 lg:mb-6 md:max-w-[699px] text-[12px] sm:text-[14px] md:text-[15px] lg:text-[16px] text-white font-inter font-medium leading-[1.6] sm:leading-relaxed">
+                <p className="mb-4 md:mb-0 max-w-[296px] md:max-w-[547px] lg:max-w-[817px] text-sm md:text-base text-white font-inter font-medium leading-[1.6] sm:leading-relaxed">
                   Vi tror på kraften i praktisk applicering i dina studier. Våra
                   utbildningar innehåller case och övningar hämtade från
                   arbetslivet vilket gör att du kan tillämpa dina nyvunna
@@ -229,81 +243,108 @@ export default function Home() {
 
         {/* Study Material Section */}
         <section className="flex flex-col items-center gap-3 w-full mb-8">
-          <div className="flex flex-col items-start mt-8 w-full max-w-[1400px] rounded-[32px] bg-[#F8F8F8] px-6 py-8 md:px-10 lg:px-12 lg:py-10">
-            <Title blackText="Detta " blueText="får du." />
-            <h3 className="font-jakarta font-extrabold md:text-[28px]">
-              Tillgång studiematerial.
-            </h3>
-            <p className="font-inter text-[12px] md:text-[14px] text-[#151515] md:max-w-[640px] lg:max-w-[570px] leading-[20px] mb-6">
-              Du kan återbesöka innehållet även efter att du har slutfört din
-              utbildning när du behöver repetition.
-            </p>
-            <h3 className="font-jakarta font-extrabold md:text-[28px]">
-              Obegränsad support.{" "}
-            </h3>
-            <p className="font-inter text-[12px] md:text-[14px] text-[#151515] md:max-w-[640px] lg:max-w-[570px] leading-[20px] mb-6">
-              Studera på distans behöver inte betyda att du studerar helt ensam.
-              Vi hjälper dig under hela din studietid. Oavsett om du har
-              tekniska frågor eller behöver vägledning angående
-              utbildningsmaterialet så finns vi här för att hjälpa dig att
-              lyckas.
-            </p>
-            <h3 className="font-jakarta font-extrabold md:text-[28px]">
-              14 dagar ångerrätt.
-            </h3>
-            <p className="font-inter text-[12px] md:text-[14px] text-[#151515] md:max-w-[640px] lg:max-w-[570px] leading-[20px] mb-6">
-              Skulle du inte vara nöjd med en utbildning du köpt betalar vi
-              tillbaka alla pengar till dig inom 14 dagar efter köptillfället
-              förutsatt att du inte slutfört utbildningen.
-            </p>
-          </div>
-
           {/* Distance Learning Section */}
-          <div className="flex flex-col items-start mt-8 w-full max-w-[1400px] px-6 py-8 md:px-10 lg:px-12 lg:py-10">
-            <Title blackText="Så här fungerar " blueText="dina studier." />
-            <h3 className="font-jakarta font-extrabold md:text-[28px]">
-              Studera på distans
-            </h3>
-            <p className="font-inter text-[12px] md:text-[14px] text-[#151515] md:max-w-[640px] lg:max-w-[570px] leading-[20px] mb-6">
-              Våra utbildningar är utformade för att hålla dig engagerad under
-              hela studietiden. Lärplattformen är självvaliderande och du kommer
-              möta interaktiva frågor, quiz och övningar för att stärka din
-              förståelse.
-            </p>
-            <h3 className="font-jakarta font-extrabold md:text-[28px]">
-              Få tillgång till digitalt innehåll
-            </h3>
-            <p className="font-inter text-[12px] md:text-[14px] text-[#151515] md:max-w-[640px] lg:max-w-[570px] leading-[20px] mb-6">
-              När du startar ditt lärande får du tillgång till förinspelade
-              videoföreläsningar, text- och bilddokument, instuderingsfrågor och
-              övningar ledda av våra experter.
-            </p>
-            <h3 className="font-jakarta font-extrabold md:text-[28px]">
-              Erhåll diplom och certifikat
-            </h3>
-            <p className="font-inter text-[12px] md:text-[14px] text-[#151515] md:max-w-[640px] lg:max-w-[570px] leading-[20px] mb-6">
-              När du är färdig med den teoretiska delen av din utbildning får du
-              ditt diplom. Önskar du ett certifikat väntar antingen praktik
-              eller tentamensarbete. Båda dokumenten är digitala, visar upp dina
-              nyvunna färdigheter och förbättrar din professionella profil.
-              Detta öppnar dörrar till nya möjligheter i din karriär.
-            </p>
-          </div>
+          <section className="w-full max-w-[1336px] items-center lg:items-start flex flex-col mx-auto px-4 md:px-0 mt-4 mb-8">
+            <Title
+              blackText="Så här fungerar "
+              blueText="dina studier."
+              textClassName="font-jakarta font-extrabold leading-tight text-[22px] md:text-[32px] lg:text-[40px]"
+            />
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              <div className="flex h-full flex-col items-start bg-gradient-to-b from-[#F9FBFF] to-[#E5F2FF] rounded-[40px] md:max-w-[405px] lg:max-w-full mt-8 w-full px-4 py-8 md:px-4 lg:px-4 lg:py-10 text-left">
+                <div className="flex h-[168px] w-full items-center justify-center mb-6 md:h-[180px] lg:h-[192px]">
+                  <img
+                    src="/images/home/calendar.png"
+                    alt="Calendar"
+                    className="max-h-full w-auto object-contain"
+                  />
+                </div>
+                <h3 className="w-full min-h-[1.8rem] font-jakarta font-extrabold text-lg leading-tight md:min-h-[2.5rem] md:text-[26px]">
+                  Studera på distans
+                </h3>
+                <p className="w-full font-inter text-[12px] md:text-[14px] lg:text-base text-[#000000] md:max-w-[640px] lg:max-w-[405px] mt-0">
+                  Våra utbildningar är utformade för att hålla dig engagerad
+                  hela studietiden. Lärplattformen är självvaliderande och
+                  innehåller interaktiva frågor, quiz och övningar för att
+                  stärka din förståelse.
+                </p>
+              </div>
+              <div className="flex h-full flex-col items-start bg-gradient-to-b from-[#F9FBFF] to-[#E5F2FF] rounded-[40px] md:max-w-[405px] lg:max-w-full mt-8 w-full px-4 py-8 md:px-4 lg:px-4 lg:py-10 text-left">
+                <div className="flex h-[168px] w-full items-center justify-center mb-6 md:h-[180px] lg:h-[192px]">
+                  <img
+                    src="/images/home/mobile.png"
+                    alt="Mobile"
+                    className="max-h-full w-auto object-contain"
+                  />
+                </div>
+                <h3 className="w-full min-h-[1.8rem] font-jakarta font-extrabold text-lg leading-tight md:min-h-[2.5rem] md:text-[26px]">
+                  Få tillgång till digitalt innehåll
+                </h3>
+                <p className="w-full font-inter text-[12px] md:text-[14px] lg:text-base text-[#000000] md:max-w-[640px] lg:max-w-[405px] mt-0">
+                  När du startar ditt lärande får du tillgång till förinspelade
+                  videoföreläsningar, text- och bilddokument, instuderingsfrågor
+                  och övningar ledda av våra experter.
+                </p>
+              </div>
+
+              <div className="flex h-full flex-col items-start bg-gradient-to-b from-[#F9FBFF] to-[#E5F2FF] rounded-[40px] md:max-w-[405px] lg:max-w-full mt-8 w-full px-4 py-8 md:px-4 lg:px-4 lg:py-10 text-left">
+                <div className="flex h-[168px] w-full items-center justify-center mb-6 md:h-[180px] lg:h-[192px]">
+                  <img
+                    src="/images/home/stats.png"
+                    alt="Stats"
+                    className="max-h-full w-auto object-contain"
+                  />
+                </div>
+                <h3 className="w-full min-h-[1.8rem] font-jakarta font-extrabold text-lg leading-tight md:min-h-[2.5rem] md:text-[26px]">
+                  Erhåll diplom och certifikat
+                </h3>
+                <p className="w-full font-inter text-[12px] md:text-[14px] lg:text-base text-[#000000] md:max-w-[640px] lg:max-w-[405px] mt-0">
+                  När du är färdig med din utbildning kommer du att erhålla ett
+                  diplom. Båda dokumenten är digitala och stärker din
+                  professionella profil, vilket öppnar dörrar till nya
+                  karriärmöjligheter.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex flex-col items-start mt-8 w-full max-w-[1336px] rounded-[32px] bg-gradient-to-b from-[#F9FBFF] to-[#E5F2FF]  px-4 py-6 md:px-[52px] md:py-[55px] lg:px-24 lg:py-16">
+              <Title
+                blackText="Detta "
+                blueText="får du."
+                textClassName="font-jakarta font-extrabold leading-none text-[22px] md:text-[32px] lg:text-[40px] mb-6"
+              />
+              <h3 className="font-jakarta font-extrabold md:text-[28px] lg:text-[32px]">
+                Tillgång studiematerial.
+              </h3>
+              <p className="font-inter font-medium text-[12px] md:text-[14px] lg:text-base text-[#151515] md:max-w-[640px] lg:max-w-[720px] leading-[20px] mb-6">
+                Du kan återbesöka innehållet även efter att du har slutfört din
+                utbildning när du behöver repetition.
+              </p>
+              <h3 className="font-jakarta font-extrabold md:text-[28px] lg:text-[32px]">
+                Obegränsad support.{" "}
+              </h3>
+              <p className="font-inter font-medium text-[12px] md:text-[14px] lg:text-base text-[#151515] md:max-w-[640px] lg:max-w-[720px] leading-[20px] mb-6">
+                Studera på distans behöver inte betyda att du studerar helt
+                ensam. Vi hjälper dig under hela din studietid. Oavsett om du
+                har tekniska frågor eller behöver vägledning angående
+                utbildningsmaterialet så finns vi här för att hjälpa dig att
+                lyckas.
+              </p>
+              <h3 className="font-jakarta font-extrabold md:text-[28px] lg:text-[32px]">
+                14 dagar ångerrätt.
+              </h3>
+              <p className="font-inter font-medium text-[12px] md:text-[14px] lg:text-base text-[#151515] md:max-w-[640px] lg:max-w-[720px] leading-[20px] mb-6">
+                Skulle du inte vara nöjd med en utbildning du köpt betalar vi
+                tillbaka alla pengar till dig inom 14 dagar efter köptillfället
+                förutsatt att du inte slutfört utbildningen.
+              </p>
+            </div>
+          </section>
           <div className="w-full flex flex-col justify-center mb-8">
             <Title blackText="Recensioner" />
             <TrustPilotReviews />
           </div>
         </section>
-        {/* Feature Cards Section
-        <section className="flex flex-col w-full max-w-[1440px] mx-auto items-center gap-3 mt-[36px] md:mt-[53px] lg:mt-[77px] lg:mb-[42px] mb-[30px]">
-          <h2 className="font-jakarta font-semibold text-[22px] text-center text-black md:text-[40px] max-w-[241px] md:max-w-[472px] lg:max-w-[478px] leading-[22px] md:leading-[36px] mb-1">
-            Är du redo att ta kontroll över ditt liv?
-          </h2>
-          <p className="font-inter text-center text-[12px] md:text-[14px] text-[#434C69] md:max-w-[640px] lg:max-w-[570px] leading-[20px] px-4">
-            Varje framgång började med ett första steg - en ansökan. Är det din
-            tur nu?
-          </p>
-        </section> */}
 
         {/* Brands Section */}
         <section className="flex flex-col justify-center items-center py-1 mb-8">
@@ -479,17 +520,17 @@ export default function Home() {
             </div>
 
             <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-3 md:gap-4 mt-2 sm:mt-3">
-              <p className="text-white text-[9px] sm:text-[10px] md:text-[14px] whitespace-nowrap">
+              <p className="text-white font-inter font-medium text-[9px] sm:text-[10px] md:text-[14px] whitespace-nowrap">
                 Strålande
               </p>
               <Image
-                src="/images/mentorship/mentorship-products/trust-pilot-stars.svg"
+                src="/icons/trustpilot-stars.svg"
                 className="w-[100px] sm:w-[124px] h-[18px] sm:h-[20px] md:h-[24px] flex-shrink-0"
                 alt="svg"
                 width={124}
                 height={24}
               />
-              <p className="text-white text-[9px] sm:text-[10px] md:text-[14px] whitespace-nowrap">
+              <p className="text-white font-inter font-medium text-[9px] sm:text-[10px] md:text-[14px] whitespace-nowrap">
                 4.8 av 5.0
               </p>
             </div>
@@ -503,7 +544,7 @@ export default function Home() {
               <p className="font-inter font-semibold text-[#151E3A] text-[14px]">
                 Bli medlem
               </p>{" "}
-              <ArrowRightIcon className="w-3 h-3 ml-1" />
+              <ArrowRightIcon className="w-4 h-4 ml-1" />
             </a>
           </div>
         </section>
