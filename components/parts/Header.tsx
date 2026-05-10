@@ -86,10 +86,6 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
           pathname !== "/utbildningar" &&
           pathname !== "/ebocker" ? (
             <Button
-              as="a"
-              href={stripeLink}
-              target="_blank"
-              rel="noopener noreferrer"
               color="white"
               bg="#225AEA"
               px={4}
@@ -101,6 +97,9 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
               _hover={{
                 bg: "#1a4aca",
               }}
+              onClick={() =>
+                window.open(stripeLink, "_blank", "noopener,noreferrer")
+              }
             >
               {getButtonTitle(pathname)}
             </Button>
@@ -274,10 +273,6 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
                 </Box>
 
                 <Button
-                  as="a"
-                  href={stripeLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   mt="4px"
                   width="100%"
                   bg="#225AEA"
@@ -292,6 +287,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
                   }}
                   onClick={() => {
                     setOpenSidebar(false)
+                    window.open(stripeLink, "_blank", "noopener,noreferrer")
                   }}
                 >
                   {getButtonTitle(pathname)}
