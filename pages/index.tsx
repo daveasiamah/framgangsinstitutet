@@ -361,9 +361,9 @@ export default function Home({ randomCourses, faqs }: HomeProps) {
 
         {/* Brands Section */}
         <section className="flex flex-col justify-center items-center py-1 mb-8">
-          <h1 className="font-jakarta font-extrabold text-lg text-center md:text-3xl lg:text-left">
-            Företag vi hjälpt med kompetensutveckling
-            <br className="lg:hidden" /> av personalen
+          <h1 className="font-jakarta font-extrabold text-base text-center md:text-2xl lg:text-left">
+            Företag vi hjälpt med <br className="lg:hidden" />
+            kompetensutveckling av personalen
           </h1>
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 justify-center items-center gap-[18px] md:gap-[36px] mt-6">
             <div className="flex justify-center items-center w-[160.34px] md:w-[284px] h-[94.28px] md:h-[167px] lg:h-[160px] bg-[#F8F8F8]">
@@ -459,7 +459,7 @@ export default function Home({ randomCourses, faqs }: HomeProps) {
                   Vi erbjuder följande betalningssätt:
                 </h3>
                 <div className="flex flex-col">
-                  <ul className="mx-auto grid w-fit grid-cols-1 gap-y-0 list-disc list-inside text-left text-base font-inter font-medium text-[#151E3A] lg:mx-0 lg:grid-cols-2 lg:gap-x-28 lg:list-outside lg:pl-5">
+                  <ul className="mx-auto grid w-fit grid-cols-1 gap-y-0 list-disc list-inside text-left text-sm font-inter font-medium text-[#151E3A] lg:mx-0 lg:grid-cols-2 lg:gap-x-28 lg:list-outside lg:pl-5">
                     <li>Få först. Betala sedan.</li>
                     <li>Betalningstid minst 14 dagar.</li>
                     <li>14 dagars ångerrätt</li>
@@ -473,17 +473,17 @@ export default function Home({ randomCourses, faqs }: HomeProps) {
           </div>
         </section>
 
-        <section className="w-full max-w-[1258px] bg-[#225AEA] bg-[url(/images/mentorship/mentorship-products/bg-mesh.svg)] bg-cover rounded-[20px] sm:rounded-[32px] mx-auto px-2 sm:px-4 py-4 sm:py-4 mt-4 mb-4">
+        <section className="w-full max-w-[1258px] bg-gradient-to-b from-[#F9FBFF] to-[#E5F2FF] bg-cover rounded-[20px] sm:rounded-[32px] mx-auto px-2 sm:px-4 py-4 sm:py-4 mt-4 mb-4">
           <div className="relative w-full max-w-[1170px] mx-auto min-h-[240px] sm:min-h-[260px] md:h-[366px] flex flex-col items-center justify-center">
             {/* Icon placeholder */}
             <div className="flex flex-col items-center px-2">
               {/* Main heading */}
-              <h3 className="max-w-[455px] font-semibold text-white text-sm md:text-[32px] leading-7 mb-3 sm:mb-4 font-jakarta text-center">
+              <h3 className="max-w-[455px] font-semibold text-white text-lg md:text-[32px] leading-7 mb-3 sm:mb-4 font-jakarta text-center">
                 Börja studera på distans idag.
               </h3>
 
               {/* Subtext */}
-              <p className="max-w-[346px] text-center font-regular text-white text-[10px] sm:text-xs md:text-sm leading-relaxed mb-3 sm:mb-4 font-inter px-1">
+              <p className="max-w-[364px] text-center font-regular text-white text-xs md:text-sm leading-relaxed mb-3 sm:mb-4 font-inter px-1">
                 Utforska vårt utbildningsutbud och ta första steget mot din
                 personliga utveckling.
               </p>
@@ -580,7 +580,11 @@ export default function Home({ randomCourses, faqs }: HomeProps) {
 }
 
 export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
-  const shuffledCourses = [...courses]
+  const uniqueCourses = courses.filter(
+    (course, index, allCourses) =>
+      index === allCourses.findIndex((item) => item.title === course.title),
+  )
+  const shuffledCourses = [...uniqueCourses]
   const faqs = await getFAQs("sv")
 
   for (let i = shuffledCourses.length - 1; i > 0; i -= 1) {

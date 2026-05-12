@@ -19,13 +19,13 @@ export const courses = [
   },
   {
     id: 4,
-    title: "E-commerce Manager",
+    title: "Projektledning",
     description:
       "En kurs för dig som vill öka din förståelse för hur handel med aktier, andra värdepapper och finansiella instrument behandlas.",
   },
   {
     id: 5,
-    title: "Social Media Manager",
+    title: "Kommunikation",
     description:
       "En kurs för dig som vill öka din förståelse för hur handel med aktier, andra värdepapper och finansiella instrument behandlas.",
   },

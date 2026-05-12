@@ -43,6 +43,7 @@ const annualPlans: Plan[] = [
       "SCORM-kompatibelt",
     ],
     cta: "Kontakta oss",
+    highlight: true,
   },
 ]
 
@@ -90,7 +91,7 @@ export default function Prisplaner({ faqs }: PricingPageProps) {
             <h1 className="font-jakarta text-4xl font-bold tracking-tight sm:text-5xl">
               Välj prenumeration
             </h1>
-            <p className="mt-2 text-lg font-inter font-bold">
+            <p className="text-lg font-inter font-medium text-[#4a556d] mt-4 md:mt-6">
               Alla priser är inklusive moms
             </p>
           </div>
