@@ -58,9 +58,9 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
             <img
               src="/images/home/logo-main.png"
               alt="framgångsinstitutet"
-              width={187}
-              height={64}
-              className="object-cover w-[232px] md:w-[180px] lg:w-[187px] h-auto"
+              width={195}
+              height={72}
+              className="object-cover w-[240px] md:w-[240px] lg:w-[240px] h-auto"
             />
           </Flex>
         </Link>

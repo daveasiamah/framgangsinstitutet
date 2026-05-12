@@ -473,7 +473,7 @@ export default function Home({ randomCourses, faqs }: HomeProps) {
           </div>
         </section>
 
-        <section className="w-full max-w-[1258px] bg-gradient-to-b from-[#F9FBFF] to-[#E5F2FF] bg-cover rounded-[20px] sm:rounded-[32px] mx-auto px-2 sm:px-4 py-4 sm:py-4 mt-4 mb-4">
+        <section className="w-full max-w-[1258px] bg-gradient-to-b from-[#6CB0FA] to-[#225AEA] bg-cover rounded-[20px] sm:rounded-[32px] mx-auto px-2 sm:px-4 py-4 sm:py-4 mt-4 mb-4">
           <div className="relative w-full max-w-[1170px] mx-auto min-h-[240px] sm:min-h-[260px] md:h-[366px] flex flex-col items-center justify-center">
             {/* Icon placeholder */}
             <div className="flex flex-col items-center px-2">

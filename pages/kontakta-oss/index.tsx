@@ -94,7 +94,11 @@ export default function KontaktaOss() {
   }
 
   return (
-    <Layout headTitle="Kontakta Oss - framgångsinstitutet" isFullWidth={true}>
+    <Layout
+      headTitle="Kontakta oss - Studera på distans via Framgångsinstitutet"
+      useExactHeadTitle={true}
+      isFullWidth={true}
+    >
       <div className="w-full bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-[800px] mx-auto">

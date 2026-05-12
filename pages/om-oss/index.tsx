@@ -9,7 +9,11 @@ export default function About() {
   const t = locale === "en" ? en : sv
 
   return (
-    <Layout headTitle={t.homeData.metaData.title} isFullWidth={true}>
+    <Layout
+      headTitle="Om oss - Studera på distans via Framgångsinstitutet"
+      useExactHeadTitle={true}
+      isFullWidth={true}
+    >
       <main className="flex-grow pt-[30px] bg-base-100">
         <section className="relative bg-white py-8 px-4">
           <div className="max-w-7xl mx-auto">

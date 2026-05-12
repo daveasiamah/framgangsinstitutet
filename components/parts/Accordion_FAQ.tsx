@@ -55,12 +55,15 @@ const AccordionContent = React.memo(
         className="overflow-hidden transition-[max-height] duration-300 ease-in-out"
         style={{ maxHeight: `${height}px` }}
       >
-        <div ref={contentRef} className="text-subtitle font-inter text-sm pr-4">
+        <div
+          ref={contentRef}
+          className="text-subtitle font-inter text-xs md:text-sm pr-4"
+        >
           {children}
         </div>
       </div>
     )
-  }
+  },
 )
 AccordionContent.displayName = "AccordionContent"
 

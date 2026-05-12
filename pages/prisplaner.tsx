@@ -79,7 +79,11 @@ export default function Prisplaner({ faqs }: PricingPageProps) {
   const plans = annualPlans
 
   return (
-    <Layout headTitle="Välj prenumeration" isFullWidth>
+    <Layout
+      headTitle="Prisplaner - Studera på distans via Framgångsinstitutet"
+      useExactHeadTitle={true}
+      isFullWidth
+    >
       <main className="bg-white font-inter text-[#121212]">
         <section className="mx-auto w-full max-w-[1240px] px-4 pb-24 pt-12 sm:px-6 lg:px-8 lg:pt-16">
           <div className="mx-auto mb-8 flex max-w-xl flex-col items-center text-center">

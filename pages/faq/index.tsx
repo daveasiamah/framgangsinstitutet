@@ -57,28 +57,34 @@ const FAQPage: React.FC<FAQPageProps> = ({ faqs }) => {
   }
 
   return (
-    <Layout headTitle="FAQ" isFullWidth={true}>
+    <Layout
+      headTitle="Frågor och svar - Studera på distans via Framgångsinstitutet"
+      useExactHeadTitle={true}
+      isFullWidth={true}
+    >
       <Head>
-        <title>FAQ</title>
+        <title>
+          Frågor och svar - Studera på distans via Framgångsinstitutet
+        </title>
         <meta
           name="description"
-          content="Frequently asked questions about our platform and services."
+          content="Frågor och svar om vår plattform och våra tjänster."
         />
       </Head>
       {/* Full width on mobile, container centered on md and above */}
-      <div className="w-full md:container md:mx-auto md:px-4 py-8">
+      <div className="w-full md:px-4 py-8 bg-white">
         <section className="mx-auto max-w-7xl px-0 md:px-4">
           <div className="relative py-10">
             <ScrollReveal>
               <h1 className="text-center font-jakarta text-[24px] md:text-[3rem] lg:text-[3.5rem] md:leading-[40px] leading-[22px] font-[700] mb-6 mt-2 px-4 md:px-0">
-                Vanliga frågor och svar
+                Frågor och svar
               </h1>
               <h2 className="text-center leading-2 text-[14px] font-inter font-medium md:text-[22px] text-[#707BA0] mb-9 px-4 md:px-0">
                 {finalOutput}
               </h2>
             </ScrollReveal>
 
-            <div className="w-full bg-[#F5F9FF] rounded-none md:rounded-[20px] py-4 px-2 md:px-3 mb-16">
+            <div className="w-full bg-[#f5f9ff] rounded-none md:rounded-[20px] py-4 px-2 md:px-3 mb-16">
               <Accordion>
                 {faqs.map((item) => (
                   <AccordionItem key={item.id} title={item.question}>

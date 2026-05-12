@@ -98,7 +98,11 @@ export default function Courses({
     }
   }
   return (
-    <Layout headTitle="Alla Utbildningar" isFullWidth={true}>
+    <Layout
+      headTitle="Utbildningar - Studera på distans via Framgångsinstitutet"
+      useExactHeadTitle={true}
+      isFullWidth={true}
+    >
       <section className="w-full">
         <div className="mx-auto w-full max-w-[1336px] px-4 pb-10 pt-8 md:px-8 md:pb-14 md:pt-10 lg:px-10 lg:pt-14">
           <div className="mx-auto max-w-[760px] text-center">
