@@ -107,7 +107,7 @@ export default function Courses({
         <div className="mx-auto w-full max-w-[1336px] px-4 pb-10 pt-8 md:px-8 md:pb-14 md:pt-10 lg:px-10 lg:pt-14">
           <div className="mx-auto max-w-[760px] text-center">
             <h1 className="font-jakarta text-[25px] font-bold leading-[1.05] text-[#000000] md:text-[44px] lg:text-[48px]">
-              Alla Utbildningar
+              Utbildningar
             </h1>
             <p className="mx-auto mt-3 max-w-[327px] md:max-w-[552px] lg:max-w-[715px] font-inter text-[12px] font-medium leading-[1.35] text-[#000000] md:mt-4 md:text-[16px] md:leading-[1.4]">
               Framgångsinstitutet är en av Sveriges äldsta och främsta
@@ -134,7 +134,7 @@ export default function Courses({
 
         <div className="mx-auto w-full max-w-[1336px] px-4 pb-12 pt-7 md:px-8 md:pb-16 md:pt-9 lg:px-10">
           <h2 className="font-jakarta text-[22px] md:text-[32px] lg:text-[48px] font-bold leading-[1.05] text-[#000000]">
-            Alla Utbildningar
+            Alla utbildningar
           </h2>
 
           <div className="mt-5 grid grid-cols-1 gap-6 md:mt-7 md:grid-cols-2 lg:mt-8 lg:grid-cols-3">

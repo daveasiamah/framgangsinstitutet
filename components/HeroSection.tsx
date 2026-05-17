@@ -29,7 +29,7 @@ export default function HeroSection({
           <div className="flex w-full flex-col items-start lg:max-w-[560px]">
             {/* Title */}
             <h1 className="w-full text-[#151E3A] text-[28px] sm:text-[30px] md:text-[36px] lg:text-[40px] font-bold font-jakarta text-center lg:text-left mb-6 leading-[1.15]">
-              Studera på distans. <br className="hidden sm:block" />
+              Studera på distans. <br />
               Var du vill, när du vill.
             </h1>
 

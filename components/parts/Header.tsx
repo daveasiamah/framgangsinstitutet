@@ -175,7 +175,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
                   <MdClose />
                 </IconButton>
               </Flex>
-              <Stack gap={4} align="start">
+              <Stack gap={4} align="start" fontWeight="semibold">
                 <Box
                   px={4}
                   py={2}

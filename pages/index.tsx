@@ -17,11 +17,15 @@ import Link from "next/link"
 import { ArrowRightIcon } from "lucide-react"
 import Title from "@/components/blocks/home-blocks/Title"
 import HomePageCourseCard from "@/components/blocks/home-blocks/HomePageCourseCard"
-import { courses } from "@/data/course-card-data"
-import { getFAQs } from "@/utils/contentful"
+import { getCoursesPaginated, getFAQs } from "@/utils/contentful"
 import { Document } from "@contentful/rich-text-types"
 
-type Course = (typeof courses)[number]
+type Course = {
+  id: string
+  title: string
+  shortDescription: string
+  slug: string
+}
 
 type HomeProps = {
   randomCourses: Course[]
@@ -106,7 +110,7 @@ export default function Home({ randomCourses, faqs }: HomeProps) {
 
         {/* Course Expert Section */}
         <section className="relative flex flex-col gap-8 md:py-[50px] md:px-[64px] lg:px-[60px] lg:py-[130px] bg-gradient-to-b from-[#6CB0FA] to-[#225AEA] px-4 py-6 rounded-[40px] lg:mx-auto lg:w-full lg:max-w-[1336px] lg:flex-row lg:items-center lg:gap-12">
-          <div className="flex w-full flex-col items-start text-left lg:flex-1">
+          <div className="flex w-full flex-col items-start text-left lg:flex-1 pt-4 px-4 md:px-0 lg:pt-0">
             <h2 className="text-white leading-none text-[22px] md:text-[40px] max-w-[247px] md:max-w-[442px] font-bold font-jakarta mb-3 md:mb-4">
               Yrkesutbildningar skapade av experter.
             </h2>
@@ -118,7 +122,7 @@ export default function Home({ randomCourses, faqs }: HomeProps) {
             </p>
           </div>
 
-          <div className="flex w-full flex-col lg:max-w-[368px]">
+          <div className="flex w-full flex-col lg:max-w-[368px] px-4 md:px-0 lg:px-0">
             <div className="border-t-2 border-t-white py-2">
               <p className="font-jakarta font-bold text-white text-[20px]">
                 IT
@@ -182,7 +186,7 @@ export default function Home({ randomCourses, faqs }: HomeProps) {
               <HomePageCourseCard
                 key={course.id}
                 title={course.title}
-                description={course.description}
+                description={course.shortDescription}
                 credential="Diplom & certifikat"
                 format="Distans"
                 href="/utbildningar"
@@ -580,24 +584,20 @@ export default function Home({ randomCourses, faqs }: HomeProps) {
 }
 
 export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
-  const uniqueCourses = courses.filter(
-    (course, index, allCourses) =>
-      index === allCourses.findIndex((item) => item.title === course.title),
-  )
-  const shuffledCourses = [...uniqueCourses]
-  const faqs = await getFAQs("sv")
+  const [{ courses: allCourses }, faqs] = await Promise.all([
+    getCoursesPaginated({ skip: 0, limit: 1000, locale: "sv" }),
+    getFAQs("sv"),
+  ])
 
-  for (let i = shuffledCourses.length - 1; i > 0; i -= 1) {
-    const randomIndex = Math.floor(Math.random() * (i + 1))
-    ;[shuffledCourses[i], shuffledCourses[randomIndex]] = [
-      shuffledCourses[randomIndex],
-      shuffledCourses[i],
-    ]
+  const shuffled = [...allCourses]
+  for (let i = shuffled.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
   }
 
   return {
     props: {
-      randomCourses: shuffledCourses.slice(0, 6),
+      randomCourses: shuffled.slice(0, 6),
       faqs,
     },
   }

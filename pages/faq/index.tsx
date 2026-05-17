@@ -104,7 +104,7 @@ const FAQPage: React.FC<FAQPageProps> = ({ faqs }) => {
                 Har vi missat något?
               </p>
               <div
-                onClick={() => router.push("/contact-us")}
+                onClick={() => router.push("/kontakta-oss")}
                 className="rounded-[12px] border border-gray text-center py-2 px-3 hover:cursor-pointer"
               >
                 <p className="font-inter font-medium text-[11px] md:text-xs">

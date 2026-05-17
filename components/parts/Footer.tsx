@@ -74,7 +74,7 @@ export default function Footer({}: Props) {
             </Link>
             <p className="font-inter font-medium text-[12px] md:text-[15px] md:max-w-[585px] lg:max-w-[399px] leading-[18px] mb-3">
               Registrera dig på vårt nyhetsbrev för att inte missa event,
-              uppdateringar och e-handelsinspiration.
+              uppdateringar och digital inspiration.
             </p>
             <div className="flex flex-col sm:flex-row gap-2 w-full md:max-w-[380px]">
               <input
@@ -120,7 +120,7 @@ export default function Footer({}: Props) {
                     href="/utbildningar"
                     className="font-inter font-medium text-[12px] sm:text-[14px] md:text-base"
                   >
-                    Utbildning
+                    Utbildningar
                   </Link>
                 </li>
                 <li>
