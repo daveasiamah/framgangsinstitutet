@@ -459,7 +459,7 @@ export default function Home({ randomCourses, faqs }: HomeProps) {
               </div>
 
               <div className="flex flex-col items-center justify-center gap-4 text-center lg:items-start lg:pl-12 lg:text-left">
-                <h3 className="font-jakarta text-[22px] font-extrabold text-[#151E3A]">
+                <h3 className="font-jakarta text-[18px] md:text-[22px] leading-tight font-extrabold text-[#151E3A]">
                   Vi erbjuder följande betalningssätt:
                 </h3>
                 <div className="flex flex-col">

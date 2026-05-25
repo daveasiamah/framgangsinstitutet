@@ -62,7 +62,7 @@ export default function Layout({
           type="button"
           onClick={handleBackToTop}
           aria-label="Till toppen"
-          className={`fixed bottom-6 right-4 z-40 inline-flex items-center gap-2 rounded-none bg-[#225AEA] px-4 py-3 font-jakarta text-[11px] font-bold uppercase tracking-[0.05em] text-white shadow-[0_14px_30px_rgba(34,90,234,0.28)] transition-all duration-300 hover:bg-[#1B49C2] sm:bottom-8 sm:right-6 ${
+          className={`fixed bottom-6 right-4 z-40 inline-flex items-center gap-2 rounded-md bg-[#225AEA] px-4 py-3 font-jakarta text-[11px] font-bold uppercase tracking-[0.05em] text-white shadow-[0_14px_30px_rgba(34,90,234,0.28)] transition-all duration-300 hover:bg-[#1B49C2] sm:bottom-8 sm:right-6 ${
             showBackToTop
               ? "pointer-events-auto translate-y-0 opacity-100"
               : "pointer-events-none translate-y-4 opacity-0"

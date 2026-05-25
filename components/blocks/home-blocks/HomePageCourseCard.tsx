@@ -24,28 +24,25 @@ export default function HomePageCourseCard({
   return (
     <article className="w-full md:h-[424px] rounded-t-[18px] overflow-hidden flex flex-col">
       {/* Blue header */}
-      <div className="relative h-[171px] shrink-0 bg-[#2F5CE9] rounded-t-[18px]">
-        <h3 className="font-jakarta font-bold text-white text-[22px] md:text-[26px] leading-[1.08] px-5 md:px-6 pt-10 md:pt-12 text-center truncate">
-          {title}
-        </h3>
+      <div className="relative h-[171px] shrink-0 overflow-hidden bg-[#2F5CE9] rounded-t-[18px]">
+        <div className="flex h-full items-center justify-center px-5 md:px-6">
+          <h3 className="w-full font-jakarta font-bold text-white text-[22px] md:text-[26px] leading-[1.4] text-center truncate">
+            {title}
+          </h3>
+        </div>
 
         {/* Wave overlay */}
-        <svg
-          viewBox="0 0 596 99"
-          className="absolute -bottom-[9px] left-0 w-full h-[84px]"
+        <img
+          src="/images/course-card-ripple.png"
+          alt=""
           aria-hidden="true"
-          focusable="false"
-        >
-          <path
-            d="M0 67C28 45 57 77 86 58C115 39 143 67 172 68C201 69 230 42 259 42C287 42 316 66 345 66C374 66 402 53 431 60C460 68 488 71 517 56C546 42 567 20 596 22V99H0V67Z"
-            fill="#1F45B8"
-          />
-        </svg>
+          className="pointer-events-none absolute bottom-0 left-0 h-[60px] w-full object-cover md:h-[84px]"
+        />
       </div>
 
       {/* Gray body */}
       <div className="flex flex-col flex-1 bg-[#F8F8F8] p-4">
-        <h4 className="font-jakarta font-bold text-[#1E1E1E] text-[20px] md:text-[18px] leading-[1.15] mb-3 truncate">
+        <h4 className="font-jakarta font-bold text-[#1E1E1E] text-[20px] md:text-[18px] leading-[1.4] mb-3 truncate">
           {title}
         </h4>
 

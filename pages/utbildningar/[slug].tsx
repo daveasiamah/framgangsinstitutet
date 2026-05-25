@@ -5,7 +5,8 @@ import Link from "next/link"
 import Layout from "@/components/Layout"
 import RichTextRenderer from "@/utils/RichTextRenderer"
 import Skeleton from "react-loading-skeleton"
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
+import { useRouter } from "next/router"
 
 type CoursePageProps = {
   course: Course[] | null
@@ -92,6 +93,74 @@ const SidebarCard = ({
 
 const CourseDetailPage = ({ course }: CoursePageProps) => {
   const [isCourseImageLoaded, setIsCourseImageLoaded] = useState(false)
+  const [isNavPinned, setIsNavPinned] = useState(false)
+  const router = useRouter()
+  const navStartRef = useRef<HTMLDivElement | null>(null)
+  const navEndRef = useRef<HTMLDivElement | null>(null)
+
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      return
+    }
+
+    const scrollToHash = () => {
+      const hash = router.asPath.split("#")[1]
+      if (!hash) {
+        return
+      }
+
+      const target = document.getElementById(hash)
+      if (!target) {
+        return
+      }
+
+      target.scrollIntoView({ behavior: "smooth", block: "start" })
+    }
+
+    const frame = window.requestAnimationFrame(scrollToHash)
+
+    return () => {
+      window.cancelAnimationFrame(frame)
+    }
+  }, [router.asPath])
+
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      return
+    }
+
+    const updatePinnedNavState = () => {
+      const startEl = navStartRef.current
+      const endEl = navEndRef.current
+
+      if (!startEl || !endEl) {
+        setIsNavPinned(false)
+        return
+      }
+
+      const headerHeight = 80
+      const navHeight = 48
+      const currentY = window.scrollY
+      const startY =
+        startEl.getBoundingClientRect().top + window.scrollY - headerHeight
+      const endY =
+        endEl.getBoundingClientRect().top +
+        window.scrollY -
+        headerHeight -
+        navHeight
+
+      setIsNavPinned(currentY >= startY && currentY < endY)
+    }
+
+    updatePinnedNavState()
+    window.addEventListener("scroll", updatePinnedNavState, { passive: true })
+    window.addEventListener("resize", updatePinnedNavState)
+
+    return () => {
+      window.removeEventListener("scroll", updatePinnedNavState)
+      window.removeEventListener("resize", updatePinnedNavState)
+    }
+  }, [])
 
   if (!course || course.length === 0) {
     return (
@@ -158,29 +227,44 @@ const CourseDetailPage = ({ course }: CoursePageProps) => {
           />
         </div>
 
-        <div className="mt-6 w-full bg-[#225AEA] lg:mt-10">
-          <div className="mx-auto w-full max-w-[1280px] px-4 md:px-8">
-            <nav className="flex items-center gap-6 overflow-x-auto py-3 text-white md:gap-10">
-              <a
-                href="#oversikt"
-                className="shrink-0 font-jakarta text-[11px] font-semibold uppercase tracking-[0.05em]"
-              >
-                Översikt
-              </a>
-              <a
-                href="#kursinnehall"
-                className="shrink-0 font-jakarta text-[11px] font-semibold uppercase tracking-[0.05em]"
-              >
-                Kursinnehåll
-              </a>
-              <a
-                href="#genomforande"
-                className="shrink-0 font-jakarta text-[11px] font-semibold uppercase tracking-[0.05em]"
-              >
-                Genomförande
-              </a>
-            </nav>
+        <div ref={navStartRef} className="mt-6 w-full lg:mt-10">
+          <div
+            className={`${
+              isNavPinned
+                ? "fixed left-0 right-0 top-[80px] z-30"
+                : "relative z-[1]"
+            } bg-[#225AEA] shadow-[0_8px_24px_rgba(34,90,234,0.18)]`}
+          >
+            <div className="mx-auto w-full max-w-[1280px] px-4 md:px-8">
+              <nav className="flex items-center gap-6 overflow-x-auto py-3 text-white md:gap-10">
+                <Link
+                  href="#oversikt"
+                  scroll={false}
+                  className="shrink-0 font-jakarta text-[11px] font-semibold uppercase tracking-[0.05em]"
+                >
+                  Översikt
+                </Link>
+                <Link
+                  href="#kursinnehåll"
+                  scroll={false}
+                  className="shrink-0 font-jakarta text-[11px] font-semibold uppercase tracking-[0.05em]"
+                >
+                  Kursinnehåll
+                </Link>
+                <Link
+                  href="#genomforande"
+                  scroll={false}
+                  className="shrink-0 font-jakarta text-[11px] font-semibold uppercase tracking-[0.05em]"
+                >
+                  Genomförande
+                </Link>
+              </nav>
+            </div>
           </div>
+          <div
+            className={isNavPinned ? "h-[48px]" : "h-0"}
+            aria-hidden="true"
+          />
         </div>
 
         <div className="mx-auto grid w-full max-w-[1280px] grid-cols-1 gap-8 px-4 pt-6 md:px-8 md:pt-8 lg:grid-cols-[minmax(0,1fr),456px] lg:gap-10">
@@ -197,7 +281,7 @@ const CourseDetailPage = ({ course }: CoursePageProps) => {
             </div>
           </aside>
           <article className="lg:order-1">
-            <section id="oversikt">
+            <section id="oversikt" className="scroll-mt-[96px]">
               <div className="relative mt-5 h-[260px] w-full overflow-hidden rounded-[8px] md:h-[340px]">
                 {!isCourseImageLoaded && (
                   <Skeleton className="absolute inset-0 h-full w-full" />
@@ -215,7 +299,7 @@ const CourseDetailPage = ({ course }: CoursePageProps) => {
               </div>
             </section>
 
-            <section id="kursinnehall" className="mt-7 md:mt-8">
+            <section id="kursinnehåll" className="mt-7 md:mt-8">
               <h3 className="font-jakarta text-[24px] font-bold leading-[1.15] text-[#151E3A] sm:text-[28px] md:text-[34px] lg:text-[38px] break-words">
                 Om kursen {title}
               </h3>
@@ -225,7 +309,10 @@ const CourseDetailPage = ({ course }: CoursePageProps) => {
               </p>
 
               {longDescription && (
-                <div className="mt-5 rounded-[8px] bg-white">
+                <div
+                  id="kursinnehall-text"
+                  className="mt-5 scroll-mt-[96px] rounded-[8px] bg-white"
+                >
                   <RichTextRenderer richText={longDescription} />
                 </div>
               )}
@@ -233,9 +320,12 @@ const CourseDetailPage = ({ course }: CoursePageProps) => {
 
             <section
               id="genomforande"
-              className="mt-8 w-full rounded-[32px] bg-[#F8F8F8] px-6 py-8 md:px-10 lg:px-12 lg:py-10"
+              className="mt-8 scroll-mt-[96px] w-full rounded-[32px] bg-[#F8F8F8] px-6 py-8 md:px-10 lg:px-12 lg:py-10"
             >
-              <h3 className="font-jakarta font-extrabold md:text-[28px]">
+              <h3
+                id="genomforande-text"
+                className="scroll-mt-[96px] font-jakarta font-extrabold md:text-[28px]"
+              >
                 Utbildningens{" "}
                 <span className="text-[#2F5CE9] font-jakarta">expert.</span>
               </h3>
@@ -253,6 +343,7 @@ const CourseDetailPage = ({ course }: CoursePageProps) => {
             </section>
           </article>
         </div>
+        <div ref={navEndRef} />
       </section>
     </Layout>
   )
