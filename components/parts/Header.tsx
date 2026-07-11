@@ -1,5 +1,4 @@
 import Link from "next/link"
-import { useRouter } from "next/router"
 import { motion, AnimatePresence } from "framer-motion"
 
 import { Box, Flex, Button, IconButton, Stack, Heading } from "@chakra-ui/react"
@@ -12,25 +11,8 @@ type Props = {
 }
 
 export default function Header({ openSidebar, setOpenSidebar }: Props) {
-  const router = useRouter()
-  const { pathname, query } = router
-  const stripeLink = "https://buy.stripe.com/bJe4gyclScFaeDX0KI6wE01"
-
-  const isSlugPage = !!query.slug
-
-  const getButtonTitle = (path: string) => {
-    switch (path) {
-      case "/":
-      case "/thank-you":
-        return "Bli medlem"
-      case "/butiker":
-        return "Få din butik"
-      case "/annonser":
-        return "Få dina annonser"
-      default:
-        return "Bli medlem"
-    }
-  }
+  const stripeLink = "https://buy.stripe.com/aFa7sKfnNcGJ9sAdQaf7i00"
+  const ctaButtonTitle = "Bli Medlem"
 
   return (
     <Box
@@ -82,30 +64,24 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
 
         {/* DESKTOP CTA BUTTON */}
         <Flex display={["none", "none", "none", "flex"]} align="center">
-          {!isSlugPage &&
-          pathname !== "/utbildningar" &&
-          pathname !== "/ebocker" ? (
-            <Button
-              color="white"
-              bg="#225AEA"
-              px={4}
-              py={2}
-              fontSize="sm"
-              fontWeight="semibold"
-              className="font-poppins"
-              borderRadius="7px"
-              _hover={{
-                bg: "#1a4aca",
-              }}
-              onClick={() =>
-                window.open(stripeLink, "_blank", "noopener,noreferrer")
-              }
-            >
-              {getButtonTitle(pathname)}
-            </Button>
-          ) : (
-            <Box width="40px" />
-          )}
+          <Button
+            color="white"
+            bg="#225AEA"
+            px={4}
+            py={2}
+            fontSize="sm"
+            fontWeight="semibold"
+            className="font-poppins"
+            borderRadius="7px"
+            _hover={{
+              bg: "#1a4aca",
+            }}
+            onClick={() =>
+              window.open(stripeLink, "_blank", "noopener,noreferrer")
+            }
+          >
+            {ctaButtonTitle}
+          </Button>
         </Flex>
 
         {/* MOBILE/TABLET HAMBURGER */}
@@ -290,7 +266,7 @@ export default function Header({ openSidebar, setOpenSidebar }: Props) {
                     window.open(stripeLink, "_blank", "noopener,noreferrer")
                   }}
                 >
-                  {getButtonTitle(pathname)}
+                  {ctaButtonTitle}
                 </Button>
               </Stack>
             </motion.div>

@@ -69,7 +69,7 @@ const Annonser = () => {
               ></iframe>
             </div>
             <a
-              href="https://buy.stripe.com/8wM15i52CfwJ492148"
+              href="https://buy.stripe.com/aFa7sKfnNcGJ9sAdQaf7i00"
               className="cta-button_ann"
               target="_blank"
             >
@@ -176,7 +176,7 @@ const Annonser = () => {
             </div>
           </div>
           <a
-            href="https://buy.stripe.com/8wM15i52CfwJ492148"
+            href="https://buy.stripe.com/aFa7sKfnNcGJ9sAdQaf7i00"
             className="help-cta-button_ann"
             target="_blank"
           >
@@ -247,7 +247,7 @@ const Annonser = () => {
               <button
                 onClick={() =>
                   window.open(
-                    "https://buy.stripe.com/8wM15i52CfwJ492148",
+                    "https://buy.stripe.com/aFa7sKfnNcGJ9sAdQaf7i00",
                     "_blank"
                   )
                 }
@@ -302,7 +302,7 @@ const Annonser = () => {
           </div>
           <button
             onClick={() =>
-              window.open("https://buy.stripe.com/8wM15i52CfwJ492148", "_blank")
+              window.open("https://buy.stripe.com/aFa7sKfnNcGJ9sAdQaf7i00", "_blank")
             }
             className="cta-button-info_ann"
           >
@@ -369,7 +369,7 @@ const Annonser = () => {
             BÖRJA SKALA DIN DROPSHIPPING <br /> BUTIK MED EXPERTANNONSER
           </h2>
           <a
-            href="https://buy.stripe.com/8wM15i52CfwJ492148"
+            href="https://buy.stripe.com/aFa7sKfnNcGJ9sAdQaf7i00"
             target="_blank"
             className="cta-button-footer_ann"
           >

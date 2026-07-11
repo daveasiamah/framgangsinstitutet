@@ -65,7 +65,7 @@ export function CTABannerBlock() {
           <button
             onClick={() =>
               window.open(
-                "https://buy.stripe.com/bJe4gyclScFaeDX0KI6wE01",
+                "https://buy.stripe.com/aFa7sKfnNcGJ9sAdQaf7i00",
                 "_blank",
                 "noopener,noreferrer",
               )

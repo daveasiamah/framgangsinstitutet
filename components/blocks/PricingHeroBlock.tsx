@@ -97,7 +97,7 @@ export default function PricingHeroBlock() {
           <div className="w-full max-w-[739px] mt-2 mb-5 lg:mt-2 flex items-center justify-center">
             <button
               onClick={() =>
-                window.open("https://buy.stripe.com/3cscO09iSdoBgVOeUZ")
+                window.open("https://buy.stripe.com/aFa7sKfnNcGJ9sAdQaf7i00")
               }
               className="text-[#fff] bg-[#225AEA] font-jakarta w-full h-[67.32px] rounded-[7px] shadow-inner button-shadow"
               style={{

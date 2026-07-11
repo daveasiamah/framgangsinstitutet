@@ -48,7 +48,7 @@ export default function HeroSection({
             {/* CTA + Trustpilot */}
             <div className="flex w-full flex-col items-center gap-3 lg:w-auto lg:flex-row lg:items-center lg:gap-4">
               <a
-                href="https://buy.stripe.com/bJe4gyclScFaeDX0KI6wE01"
+                href="https://buy.stripe.com/aFa7sKfnNcGJ9sAdQaf7i00"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full max-w-[180px] justify-center lg:w-auto lg:max-w-none px-6 py-3 bg-[#225AEA] hover:bg-[#1a4aca] text-white font-semibold rounded-[7px] transition-colors duration-200 font-jakarta text-sm inline-flex items-center gap-2"

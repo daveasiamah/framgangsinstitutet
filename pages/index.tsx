@@ -267,8 +267,9 @@ export default function Home({ randomCourses, faqs }: HomeProps) {
               blueText="dina studier."
               textClassName="font-jakarta font-extrabold leading-tight text-[22px] md:text-[32px] lg:text-[40px]"
             />
+            {/* Study Material Grid */}
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-              <div className="flex h-full flex-col items-start bg-gradient-to-b from-[#F9FBFF] to-[#E5F2FF] rounded-[40px] md:max-w-[405px] lg:max-w-full mt-8 w-full px-4 py-8 md:px-4 lg:px-4 lg:py-10 text-left">
+              <div className="flex h-full flex-col items-start bg-gradient-to-b from-[#F9FBFF] to-[#E5F2FF] rounded-[40px] md:max-w-[405px] lg:max-w-full mt-8 w-full px-4 pt-4 pb-0 md:px-4 lg:px-4 lg:py-0 text-left">
                 <div className="flex h-[168px] w-full items-center justify-center mb-6 md:h-[180px] lg:h-[192px]">
                   <img
                     src="/images/home/calendar.png"
@@ -286,7 +287,7 @@ export default function Home({ randomCourses, faqs }: HomeProps) {
                   stärka din förståelse.
                 </p>
               </div>
-              <div className="flex h-full flex-col items-start bg-gradient-to-b from-[#F9FBFF] to-[#E5F2FF] rounded-[40px] md:max-w-[405px] lg:max-w-full mt-8 w-full px-4 py-8 md:px-4 lg:px-4 lg:py-10 text-left">
+              <div className="flex h-full flex-col items-start bg-gradient-to-b from-[#F9FBFF] to-[#E5F2FF] rounded-[40px] md:max-w-[405px] lg:max-w-full mt-8 w-full px-4 pt-4 pb-0 md:px-4 lg:px-4 lg:py-0 text-left">
                 <div className="flex h-[168px] w-full items-center justify-center mb-6 md:h-[180px] lg:h-[192px]">
                   <img
                     src="/images/home/mobile.png"
@@ -304,7 +305,7 @@ export default function Home({ randomCourses, faqs }: HomeProps) {
                 </p>
               </div>
 
-              <div className="flex h-full flex-col items-start bg-gradient-to-b from-[#F9FBFF] to-[#E5F2FF] rounded-[40px] md:max-w-[405px] lg:max-w-full mt-8 w-full px-4 py-8 md:px-4 lg:px-4 lg:py-10 text-left">
+              <div className="flex h-full flex-col items-start bg-gradient-to-b from-[#F9FBFF] to-[#E5F2FF] rounded-[40px] md:max-w-[405px] lg:max-w-full mt-8 w-full px-4 pt-4 pb-0 md:px-4 lg:px-4 lg:py-0 text-left">
                 <div className="flex h-[168px] w-full items-center justify-center mb-6 md:h-[180px] lg:h-[192px]">
                   <img
                     src="/images/home/stats.png"
@@ -446,7 +447,7 @@ export default function Home({ randomCourses, faqs }: HomeProps) {
           <div className="mt-8 w-full max-w-[1240px] rounded-[32px] bg-[#F8F8F8] px-6 py-8 md:px-10 lg:px-12 lg:py-10">
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-[260px,1fr] lg:gap-12">
               <div className="flex flex-col items-center justify-center gap-4 text-center lg:items-start lg:text-left">
-                <h3 className="font-jakarta text-[22px] font-extrabold text-[#151E3A]">
+                <h3 className="font-jakarta text-[22px] font-extrabold stext-[#151E3A]">
                   Betala tryggt med
                 </h3>
                 <Image
@@ -467,6 +468,7 @@ export default function Home({ randomCourses, faqs }: HomeProps) {
                     <li>Få först. Betala sedan.</li>
                     <li>Betalningstid minst 14 dagar.</li>
                     <li>14 dagars ångerrätt</li>
+                    <br className="lg:hidden block" />
                     <li>Dela upp betalningen per månad.</li>
                     <li>Betala direkt med BankID.</li>
                     <li>Betala med kort.</li>
@@ -553,7 +555,7 @@ export default function Home({ randomCourses, faqs }: HomeProps) {
             </div>
             {/* CTA Button */}
             <a
-              href="https://buy.stripe.com/bJe4gyclScFaeDX0KI6wE01"
+              href="https://buy.stripe.com/aFa7sKfnNcGJ9sAdQaf7i00"
               target="_blank"
               rel="noopener noreferrer"
               className="flex justify-center items-center bg-white text-gray-600 px-[24px] py-2 rounded-lg font-semibold text-sm font-jakarta mt-[16px] md:mt-[28px]"

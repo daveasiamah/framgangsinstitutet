@@ -74,7 +74,7 @@ type PricingPageProps = {
 }
 
 export default function Prisplaner({ faqs }: PricingPageProps) {
-  const stripeLink = "https://buy.stripe.com/bJe4gyclScFaeDX0KI6wE01"
+  const stripeLink = "https://buy.stripe.com/aFa7sKfnNcGJ9sAdQaf7i00"
 
   const plans = annualPlans
 

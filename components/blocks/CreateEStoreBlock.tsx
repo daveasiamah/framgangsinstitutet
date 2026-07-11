@@ -10,7 +10,7 @@ export function CreateEStoreBlock({ openModal }: { openModal: () => void }) {
   return (
     <div className="w-full flex items-center justify-center mt-4 my-5">
       <button
-        onClick={() => window.open("https://buy.stripe.com/3cscO09iSdoBgVOeUZ")}
+        onClick={() => window.open("https://buy.stripe.com/aFa7sKfnNcGJ9sAdQaf7i00")}
         className="text-[#fff] bg-[#225AEA] text-[14px] w-50 flex items-center justify-center font-jakarta font-bold w-[194px] h-[36px] rounded-[7px] shadow-inner button-shadow"
         style={{
           boxShadow: `
