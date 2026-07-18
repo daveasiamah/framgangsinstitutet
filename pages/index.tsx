@@ -455,7 +455,6 @@ export default function Home({ randomCourses, faqs }: HomeProps) {
                   alt="Klarna"
                   width={180}
                   height={120}
-
                 />
               </div>
 
